@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="在一些语言中，声明和定义存在明确的区分。声明一个变量仅指给它指定一个标志符来宣称它的存在。而定义则代表声明后还要进行赋值。在javascript中，声明和定义是可以互换的概念。因为所有变量都会在声明之后给定一个值。如果你没有显式赋值，会自动给定一个隐含值undefined。 静态作用域javascript使用静态作用域。静态作用域又称词法作用域，静态作用域下函数作用域在定义（声明）时已经确定，如未">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript作用域">
+<meta property="og:url" content="http://wonderlust91.github.io/2018/03/20/javascript%E4%BD%9C%E7%94%A8%E5%9F%9F/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="在一些语言中，声明和定义存在明确的区分。声明一个变量仅指给它指定一个标志符来宣称它的存在。而定义则代表声明后还要进行赋值。在javascript中，声明和定义是可以互换的概念。因为所有变量都会在声明之后给定一个值。如果你没有显式赋值，会自动给定一个隐含值undefined。 静态作用域javascript使用静态作用域。静态作用域又称词法作用域，静态作用域下函数作用域在定义（声明）时已经确定，如未">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-03-20T13:50:30.000Z">
+<meta property="article:modified_time" content="2022-10-15T16:10:05.162Z">
+<meta property="article:author" content="WONDERlust91">
+<meta property="article:tag" content="作用域">
+<meta property="article:tag" content="let">
+<meta property="article:tag" content="const">
+<meta property="article:tag" content="var">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2018/03/20/javascript%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2018/03/20/javascript%E4%BD%9C%E7%94%A8%E5%9F%9F/","path":"2018/03/20/javascript作用域/","title":"javascript作用域"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>javascript作用域 | WONDER's Notes</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">1.</span> <span class="nav-text">静态作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E3%80%81%E4%B8%8A%E4%B8%8B%E6%96%87%E3%80%81%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">作用域、上下文、执行环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9D%97%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">3.</span> <span class="nav-text">块作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%B1%8F%E8%94%BD"><span class="nav-number">4.</span> <span class="nav-text">变量屏蔽</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87"><span class="nav-number">5.</span> <span class="nav-text">变量提升</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%B4%E6%97%B6%E6%AD%BB%E5%8C%BATDZ"><span class="nav-number">6.</span> <span class="nav-text">临时死区TDZ</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93var%E3%80%81let%E3%80%81const"><span class="nav-number">7.</span> <span class="nav-text">总结var、let、const</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#var%EF%BC%9A"><span class="nav-number">7.1.</span> <span class="nav-text">var：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#let%E3%80%81const%E7%9B%B8%E5%90%8C%E7%82%B9%EF%BC%9A"><span class="nav-number">7.2.</span> <span class="nav-text">let、const相同点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#let%E3%80%81const%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="nav-number">7.3.</span> <span class="nav-text">let、const区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%8F%90%E5%8D%87"><span class="nav-number">8.</span> <span class="nav-text">函数提升</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F"><span class="nav-number">9.</span> <span class="nav-text">严格模式</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">135</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">241</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2018/03/20/javascript%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="javascript作用域 | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          javascript作用域
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-03-20 13:50:30" itemprop="dateCreated datePublished" datetime="2018-03-20T13:50:30+00:00">2018-03-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-15 16:10:05" itemprop="dateModified" datetime="2022-10-15T16:10:05+00:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2018/03/20/javascript%E4%BD%9C%E7%94%A8%E5%9F%9F/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/03/20/javascript作用域/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>在一些语言中，声明和定义存在明确的区分。声明一个变量仅指给它指定一个标志符来宣称它的存在。而定义则代表声明后还要进行赋值。<br>在javascript中，声明和定义是可以互换的概念。因为所有变量都会在声明之后给定一个值。如果你没有显式赋值，会自动给定一个隐含值undefined。</p>
+<h1 id="静态作用域"><a href="#静态作用域" class="headerlink" title="静态作用域"></a>静态作用域</h1><p>javascript使用静态作用域。静态作用域又称词法作用域，静态作用域下函数作用域在定义（声明）时已经确定，如未找到自身作用域内的变量，则沿作用域链向上，在上级作用域中查找，直到全局。</p>
+<span id="more"></span>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出2 详见下面的说明</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>静态作用域：<br>foo的作用域在声明时就已经确定，当foo被调用时，在foo自身的作用域中找不到变量a，此时以定义foo时的作用域链为准，向作用域链上级查找。foo定义时的作用域链为：foo作用域——全局作用域。而在全局作用域中存在a &#x3D; 2，故输出结果为2。</p>
+<p>动态作用域：<br>如果是动态作用域，foo的作用域在foo被调用时确定，作用域链向上是foo被调用时的环境。在foo的作用域中找不到a，则沿作用域链向上，在foo被调用的环境即bar的作用域中查找，bar中a &#x3D; 3，故在动态作用域规则下应输出3，而js使用静态作用域，只能输出2。</p>
+<p>总结：在函数中遇到既不是形参也不是函数内部定义的局部变量的变量时，静态作用域下是去函数定义时的环境中查询，动态作用域下是去函数调用时的环境中查询。</p>
+<p>在函数中定义的参数和声明的局部变量，其作用域范围仅在函数内部，当函数调用完毕，参数与局部变量都会被销毁。</p>
+<h1 id="作用域、上下文、执行环境"><a href="#作用域、上下文、执行环境" class="headerlink" title="作用域、上下文、执行环境"></a>作用域、上下文、执行环境</h1><p><strong>作用域（scope）</strong>：编译过程中，负责收集并维护所有声明的标志符，确定当前执行代码对这些标志符的访问权限的一套规则。简而言之作用域就是变量的可见性。</p>
+<p><strong>上下文（context）</strong>：函数调用时的this值。this来自执行环境对象。</p>
+<p>P.S. new关键字调用函数时，上下文this被设置为被调用的函数实例，即新构造的对象。</p>
+<p>严格模式调用函数，上下文this为undefined。（详见<a href="/2018/03/15/javascript%E5%85%B3%E9%94%AE%E5%AD%97this/" title="javascript关键字this">js关键字this</a>）</p>
+<p>__执行环境（Execution context）__：执行环境又称执行上下文，当代码流转到可执行代码时，会进入一个执行环境，执行环境有创建和执行两个阶段。创建时会创建一个执行环境对象，其中包含作用域链，变量对象与上下文。<br>当前所有执行环境构成一个栈，栈底部始终是全局环境，顶部是当前活动的执行环境，随执行流的变化，执行环境入栈或出栈。全局环境的执行环境对象就是window对象。</p>
+<h1 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a>块作用域</h1><p>ES6前只有函数作用域和全局作用域，ES6中添加了块作用域。块是由一对花括号括起来的一系列语句。块作用域指的就是那些仅仅在代码块内有效的变量。块通常是控制流语句的一部分，如if或for，定义独立的块也是合法的。ES6中let与const关键字声明的变量处在块作用域中，var声明的变量在代码块外也可以访问到。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined 块内变量提升，相当于只声明，未赋值。</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// 相当于已经声明只进行赋值</span>
+    <span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">// 块内声明只在块内生效，这里块内声明的变量屏蔽了块外变量，块内无法访问块外变量</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2 undefined 赋值为2</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3</span>
+<span class="token punctuation">&#125;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2 块外也能访问var声明的变量</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1 块外访问不到块内变量bar，只能访问到块外的变量bar</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="变量屏蔽"><a href="#变量屏蔽" class="headerlink" title="变量屏蔽"></a>变量屏蔽</h1><p>使用let或const在块作用域外与块作用域内声明相同名字的变量，块内声明的变量会屏蔽块外的，使块外的变量不可访问。这个特性可以防止变量污染。函数作用域同理。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">objName</span><span class="token operator">:</span> <span class="token string">"foo"</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> bar <span class="token operator">=</span> foo<span class="token punctuation">;</span>
+<span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 5 外部foo变量屏蔽，访问不到</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">.</span>objName<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// foo </span>
+    bar<span class="token punctuation">.</span>objName <span class="token operator">=</span> <span class="token string">"bar"</span><span class="token punctuation">;</span> <span class="token comment">// 对象为引用型值，本身并不构成作用域，虽然在块中修改，但是在全局都生效</span>
+    <span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10 外部x变量屏蔽，访问不到</span>
+<span class="token punctuation">&#125;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bar 对象是引用型，变量bar与变量foo引用自相同对象，在bar中更改对象后，foo引用到的也是被修改后的对象</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// bar</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1 块中变量屏蔽，块外变量不受影响</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>对象是引用型，更底层的解释是对象存储在一个内存位置中，将对象通过变量赋值给其它变量，这些变量都引用自相同内存位置的同一对象，因此在一个变量上操作改变对象，内存中的对象被更改，其他变量引用的也是改变后的对象。<br>如果将对象直接赋值给不同变量，则每个变量中的对象看起来是相同的，但其实是存储在不同内存位置的不同对象。<br>const声明的基本类型值无法被更改，但const声明的数组和对象可以被更改，因为对象（数组）是引用型，const固定了指向对象（数组）内存位置的引用，但对象（数组）在内存中的内容没有固定。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">num</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> foo1 <span class="token operator">=</span> foo<span class="token punctuation">;</span>
+<span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">num</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo <span class="token operator">===</span> foo1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true 通过变量赋值，foo与foo1实际引用自相同对象</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo <span class="token operator">===</span> bar<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false 直接赋值，foo与bar是存储在不同内存位置的不同对象，但对象内容相同</span>
+foo<span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo <span class="token operator">===</span> foo1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true foo修改了内存中的对象，foo1引用自那个对象，所以foo1也被自动更改了</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">,</span> foo1<span class="token punctuation">,</span> bar<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#123;num: 2&#125;, &#123;num: 2&#125;, &#123;num: 1&#125; foo与foo1引用自相同对象，bar和前两者引用自不同对象</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h1><p>在ES6引入let和const之前，变量都是用var来声明的。使用var声明的变量在当前作用域中任何地方都可以使用，甚至可以在声明前使用。这是因为使用var声明的变量采用了提升机制，javascript会扫描整个作用域（函数或全局作用域），任何使用var声明的变量都会被提升至当前作用域的顶部，被提升的只是对变量的声明，而不是赋值。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined 变量提升，只提升声明，默认赋值为undefined</span>
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 赋值为1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token comment">// 等价于</span>
+<span class="token keyword">var</span> foo<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+foo <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>let与const没有变量提升机制，在声明前无法使用</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// referenceError 直接报错，无法运行</span>
+<span class="token keyword">let</span> bar <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>由于var没有块作用域，且var有变量提升，故在当前作用域中，尽管可以在块内再次使用var，但并不会发生变量屏蔽，不能创建同名的新变量。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>foo <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token punctuation">&#125;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token comment">// 等价于</span>
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>foo <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    foo <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token punctuation">&#125;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="临时死区TDZ"><a href="#临时死区TDZ" class="headerlink" title="临时死区TDZ"></a>临时死区TDZ</h1><p>由于ES6中let、const有块作用域，且let、const没有变量提升机制，故在块中再次声明同名变量会不小心产生临时死区。要防止临时死区应注意将所有声明都放在当前作用域顶部。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>foo <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// referenceError 这里就是临时死区</span>
+    <span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 因为块中用了let声明，块内的foo屏蔽了块外的foo，而上一句却在块中未声明foo时就使用foo</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>ES5中常用的类型检测方法，在ES6中就会因为临时死区而报错</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> foo <span class="token operator">===</span> <span class="token string">"undefined"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>       <span class="token comment">// referenceError</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"foo is safe to use"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="总结var、let、const"><a href="#总结var、let、const" class="headerlink" title="总结var、let、const"></a>总结var、let、const</h1><h2 id="var："><a href="#var：" class="headerlink" title="var："></a>var：</h2><ol>
+<li>有变量提升机制。</li>
+<li>没有块作用域，只有函数作用域和全局作用域，块中不会产生变量屏蔽，在函数作用域中才有变量屏蔽。</li>
+<li>虽然在同一作用域同一变量名可以多重声明，但不创建新变量，仅相当于赋值操作。</li>
+<li>在全局环境声明的变量会自动挂载为window的属性，不仅可以通过变量名访问，还可以通过window属性访问，window.变量名。</li>
+</ol>
+<h2 id="let、const相同点："><a href="#let、const相同点：" class="headerlink" title="let、const相同点："></a>let、const相同点：</h2><ol>
+<li>没有变量提升机制。</li>
+<li>有块作用域，块内会产生变量屏蔽，警惕因变量屏蔽、无提升机制造成的临时死区。</li>
+<li>同一作用域同一变量名只能声明一次。</li>
+<li>在全局环境声明的变量不会挂载为window的属性，只能通过变量名访问。</li>
+</ol>
+<h2 id="let、const区别："><a href="#let、const区别：" class="headerlink" title="let、const区别："></a>let、const区别：</h2><ol>
+<li>let用于声明变量、const用于声明常量。</li>
+<li>const声明与赋值必须同时进行，基本型值定义后无法更改，如字符串、数字等。</li>
+<li>数组、对象为引用型值，const声明后固定了引用的内存位置，但未固定内容，故数组与对象可更改。</li>
+</ol>
+<h1 id="函数提升"><a href="#函数提升" class="headerlink" title="函数提升"></a>函数提升</h1><p>函数的声明也会被提升至当前作用域的顶部，允许函数在声明前使用。赋值给变量的函数表达式不会提升，作用域规则与变量相同。函数提升更高于变量提升，当函数声明与变量声明同名时，函数声明在前，变量声明在后。（尽量避免函数与变量同名）</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// f 函数提升，可以提前调用</span>
+<span class="token function">g</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// referenceError：g未定义  函数未提升，变量未提升，无法调用，直接停止报错</span>
+<span class="token function">h</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// typeError：h不是函数  函数未提升，变量提升只是声明提升，并未赋值，h为undefined</span>
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"f"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">let</span> <span class="token function-variable function">g</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"g"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> <span class="token function-variable function">h</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"h"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h1><p>ES5允许隐式全局变量，如果忘记使用var声明变量，javascript会认为你在引用全局变量，如果全局变量不存在，会自动创建一个。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token punctuation">&#125;</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>为了防止这种情况以及this默认绑定到全局等情况，引入了严格模式。在全局或函数的开头写”use strict”，单双引号都可以，就开启了严格模式。<br>由于在全局中开启严格模式会应用到所有脚本代码中，故使用时要谨慎。很多网站在部署前会整合脚本代码，若一个脚本代码用了全局严格模式，则所有代码在整合后都会应用严格模式，为了防止这种情况，应该将用了严格模式的脚本代码封装在一个IIFE（立即执行函数）中，这样就不会干扰整合后的其它脚本。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token string">"use strict"</span><span class="token punctuation">;</span>
+    <span class="token comment">// 代码区</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag"># 作用域</a>
+              <a href="/tags/let/" rel="tag"># let</a>
+              <a href="/tags/const/" rel="tag"># const</a>
+              <a href="/tags/var/" rel="tag"># var</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/03/15/javascript%E5%85%B3%E9%94%AE%E5%AD%97this/" rel="prev" title="javascript关键字this">
+                  <i class="fa fa-chevron-left"></i> javascript关键字this
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/03/23/javascript%E9%97%AD%E5%8C%85/" rel="next" title="javascript闭包">
+                  javascript闭包 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

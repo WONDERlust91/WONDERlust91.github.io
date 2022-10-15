@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="系统环境 centos7，本文中默认使用 root 用户，故没有 sudo 命令，实践中根据用户不同酌情添加。 安装 nginx 服务器1. 在 yum 中安装 nginx 源安装前置环境 yum install yum-utils  新建文件&#x2F;etc&#x2F;yum.repo.d&#x2F;nginx.repo，内容为 [nginx-stable] name&#x3D;nginx s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux系统nginx部署前端项目">
+<meta property="og:url" content="http://wonderlust91.github.io/2019/07/05/linux%E7%B3%BB%E7%BB%9Fnginx%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="系统环境 centos7，本文中默认使用 root 用户，故没有 sudo 命令，实践中根据用户不同酌情添加。 安装 nginx 服务器1. 在 yum 中安装 nginx 源安装前置环境 yum install yum-utils  新建文件&#x2F;etc&#x2F;yum.repo.d&#x2F;nginx.repo，内容为 [nginx-stable] name&#x3D;nginx s">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-07-05T13:40:57.000Z">
+<meta property="article:modified_time" content="2022-10-15T16:10:05.162Z">
+<meta property="article:author" content="WONDERlust91">
+<meta property="article:tag" content="nginx">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2019/07/05/linux%E7%B3%BB%E7%BB%9Fnginx%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2019/07/05/linux%E7%B3%BB%E7%BB%9Fnginx%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/","path":"2019/07/05/linux系统nginx部署前端项目/","title":"linux系统nginx部署前端项目"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>linux系统nginx部署前端项目 | WONDER's Notes</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">安装 nginx 服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9C%A8-yum-%E4%B8%AD%E5%AE%89%E8%A3%85-nginx-%E6%BA%90"><span class="nav-number">1.1.</span> <span class="nav-text">1. 在 yum 中安装 nginx 源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85-nginx"><span class="nav-number">1.2.</span> <span class="nav-text">2. 安装 nginx</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-nginx-%E6%9C%8D%E5%8A%A1"><span class="nav-number">2.</span> <span class="nav-text">启动 nginx 服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%98%B2%E7%81%AB%E5%A2%99%E7%AB%AF%E5%8F%A3%E6%94%BE%E8%A1%8C"><span class="nav-number">2.1.</span> <span class="nav-text">1. 防火墙端口放行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-403-Forbidden"><span class="nav-number">2.2.</span> <span class="nav-text">2. 403 Forbidden</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%A3%80%E6%9F%A5-root-%E6%8C%87%E5%90%91%E7%9A%84%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%98%AF%E5%90%A6%E7%BC%BA%E5%B0%91-index-html-%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.1.</span> <span class="nav-text">(1) 检查 root 指向的目录下是否缺少 index.html 文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%98%AF%E5%90%A6%E5%85%B3%E9%97%AD%E4%BA%86-SELinux"><span class="nav-number">2.2.2.</span> <span class="nav-text">(2) 是否关闭了 SELinux</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-web-%E7%BD%91%E7%AB%99%E9%A1%B5%E9%9D%A2%E6%89%80%E5%9C%A8%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%E6%98%AF%E5%90%A6%E6%8B%A5%E6%9C%89%E8%AF%BB%E6%9D%83%E9%99%90%E4%B8%8E%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90"><span class="nav-number">2.2.3.</span> <span class="nav-text">(3) web 网站页面所在的文件夹是否拥有读权限与执行权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-nginx-conf-%E4%B8%AD%E7%94%A8%E6%88%B7%E4%B8%8E%E5%90%AF%E5%8A%A8%E7%94%A8%E6%88%B7%E4%B8%8D%E4%B8%80%E8%87%B4"><span class="nav-number">2.2.4.</span> <span class="nav-text">(4) nginx.conf 中用户与启动用户不一致</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">单页面应用的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E6%A0%B9%E8%B7%AF%E5%BE%84%E2%80%9D-x2F-%E2%80%9C%E4%B8%8B"><span class="nav-number">3.1.</span> <span class="nav-text">在根路径”&#x2F;“下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E5%AD%90%E8%B7%AF%E5%BE%84%EF%BC%8C%E5%A6%82%E2%80%9D-x2F-demo%E2%80%9D%E4%B8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">在子路径，如”&#x2F;demo”下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">3.3.</span> <span class="nav-text">两个服务器，反向代理的方式</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">135</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">241</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/07/05/linux%E7%B3%BB%E7%BB%9Fnginx%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="linux系统nginx部署前端项目 | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          linux系统nginx部署前端项目
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-07-05 13:40:57" itemprop="dateCreated datePublished" datetime="2019-07-05T13:40:57+00:00">2019-07-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-15 16:10:05" itemprop="dateModified" datetime="2022-10-15T16:10:05+00:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2019/07/05/linux%E7%B3%BB%E7%BB%9Fnginx%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/05/linux系统nginx部署前端项目/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>系统环境 centos7，本文中默认使用 root 用户，故没有 sudo 命令，实践中根据用户不同酌情添加。</p>
+<h2 id="安装-nginx-服务器"><a href="#安装-nginx-服务器" class="headerlink" title="安装 nginx 服务器"></a>安装 nginx 服务器</h2><h3 id="1-在-yum-中安装-nginx-源"><a href="#1-在-yum-中安装-nginx-源" class="headerlink" title="1. 在 yum 中安装 nginx 源"></a>1. 在 yum 中安装 nginx 源</h3><p>安装前置环境</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> yum-utils<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>新建文件&#x2F;etc&#x2F;yum.repo.d&#x2F;nginx.repo，内容为</p>
+<pre class="line-numbers language-conf" data-language="conf"><code class="language-conf">[nginx-stable]
+name&#x3D;nginx stable repo
+baseurl&#x3D;http:&#x2F;&#x2F;nginx.org&#x2F;packages&#x2F;centos&#x2F;$releasever&#x2F;$basearch&#x2F;
+gpgcheck&#x3D;1
+enabled&#x3D;1
+gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key
+
+[nginx-mainline]
+name&#x3D;nginx mainline repo
+baseurl&#x3D;http:&#x2F;&#x2F;nginx.org&#x2F;packages&#x2F;mainline&#x2F;centos&#x2F;$releasever&#x2F;$basearch&#x2F;
+gpgcheck&#x3D;1
+enabled&#x3D;0
+gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>默认使用 nginx-stable 的源，若要使用 nginx-mainline 的源，将 enabled 更改为 1。或直接使用以下命令</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum-config-manager <span class="token parameter variable">--enable</span> nginx-mainline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<span id="more"></span>
+
+<h3 id="2-安装-nginx"><a href="#2-安装-nginx" class="headerlink" title="2. 安装 nginx"></a>2. 安装 nginx</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="启动-nginx-服务"><a href="#启动-nginx-服务" class="headerlink" title="启动 nginx 服务"></a>启动 nginx 服务</h2><p>常规起动 nginx 服务器的方法是使用 nginx 命令，在 CentOS7 系统中，nginx 安装程序已经自动为我们注册了一个 nginx 服务，可以直接使用 systemctl 命令启动 nginx，nginx 默认的配置文件监听了 80 端口，直接启动 nginx 服务就可以访问到 nginx 的示例页面。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">systemctl start nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="1-防火墙端口放行"><a href="#1-防火墙端口放行" class="headerlink" title="1. 防火墙端口放行"></a>1. 防火墙端口放行</h3><p>我们这时候通过服务器的 ip 地址去访问服务器其实是访问不到的，因为服务器的防火墙没有放行我们要访问的端口。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># --permanent 使设置永久生效</span>
+<span class="token comment"># --zone=public 指定了配置规则生效的域为public，防火墙预设了多个域，一般默认为public域</span>
+<span class="token comment"># --add-port=80/tcp 放行了80端口，协议为tcp协议（http协议的底层就是tcp协议）</span>
+firewall-cmd <span class="token parameter variable">--permanent</span> <span class="token parameter variable">--zone</span><span class="token operator">=</span>public --add-port<span class="token operator">=</span><span class="token number">80</span>/tcp
+<span class="token comment"># 修改完防火墙后，要重启防火墙服务，服务名为firewalld</span>
+systemctl restart firewalld<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这时候我们访问服务器的 ip 地址，发现已经可以访问到 nginx 的示例页面了。</p>
+<h3 id="2-403-Forbidden"><a href="#2-403-Forbidden" class="headerlink" title="2. 403 Forbidden"></a>2. 403 Forbidden</h3><p>当示例页面可以访问了以后，我们就可以把自己做的页面放在 nginx 服务器上了，使用 sftp 将文件夹传到服务器上。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># sftp 常用命令</span>
+<span class="token comment"># 改变远程工作目录</span>
+<span class="token builtin class-name">cd</span>
+<span class="token comment"># 改变本地工作目录</span>
+lcd
+<span class="token comment"># 查看远程工作目录</span>
+<span class="token builtin class-name">pwd</span>
+<span class="token comment"># 查看本地工作目录</span>
+lpwd
+<span class="token comment"># 列出远程目录</span>
+<span class="token function">ls</span>
+<span class="token comment"># 列出本地目录</span>
+lls
+<span class="token comment"># 上传文件，-r表示递归文件夹</span>
+put <span class="token parameter variable">-r</span> 本地目录
+<span class="token comment"># 下载文件，-r表示递归文件夹</span>
+get <span class="token parameter variable">-r</span> 远程目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 将网站页面文件上传到/home/www文件夹</span>
+<span class="token comment"># 新建并切换远程工作目录</span>
+<span class="token builtin class-name">cd</span> /home
+<span class="token function">mkdir</span> www
+<span class="token builtin class-name">cd</span> www
+<span class="token comment"># 切换本地工作目录到打包后的项目父级目录中（目录结构为./dist/demo）</span>
+lcd dist
+<span class="token comment"># 上传</span>
+put <span class="token parameter variable">-r</span> demo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上传完成后，修改&#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;default.conf 默认配置文件的路径</p>
+<pre class="line-numbers language-conf" data-language="conf"><code class="language-conf"># 仅显示了要修改的配置，其他略去
+server &#123;
+  location &#x2F; &#123;
+    root &#x2F;home&#x2F;www&#x2F;demo;
+  &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>修改配置后，重启 nginx 服务</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">systemctl restart nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这时我们再去访问服务器，发现页面并没有如愿展示，而是显示了 403 Forbidden 错误页面。</p>
+<p>出问题时查看错误日志永远是定位问题最快捷的解决方法，查看&#x2F;var&#x2F;log&#x2F;nginx&#x2F;error.log 文件，我们发现报错信息为 403 Forbidden ( 13: permission denied )，这意味着我们没有权限，此时应该从下面四个方向排查问题。</p>
+<h4 id="1-检查-root-指向的目录下是否缺少-index-html-文件"><a href="#1-检查-root-指向的目录下是否缺少-index-html-文件" class="headerlink" title="(1) 检查 root 指向的目录下是否缺少 index.html 文件"></a>(1) 检查 root 指向的目录下是否缺少 index.html 文件</h4><p>当网站项目根目录下缺失了 index.html 时就会导致 403 错误，当然我们的 demo 文件夹下是有 index.html 的，排除了这一点。</p>
+<h4 id="2-是否关闭了-SELinux"><a href="#2-是否关闭了-SELinux" class="headerlink" title="(2) 是否关闭了 SELinux"></a>(2) 是否关闭了 SELinux</h4><p>SELinux 是安全增强式的 linux，开启了 SELinux 常常会导致没有权限访问的情况，由于其配置麻烦，通常都是直接关闭的。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看SELinux状态</span>
+getenforce <span class="token comment"># 得到值为enforcing，说明SELinux为开启状态</span>
+<span class="token comment"># 临时修改SELinux状态为permissive，该状态下只记录不拦截，系统重启后恢复到enforcing状态</span>
+setenforce <span class="token number">0</span>
+getenforce <span class="token comment"># 得到值为permissive</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>若要永久修改 SELinux 状态，则修改&#x2F;etc&#x2F;selinux&#x2F;config，SELINUX&#x3D;enforcing 改为 permissive 或 disable。permissive 记录了违反了安全规则的行为，但并不会拦截，而 disable 则是彻底关闭。</p>
+<h4 id="3-web-网站页面所在的文件夹是否拥有读权限与执行权限"><a href="#3-web-网站页面所在的文件夹是否拥有读权限与执行权限" class="headerlink" title="(3) web 网站页面所在的文件夹是否拥有读权限与执行权限"></a>(3) web 网站页面所在的文件夹是否拥有读权限与执行权限</h4><p>刚刚我们只是上传了 demo 文件夹，并没有更改权限，这也是导致 403 错误的一个原因。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 修改demo文件夹权限</span>
+<span class="token function">chmod</span> <span class="token number">755</span> <span class="token parameter variable">-R</span> /home/www/demo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="4-nginx-conf-中用户与启动用户不一致"><a href="#4-nginx-conf-中用户与启动用户不一致" class="headerlink" title="(4) nginx.conf 中用户与启动用户不一致"></a>(4) nginx.conf 中用户与启动用户不一致</h4><p>查看 nginx 的启动用户</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">"nginx: worker process"</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&#123;print $1&#125;'</span>
+<span class="token comment"># nginx</span>
+<span class="token comment"># root</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>我们发现是 nginx 用户启动的，而我们现在使用的是 root 用户。这时就需要我们在&#x2F;etc&#x2F;nginx&#x2F;nginx.conf 文件中将 user 由 nginx 改为 root。</p>
+<p>注意，这里只是针对 403 错误的举例，通常生产环境使用时，不应该用 root 用户启动，会造成安全隐患，应该切换到 nginx 用户启动 nginx 服务。</p>
+<h2 id="单页面应用的配置"><a href="#单页面应用的配置" class="headerlink" title="单页面应用的配置"></a>单页面应用的配置</h2><p>做到上面一步，我们已经能通过访问服务器，浏览原生网站了。然而事情并不是这么简单，现代前端开发，大量使用了单页面应用的框架，如 react、vue、angular 等，页面路由不再由后端控制，而是由前端来控制，那么服务器端就需要额外的配置来支持单页面应用的部署。</p>
+<p>针对单页面应用配置的核心思想就是将所有对文件的查找都重定向到 index.html 由 index.html 中引用的 js 来处理所有路由匹配任务。</p>
+<p>这里以 vue 举例，通常情况下，vue.config.js 中的 publicPath 配置为相对路径”.&#x2F;“适应性最强，但是一旦使用了 history 模式就不能使用相对路径了。所以我们只讨论绝对路径的两种情况，一种是在根路径”&#x2F;“，一种是在子路径，如”&#x2F;demo”。</p>
+<h3 id="在根路径”-x2F-“下"><a href="#在根路径”-x2F-“下" class="headerlink" title="在根路径”&#x2F;“下"></a>在根路径”&#x2F;“下</h3><pre class="line-numbers language-conf" data-language="conf"><code class="language-conf">location &#x2F; &#123;
+  root  &#x2F;home&#x2F;www&#x2F;demo;
+  index index.html index.htm;
+  try_files $uri $uri&#x2F; &#x2F;index.html;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="在子路径，如”-x2F-demo”下"><a href="#在子路径，如”-x2F-demo”下" class="headerlink" title="在子路径，如”&#x2F;demo”下"></a>在子路径，如”&#x2F;demo”下</h3><pre class="line-numbers language-conf" data-language="conf"><code class="language-conf"># 使用root指向网站目录
+location &#x2F;demo &#123;
+  root  &#x2F;home&#x2F;www;
+  index index.html index.htm;
+  try_files $uri $uri&#x2F; &#x2F;demo&#x2F;index.html;
+&#125;
+# 使用alias指向网站目录
+location &#x2F;demo &#123;
+  alias  &#x2F;home&#x2F;www&#x2F;demo;
+  index index.html index.htm;
+  try_files $uri $uri&#x2F; &#x2F;demo&#x2F;index.html;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="两个服务器，反向代理的方式"><a href="#两个服务器，反向代理的方式" class="headerlink" title="两个服务器，反向代理的方式"></a>两个服务器，反向代理的方式</h3><pre class="line-numbers language-conf" data-language="conf"><code class="language-conf"># 服务器A
+server &#123;
+  # 监听80端口
+  listen 80;
+  # nginx示例页面
+  location &#x2F; &#123;
+    root &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html;
+    index index.html index.htm;
+  &#125;
+  # 反向代理
+  location &#x2F;demo &#123;
+    proxy_pass http:&#x2F;&#x2F;localhost:8080&#x2F;demo;
+  &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-conf" data-language="conf"><code class="language-conf"># 服务器B
+server &#123;
+  # 监听8080端口
+  listen 8080;
+  # nginx示例页面
+  location &#x2F; &#123;
+    root &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html;
+    index index.html index.htm;
+  &#125;
+  # 子目录
+  location &#x2F;demo &#123;
+    root &#x2F;home&#x2F;www;
+    index index.html index.htm;
+    try_files $uri $uri&#x2F; &#x2F;demo&#x2F;index.html;
+  &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意：</p>
+<ol>
+<li><p>try_files 会匹配所有书写的路径，若全部匹配失败，则会跳转到最后一个目标路径，所以最后一个路径一定要是能访问到的；</p>
+</li>
+<li><p>为了防止循环匹配，要在 vue 的路由中处理不存在的地址，因为 try_files 会使服务器处理不存在地址失效；</p>
+</li>
+<li><p>使用 root 匹配是将 url 中的 host 部分替换为 root 中设置的路径，例如访问<a target="_blank" rel="noopener" href="http://localhost/demo/index.html%EF%BC%8C%E5%8C%B9%E9%85%8D%E5%88%B0%E4%BA%86/demo%EF%BC%8C%E5%B0%86demo%E5%89%8D%E7%9A%84http://localhost%E6%9B%BF%E6%8D%A2%E4%B8%BAroot%E4%B8%AD%E8%AE%BE%E7%BD%AE%E7%9A%84/home/www%EF%BC%8C%E5%B0%B1%E5%BE%97%E5%88%B0%E4%BA%86%E8%A6%81%E8%AE%BF%E9%97%AE%E7%9A%84%E7%A1%AC%E7%9B%98%E7%9C%9F%E5%AE%9E%E5%9C%B0%E5%9D%80/home/www/demo/index.html%EF%BC%9B">http://localhost/demo/index.html，匹配到了/demo，将demo前的http://localhost替换为root中设置的/home/www，就得到了要访问的硬盘真实地址/home/www/demo/index.html；</a></p>
+</li>
+<li><p>使用 alias 匹配是将匹配到的部分整个替换，例如访问<a target="_blank" rel="noopener" href="http://localhost/demo/index.html%EF%BC%8C%E5%8C%B9%E9%85%8D%E5%88%B0demo%EF%BC%8C%E5%B0%86%E5%8C%85%E6%8B%ACdemo%E5%9C%A8%E5%86%85%E7%9A%84%E5%89%8D%E9%9D%A2%E7%9A%84%E6%89%80%E6%9C%89%E5%9C%B0%E5%9D%80http://localhost/demo%E9%83%BD%E6%9B%BF%E6%8D%A2%E4%B8%BAalias%E8%AE%BE%E7%BD%AE%E7%9A%84/home/www/demo%EF%BC%8C%E5%8D%B3%E5%BE%97%E5%88%B0%E4%BA%86%E7%A1%AC%E7%9B%98%E7%9C%9F%E5%AE%9E%E5%9C%B0%E5%9D%80/home/www/demo/index.html%EF%BC%9B">http://localhost/demo/index.html，匹配到demo，将包括demo在内的前面的所有地址http://localhost/demo都替换为alias设置的/home/www/demo，即得到了硬盘真实地址/home/www/demo/index.html；</a></p>
+</li>
+<li><p>nginx 配置文件在&#x2F;etc&#x2F;nginx&#x2F;nginx.conf，nginx.conf 默认导入了&#x2F;etc&#x2F;nginx&#x2F;conf.d 下的所有 conf 文件，因此只要在 conf.d 下新增后缀为 conf 的文件即可。每个文件都可以新增一个 server 块，监听不同的端口，不过要记得打开端口的防火墙。每次修改配置文件后都要重启 nginx 服务方可生效；</p>
+</li>
+<li><p>单页面应用应避免部署在根目录下再进行反向代理，因为通过当前服务器 A 请求被代理的 B 服务器上的 index.html 时能够正常访问到代理服务器 B，但是 B 中的 index.html 请求资源时又没有从代理服务器 B 请求，而是请求到了当前服务器 A，当前服务器 A 下是没有资源文件的，就会请求失败。而如果在 B 服务器上将网站部署在子目录下，如&#x2F;demo，通过当前服务器 A 请求被代理的 B 服务器上的 index.html，则能正确访问资源。</p>
+</li>
+</ol>
+<blockquote>
+<p>参考链接<br><a target="_blank" rel="noopener" href="https://www.centos.bz/2018/12/%E8%A7%A3%E5%86%B3nginx%E5%87%BA%E7%8E%B0403-forbidden-13-permission-denied%E6%8A%A5%E9%94%99%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95">解决 Nginx 出现 403 forbidden (13:Permission denied)报错的四种方法</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/05f889faa74b">Vue 爬坑之路三：Nginx 部署</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4be0d5882ec5">Nginx 静态服务配置——详解 root 和 alias 指令</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/5825b18c80a1">centos7 防火墙配置整理</a><br><a target="_blank" rel="noopener" href="https://blog.51cto.com/10546390/1754757">Nginx 的 try_files 参数保证能懂的讲解</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/nginx/" rel="tag"># nginx</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/07/01/javascript%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%8A%A0%E8%BD%BDmarkdown%E6%96%87%E4%BB%B6/" rel="prev" title="javascript在页面中加载markdown文件">
+                  <i class="fa fa-chevron-left"></i> javascript在页面中加载markdown文件
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/07/11/vue%E9%80%92%E5%BD%92%E7%BB%84%E4%BB%B6props%E7%9A%84%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/" rel="next" title="vue递归组件props的双向绑定">
+                  vue递归组件props的双向绑定 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="循环引用，也称为循环依赖（circular dependency），通常指 a 脚本的执行依赖了 b 脚本，而 b 脚本的执行又依赖了 a 脚本。 上面概念中的举例，可以说是最简单的情况，我们很容易就能避免，但实际的项目中，依赖关系复杂了以后，很难避免。在我们不注意的情况下，就会出现 a 依赖 b，b 依赖 c，c 又依赖了 a 这样的情况。那么考虑到这样的情况不可避免，javascript 的引">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript模块循环引用">
+<meta property="og:url" content="http://wonderlust91.github.io/2022/02/11/javascript%E6%A8%A1%E5%9D%97%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="循环引用，也称为循环依赖（circular dependency），通常指 a 脚本的执行依赖了 b 脚本，而 b 脚本的执行又依赖了 a 脚本。 上面概念中的举例，可以说是最简单的情况，我们很容易就能避免，但实际的项目中，依赖关系复杂了以后，很难避免。在我们不注意的情况下，就会出现 a 依赖 b，b 依赖 c，c 又依赖了 a 这样的情况。那么考虑到这样的情况不可避免，javascript 的引">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-11T19:23:53.000Z">
+<meta property="article:modified_time" content="2022-10-15T16:10:05.162Z">
+<meta property="article:author" content="WONDERlust91">
+<meta property="article:tag" content="循环引用">
+<meta property="article:tag" content="循环依赖">
+<meta property="article:tag" content="circular dependency">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2022/02/11/javascript%E6%A8%A1%E5%9D%97%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2022/02/11/javascript%E6%A8%A1%E5%9D%97%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8/","path":"2022/02/11/javascript模块循环引用/","title":"javascript模块循环引用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>javascript模块循环引用 | WONDER's Notes</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CommonJS-%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">CommonJS 循环引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ECMAScript-%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">ECMAScript 循环引用</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">135</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">241</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2022/02/11/javascript%E6%A8%A1%E5%9D%97%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="javascript模块循环引用 | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          javascript模块循环引用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-11 19:23:53" itemprop="dateCreated datePublished" datetime="2022-02-11T19:23:53+00:00">2022-02-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-15 16:10:05" itemprop="dateModified" datetime="2022-10-15T16:10:05+00:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2022/02/11/javascript%E6%A8%A1%E5%9D%97%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/11/javascript模块循环引用/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>循环引用，也称为循环依赖（circular dependency），通常指 a 脚本的执行依赖了 b 脚本，而 b 脚本的执行又依赖了 a 脚本。</p>
+<p>上面概念中的举例，可以说是最简单的情况，我们很容易就能避免，但实际的项目中，依赖关系复杂了以后，很难避免。在我们不注意的情况下，就会出现 a 依赖 b，b 依赖 c，c 又依赖了 a 这样的情况。那么考虑到这样的情况不可避免，javascript 的引擎针对 CommonJS 模块与 ECMAScript 模块分别制定了不同的模块加载机制。</p>
+<p>虽然 javascript 引擎支持了循环加载，但我们在书写代码时，还是应该尽量避免循环引用。循环引用会导致不可预期的错误，例如递归加载，使程序无法执行，或发生改变引用顺序就导致程序报错的情况，例如之前一篇文章<a href="/2022/01/13/react%E5%9C%A8%E7%BB%84%E4%BB%B6%E5%A4%96%E4%BD%BF%E7%94%A8redux%E7%9A%84dispatch/" title="react在组件外使用redux的dispatch">react在组件外使用redux的dispatch</a>，就是循环引用导致的问题。</p>
+<p>接下来我们就分别介绍一下 CommonJS 与 ECMAScript 的循环加载机制</p>
+<span id="more"></span>
+
+<h2 id="CommonJS-循环引用"><a href="#CommonJS-循环引用" class="headerlink" title="CommonJS 循环引用"></a>CommonJS 循环引用</h2><p>根据<a target="_blank" rel="noopener" href="https://nodejs.org/api/modules.html#cycles">NodeJS 官网给出的循环引用示例</a>，当发生循环引用时，模块的返回值可能是尚未执行完成的结果。</p>
+<p>考虑如下情况：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// a.js</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./b.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in a, b.done = %j"</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// b.js</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./a.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in b, a.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// main.js</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"main starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./a.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./b.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in main, a.done = %j, b.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当 main.js 加载 a.js 时，a.js 又需要加载 b.js。b.js 加载时又试图加载 a.js。为了防止无限循环加载，一份尚未完成的 a.js 的导出对象被返回给了 b.js，当 b.js 加载完成后，将 b.js 的导出对象提供给 a.js 作为模块。</p>
+<p>在 main.js 中加载了两个模块，加载过程的输出记录为：</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">$ node main.js
+
+main starting
+a starting
+b starting
+in b, a.done = false
+b done
+in a, b.done = true
+a done
+in main, a.done = true, b.done = true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可见：</p>
+<ul>
+<li><p>在 b.js 中 a.js 并没有执行完成；</p>
+</li>
+<li><p>在 main 中，b.js 并没有第二次加载，使用了 a.js 中加载 b.js 的缓存结果；</p>
+</li>
+</ul>
+<p>结论：CommonJS 处理循环引用，依靠暂停未完成的模块执行来实现，对于重复引入的模块，则是直接使用缓存。</p>
+<p>这里还要提醒一次，一定要谨慎对待循环加载机制，尽量不要使用。</p>
+<h2 id="ECMAScript-循环引用"><a href="#ECMAScript-循环引用" class="headerlink" title="ECMAScript 循环引用"></a>ECMAScript 循环引用</h2><p>ECMAScript 模块的运行机制与 CommonJS 截然不同，网上有很多资料认为 ECMAScript 模块支持循环引用，其实是不准确的。</p>
+<p>ECMAScript Module 的实现是通过分析文件引用关系，从最外层依赖引用，一直分析到最内层，然后从最内层依赖向外执行，执行时 import 关键字先声明依赖的引用，类似变量提升机制，后续执行到引入模块的 export 关键字进行赋值（这里仅是为了好理解，类比为变量提升、赋值、临时死区等，实际的实现是比较复杂的对象 getter 与 setter 等）。</p>
+<p>此时如果最内层循环引用了外层，且进行了同步式的调用外层，那么内层本就是由外层跳转进入的，此时外层的 export 关键字尚未执行，内层引入的外层，还未进行赋值，类似变量的临时死区。那么 javascript 引擎会向你报错，外层依赖尚未初始化（node 中报错为 <code>Cannot access &#39;XXX&#39; before initialization</code>，浏览器中则会报类似 <code>XXX is undefined</code> 错误），即不支持循环引用。</p>
+<p>示例使用 mjs 后缀，因为 node 环境运行，不配置 package.json 时，使用 js 后缀文件会报错：<code>SyntaxError: Cannot use import statement outside a module</code>。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// a.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> b <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./b.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">done</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in a, b.done = %j"</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// b.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> a <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./a.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">done</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in b, a.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// main.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"main starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> a <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./a.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> b <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./b.mjs"</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in main, a.done = %j, b.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>运行结果</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">$ node main.mjs
+
+b starting
+file://path-to-file/b.mjs:4
+  console.log("in b, a.done = %j", a.done);
+ReferenceError: Cannot access 'a' before initialization<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>另一种情况是在最内层并未进行同步调用，而是导出了使用循环依赖的函数，或对循环的依赖进行了异步调用，那么这种情况就会相对复杂，是否会发生错误，取决于函数或异步调用的时机，若这个时机在初始化之前，则会报错，且在真实复杂依赖的项目中，很难排查。若调用时机，在初始化之后，则不会报错，造成了一种 ECMAScript 支持循环依赖的错觉。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// a.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> b <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./b.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">done</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in a, b.done = %j"</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// b.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> a <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./a.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">done</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in b, a.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  b<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// main.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"main starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> a <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./a.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> b <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./b.mjs"</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in main, a.done = %j, b.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>运行结果</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">$ node main.mjs
+
+b starting
+b done
+a starting
+in a, b.done = false
+a done
+main starting
+in main, a.done = true, b.done = false
+in b, a.done = true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li><p>从内向外（b-a-main），先执行同步代码；</p>
+</li>
+<li><p>执行 b 时虽然 a 循环引用，但未同步调用，相当于仅是在 b 中声明了 a；</p>
+</li>
+<li><p>b 执行完成后，a 中的 b 相当于已声明，故向外执行到 a 时，同步执行没有问题；</p>
+</li>
+<li><p>再向外执行 main，a、b 都已声明，a.done 在 a 执行时就已设置为 true，而 b.done 异步尚未执行，仍为 false；</p>
+</li>
+<li><p>最后执行异步的 b，此时同步 a 已执行完成，b 虽然循环引用了 a，但此时 a 已有值，并不会报错，造成了 ECMAScript 支持循环引用的错觉。</p>
+</li>
+</ul>
+<p>结论：ECMASCript Module 的机制实质上并不是网上所说的支持循环引用，相反会对循环依赖进行报错提示。但由于它的实现机制，导致 ES Module 并不会严格检查到异步调用到的循环依赖，而调用时机的不同，导致了不是一定会发生错误。这也就是大家常说的，循环引用依赖会导致不可预知的问题。</p>
+<p>因此循环引用是一个坏的实践，应该尽量避免。</p>
+<p>webpack 插件 circular-dependency-plugin 可以帮助你检测项目中存在的所有循环依赖，尽早发现潜在的循环依赖会免去未来很大的麻烦。</p>
+<blockquote>
+<p>参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/11/circular-dependency.html">JavaScript 模块的循环加载</a></p>
+<p><a target="_blank" rel="noopener" href="https://nodejs.org/api/modules.html#cycles">NodeJS API Modules Cycles</a></p>
+<p><a target="_blank" rel="noopener" href="https://jishuin.proginn.com/p/763bfbd62ab5">深入分析 JavaScript 模块循环引用</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33049803">探索 JavaScript 中的依赖管理及循环依赖</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/CommanderXL/Biu-blog/issues/49">循环依赖</a></p>
+<p><a target="_blank" rel="noopener" href="http://yangguang1029.github.io/2017/11/13/es6-circle-import/">ES6 中循环引用的坑</a></p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000004151411">Node.js 中的循环依赖（源码解析）</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8/" rel="tag"># 循环引用</a>
+              <a href="/tags/%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/" rel="tag"># 循环依赖</a>
+              <a href="/tags/circular-dependency/" rel="tag"># circular dependency</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/10/node%E8%A7%A3%E5%86%B3%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/" rel="prev" title="node解决打包过程中的内存不足">
+                  <i class="fa fa-chevron-left"></i> node解决打包过程中的内存不足
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/02/13/css%E6%B8%90%E5%8F%98%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/" rel="next" title="css渐变圆角边框">
+                  css渐变圆角边框 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

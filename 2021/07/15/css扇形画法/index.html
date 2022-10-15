@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="有很多扇形的实现方式，大部分是通过边框、遮罩等方式实现的，需要用到多个 div，这涉及到多个层级，且因为是遮罩，无法实现半透明等效果。下面讲一种使用clip-path属性实现扇形的方法。 基本原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css扇形画法">
+<meta property="og:url" content="http://wonderlust91.github.io/2021/07/15/css%E6%89%87%E5%BD%A2%E7%94%BB%E6%B3%95/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="有很多扇形的实现方式，大部分是通过边框、遮罩等方式实现的，需要用到多个 div，这涉及到多个层级，且因为是遮罩，无法实现半透明等效果。下面讲一种使用clip-path属性实现扇形的方法。 基本原理">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-15T09:46:24.000Z">
+<meta property="article:modified_time" content="2022-10-15T16:10:05.158Z">
+<meta property="article:author" content="WONDERlust91">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="扇形">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2021/07/15/css%E6%89%87%E5%BD%A2%E7%94%BB%E6%B3%95/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2021/07/15/css%E6%89%87%E5%BD%A2%E7%94%BB%E6%B3%95/","path":"2021/07/15/css扇形画法/","title":"css扇形画法"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>css扇形画法 | WONDER's Notes</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">基本原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">需要注意的点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E4%B8%8E%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">示例与代码</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">135</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">241</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/07/15/css%E6%89%87%E5%BD%A2%E7%94%BB%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="css扇形画法 | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          css扇形画法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-07-15 09:46:24" itemprop="dateCreated datePublished" datetime="2021-07-15T09:46:24+00:00">2021-07-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-15 16:10:05" itemprop="dateModified" datetime="2022-10-15T16:10:05+00:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/07/15/css%E6%89%87%E5%BD%A2%E7%94%BB%E6%B3%95/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/15/css扇形画法/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>有很多扇形的实现方式，大部分是通过边框、遮罩等方式实现的，需要用到多个 div，这涉及到多个层级，且因为是遮罩，无法实现半透明等效果。下面讲一种使用<code>clip-path</code>属性实现扇形的方法。</p>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><span id="more"></span>
+
+<ul>
+<li>绘制一个正方形 div;<div style="width: 50px; height: 50px; background-color: #999; margin: 6px 0;"></div></li>
+<li>使用 <code>clip-path</code> 属性的 <code>polygon</code> 方法裁剪要显示的区域;<ul>
+<li><code>polygon</code>方法以 div 中心 <strong>50% 50%</strong> 为起点，左上角原点 <strong>0% 0%</strong> 为不动点，将第三点从左上角原点开始沿四条边移动（每经过一个顶点，就增加该顶点为固定点），绘制要裁剪的区域;</li>
+<li>div 顶边代表 0-90 度角的扇形（比率中的 0-25%），此时只需要中心起点、左上角原点、沿顶边动态变化的点，三个点，即可绘出要裁剪的三角形;<div style="width: 50px; height: 50px; background-color: #999; margin: 6px 0;"><div style="width: 50px; height: 50px; background-color: red; clip-path: polygon(50% 50%, 0% 0%, 60% 0%)"></div></div></li>
+<li>div 右边代表 90-180 度角的扇形（比率中的 25%-50%），此时需要中心起点、左上角原点、右上角顶点、沿右边动态变化的点，四个点，即可绘出要裁剪的多边形;<div style="width: 50px; height: 50px; background-color: #999; margin: 6px 0;"><div style="width: 50px; height: 50px; background-color: red; clip-path: polygon(50% 50%, 0% 0%, 100% 0%, 100% 60%)"></div></div></li>
+<li>div 下边代表 180-270 度角的扇形（比率中的 50%-75%），此时需要中心起点、左上角原点、右上角顶点、右下角顶点、沿下边动态变化的点，五个点，即可绘出要裁剪的多边形;<div style="width: 50px; height: 50px; background-color: #999; margin: 6px 0;"><div style="width: 50px; height: 50px; background-color: red; clip-path: polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, 40% 100%)"></div></div></li>
+<li>div 左边代表 270-360 度角的扇形（比率中的 75%-100%），此时需要中心起点、左上角原点、右上角顶点、右下角顶点、左下角顶点、沿左边动态变化的点，六个点，即可绘出要裁剪的多边形;<div style="width: 50px; height: 50px; background-color: #999; margin: 6px 0;"><div style="width: 50px; height: 50px; background-color: red; clip-path: polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 40%)"></div></div></li>
+</ul>
+</li>
+<li>使用 <code>border-radius</code> 属性将正方形 div 变为圆形，即可由多边形裁剪出扇形;<div style="width: 50px; height: 50px; background-color: #999; border-radius: 50%; margin: 6px 0;"><div style="width: 50px; height: 50px; background-color: red; clip-path: polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 40%); border-radius: 50%;"></div></div></li>
+<li>将该 div 顺时针旋转 45 度，即可得到以正上方为 0 度的扇形;<div style="width: 50px; height: 50px; background-color: #999; border-radius: 50%; transform: rotate(45deg); margin: 6px 0;"><div style="width: 50px; height: 50px; background-color: red; clip-path: polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 40%); border-radius: 50%;"></div></div></li>
+</ul>
+<h2 id="需要注意的点"><a href="#需要注意的点" class="headerlink" title="需要注意的点"></a>需要注意的点</h2><ol>
+<li><p>0-180 度扇形使用的是 div 的顶边、与右边，动态点移动时都是从横坐标或纵坐标的 0%往 100%移动，而 180-360 度扇形则使用 div 的底边与左边，横、纵坐标的移动是从 100%往 0%变化;</p>
+</li>
+<li><p>如果要通过 transition 或 animate 属性给 div 加上动效，使之从 0-360 度变化不突兀，那么 clip-path 的 polygon 方法顶点数应该相同，因为 transition 与 animate 需要 clip-path 的 polygon 顶点数相同，才能对动画进行补间;</p>
+</li>
+</ol>
+<h2 id="示例与代码"><a href="#示例与代码" class="headerlink" title="示例与代码"></a>示例与代码</h2><style>
+.sector {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  transition: clip-path 0.2s;
+}
+</style>
+<div class="sector"></div>
+<input type="range" name="sector" id="range" min="0" max="100">
+<script>
+const sectorDom = document.querySelector(".sector");
+function setSector(dom, options) {
+  dom.style.backgroundColor = options.color;
+  if (options.ratio >= 0 && options.ratio <= 25) {
+    dom.style.clipPath = `polygon(50% 50%, 0% 0%, ${(options.ratio / 25) * 100}% 0%, ${
+      (options.ratio / 25) * 100
+    }% 0%, ${(options.ratio / 25) * 100}% 0%, ${(options.ratio / 25) * 100}% 0%)`;
+  } else if (options.ratio > 25 && options.ratio <= 50) {
+    dom.style.clipPath = `polygon(50% 50%, 0% 0%, 100% 0%, 100% ${((options.ratio - 25) / 25) * 100}%, 100% ${
+      ((options.ratio - 25) / 25) * 100
+    }%, 100% ${((options.ratio - 25) / 25) * 100}%)`;
+  } else if (options.ratio > 50 && options.ratio <= 75) {
+    dom.style.clipPath = `polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, ${(1 - (options.ratio - 50) / 25) * 100}% 100%, ${
+      (1 - (options.ratio - 50) / 25) * 100
+    }% 100%)`;
+  } else if (options.ratio > 75 && options.ratio <= 100) {
+    dom.style.clipPath = `polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% ${
+      (1 - (options.ratio - 75) / 25) * 100
+    }%)`;
+  } else {
+    console.error("请在options.ratio属性上输入0-100的数字表示比率范围");
+  }
+}
+const inputRangeDom = document.getElementById("range");
+if (sectorDom && inputRangeDom) {
+  setSector(sectorDom, { color: "red", ratio: 50 });
+  inputRangeDom.addEventListener("change", (event) => {
+    setSector(sectorDom, { color: "red", ratio: event.target.value });
+  });
+}
+</script>
+
+<p>html 部分</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sector<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>range<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sector<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>range<span class="token punctuation">"</span></span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>css 部分</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.sector</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> clip-path 0.2s<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>js 部分</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> sectorDom <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".sector"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/**
+ * 设置扇形的方法
+ * @param &#123;HTMLDivElement&#125; dom 用于制作扇形的DOM节点
+ * @param &#123;&#123;color: string; ratio: number&#125;&#125; options 配置扇形颜色与百分比，0度为0，360度为100
+ */</span>
+<span class="token keyword">function</span> <span class="token function">setSector</span><span class="token punctuation">(</span><span class="token parameter">dom<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 设置颜色</span>
+  dom<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> options<span class="token punctuation">.</span>color<span class="token punctuation">;</span>
+  <span class="token comment">// 0-25%，即顶边，多边形只需要前三个点，后三个点为第三个点的复制，为正常显示补间动画</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> options<span class="token punctuation">.</span>ratio <span class="token operator">&lt;=</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    dom<span class="token punctuation">.</span>style<span class="token punctuation">.</span>clipPath <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">polygon(50% 50%, 0% 0%, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">% 0%, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>
+      <span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+    <span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">% 0%, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">% 0%, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">% 0%)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token comment">// 25%-50%，即右边，多边形需要前四个点，后两个点为第四个点的复制，为正常显示补间动画</span>
+  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">></span> <span class="token number">25</span> <span class="token operator">&amp;&amp;</span> options<span class="token punctuation">.</span>ratio <span class="token operator">&lt;=</span> <span class="token number">50</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    dom<span class="token punctuation">.</span>style<span class="token punctuation">.</span>clipPath <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">polygon(50% 50%, 0% 0%, 100% 0%, 100% </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token punctuation">(</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">-</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">%, 100% </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>
+      <span class="token punctuation">(</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">-</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+    <span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">%, 100% </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token punctuation">(</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">-</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">%)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token comment">// 50%-75%，即底边，底边时横坐标为100%到0%，注意坐标反向；多边形需要前五个点，后一个点为第五个点的复制，为正常显示补间动画</span>
+  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">></span> <span class="token number">50</span> <span class="token operator">&amp;&amp;</span> options<span class="token punctuation">.</span>ratio <span class="token operator">&lt;=</span> <span class="token number">75</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    dom<span class="token punctuation">.</span>style<span class="token punctuation">.</span>clipPath <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">-</span> <span class="token number">50</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">% 100%, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>
+      <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">-</span> <span class="token number">50</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+    <span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">% 100%)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token comment">// 75%-100%，即左边，左边时纵坐标为100%到0%，注意坐标反向；多边形需要六个点</span>
+  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">></span> <span class="token number">75</span> <span class="token operator">&amp;&amp;</span> options<span class="token punctuation">.</span>ratio <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    dom<span class="token punctuation">.</span>style<span class="token punctuation">.</span>clipPath <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">polygon(50% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>
+      <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>ratio <span class="token operator">-</span> <span class="token number">75</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+    <span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">%)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"请在options.ratio属性上输入0-100的数字表示比率范围"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">const</span> inputRangeDom <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"range"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>sectorDom <span class="token operator">&amp;&amp;</span> inputRangeDom<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">setSector</span><span class="token punctuation">(</span>sectorDom<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">"red"</span><span class="token punctuation">,</span> <span class="token literal-property property">ratio</span><span class="token operator">:</span> <span class="token number">50</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  inputRangeDom<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"change"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token function">setSector</span><span class="token punctuation">(</span>sectorDom<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">"red"</span><span class="token punctuation">,</span> <span class="token literal-property property">ratio</span><span class="token operator">:</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://vlambda.com/wz_Y7azcoZwx.html">CSS3 教程：真·任意角度扇形画法</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/haizlin/fe-interview/issues/527">第 76 天 用 CSS 画出一个任意角度的扇形，可以写多种实现的方法</a></p>
+<p><a target="_blank" rel="noopener" href="https://codepen.io/liuxiaole-the-sasster/pen/Zdrmxg">pie chart - clip-path</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/css/" rel="tag"># css</a>
+              <a href="/tags/%E6%89%87%E5%BD%A2/" rel="tag"># 扇形</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/07/14/%E9%94%AE%E7%9B%98%E4%B8%8A%E7%9A%84%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/" rel="prev" title="键盘上的特殊符号">
+                  <i class="fa fa-chevron-left"></i> 键盘上的特殊符号
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/07/25/vue3-vite-typescript-element-plus%E5%88%9D%E6%8E%A2%E4%B8%8E%E8%B8%A9%E5%9D%91%E6%80%BB%E7%BB%93/" rel="next" title="vue3_vite_typescript_element-plus初探与踩坑总结">
+                  vue3_vite_typescript_element-plus初探与踩坑总结 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="基础知识vertical-align 的使用范围vertical-align 只能应用于 inline 元素，即 display 为 inline、inline-block、inline-table 的元素，img 与 span 都是 inline 元素 基线图中的 baseline 即为元素的基线，x-height 就是 x 高度  由图可见元素基线位置是由元素自身的字体大小与行高决定的，还会受">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css内联元素的vertical-align">
+<meta property="og:url" content="http://wonderlust91.github.io/2019/08/05/css%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E7%9A%84vertical-align/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="基础知识vertical-align 的使用范围vertical-align 只能应用于 inline 元素，即 display 为 inline、inline-block、inline-table 的元素，img 与 span 都是 inline 元素 基线图中的 baseline 即为元素的基线，x-height 就是 x 高度  由图可见元素基线位置是由元素自身的字体大小与行高决定的，还会受">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://wonderlust91.github.io/images/css-baseline.png">
+<meta property="og:image" content="http://wonderlust91.github.io/images/css-vertical-align-1.png">
+<meta property="og:image" content="http://wonderlust91.github.io/images/css-vertical-align-2.png">
+<meta property="og:image" content="http://wonderlust91.github.io/images/css-vertical-align-3.png">
+<meta property="og:image" content="http://wonderlust91.github.io/images/css-vertical-align-4.png">
+<meta property="og:image" content="http://wonderlust91.github.io/images/css-vertical-align-5.png">
+<meta property="article:published_time" content="2019-08-05T15:36:54.000Z">
+<meta property="article:modified_time" content="2022-10-15T16:10:05.158Z">
+<meta property="article:author" content="WONDERlust91">
+<meta property="article:tag" content="inline">
+<meta property="article:tag" content="vertical-align">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wonderlust91.github.io/images/css-baseline.png">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2019/08/05/css%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E7%9A%84vertical-align/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2019/08/05/css%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E7%9A%84vertical-align/","path":"2019/08/05/css内联元素的vertical-align/","title":"css内联元素的vertical-align"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>css内联元素的vertical-align | WONDER's Notes</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vertical-align-%E7%9A%84%E4%BD%BF%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="nav-number">1.1.</span> <span class="nav-text">vertical-align 的使用范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%BA%BF"><span class="nav-number">1.2.</span> <span class="nav-text">基线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#inline-table-%E7%9A%84%E5%9F%BA%E7%BA%BF"><span class="nav-number">1.2.1.</span> <span class="nav-text">inline-table 的基线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#inline-block-%E7%9A%84%E5%9F%BA%E7%BA%BF"><span class="nav-number">1.2.2.</span> <span class="nav-text">inline-block 的基线</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vertical-align"><span class="nav-number">2.</span> <span class="nav-text">vertical-align</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%8E%B0%E8%B1%A1"><span class="nav-number">2.1.</span> <span class="nav-text">常见现象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BD%A2%E6%88%90%E5%8E%9F%E5%9B%A0"><span class="nav-number">2.1.1.</span> <span class="nav-text">形成原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.2.</span> <span class="nav-text">解决方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%BB%B6%E4%BC%B8-1"><span class="nav-number">2.2.</span> <span class="nav-text">问题延伸 1</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BD%A2%E6%88%90%E5%8E%9F%E5%9B%A0-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">形成原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">解决方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%BB%B6%E4%BC%B8-2"><span class="nav-number">2.3.</span> <span class="nav-text">问题延伸 2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BD%A2%E6%88%90%E5%8E%9F%E5%9B%A0-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">形成原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">解决方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%BB%B6%E4%BC%B8-3"><span class="nav-number">2.4.</span> <span class="nav-text">问题延伸 3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BD%A2%E6%88%90%E5%8E%9F%E5%9B%A0-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">形成原因</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%BB%B6%E4%BC%B8-4"><span class="nav-number">2.5.</span> <span class="nav-text">问题延伸 4</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BD%A2%E6%88%90%E5%8E%9F%E5%9B%A0-4"><span class="nav-number">2.5.1.</span> <span class="nav-text">形成原因</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">135</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">241</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/08/05/css%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E7%9A%84vertical-align/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="css内联元素的vertical-align | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          css内联元素的vertical-align
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-08-05 15:36:54" itemprop="dateCreated datePublished" datetime="2019-08-05T15:36:54+00:00">2019-08-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-15 16:10:05" itemprop="dateModified" datetime="2022-10-15T16:10:05+00:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2019/08/05/css%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E7%9A%84vertical-align/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/05/css内联元素的vertical-align/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="vertical-align-的使用范围"><a href="#vertical-align-的使用范围" class="headerlink" title="vertical-align 的使用范围"></a>vertical-align 的使用范围</h3><p>vertical-align 只能应用于 inline 元素，即 display 为 inline、inline-block、inline-table 的元素，img 与 span 都是 inline 元素</p>
+<h3 id="基线"><a href="#基线" class="headerlink" title="基线"></a>基线</h3><p>图中的 baseline 即为元素的基线，x-height 就是 x 高度</p>
+<p><img src="/../images/css-baseline.png" alt="baseline"></p>
+<p>由图可见<strong>元素基线位置是由元素自身的字体大小与行高决定的</strong>，还会受到子元素影响。</p>
+<h4 id="inline-table-的基线"><a href="#inline-table-的基线" class="headerlink" title="inline-table 的基线"></a>inline-table 的基线</h4><p>以表格第一行的基线为基线</p>
+<h4 id="inline-block-的基线"><a href="#inline-block-的基线" class="headerlink" title="inline-block 的基线"></a>inline-block 的基线</h4><ol>
+<li><p>在有正常文档流内容或 overflow 属性计算值为 visible 以外的值的情况下，inline-block 元素的 baseline 就是最后一个 line-box 元素的 baseline；</p>
+</li>
+<li><p>除上面两种情况外，baseline 是 margin-box 的下边界；</p>
+</li>
+</ol>
+<span id="more"></span>
+
+<h2 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h2><p>vertical-align 属性默认取值为 baseline，即将当前 box 的基线与父级 box 的基线对齐。</p>
+<h3 id="常见现象"><a href="#常见现象" class="headerlink" title="常见现象"></a>常见现象</h3><p>水平排列 li 时，li 下方总有一片空白</p>
+<p><img src="/../images/css-vertical-align-1.png" alt="vertical-align-1"></p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token comment">&lt;!-- 这里本应该直接使用文字"xxx"来说明基线关系（直接使用文字是匿名line-box），但是为了能够直观看到"xxx"的背景色，这里用inline-block的span来代替匿名的line-box --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>x<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>xxx<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.outer</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.inner</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token comment">/* 用较大的宽高撑开父级元素，可以看出父元素baseline随子元素的改变 */</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.x</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="形成原因"><a href="#形成原因" class="headerlink" title="形成原因"></a>形成原因</h4><ol>
+<li><p>li 元素为 inline-block 元素，根据 inline-block 元素基线判断原则，li 内无内容、overflow 属性不为 visible，所以 li 的基线位置为底部</p>
+</li>
+<li><p>li 元素较大，撑开了 ul 元素，根据 vertical-align 默认值 baseline，li 基线与父级 ul 基线对齐，则 ul 元素基线位置被迫下移与 li 平齐</p>
+</li>
+<li><p>ul 中文字为匿名 line-box，有默认的行高，文字基线到底线的距离，形成了 li 下方的空白区域</p>
+</li>
+</ol>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>理解了这种情况的形成原因，我们就知道了如何解决这种情况，两种方法：一种是将基线上移，另一种是将行高减小</p>
+<ol>
+<li><p>基线上移：li 元素 vertical-align 设为非 bottom 的值；</p>
+</li>
+<li><p>行高缩小：ul 元素 line-height 设为 0，或 font-size 设为 0；</p>
+</li>
+</ol>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 方法1 */</span>
+<span class="token selector">.inner</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* 方法2 */</span>
+<span class="token selector">.outer</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token comment">/* 或 */</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>缩小行高的方法不推荐使用，因为在父级中设置会影响子元素。</p>
+<p>特别提醒，其实还可以用 inline-flex 来彻底解决这个问题。</p>
+<h3 id="问题延伸-1"><a href="#问题延伸-1" class="headerlink" title="问题延伸 1"></a>问题延伸 1</h3><p>当 ul 高度与行高相等时，li 设置 vertical-align 为 middle，为什么 li 不是完全垂直居中的？</p>
+<p><img src="/../images/css-vertical-align-2.png" alt="vertical-align-2"></p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>x<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>xxx<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.outer</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.inner</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.x</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="形成原因-1"><a href="#形成原因-1" class="headerlink" title="形成原因"></a>形成原因</h4><ol>
+<li><p>当行高与高度相同时，文字会居中，父元素基线位置在居中的文字底部</p>
+</li>
+<li><p>li 的 vertical-align 设置为 middle 时，li 的中点位置并不是直接与父元素 ul 的中点位置对齐的，而是相对于 ul 基线位置再加半个 x 的高度位置对齐的（通常这个位置略低于中点位置），因此就会发生不是完全居中对齐的情况</p>
+</li>
+</ol>
+<h4 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h4><ol>
+<li><p>设置父元素 font-size 为 0，由于不存在文字高度了，使得父元素基线与中点位置重合了，子元素中点对齐父元素基线+半 x 高度时，半 x 高度也为 0，则子元素直接对齐父元素基线，就达到了完全居中的效果。但是我们并不推荐此方法，会导致子元素中的字都消失</p>
+</li>
+<li><p>使用辅助兄弟元素。先取消父元素的 line-height 设置，以使父元素基线位置不被固定，再设置一个宽为 0，高 100%的兄弟元素，并设置 display 为 inline-block，vertical-align 设为 middle，即可将父元素的基线位置变至辅助元素的中点，这样要居中的子元素设置 vertical-align 为 middle 后就可以正确垂直居中了</p>
+</li>
+</ol>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>helper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>x<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>xxx<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.outer</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.inner</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.helper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.x</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="问题延伸-2"><a href="#问题延伸-2" class="headerlink" title="问题延伸 2"></a>问题延伸 2</h3><p>li 中有文字时</p>
+<p><img src="/../images/css-vertical-align-3.png" alt="vertical-align-3"></p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>x<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>x<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>xxx<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.outer</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.inner</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.x</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="形成原因-2"><a href="#形成原因-2" class="headerlink" title="形成原因"></a>形成原因</h4><ol>
+<li><p>li 元素为 inline-block 元素，根据 inline-block 元素基线判断原则，第二个 li 有内容，所以 li 的基线位置为最后一个 line-box 的基线，x 字母为一个匿名 line-box，它的基线为 x 的底部，该 li 元素有且只有一个 line-box 字母 x，所以第二个 li 元素基线位置就是字母 x 的基线位置</p>
+</li>
+<li><p>第一个 li 元素基线仍为底部，第二个 li 元素基线为其中字母 x 基线，它们都与父元素 ul 基线对齐，那么两个 li 元素基线也是对齐的，则第二个 li 元素下移，将父元素 ul 撑得更大</p>
+</li>
+</ol>
+<h4 id="解决方法-2"><a href="#解决方法-2" class="headerlink" title="解决方法"></a>解决方法</h4><ol>
+<li><p>改变 li 元素对齐方式，不再与父元素基线对齐</p>
+</li>
+<li><p>为第二个 li 元素增加 overflow 不为 visible 的值</p>
+</li>
+</ol>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!-- 方法二 --></span>
+<span class="token comment">&lt;!-- 增加overflow属性后li基线位置重新变为li底部 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">overflow</span><span class="token punctuation">:</span> auto</span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>x<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token comment">/* 方法一 */</span>
+  <span class="token selector">.inner</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="问题延伸-3"><a href="#问题延伸-3" class="headerlink" title="问题延伸 3"></a>问题延伸 3</h3><p>父元素 font-size 为 0 时，一个 li 中为空，一个 li 中有字符，为什么第二个 li 上边界与第一个 li 下边界对齐？</p>
+<p><img src="/../images/css-vertical-align-4.png" alt="vertical-align-4"></p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>x<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.outer</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.inner</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="形成原因-3"><a href="#形成原因-3" class="headerlink" title="形成原因"></a>形成原因</h4><ol>
+<li><p>根据 inline-block 基线原则，第一个 li 内无内容且 overflow 不为 visible，其基线位置为 li 底边界，第二个 li 内有内容，其基线位置为字母 x 基线，第一个 li 底边与第二个 li 中字母 x 基线对齐</p>
+</li>
+<li><p>当 font-size 为 0 时，字符高度为 0，字母 x 基线位置与第二个 li 顶边界重合，就造成了第一个 li 底边界与第二个 li 顶边界对齐的情况</p>
+</li>
+</ol>
+<h3 id="问题延伸-4"><a href="#问题延伸-4" class="headerlink" title="问题延伸 4"></a>问题延伸 4</h3><p>父元素 line-height 为 0 时，一个 li 中为空，一个 li 中有字符，为什么第二个 li 背景下移了？</p>
+<p><img src="/../images/css-vertical-align-5.png" alt="vertical-align-5"></p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>x<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.outer</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.inner</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="形成原因-4"><a href="#形成原因-4" class="headerlink" title="形成原因"></a>形成原因</h4><ol>
+<li><p>两个 li 的基线情况同上例中一样，第一个 li 底边界为基线，第二个 li 字母 x 基线为 li 基线。</p>
+</li>
+<li><p>字符占据高度由行高决定，li 继承了父元素行高为 0，那么字符占据高度也为 0，此时 li 的上边界就处于字符内容区域的顶部，降低到了字符内容区域的垂直中点上，这就造成了第二个 li 背景下移了。（注意这里不是 font-size 为 0，虽然字符占据高度为 0 了，但字符还是可见的，字符内容区域 content area 高度没有改变，若 font-size 为 0 字符就不可见了，内容区域高度也为 0 了）</p>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li><p>元素基线位置是由元素自身的字体大小与行高决定的，还会受到子元素影响</p>
+</li>
+<li><p>inline-block 元素在有正常文档流内容或 overflow 属性计算值为 visible 以外的值的情况下，baseline 就是最后一个 line-box 元素的 baseline，否则 baseline 是 margin-box 的下边界（line-box、margin-box 是 css 各种盒模型的术语）</p>
+</li>
+<li><p>vertical-align 值为 middle 时，当前 box 的中点位置并不是直接与父级 box 的中点位置对齐的，而是相对于父级 box 的(基线位置 + (x 高度 &#x2F; 2)) 位置对齐的（通常这个位置略低于中点位置）</p>
+</li>
+<li><p>font-size 为 0 时，字符内容区域高度为 0，字符占据高度为 0，由于 x 高度为 0，vertical-align: middle 直接对齐父级 box 基线；line-height 为 0 时，字符内容区域高度不变，字符占据高度为 0，当前 box 上边界由字符内容区域上边界下移至字符内容区域垂直中点</p>
+</li>
+</ol>
+<blockquote>
+<p>参考链接<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/52441893">你可能不知道的 vertical-align</a><br><a target="_blank" rel="noopener" href="https://drafts.csswg.org/css2/visudet.html#propdef-vertical-align">W3C Draft</a><br><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/comment-page-1/">CSS 深入理解 vertical-align 和 line-height 的基友关系</a><br><a target="_blank" rel="noopener" href="https://christopheraue.net/design/vertical-align">Vertical-Align: All You Need To Know (CSS)</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/inline/" rel="tag"># inline</a>
+              <a href="/tags/vertical-align/" rel="tag"># vertical-align</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/08/05/javascript%E5%A4%8D%E5%88%B6%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/" rel="prev" title="javascript复制到剪贴板">
+                  <i class="fa fa-chevron-left"></i> javascript复制到剪贴板
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/08/12/javascript%E4%BD%BF%E7%94%A8terser%E6%89%93%E5%8C%85%E6%97%B6%E8%87%AA%E5%8A%A8%E5%8E%BB%E9%99%A4console-log/" rel="next" title="javascript使用terser打包时自动去除console.log">
+                  javascript使用terser打包时自动去除console.log <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

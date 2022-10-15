@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="CSS上古时代连圆形都要靠切图，到了CSS3之后，我们已经可以使用各种方法绘制不同的形状了 圆形通常我们都是依靠设置宽高相同的盒，再设置border-radius为50%来绘制圆形 .circle &amp;#123;   width: 100px;   height: 100px;   border-radius: 50%; &amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css绘制多种形状">
+<meta property="og:url" content="http://wonderlust91.github.io/2019/06/12/css%E7%BB%98%E5%88%B6%E5%A4%9A%E7%A7%8D%E5%BD%A2%E7%8A%B6/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="CSS上古时代连圆形都要靠切图，到了CSS3之后，我们已经可以使用各种方法绘制不同的形状了 圆形通常我们都是依靠设置宽高相同的盒，再设置border-radius为50%来绘制圆形 .circle &amp;#123;   width: 100px;   height: 100px;   border-radius: 50%; &amp;#125;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-12T11:03:34.000Z">
+<meta property="article:modified_time" content="2022-10-15T16:10:05.162Z">
+<meta property="article:author" content="WONDERlust91">
+<meta property="article:tag" content="圆形">
+<meta property="article:tag" content="椭圆形">
+<meta property="article:tag" content="平行四边形">
+<meta property="article:tag" content="梯形">
+<meta property="article:tag" content="多边形">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2019/06/12/css%E7%BB%98%E5%88%B6%E5%A4%9A%E7%A7%8D%E5%BD%A2%E7%8A%B6/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2019/06/12/css%E7%BB%98%E5%88%B6%E5%A4%9A%E7%A7%8D%E5%BD%A2%E7%8A%B6/","path":"2019/06/12/css绘制多种形状/","title":"css绘制多种形状"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>css绘制多种形状 | WONDER's Notes</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%86%E5%BD%A2"><span class="nav-number">1.</span> <span class="nav-text">圆形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A4%AD%E5%9C%86%E5%BD%A2"><span class="nav-number">2.</span> <span class="nav-text">椭圆形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E5%BD%A2"><span class="nav-number">3.</span> <span class="nav-text">三角形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2"><span class="nav-number">4.</span> <span class="nav-text">平行四边形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BD%A2"><span class="nav-number">5.</span> <span class="nav-text">梯形</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%8F%98%E6%8D%A2%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">5.1.</span> <span class="nav-text">一些变换的基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%AF%E5%BD%A2%E4%B8%8E%E7%9B%B4%E8%A7%92%E6%A2%AF%E5%BD%A2"><span class="nav-number">5.2.</span> <span class="nav-text">梯形与直角梯形</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E8%BE%B9%E5%BD%A2"><span class="nav-number">6.</span> <span class="nav-text">多边形</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">135</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">241</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/06/12/css%E7%BB%98%E5%88%B6%E5%A4%9A%E7%A7%8D%E5%BD%A2%E7%8A%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="css绘制多种形状 | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          css绘制多种形状
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-12 11:03:34" itemprop="dateCreated datePublished" datetime="2019-06-12T11:03:34+00:00">2019-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-15 16:10:05" itemprop="dateModified" datetime="2022-10-15T16:10:05+00:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2019/06/12/css%E7%BB%98%E5%88%B6%E5%A4%9A%E7%A7%8D%E5%BD%A2%E7%8A%B6/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/12/css绘制多种形状/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>CSS上古时代连圆形都要靠切图，到了CSS3之后，我们已经可以使用各种方法绘制不同的形状了</p>
+<h2 id="圆形"><a href="#圆形" class="headerlink" title="圆形"></a>圆形</h2><p>通常我们都是依靠设置宽高相同的盒，再设置border-radius为50%来绘制圆形</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.circle</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<span id="more"></span>
+
+<p>现在，我们也可以用强大的clip-path的circle方法来绘制，circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;] )，其中shape-radius是半径，当使用百分比半径的时候将会以sqrt(width^2+height^2)&#x2F;sqrt(2)为100%来计算，position定义了圆心到盒上边与左边的距离，默认值为盒中心。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.circle</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token comment">/* 所有参数示例 */</span>
+  <span class="token property">clip-path</span><span class="token punctuation">:</span> <span class="token function">circle</span><span class="token punctuation">(</span>40px at 50px 40px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">/* 实现同border-radius一致效果的示例 */</span>
+  <span class="token property">clip-path</span><span class="token punctuation">:</span> <span class="token function">circle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="椭圆形"><a href="#椭圆形" class="headerlink" title="椭圆形"></a>椭圆形</h2><p>clip-path绘制椭圆形，ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;] )，shape-radius为椭圆形x轴与y轴半径，默认为100%，position是椭圆中心点，默认为盒中心点。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.ellipse</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token property">clip-path</span><span class="token punctuation">:</span> <span class="token function">ellipse</span><span class="token punctuation">(</span>50% 30% at 50% 35%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="三角形"><a href="#三角形" class="headerlink" title="三角形"></a>三角形</h2><p>使用border属性，我们可以绘制出三角形，与梯形，这种方法的缺点是只绘出了形状，并没有改变盒模型的边界</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.triangle</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token comment">/* 未设置顶部边框则宽为0，左右两侧边框宽度为div宽度的一半，透明色，底边框高度为div高度，使用背景色，三个边框形成的区域就是三角形 */</span>
+  <span class="token property">border-left</span><span class="token punctuation">:</span> 50px solid transparent<span class="token punctuation">;</span>
+  <span class="token property">border-right</span><span class="token punctuation">:</span> 50px solid transparent<span class="token punctuation">;</span>
+  <span class="token property">border-bottom</span><span class="token punctuation">:</span> 100px solid orange<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.trapezoid</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token comment">/* 减小两侧边框宽度，使之形成梯形 */</span>
+  <span class="token property">border-left</span><span class="token punctuation">:</span> 30px solid transparent<span class="token punctuation">;</span>
+  <span class="token property">border-right</span><span class="token punctuation">:</span> 30px solid transparent<span class="token punctuation">;</span>
+  <span class="token property">border-bottom</span><span class="token punctuation">:</span> 100px solid orange<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="平行四边形"><a href="#平行四边形" class="headerlink" title="平行四边形"></a>平行四边形</h2><p>绘制平行四边形，我们第一个想到的方法就是使用transform的skew，但是skew有一个很大的缺点就是连盒内部的文字也变形了，如何解决文字变形的问题呢？我们可以使用CSS的伪元素，在伪元素上使用skew变形，而不改变元素本身。</p>
+<p>skew( ax [, ay] )，ax与ay是角的大小，ax指x轴（纵轴，不同与平面直接直角坐标系的x轴）在逆时针方向上扭曲的程度，ay指y轴在顺时针方向上扭曲的程度。角的大小可以用度deg，百分度grad，弧度rad，圈数turn来表示。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 设置z-index为1，防止伪元素遮挡 */</span>
+<span class="token selector">.parallelogram</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.parallelogram::before</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">/* 设置z-index为-1，不遮挡未设置z-index的元素 */</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #00699f<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">skew</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="梯形"><a href="#梯形" class="headerlink" title="梯形"></a>梯形</h2><p>梯形用到了透视与3D变换的x轴旋转，若是要得到一个直角梯形，则还要改变变换原点的属性。</p>
+<h3 id="一些变换的基础知识"><a href="#一些变换的基础知识" class="headerlink" title="一些变换的基础知识"></a>一些变换的基础知识</h3><p>scale( sx [, sy] ) 缩放函数，sx表示缩放向量横坐标，sy表示缩放向量纵坐标，若未设置sy，则默认值为sx，使得元素保持原有形状均等缩放。</p>
+<p>perspective(length) 观察者与z&#x3D;0平面的距离，用以产生透视效果，默认值为none。</p>
+<p>rotateX(a) 绕x轴顺时针旋转大小，可以是角度、弧度、百分度、圈数。</p>
+<p>transform-origin 变换原点，可以是一个值、两个值或三个值，第一个值代表水平偏移量，第二个值表示垂直偏移量</p>
+<ul>
+<li>一个值：<ul>
+<li>必须是长度、百分比或left,center,right,top,bottom关键字中的一个。</li>
+</ul>
+</li>
+<li>两个值：<ul>
+<li>其中一个必须是长度，百分比或left,center,right关键字中的一个。</li>
+<li>另一个必须是长度，百分比或top,center,bottom关键字中的一个。</li>
+</ul>
+</li>
+<li>三个值：<ul>
+<li>前两个值同只有两个值的用法。</li>
+<li>第三个值必须是长度。它始终代表Z轴偏移量。</li>
+</ul>
+</li>
+</ul>
+<h3 id="梯形与直角梯形"><a href="#梯形与直角梯形" class="headerlink" title="梯形与直角梯形"></a>梯形与直角梯形</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.trapezoid</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 170px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.trapezoid::before</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 170px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 36px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #00699f<span class="token punctuation">;</span>
+  <span class="token comment">/* 通过沿x轴旋转并改变观察点与z平面距离形成梯形，通过缩放使变换后的梯形达到原来的高度 */</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.1 1.79<span class="token punctuation">)</span> <span class="token function">perspective</span><span class="token punctuation">(</span>100px<span class="token punctuation">)</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">/* 通过改变变换原点为右下方，使梯形成为直角梯形 */</span>
+  <span class="token property">transform-origin</span><span class="token punctuation">:</span> bottom right<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="多边形"><a href="#多边形" class="headerlink" title="多边形"></a>多边形</h2><p>使用clip-path属性的polygon方法，可以更容易地画出三角形，四边形等，任意多边形形状。</p>
+<p>polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shage-arg&gt;]# )</p>
+<p>fill-rule决定了多边形内部的填充方式，可选值为nonzero和evenodd，默认为nonzero，后面的每对参数表示多边形以盒模型左上角顶点为原点的顶点坐标 x y。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.polygon</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token comment">/* 三角形 */</span>
+  <span class="token property">clip-path</span><span class="token punctuation">:</span> <span class="token function">polygon</span><span class="token punctuation">(</span>nonzero<span class="token punctuation">,</span> 50% 0<span class="token punctuation">,</span> 0 100%<span class="token punctuation">,</span> 100% 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">/* 平行四边形 */</span>
+  <span class="token property">clip-path</span><span class="token punctuation">:</span> <span class="token function">polygon</span><span class="token punctuation">(</span>nonzero<span class="token punctuation">,</span> 50% 0<span class="token punctuation">,</span> 0 100%<span class="token punctuation">,</span> 50% 100%<span class="token punctuation">,</span> 100% 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">/* 梯形 */</span>
+  <span class="token property">clip-path</span><span class="token punctuation">:</span> <span class="token function">polygon</span><span class="token punctuation">(</span>nonzero<span class="token punctuation">,</span> 20% 0<span class="token punctuation">,</span> 0 100%<span class="token punctuation">,</span> 100% 100%<span class="token punctuation">,</span> 80% 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>clip-path属性虽然很方便，但是兼容性不好，大家可以根据不同的需求选择不同的方法。</p>
+<p>参考连接<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape">MDN basic shape</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/perspective">MDN perspective</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale">MDN scale()</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateX">MDN rotateX()</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin">MDN transform-origin</a><br><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/wordpress/2019/04/css-parallelogram-layout">张鑫旭-CSS实现平行四边形布局效果</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/kaelyn_X/article/details/78238041">使用CSS写出三角形、圆形、平行四边形、梯形</a><br><a target="_blank" rel="noopener" href="https://dabblet.com/gist/1345dc9399dc8e794502">dabblet</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000010936207">不可思议的CSS之clip-path</a><br><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/wordpress/2012/09/css3-3d-transform-perspective-animate-transition">张鑫旭-好吧，CSS3 3D transform变换，不过如此！</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%9C%86%E5%BD%A2/" rel="tag"># 圆形</a>
+              <a href="/tags/%E6%A4%AD%E5%9C%86%E5%BD%A2/" rel="tag"># 椭圆形</a>
+              <a href="/tags/%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2/" rel="tag"># 平行四边形</a>
+              <a href="/tags/%E6%A2%AF%E5%BD%A2/" rel="tag"># 梯形</a>
+              <a href="/tags/%E5%A4%9A%E8%BE%B9%E5%BD%A2/" rel="tag"># 多边形</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/06/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9CTCP%E5%8D%8F%E8%AE%AE/" rel="prev" title="计算机网络TCP协议">
+                  <i class="fa fa-chevron-left"></i> 计算机网络TCP协议
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/06/14/javascript%E4%B9%8BCanvas%E8%87%AA%E9%80%82%E5%BA%94/" rel="next" title="javascript之Canvas自适应">
+                  javascript之Canvas自适应 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

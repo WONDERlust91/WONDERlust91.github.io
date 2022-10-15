@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="需求功能需要实现一个渐变圆角边框的 div，且不仅边框是渐变色，要求 div 内部也是另一种带透明度的渐变色。(注意，下面所有示例都基于 css 属性 box-sizing: border-box)       实现方案方案 1——双层 div 叠加能想到最直接的方案就是两层 div 叠加，外层 div 较大，负责边框渐变色，内层 div 较小，负责内部区域颜色。但是由于是两层 div 叠加，内层">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css渐变圆角边框">
+<meta property="og:url" content="http://wonderlust91.github.io/2022/02/13/css%E6%B8%90%E5%8F%98%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="需求功能需要实现一个渐变圆角边框的 div，且不仅边框是渐变色，要求 div 内部也是另一种带透明度的渐变色。(注意，下面所有示例都基于 css 属性 box-sizing: border-box)       实现方案方案 1——双层 div 叠加能想到最直接的方案就是两层 div 叠加，外层 div 较大，负责边框渐变色，内层 div 较小，负责内部区域颜色。但是由于是两层 div 叠加，内层">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-13T21:40:00.000Z">
+<meta property="article:modified_time" content="2022-10-15T16:10:05.158Z">
+<meta property="article:author" content="WONDERlust91">
+<meta property="article:tag" content="mask">
+<meta property="article:tag" content="border-image">
+<meta property="article:tag" content="background-image">
+<meta property="article:tag" content="渐变圆角边框">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2022/02/13/css%E6%B8%90%E5%8F%98%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2022/02/13/css%E6%B8%90%E5%8F%98%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/","path":"2022/02/13/css渐变圆角边框/","title":"css渐变圆角边框"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>css渐变圆角边框 | WONDER's Notes</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%8A%9F%E8%83%BD"><span class="nav-number">1.</span> <span class="nav-text">需求功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">实现方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-1%E2%80%94%E2%80%94%E5%8F%8C%E5%B1%82-div-%E5%8F%A0%E5%8A%A0"><span class="nav-number">2.1.</span> <span class="nav-text">方案 1——双层 div 叠加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-2%E2%80%94%E2%80%94%E8%BE%B9%E6%A1%86%E5%9B%BE%E7%89%87"><span class="nav-number">2.2.</span> <span class="nav-text">方案 2——边框图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-3%E2%80%94%E2%80%94%E5%8F%8C%E5%B1%82%E8%83%8C%E6%99%AF%E5%8F%A0%E5%8A%A0"><span class="nav-number">2.3.</span> <span class="nav-text">方案 3——双层背景叠加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-4%E2%80%94%E2%80%94css-mask"><span class="nav-number">2.4.</span> <span class="nav-text">方案 4——css mask</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">135</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">241</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2022/02/13/css%E6%B8%90%E5%8F%98%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="css渐变圆角边框 | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          css渐变圆角边框
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-13 21:40:00" itemprop="dateCreated datePublished" datetime="2022-02-13T21:40:00+00:00">2022-02-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-15 16:10:05" itemprop="dateModified" datetime="2022-10-15T16:10:05+00:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2022/02/13/css%E6%B8%90%E5%8F%98%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/13/css渐变圆角边框/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="需求功能"><a href="#需求功能" class="headerlink" title="需求功能"></a>需求功能</h2><p>需要实现一个渐变圆角边框的 div，且不仅边框是渐变色，要求 div 内部也是另一种<strong>带透明度的</strong>渐变色。(注意，下面所有示例都基于 css 属性 box-sizing: border-box)</p>
+<div style="
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  padding: 5px;
+  border-radius: 6px;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    rgba(128, 128, 128, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+">
+  <div style="
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #9c20aa, #fb3570) border-box;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) border-box;
+    mask-composite: exclude;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(
+          #fff 0 0
+        ) border-box;
+    -webkit-mask-composite: destination-out;
+  "></div>
+</div>
+
+<h2 id="实现方案"><a href="#实现方案" class="headerlink" title="实现方案"></a>实现方案</h2><h3 id="方案-1——双层-div-叠加"><a href="#方案-1——双层-div-叠加" class="headerlink" title="方案 1——双层 div 叠加"></a>方案 1——双层 div 叠加</h3><p>能想到最直接的方案就是两层 div 叠加，外层 div 较大，负责边框渐变色，内层 div 较小，负责内部区域颜色。但是由于是两层 div 叠加，内层要实现的渐变色如果没有透明度，是没问题的；若是内层 div 要实现的渐变色带有透明度，外层颜色就会透过透明的内层显示出来，这个方案就不适用了。</p>
+<p>内层无透明度，正常显示</p>
+<div style="
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  background-image: linear-gradient(to right, #9c20aa, #fb3570);
+  border-radius: 6px;
+  position: relative;
+">
+  <div style="
+    box-sizing: border-box;
+    width: 190px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(
+      to right,
+      rgba(128, 128, 128, 1),
+      rgba(0, 0, 0, 1)
+    );
+    border-radius: 6px;
+  "></div>
+</div>
+
+<p>内层有透明度，底色透出来了</p>
+<div style="
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  background-image: linear-gradient(to right, #9c20aa, #fb3570);
+  border-radius: 6px;
+  position: relative;
+">
+  <div style="
+    box-sizing: border-box;
+    width: 190px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(
+      to right,
+      rgba(128, 128, 128, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+    border-radius: 6px;
+  "></div>
+</div>
+
+<span id="more"></span>
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>test1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>test1-inner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.test1</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span> #9c20aa<span class="token punctuation">,</span> #fb3570<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.test1-inner</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">/* 内比外小，尺寸差为边框宽度的两倍 */</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 190px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 90px<span class="token punctuation">;</span>
+    <span class="token comment">/* 内层居中 */</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>-50%<span class="token punctuation">,</span> -50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 内层渐变色，透明度必需为1，否则外层色露出，故不适用内层有渐变色的渐变 */</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>
+      to right<span class="token punctuation">,</span>
+      <span class="token function">rgba</span><span class="token punctuation">(</span>128<span class="token punctuation">,</span> 128<span class="token punctuation">,</span> 128<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 1<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 内层圆角 */</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方案-2——边框图片"><a href="#方案-2——边框图片" class="headerlink" title="方案 2——边框图片"></a>方案 2——边框图片</h3><p>使用 css 边框图片属性 border-image 实现，不需要嵌套 div 实现，更直观，也支持带有透明度的背景色，但缺点是不支持圆角设置。</p>
+<div style="
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(
+    to right,
+    rgba(128, 128, 128, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  border: 5px solid;
+  border-image-source: linear-gradient(to right, #9c20aa, #fb3570);
+  border-image-slice: 1;
+  border-radius: 6px;
+"></div>
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>test2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.test2</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>
+      to right<span class="token punctuation">,</span>
+      <span class="token function">rgba</span><span class="token punctuation">(</span>128<span class="token punctuation">,</span> 128<span class="token punctuation">,</span> 128<span class="token punctuation">,</span> 0.5<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 5px solid<span class="token punctuation">;</span>
+    <span class="token comment">/* 背景图片 */</span>
+    <span class="token property">border-image-source</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span> #9c20aa<span class="token punctuation">,</span> #fb3570<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 背景图片九宫格切割参数，决定背景图片在边框上的展示范围 */</span>
+    <span class="token comment">/* 由于我们是渐变色，切割参数设置为非0值即可，因为切割区域大小，不影响渐变色的展示 */</span>
+    <span class="token property">border-image-slice</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+    <span class="token comment">/* 圆角设置，仅对纯色边框生效，对边框图片属性无效 */</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方案-3——双层背景叠加"><a href="#方案-3——双层背景叠加" class="headerlink" title="方案 3——双层背景叠加"></a>方案 3——双层背景叠加</h3><p>与方案 1 原理一样，只不过不再使用两个 div，而是直接使用 css 背景图的多层叠加特性实现。缺点也同方案 1 一样，不支持内层有透明度。</p>
+<p>需要特别注意的是，多层背景图片，后书写的在底层，先书写的在顶层。</p>
+<p>内层无透明度，正常显示</p>
+<div style="
+  margin-bottom: 10px;
+  width: 200px;
+  height: 100px;
+  padding: 5px;
+  background-image: linear-gradient(
+      to right,
+      rgba(128, 128, 128, 1),
+      rgba(0, 0, 0, 1)
+    ), linear-gradient(to right, #9c20aa, #fb3570);
+  background-clip: content-box, border-box;
+  border-radius: 6px;
+"></div>
+
+<p>内层有透明度，底色透出</p>
+<div style="
+  width: 200px;
+  height: 100px;
+  padding: 5px;
+  background-image: linear-gradient(
+      to right,
+      rgba(128, 128, 128, 0.5),
+      rgba(0, 0, 0, 0)
+    ), linear-gradient(to right, #9c20aa, #fb3570);
+  background-clip: content-box, border-box;
+  border-radius: 6px;
+"></div>
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>test3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.test3</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token comment">/* 通过 padding 留出边框距离 */</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token comment">/* 两层背景图设置，注意两层间用逗号分隔，顶层依然无法支持带透明的颜色 */</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>
+        to right<span class="token punctuation">,</span>
+        <span class="token function">rgba</span><span class="token punctuation">(</span>128<span class="token punctuation">,</span> 128<span class="token punctuation">,</span> 128<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 1<span class="token punctuation">)</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span> #9c20aa<span class="token punctuation">,</span> #fb3570<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 顶层占用 content-box，底层占用 border-box */</span>
+    <span class="token property">background-clip</span><span class="token punctuation">:</span> content-box<span class="token punctuation">,</span> border-box<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方案-4——css-mask"><a href="#方案-4——css-mask" class="headerlink" title="方案 4——css mask"></a>方案 4——css mask</h3><p>使用 css 的 mask 属性，可以说是最佳实现方案了，可以完美支持边框渐变、中间区域背景带有透明度、边框圆角等所有需求。不过由于还处于推荐候选草案（Candidate Recommendation Draft）阶段，兼容性稍差，IE 浏览器不支持，webkit 内核的浏览器需要增加<code>-webkit-</code>前缀，一般脚手架已通过 babel 做自动兼容，无需手动添加前缀。不过下面的示例中，还是都添加了。</p>
+<p>实现原理：先建立一个 div，为 div 设置圆角和内边距（内边距即最终的边框宽度），并设置为相对位置<code>position: relative</code>（方便内部伪元素相对该元素定位）；再建立一个伪元素使用 mask 来实现圆角渐变的边框，伪元素与外层 div 圆角值及内边距一致即可，伪元素使用绝对定位，这样父元素使用任何布局都不会影响到伪元素。</p>
+<div style="
+  width: 200px;
+  height: 100px;
+  padding: 5px;
+  border-radius: 6px;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    rgba(128, 128, 128, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+">
+  <div style="
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #9c20aa, #fb3570) border-box;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) border-box;
+    mask-composite: exclude;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(
+          #fff 0 0
+        ) border-box;
+    -webkit-mask-composite: destination-out;
+  "></div>
+</div>
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>test4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.test4</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>
+      to right<span class="token punctuation">,</span>
+      <span class="token function">rgba</span><span class="token punctuation">(</span>128<span class="token punctuation">,</span> 128<span class="token punctuation">,</span> 128<span class="token punctuation">,</span> 0.5<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.test4::before</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 绝对定位，四个方向值都设置为0，不设宽高，相当于宽高100% */</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token comment">/* 内边距与圆角值与外部一样，内边距表示边框宽度 */</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span>
+    <span class="token comment">/* 背景渐变色为边框色 */</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span> #9c20aa<span class="token punctuation">,</span> #fb3570<span class="token punctuation">)</span> border-box<span class="token punctuation">;</span>
+    <span class="token comment">/* 设置两层全透明遮罩，上层后绘制，故称为源层，在内边距以内，下层先绘制，故为目标层，在边框以内 */</span>
+    <span class="token comment">/* 注意 这里与多层背景先写的 */</span>
+    <span class="token property">mask</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>#fff 0 0<span class="token punctuation">)</span> content-box<span class="token punctuation">,</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>#fff 0 0<span class="token punctuation">)</span> border-box<span class="token punctuation">;</span>
+    <span class="token comment">/* exclude 即排除多层 mask 重叠部分，exclude 仅 firefox 支持 */</span>
+    <span class="token property">mask-composite</span><span class="token punctuation">:</span> exclude<span class="token punctuation">;</span>
+    <span class="token comment">/* webkit 兼容写法 */</span>
+    <span class="token property">-webkit-mask</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>#fff 0 0<span class="token punctuation">)</span> content-box<span class="token punctuation">,</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>
+          #fff 0 0
+        <span class="token punctuation">)</span> border-box<span class="token punctuation">;</span>
+    <span class="token comment">/* webkit 支持属性与 firefox 不一致，更像是 Canvas 的 globalCompositeOperation 属性，只是不如 Canvas 中支持的属性多，且个别属性表现行为稍有不一致。*/</span>
+    <span class="token comment">/* destination-out 指 目标遮罩与源遮罩重叠部分全部排除，显示为透明，仅保留目标遮罩不重叠部分 */</span>
+    <span class="token property">-webkit-mask-composite</span><span class="token punctuation">:</span> destination-out<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>最佳方案中用到了 CSS Mask 属性，可以在另一篇文章——<a href="/2022/02/16/css%E9%81%AE%E7%BD%A9mask/" title="css遮罩mask">css遮罩mask</a>中详细了解 CSS Mask。</p>
+<blockquote>
+<p>参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/51496204/border-gradient-with-border-radius">Border Gradient with Border Radius</a></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/5706963/possible-to-use-border-radius-together-with-a-border-image-which-has-a-gradient">Possible to use border-radius together with a border-image which has a gradient?</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43606158/article/details/104940881">CSS3 的 border-image-slice 属性详细介绍</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/mask/" rel="tag"># mask</a>
+              <a href="/tags/border-image/" rel="tag"># border-image</a>
+              <a href="/tags/background-image/" rel="tag"># background-image</a>
+              <a href="/tags/%E6%B8%90%E5%8F%98%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/" rel="tag"># 渐变圆角边框</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/11/javascript%E6%A8%A1%E5%9D%97%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8/" rel="prev" title="javascript模块循环引用">
+                  <i class="fa fa-chevron-left"></i> javascript模块循环引用
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/02/16/css%E9%81%AE%E7%BD%A9mask/" rel="next" title="css遮罩mask">
+                  css遮罩mask <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

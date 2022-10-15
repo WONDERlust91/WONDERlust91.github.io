@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="systemctl配置文件CentOS 7的服务systemctl脚本存放在&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;目录下，&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system目录下是不需要用户登陆，开机就能运行的服务脚本，&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;user目录下是用户登陆后才能运行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux系统systemctl配置与命令">
+<meta property="og:url" content="http://wonderlust91.github.io/2018/04/08/linux%E7%B3%BB%E7%BB%9Fsystemctl%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="systemctl配置文件CentOS 7的服务systemctl脚本存放在&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;目录下，&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system目录下是不需要用户登陆，开机就能运行的服务脚本，&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;user目录下是用户登陆后才能运行">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-04-08T17:56:09.000Z">
+<meta property="article:modified_time" content="2022-10-15T16:10:05.162Z">
+<meta property="article:author" content="WONDERlust91">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="systemctl">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2018/04/08/linux%E7%B3%BB%E7%BB%9Fsystemctl%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2018/04/08/linux%E7%B3%BB%E7%BB%9Fsystemctl%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/","path":"2018/04/08/linux系统systemctl配置与命令/","title":"linux系统systemctl配置与命令"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>linux系统systemctl配置与命令 | WONDER's Notes</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#systemctl%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">systemctl配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-%E9%83%A8%E4%BB%BD"><span class="nav-number">1.1.</span> <span class="nav-text">[Unit] 部份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Service-%E9%83%A8%E4%BB%BD"><span class="nav-number">1.2.</span> <span class="nav-text">[Service] 部份</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Install-%E9%83%A8%E4%BB%BD"><span class="nav-number">2.</span> <span class="nav-text">[Install] 部份</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#systemctl-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">systemctl 基本命令</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">135</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">241</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2018/04/08/linux%E7%B3%BB%E7%BB%9Fsystemctl%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="linux系统systemctl配置与命令 | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          linux系统systemctl配置与命令
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-04-08 17:56:09" itemprop="dateCreated datePublished" datetime="2018-04-08T17:56:09+00:00">2018-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-15 16:10:05" itemprop="dateModified" datetime="2022-10-15T16:10:05+00:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2018/04/08/linux%E7%B3%BB%E7%BB%9Fsystemctl%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/04/08/linux系统systemctl配置与命令/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="systemctl配置文件"><a href="#systemctl配置文件" class="headerlink" title="systemctl配置文件"></a>systemctl配置文件</h1><p>CentOS 7的服务systemctl脚本存放在&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;目录下，&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system目录下是不需要用户登陆，开机就能运行的服务脚本，&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;user目录下是用户登陆后才能运行的服务脚本。</p>
+<p>服务脚本由以下三部分组成</p>
+<h2 id="Unit-部份"><a href="#Unit-部份" class="headerlink" title="[Unit] 部份"></a>[Unit] 部份</h2><p>unit区块通常是配置文件的第一个区块，用来定义Unit的元数据，以及配置与其他Unit的关系。它的主要字段如下。</p>
+<table>
+<thead>
+<tr>
+<th>设置参数</th>
+<th>参数意义说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description</td>
+<td>简易说明，用于使用时的输出说明和systemctl status的输出说明。</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>文档地址，提供管理员进行进一步的文件查询的功能。</td>
+</tr>
+<tr>
+<td>After</td>
+<td>此unit是在哪个daemon启动之后才启动，仅说明服务启动的顺序，并没有强制要求里头的服务一定要启动后此 unit 才能启动。</td>
+</tr>
+<tr>
+<td>Before</td>
+<td>与After的意义相反，是在什么服务启动前启动这个服务。仅规范服务启动顺序，非强制要求。</td>
+</tr>
+<tr>
+<td>Requires</td>
+<td>定义与此unit相依赖的其他服务，如果在此项设置的依赖服务没有启动，那么此unit就不启动。</td>
+</tr>
+<tr>
+<td>BindsTo</td>
+<td>与Requires类似，定义与此unit相绑定的其他服务，若此项设置的绑定服务退出，则该unit也退出。</td>
+</tr>
+<tr>
+<td>Wants</td>
+<td>与该unit配合的其他服务，若其他服务未运行，该服务仍能启动。</td>
+</tr>
+<tr>
+<td>Conflicts</td>
+<td>与该unit冲突的服务，即冲突服务若已启动，该unit则不能启动。该unit已启动，则冲突服务就不能启动。</td>
+</tr>
+<tr>
+<td>Condition…</td>
+<td>当前 Unit 运行必须满足的条件，否则不会运行。</td>
+</tr>
+<tr>
+<td>Assert…</td>
+<td>当前 Unit 运行必须满足的条件，否则会报启动失败。</td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+<h2 id="Service-部份"><a href="#Service-部份" class="headerlink" title="[Service] 部份"></a>[Service] 部份</h2><p>service区块用来定义Service的配置，只有Service类型的Unit才有这个区块。它的主要字段如下。</p>
+<table>
+<thead>
+<tr>
+<th>设置参数</th>
+<th>参数意义说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Type</td>
+<td>定义这个进程启动的方式，会影响ExecStart。有以下几种类型。simple：默认值，执行ExecStart的指令串，启动主进程，启动后常驻于内存中。forking：以fork方式从父进程创建子进程，创建后父进程会立即退出。传统的unit服务大多属于这种类型，例如httpd服务，当httpd的程序因为运行过久即将终结，则systemd会再重新生出另一个子程序继续运行后，再将父程序删除。oneshot：一次性进程，Systemd会等当前服务退出，再继续往下执行，不过这个程序在工作完毕后就结束了，不会常驻在内存中。dbus：与simple类似，当前服务通过D-Bus启动，即这个服务必须要在取得一个D-Bus的名称后，才能运行。因此设置这个项目时，通常也要设置BusName&#x3D; 。idle：与simple类似，若其他服务执行完毕，当前服务才会运行。即这类的服务通常是开机到最后才执行的服务！ notify：当前服务启动完毕，会通知Systemd，再继续往下执行。</td>
+</tr>
+<tr>
+<td>ExecStart</td>
+<td>启动当前进程的指令或脚本程序。你也可以使用ExecStartPre（之前）以及ExecStartPost（之后）两个设置项目来在实际启动服务前（后），进行额外的指令行为。 但要特别注意的是，指令串仅接受“指令 参数 参数…”的格式，不能接受&lt;, &gt;, &gt;&gt;, &amp;#124;, &amp;等特殊字符，很多的bash语法也不支持，故使用这些特殊的字符时，应直接写入到指令脚本中。</td>
+</tr>
+<tr>
+<td>ExecStop</td>
+<td>与systemctl stop的执行有关，关闭此服务时所执行的指令。</td>
+</tr>
+<tr>
+<td>ExecReload</td>
+<td>与systemctl reload有关的指令行为，重启当前服务时执行的命令。</td>
+</tr>
+<tr>
+<td>Restart</td>
+<td>定义何种情况Systemd会自动重启当前服务，可能的值包括always（总是重启）、on-success、on-failure、on-abnormal、on-abort、on-watchdog。当设置 Restart&#x3D;always时，则此daemon服务终止后，会再次的启动此服务。举例来说，如果你在tty2使用文字界面登陆，操作完毕后登出，这个时候tty2就已经结束服务了。 但是你会看到屏幕又立刻产生一个新的tty2的登陆画面等待你的登陆。那就是Restart的功能。除非使用systemctl强制将此服务关闭，否则这个服务会源源不绝的一直重复启动。</td>
+</tr>
+<tr>
+<td>RestartSec</td>
+<td>自动重启当前服务间隔的秒数。默认是100ms（毫秒）。</td>
+</tr>
+<tr>
+<td>TimeoutSec</td>
+<td>若这个服务在启动或者是关闭时，因为某些缘故导致无法顺利“正常启动或正常结束”的情况下，则我们要等多久才进入“强制结束”的状态。</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>指定环境变量。</td>
+</tr>
+<tr>
+<td>PrivateTmp</td>
+<td>布尔值，是否使用私有临时文件夹，建议true，防止临时文件相互读写，提升安全性。</td>
+</tr>
+<tr>
+<td>RemainAfterExit</td>
+<td>当设置RemainAfterExit&#x3D;true时，则当这个daemon所属的所有程序都终止之后，此服务会再尝试启动。这对于Type&#x3D;oneshot的服务很有帮助。</td>
+</tr>
+<tr>
+<td>KillMode</td>
+<td>可以是process，control-group，none的其中一种，如果是process，则daemon终止时，只会终止主要的程序（ExecStart 接的后面那串指令），如果是control-group， 则由此daemon所产生的其他control-group的程序，也都会被关闭。如果是none的话，则没有程序会被关闭。</td>
+</tr>
+</tbody></table>
+<h1 id="Install-部份"><a href="#Install-部份" class="headerlink" title="[Install] 部份"></a>[Install] 部份</h1><p>通常是配置文件的最后一个区块，用来定义如何启动，以及是否开机启动。它的主要字段如下。</p>
+<table>
+<thead>
+<tr>
+<th>设置参数</th>
+<th>参数意义说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>WantedBy</td>
+<td>它的值是一个或多个Target，当前 Unit 激活时（enable）符号链接会放入&#x2F;etc&#x2F;systemd&#x2F;system目录下面以Target名 + .wants后缀构成的子目录中。通常，大多的服务性质的unit都是附挂在multi-user.target下面。</td>
+</tr>
+<tr>
+<td>RequiredBy</td>
+<td>它的值是一个或多个Target，当前Unit激活时，符号链接会放入&#x2F;etc&#x2F;systemd&#x2F;system目录下面以Target名 + .required后缀构成的子目录中。</td>
+</tr>
+<tr>
+<td>Also</td>
+<td>该unit被激活为enable时，Also后的unit也被激活为enable。</td>
+</tr>
+<tr>
+<td>Alias</td>
+<td>创建一个unit的链接别名。systemctl enable相关的服务时，则此服务会进行链接文件的创建。以multi-user.target 为例，当设置default.target为别名时，&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;multi-user.target会创建名为&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;default.target的别名链接。</td>
+</tr>
+</tbody></table>
+<h1 id="systemctl-基本命令"><a href="#systemctl-基本命令" class="headerlink" title="systemctl 基本命令"></a>systemctl 基本命令</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 列出正在运行的 Unit</span>
+$ systemctl list-units
+
+<span class="token comment"># 列出所有Unit，包括没有找到配置文件的或者启动失败的</span>
+$ systemctl list-units <span class="token parameter variable">--all</span>
+
+<span class="token comment"># 列出所有没有运行的 Unit</span>
+$ systemctl list-units <span class="token parameter variable">--all</span> <span class="token parameter variable">--state</span><span class="token operator">=</span>inactive
+
+<span class="token comment"># 列出所有加载失败的 Unit</span>
+$ systemctl list-units <span class="token parameter variable">--failed</span>
+
+<span class="token comment"># 列出所有正在运行的、类型为 service 的 Unit</span>
+$ systemctl list-units <span class="token parameter variable">--type</span><span class="token operator">=</span>service
+
+<span class="token comment"># 显示系统状态</span>
+$ systemctl status
+
+<span class="token comment"># 显示单个 Unit 的状态</span>
+$ sysystemctl status bluetooth.service
+
+<span class="token comment"># 显示远程主机的某个 Unit 的状态</span>
+$ systemctl <span class="token parameter variable">-H</span> root@rhel7.example.com status httpd.service
+
+<span class="token comment"># 显示某个 Unit 是否正在运行</span>
+$ systemctl is-active application.service
+
+<span class="token comment"># 显示某个 Unit 是否处于启动失败状态</span>
+$ systemctl is-failed application.service
+
+<span class="token comment"># 显示某个 Unit 服务是否建立了启动链接</span>
+$ systemctl is-enabled application.service
+
+<span class="token comment"># 立即启动一个服务</span>
+$ <span class="token function">sudo</span> systemctl start apache.service
+
+<span class="token comment"># 立即停止一个服务</span>
+$ <span class="token function">sudo</span> systemctl stop apache.service
+
+<span class="token comment"># 重启一个服务</span>
+$ <span class="token function">sudo</span> systemctl restart apache.service
+
+<span class="token comment"># 杀死一个服务的所有子进程</span>
+$ <span class="token function">sudo</span> systemctl <span class="token function">kill</span> apache.service
+
+<span class="token comment"># 重新加载一个服务的配置文件</span>
+$ <span class="token function">sudo</span> systemctl reload apache.service
+
+<span class="token comment"># 重载所有修改过的配置文件</span>
+$ <span class="token function">sudo</span> systemctl daemon-reload
+
+<span class="token comment"># 显示某个 Unit 的所有底层参数</span>
+$ systemctl show httpd.service
+
+<span class="token comment"># 显示某个 Unit 的指定属性的值</span>
+$ systemctl show <span class="token parameter variable">-p</span> CPUShares httpd.service
+
+<span class="token comment"># 设置某个 Unit 的指定属性</span>
+$ <span class="token function">sudo</span> systemctl set-property httpd.service <span class="token assign-left variable">CPUShares</span><span class="token operator">=</span><span class="token number">500</span>
+
+<span class="token comment"># 列出一个 Unit 的所有依赖</span>
+$ systemctl list-dependencies nginx.service
+
+<span class="token comment"># 上面命令的输出结果之中，有些依赖是 Target 类型（详见下文），默认不会展开显示。如果要展开 Target，就需要使用--all参数。</span>
+$ systemctl list-dependencies <span class="token parameter variable">--all</span> nginx.service<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>本文摘自</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html">http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html</a></p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/0e8410049ee8">https://www.jianshu.com/p/0e8410049ee8</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/systemctl/" rel="tag"># systemctl</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/04/07/shadowsocks%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%87%AA%E5%90%AF%E5%8A%A8/" rel="prev" title="centos7下shadowsocks服务端的安装配置与自启动">
+                  <i class="fa fa-chevron-left"></i> centos7下shadowsocks服务端的安装配置与自启动
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/04/10/html%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/" rel="next" title="html特殊字符">
+                  html特殊字符 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

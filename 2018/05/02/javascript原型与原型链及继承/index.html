@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="原型链与继承这张图可以说是一图读懂原型链与继承了。这张图在原来的基础上加入了 es6 中的 class 语法，class 只是语法糖，本质上还是构造函数。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript原型与原型链及继承">
+<meta property="og:url" content="http://wonderlust91.github.io/2018/05/02/javascript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E5%8F%8A%E7%BB%A7%E6%89%BF/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="原型链与继承这张图可以说是一图读懂原型链与继承了。这张图在原来的基础上加入了 es6 中的 class 语法，class 只是语法糖，本质上还是构造函数。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://wonderlust91.github.io/images/relationship_between_function_and_prototype.png">
+<meta property="article:published_time" content="2018-05-02T12:29:41.000Z">
+<meta property="article:modified_time" content="2022-10-15T16:10:05.162Z">
+<meta property="article:author" content="WONDERlust91">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wonderlust91.github.io/images/relationship_between_function_and_prototype.png">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2018/05/02/javascript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E5%8F%8A%E7%BB%A7%E6%89%BF/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2018/05/02/javascript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E5%8F%8A%E7%BB%A7%E6%89%BF/","path":"2018/05/02/javascript原型与原型链及继承/","title":"javascript原型与原型链及继承"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>javascript原型与原型链及继承 | WONDER's Notes</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE%E4%B8%8E%E7%BB%A7%E6%89%BF"><span class="nav-number">1.</span> <span class="nav-text">原型链与继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Foo-%EF%BC%88class-Foo-%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">Foo()（class Foo {}）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#class-Bar-extends-Foo"><span class="nav-number">1.2.</span> <span class="nav-text">class Bar extends Foo {}</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function"><span class="nav-number">1.3.</span> <span class="nav-text">Function()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object"><span class="nav-number">1.4.</span> <span class="nav-text">Object()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="nav-number">1.5.</span> <span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">1.6.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#proto-%E4%B8%8E-prototype-%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">1.7.</span> <span class="nav-text">__proto__与 prototype 的作用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proto-%E7%9A%84%E7%94%B1%E6%9D%A5"><span class="nav-number">2.</span> <span class="nav-text">__proto__的由来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proto-%E7%9A%84%E6%8C%87%E5%90%91"><span class="nav-number">3.</span> <span class="nav-text">__proto__的指向</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%AF%B9%E8%B1%A1%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">3.1.</span> <span class="nav-text">（1）对象字面量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89new-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">3.2.</span> <span class="nav-text">（2）new 关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%883%EF%BC%89Object-create-proto"><span class="nav-number">3.3.</span> <span class="nav-text">（3）Object.create(proto)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%884%EF%BC%89class"><span class="nav-number">3.4.</span> <span class="nav-text">（4）class</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%84%E5%8A%A0%E5%86%85%E5%AE%B9"><span class="nav-number">4.</span> <span class="nav-text">附加内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#instanceof-%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%9C%BA%E5%88%B6"><span class="nav-number">4.1.</span> <span class="nav-text">instanceof 的实现机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E7%9A%84-constructor"><span class="nav-number">4.2.</span> <span class="nav-text">实例的 constructor</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">135</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">241</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2018/05/02/javascript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E5%8F%8A%E7%BB%A7%E6%89%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="javascript原型与原型链及继承 | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          javascript原型与原型链及继承
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-05-02 12:29:41" itemprop="dateCreated datePublished" datetime="2018-05-02T12:29:41+00:00">2018-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-15 16:10:05" itemprop="dateModified" datetime="2022-10-15T16:10:05+00:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2018/05/02/javascript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E5%8F%8A%E7%BB%A7%E6%89%BF/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/02/javascript原型与原型链及继承/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="原型链与继承"><a href="#原型链与继承" class="headerlink" title="原型链与继承"></a>原型链与继承</h2><p><img src="/images/relationship_between_function_and_prototype.png" alt="__proto__ and prototype"><br>这张图可以说是一图读懂原型链与继承了。这张图在原来的基础上加入了 es6 中的 class 语法，class 只是语法糖，本质上还是构造函数。</p>
+<span id="more"></span>
+
+<p>学习原型链与继承前，首先要搞懂三个基本点：</p>
+<ol>
+<li>在 js 中，万物皆对象，函数（Function）是对象，函数的原型（Function.prototype）是对象，它们都会有对象的共同特点。</li>
+<li>对象都有__proto__属性，指向该对象构造函数的原型对象。原型链也是通过__proto__属性实现的。</li>
+<li>函数是一种特殊的对象，除了对象都有的__proto__属性外，还有一个 prototype 属性，该属性指向函数的原型对象，原型对象中又有一个 constructor 属性，又指回了构造函数。</li>
+</ol>
+<p>接下来就讲解一下这张图：</p>
+<h3 id="Foo-（class-Foo-）"><a href="#Foo-（class-Foo-）" class="headerlink" title="Foo()（class Foo {}）"></a>Foo()（class Foo {}）</h3><p>构造函数 Foo：有一个属性 prototype 指向其原型对象，原型对象中有 f1、f2 等等所有实例可以共享的方法。Foo 还有个__proto__属性指向其构造函数的原型对象 Function.prototype。（所有函数的构造函数是 Function 函数，其原型对象则为 Function.prototype）</p>
+<p>原型对象 Foo.prototype：又有一个 constructor 属性，constructor 指向构造函数 Foo 本身。原型对象 Foo.prototype 也是对象，也有对象都有的属性__proto__，指向其构造函数 Object 的原型对象 Object.prototype。（所有对象的构造函数是 Object 函数，其原型对象为 Object.prototype)</p>
+<p>实例对象 f1、f2：也有属性__proto__，指向构造函数 Foo 的原型对象 Foo.prototype，这样就可以访问原型对象中共享的所有方法了。</p>
+<h3 id="class-Bar-extends-Foo"><a href="#class-Bar-extends-Foo" class="headerlink" title="class Bar extends Foo {}"></a>class Bar extends Foo {}</h3><p>这是 ES6 的语法糖，创建了一个 Foo 的子类，本质上还是构造函数，与 ES5 中通过 Foo 函数使用 Object.creat()等方法创建的子类相类似。Bar 继承了 Foo 的方法与属性。</p>
+<p>构造函数 Bar：属性 prototype 指向其原型对象，__proto__属性则与一般的函数不同，指向父类的构造函数 Foo，而不是函数构造函数的原型对象 Function.prototype。</p>
+<p>原型对象 Bar.prototype：constructor 属性指向构造函数 Bar 本身。__proto__属性也和一般原型对象不同，指向父类构造函数的原型对象 Foo.prototype，而不是对象构造函数的原型对象 Object.prototype。</p>
+<p>实例对象 b1、b2：属性__proto__指向构造函数 Bar 的原型对象 Bar.prototype。</p>
+<h3 id="Function"><a href="#Function" class="headerlink" title="Function()"></a>Function()</h3><p>构造函数 Function：prototype 属性指向其原型对象 Function.prototype。__proto__属性指向其构造函数的原型对象，由于 Function 的构造函数就是自己，所以__proto__属性也指向自己的原型对象 Function.prototype。</p>
+<p>原型对象 Function.prototype：constructor 属性指向构造函数 Function 本身。__proto__属性指向构造函数的原型对象 Object.prototype。因为原型对象也是对象，对象的构造函数是 Object，Object 的原型对象为 Object.prototype。</p>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object()"></a>Object()</h3><p>构造函数 Object：prototype 属性指向其原型对象 Object.prototype。__proto__属性指向其构造函数 Function 的原型对象 Function.prototype。</p>
+<p>原型对象 Object.prototype：constructor 属性指向构造函数 Object 本身。__proto__属性指向 null。因为万物皆对象，对象的原型对象已经是最末端了，所以__proto__对象指向 null。</p>
+<p>实例对象 o1、o2：不论是用对象字面量还是构造函数生成的对象，__proto__属性都指向其构造函数 Object 的原型对象 Object.prototype。</p>
+<h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p>由原型对象相互关联，组成的链状结构就是原型链。在图中可以直观看到所有__proto__的虚线构成了一条条的原型链。有了原型链，当试图访问一个对象的属性时，不仅仅在对象本身中查找，还会沿着原型链查找对象的原型对象，依次层层向上，直到找到一个名称匹配的属性或到达原型链的末尾，也就是 Object.prototype.__proto__即 null。</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>对象都会从原型对象上继承属性和方法，这里继承并不是复制，而是通过__proto__在对象与原型对象间创建关联，一个对象通过这样的关联关系就可以访问另一个对象的属性与方法。</p>
+<h3 id="proto-与-prototype-的作用"><a href="#proto-与-prototype-的作用" class="headerlink" title="__proto__与 prototype 的作用"></a>__proto__与 prototype 的作用</h3><p>prototype 所指向的原型对象是用来被其他对象继承的，而__proto__属性是用来保存从原型对象继承的索引关系的。</p>
+<h2 id="proto-的由来"><a href="#proto-的由来" class="headerlink" title="__proto__的由来"></a>__proto__的由来</h2><p>说到__proto__的由来，就不能不提[[prototype]]属性。[[prototype]]属性是所有对象都有的私有属性（内置属性），在 ES5 以前没有原生的方法去访问[[prototype]]这个属性，于是各个浏览器厂商就定义了__proto__来读写[[prototype]]这个私有属性，本质上是一个访问器属性（一个 getter 函数和一个 setter 函数）。而直接读写[[prototype]]容易造成 bug 与性能问题，因此官方并不建议使用__proto__。在 ES5 中，官方加入了内置属性标准 Get 方法，Object.getPrototypeOf()。在 ES6 中，官方又加入了内置属性标准的 Set 方法，Object.setPrototypeOf()。</p>
+<p>有趣的是__proto__属性也是一例典型的实践倒逼准则的案例，由于各大浏览器厂商对__proto__属性的支持，使该属性也被 ES6 的标准所囊括。</p>
+<h2 id="proto-的指向"><a href="#proto-的指向" class="headerlink" title="__proto__的指向"></a>__proto__的指向</h2><p>根据前面讲到的，我们知道一个对象的__proto__属性通常指向其构造函数的原型对象。因此确定对象__proto__指向的关键点就在于找到其构造函数。接下来通过 4 种不同的构造对象的方法，来依次分析__proto__的指向。</p>
+<h3 id="（1）对象字面量"><a href="#（1）对象字面量" class="headerlink" title="（1）对象字面量"></a>（1）对象字面量</h3><p>对象字面量就是直接声明对象的方式。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> obj1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">objName</span><span class="token operator">:</span> <span class="token string">'obj1'</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>事实上，对象字面量只是一种语法糖，本质上还是通过 new Object()的方式构造了对象。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 上例本质上等价于</span>
+<span class="token keyword">const</span> obj1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+obj1<span class="token punctuation">.</span>objName <span class="token operator">=</span> <span class="token string">'obj1'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>因此，通过对象字面量构造出的对象的__proto__属性都指向构造函数 Object 的原型对象 Object.prototype</p>
+<h3 id="（2）new-关键字"><a href="#（2）new-关键字" class="headerlink" title="（2）new 关键字"></a>（2）new 关键字</h3><p>如果通过 new 关键字创建一个普通的对象（同上例），则对象的__proto__属性同上，指向 Object.prototype。</p>
+<p>如果用自定义的构造函数（如 Foo）通过 new 关键字创建实例对象，则对象的__proto__属性指向那个自定义构造函数的原型对象（如 Foo.prototype）。</p>
+<p>new 实现过程大致如下</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 例如new Object()相当于</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  obj<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+  <span class="token function">Object</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 再例const f = new Foo()相当于</span>
+<span class="token keyword">const</span> f <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  obj<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token class-name">Foo</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+  <span class="token function">Foo</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="（3）Object-create-proto"><a href="#（3）Object-create-proto" class="headerlink" title="（3）Object.create(proto)"></a>（3）Object.create(proto)</h3><p>通过 Object.create 方法创建的对象，其__proto__属性指向该方法的第一个参数 proto。（create 方法还有别的参数，这里不涉及）</p>
+<p>上面是结论，我们分析一下 Object.create 方法的实现方式，再来看其本质。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">create</span><span class="token punctuation">(</span><span class="token parameter">proto</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">function</span> <span class="token constant">F</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  <span class="token class-name">F</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> proto<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">F</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看到 create 方法的实现本质上也是用了 new 关键字，不同的是 create 方法创造出的对象没有构造函数 constructor。没有构造函数只是说我们在外部无法访问构造函数，但函数运行过程中还是存在的，运行完后被销毁了。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 假设新建对象为f</span>
+<span class="token keyword">const</span> f <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>proto<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 在create内部上一行实质相当于</span>
+<span class="token keyword">const</span> f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">F</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 按照new关键字构造对象的__proto__属性指向的基本原则,</span>
+<span class="token comment">// 对象f的__proto__属性指向构造函数F的原型对象F.prototype</span>
+f<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">F</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment">//true</span>
+<span class="token comment">// 而在create方法的实现中F.prototype被赋值为传入的参数proto</span>
+<span class="token class-name">F</span><span class="token punctuation">.</span>prototype <span class="token operator">===</span> proto<span class="token punctuation">;</span> <span class="token comment">//true</span>
+<span class="token comment">// 则得出</span>
+f<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> proto<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>由此看出 Object.create 方法构造出的对象的__proto__属性指向第一个参数 proto。</p>
+<p>Object.create 方法与 new 关键字在功能上是基本相同的，Object.create 优点是对函数与对象都可以使用，而 new 只能对函数使用。缺点是 Object.create 与 new 相比性能较差。</p>
+<h3 id="（4）class"><a href="#（4）class" class="headerlink" title="（4）class"></a>（4）class</h3><p>class 是 ES6 新增的模仿类的语法，其本质上还是基于原型的构造函数，class 只是语法糖。通过 class 构造函数 new 的实例，实例的__proto__属性指向 class 构造函数的原型对象。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+foo<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Foo</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>类中最重要的是继承，值得注意的是子类的__proto__属性指向与一般情况不同。子类构造函数的__proto__属性指向父类构造函数，子类构造函数的原型对象的__proto__属性指向父类构造函数的原型对象。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Bar</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+bar<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Bar</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment">// true</span>
+Bar<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> Foo<span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token class-name">Bar</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Foo</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment">// true</span>
+
+<span class="token comment">// 子类的继承实现大致如下，故会出现与一般情况不同的__proto__指向</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span><span class="token class-name">Bar</span><span class="token punctuation">.</span>prototype<span class="token punctuation">,</span> <span class="token class-name">Foo</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>Bar<span class="token punctuation">,</span> Foo<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>class 在 ES6 中才出现，那么在 ES6 以前，如何实现父类与子类的继承关系呢？</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 这是父类</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function">Bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 这是子类</span>
+  <span class="token function">Foo</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 继承第一步，用Bar的this与参数调用Foo</span>
+<span class="token punctuation">&#125;</span>
+<span class="token class-name">Bar</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 继承第二步，改写Bar的原型，建立与Foo的原型链关系</span>
+<span class="token comment">// 也可以写成 Bar.prototype = Object.create(Foo.prototype);</span>
+
+<span class="token comment">// 由于Bar.prototype被赋值语句改写，因此原本的构造函数constructor与Bar.prototype的关系被切断了，</span>
+<span class="token comment">// Bar.prototype.constructor绑定到了Foo上，</span>
+<span class="token comment">// 需要再次绑定回Bar构造函数</span>
+<span class="token class-name">Bar</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Bar<span class="token punctuation">;</span> <span class="token comment">// 继承第三步，绑定丢失的构造函数</span>
+
+<span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+bar<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Bar</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment">// true</span>
+Bar<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token class-name">Bar</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Foo</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我们可以看出，ES5 与 ES6 在类的继承上几乎是相同的。除了语法糖造成的写法上的不同外，就是 Bar.__proto__属性指向不同。ES6 中 Bar.__proto__指向父类的构造函数。ES5 中则是指向原生函数的原型对象。</p>
+<h2 id="附加内容"><a href="#附加内容" class="headerlink" title="附加内容"></a>附加内容</h2><h3 id="instanceof-的实现机制"><a href="#instanceof-的实现机制" class="headerlink" title="instanceof 的实现机制"></a>instanceof 的实现机制</h3><p>instanceof 左值一般是对象，右值是构造函数。实现原理大致如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token constant">L</span> <span class="token keyword">instanceof</span> <span class="token class-name">R</span>
+<span class="token constant">L</span><span class="token punctuation">.</span>__proto__<span class="token punctuation">.</span>__proto__<span class="token operator">...</span> <span class="token operator">===</span> <span class="token class-name">R</span><span class="token punctuation">.</span>prototype <span class="token operator">?</span> <span class="token boolean">true</span> <span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token comment">// 最终返回值是布尔值</span>
+<span class="token comment">// 结合文章开始的图，就会明白为什么下面的结果都是true了</span>
+Function <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+Object <span class="token keyword">instanceof</span> <span class="token class-name">Function</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+Function <span class="token keyword">instanceof</span> <span class="token class-name">Function</span><span class="token punctuation">;</span> <span class="token comment">//true</span>
+Object <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">;</span> <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="实例的-constructor"><a href="#实例的-constructor" class="headerlink" title="实例的 constructor"></a>实例的 constructor</h3><p>尽管最终的实例对象并没有 constructor 属性，但仍然可以调用，这是为什么呢？其实只是通过原型链调用了原型上的 constructor 属性，并不是实例对象有 constructor 属性。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+<span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+foo<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Foo<span class="token punctuation">;</span> <span class="token comment">// true</span>
+foo<span class="token punctuation">.</span>constructor <span class="token operator">===</span> <span class="token class-name">Foo</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor<span class="token punctuation">;</span> <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>参考链接<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/34183746">https://www.zhihu.com/question/34183746</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain</a><br><a target="_blank" rel="noopener" href="https://github.com/mqyqingfeng/Blog/issues/2">https://github.com/mqyqingfeng/Blog/issues/2</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/04/10/hexo%E5%B0%8F%E6%8A%80%E5%B7%A7/" rel="prev" title="hexo小技巧">
+                  <i class="fa fa-chevron-left"></i> hexo小技巧
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/06/01/windowsXP%E7%BA%AF%E5%87%80%E5%AE%89%E8%A3%85(%E6%97%A0PE)/" rel="next" title="windowsXP纯净安装（无PE）">
+                  windowsXP纯净安装（无PE） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>
