@@ -19,6 +19,12 @@ categories: English
 
   1. adjective: excessively interested in acquiring money or material things. 对获取钱财或物质过分感兴趣。
 
+- adept
+
+  1. adjective: very skilled or proficient at something. 非常熟练或精通某事。
+
+  2. noun: a person who is skilled or proficient at something. 擅长或精通某事的人。
+
 - admit
 
   1. verb: confess to be true or to be the case. 承认是真或是事实。
@@ -32,6 +38,16 @@ categories: English
 - adobe
 
   1. noun: a kind of clay used as a building material, typically in the form of sun-dried bricks. 一种用作建筑材料的粘土，通常以晒干的砖的形式出现。
+
+- adopt
+
+  1. verb: legally take (another's child) and bring it up as one's own. 合法地把（别人的孩子）当作自己的孩子抚养。
+
+  2. verb: choose to take up, follow, or use. 选择接受，跟随，或使用。
+
+  3. verb: take on or assume (an attitude or position). 采取或承担（态度或立场）。
+
+  4. verb(BRITISH): (of a local authority) accept responsibility for the maintenance of (a road). （英国）（当地政府）承担维护（道路）的责任。
 
 - advocate
 
@@ -127,12 +143,6 @@ categories: English
 
   2. noun: recoil arising between parts of a mechanism. 机械部件间生产的后坐力。
 
-- behalf
-
-  1. phrase: in/on behalf of - as a representative of or a proxy for. 作为代表。
-
-  2. phrase: in/on one's behalf - in the interest or aid of (someone). 为了（某人）的利益或帮助。
-
 - barn
 
   1. noun: a large farm building used for storing grain, hay, or straw or for housing livestock. 用于储存谷物，干草，或稻草或饲养牲畜的大型农场建筑。
@@ -140,6 +150,12 @@ categories: English
   2. noun(NORTH AMERICAN): a large shed used for storing vehicles. （北美）用于存放车辆的大型棚。
 
   3. noun: a unit of area, 10^-28 square meters, used especially in particle physics. 面积单位，10 的 -28 次方平方米，特别是用于粒子物理。
+
+- behalf
+
+  1. phrase: in/on behalf of - as a representative of or a proxy for. 作为代表。
+
+  2. phrase: in/on one's behalf - in the interest or aid of (someone). 为了（某人）的利益或帮助。
 
 - beneath
 
@@ -151,11 +167,35 @@ categories: English
 
   4. adverb: at a lower level or layer. 在较低级别或层级。
 
+- better off
+
+  1. phrase: in a more desirable or advantageous position, especially in financial terms. 处于更理想或更有利的位置，尤其是在财务方面。（同义词：well off）
+
 - bland
 
   1. adjective: lacking strong features or characteristics and therefore uninteresting. 缺乏强大的功能或特性，因此而显得无趣，即平淡无奇。
 
 ## C
+
+- capital
+
+  1. noun: the city or town that functions as the seat of government and administrative centre of a country or region. 作为一个国家或地区的政府所在地和行政中心的城市或城镇。
+
+  2. noun: wealth in the form of money or other assets owned by a person or organization or available for a purpose such as starting a company or investing. 个人或组织所拥有的金钱或其他资产形式的财富，或可以用于创办公司或投资的财富，即资本。
+
+  3. noun: a letter of the size and form used to begin sentences and names. 用在句首或名字中的字母大小及形式，即大写。
+
+  4. adjective: (of an offence or charge) liable to the death penalty. （罪行或指控）可判处死刑。
+
+  5. adjective: (of a letter of the alphabet) large in size and of the form used to begin sentences and names. （字母表中的某个字母）体积很大，并且是用在句首和名字中的形式。
+
+  6. adjective(DATED·INFORMAL): excellent. （过时的·非正式）出色的。
+
+  7. exclamation(DATED·INFORMAL): used to express approval, satisfaction, or delight. 感叹词（过时的·非正式）：用于表达赞同，满意，或高兴。
+
+  8. phrase: make capital out of - use to one's own advantage. 为某人所用。
+
+  9. phrase: with a capital - used to give emphasis to the word or concept in question. 用于强调问题中的词或概念。
 
 - carpenter
 
@@ -515,6 +555,24 @@ categories: English
 
   4. noun: (in soccer, hockey, and basketball) an act or instance of taking the ball forward with repeated slight touches or bounces. （在足球、曲棍球和篮球中）反复轻微触球或弹跳将球向前推进的动作或实例。
 
+- dutch
+
+  1. noun(DATED·INFORMAL): (especially among cockneys) one's wife. （过时的·非正式）（尤其在伦敦人中）某人的妻子。
+
+- Dutch
+
+  1. adjective: relating to the Netherlands, its people, or their language. 关于荷兰，其民众，或他们的语言的。
+
+  2. adjective(ARCHAIC): relating to the people of Gemany; Geman. （古老）关于德国人的；德国。
+
+  3. noun: the language of the Netherlands, spoken by some 20 million people. 荷兰语言，约 2000 万人使用。
+
+  4. noun: the people of the Netherlands collectively. 荷兰人民的总称。
+
+  5. phrase: go Dutch - share the cost of something, especially a meal, equally. 平摊某事的费用，尤其是一餐饭。
+
+  6. phrase: in Dutch - in trouble. 处于麻烦中。
+
 ## E
 
 - earnest
@@ -524,6 +582,10 @@ categories: English
   2. phrase: in earnest - occurring to a greater extent or more intensely than before. 比以前更大程度或更强烈地发生。
 
   3. noun: a thing intended or regarded as a sign or promise of what is to come. 被意为或视为即将发生的事情的标志或承诺的事物。
+
+- enormous
+
+  1. very large in size, quantity, or extent. 规模，数量，或范围非常大。
 
 - enroll
 
@@ -691,6 +753,14 @@ categories: English
 
   3. adjective(WEST INDIAN): angry or quick-tempered. （西印度）生气或脾气暴躁的。
 
+- impoverish
+
+  1. verb: make (a person or area) poor. 使（一个人或一个地区）贫穷。
+
+- impoverished
+
+  1. adjective: (of a person or area) made poor. （某人或地区）变穷的。
+
 - incorporate
 
   1. verb: take in or contain (something) as part of whole; include. 将（某物）作为整体的一部分纳入或包含；包括。
@@ -781,6 +851,14 @@ categories: English
 
 ## J
 
+- justify
+
+  1. verb: show or prove to be right or reasonable. 显示或证明是正确或合理的。
+
+  2. verb(THEOLOGY): declare or make righteous in the sight of God. （神学）在神面前宣告或称义。
+
+  3. verb(PRINTING): adjust (a line of type or piece of text) so that the print fills a space evenly or forms a straight edge at the margin. 调整（一行文字或一段文字）使印刷均匀填充空格或在边缘形成直角边，即两端对齐。
+
 ## K
 
 ## L
@@ -802,6 +880,14 @@ categories: English
   1. adverb: in the same way; also. 以同样的方式；还。
 
   2. adverb: in a like manner; similarly. 以类似的方式；相似地。
+
+- loom
+
+  1. noun: an apparatus for making fabric by weaving yarn or thred. 一种通过编织纱线或线来制造织物的设备，即织布机。
+
+  2. verb: appear as a vague form, especially one that is large or threatening. 以一种模糊的形式出现，尤其是一种巨大的或具有威胁性的形式。
+
+  3. noun: a vage and often exaggerated first appearance of an object seen in darkness or fog, especially at sea. 在黑暗或雾中，尤其是在海上，物体模糊且常常被夸大的第一次出现。
 
 - lottery
 
@@ -1338,6 +1424,10 @@ categories: English
   1. adjective: having, revealing, or involving a great deal of worldly experience and knowledge of fashion and culture. 拥有，揭示，或涉及大量关于时尚和文化的世俗经验和知识。
 
   2. adjective: (of a machine, system, or technique) developed to a high degree of complexity. （机器，系统，技术）发展到高度复杂。
+
+- sovereignty
+
+  1. noun: supreme power or authority. 最高权力或权威。常指国家主权。
 
 - specification
 

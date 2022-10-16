@@ -19,6 +19,12 @@ categories: English
 
   substitute n. 替代物；v. 替代
 
+- adapt v. 适应
+
+  adept adj. 精通; n. 老手
+
+  adopt v. 收养，使用
+
 <!-- more -->
 
 ## 近义词
@@ -36,3 +42,61 @@ categories: English
   adverb. however
 
   adverb. nevertheless
+
+- 与“大”相关的形容词
+
+  adj. big
+
+  adj. enormous
+
+  adj. huge
+
+  adj. giant
+
+  adj. gargantuan
+
+  adj. gigantic
+
+  adj. vast
+
+  adj. titanic
+
+  adj. considerable
+
+- 表示关于的词组
+
+  concerning
+
+  respecting
+
+  with respect to
+
+  in respect of
+
+  regarding
+
+  in/with regard to
+
+  with reference to
+
+  in terms of
+
+  relating to
+
+  as for/to
+
+  apropos
+
+  in the matter of
+
+  in connection with
+
+  dealing with
+
+  on the subject of
+
+  anent
+
+  touching on
+
+  about
