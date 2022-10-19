@@ -306,7 +306,7 @@ I like this idea/opinion/news/story that
 
 翻译为有，本质是 there be + n. 整体是一个完整的句子
 
-There be + n. 定语从句/非谓语动词/介词短语/同位语
+There be + n. + 定语（adj./定语从句/同位语从句/非谓语动词/介词短语）
 
 There is no 表示没有，不可用 not
 
@@ -315,6 +315,12 @@ There might be 表可能
 There will be/is going to be 表将来
 
 There exist n.
+
+There lies n.
+
+There happens to be 碰巧有
+
+There remains to be 依旧有
 
 ### 强调句
 

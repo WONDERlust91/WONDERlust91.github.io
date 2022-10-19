@@ -100,3 +100,35 @@ categories: English
   touching on
 
   about
+
+- 表困惑
+
+  v. n. puzzle
+
+  v. confuse
+
+  v. perplex
+
+  v. bewilder
+
+  v. confound
+
+- 表阻止词组 v. sb/sth from doing sth.
+
+  keep sb/sth (from) doing sth. 只有 keep 中 from 可省略。
+
+  prevent
+
+  Stop
+
+  Bar
+
+  Block
+
+  Restrain
+
+  impede
+
+  hamper
+
+  handicap

@@ -123,6 +123,10 @@ categories: English
 
   3. verb(COMPUTING): translate (a program) from a higher-level programming language into machine code. （计算机）将（程序）高级编程语言编译成机器码。
 
+- astonish
+
+  1. verb: suprise or impress (someone) greatly. 使（某人）大吃一惊或给（某人）留下深刻印象。
+
 - at a loss
 
   1. phrase: puzzled or uncertain what to think, say, or do. 困惑或不确定想什么，说什么，做什么。
@@ -226,6 +230,20 @@ categories: English
 - chipmunk
 
   1. noun: a burrowing ground squirrel with cheek pouches and light and dark stripes running down the body, found in North America and northern Eurasia. 花栗鼠，在北美和欧亚大陆北部发现的一种地面穴居松鼠，脸部带有颊囊并且有沿着身体延伸的明暗条纹。
+
+- clash
+
+  1. noun: a violent confrontation. 激烈的对抗。
+
+  2. noun: a mismatch of colours. 颜色不匹配。
+
+  3. noun: a loud jarring sound, as of metal objects being struck together. 响亮刺耳的声音，就像金属物体被撞在一起一样。
+
+  4. verb: meet and come into violent conflict. 遭遇或陷入激烈冲突。
+
+  5. verb: (of colours) appear discordant or ugly when placed close to each other. （颜色）当被放置在一起时显得不协调或难看。
+
+  6. verb: strike (cymbals) together, producing a loud discordant sound. 敲击（钹）到一起，产生巨大的不和谐的声音。
 
 - commute
 
@@ -353,6 +371,16 @@ categories: English
 
   1. adjective: deserving contempt; despicable. 值得鄙视的；卑鄙的。
 
+- contradictory
+
+  1. adjective: mutually opposed or inconsistent. 互相对立或不一致。
+
+- conventional
+
+  1. adjective: based on or in accordance with what is generally done or believed. 基于或根据通常所做的或相信的。
+
+  2. adjective(BRIDGE): (of a bid) intended to convey a particular meaning according to an agreed convention. （桥）（投标）旨在根据商定的约定传达特定的含义。
+
 - counterpart
 
   1. noun: a person or thing that corresponds to or has the same function as another person or thing in a different place or situation. 在不同地方或环境下与另一个人或事物对应或具有相同功能的人或事物。
@@ -368,6 +396,40 @@ categories: English
   3. noun: a boat or ship. 一艘船。
 
   4. verb: exercise skill in making (an object), typically by hand. 练习制作（物品）的技能，通常是手工制作。
+
+- credit
+
+  1. noun: the ability of a customer to obtain goods or services before payment, based on the trust that payment will be made in the future. 客户在付款前得到商品或服务的能力， 基于对未来付款的信任，即信用。
+
+  2. noun: an entry recording a sum received, listed on the right-hand side or column of an account. 记录收到的金额的条目，列在帐户右侧或右栏中，即会计上的借。
+
+  3. noun: public acknowledgement or praise, given or received when a person's responsibility for an action or idea becomes apparent. 给予或接受公开承认或赞扬，当某个人对某一行为或想法的责任变得清晰的时候。
+
+  4. noun(NORTH AMERICAN): the acknowledgement of a student's completion of a course or activity that counts towards a degree or diploma as maintained in a school's records. （北美）对学生完成课程或活动的承认，这些课程或活动计入学校记录的学位或文凭。
+
+  5. noun(ARCHAIC): the quality of being believed or credited. （古老）被相信的质量，即声誉。
+
+  6. verb: publicly acknowledge a contributor's role in the production of (something published or broadcast). 公开承认贡献者在制作（出版或广播的东西）中的作用。
+
+  7. verb: add (an amount of money) to an account. 将（金额）添加到帐户中。
+
+  8. verb(BRITISH): believe (something surprising or unlikely). （英国）相信（令人惊讶或不太可能的事情）。
+
+  9. phrase: be in credit - (of an account) have money in it. 账户中有钱。
+
+  10. phrase: credit where credit is due - praise should be given when it is deserved, even if one is reluctant to give it. 赞美应该在应得的时候被给予，尽管有人可能不情愿去给予。
+
+  11. phrase: do someone or something credit - make someone or something worthy of praise or respect. 使某人某事值得称赞或尊重。
+
+  12. phrase: give someone credit for - commend someone for (a quality or achievement), especially with reluctance or surprise. 赞扬某人（品质或成就），尤其是带有不情愿或惊讶。
+
+  13. phrase: have something to one's credit - have achieved something notable. 取得了显著成绩。
+
+  14. phrase: on credit - with an arrangement to pay later. 稍后付款的安排，即信贷，白条，花呗。
+
+  15. phrase: on the credit side - as a good aspect of the situation. 作为当下情况好的一个方面。
+
+  16. phrase: to one's credit - used to indicate that something praiseworthy has been achieved, expecially despite difficulties. 用于表示已经实现了值得称赞的事情，尤其是排除了重重困难的情况下。
 
 - crescent
 
@@ -408,6 +470,10 @@ categories: English
   1. the head of the chapter of a cathedral or collegiate church. 大教堂或学院教堂分会的负责人。
 
   2. the head of a university faculty or department or of a medical school. 大学学院或部门或医学院的负责人。
+
+- dedicate
+
+  1. verb: devote (time or effort) to a particular task or purpose. 将（时间或精力）投入到特定的任务或目的中。
 
 - deem
 
@@ -649,6 +715,10 @@ categories: English
 
   2. adjective: (of a person, animal, or plant) able to conceive young or produce seed. （人，动物，植物）能够怀孕或能够产生种子。
 
+- flee
+
+  1. verb: run away from a place or situation of danger. 逃离某地或危险的情况。
+
 - formerly
 
   1. adverb: in the past; in earlier time. 以前；在早些时候。注意与 formally （正式地）的区别。
@@ -690,6 +760,12 @@ categories: English
 - geology
 
   1. noun: the science that deals with the earth's physical structure and substance, its history, and the processes that act on it. 处理地球的物理结构和物质，其历史以及作用于它的过程的科学，即地质学。
+
+- get around
+
+  1. phrase: coax or persuade someone to do or allow something that they initially do not want to do. 哄骗或说服某人做或同意他们最初不想做的事情。
+
+  2. phrase: deal successfully with a problem. 成功处理一个问题。
 
 ## H
 
@@ -782,6 +858,10 @@ categories: English
   1. phrase: to be replaced by. 被替换。
 
   2. phrase: in support or to the advantage of. 支持或受益，即倾向于。
+
+- in the world
+
+  1. phrase: used for emphasis in questions, especially to express astonishment or disbelief. 用于强调问题，尤其是表达惊讶或不相信，常译为到底，究竟。
 
 - introduce
 
@@ -895,6 +975,12 @@ categories: English
 
 ## M
 
+- maid
+
+  1. noun: a female domestic servant. 女佣。
+
+  2. noun(ARCHAIC): an unmarried girl or young woman. （古老）未婚少女或年轻女子。
+
 - materialism
 
   1. noun: a tendency to consider material possessions and physical comfort as more important than spiritual values. 倾向于认为物质财富和身体舒适比精神价值更重要，即物质主义。
@@ -914,6 +1000,18 @@ categories: English
   1. noun: the quality of being particularly good or worthy, especially so as to deserve praise or reward. 特别好或值得的品质，尤其是关于值得称赞或奖励的。
 
   2. verb: deserve or be owrthy of (reward, punishment, or attention). 值得（奖励，惩罚，或关注）。
+
+- metropolitan
+
+  1. adjective: relating to or denoting a metropolis or large city. 关于或表示一个大都市。
+
+  2. adjective: relating to or denoting the parent state of a colony. 关于或表示殖民地的母国。
+
+  3. adjective(CHRISTIAN CHURCH): relating to or denoting a metropolitan or his see. （天主教会）关于或表示大主教或其所见的。
+
+  4. noun(CHRISTIAN CHURCH): a bishop having authority over the bishops of a province. in particular (in Orthodox Church) one ranking above archbishop and below patriarch. （天主教会）一位主教拥有超过省主教的权力，特别是在（东正教教会中）等级高于大主教，低于族长。
+
+  5. noun: an inhabitant of a metropolis or large city. 大都市或大城市的居民。
 
 - mindset
 
@@ -1230,6 +1328,12 @@ categories: English
 - publication
 
   1. noun: the preparation and issuing of a book, journal, piece of music, or other work for public sale. 准备和发行书籍，期刊，音乐，或其他作品以供公开销售。
+
+- put down roots
+
+  1. phrase: (of a plant) begin to draw nourishment from the soil through its roots. （植物）开始通过根部从土壤中吸收养分。
+
+  2. phrase: (of a person) begin to have a settled life in a particular place. （某人）在特定的地方开始过安定的生活。
 
 ## Q
 
@@ -1553,6 +1657,16 @@ categories: English
 
   3. noun(GRAMMAR): the subjective case. 主观情况。
 
+- superficial
+
+  1. adjective: existing or occurring at or on the surface. 存在或发生在表面上。
+
+  2. adjective: appearing to be true or real only until examined more closely. 只有在更仔细地检查后，才能显现出真实。
+
+  3. adjective: not thorough, deep, or complete; cursory. 不彻底，不深入，或不完整；粗略的。
+
+  4. adjective(BRITISH·BUILDING): denoting a quantity of a material expressed in terms of area covered rather than linear dimension or volume. （英国·建筑）表示以覆盖面积而不是以线性尺寸或体积表示的材料数量。
+
 - swing
 
   1. verb: move or cause to move back and forth or from side to side while suspended or on an axis. 在轴线上悬挂时移动或前后移动或左右移动。
@@ -1578,6 +1692,12 @@ categories: English
   11. noun: a style of jazz or dance music with an easy flowing but vigorous rhythm. 节奏轻松流畅但充满活力的一种爵士或舞曲风格。
 
   12. noun: (in musical theater) an understudy, typically one who covers multiple roles in the chorus of a particular production. （在音乐剧中）替补，通常是在特定作品的合唱中扮演多个角色的人。
+
+- symposium
+
+  1. noun: a conference or meeting to discuss a particular subject. 讨论特定主题的会议。
+
+  2. noun: a drinking party or convivial discussion, especially as held in ancient Greece after a banquet (and notable as the title of a work by Plato). 酒会或欢乐的讨论，尤其是古希腊宴会后举行的（以柏拉图作品的标题著称）。
 
 - synonymous
 
@@ -1668,6 +1788,16 @@ categories: English
   1. adjective: lacking refined worldly knowledge or tastes. 缺少精致世故的知识或品味。
 
   2. adjective: not complicated or highly developed; basic. 不是复杂或高度发达的；基础的。
+
+- upscale
+
+  1. adjective(NORTH AMERICAN): relatively expensive and designed to appeal to affluent consumers; upmarket. 相对昂贵，旨在吸引富裕消费者；高档。
+
+  2. adverb: towards the more expensive or affluent sector of the market. 面向市场中更昂贵或富裕的区域。
+
+  3. verb: increase the size or improve the quality of. 增大尺寸或改善质量。
+
+  4. verb: convert (an image or video) so that it displays correctly in a higher resolution format. 转换（图片或视频）以便于以更高的分辨率正确地展示。
 
 - used to
 
