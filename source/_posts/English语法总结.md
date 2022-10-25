@@ -431,3 +431,7 @@ have been doing 从过去到现在一直做某事
 - one, the other 一个，另一个。总数只有两个。
 
   one, another 一个，另一个。总数超过两个。
+
+- not so much A as B = not A but rather B 不是 A，而是 B
+
+  so much as = even 甚至

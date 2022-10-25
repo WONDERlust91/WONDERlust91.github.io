@@ -9,11 +9,75 @@ categories: English
 
 ## A
 
+- account
+
+  1. noun: a report or description of an event or experience. 事件或经历的报告或描述。
+
+  2. noun: a record or statement of financial expenditure and receipts relating to a particular period or purpose. 与特定时期或目的相关的财务支出和收入的记录或报表。
+
+  3. noun: an arrangement by which a body holds funds on behalf of a client or supplies goods or services to the client on credit. 机构代表客户持有资金或以信贷方式向客户提供商品或服务的安排，即账户。
+
+  4. noun: an arrangement by which a user is given personalized access to a computer, website, or application, typically by entering a username and password. 用户被给予一个个人的入口对电脑，网站，或应用，尤其是使用用户名和密码的。
+
+  5. noun: importance. 重要性。
+
+  6. verb: consider or rgard in a specified way. 以特定的方式考虑。
+
+  7. phrase: by all accounts - according to what one has heard or read. 根据所听到或读到的。
+
+  8. phrase: call someone to account - require someone to explain a mistake or poor performance. 要求某人解释错误或差的表现。
+
+  9. phrase: give a bad account of oneself - make an unfavorable impression through one's performance. 通过某人表现留下不好的印象。
+
+  10. phrase: give a good account of oneself - make a favorable impression through one's performance. 通过某人表现留下好的印象。
+
+  11. phrase: keep an account of - keep a record of. 保持记录（某事）。
+
+  12. phrase: leave something out of account - fail or decline to consider a factor. 没有或少考虑了一个因素。
+
+  13. phrase: on someone's account - for a specified person's benefit. 为特定的人的利益。
+
+  14. phrase: on account of - because of. 因为。
+
+  15. phrase: on no account - under no circumstances. 在任何情况下都不。
+
+  16. phrase: on one's own account - for one's own purposes; for oneself. 为自己的目的；为自己。
+
+  17. phrase: settle accounts with - have revenge on. 向某人复仇，算账。 pay money owed to (someone). 结清欠款，算账。
+
+  18. phrase: take something into account - consider something along with other factors before reaching a decision。 在做出决定之前考虑（某事）以及其他因素。
+
+  19. phrase: take account of - consider (something) along with other factors before reaching a decision. 在做出决定之前考虑（某事）以及其他因素。
+
+  20. phrase(PROVERB): there's no accounting for taste - it is impossible to explain why different people like different things, especially those things that the speaker considers unappealing. 无法解释为什么不同的人喜欢不同的事物，尤其是那些说话者认为没有吸引力的事物。
+
+  21. phrase: turn something to account - turn something to one's advantages. 使某事对自己有利。
+
+  22. phrase: account for
+
+      1. give a satisfactory record of something ,typically money, that one is responsible for. 为某人所负责的事物，通常是金钱，给出满意的记录。
+
+      2. provide or serve as a satisfactory explanation or reason for. 提供或给出令人满意的解释或理由。
+
+      3. know the fate or whereabouts of someone or something, especially after an accident. 知道某人或某事的命运或下落，尤其是事故发生后。
+
+      4. succeed in killing, destroying, or defating. 成功杀死，摧毁，或击败。
+
+      5. supply or make up a specified amount or proportion. 提供或组成了具体的数量或份额。
+
+<!-- more -->
+
 - accumulate
 
   1. verb: gather together or acquire an increasing number or quantity of. 聚集在一起或获得不断增加的数或量。
 
-<!-- more -->
+- acquaintance
+
+  1. noun: a person's knowledge or experience of something. 一个人对某事的知识或经验。
+
+  2. noun: a person one knows slightly, but who is not a close friend. 仅仅是认识，但不是亲近朋友的人。
+
+  3. phrase: make the acquaintance of - meet someone for the first time and become only slightly familiar. 第一次见某人，只是有一点点熟悉。
 
 - acquisitive
 
@@ -63,6 +127,12 @@ categories: English
 
   2. noun: a set of principles underlying and guiding the work of a particular artist or artistic movement. 一系列作为特定艺术家或艺术行为的基础或指导的原则。
 
+- affiliate
+
+  1. verb: officially attach or connect (a subsidiary group or a person) to an organization. 正式将（附属团体或个人）附加或连接到组织。
+
+  2. noun: a person or organization officially attached to a larger body. 正式附属于更大机构的个人或组织。
+
 - allergic
 
   1. adjective: caused by or relating to an allergy. 由过敏引起或与过敏有关。
@@ -76,6 +146,20 @@ categories: English
 - ample
 
   1. adjective: enough or more than enough; plentiful. 足够或绰绰有余；丰富的。
+
+- appeal
+
+  1. verb: make a serious or urgent request, typically to the public. 提出严重或紧急的请求，通常是向公众提出。
+
+  2. verb(LAW): apply to a higher court for a reversal of the decision of a lower court. 向上级法院申请撤销下级法院的决定。
+
+  3. verb: be attractive or interesting. 有吸引力或有趣。
+
+  4. noun: a serious or urgent request, typically one made to the public. 严重或紧急的要求，通常是向公众提出的。
+
+  5. noun: an application to a higher court for a decision to be reversed. 向上级法院要求撤销决定的申请。
+
+  6. noun: the quality of being attractive or interesting. 有吸引力或有趣的质量。
 
 - apprenticeship
 
@@ -179,7 +263,23 @@ categories: English
 
   1. adjective: lacking strong features or characteristics and therefore uninteresting. 缺乏强大的功能或特性，因此而显得无趣，即平淡无奇。
 
+- breed
+
+  1. verb: (of animals) mate and then produce offspring. （动物）交配，然后生产后代。
+
+  2. noun: a stock of animals or plants within a species having a distinctive appearance and typically having been developed by deliberate selection. 动物或植物种群中某物种中具有独特外观，通常是经过深思熟虑发展起来的。
+
+  3. phrase: a breed apart - a sort or kind of person that is very different from the norm. 与规范非常不同的一种或一类人。
+
+  4. phrase: a dying breed - a sort or kind of person that is slowly disappearing. 正在慢慢消失的一种或一类人。
+
 ## C
+
+- capable
+
+  1. adjective: having the ability, fitness, or quality necessary to do or achieve a specified thing. 具有完成或完成特定事情所必需的能力、适合度或品质。
+
+  2. adjective: able to achieve efficiently whatever one has to do; competent. 能够有效地完成任何必须做的事情；胜任的。
 
 - capital
 
@@ -245,6 +345,10 @@ categories: English
 
   6. verb: strike (cymbals) together, producing a loud discordant sound. 敲击（钹）到一起，产生巨大的不和谐的声音。
 
+- cling-film
+
+  1. noun: a thin transparent plastic film that adheres to surfaces and to itself, used as a wrapping or covering for food; plastic wrap. 一种薄的透明的塑料薄膜，可以吸附在表面或自身上，用作食品的包装或覆盖；塑料的包装。即保鲜膜。
+
 - commute
 
   1. verb: travel some distance between one's home and place of work on a regular basis. 定期往返于家和工作地点之间的一段距离，即通勤。
@@ -254,6 +358,10 @@ categories: English
   3. verb(MATHEMATICS): (of two operations or quantities) have a commutative relation. （数学）（两个操作或数量）具有交换关系。
 
   4. noun: a regular journey of some distance to and from one's place of work. 往返工作地的一定距离的常规路程。
+
+- compel
+
+  1. verb: force or oblige (someone) to do something. 强迫或迫使某人做某事。
 
 - compensate
 
@@ -503,6 +611,10 @@ categories: English
 
   5. adjective: (of a person or flight) violent or dangerous. （某人或战斗）暴力或危险的。
 
+- detrimental
+
+  1. adjective: tending to cause harm. 倾向于造成伤害。
+
 - devaluate
 
   1. verb: reduce or underestimate the worth or importance of. 降低或低估价值或重要性。
@@ -621,6 +733,16 @@ categories: English
 
   4. noun: (in soccer, hockey, and basketball) an act or instance of taking the ball forward with repeated slight touches or bounces. （在足球、曲棍球和篮球中）反复轻微触球或弹跳将球向前推进的动作或实例。
 
+- drop out
+
+  1. phrase: stop participating or being involved in something. 停止参与或卷入某事。
+
+  2. phrase: abandon a course of study. 放弃学业。
+
+  3. phrase: reject conventional society to pursue an alternative lifestyle. 拒绝传统社会去追求另类的生活方式。
+
+  4. phrase(RUGBY): restart play with a drop kick. （橄榄球）用抛落踢球来开始比赛。
+
 - dutch
 
   1. noun(DATED·INFORMAL): (especially among cockneys) one's wife. （过时的·非正式）（尤其在伦敦人中）某人的妻子。
@@ -649,6 +771,10 @@ categories: English
 
   3. noun: a thing intended or regarded as a sign or promise of what is to come. 被意为或视为即将发生的事情的标志或承诺的事物。
 
+- emerge
+
+  1. verb: move out of or away from something and come into view. 移出或远离某物并出现在视野中。(常用于表示新兴，脱颖而出，摆脱困境，破壳而出) emerging countries 即新兴国家。
+
 - enormous
 
   1. very large in size, quantity, or extent. 规模，数量，或范围非常大。
@@ -662,6 +788,12 @@ categories: English
   1. noun: a feeling of discontented or resentful longing aroused by someone else's possessions, qqualities, or luck. 因他人的财产、品质或运气而引起的不满或怨恨的意愿。
 
   2. verb: desire to have a quality, possession, or other desirable thing belonging to (someone else). 渴望拥有属于（他人）的品质，财产，或其他令人向往的东西。
+
+- equivalent
+
+  1. adjective: equal in value, amount, function, meaning, etc. 在价值，数量，功能，意义等方面相等。
+
+  2. noun: a person or thing that is equal to or corresponds with another in value, amount, function, meaning, etc. 在价值，数量，功能，意义等方面与其他相等或对应的人或物。
 
 - essential
 
@@ -714,6 +846,40 @@ categories: English
   1. adjective: (of soil or land) producing or capable of producing abundant vegetation or crops. （土壤或土地）生长或能够生长丰富的植物或农作物。
 
   2. adjective: (of a person, animal, or plant) able to conceive young or produce seed. （人，动物，植物）能够怀孕或能够产生种子。
+
+- figure
+
+  1. noun: a number, especially one which forms part of official statistics or relates to the financial performance of a company. 一个数字，尤其是构成官方统计数据的一部分或与公司业绩表现相关的数字。
+
+  2. noun: a person's bodily shape, especially that of a woman and when considered to be attractive. 一个人的体型，尤其是女性的体型当被认为有吸引力时。
+
+  3. noun: a person of a particular kind, especially one who is important or distinctive in some way. 特定类型的人，尤其是在某些方面重要或与众不同的人。
+
+  4. noun: a shape which is defined by one or more lines in two dimensions (such as a circle or triangle), or one or more surfaces in three dimensions (such as a sphere or a cuboid), either considered mathematically in geometry or used as a decorative design. 由二维中一条线或多条线定义的形状（例如圆或三角形），或三维中一个面或多个面定义的形状（例如球体或长方体），都被在几何学上考虑或用于设计装饰。
+
+  5. noun(MUSIC): a short succession of notes producing a single impression. 生产单一印象的一串短的连续音符。
+
+  6. noun(LOGIC): the form of a syllogism, classified according to the position of the middle term. 三段论的形式，根据中间项的位置分类。
+
+  7. verb: be a significant and noticeable part of something. 成为某事重要和引人注目的一部分。
+
+  8. verb(INFORMAL·NORTH AMERICAN): think, consider, or expect to be the case. （非正式·北美）认为，考虑，或期望会是这样。
+
+  9. verb(NORTH AMERICAN): calculate or work out (an amount or value) arithmetically. （北美）在算术上计算出（数量或值）。
+
+  10. verb: represent (something) in a diagram or picture. 用图表或图片表示（某事物）。
+
+  11. phrase: figure of fun - a person who is considered ridiculous. 被认为荒唐的人。
+
+  12. phrase: keep one's figure - retain a slim and attractive bodily shape. 保持苗条和吸引人的身材。
+
+  13. phrase: lose one's figure - cease to have a slim and attractive bodily shape. 失去苗条和吸引人的身材。
+
+  14. phrase: put a figure on - give a price or exact number for. 给出价格或确切的数字。
+
+  15. phrase: figure on - count or rely on something happening or being the case in the future. 依据正在发生的事情或将来要发生的事情。
+
+  16. phrase: figure out - solve a problem or discover the answer to a question. 解决问题或发现问题的答案。
 
 - flee
 
@@ -807,6 +973,30 @@ categories: English
 
   3. (of cement) hardening under water. （水泥）在水的作用下硬化。
 
+- hype
+
+  1. noun: extravagant or intensive publicity or promotion. 奢侈或密集的宣传或促销。
+
+  2. verb: promote or publicize (a product or idea) intensively, ofen exaggerating its importance or benefits. 密集地促销或宣传（产品或想法），通常夸大其重要性或好处。
+
+  3. noun: a hypodermic needle or injection. 皮下注射针头或注射剂（常指吸毒者）。
+
+  4. verb: stimulate or excite (someone). 激发某人或使某人兴奋起来。
+
+- hyper
+
+  1. adjective: hyperactive or unususally energetic. 过度活跃或异常精力充沛。
+
+- hyper-
+
+  1. prefix: over; beyond; above; exceeding; excessively; above normal. 超过；过度；超出正常水平。
+
+  2. prefix: relating to hypertext. 关于超文本的。
+
+- hyperactive
+
+  1. adjective: abnormally or extremely active. 异常或极度活跃。
+
 - hypocrisy
 
   1. the practice of claiming to have moral standards or beliefs to which one's own behavior does not conform; pretense. 声称具有道德标准或信仰但实际自己的行为并不符合的做法；虚伪。
@@ -859,6 +1049,12 @@ categories: English
 
   2. phrase: in support or to the advantage of. 支持或受益，即倾向于。
 
+- infringement
+
+  1. noun: the action of breaking the terms of a law, agreement, etc.; violation. 破坏法律、协议等条款的行为；侵害。
+
+  2. noun: the action of limiting or undermining something. 限制或破坏某事的行为。
+
 - in the world
 
   1. phrase: used for emphasis in questions, especially to express astonishment or disbelief. 用于强调问题，尤其是表达惊讶或不相信，常译为到底，究竟。
@@ -872,6 +1068,10 @@ categories: English
   3. verb: insert or bring into something. 插入或带入某物。
 
   4. verb: occur at the start of; open. 发生在开始；开幕。
+
+- invocation
+
+  1.  noun: the action of invoking something or someone for assistance or as an authority. 请求某人或某物作为帮助或权威的行为。
 
 - impetus
 
@@ -921,6 +1121,28 @@ categories: English
 
   2. verb: flood. 淹没、泛滥
 
+- issue
+
+  1. noun: an important topic or problem for debate or discussion. 辩论或讨论的重要话题或问题。
+
+  2. noun: the action of supplying or distributing an item for use, sale, or official purposes. 为使用，销售，或官方目的而提供或分发物品的行为。
+
+  3. noun: a result or outcome of something. 某事的结果。
+
+  4. noun: the action of flowing or coming out. 流出或流出的动作。
+
+  5. noun(FORMAL·LAW): children of one's own. 某人自己的孩子。
+
+  6. verb: supply or distribute (something). 提供或分发（某物）。
+
+  7. verb: come, go, or flow out from. 来，去，或流出。
+
+  8. phrase: at issue - under discussion; in dispute. 在讨论中；在争论中。
+
+  9. phrase: make an issue of - treat too seriously or as a problem. 对待太认真或当作一个问题。
+
+  10. phrase: take issue with - disagree with; challenge. 不同意；挑战。
+
 - iterate
 
   1. verb: perform or utter repeatedly. 反复执行或说
@@ -930,6 +1152,10 @@ categories: English
   3. noun(MATHEMATICS): a quantity arrived at by iteration. 数学名词：通过迭代得出的量。
 
 ## J
+
+- juggle
+
+  1. verb: continuously toss into the air and catch (a number of objects) so as to keep at least one in the air while handling the others, typically for the entertainment of others. 不断地抛向空中并抓住（一些）物体，以便处理其他物体时至少有一个保持在空中，通常是为了取悦他人。
 
 - justify
 
@@ -950,6 +1176,18 @@ categories: English
   2. noun(BRITISH): a vertical strip of unravelled fabric in tights or stockings. （英国）由紧身衣或长袜中解开的织物做成的竖直的带子。
 
   3. verb(BRITISH): (with reference to tights or stockings) develop or cause to develop a ladder. （英国）（使用紧身衣或长袜）制造梯子。
+
+- lateral
+
+  1. adjective: of, at, toward, or from the side or sides. 的侧边，在侧边，朝向侧边，或从侧边。
+
+  2. noun: a side part of something, especially a shoot or branch growing out from the side of a stem. 某物侧边的部分，尤其是从茎的侧面长出的枝芽或枝条。
+
+  3. noun(PHONETICS): a lateral consonant. （语音学）舌侧边发出的辅音。
+
+  4. noun(AMERICAN FOOTBALL): a pass thrown either sideways or backward from the position of the passer. （美式足球）传球者从侧边或后方的传球。
+
+  5. verb(US): throw (a football) in a sideways or backward direction. （美国）从侧边或后方传（球）。
 
 - lest
 
@@ -981,6 +1219,22 @@ categories: English
 
   2. noun(ARCHAIC): an unmarried girl or young woman. （古老）未婚少女或年轻女子。
 
+- manner
+
+  1. noun: a way in which a thing is done or happens. 事情完成或发生的方式。
+
+  2. noun: a person's outward bearing or way of behaving toward others. 一个人对他人的外在态度或行为方式。
+
+  3. noun: polite or well-bred social behavior. 礼貌或有教养的社交行为。
+
+  4. phrase: all manner of - many different kinds of. 许多不同种类。
+
+  5. phrase: in a manner of speaking - in some sense; so to speak. 在某种意义上；可以说。
+
+  6. phrase: to the manner born - naturally at ease in a specified job or situation. 在特定工作或情况下自然轻松。
+
+  7. phrase: in the manner of - in the style of. 以某种方式。
+
 - materialism
 
   1. noun: a tendency to consider material possessions and physical comfort as more important than spiritual values. 倾向于认为物质财富和身体舒适比精神价值更重要，即物质主义。
@@ -994,6 +1248,10 @@ categories: English
 - mediocrity
 
   1. noun: the quality or state of being mediocre. 平庸的质量或状态。
+
+- Merger and Acquisition (M&A)
+
+  1. phrase: trasactions in which the ownership of companies or their operating units - including all associated assets and liablilities - is transferred to another entity. A merger is the consolidation of two entities into one, whereas an acquisition occurs when one company takes over ownership of another. 兼并收购，将公司或其经营单位的所有权（包括所有相关资产和负债）转让给另一实体的交易。兼并是将两个实体合并为一个，而收购发生在一家公司接管另一家公司的所有权时。
 
 - merit
 
@@ -1012,6 +1270,22 @@ categories: English
   4. noun(CHRISTIAN CHURCH): a bishop having authority over the bishops of a province. in particular (in Orthodox Church) one ranking above archbishop and below patriarch. （天主教会）一位主教拥有超过省主教的权力，特别是在（东正教教会中）等级高于大主教，低于族长。
 
   5. noun: an inhabitant of a metropolis or large city. 大都市或大城市的居民。
+
+- might
+
+  1. verb: past of may. may 的过去式。
+
+  2. verb: used tentatively to ask permission or to express a polite request. 用于试探性的请求许可或表示礼貌地请求。
+
+  3. verb: used to express possibility or make a suggestion. 用于表示可能性或提出建议。
+
+  4. noun: great and impressive power or strength, especially of a nation, large organization, or natrual force. 巨大且令人印象深刻的权力或力量，尤其是一个国家，大型组织，或自然力量。
+
+  5. phrase: might is right - those who are powerful can do what they wish unchallenged, even if their action is in fact unjustified. 有权势的人可以做他们不希望被挑战的事，即使他们的行为实际上是不合理的。
+
+  6. phrase: with all one's might - using all one's power or strength. 使出所有的力量。
+
+  7. phrase: with might and main - with all one's strength or power. 使出某人所有的力量。
 
 - mindset
 
@@ -1081,15 +1355,29 @@ categories: English
 
   2. noun: death, especially on a large scale. 死亡，尤其是指大规模死亡。
 
+- multinational
+
+  1. adjective: including or involving several countries or individuals of several nationalities. 包括或涉及多个国家或有多个国籍的个人，即跨国的。
+
+  2. noun: a company operating in several countries. 在多个国家经营的公司，即跨国公司。
+
+- mythical
+
+  1. adjective: occurring in or characteristic of myths or folk tales. 发生在神话或民间故事中或具有它们的特点。
+
 ## N
+
+- nervertheless
+
+  1. adverb: in spite of that; notwithstanding; all the same. 虽然；尽管；全都一样。
 
 - neuro-
 
   1. prefix: relating to nerves or the nervous system. 前缀词：与神经或神经系统有关。
 
-- nervertheless
+- newsletter
 
-  1. adverb: in spite of that; notwithstanding; all the same. 虽然；尽管；全都一样。
+  1. noun: a bulletin issued periodically to the members of a society, business, or organization. 定期向社会，企业，或组织的成员发布的公告。
 
 - note
 
@@ -1243,6 +1531,10 @@ categories: English
 
   1. noun: the ability to see, hear, or become aware of something through the senses. 通过感官看到、听到或意识到某事的能力，即洞察力。
 
+- pessimistic
+
+  1. adjective: tending to see the worst aspect of things or believe that the worst will happen. 倾向于看到事情最糟糕的一面或相信最糟糕的事情会发生，即悲观主义。
+
 - phase
 
   1. noun: a distinct period or stage in a series of events or a process of change or development. 一系列事件或变化或发展的进程中的不同时期或阶段。
@@ -1283,6 +1575,14 @@ categories: English
 
   6. phrase: sing the praises of - express enthusiastic approval or admiration of. 唱赞歌。表达狂热的赞同或钦佩。
 
+- preach
+
+  1. verb: deliver a sermon or religious address to an assembled group of people, typically in church. 向一群聚集的人发表布道或宗教演讲，通常是在教堂里。
+
+  2. verb: earnestly advocate (a belief or course of action). 非常热切的倡导（一种信念或行动方针）。
+
+  3. phrase: preach to the chair - advocate something to people who already share one's convictions about merits or importance. 宣扬某事对那些已经互相分享了关于优秀品质或重要性的信念的人们。
+
 - predominance
 
   1. noun: the state or condition of being greater in number or amount. 在数量上变得更多的状态或情况。
@@ -1312,6 +1612,36 @@ categories: English
   2. verb: affirm one's faith in or allegiance to (a religion or set of beliefs). 肯定某人的信仰或忠诚关于（宗教或一系列信仰）。
 
   3. verb(ARCHAIC·HUMOROUS): teach (a subject) as a professor. （古老·幽默）作为教授，教授（一门学科）。
+
+- profile
+
+  1. noun: an outline of something, especially a person's face, as seen from one side. 从一侧看某物的轮廓，尤其是人的脸（也指剖面等）。
+
+  2. noun: a short article giving a description of a person or organization. 描述个人或组织的简短文章。
+
+  3. noun: the extent to which a person or organization attracts public notice. 个人或组织吸引公众注意的程度。
+
+     - high-profile
+
+       1. noun: a position attracting much attention or publicity. 吸引很多关注或宣传的位置。
+
+       2. adjective: attracting much attention or publicity. 吸引很多关注或宣传。
+
+     - low-profile
+
+       1. noun: a position of avoiding or not attracting much attention or publicity. 避免或不吸引太多关注或宣传的位置。
+
+       2. adjective: avoiding attention or publicity. 避免关注或宣传。
+
+       3. adjective: (of an object) lower or slimmer than is usual for objects of its type. （物体）比同类物体更低或更细的。
+
+  4. noun: a graphical or other representation of information relating to particular characteristics of something, recorded in quantified form. 以量化形式记录的，与某物的特定特征有关的图形或其他形式的信息。
+
+  5. verb: describe (a person or organization, especially a public figure) in a short article. 用短文描述（人或组织，尤其是公众人物）。
+
+  6. verb: represent in outline from one side. 从一侧的轮廓来展示。
+
+  7. phrase: in profile - (in reference to someone's face) as seen from one side. （指某人的脸）被从一侧看。
 
 - proposition
 
@@ -1385,6 +1715,10 @@ categories: English
 
   1. noun: a person whose job is to enlist or enroll people as employees, in the armed forces, or as members of an organization. 在武装部队招募人员或为组织招聘雇员的人。
 
+- redundancy
+
+  1. noun: the state of being not or no longer needed or useful. 不或不再需要或有用的状态，即冗余。
+
 - referee
 
   1. noun: an official who watches a game or match closely to ensure that the rules are adhered to and (in some sports) to arbitrate on matters arising from the play. 密切观看比赛以确保遵守规则并（在某些运动中）对比赛产生的事项进行仲裁的官员，即裁判。
@@ -1393,9 +1727,31 @@ categories: English
 
   3. verb: act as the referee of. 担任裁判员。
 
+- regulate
+
+  1. verb: control or maintain the rate or speed of (a machine or process) so that it operates properly. 控制或维持（机器或过程）以使正确运行，即调控。
+
 - reinforce
 
   1. verb: strengthen or support (an object or substance), especially with additional material. 加强或支持（物体或物质），尤其是用额外的材料。
+
+- resort
+
+  1. noun: a place that is a popular destination for vacations or recreation, or which is frequented for a particular purpose. 受欢迎的度假或娱乐目的地，或为特定目的而经常光顾的地方。
+
+  2. noun: the action of turning to and adopting a strategy or course of action, especially a disagreeable or undesirable one, so as to resolve a difficult situation. 为解决困难的局面，转向或采取一种策略或行动方针的行为，尤其是令人不快或不受欢迎的。
+
+  3. verb: turn to and adopt (a strategy or course of action, especially a disagreeable or undesirable one) so as to resolve a difficult situation. 转向并采取（一种策略或方针，尤其是令人不快或不受欢迎的）以解决困难的情况。
+
+  4. verb(FORMAL): go often or in large numbers to. 经常去或大量前往。
+
+  5. phrase: as a first resort - before anything else is attempted. 在其他所有尝试之前，第一选择。
+
+  6. phrase: as a last resort - when all else has failed. 当其他所有都失败时，最后的办法。
+
+  7. phrase: in the last resort - ultimately. 最终。
+
+  8. phrase: lender of last resort - an institution, usually a country's central bank, that provides loans to banks or that are near collapse. 一个机构，通常是一个国家的央行，在银行接近破产时为其提供贷款。
 
 - reveal
 
@@ -1453,6 +1809,12 @@ categories: English
 
   9. verb: subject to a vicious verbal attack; criticize brutally. 受到恶毒的语言攻击；粗暴地批判。
 
+- scanty
+
+  1. adjective: small or insufficient in quantity or amount. 在量或数上少或不足。
+
+  2. noun(INFORMAL): brief underpants. （非正式）短内裤。
+
 - screw
 
   1. noun: a short, slender, sharp-pointed metal pin with a raised helical thread running round it and a slotted head,used to join things together by being rotated so that it pierces wood or other material and is held tightly in place. 一种短的，细的，尖头的金属针，被凸起螺旋线环绕并有着开槽的顶部。用于通过旋转将物品连接起来，旋转是为了穿透木头或其他材料，并紧紧地固定在适当的位置，即螺丝。
@@ -1490,6 +1852,52 @@ categories: English
   1. adjective: causing great public interest and excitement. 引起公众极大的兴趣和兴奋。
 
   2. adjective(INFORMAL): very good indeed; very impressive or attractive. 确实非常好；非常令人印象深刻或有吸引力。
+
+- serve
+
+  1. verb: perform duties or services for (another person or an organization). 为（其他人或组织）履行职责或服务。
+
+  2. verb: present (food or drink) to someone. 提供（食物或饮料）给某人。
+
+  3. verb(LAW): deliver (a document such as a summons or writ) in a formal manner to the person to whom it is addressed. 以正式的方式向收件人交付（传票或令状等文件）。
+
+  4. verb: be of use in achieving or satisfying. 有助于实现或满足。
+
+  5. verb: (in tennis and other racket sports) hit the ball or shuttlecock to begin play. （在网球或其他球拍运动中）击球或羽毛球来开始比赛。
+
+  6. verb(NAUTICAL): bind (a rope) with thin cord to protect or strengthen it. （航海）绑（绳子）用细的绳索来保护或加强它。
+
+  7. verb(MILITARY): operate (a gun). （军队）操作（枪）。
+
+  8. noun: (in tennis and other racket sports) an act of hitting the ball or shuttlecock to start play. （在网球和其他球拍运动中）击球或羽毛球来开始比赛的动作。
+
+  9. phrase: if my memory serves me - if I remember correctly. 如果没记错的话。
+
+  10. phrase: serve at table - serve people with food or drink. 为人们提供食物或饮料。
+
+  11. phrase: serve someone right - be someone's deserved punishment or misfortune. 是某人应得的惩罚或不幸。
+
+  12. phrase: serve one's time - hold office for the normal period. 正常任职期间（如工作，学徒，或服刑）。
+
+  13. phrase: serve two masters - take orders from two superiors or follow two conflicting or opposing principles or policies at the same time. 听从两个上级的命令或同时遵循两个互相冲突或对立的原则或政策。
+
+  14. phrase: serve out - win the final game of a set or match while serving. 在发球时赢下一局或一场比赛的最后一球。
+
+  15. phrase: serve up - present food or drink to someone. 向某人提供食物或饮料。
+
+- settle
+
+  1. verb: resolve or reach an agreement about (an argument or problem). 解决或就（争论或问题）达成协议。
+
+  2. verb: pay (a debt or account). 支付（债务或记账）。
+
+  3. verb: adopt a more steady or secure style of life, especially in a permanent job and home. 采用更稳定或更安全的生活方式，尤其是在固定工作和家庭中。
+
+  4. verb: sit or come to rest in a comfortable position. 以舒适的姿势坐下或休息。
+
+  5. phrase: settle one's affairs - make any necessary arrangements, such as writing a will, before one's death. 在死前做任何必要的安排，例如写遗嘱。
+
+  6. noun: a wooden bench with a high back and arms, typically incorporating a box under the seat. 带高背和扶手的木制长凳，通常在座椅下方装有一个盒子。
 
 - shrink
 
@@ -1591,6 +1999,24 @@ categories: English
 
   3. noun: an initial sign of activity, movement, or emotion. 活动，运动，或情绪的最初迹象。
 
+- strain
+
+  1. verb: force (a part of one's body or oneself) to make a strenuous or unusually great effort. 强迫（身体的一部分或自己）做出艰苦的或异常巨大的努力。
+
+  2. verb: pour (a mainly liquid substance) through a porous or perforated device or material in order to separate out any solid matter. 倾倒（主要是液体物质）通过多孔或穿孔的装置或材料，以分离出任何固体物质。
+
+  3. noun: a force tending to pull or stretch something to an extreme or damaging degree. 倾向于牵拉或拉伸某物到极端或损坏程度的力。
+
+  4. noun: a servere or excessive demand on the strength, resources, or abilities of someone or something. 对某人或某物的力量，资源，或能力的严重或过度需求。
+
+  5. noun: the sound of a piece of music as it is played or performed. 一段音乐在播放或演奏时的声音。
+
+  6. phrase: at strain - using the utmost effort. 尽最大努力。
+
+  7. noun: a bread, stock, or variety of an animal or plant developed by breeding. 通过育种开发的动物或植物的品种，种群或种类。
+
+  8. noun: a particular tendency as part of a person's character. 作为人性格一部分的特殊倾向。
+
 - stress
 
   1. noun: pressure or tension exerted on a material object. 施加在材料物体上的压力或张力。
@@ -1667,6 +2093,20 @@ categories: English
 
   4. adjective(BRITISH·BUILDING): denoting a quantity of a material expressed in terms of area covered rather than linear dimension or volume. （英国·建筑）表示以覆盖面积而不是以线性尺寸或体积表示的材料数量。
 
+- supervise
+
+  1. verb: observe and direct the execution of (a task, project, or activity). 观察和指导（任务、项目或活动）的执行。
+
+- surpass
+
+  1. verb: exceed; be greater than. 超过；大过。
+
+- surplus
+
+  1. noun: an amount of something left over when requirements have been met; an excess of production or supply over demand. 满足要求后剩余的东西；生产过剩或供过求。
+
+  2. adjective: more than what is needed or used; excess. 超过需要或使用的；过量的。
+
 - swing
 
   1. verb: move or cause to move back and forth or from side to side while suspended or on an axis. 在轴线上悬挂时移动或前后移动或左右移动。
@@ -1713,6 +2153,34 @@ categories: English
 
   2. phrase: assume that something is true without questioning it. 假定某事是真实的而不去质疑。
 
+- term
+
+  1. noun: a word or phrase used to describe a thing or to express a concept, especially in a particular kind of language or branch of study. 用于描述事物或表达概念的词或短语，尤其是在特定种类的语言或研究分支中。
+
+  2. noun: a fixed or limited period for which something, e.g., office, imprisonment, or investment, lasts or is intended to last. 持续或打算持续一个固定或有限的时期为某事，如工作、监禁或投资。
+
+  3. noun: each of the periods in the year, alternating with holidays or vacations, during which instruction is given in a school, college, or university, or during which a court holds sessions. 一年中的每个时期，与假期或旅行交替，在此期间学校，大专或大学进行教学，或在此期间法院开庭。
+
+  4. noun: conditions under which an action may be undertaken or agreement reached; stipulated or agreed upon requirements. 采取行动或达成协议的条件；规定或商定的要求。
+
+  5. noun(MATHEMATICS): each of the quantities in a ratio, series, or mathematical expression. 比率，集合，或数学表达式中的每个量。
+
+  6. noun(ARCHITECTURE): another term for terminus. （建筑学）终点站的另一种说法。
+
+  7. verb: give a descriptive name to; call by a specified name. 给一个描述性的名字；以指定的名称称呼。
+
+  8. phrase: come to terms with - come to accept (a new and painful or difficult event or situation); reconcile oneself to. 开始接受（新的并且痛苦或困难的事情或情况）；某人和解对某事。
+
+  9. phrase: in terms of - with regard to the particular aspect or subject specifid. 关于特定的方面或指定的主题。
+
+  10. phrase: in the long term - over or for a long period of time. 超过或在很长一段时间。
+
+  11. phrase: in the medium term - over or for a period of time of moderate length. 超过或持续一段中等长度的时间。
+
+  12. phrase: in the short term - over or for a short period of time. 超过或持续短的一段时间。
+
+  13. phrase: on ... terms - in a specified relation or on a specified footing. 在指定的关系或指定的立足点上。
+
 - textile
 
   1. noun: a type of cloth or woven fabric. 一种布或编织织物。
@@ -1726,6 +2194,12 @@ categories: English
 - think tank
 
   1. noun: a body of experts providing advice and ideas on specific political or economic problems. 在特定的政治或经济问题提供建议和想法的一组专家。
+
+- thrift
+
+  1. noun: the quality of using money and other resources carefully and not wastefully. 谨慎且不浪费地使用金钱或其他资源的品质。
+
+  2. noun: a European plant which forms low-growing tufts of slender leaves with rounded pink flower heads, growing chiefly on sea cliffs and mountains. 一种欧洲植物，形成低矮的细长叶子簇，带有圆形粉红色头状花序，主要生长在海崖和山脉上。
 
 - tick
 
@@ -1757,9 +2231,25 @@ categories: English
 
 ## U
 
+- ultimate
+
+  1. adjective: being or happening at the end of a process; final. 在过程结束时存在或发生；最后。
+
+  2. noun: the best achievable or imaginable of its kind. 同类中能达到的最好的或可以想象的。
+
+  3. noun: a final or fundamental fact or principle. 最终的或基本的事实或原则。
+
+  4. noun(NORTH AMERICAN): short for Ultimate Frisbee. （北美）终极飞盘运动的缩写。
+
 - undergo
 
   1. verb: experience or be subjected to (something, typically something unpleasant or arduous). 经历或遭受（某事，通常是不愉快或艰巨的事情）。
+
+- underlie
+
+  1. verb: be a significant cause or basis of (something) even if not necessarily manifest or obvious. 是（某事）的重要原因或基础，即使不一定是明显的。
+
+  2. verb: (especially of a layer of rock or soil) lie or be situated under (something). （尤其指一层岩石或土壤）位于（某物）之下。
 
 - unison
 
@@ -1788,6 +2278,10 @@ categories: English
   1. adjective: lacking refined worldly knowledge or tastes. 缺少精致世故的知识或品味。
 
   2. adjective: not complicated or highly developed; basic. 不是复杂或高度发达的；基础的。
+
+- unsurpassed
+
+  1. adjective: as good as or better than any other. 与任何其他一样好或更好，即卓绝的，优异的。
 
 - upscale
 
@@ -1823,6 +2317,12 @@ categories: English
 
   2. verb(MATHEMATICS): become zero. （数学上）变为零。
 
+- vegetable
+
+  1. noun: a plant or part of a plant used as food, typically as accompaniment to meat or fish, such as a cabbage, potato, carrot, or bean.
+
+  2. noun(INFORMAL): a person with a dull or inactive life. 生活乏味或不活跃的人。
+
 - verbally
 
   1. adverb: by means of words. 在语言上。
@@ -1836,6 +2336,12 @@ categories: English
 - vitality
 
   1. noun: the state of being strong and active; energy. 强壮并活跃的状态；活力。
+
+- voluntary
+
+  1. adjective: done, given, or acting of one's own free will. 根据自己的自由意志完成，给予，或行动。
+
+  2. noun: an organ solo played before, during, or after a church service. 在教堂礼拜前，中，后演奏的管风琴独奏。
 
 - vulgar
 
@@ -1881,9 +2387,41 @@ categories: English
 
   1. phrase: as regards; with reference to. 至于；参照于。
 
+- witness
+
+  1. noun: a person who sees an event, typically a crime or accident, take place. 看到事件，通常是犯罪或事故发生的人。
+
+  2. noun: evidence; proof. 证据；证明。
+
+  3. noun: a member of the Jehovah's Witnesses. 耶和华见证人成员。
+
+  4. verb: see (an event, typically a crime or accident) take place. 看到（事件，通常是犯罪或事故）发生。
+
+  5. verb: have knowledge of (an event or change) from personal observation or experience. 从个人观察或经验中了解（事件或变化）。
+
+  6. verb: (of a person) openly profess one's religious faith. （某人）公开宣告他的宗教信仰。
+
+  7. phrase: as God is my witness - an invocation of God as confirmation of the truth of a statement. 向上帝祈祷作为陈述真实性的确认。
+
+  8. phrase: call someone or something to witness - appeal or refer to someone or something for confirmation or evidence of something. 要求或提及某人或某物用来确认或作为某事的证据。
+
 ## X
 
 ## Y
+
+- yet
+
+  1. adverb: up until the present or a specified or implied time; by now or then. 直到现在或一个具体的或隐含的时间；到现在或之后（常用于否定或疑问句末，译为直到...还没）。
+
+  2. adverb: still; even (used to emphasize increase or repetition). 仍然（多用于肯定句，表示情况还在继续，但期望不再继续）；甚至（用于强调增加或重复，常用于 another，again 前）。
+
+  3. adverb: neverthe less; inspite of that. 尽管。表转折，常用于句首。
+
+  4. conjunction: but at the same time; but nevertheless. 但同时；但尽管。表转折。
+
+  5. phrase: as yet - until now or a particular time in the past. 直到现在或一个特定的过去的时间。
+
+  6. phrase: have/be yet to - events which are necessary or which must happen at some time, but which have not happened at the time of speaking. 事件必需在某个时间发生，但在说话时还没发生。yet 有否定意思在其中。
 
 - yield
 
