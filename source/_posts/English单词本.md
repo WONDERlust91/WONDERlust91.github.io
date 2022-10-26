@@ -9,6 +9,22 @@ categories: English
 
 ## A
 
+- accommodate
+
+  1. verb: (of physical space, especially a building) provide lodging or sufficient space for. （物理空间，尤其是建筑物）提供住宿或足够的空间。
+
+  2. verb: fit in with the wishes or needs of. 符合...的愿望或需要。
+
+<!-- more -->
+
+- accommodation
+
+  1. noun(NORTH AMERICAN): temporary lodgings, sometimes also including board. 临时住所，有时还包括食宿。
+
+  2. noun: a convenient arrangement; a settlement or compromise. 方便的安排；和解或妥协。
+
+  3. noun: the process of adapting or adjusting to someone or something. 适应或调整某人或某事的过程。
+
 - account
 
   1. noun: a report or description of an event or experience. 事件或经历的报告或描述。
@@ -65,8 +81,6 @@ categories: English
 
       5. supply or make up a specified amount or proportion. 提供或组成了具体的数量或份额。
 
-<!-- more -->
-
 - accumulate
 
   1. verb: gather together or acquire an increasing number or quantity of. 聚集在一起或获得不断增加的数或量。
@@ -82,6 +96,24 @@ categories: English
 - acquisitive
 
   1. adjective: excessively interested in acquiring money or material things. 对获取钱财或物质过分感兴趣。
+
+- address
+
+  1. noun: the particulars of the place where someone lives or an organization is situated. 某人居住地或组织所在地的详细地址。
+
+  2. noun: a formal speech delivered to an audience. 向听众发表的正式演讲。
+
+  3. noun(DATED): skill, dexterity, or readiness. 技能，灵巧，或准备。
+
+  4. verb: write the name and address of the intended recipient on (an envelope, letter, or package). 写下收件人的名字，住址（在信封，信件，或包裹上）。
+
+  5. verb: speak to (a person or an assembly), typically in a formal way. 和（某人或聚集的人群）说话，通常以正式的方式。
+
+  6. verb: think about and begin to deal with (an issue or problem). 考虑并开始处理（问题）。
+
+  7. verb(GOLF): take up one's stance and prepare to hit (the ball).（高尔夫）站起身来准备击（球）。
+
+  8. phrase: form of address - a name or title used in speaking or writing to a person of a specified rank or function. 名称或头衔，被用于向特定级别或职能的人说话或写作时。
 
 - adept
 
@@ -146,6 +178,16 @@ categories: English
 - ample
 
   1. adjective: enough or more than enough; plentiful. 足够或绰绰有余；丰富的。
+
+- apparent
+
+  1. adjective: clearly visible or understood; obvious. 清晰可见或可理解的；明显的。
+
+  2. adjective: seeming real or true, but not necessarily so. 看起来是真实或正确的，但不一定是。
+
+- apparently
+
+  1. adverb: as far as one knows or can see. 据人们所知或所见地，即似乎，显然。
 
 - appeal
 
@@ -274,6 +316,12 @@ categories: English
   4. phrase: a dying breed - a sort or kind of person that is slowly disappearing. 正在慢慢消失的一种或一类人。
 
 ## C
+
+- canteen
+
+  1. noun: a restaurant provided by an organization such as military camp, college, factory, or company for its soldiers, students, staff, etc. 由一个组织，例如军营，大学，工厂，或公司为其士兵，学生，雇员等提供的餐厅，即食堂。
+
+  2. noun: a small water bottle, as used by soldiers or campers. 小水瓶，供士兵或露营者使用。
 
 - capable
 
@@ -431,6 +479,10 @@ categories: English
 
   1. noun: an idea or feeling that a word invokes in addition to its literal or primary meaning. 一个词除字面或主要意思之外还唤起了其他的想法或感受。
 
+- conscious
+
+  1. adjective: aware of and responding to one's surroundings; awake. 了解并响应周围的环境；苏醒，即有察觉的，有意识的。
+
 - consequence
 
   1. noun: a result or effect, typically one that is unwelcome or unpleasant. 结果或影响，通常是不受欢迎或不愉快的。
@@ -482,6 +534,16 @@ categories: English
 - contradictory
 
   1. adjective: mutually opposed or inconsistent. 互相对立或不一致。
+
+- convention
+
+  1. noun: a way in which something is usually done, especially within a particular area or activity. 通常做某事的方式，尤其在特定的领域或活动中。
+
+  2. noun: an agreement between countries covering particular matters, especially one less formal than a treaty. 国家间涉及特定事项的协议，尤其是没有条约那么正式的。
+
+  3. noun: a large meeting or conference, especially of members of a political party or a particular profession. 大型会议，尤指政党或特定职业的成员。
+
+  4. noun(BRIDGE): an artificial bid by which a bidder tries to convey specific information about the hand to their partner. 一种人为的叫价，通过这种方式投标人试图传递手头特定的信息给合作方。
 
 - conventional
 
@@ -595,6 +657,20 @@ categories: English
 
   3. noun(OFFENSIVE·DATED): a person with mental disabilities. （攻击性的·过时的）有精神障碍的人。
 
+- delivery
+
+  1. noun: the action of delivering letters, packages, or ordered goods. 递送信件，包裹，或订购的货物的行为。
+
+  2. noun: the process of giving birth. 分娩的过程。
+
+  3. noun: an act of throwing or bowling a ball or striking a blow. 投掷保龄球或击打的行为。
+
+  4. noun: the manner or style of giving a speech. 演讲的方式或风格。
+
+  5. noun: the supply or provision of something. 对某物的供应或提供。
+
+  6. phrase: take delivery of - receive (something purchased). 收到（已购买的东西）。
+
 - descendant
 
   1. noun: a person, plant, or animal that is descended from a particular ancestor. 来自特定祖先的人，植物，或动物，即后代。
@@ -642,6 +718,10 @@ categories: English
 - disgraced
 
   1. adjective: having fallen from favor or a position of power or honor; discredited. 失去青睐或失去权力或荣誉的地位；名誉扫地。
+
+- disparaging
+
+  1. adjective: expressing the opinion that something is of little worth; derogatory. 表达某事物没价值的观点；贬低的。
 
 - distinction
 
@@ -782,6 +862,16 @@ categories: English
 - enroll
 
   1. verb: officially register as a member of an institution or a student on a course. 正式注册成为机构成员或课程学生。
+
+- entitle
+
+  1. verb: give (someone) a legal right or a just claim to receive or do something. 给予（某人）接受或做某事的合法权利或公正要求。
+
+  2. verb: give (something, especially a text or work of art) a particular title. 给（某物，尤其是文本或艺术作品）一个特定的头衔。
+
+- entitled
+
+  1. adjective: believing oneself to be inherently deserving of privileges or special treatment. 相信自己天生就应该享有特权或特殊待遇。
 
 - envy
 
@@ -1043,6 +1133,10 @@ categories: English
 
   3. noun(GRAMMAR): a verb in the indicative mood. 陈述语气的动词。
 
+- inedible
+
+  1. adjective: not fit or suitable for eating. 不适合食用。
+
 - in favour of
 
   1. phrase: to be replaced by. 被替换。
@@ -1192,6 +1286,12 @@ categories: English
 - lest
 
   1. conjunction(FORMAL): with the intention of preventing (something undesirable); to avoid the risk of. 带有防止（不被期望的事情）的目的；来规避风险，即以防、以免。
+
+- light-hearted
+
+  1. adjective: amusing and entertaining. 好玩和有趣的。
+
+  2. adjective: (of a person or their behavior) cheerful and carefree. （人或他们的行为）愉快并轻快的。
 
 - likewise
 
@@ -1411,6 +1511,10 @@ categories: English
 
   1. phrase: in particular; notably. 特别；尤其。
 
+- notorious
+
+  1. adjective: famous or well known, typically for some bad quality or deed. 著名或众所周知的，通常是因为一些不好的品质或契约行为。
+
 - novel
 
   1. noun: a fictitious prose narrative of book length, typically representing character and action with some degree of realism. 一本书那么长的虚构散文叙述，通常以某种程度的现实主义表现人物和行为。
@@ -1469,6 +1573,10 @@ categories: English
 
   1. noun: a person's child or children. 一个人的孩子或孩子们。
 
+- off-the-cuff
+
+  1. phrase(INFORMAL): without preparation. （非正式）未准备的，临时的（cuff 指袖口，解开了袖口的，即未准备的）。
+
 - on the ropes
 
   1. phrase(BOXING): forced against the ropes by the opponent's attack; in state of near collapse or defeat. （拳击上）被对手的攻击逼到了绳索上；处于濒临崩溃或失败的状态。
@@ -1512,6 +1620,24 @@ categories: English
 - participatory
 
   1. adjective: involving or characterized by participation. 涉及或以参与为特征，即参与式的。
+
+- passing
+
+  1. adjective: going past. 过去。
+
+  2. adjective: (of a period of time) going by. （一段时间）经过。
+
+  3. adjective: carried out quickly and lightly. 快速而轻松地进行。
+
+  4. adjective(US): meeting or surpassing the requirements of a course or examination. （美国）达到或超过课程或考试的要求。
+
+  5. noun: the passage of something, especially time. 某物的流逝，尤其是时间。
+
+  6. noun: the action of throwing, kicking, or hitting a ball or puck to another team member during a sports match. 在体育比赛中向其他队员投掷，踢，或击打球或冰球。
+
+  7. noun: the end of something. 某事的结束。
+
+  8. phrase: in passing - briefly and casually. 简要且随意地。
 
 - pave the way for
 
@@ -1735,6 +1861,18 @@ categories: English
 
   1. verb: strengthen or support (an object or substance), especially with additional material. 加强或支持（物体或物质），尤其是用额外的材料。
 
+- remark
+
+  1. verb: say something as a comment; mention. 说些事作为评论；提及。
+
+  2. verb: regard with attention; notice. 重视；注意。
+
+  3. noun: a written or spoken comment. 书面或口头评论。
+
+- resent
+
+  1. verb: feel bitterness or indignation at (a circumstance, action, or person). 对（情况，行为，或人）感到苦涩或愤慨。
+
 - resort
 
   1. noun: a place that is a popular destination for vacations or recreation, or which is frequented for a particular purpose. 受欢迎的度假或娱乐目的地，或为特定目的而经常光顾的地方。
@@ -1814,6 +1952,14 @@ categories: English
   1. adjective: small or insufficient in quantity or amount. 在量或数上少或不足。
 
   2. noun(INFORMAL): brief underpants. （非正式）短内裤。
+
+- scapegoat
+
+  1. noun: a person who is blamed for the wrongdoings, mistakes, or faults of others, especially for reasons of expediency. 因他人的不当行为、错误或过失而受到指责的人，尤其是出于权宜之计的原因。
+
+  2. noun: (in the Bible) a goat sent into the wilderness after the Jewish chief priest had symbolically laid the sins of the people upon it(Lev. 16). （在圣经中）一只山羊被送去旷野，在犹太大祭司象征性地将人类的罪孽归咎于它后（利未记 16）。
+
+  3. verb: make a scapegoat of. 做替罪羊。
 
 - screw
 
@@ -1999,6 +2145,12 @@ categories: English
 
   3. noun: an initial sign of activity, movement, or emotion. 活动，运动，或情绪的最初迹象。
 
+- stomp
+
+  1. verb: tread heavily and noisily, typically in order to show anger. 沉重而嘈杂地践踏，通常为了表达愤怒。
+
+  2. noun: (in jazz or popular music) a tune or song with a fast tempo and a heavy beat. （在爵士乐或流行乐中）快节奏且重节拍的曲调或歌曲。
+
 - strain
 
   1. verb: force (a part of one's body or oneself) to make a strenuous or unusually great effort. 强迫（身体的一部分或自己）做出艰苦的或异常巨大的努力。
@@ -2133,6 +2285,14 @@ categories: English
 
   12. noun: (in musical theater) an understudy, typically one who covers multiple roles in the chorus of a particular production. （在音乐剧中）替补，通常是在特定作品的合唱中扮演多个角色的人。
 
+- sympathy
+
+  1. noun: feelings of pity and sorrow for someone else's misfortune. 对别人的不幸感到遗憾和悲伤。
+
+  2. noun: understanding between people; common feeling. 人与人之间的理解；共同的感觉。
+
+  3. noun: the state or fact of responding in a way similar or corresponding to an action elsewhere. 响应的状态或事实，响应以与其他地方行为相似或对应的方式。
+
 - symposium
 
   1. noun: a conference or meeting to discuss a particular subject. 讨论特定主题的会议。
@@ -2250,6 +2410,10 @@ categories: English
   1. verb: be a significant cause or basis of (something) even if not necessarily manifest or obvious. 是（某事）的重要原因或基础，即使不一定是明显的。
 
   2. verb: (especially of a layer of rock or soil) lie or be situated under (something). （尤其指一层岩石或土壤）位于（某物）之下。
+
+- understatement
+
+  1. noun: the presentation of someting as being smaller, worse, or less important than it actually is. 将某物展现得比实际更小，更差，或更不重要，即轻描淡写。
 
 - unison
 

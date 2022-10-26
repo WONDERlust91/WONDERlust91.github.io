@@ -364,6 +364,12 @@ This book is among many books. 倒装 Among many books is this book.
 
   I like this book more than does he.
 
+- 引用倒装（引用说话的句子常使用倒装）
+
+  "..." he says 常会倒装为 "..." says he
+
+  "..." the reply came 常倒装为 "..." came the reply
+
 ### With/Without
 
 With + ... 相当于介词短语，不能当主句
