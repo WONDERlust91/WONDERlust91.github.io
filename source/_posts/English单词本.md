@@ -273,6 +273,16 @@ categories: English
 
   2. noun: recoil arising between parts of a mechanism. 机械部件间生产的后坐力。
 
+- barely
+
+  1. adverb: only just; almost not. 只是仅仅；几乎没有。
+
+  2. adverb: only a short time before. 只是在很短的时间以前。
+
+  3. adverb: in a simple and sparse way. 以一种简单且稀疏的方式。
+
+  4. adverb(ARCHAIC): openly; explicitly. （古老的）公开地；明确的。
+
 - barn
 
   1. noun: a large farm building used for storing grain, hay, or straw or for housing livestock. 用于储存谷物，干草，或稻草或饲养牲畜的大型农场建筑。
@@ -411,6 +421,10 @@ categories: English
 
   1. verb: force or oblige (someone) to do something. 强迫或迫使某人做某事。
 
+- compelling
+
+  1. adjective: evoking interest, attention, or admiration in a powerfully irresistible way. 以一种强有力的不可抗拒的方式引起人们的兴趣，关注，或敬佩，即引人入胜的或令人信服的。
+
 - compensate
 
   1. verb: give (someone) something, typically money, in recognition of loss, suffering, or injury incurred; recompense. 给（某人）一些东西，通常是金钱，以补偿遭受的损失，痛苦，或伤害；补偿。
@@ -422,6 +436,40 @@ categories: English
   1. verb: grasp mentally; understand. 精神上把握；理解。
 
   2. verb(FORMAL): include, comprise, or encompass. （正式）包括，包含，或涵盖。
+
+- compulsion（compel 的变形）
+
+  1. noun: the action or state of forcing or being forced to do something; constraint. 强迫或被迫做某事的行为或状态；约束，即义务。
+
+  2. noun: an irresistible urge to behave in a certain way, especially against one's conscious wishes. 一种不可抗拒的以某种方式行事的冲动，尤其是违背一个人有意识的意愿。
+
+- compulsive（compel 的变形）
+
+  1. adjective: resulting from or relating to an irresistible urge, especially one that is against one's conscious wishes. 由于或关于不可抗拒的冲动，尤其是违背某人有意识的意愿的。
+
+  2. adjective: irresistibly interesting or exciting; compelling. 令人无法抗拒的有趣的或兴奋的；引人入胜的。
+
+- compulsory（compel 的变形）
+
+  1. adjective: required by law or a rule; obligatory. 法律或规则要求的；强制性的，即义务的。
+
+- con
+
+  1. verb(INFORMAL): persuade (someone) to do or believe something, typically by use of a deception. （非正式）说服（某人）去做或相信某事，通常使用欺骗的手段。
+
+  2. noun(INFORMAL): an instance of deceiving or tricking someone. （非正式）欺骗或捉弄某人的例子。
+
+  3. noun: a disadvantage. 一个缺点。
+
+  4. noun(INFORMAL): a convict. （非正式）罪犯。
+
+  5. verb(ARCHAIC): study attentively or learn by heart (a piece of writing). （古老的）专心学习或用心学习（一篇写作）。
+
+  6. noun(INFORMAL): a convention, especially one for enthusiasts of science fiction and fantasy literature and films. 一场大会，尤其是为科幻小说和奇幻文学以及电影爱好者而设的。
+
+  7. verb(NAUTICAL): direct the steering of (a ship). （航海）指挥（船）的操舵。
+
+  8. noun(NAUTICAL): the action or post of conning a ship. 指挥船舶的行为或职位。
 
 - conbustion
 
@@ -464,6 +512,12 @@ categories: English
   3. verb: cover (an area) with concrete. 用混凝土覆盖（区域）。
 
   4. verb(ARCHAIC): form (something) into a mass; solidify. （古老）将（某物）形成一团；固化。
+
+- confer
+
+  1. verb: grant or bestow (a title, degree, benefit, or right). 授予或赐予（头衔，学位，福利，或权利）。
+
+  2. verb: have discussions; exchange opinions. 进行讨论；交换意见（名词 conference 会议）。
 
 - confess
 
@@ -619,6 +673,12 @@ categories: English
 
   2. noun: the crotch of the body or a garment. 身体或衣服的胯部。
 
+- cultivate
+
+  1. verb: prepare and use (land) for crops or gardening. 为庄稼或园艺准备和使用（土地）。
+
+  2. verb: try to acquire or develop (a quality, sentiment, or skill). 尝试获得或发展（品质，情感，或技能）。
+
 - cultivation
 
   1. noun: the action of cultivating land, or the state of being cultivated. 耕地的动作，或被耕种的状态。
@@ -626,6 +686,14 @@ categories: English
   2. noun: the process of trying to acquire or develop a quality or skill. 试图获得或发展一种品质或技能的过程。
 
   3. noun: refinedment and good education. 精致和良好的教育。
+
+- cunning
+
+  1. adjective: having or showing skill in achieving one's ends by deceit or evasion. 具有或显示出通过欺骗或逃避来达到目的的技能，即狡诈的。
+
+  2. adjective(NORTH AMERICAN): attractive or quaint. （北美）有吸引力的或离奇有趣的。
+
+  3. noun: skill in achieving one's ends by deceit. 通过欺骗达到目的的技能，即狡诈。
 
 - customary
 
@@ -635,11 +703,27 @@ categories: English
 
 ## D
 
+- dawn
+
+  1. noun: the first appearance of light in the sky before sunrise. 日出前天空中第一次出现光，即黎明。
+
+  2. noun: the beginning of a phenomenon or period of time, especially one considered favorable. 现象或时期的开始，尤其是被认为有利的时期或现象。
+
+  3. verb: (of a day) begin. （一天）开始。
+
+  4. verb: become evident to the mind; be perceived or understood. 变得显而易见；被感知或被理解。
+
+  5. phrase: from dawn to dusk - all day; ceaselessly. 一整天；不断的。
+
 - dean
 
   1. the head of the chapter of a cathedral or collegiate church. 大教堂或学院教堂分会的负责人。
 
   2. the head of a university faculty or department or of a medical school. 大学学院或部门或医学院的负责人。
+
+- deceive
+
+  1. verb: (of a person) cause (someone) to believe something that is not true, typically in order to gain some personal advantage. （一个人）导致（某人）相信不真实的事情，通常是为了获得一些个人利益，即欺骗。
 
 - dedicate
 
@@ -656,6 +740,18 @@ categories: English
   2. adjective(OFFENSIVE·DATED): having mental disabilities. （攻击性的·过时的）有精神障碍的。
 
   3. noun(OFFENSIVE·DATED): a person with mental disabilities. （攻击性的·过时的）有精神障碍的人。
+
+- delicate
+
+  1. adjective: very fine in texture or structure; of intricate workmanship or quality. 材质或结构上非常精细；复杂的工艺或质量。
+
+  2. adjective: easily broken or damaged; fragile. 易损坏的；脆弱的。
+
+  3. adjective: requiring sensitive or careful handling. 需要敏感或小心的处理。
+
+  4. noun(INFORMAL): a delicate fabric or garment made of such fabric. 精致的织物或由这样的织物制成的衣服。
+
+  5. phrase: in a delicate condition - pregnant. 怀孕。
 
 - delivery
 
@@ -694,6 +790,14 @@ categories: English
 - devaluate
 
   1. verb: reduce or underestimate the worth or importance of. 降低或低估价值或重要性。
+
+- devise
+
+  1. verb: plan or invent (a complex procedure, system, or mechanism) by careful thought. 计划或发明（复杂的程序，系统，或机制）通过仔细的思考。
+
+  2. verb(LAW): leave (real estate) to someone by the terms of a will. （法律）根据遗嘱条款，留下（不动产）给某人。
+
+  3. noun(LAW): a clause in a will leaving something, especially real estate, to someone. （法律）遗嘱中的一个条款关于留下的某物，尤其是留给某人的房产。
 
 - dig
 
@@ -985,6 +1089,16 @@ categories: English
 
   2. noun: a material or mixture prepared according to a particular formula. 根据特定西方制备的材料或混合物。
 
+- fraction
+
+  1. noun: a numerical quantity that is not a whole number (e.g. 1/2, 0.5). 不是整数的数字量（例如 1/2，0.5）。
+
+  2. noun: a small or tiny part, amount, or proportion of something. 某物的一小部分，数量，或比例。
+
+  3. noun(CHEMISTRY): each of the portions into which a mixture may be separated by a process in which the individual components behave differently according to their physical properties. 每一个部分，这个部分是化合物可以被通过一个过程分离开的，在这个过程中独立的成分根据它们不同的物理特性表现不同。
+
+  4. noun: (in the Christian Church) the breaking of the Eucharistic bread. （在基督教中）分开圣餐面包。
+
 - from time to time
 
   1. phrase: sometimes, but not regulary. 有时但不经常。
@@ -1023,6 +1137,24 @@ categories: English
 
   2. phrase: deal successfully with a problem. 成功处理一个问题。
 
+- gizmo
+
+  1. noun: a gadget, especially one whose name the speaker does not know or cannot recall. 一种小工具，尤其是说话者不知道或记不起它的名字的小工具。
+
+- grant
+
+  1. verb: agree to give or allow (something requested) to. 同意给予或允许（要求的东西）。
+
+  2. verb: agree or admit to (someone) that (something) is true. 对（某人）同意或承认（某事）是真实的。
+
+  3. noun: a sum of money given by a government or other organization for a particular purpose. 政府或其他组织为特定目的而给予的一笔款项。
+
+  4. phrase: take for granted. 认为是理所当然的。
+
+     1. fail to properly appreciate (someone or something), especially as a result of overfamiliarity. 不能正确地赞赏（某人或某事），尤其是由于过度熟悉。
+
+     2. assume that something is true without questioning it. 假定某事是真实的而不去质疑。
+
 ## H
 
 - hamper
@@ -1054,6 +1186,18 @@ categories: English
   1. adverb: used to introduce a statement that contrasts with or seems to contradict something that has been said previously. 用于介绍与先前所说的事物形成对比或似乎矛盾的陈述。
 
   2. adverb: in whatever way; regardless of how; 以任何方式；无论如何。
+
+- hum
+
+  1. verb: make a low, steady continuous sound like that of a bee. 发出低沉、稳定、连续的声音，像蜜蜂一样。
+
+  2. verb(INFORMAL): be in a state of great activity. （非正式）处于极度活跃的状态，忙碌。
+
+  3. verb(INFORMAL·BRITISH): smell unpleasant. （非正式·英国）闻起来难闻。
+
+  4. noun: a low, steady continuous sound. 低沉而稳定的连续声音。
+
+  5. exclamation: used to express hesitation or dissent. 用于表示犹豫或反对。
 
 - hydraulic
 
@@ -1124,6 +1268,14 @@ categories: English
   2. verb: constitute (a company, city, or other organization) as a legal corporation. 将（公司，城市，或其他组织）构成一个合法的大企业。
 
   3. adjective: another term for incorporated. incorporated 的另一种形式。 (of a company or other organization) formed into a legal corporation. （公司或其他组织）成立为合法大公司的。
+
+- indeed
+
+  1. adverb: used to emphasize a statement or response confirming something already suggested. 用于强调确认已经提出的某事的陈述或回应。
+
+  2. adverb: used to introduce a further and stronger or more surprising point. 用于介绍更进一步更强或更令人惊讶的观点。
+
+  3. adverb: used in a response to express interest, incredulity, or contempt. 用于回应中表达感兴趣，怀疑，或鄙视。
 
 - indicative
 
@@ -1208,6 +1360,10 @@ categories: English
 - inquiry
 
   1. noun: an act of asking for information. 询问信息的行为。
+
+- intervention
+
+  1. noun: the action or process of intervening. 干预的行动或过程。
 
 - inundate
 
@@ -1391,6 +1547,10 @@ categories: English
 
   1. noun: the established set of attitudes held by someone. 某人持有的既定的一系列态度，即心态。
 
+- miniaturize
+
+  1. verb: make on a smaller or miniature scale. 制作更小或微型的规模，即小型化。
+
 - minutely
 
   1. adverb: with great attention to detail; meticulously. 非常注重细节；精心地。
@@ -1466,6 +1626,16 @@ categories: English
   1. adjective: occurring in or characteristic of myths or folk tales. 发生在神话或民间故事中或具有它们的特点。
 
 ## N
+
+- nasty
+
+  1. adjective: highly unpleasant, especially to the senses; physically nauseating. 非常不愉快，尤其是感官上的；生理上令人作呕的。
+
+  2. adjective: (of a person or animal) behaving in an unpleasant or spiteful way. （人或动物）以不愉快或恶意的方式行事。
+
+  3. adjective: physically or mentally damaging or harmful. 身体或精神上的伤害的。
+
+  4. noun(INFORMAL): an unpleasant or harmful person or thing. （非正式）不愉快或有害的人或事物。
 
 - nervertheless
 
@@ -1681,6 +1851,64 @@ categories: English
 
   9. phrase: out of phase - being or happening out of synchrony or harmony. 不同步或不和谐的存在或发生。
 
+- physician
+
+  1. noun: a person qualified to practice medicine. 有行医资格的人，即医师。
+
+  2. phrase: physician, heal thyself - before attempting to correct others, make sure that you aren't guilty of the same faults. 医生，先治好你自己 - 在尝试纠正他人前，确保自己没有犯同样的错误。
+
+- plain
+
+  1. adjective: not decorated or elaborate; simple or ordinary in character. 没有装饰或精心制作的；性格上简单或普通的。
+
+  2. adjective: (of a person) having no pretensions; not remarkable or special. （人）不自负的；不显着或特别的。
+
+  3. adjective: easy to perceive or understand; clear. 易于感知或理解的；清楚的。
+
+  4. adjective: (of a person) not beautiful or attractive. （人）不漂亮或不吸引人的。
+
+  5. adjective: sheer; simple (used for emphasis). 纯粹的；简单的（用于强调）。
+
+  6. adjective: denoting or relating to a type of knitting stitch produced by putting the needle through the front of each stitch from left to right. 表示或关于一种一种针织针法，产生于将针从左至右穿过每一针脚的前面。
+
+  7. adverb(INFORMAL): clearly; unequivocally (used for emphasis). 清楚地；毫不含糊地（用于强调）。
+
+  8. noun: a large area of flat land with few trees. 大片平坦的土地，树木很少。
+
+  9. phrase: as plain as the nose on one's face - very obvious. 很明显。
+
+  10. phrase: in plain sight - in a place that is clearly visible. 在一个清晰可见的地方。
+
+  11. phrase: plain and simple - used to emphasize the statement preceding or following. 用于强调前面或后面的陈述。
+
+  12. phrase: plain as day - very clearly. 非常清楚。
+
+  13. verb(ARCHAIC): mourn or lament. （古老的）哀悼或悲叹。
+
+- populate
+
+  1. verb: cause people to settle in (an area or place). 使人们在（一个地区或地方）定居。
+
+  2. verb: fill or be present in (a place, environment, or domain). 填充或出现在（地点，环境，或领域）。
+
+  3. verb(COMPUTING): add data to a previously empty section of (an electronic form, document, etc.). 把数据添加到（电子表格、文档等）的先前空白的区域。
+
+- pose
+
+  1. verb: present or constitute (a problem, danger, or difficulty). 存在或构成（问题，危险，或困难）。
+
+  2. verb: assume a particular attitude or position in order to be photographed, painted, or drawn. 采取特定的态度或姿势以便被拍照，绘画，或绘画。
+
+  3. verb: pretend to be (someone or something). 假装是（某人或某事）。
+
+  4. verb: behave affectedly in order to impress others. 为了给别人留下深刻印象而表现得装模作样。
+
+  5. noun: a particular way of standing or sitting, usually adopted for effect or in order to be photographed, painted, or drawn. 一种特殊的站姿或坐姿，通常用于拍照，绘画，或绘制的效果。
+
+  6. noun: a particular way of behaving adopted in order to give others a false impression or to impress others. 为了给他人留下错误印象或给他人留下深刻印象而采取的特定行为方式。
+
+  7. verb(ARCHAIC): puzzle or perplex (someone) with a question or problem. 困扰或困惑（某人）以问题或难题。
+
 - poverty
 
   1. noun: the state of being extremely poor. 极度贫困的状态。
@@ -1722,6 +1950,12 @@ categories: English
   2. verb: recommend (a substance or action) as something beneficial. 推荐（一种物质或行为）作为有益的东西。
 
   3. verb: state authoritatively or as a rule that (an action or procedure) should be carried out. 权威地陈述或作为必须执行的行为或程序的规则。
+
+- presence
+
+  1. noun: the state or fact of existing, occurring, or being present in a place or thing. 存在，发生，或被呈现在一个地方或东西中的状态或事实。
+
+  2. phrase: presence of mind - the ability to remain calm and take quick, sensible action. 保持冷静并采取快速，明智行为的能力。
 
 - primacy
 
@@ -1792,6 +2026,10 @@ categories: English
   2. phrase: (of a person) begin to have a settled life in a particular place. （某人）在特定的地方开始过安定的生活。
 
 ## Q
+
+- quaint
+
+  1. adjective: attractively unusual or old-fashioned. 吸引人的不同寻常的或老式的。
 
 - quick-witted
 
@@ -2105,6 +2343,26 @@ categories: English
 
   1. noun(BRITISH): another term for glasses. （英国）眼镜的另一种说法。
 
+- spell
+
+  1. verb: write or name the letters that form (a word) in correct sequence. 以正确的顺序写出或称呼形成（单词）的字母。
+
+  2. verb: be a sign or characteristic of. 是某事物的标志或特征。
+
+  3. phrase: spell out - speak the letters that form a word in sequence. 按顺序说出组成单词的字母。
+
+  4. noun: a form of words used as a magical charm or incantation. 一种用作魔法魔力或咒语的词语。
+
+  5. phrase: under a spell - not fully in control of one's thoughts and actions, as though in a state of enchantment. 无法完全控制自己的思想和行为，好像处于魔法状态。
+
+  6. phrase: under someone's spell - so devoted to someone that they seem to have magic power over one. 对某人非常忠诚以至于他们似乎像是对某人有魔力。
+
+  7. noun: a short period. 短暂的时间。
+
+  8. verb(NORTH AMERICAN): allow (someone) to rest briefly by taking their place in some activity. （北美）允许（某人）短暂休息，当在某项活动中忙碌的时候。
+
+  9. noun: a splinter of wood. 一片木头。
+
 - sprint
 
   1. verb: run at ful speed over a short distance. 在短距离内全速奔跑。
@@ -2259,6 +2517,10 @@ categories: English
 
   2. adjective: more than what is needed or used; excess. 超过需要或使用的；过量的。
 
+- suspicious
+
+  1. adjective: having or showing a cautious distrust of someone or something. 有或表现出谨慎的怀疑对某人或某事。
+
 - swing
 
   1. verb: move or cause to move back and forth or from side to side while suspended or on an axis. 在轴线上悬挂时移动或前后移动或左右移动。
@@ -2307,11 +2569,27 @@ categories: English
 
 ## T
 
-- take for granted
+- tackle
 
-  1. phrase: fail to properly appreciate (someone or something), especially as a result of overfamiliarity. 不能正确地赞赏（某人或某事），尤其是由于过度熟悉。
+  1. noun: the equipment required for a task or sports. 一项任务或运动所需要的设备。
 
-  2. phrase: assume that something is true without questioning it. 假定某事是真实的而不去质疑。
+  2. noun: a mechanism consisting of ropes, pulley blocks, hooks, or other thing for lifting heavy objects. 一种由绳索，滑轮组，钩子，或其他东西组成的，用于提升重物的机械。
+
+  3. noun(SOCCER·HOCKEY): (in soccer and other games) an act of taking the ball, or attempting to take the ball, from an opponent. （足球·曲棍球）（在足球和其他比赛中）从对方那里拿球或试图拿球的行为。
+
+  4. noun(AMERICAN FOOTBALL): a player who lines up inside the end along the line of scrimmage. （美式足球）沿着争球线末端内排队的球员。
+
+  5. verb: make determined efforts to deal with (a problem or difficult task). 下定决心去处理（问题或困难的任务）。
+
+- teller
+
+  1. noun(NORTH AMERICAN): a person employed to deal with customers' transactions in a bank. （北美）受雇于银行处理客户交易的人。
+
+  2. noun(NORTH AMERICAN): an automated teller machine. （北美）ATM。
+
+  3. noun: a person who tells something. 讲述某事的人。
+
+  4. noun: a person appointed to count votes, especially in a legislature. 被任命为计票的人，尤其是在立法机构中。
 
 - term
 
@@ -2382,6 +2660,10 @@ categories: English
   2. noun: a person who is staying or working in a place for a short time only. 只在一个地方逗留或工作很短时间的人。
 
   3. noun: a momentary variation in current, voltage, or frequency. 电流，电压，或频率的瞬时变化。
+
+- transistor
+
+  1. noun: a semiconductor device with three connections, capable of amplification in addition to rectification. 具有三个连接的半导体器件，除了整流外还能放大，即晶体管。
 
 - tribal
 
@@ -2456,6 +2738,12 @@ categories: English
   3. verb: increase the size or improve the quality of. 增大尺寸或改善质量。
 
   4. verb: convert (an image or video) so that it displays correctly in a higher resolution format. 转换（图片或视频）以便于以更高的分辨率正确地展示。
+
+- urge
+
+  1. verb: try earnestly or persistently to persuade (someone) to do something. 热切地或坚持不懈地试图说服（某人）做某事。
+
+  2. noun: a strong desire or impulse. 强烈的欲望或冲动。
 
 - used to
 
@@ -2543,6 +2831,74 @@ categories: English
 
   总结：while 主要有两个意思，一个是当...时候，通常后面跟进行时 ing，另一个意思是尽管（although）。
 
+- wind
+
+  1. noun: the perceptible natural movement of the air, especially in the form of a current of air blowing from a particular direction. 对空气自然运动的感知，尤其是从特定方向吹出的气流形式。
+
+  2. noun: breath as needed in physical exertion or in speech. 在体力消耗或演讲中根据需要呼吸。
+
+  3. noun(BRITISH): air swallowed while eating or gas generated in the stomach and intestines by digestion. （英国）进食时吞入的空气或消化时在肠胃中产生的气体。
+
+  4. noun: wind instruments, or specifically woodwind instruments, forming a band or section of an orchestra. 管乐器，或者尤其是木管乐器，形成一个乐队或管弦乐团的一部分。
+
+  5. verb: cause (someone) to have difficulty breathing because of exertion or a blow to the stomach. 导致（某人）呼吸困难，因为劳累或胃部受到打击。
+
+  6. verb: detect the presence of (a person or animal) by scent. 通过气味探测到（人或动物）的存在。
+
+  7. verb(LITERARY): sound (a bugle or call) by blowing. （文学的）吹响（号角或呼叫）。
+
+  8. phrase: before the wind - with the wind blowing more or less from astern. 风或多或少地从船尾吹来，顺风。
+
+  9. phrase: get wind of - begin to suspect that (something) is happening; hear a rumor of. 开始怀疑（某事）正在发生；听到传闻，即听到风声。
+
+  10. phrase: have the wind up - be alarmed or frightened. 惊恐或害怕。
+
+  11. phrase: like the wind - very quickly. 非常快地。
+
+  12. phrase: off the wind - with the wind on either quarter. 任何一个方向都有风。
+
+  13. phrase: on a wind - against a wind on either bow. 在船的前端迎风。
+
+  14. phrase: put the wind up - alarm or frighten. 惊吓或恐吓。
+
+  15. phrase: sail close to the wind - sail as nearly against the wind as possible while still making headway. 当仍在前进时，尽可能逆风航行。
+
+  16. phrase: take the wind out of someone's sails - frustrate someone by unexpectedly anticipating an action or remark. 使某人沮丧，通过出人意料的预料到行动或评论。
+
+  17. phrase: to the wind - in all directions. 在各个方向。
+
+  18. phrase: it's an ill wind that blows no good - few things are so bad that no one profits from them. 没有事物坏到没有一个优点。
+
+  19. verb: move in or take a twisting or spiral course. 移动或采取扭曲或螺旋的路线。
+
+  20. verb: pass (something) around a thing or person so as to encircle or enfold. 将（某物）绕在东西或人上，以便来包围或包裹。
+
+  21. verb: make (a clock or other device, typically one operated by clockwork) operate by turning a key or handle. 使（时钟或其他设备，尤其是通过发条运行的）运行，通过转动钥匙或把手的方式，即上发条。
+
+  22. noun: a twist or turn in a course. 一个曲折或转弯的轨迹。
+
+  23. noun: a single turn made when winding. 缠绕时产生的单匝。
+
+  24. phrase: wind down
+
+      1. draw gradually to a close. 逐渐进入尾声。
+
+      2. (of a person) relax after stress or excitement. （人）在压力或兴奋后放松。
+
+      3. (of a mechanism, especially one operated by clockwork) gradually lose power. （机械，尤其是通过发条运行的机械）逐渐失去动力。
+
+  25. phrase: wind up
+
+      1. make a clock or other device operate by turning a handle or key. 使钟表或其他设备通过转动把手或钥匙运行，即上发条。
+
+      2. (BRITISH) arrange the affairs of and dissolve a company. （英国）安排事项并解散公司。
+
+      3. (INFORMAL) arrive or end up in a specified state, situation, or place. （非正式）到达或结束于特定的状态，情况，或地点。
+
+      4. (INFORMAL) make someone tense or angry. （非正式）使某人紧张或生气。
+
+      5. prepare to throw or punch something with great force. 准备用很大的力量扔或打东西。
+
 - with regard to (等于 about)
 
   1. phrase: as concerns; in respect of. 作为关注；关于。
@@ -2586,6 +2942,8 @@ categories: English
   5. phrase: as yet - until now or a particular time in the past. 直到现在或一个特定的过去的时间。
 
   6. phrase: have/be yet to - events which are necessary or which must happen at some time, but which have not happened at the time of speaking. 事件必需在某个时间发生，但在说话时还没发生。yet 有否定意思在其中。
+
+  总结：yet 常见用法，用在句首，表转折，译为尽管；用在肯定句中，表否定，当作 not；用在否定或疑问句，表示直到现在或某个时间点，译为还没。
 
 - yield
 

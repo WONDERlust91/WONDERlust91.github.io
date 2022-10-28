@@ -19,17 +19,25 @@ categories: English
 
   substitute n. 替代物；v. 替代
 
+<!-- more -->
+
 - adapt v. 适应
 
   adept adj. 精通; n. 老手
 
   adopt v. 收养，使用
 
-<!-- more -->
+- devise v. 设计，发明; n. 遗赠
+
+  device n. 设备
+
+- physician n. 医生
+
+  physicist n. 物理学家
 
 ## 近义词
 
-- 表转折，需要注意词性区别
+- 表“转折”，需要注意词性区别
 
   conj. whereas
 
@@ -63,7 +71,7 @@ categories: English
 
   adj. considerable
 
-- 表示关于的词组
+- 表示“关于”的词组
 
   concerning
 
@@ -101,7 +109,7 @@ categories: English
 
   about
 
-- 表困惑
+- 表“困惑”
 
   v. n. puzzle
 
@@ -113,7 +121,7 @@ categories: English
 
   v. confound
 
-- 表阻止词组 v. sb/sth from doing sth.
+- 表“阻止”词组 v. sb/sth from doing sth.
 
   keep sb/sth (from) doing sth. 只有 keep 中 from 可省略。
 
@@ -132,3 +140,45 @@ categories: English
   hamper
 
   handicap
+
+- 表“处理”
+
+  deal with
+
+  cope with
+
+  grapple with
+
+  address
+
+  handle
+
+  solve
+
+- 表“欺骗”，“狡诈”
+
+  v. n. con
+
+  n. craft
+
+  adj. n. cunning
+
+  v. deceive
+
+  adj. sly
+
+- 表“因为”，介词词组
+
+  thanks to
+
+  because of
+
+  due to
+
+  since
+
+  owing to
+
+  as a result of
+
+  on account of
