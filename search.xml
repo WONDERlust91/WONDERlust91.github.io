@@ -11069,6 +11069,61 @@ console<span class="token punctuation">.</span><span class="token function">log<
       </tags>
   </entry>
   <entry>
+    <title>javascript文件下载的三种方式</title>
+    <url>/2019/03/24/javascript%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="使用全局的-window-对象"><a href="#使用全局的-window-对象" class="headerlink" title="使用全局的 window 对象"></a>使用全局的 window 对象</h2><p>文件下载一般直接访问文件的静态服务器地址即可，故可以使用 window.location.href 与 window.open 来实现下载，这种方法可能会受到浏览禁止弹窗的影响</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"www.test.com/download/test.pdf"</span><span class="token punctuation">;</span>
+<span class="token comment">// 或者使用window.open()</span>
+window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"www.test.com/download/test.pdf"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="使用-a-标签与链接地址"><a href="#使用-a-标签与链接地址" class="headerlink" title="使用 a 标签与链接地址"></a>使用 a 标签与链接地址</h2><p>这种方式兼容性最好，一般应该使用这种方式</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 创建a标签</span>
+<span class="token keyword">const</span> ele <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 设置download属性使浏览器能打开的文件不再默认打开而是下载，也可以设置下载文件名</span>
+ele<span class="token punctuation">.</span>download <span class="token operator">=</span> <span class="token string">"export"</span><span class="token punctuation">;</span>
+<span class="token comment">// 设置a标签链接，可以使用queryString传参</span>
+ele<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"www.test.com/download/test.excel?id=1&amp;name=2"</span><span class="token punctuation">;</span>
+<span class="token comment">// 模拟鼠标点击a标签</span>
+ele<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="使用-ajax-与-a-标签"><a href="#使用-ajax-与-a-标签" class="headerlink" title="使用 ajax 与 a 标签"></a>使用 ajax 与 a 标签</h2><p>这种方式不兼容 IE，因为 IE 对 blob 等支持不全。需要注意的是，请求时还要设置 responseType 为 blob，否则接收二进制流时会遇到乱码问题。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 请求下载接口</span>
+<span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">"www.test.com/download/"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"post"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">responseType</span><span class="token operator">:</span> <span class="token string">"blob"</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 获取文件数据后，创建a标签</span>
+    <span class="token keyword">const</span> ele <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 设置download属性</span>
+    ele<span class="token punctuation">.</span>download <span class="token operator">=</span> <span class="token string">"export"</span><span class="token punctuation">;</span>
+    <span class="token comment">// 使用blob接收文件，注意要设置type，否则文件为乱码，data应该放在数组中（arrayBuffer）</span>
+    <span class="token comment">// 2003版 后缀为xls的文件type值为application/vnd.ms-excel</span>
+    <span class="token comment">// 2007版 后缀为xlsx的文件type值为application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</span>
+    <span class="token keyword">const</span> blob <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Blob</span><span class="token punctuation">(</span><span class="token punctuation">[</span>res<span class="token punctuation">.</span>data<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 使用blob创建访问链接</span>
+    ele<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>blob<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 模拟鼠标点击</span>
+    ele<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 释放访问链接</span>
+    <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">revokeObjectURL</span><span class="token punctuation">(</span>ele<span class="token punctuation">.</span>href<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>文件下载</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>javascript数组</title>
     <url>/2018/03/29/javascript%E6%95%B0%E7%BB%84/</url>
     <content><![CDATA[<p>数组是有序的，其索引从0开始。javascript中的数组可以是非齐次的，也就是说，数组中的元素可以是不同类型。（数组的元素可以是另一个数组或是对象）</p>
@@ -11466,61 +11521,6 @@ arr<span class="token punctuation">.</span><span class="token function">join</sp
       </categories>
       <tags>
         <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>javascript文件下载的三种方式</title>
-    <url>/2019/03/24/javascript%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<h2 id="使用全局的-window-对象"><a href="#使用全局的-window-对象" class="headerlink" title="使用全局的 window 对象"></a>使用全局的 window 对象</h2><p>文件下载一般直接访问文件的静态服务器地址即可，故可以使用 window.location.href 与 window.open 来实现下载，这种方法可能会受到浏览禁止弹窗的影响</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"www.test.com/download/test.pdf"</span><span class="token punctuation">;</span>
-<span class="token comment">// 或者使用window.open()</span>
-window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"www.test.com/download/test.pdf"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="使用-a-标签与链接地址"><a href="#使用-a-标签与链接地址" class="headerlink" title="使用 a 标签与链接地址"></a>使用 a 标签与链接地址</h2><p>这种方式兼容性最好，一般应该使用这种方式</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 创建a标签</span>
-<span class="token keyword">const</span> ele <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// 设置download属性使浏览器能打开的文件不再默认打开而是下载，也可以设置下载文件名</span>
-ele<span class="token punctuation">.</span>download <span class="token operator">=</span> <span class="token string">"export"</span><span class="token punctuation">;</span>
-<span class="token comment">// 设置a标签链接，可以使用queryString传参</span>
-ele<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"www.test.com/download/test.excel?id=1&amp;name=2"</span><span class="token punctuation">;</span>
-<span class="token comment">// 模拟鼠标点击a标签</span>
-ele<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="使用-ajax-与-a-标签"><a href="#使用-ajax-与-a-标签" class="headerlink" title="使用 ajax 与 a 标签"></a>使用 ajax 与 a 标签</h2><p>这种方式不兼容 IE，因为 IE 对 blob 等支持不全。需要注意的是，请求时还要设置 responseType 为 blob，否则接收二进制流时会遇到乱码问题。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 请求下载接口</span>
-<span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-  <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">"www.test.com/download/"</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"post"</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-    <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">responseType</span><span class="token operator">:</span> <span class="token string">"blob"</span><span class="token punctuation">,</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// 获取文件数据后，创建a标签</span>
-    <span class="token keyword">const</span> ele <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// 设置download属性</span>
-    ele<span class="token punctuation">.</span>download <span class="token operator">=</span> <span class="token string">"export"</span><span class="token punctuation">;</span>
-    <span class="token comment">// 使用blob接收文件，注意要设置type，否则文件为乱码，data应该放在数组中（arrayBuffer）</span>
-    <span class="token comment">// 2003版 后缀为xls的文件type值为application/vnd.ms-excel</span>
-    <span class="token comment">// 2007版 后缀为xlsx的文件type值为application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</span>
-    <span class="token keyword">const</span> blob <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Blob</span><span class="token punctuation">(</span><span class="token punctuation">[</span>res<span class="token punctuation">.</span>data<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// 使用blob创建访问链接</span>
-    ele<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>blob<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// 模拟鼠标点击</span>
-    ele<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// 释放访问链接</span>
-    <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">revokeObjectURL</span><span class="token punctuation">(</span>ele<span class="token punctuation">.</span>href<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-        <tag>文件下载</tag>
       </tags>
   </entry>
   <entry>
