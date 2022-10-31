@@ -9,6 +9,12 @@ categories: English
 
 ## 近形词
 
+- conservation n. 节约，保护。
+
+  conversation n. 会话。
+
+<!-- more -->
+
 - constitute v. 组成，依法设立
 
   constitution n. 宪法，组成，身体状态
@@ -18,8 +24,6 @@ categories: English
   prostitute n. 妓女; v. 卖淫
 
   substitute n. 替代物；v. 替代
-
-<!-- more -->
 
 - adapt v. 适应
 

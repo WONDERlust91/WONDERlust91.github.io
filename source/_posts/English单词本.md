@@ -407,6 +407,10 @@ categories: English
 
   1. noun: a thin transparent plastic film that adheres to surfaces and to itself, used as a wrapping or covering for food; plastic wrap. 一种薄的透明的塑料薄膜，可以吸附在表面或自身上，用作食品的包装或覆盖；塑料的包装。即保鲜膜。
 
+- commodity
+
+  1. noun: a raw material or primary agricultural product that can be bought and sold, such as copper or coffee. 可以被买卖的原材料或初级农产品，例如铜或咖啡，即商品。
+
 - commute
 
   1. verb: travel some distance between one's home and place of work on a regular basis. 定期往返于家和工作地点之间的一段距离，即通勤。
@@ -551,6 +555,12 @@ categories: English
 
   1. adverb: as a result. 因此。
 
+- conservation
+
+  1. noun: prevention of wasteful use of a resource. 防止资源的浪费。
+
+  2. noun(PHYSICS): the principle by which the total value of a physical quantity or parameter (such as energy, mass, linear or angular momentum) remains constant in a system which is not subject to external. （物理学）物理量或参数（如能量，质量，线性或角动量）的总值在不受外部影响的系统中保持恒定的原理。
+
 - conservative
 
   1. adjective: averse to change or innovation and holding traditional values. 厌恶改变或创新并持有传统价值观。
@@ -666,6 +676,14 @@ categories: English
   4. adjective: having the shape of a crescent. 具有月牙形状的。
 
   5. adjective(LITERARY): growing, increasing, or developing. （文学上）增长、增加或发展。
+
+- crude
+
+  1. adjective: in a natural or raw state; not yet processed or refined. 处于天然或原始状态；尚未加工或精制的。
+
+  2. adjective: constructed in a rudimentary or makeshift way. 以初级或临时的方式建造。
+
+  3. noun: natural petroleum. 原油。
 
 - crutch
 
@@ -832,6 +850,14 @@ categories: English
   1. noun: a difference or contrast between similar things or people. 在相似事物或人之间的差异或对比。
 
   2. noun: excellence that sets someone or something apart from others. 将人或物与其他区分开来的卓越。
+
+- doom
+
+  1. noun: death, destruction, or some other terrible fate. 死亡，毁灭，戒其他可怕的命运。
+
+  2. verb: condemn to certain destruction or death. 判定的毁灭或死亡。
+
+  3. phrase: doom and gloom - a general feeling of pessimism or despondency. 普遍的悲观或沮丧的感觉。
 
 - drain
 
@@ -1001,6 +1027,12 @@ categories: English
 
   1. adverb: used to emphasize the basic, fundamental, or intrinsic nature of a person or thing. 用于强调一个人或事物的基本，根本，或内在本质。
 
+- estimate
+
+  1. verb: roughly calculate or judge the value, number, quantity, or extent of. 粗略计算或判断其价值，数目，数量，或程度。
+
+  2. noun: an approximate calculation or judgment of the value, number, quantity, or extent of something. 对某物的价值，数目，数量，或范围的挖计算或判断。
+
 - excess
 
   1. noun: an amount of something that is more than necessary, permitted, or desirable. 某物的数量，这个数量超过了必要的，许可的，或可取的。
@@ -1079,6 +1111,10 @@ categories: English
 
   1. verb: run away from a place or situation of danger. 逃离某地或危险的情况。
 
+- fluctuate
+
+  1. verb: rise and fall irrgularly in number or amount. 在数目或数量上不规则地上升和下降，即波动。
+
 - formerly
 
   1. adverb: in the past; in earlier time. 以前；在早些时候。注意与 formally （正式地）的区别。
@@ -1141,6 +1177,16 @@ categories: English
 
   1. noun: a gadget, especially one whose name the speaker does not know or cannot recall. 一种小工具，尤其是说话者不知道或记不起它的名字的小工具。
 
+- gloom
+
+  1. noun: partial or total darkness. 部分或完全的黑暗。
+
+  2. noun: a state of depression or despondency. 抑郁或沮丧的状态。
+
+  3. verb(LITERARY): have a dark or somber appearance. （文学的）有一个黑暗或阴沉的外观。
+
+  4. verb: be or look depressed or despondent. 变得或看起来郁闷或沮丧。
+
 - grant
 
   1. verb: agree to give or allow (something requested) to. 同意给予或允许（要求的东西）。
@@ -1154,6 +1200,32 @@ categories: English
      1. fail to properly appreciate (someone or something), especially as a result of overfamiliarity. 不能正确地赞赏（某人或某事），尤其是由于过度熟悉。
 
      2. assume that something is true without questioning it. 假定某事是真实的而不去质疑。
+
+- grip
+
+  1. verb: take and keep a firm hold of; grasp tightly. 抓住并牢牢把握；紧紧抓住。
+
+  2. verb: (of a feeling or emotion) deeply affect (someone). （感觉或情绪）深深地影响（某人）。
+
+  3. noun: a firm hold; a tight grasp or clasp. 坚定地持有；紧紧抓住或扣住。
+
+  4. noun: an effective form of control over something. 控制某物的有效形式。
+
+  5. noun: a part or attachment by which something is held in the hand. 将某物握在手中的部件或附件。
+
+  6. noun: a traveling bag. 旅行包。
+
+  7. noun: an assistant in a theater; a stagehand. 剧院助理；舞台工作人员。
+
+  8. phrase: come to grips with - begin to deal with or understand. 开始处理或理解。
+
+  9. phrase: get a grip - keep or recover one's self-control. 保持或恢复一个人的自制力。
+
+  10. phrase: in the grip of - dominated or affected by something undsirable or adverse. 受到不受欢迎或不利事物支配或影响。
+
+  11. phrase: lose one's grip - become unable to understand or control one's situation. 变得无法理解或控制自己的处境。
+
+  12. phrase: get a grip on - take control of. 控制。
 
 ## H
 
@@ -1180,6 +1252,16 @@ categories: English
   1. verb: make (a function) a permanent feature in a computer by means of permanently connected circuits, so that it cannot be altered by software. 通过永久连接的电路使（某功能）成为计算机中的永久功能，使其不能被软件改动。
 
   2. verb: make (a pattern of behaviour or belief) standard or instinctive. 使（行为或信仰的模式）成为标准或本能。
+
+- headline
+
+  1. noun: a heading at the top of an article or page in a newspaper or magazine. 报纸或杂志的文章或页面顶部的标题。
+
+  2. noun(ECONOMICS): denoting or relating to a figure for unemployment based on the unadjusted total number of people out of work, as a percentage of the population. （经济）表示或与失业率有关，失业率基于未调整的失业总人数占人口的百分比。
+
+  3. verb: provide with a headline. 提供标题。
+
+  4. verb: appear as the star perfomer at (a concert). 在（音乐会）上作为明星表演者出现。
 
 - however
 
@@ -2027,6 +2109,14 @@ categories: English
 
 ## Q
 
+- quadruple
+
+  1. adjective: consisting of for parts or elements. 由四个部分或元素组成。
+
+  2. verb: increase or be increased fourfold. 增加或被增加四倍。
+
+  3. noun: a quadruple thing, number, or amount. 四倍的事物，数字或数量。
+
 - quaint
 
   1. adjective: attractively unusual or old-fashioned. 吸引人的不同寻常的或老式的。
@@ -2370,6 +2460,36 @@ categories: English
   2. noun: an act or short spell of running at full speed. 全速的动作或短暂奔跑。
 
   3. noun: (especially in software development) a set period of time during which specific tasks must be completed. （尤其是在软件开发中）必需完成特定任务的一段时间。
+
+- squeeze
+
+  1. verb: firmly press (something soft or yielding), typically with one's fingers. 用力按压（柔软或易弯折的东西），通常使用手指。
+
+  2. verb: manage to get into or through a narrow or restricted space. 设法进入或穿过狭窄或受限的空间。
+
+  3. verb: obtain (something) from someone with difficulty. 困难地从某人那里得到（某物）。
+
+  4. noun: an act of pressing something with one's fingers. 用手指按压某物的行为。
+
+  5. noun: a strong financial demand or pressure, typically a restriction on borrowing, spending, or investment in a financial crisis. 强烈的金融需求或压力，通常是在金融危机中限制借贷，支出或投资。
+
+  6. noun: a molding or cast of an object, or an impression or copy of a design, obtained by pressing a piable substance around or over it. 物体的模型或铸件，或设计的印模或复制品，通过将柔软的物质压在其周围或上方而获得。
+
+  7. noun(DATED·INFORMAL): a person's girlfriend or boyfriend. （过时的·非正式）一个人的女朋友或男朋友。
+
+  8. noun(BASEBALL): an act of bunting a ball in order to enable a runner on third base to start for home as soon as the ball is pitched. 击打球的行为，以使三垒的跑垒员在投出球后立即回家。
+
+  9. phrase: put the squeeze on - coerce or pressure (someone). 胁迫或给压力（某人）。
+
+  10. phrase: squeeze one's eyes shut - close one's eyes tightly. 紧紧地闭上眼睛。
+
+  11. phrase: squeeze in - manage to find time for someone or something. 设法为某人或某事腾出时间。
+
+  12. phrase: squeeze off - shoot a round or shot from a gun. 射击或用枪射击。
+
+  13. phrase: squeeze out - extract liquid or a soft substance from something by compressing or twisting it firmly. 通过用压力或紧紧扭转从某物中提取液体或柔软的物质。
+
+  14. phrase: squeeze up - move closer to someone or something so that one is pressed tightly against them or it. 靠近某人或某物，以便将某人紧紧地压在他们或某物上。
 
 - stalk
 
@@ -2771,7 +2891,7 @@ categories: English
 
 - vegetable
 
-  1. noun: a plant or part of a plant used as food, typically as accompaniment to meat or fish, such as a cabbage, potato, carrot, or bean.
+  1. noun: a plant or part of a plant used as food, typically as accompaniment to meat or fish, such as a cabbage, potato, carrot, or bean. 植物或植物的一部分被用作食物，通常作为肉或鱼的佐菜，例如卷心菜，马铃薯，胡萝卜或豆类。
 
   2. noun(INFORMAL): a person with a dull or inactive life. 生活乏味或不活跃的人。
 
@@ -2830,6 +2950,16 @@ categories: English
   7. preposition(NORTHERN ENGLISH): until. （北部英语）直到。
 
   总结：while 主要有两个意思，一个是当...时候，通常后面跟进行时 ing，另一个意思是尽管（although）。
+
+- wholesale
+
+  1. noun: the selling of goods in large quantities to be retailed by others. 大量销售商品以供他人零售。
+
+  2. adverb: being sold in large quantities to be retailed by others. 被以大量出售以供他人零售。
+
+  3. adjective: done on a large scale; extensive. 大规模完成的；广泛的。
+
+  4. verb: sell (goods) in large quantities at low prices to be retailed by others. 以低价大量出售（商品）以供他人零售。
 
 - wind
 
