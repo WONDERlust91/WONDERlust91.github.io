@@ -9,13 +9,27 @@ categories: English
 
 ## A
 
+- abuse
+
+  1. verb: use (something) to bad effect or for a bad purpose; misuse. 使用（某物）产生不良影响或用于不良目的；错误地使用。
+
+  2. verb: treat (a person or an animal) with cruelty or violence, especially regularly or repeatedly. 以残忍或暴力对待（人或动物），尤其是经常或反复地。
+
+  3. verb: speak in an insulting and offensive way to or about (someone). 以侮辱和冒犯的方式对（某人）说话。
+
+  4. noun: the improper use of something. 对某物的不当使用。
+
+  5. noun: cruel and violent treatment of a person or animal. 对人或动物的残忍和暴力对待。
+
+  6. noun: insulting and offensive language. 侮辱性和攻击性的语言。
+
+<!-- more -->
+
 - accommodate
 
   1. verb: (of physical space, especially a building) provide lodging or sufficient space for. （物理空间，尤其是建筑物）提供住宿或足够的空间。
 
   2. verb: fit in with the wishes or needs of. 符合...的愿望或需要。
-
-<!-- more -->
 
 - accommodation
 
@@ -165,6 +179,10 @@ categories: English
 
   2. noun: a person or organization officially attached to a larger body. 正式附属于更大机构的个人或组织。
 
+- agony
+
+  1. noun: extreme physical or mental suffering. 极度的身体上或精神上的痛苦。
+
 - allergic
 
   1. adjective: caused by or relating to an allergy. 由过敏引起或与过敏有关。
@@ -249,6 +267,10 @@ categories: English
 
   3. verb(COMPUTING): translate (a program) from a higher-level programming language into machine code. （计算机）将（程序）高级编程语言编译成机器码。
 
+- assess
+
+  1. verb: evaluate or estimate the nature, ability, or quality of. 评估或估计性质，能力，或质量。
+
 - astonish
 
   1. verb: suprise or impress (someone) greatly. 使（某人）大吃一惊或给（某人）留下深刻印象。
@@ -314,6 +336,46 @@ categories: English
 - bland
 
   1. adjective: lacking strong features or characteristics and therefore uninteresting. 缺乏强大的功能或特性，因此而显得无趣，即平淡无奇。
+
+- board
+
+  1. noun: a long, thin, flat piece of wood or other hard or stiff material, used for floors or other building purposes or various purposes. 长，薄，平的一块木头或其他硬质材料，用于地板或其他建筑用途或其他各种用途。
+
+  2. noun: a group of people constituted as the decision-making body of an organization. 一群人组成的一个组织的决策机构。
+
+  3. noun: the provision of regular meal when one stays somewhere, in return for payment or services. 提供定期的餐饮当一个人住在某个地方的时候，作为付款或服务的回报。
+
+  4. noun(SAILING): a distance covered by a vessel in a single tack. 一艘船单次航行经过的距离。
+
+  5. verb: get on or into (a ship, aircraft, or other vehicle). 登上或进入（船舶，飞机，或其他载具）。
+
+  6. verb: live and receive regular meals in a house in return for payment or services. 在一个房子中居住并获得定期的餐食，作为付款或服务的报酬。
+
+  7. verb: cover or seal a window, storefront, or other structure with pieces of wood. 用木板覆盖或密封窗户，店面，或其他结构。
+
+  8. verb: ride on a snowboard. 骑在滑雪板上。
+
+  9. phrase: go by the board - (of something planned or previously upheld) be abandoned, rejected, or ignored. （计划好的某事或以前坚持的某事）被放弃，拒绝，或忽略。
+
+  10. phrase: on board - on or in a ship, aircraft, or other vehicle. 在船舶，飞机，或其他载具上或内部。
+
+  11. phrase: take something on board - fully consider or assimilate a new idea or situation. 充分考虑或吸收新的想法或情况。
+
+  12. phrase: tread the boards - appear on stage as an actor. 作为演员出现在舞台上。
+
+- bold
+
+  1. adjective: (of a person, action, or idea) showing an ability to take risks; confident and courageous. （人，行为，或想法）表现出承担风险的能力；自信而勇敢。
+
+  2. adjective: (of a color or design) having a strong or vivid appearance. （颜色或设计）具有强烈或生动的外观。
+
+  3. noun: a bold typeface or letter. 粗体字或字母。
+
+  4. phrase: be so bold - dare to do something that might be considered audacious (used when politely asking a question or making a suggestion). 敢于做一些可能被认为是大胆的事情（用于礼貌地提出问题或提出建议）。
+
+  5. phrase: as bold as brass - confident to the point of impudence. 像黄铜一样大胆 - 自信到无礼的地步。
+
+  6. phrase: a bold stroke - a daring action or initiative. 大胆的行动或发起的事情。
 
 - breed
 
@@ -407,6 +469,22 @@ categories: English
 
   1. noun: a thin transparent plastic film that adheres to surfaces and to itself, used as a wrapping or covering for food; plastic wrap. 一种薄的透明的塑料薄膜，可以吸附在表面或自身上，用作食品的包装或覆盖；塑料的包装。即保鲜膜。
 
+- code
+
+  1. noun: a system of words, letters, figures, or other symbols substituted for other words, letters, etc., especially for the purposes of secrecy. 一种用词，字母，数字，或其他符号代替其他词，字母等的系统，尤其是用于保密。
+
+  2. noun(COMPUTING): program instructions. 程序指令。
+
+  3. noun: a systematic collection of laws or regulations. 法律或法规的系统集合。
+
+  4. verb: convert (the words of a message) into a particular code in order to convey a secret meaning. 将（消息的词）转换为特殊的代码以传达秘密的含义。
+
+  5. verb: write code for (a computer program). 为（计算机程序）编写代码。
+
+  6. verb(BIOCHEMISTRY): specify the genetic sequence for (an amino acid or protein). （生物化学）定义基因序列为（氨基酸或蛋白质）。
+
+  7. phrase(NORTH AMERICAN): bring something up to code - renovate or update an old building in line with the latest building regulations. （北美）根据最新的建筑法规翻新或更新旧建筑。
+
 - commodity
 
   1. noun: a raw material or primary agricultural product that can be bought and sold, such as copper or coffee. 可以被买卖的原材料或初级农产品，例如铜或咖啡，即商品。
@@ -434,6 +512,10 @@ categories: English
   1. verb: give (someone) something, typically money, in recognition of loss, suffering, or injury incurred; recompense. 给（某人）一些东西，通常是金钱，以补偿遭受的损失，痛苦，或伤害；补偿。
 
   2. verb: reduce or counteract (something unwelcome or unpleasant) by exerting an opposite force or effect. 通过施加相反的力或影响的方式减少或抵消（一些不受欢迎或不愉快的事）。
+
+- competent
+
+  1. adjective: having the necessary ability, knowledge, or skill to do something successfully. 具有成功地做某事所必需的能力，知识或技能。
 
 - comprehend
 
@@ -594,6 +676,12 @@ categories: English
 - contemptible
 
   1. adjective: deserving contempt; despicable. 值得鄙视的；卑鄙的。
+
+- contend
+
+  1. verb: struggle to surmount (a difficulty or danger). 努力克服（困难或危险）。
+
+  2. verb: assert something as a position in an argument. 断言某事作为争论中的立场。
 
 - contradictory
 
@@ -859,6 +947,18 @@ categories: English
 
   3. phrase: doom and gloom - a general feeling of pessimism or despondency. 普遍的悲观或沮丧的感觉。
 
+- dosage
+
+  1. noun: the size or frequency of a dose of a medicine or drug. 药物剂量的大小或频率。
+
+- dose
+
+  1. noun: a quantity of a medicine or drug taken or recommended to be taken at a particular time. 药物的量或在特定时间建议服务药物的量。
+
+  2. verb: administer a dose to (a person or animal). 对（人或动物）给药。
+
+  3. phrase: in small doses - when experienced or engaged in a little at a time. 一次只体验或参与很少量。
+
 - drain
 
   1. verb: cause the water or other liquid in (something) to run out, leaving it empty, dry, or drier. 使（某物）中的水或其他液体耗尽，使之空、干燥。
@@ -921,11 +1021,33 @@ categories: English
 
   24. phrase: draw in - (of successive days) become shorter because of the changing seasons. （连续几天）由于季节的变化而变短。
 
-  25. phrase: draw on - 1. use one's experience, talents, or skills as a resource. 使用某人的经验，天赋，或技能作为资源。 2. (of a period of time) pass by and approach its end. （一段时间）过去并接近它的终点。 3. put an item of clothing on. 穿上一件衣物。 4. suck smoke from a cigarette or pipe. 从香烟或烟斗中吸出烟雾。
+  25. phrase: draw on
 
-  26. phrase: draw out - 1. make something last longer. 使某事持续更长时间。 2. gently or subtly induce someone to talk more. 温和或巧妙地诱使某人多说话。 3. obtain or withdraw money from a bank or other source. 从银行或其他来源获得或取出资金。 4. (of successive days) become longer because of the changing seasons. （连续几天）由于季节的变化而变短。
+      1. use one's experience, talents, or skills as a resource. 使用某人的经验，天赋，或技能作为资源。
 
-  27. phrase: draw up - 1. prepare a plan, agreement, or other document in detail. 准备一个详细的计划，协议，或其他文档。 2. come to a halt. 停住。 3. make oneself stand in a stiffly upright manner. 以强硬地直立地方式站起来。
+      2. (of a period of time) pass by and approach its end. （一段时间）过去并接近它的终点。
+
+      3. put an item of clothing on. 穿上一件衣物。
+
+      4. suck smoke from a cigarette or pipe. 从香烟或烟斗中吸出烟雾。
+
+  26. phrase: draw out
+
+      1. make something last longer. 使某事持续更长时间。
+
+      2. gently or subtly induce someone to talk more. 温和或巧妙地诱使某人多说话。
+
+      3. obtain or withdraw money from a bank or other source. 从银行或其他来源获得或取出资金。
+
+      4. (of successive days) become longer because of the changing seasons. （连续几天）由于季节的变化而变短。
+
+  27. phrase: draw up
+
+      1. prepare a plan, agreement, or other document in detail. 准备一个详细的计划，协议，或其他文档。
+
+      2. come to a halt. 停住。
+
+      3. make oneself stand in a stiffly upright manner. 以强硬地直立地方式站起来。
 
 - dreadful
 
@@ -980,6 +1102,30 @@ categories: English
   2. phrase: in earnest - occurring to a greater extent or more intensely than before. 比以前更大程度或更强烈地发生。
 
   3. noun: a thing intended or regarded as a sign or promise of what is to come. 被意为或视为即将发生的事情的标志或承诺的事物。
+
+- effect
+
+  1. noun: a change which is a result or consequence of an action or other cause. 一个改变，这个改变是其他行为或原因导致的结果。
+
+  2. noun: the lighting, sound, or scenery used in a play, movie, or broadcast. 戏剧，电影，或广播中使用的灯光，声音，或场景。
+
+  3. noun: personal belongings. 个人物品。
+
+  4. verb: cause (something) to happen; bring about. 导致（某事）发生；实现。
+
+  5. phrase: come into effect - become operative; start to apply. 开始运行；开始应用。
+
+  6. phrase: for effect - in order to impress people. 为了打动人们。
+
+  7. phrase: in effect - in operation; in force. 运行中的；现行的，即实际上。
+
+  8. phrase: put something into effect - cause something to apply or become operative. 使某事应用或运行。
+
+  9. phrase: take effect - become operative; start to apply. 开始运行；开始应用。
+
+  10. phrase: to the effect that - used to refer to the general sense of something written or spoken. 用于指代总体感受关于写的或说的东西。
+
+  11. phrase: to that effect - having that result, purpose, or meaning. 有那个结果，目的，或意义。
 
 - emerge
 
@@ -1253,6 +1399,20 @@ categories: English
 
   2. verb: make (a pattern of behaviour or belief) standard or instinctive. 使（行为或信仰的模式）成为标准或本能。
 
+- haste
+
+  1. noun: excessive speed or urgency of movement or action; hurry. 动作或行为上过快的速度或急迫；匆忙。
+
+  2. verb: archaic term for hasten. hasten 的古老词汇。
+
+  3. phrase: make haste - hurry; hasten. 匆忙；加速。
+
+  4. proverb: more haste, less speed - you make better progress with a task if you don't try to do it too quickly. 你会取得更好的任务进展，如果你不去过快地完成的话，即欲速则不达。
+
+- hasten
+
+  1. verb: be quick to do something. 快点做某事。
+
 - headline
 
   1. noun: a heading at the top of an article or page in a newspaper or magazine. 报纸或杂志的文章或页面顶部的标题。
@@ -1262,6 +1422,18 @@ categories: English
   3. verb: provide with a headline. 提供标题。
 
   4. verb: appear as the star perfomer at (a concert). 在（音乐会）上作为明星表演者出现。
+
+- hemisphere
+
+  1. noun: a half of a sphere. 半球。
+
+- homicide
+
+  1. noun: the deliberate and unlawful killing of one person by another; murder. 一个人故意和非法杀害另一个人；谋杀。
+
+- hospice
+
+  1. noun: a home providing care for the sick or terminally ill. 为病人或绝症病人提供护理的家。
 
 - however
 
@@ -1335,6 +1507,14 @@ categories: English
 
   3. adjective(WEST INDIAN): angry or quick-tempered. （西印度）生气或脾气暴躁的。
 
+- implication
+
+  1. noun: the conclusion that can be drawn from something although it is not explicitly stated. 可以从某事中得出的结论，尽管没有明确说明。
+
+  2. noun: the action or state of being involved in something. 参与某事的行动或状态。
+
+  3. phrase: by implication - by what is implied or suggested rather than by formal expression. 通过暗示或建议而不是正式的表达。
+
 - impoverish
 
   1. verb: make (a person or area) poor. 使（一个人或一个地区）贫穷。
@@ -1342,6 +1522,10 @@ categories: English
 - impoverished
 
   1. adjective: (of a person or area) made poor. （某人或地区）变穷的。
+
+- inadequate
+
+  1. adjective: lacking the quality or quantity required; insufficient for a purpose. 缺乏所需要的质量或数量；不足以达到目的的。
 
 - incorporate
 
@@ -1382,6 +1566,10 @@ categories: English
   1. noun: the action of breaking the terms of a law, agreement, etc.; violation. 破坏法律、协议等条款的行为；侵害。
 
   2. noun: the action of limiting or undermining something. 限制或破坏某事的行为。
+
+- insist
+
+  1. verb: demand something forcefully, not accepting refusal. 强求某事，不接受拒绝。
 
 - in the world
 
@@ -1520,6 +1708,12 @@ categories: English
   4. noun(AMERICAN FOOTBALL): a pass thrown either sideways or backward from the position of the passer. （美式足球）传球者从侧边或后方的传球。
 
   5. verb(US): throw (a football) in a sideways or backward direction. （美国）从侧边或后方传（球）。
+
+- legitimate
+
+  1. adjective: conforming to the law or to rules. 符合法律或规则的。
+
+  2. verb: make legitimate; justify or make lawful. 使合法；正名或使合法。
 
 - lest
 
@@ -1677,7 +1871,7 @@ categories: English
 
   2. verb: advise or train(someone, especially a younger colleague). 建议或培训某人，尤其是年轻的同事。
 
-- monotounous
+- monotonous
 
   1. adjective: dull, tedious, and repetitious, lacking in variety and interest. 枯燥、乏味、重复，缺乏多样性和兴趣; （of a sound or utterance) lacking in variation in tone or pitch. （声音或语言）缺乏语音语调变化。
 
@@ -1690,6 +1884,10 @@ categories: English
   3. noun: a lesson that can be derived from a story or experience. 从故事或经历中得出的教训。
 
   4. noun: standards of behaviour; principles of right and wrong. 行为标准；对与错的原则。
+
+- morphine
+
+  1. noun: an analgesic and narcotic drug obtained from opium and used medicinally to relieve pain. 一种镇痛和麻醉药物，提取于鸦片并药用于缓解疼痛，即吗啡。
 
 - mortality
 
@@ -2039,6 +2237,10 @@ categories: English
 
   2. phrase: presence of mind - the ability to remain calm and take quick, sensible action. 保持冷静并采取快速，明智行为的能力。
 
+- presumptive
+
+  1. adjective: of the nature of a presumption; presumed in the absence of further information. 关于推断的性质的；在没有进一步信息的情况下推测的。
+
 - primacy
 
   1. noun: the fact of being pre-eminent or most important. 卓越或非常重要的事实。
@@ -2084,6 +2286,10 @@ categories: English
   6. verb: represent in outline from one side. 从一侧的轮廓来展示。
 
   7. phrase: in profile - (in reference to someone's face) as seen from one side. （指某人的脸）被从一侧看。
+
+- prolong
+
+  1. verb: extend the duration of. 延长某事的期间。
 
 - proposition
 
@@ -2188,6 +2394,20 @@ categories: English
 - reinforce
 
   1. verb: strengthen or support (an object or substance), especially with additional material. 加强或支持（物体或物质），尤其是用额外的材料。
+
+- relieve
+
+  1. verb: cause (pain, distress, or difficulty) to become less severe or serious. 导致（疼痛、痛苦，或困难）变得不那么严峻或严重。
+
+  2. verb: release (someone) from duty by taking their place. 释放（某人）从他的职责，通过代替他的位置的方式。
+
+  3. verb: take (a burden) from someone. 从某人身上拿走（负担）。
+
+  4. verb: make less tedious or monotonous by the introduction of variety or of something striking or pleasing. 使没有那么乏味或单调，通过引入多样性或引人注目或令人愉悦的事物的方式。
+
+  5. verb: urinate or defecate (used euphemistically). 小便或排便（委婉地使用）。
+
+  6. verb(ARCHAIC): make (something) stand out. 使（某物）脱颖而出。
 
 - remark
 
@@ -2637,6 +2857,16 @@ categories: English
 
   2. adjective: more than what is needed or used; excess. 超过需要或使用的；过量的。
 
+- suspension
+
+  1. noun: the temporary prevention of something from continuing or being in force or effect. 暂时阻止某事继续或生效。
+
+  2. noun: the system of springs and shock absorbers by which a vehicle is cushioned from road conditions. 弹簧和减震器系统，通过该系统车辆从路况中获得缓冲，即车辆悬挂系统。
+
+  3. noun: a mixture in which particles are dispersed throughout the bulk of a fluid. 一种混合物，其中粒子分散在整个流体中。
+
+  4. noun(MUSIC): a discord made by prolonging a note of a chord into the following chord. 通过将一个和弦的一个音符延长到下一个和弦而产生的不和谐。
+
 - suspicious
 
   1. adjective: having or showing a cautious distrust of someone or something. 有或表现出谨慎的怀疑对某人或某事。
@@ -2748,6 +2978,10 @@ categories: English
 - therapist
 
   1. noun: a person skilled in a particular kind of therapy. 擅长某种特定疗法的人。
+
+- therapy
+
+  1. noun: treatment intended to relieve or heal a disorder. 旨在缓解或治愈疾病的治疗。
 
 - think tank
 

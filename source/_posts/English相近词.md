@@ -39,6 +39,12 @@ categories: English
 
   physicist n. 物理学家
 
+- suicide n. v. 自杀
+
+  homicide n. 谋杀
+
+  pesticide n. 杀虫剂，农药。
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别

@@ -447,3 +447,15 @@ have been doing 从过去到现在一直做某事
 - not so much A as B = not A but rather B 不是 A，而是 B
 
   so much as = even 甚至
+
+- call A B 称呼 A 为 B，中间无介词，遇到要注意将 A 和 B 分开。
+
+- to the extent that 词性为 adv. 到了（从句中描述的）程度。
+
+  I can do this, to the extent that ... 我能做这个事情，能做到...的程度。
+
+- 英语中常用 ones 加从句来描述前面的主语。ones 就指代前面的主语。
+
+  Computers are ones that are important tools.
+
+  上面一句等同于 Computers are important tools.
