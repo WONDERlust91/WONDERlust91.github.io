@@ -289,6 +289,10 @@ categories: English
 
 ## B
 
+- back and forth
+
+  1. to and fro. 来来回回，扯皮。
+
 - backlash
 
   1. noun: a strong and adverse reaction by a large number of people, especially to a social or political development. 很多人的强烈并敌对的反应，尤其是对社会或政治发展方面。
@@ -609,6 +613,10 @@ categories: English
 
   1. verb: admit or state that one has committed a crime or is at fault in some way. 以某种方式承认或表明某人犯了罪或有过错，即承认或忏悔。
 
+- conform
+
+  1. verb: comply with rules, standards, or laws. 遵守规则、标准或法律，即顺从，顺应（固定搭配加 to ）。
+
 - confusion
 
   1. noun: lack of understanding; uncertainty. 缺乏理解、不确定。
@@ -682,6 +690,16 @@ categories: English
   1. verb: struggle to surmount (a difficulty or danger). 努力克服（困难或危险）。
 
   2. verb: assert something as a position in an argument. 断言某事作为争论中的立场。
+
+- contest
+
+  1. noun: an event in which people compete for supremacy in a sport, activity, or particular quality. 人们在一项运动、活动或特定质量方面争夺至高无上的地位的事件。
+
+  2. verb: engage in competition to attain (a position of power). 参与竞争以获得（权力地位）。
+
+  3. verb: oppose (an action, decision, or theory) as mistaken or wrong. 反对（行动，决定，或理论）认为是错误的。
+
+  4. phrase: no contest - a plea by which a defendant in a criminal prose cution accepts conviction but does not plead or admit guilt. 刑事诉讼中的被告接受定罪但不认罪的抗辩。
 
 - contradictory
 
@@ -1161,6 +1179,10 @@ categories: English
 
   2. noun: a person or thing that is equal to or corresponds with another in value, amount, function, meaning, etc. 在价值，数量，功能，意义等方面与其他相等或对应的人或物。
 
+- espionage
+
+  1. noun: the practice of spying or of using spies, typically by governments to obtain political and military information. 间谍活动或使用间谍的做法，通常由政府获取政治或军事信息。
+
 - essential
 
   1. adjective: absolutely necessary; extremely important. 绝对有必要的；极其重要的。
@@ -1196,6 +1218,12 @@ categories: English
   2. noun: a person with senior managerial responsibility in a business. 企业中具有高级管理职责的人。
 
   3. noun: the branch of a government responsible for putting decisions or laws into effect. 负责使决定或法律生效的政府部门。
+
+- exert
+
+  1. verb: apply or bring to bear (a force, influence, or quality). 施加或使承受（力量，影响或品质）。
+
+  2. verb: make a physical or mental effort. 作出身体或精神上的努力。
 
 - eyebrow
 
@@ -1571,6 +1599,12 @@ categories: English
 
   1. verb: demand something forcefully, not accepting refusal. 强求某事，不接受拒绝。
 
+- intelligence
+
+  1. noun: the ability to acquire and apply knowledge and skills. 获得和应用知识和技能的能力，即智慧。
+
+  2. noun: the collection of information of military or political value. 收集具有军事或政治价值的信息，即情报。
+
 - in the world
 
   1. phrase: used for emphasis in questions, especially to express astonishment or disbelief. 用于强调问题，尤其是表达惊讶或不相信，常译为到底，究竟。
@@ -1687,6 +1721,24 @@ categories: English
 
 ## K
 
+- keep
+
+  1. verb: have or retain possession of. 拥有或保留所有权。
+
+  2. verb: cause to continue in a specified condition, position, course, etc. 导致在特定的条件，位置，路线等中继续。
+
+  3. verb: provide for the sustenance of (someone). 为（某人）提供食物。
+
+  4. verb: honor or fulfill (a commitment or undertaking).兑现或履行（承诺或保证）。
+
+  5. verb: make written entries in (a diary) on a regular basis. 定期在（日记）中进行书面记录。
+
+  6. noun: food, clothes, and other essentials for living; the cost of basic living essentials. 食物，衣服，和其他生活必需品；生活必需品的基本花销。
+
+  7. phrase: you can't keep a good man down - a competent person will always recover well from setbacks or problems. 有能力的人总是会从挫折或问题中恢复得很好。
+
+  8. phrase: for keeps - permanently; indefinitely. 永久地；无限期地。
+
 ## L
 
 - ladder
@@ -1708,6 +1760,24 @@ categories: English
   4. noun(AMERICAN FOOTBALL): a pass thrown either sideways or backward from the position of the passer. （美式足球）传球者从侧边或后方的传球。
 
   5. verb(US): throw (a football) in a sideways or backward direction. （美国）从侧边或后方传（球）。
+
+- lean
+
+  1. verb: be in or move into a sloping position. 处于或移动到倾斜的位置。
+
+  2. noun: a deviation from the perpendicular; an inclination. 偏离垂线；一种倾向。
+
+  3. phrase: lean on - rely on or drive support from someone or something. 依赖或得到某人或某物的支持。
+
+  4. phrase: lean toward - incline or be partial to a view or position. 倾斜或偏向一个观点或位置。
+
+  5. adjective: (of a person or animal) thin, especially healthily so; having no superfluous fat. （人或动物）瘦的，尤其是健康的；没有多余脂肪的。
+
+  6. adjective: (of an activity or a period of time) offering little reward, substance, or nourishment; meager. （某项活动或一段时间）提供很少的奖赏，物质，或营养；微薄。
+
+  7. adjective: (of a vaporized fuel mixture) having a high proportion of air. （汽化的燃料混合物）具有高比例的空气。
+
+  8. noun: the lean part of meat. 肉的瘦肉部分。
 
 - legitimate
 
@@ -1766,6 +1836,16 @@ categories: English
   6. phrase: to the manner born - naturally at ease in a specified job or situation. 在特定工作或情况下自然轻松。
 
   7. phrase: in the manner of - in the style of. 以某种方式。
+
+- margin
+
+  1. noun: the edge or border of something. 某物的边缘或边界。
+
+  2. noun: an amount by which a thing is won or falls shorts. 赢利或亏空的金额。
+
+  3. verb: provide with an edge or border. 提供边缘或边界。
+
+  4. verb: deposit an amount of money with a broker as security for (an account or transaction). 向经纪人存入一定数额的资金作为（账户或交易）的担保。
 
 - materialism
 
@@ -1929,6 +2009,16 @@ categories: English
 
   1. noun: a bulletin issued periodically to the members of a society, business, or organization. 定期向社会，企业，或组织的成员发布的公告。
 
+- nonconformist
+
+  1. noun: a person whose behavior or views do not conform to prevailing ideas or practices. 行为或观点不符合流行思想或做法的人。
+
+  2. noun: a member of a Protestant church in England that dissents from the established anglican Church. 英国新教教会的成员，反对已建立的国教教会，即异教徒。
+
+  3. adjective: of or characterized by behavior or views that do not conform to prevailing ideas or practices. 在行为和观点上表现得特别，行为和观点是不符合流行思想和做法的。
+
+  4. adjective: relating to Nonconformists or their principles and practices. 关于非国教徒或其原则和做法，即异教徒的。
+
 - note
 
   1. noun: a brief record of facts, topics, or thoughts, written down as an aid to memory. 对事实，主题，或想法的简要记录，写下来以便辅助记忆，即笔记。
@@ -2088,6 +2178,10 @@ categories: English
   7. noun: the end of something. 某事的结束。
 
   8. phrase: in passing - briefly and casually. 简要且随意地。
+
+- pastime
+
+  1. an activity that someone does regularly fooor enjoyment rather than work; a hobby. 某人为了享受而不是工作而定期进行的活动；一个爱好。
 
 - pave the way for
 
@@ -2447,6 +2541,10 @@ categories: English
 
   3. noun: either side surface of an aperture in a wall for a door or window. 在墙壁两面都有孔洞，以便于安装门或窗。
 
+- revive
+
+  1. verb: restore to life or consciousness. 恢复生命或意识。
+
 - rigid
 
   1. adjective: unable to bend or be forced out of shape; not flexible. 无法弯曲或被迫变形；不灵活的。
@@ -2672,6 +2770,14 @@ categories: English
   8. verb(NORTH AMERICAN): allow (someone) to rest briefly by taking their place in some activity. （北美）允许（某人）短暂休息，当在某项活动中忙碌的时候。
 
   9. noun: a splinter of wood. 一片木头。
+
+- spook
+
+  1. noun(INFORMAL): a ghost. 鬼。
+
+  2. noun(INFORMAL·NORTH AMERICAN): a spy. 间谍。
+
+  3. verb(INFORMAL): frighten; unnerve. 吓唬；不安。
 
 - sprint
 
@@ -3117,6 +3223,16 @@ categories: English
 
 ## V
 
+- vacuum
+
+  1. noun: a space entirely devoid of matter. 完全没有物质的空间，即真空。
+
+  2. noun: a vacuum cleaner. 吸尘器。
+
+  3. verb: clean with a vacuum cleaner. 用吸尘器清洁。
+
+  4. phrase: in a vacuum - (of an activity or problem to be considered) isolated from the context normal to it and in which it can best be understood or assessed. （要考虑的活动或问题）与正常的上下文环境隔离开，并且在其中可以最好地理解或评估它。
+
 - vanish
 
   1. verb: disappear suddenly and completely. 突然并完全消失。
@@ -3143,6 +3259,10 @@ categories: English
 
   1. noun: the state of being strong and active; energy. 强壮并活跃的状态；活力。
 
+- vocation
+
+  1. noun: a strong feeling of suitability for a particular career or occupation. 对特定职业适合的强烈感觉。
+
 - voluntary
 
   1. adjective: done, given, or acting of one's own free will. 根据自己的自由意志完成，给予，或行动。
@@ -3166,6 +3286,10 @@ categories: English
 - whereas
 
   1. conjunction: in contrast or comparison iwth the fact that. 与事实对照或比较，表转折。
+
+- whereby
+
+  1. adverb: by which. 借此。
 
 - while
 

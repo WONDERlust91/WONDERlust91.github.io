@@ -354,6 +354,12 @@ I am in school. 倒装 In school am I.
 
 This book is among many books. 倒装 Among many books is this book.
 
+- Among 开头的倒装
+
+  Among many students in school are you who are from China and are tall and smart.
+
+  正常语序：You who are from China and are tall and smart are among many students in school.
+
 - 否定副词打头 后面句子半倒装
 
   即 否定副词 谓语 主语 宾语
@@ -459,3 +465,25 @@ have been doing 从过去到现在一直做某事
   Computers are ones that are important tools.
 
   上面一句等同于 Computers are important tools.
+
+- would have done 本可能将会
+
+  could have done 本可能做
+
+  should have done 本应该做
+
+- I think that
+
+  I think of sth
+
+  I believe that
+
+  I believe in sb/sth
+
+- such as 不同于 for example，such as 是对大的复数的概念进行详细列举，而不是对一个事物进行举例说明。
+
+  My dad likes to read books, such as history books and math books.
+
+  such 还可能提前到大的概念之前，意思完全不变。
+
+  My dad likes to read such books as history books and math books.

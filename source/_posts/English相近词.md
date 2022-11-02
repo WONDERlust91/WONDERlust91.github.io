@@ -43,7 +43,11 @@ categories: English
 
   homicide n. 谋杀
 
-  pesticide n. 杀虫剂，农药。
+  pesticide n. 杀虫剂，农药
+
+- vacation n. 假期 v. 度假
+
+  vocation n. 职业，工作
 
 ## 近义词
 
@@ -192,3 +196,19 @@ categories: English
   as a result of
 
   on account of
+
+- vocational training 职业的培训，工作内容相关。
+
+  professional training 专业的培训，描述培训专业性，不是业余水准的。
+
+- 表“恢复”
+
+  v. revive 复苏
+
+  v. restore 恢复
+
+  v. reinstate 恢复
+
+  v. rejuvenate 复原
+
+  v. revitalize 振兴
