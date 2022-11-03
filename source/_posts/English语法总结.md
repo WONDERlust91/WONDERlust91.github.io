@@ -436,6 +436,14 @@ have been doing 从过去到现在一直做某事
 
 ## 其他
 
+- 一句话第一个单词是 doing，考虑两种情况：
+
+  1. 动名词作主语：Doing sth 谓语（单数）宾语
+
+  2. 非谓语动词：Doing sth, 主谓宾
+
+- 一句话第一个单词是 Done，非谓语动词：Done by sth/副词，主谓宾。
+
 - stress A over B, embrace A over B, prefer A over B
 
   over 超过，A 为程度更深的那个。

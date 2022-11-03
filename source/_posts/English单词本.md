@@ -183,6 +183,10 @@ categories: English
 
   1. noun: extreme physical or mental suffering. 极度的身体上或精神上的痛苦。
 
+- allegation
+
+  1. noun: a claim or assertion that someone has done something illegal or wrong, typically one made without proof. 声称或断言某人做了非法或错误的事情，通常是在没有证据的情况下提出的。
+
 - allergic
 
   1. adjective: caused by or relating to an allergy. 由过敏引起或与过敏有关。
@@ -381,6 +385,14 @@ categories: English
 
   6. phrase: a bold stroke - a daring action or initiative. 大胆的行动或发起的事情。
 
+- booth
+
+  1. noun: a small temporary tent or strcture at a market, fair, or exhibition, used for selling goods, providing information, or staging shows. 市场，集市，或展览中的小的临时帐篷或结构，用于销售商品，提供信息，或布置展出。
+
+  2. noun: an enclosure or compartment allows privacy or seclusion, for example when voting, broadcasting or recording sound, or making a phone call. 允许隐私或隔离的围墙或隔间，例如在投票，广播或录音，或打电话时。
+
+  3. noun: a type of seating, typically in a restaurant or bar, consisting of two high-backed benches with a table between them. 一种座位，通常在餐厅或酒吧中，由两个高背长凳组成，它们之间有一张桌子。
+
 - breed
 
   1. verb: (of animals) mate and then produce offspring. （动物）交配，然后生产后代。
@@ -390,6 +402,20 @@ categories: English
   3. phrase: a breed apart - a sort or kind of person that is very different from the norm. 与规范非常不同的一种或一类人。
 
   4. phrase: a dying breed - a sort or kind of person that is slowly disappearing. 正在慢慢消失的一种或一类人。
+
+- brochure
+
+  1. noun: a small book or magazine containing pictures and information about a product or service. 包含有关产品或服务的图片和信息的小书或杂志。
+
+- bypass
+
+  1. noun: a road passing around a town or its center to provide an alternative route for through traffic. 绕过城镇或其中心的道路，为通过交通提供替代路线。
+
+  2. noun: a secondary channel, pipe, or connection to allow a flow when the main one is closed or blocked. 当主要通道关闭或阻塞时允许流动的辅助通道、管道或连接。
+
+  3. noun: the alternative channel created during a bypass operation. 在心脏搭桥手术中建立的替代血管通道。
+
+  4. verb: go past or around. 穿过或绕过。
 
 ## C
 
@@ -437,6 +463,26 @@ categories: English
 
   2. noun(BRITISH): the department of a hospital providing immediate treatment for emergency cases. 医院为紧急情况提供即时治疗的部门。
 
+- cause
+
+  1. noun: a person or thing that gives rise to an action, phenomenon, or condition. 引起动作，现象，或状况的人或事物，即缘由。
+
+  2. noun: a principle, aim, or movement that, because of a deep commitment, one is prepared to defend or advocate. 一种原则，目标，或运动，由于深深的承诺，一个人准备捍卫或倡导，即事业或目标。
+
+  3. noun: a matter to be resolved in a court of law. 需要在法庭上解决的问题。
+
+  4. verb: make (something, especially something bad) happen. 使（某事，尤其是坏事）发生。
+
+  5. phrase: cause and effect - the principle of causation. 因果关系的原则。
+
+  6. phrase: cause of action - a fact or facts that enable a person to bring an action against another. 一个或多个事实，使一个人能够对另一个人提起诉讼。
+
+  7. phrase: in the cause of - so as to support, promote, or defend something. 以支持，促进，或捍卫某事。
+
+  8. phrase: make common cause - unite in order to achieve a shared aim. 团结起来，以实现共同的目标。
+
+  9. phrase: a rebel without a cause - a person who is dissatisfied with society but does not have a specific aim to fight for. 对社会不满意但没有具体要奋斗的目标的人。
+
 - centurion
 
   1. noun: the commader of a century in the ancient Roman army. 在古罗马军队中的百人统帅；即百夫长。
@@ -450,6 +496,10 @@ categories: English
 - chances are
 
   1. idiom: it is very likely that 很有可能
+
+- citizenry
+
+  1. noun: the citizens of a place regarded collectively. 被统一看待的一个地方的公民们，即公民（抽象概念上的）。
 
 - chipmunk
 
@@ -502,6 +552,14 @@ categories: English
   3. verb(MATHEMATICS): (of two operations or quantities) have a commutative relation. （数学）（两个操作或数量）具有交换关系。
 
   4. noun: a regular journey of some distance to and from one's place of work. 往返工作地的一定距离的常规路程。
+
+- compassion
+
+  1. noun: sympathetic pity and concern for the sufferings or misfortunes of others. 同情怜悯和关心他人的痛苦或不幸。
+
+- compassionate
+
+  1. adjective: feeling or showing sympathy and concern for others. 对他人表示同情和关心。
 
 - compel
 
@@ -691,6 +749,18 @@ categories: English
 
   2. verb: assert something as a position in an argument. 断言某事作为争论中的立场。
 
+- content
+
+  1. adjective: in a state of peaceful happiness. 处于平和幸福的状态。
+
+  2. verb: satisfy (someone). 满足（某人）。
+
+  3. noun: a state of satisfaction. 满意的状态。
+
+  4. noun: a member of the British House of Lords who votes for a particular motion. 投票支持一个特别议案的英国上议院议员。
+
+  5. noun: the things that are held or included in something. 持有或包含在某事物中的事物，即内容。
+
 - contest
 
   1. noun: an event in which people compete for supremacy in a sport, activity, or particular quality. 人们在一项运动、活动或特定质量方面争夺至高无上的地位的事件。
@@ -848,6 +918,10 @@ categories: English
 - deceive
 
   1. verb: (of a person) cause (someone) to believe something that is not true, typically in order to gain some personal advantage. （一个人）导致（某人）相信不真实的事情，通常是为了获得一些个人利益，即欺骗。
+
+- deceptive
+
+  1. adjective: giving an appearance or impression different from the true one; misleading. 给人一种与真实不同的外观或印象；误导。
 
 - dedicate
 
@@ -1145,6 +1219,10 @@ categories: English
 
   11. phrase: to that effect - having that result, purpose, or meaning. 有那个结果，目的，或意义。
 
+- ember
+
+  1. noun: a small piece of burning or glowing coal or wood in a dying fire. 在即将熄灭的火中燃烧或发光的一小块煤或木头，即余烬。
+
 - emerge
 
   1. verb: move out of or away from something and come into view. 移出或远离某物并出现在视野中。(常用于表示新兴，脱颖而出，摆脱困境，破壳而出) emerging countries 即新兴国家。
@@ -1172,6 +1250,12 @@ categories: English
   1. noun: a feeling of discontented or resentful longing aroused by someone else's possessions, qqualities, or luck. 因他人的财产、品质或运气而引起的不满或怨恨的意愿。
 
   2. verb: desire to have a quality, possession, or other desirable thing belonging to (someone else). 渴望拥有属于（他人）的品质，财产，或其他令人向往的东西。
+
+- epidemic
+
+  1. noun: a widespread occurrence of an infectious disease in a community at a particular time. 在特定时间在社区中广泛发生的传染病。
+
+  2. adjective: of the nature of an epidemic. 流行病的性质的。
 
 - equivalent
 
@@ -1236,6 +1320,56 @@ categories: English
 - facilitator
 
   1. noun: a person or thing that makes an action or process easy or easier. 使行动或流程变得更容易的人或事务。
+
+- fair
+
+  1. adjective: in accordance with the rules or standards; legitimate. 根据规则或标准；合法的。
+
+  2. adjective: (of hair or comlexion) light; blond. 浅色的；金发的。
+
+  3. adjective: considerable though not outstanding in size or amount. 相当大，但在规模或数量上并不突出。
+
+  4. adjective: (of weather) fine and dry. （天气）晴朗干燥。
+
+  5. adjective(ARCHAIC): beautiful; attractive. （古老）美丽的；吸引人的。
+
+  6. adverb: without cheating or trying to achieve unjust advantage. 没有欺骗或试图获得不公正的优势。
+
+  7. adverb(DIALECT): to a high degree. （方言）很大程度上。
+
+  8. noun(ARCHAIC): a beautiful woman. （古老）漂亮的女人。
+
+  9. verb(DIALECT): (of the weather) become fine. （方言）（天气）变好。
+
+  10. proverb: all's fair in love and war - in certain highly charged situations, any method of achieving your objective is justifiable. 在某些高度紧张的情况下，任何实现目标的方式都是合理的。
+
+  11. phrase: by fair means or foul - using whatever means are necessary. 使用任何必要的手段。
+
+  12. phrase: fair and square - honestly and straightforwardly. 诚实和直截了当地。
+
+  13. phrase: a fair deal - equitable treatment. 公平的对待。
+
+  14. phrase: fair enought - used to admit that something is reasonable or acceptable. 用于承认某事是合理的或可接受的。
+
+  15. phrase: fair name - a good reputation. 好的名声。
+
+  16. phrase: the fair sex - women viewed collectively. 女性被统一地看待。
+
+  17. phrase: fair's fair - used to request just treatment or assert that an arrangement is just. 用于要求公平的对待或宣称安排的公平。
+
+  18. phrase: for fair - completely and finally. 完全和最终地。
+
+  19. phrase: in a fair way to do something - having nearly done something, and likely to achieve it. 几乎完成了某件事，并且很可能实现它。
+
+  20. phrase: it's a fair cop - an admission that the speaker has been caught doing wrong and deserves punishment. 承认演讲者被抓到做错了并且应该受到惩罚。
+
+  21. phrase: no fair - unfair (often used in or as a petulant protestation). 不公平（通常用于或作为愤怒的抗议）。
+
+  22. phrase: fair-to-midding - slightly above average. 略高于平均水平。
+
+  23. noun: a gathering of stalls and amusements for public entertainment. 为公众娱乐而聚集的摊位和娱乐场所，即集市或游乐场。
+
+  24. verb: smooth the lines of (a vehicle, boat, or aircraft) to reduce drag; streamline. 平滑（车辆，船只，或飞机）的线条以减少阻力；流线型。
 
 - far-fetched
 
@@ -1535,6 +1669,10 @@ categories: English
 
   3. adjective(WEST INDIAN): angry or quick-tempered. （西印度）生气或脾气暴躁的。
 
+- immunization
+
+  1. noun: the action of making a person or animal immune to infection, typically by inoculation. 使人或动物对感染免疫的行为，通常通过接种的形式。
+
 - implication
 
   1. noun: the conclusion that can be drawn from something although it is not explicitly stated. 可以从某事中得出的结论，尽管没有明确说明。
@@ -1578,6 +1716,10 @@ categories: English
   2. adjective(GRAMMAR): denoting a mood of verbs expressing simple statement of a fact. （语法）表示动词的语气，表达对事实的简单陈述。
 
   3. noun(GRAMMAR): a verb in the indicative mood. 陈述语气的动词。
+
+- indifference
+
+  1. noun: lack of interest, concern, or sympathy. 缺乏兴趣、关心或同情。
 
 - inedible
 
@@ -1939,6 +2081,10 @@ categories: English
 
   7. noun(BRITISH): soft loose earth. （英国）松软的土地。
 
+- molecular
+
+  1. adjective: relating to or consisting of molecules. 与分子有关的或由分子组成。
+
 - momentarily
 
   1. adverb: for a very short time. 很短的时间。
@@ -2157,6 +2303,18 @@ categories: English
 
   1. adjective: done with or employing great care and thoroughness. 以非常地小心和谨慎完成或使用。
 
+- pandemic
+
+  1. adjective: (of a disease) prevalent over a whole country or the world. （疾病）流行于整个国家或世界。
+
+  2. noun: an outbreak of a pandemic disease. 全球疫情的爆发。
+
+- paraphrase
+
+  1. verb: express the meaning of (the writer or speaker or something written or spoken) using different words, especially to achieve greater clarity. 用不同的词表达（作者或演讲者或写或说的东西）的意思，尤其是为了达到更清楚的目的。
+
+  2. noun: a rewording of something written or spoken by someone else. 改写别人写或说的东西。
+
 - participatory
 
   1. adjective: involving or characterized by participation. 涉及或以参与为特征，即参与式的。
@@ -2201,6 +2359,10 @@ categories: English
 
   1. noun: the ability to see, hear, or become aware of something through the senses. 通过感官看到、听到或意识到某事的能力，即洞察力。
 
+- perplex
+
+  1. verb: (of something complicated or unaccountable) cause (someone) to feel completely baffled. （复杂或无法解释的）使（某人）感到完全困惑。
+
 - pessimistic
 
   1. adjective: tending to see the worst aspect of things or believe that the worst will happen. 倾向于看到事情最糟糕的一面或相信最糟糕的事情会发生，即悲观主义。
@@ -2230,6 +2392,10 @@ categories: English
   1. noun: a person qualified to practice medicine. 有行医资格的人，即医师。
 
   2. phrase: physician, heal thyself - before attempting to correct others, make sure that you aren't guilty of the same faults. 医生，先治好你自己 - 在尝试纠正他人前，确保自己没有犯同样的错误。
+
+- plagiarize
+
+  1. verb: take (the work or an idea of someone else) and pass it off as one's own. 拿走（别人的工作或想法）并把它当作自己的，即抄袭。
 
 - plain
 
@@ -2302,6 +2468,10 @@ categories: English
   5. phrase: praise be - used as an expression of relief, joy, or gratitude. 用于表示解脱，喜悦，或感激之情。"'How is your sister?''On the mend, praise be.'" “你姐姐怎么样了？”“好起来了，谢天谢地。”
 
   6. phrase: sing the praises of - express enthusiastic approval or admiration of. 唱赞歌。表达狂热的赞同或钦佩。
+
+- practitioner
+
+  1. noun: a person actively engaged in an art, discipline, or profession, especially mecicine. 积极从事艺术、学科，或职业的人，尤其是医学上。
 
 - preach
 
@@ -2567,6 +2737,14 @@ categories: English
 
   3. adverb: approximately. 大约。
 
+- rule in
+
+  1. phrase: include something as a possibility. 包括某事作为一种可能。
+
+- rule out
+
+  1. phrase: exclude something as a possibility. 排除某人或某事的可能性。
+
 ## S
 
 - sanitary
@@ -2690,6 +2868,44 @@ categories: English
   5. phrase: settle one's affairs - make any necessary arrangements, such as writing a will, before one's death. 在死前做任何必要的安排，例如写遗嘱。
 
   6. noun: a wooden bench with a high back and arms, typically incorporating a box under the seat. 带高背和扶手的木制长凳，通常在座椅下方装有一个盒子。
+
+- shot
+
+  1. noun: the firing of a gun or cannon. 枪或大炮的射击。
+
+  2. noun: a hit, stroke, or kick of the ball in sports such as basketball, tennis, or golf. 在篮球，网球，或高尔夫等运动中击球。
+
+  3. noun: a ball of stone or metal used as a missile fired from a large gun or cannon. 一种石头或金属球，用作从大炮发射出的导弹。
+
+  4. noun: a photograph. 一张照片。
+
+  5. noun: a small drink, especially of distilled liquor. 一小杯饮品，尤其是指蒸馏酒。
+
+     - a single serving of espresso. 一份浓缩咖啡。
+
+     - an injection of a drug or vaccine. 一针药物或疫苗。
+
+  6. noun: the launch of space rocket. 太空火箭的发射。
+
+  7. phrase: give it one's best shot - do the best that one can. 尽某人最大努力去做。
+
+  8. phrase: like a shot - without hesitation; willingly. 没有犹豫；心甘情愿。
+
+  9. phrase: not by a long shot - by no means. 一点也不，当然不是。
+
+  10. phrase: a shot in the arm - an encourageing stimulus. 令人鼓舞的刺激。
+
+  11. adjective: (of colored cloth) woven with a warp and weft of different colors, giving a contrasting iridescent effect when looked at from different angles. （彩色的布）用不同颜色的经线和纬线编织而成，从不同角度看会产生对比鲜明的彩虹效果。
+
+  12. adjective(INFORMAL): ruined or worn out. （非正式）毁坏或磨损。
+
+  13. phrase: be/get shot of - be/get rid of. 摆脱。
+
+  14. phrase: shot to pieces - badly damaged; ruined. 严重受损；毁了。
+
+  15. phrase: shot through with - suffused with (a particular feature or quality). 弥漫（特定的特征或品质）。
+
+  16. noun(DATED·INFORMAL): a bill or one's share of it, especially in a pub or bar. 账单或其中一部分，尤其是在酒馆或酒吧。
 
 - shrink
 
@@ -2817,6 +3033,44 @@ categories: English
 
   14. phrase: squeeze up - move closer to someone or something so that one is pressed tightly against them or it. 靠近某人或某物，以便将某人紧紧地压在他们或某物上。
 
+- stake
+
+  1. noun: a strong wooden or metal post with a point at one end, driven into the ground to support a tree, form part of a fence, act as a boundary mark, etc. 一根粗壮的木头或金属的一端有点的柱子，插入地面以支撑一棵树，或形成栅栏的一部分，或用作边界标记等。
+
+  2. noun: a metalworker's small anvil, typically with a projection for fitting into a socket on a bench. 金属工人的小铁砧，通常带有一个突出部分用于安装在工作台的插座中。
+
+  3. noun: a territorial division of the Mormon Church under the jurisdiction of a president. 总统管辖权下摩门教的领土划分。
+
+  4. verb: support (a plant) with a stake or stakes. 用一根或几根桩子支撑（植物）。
+
+  5. phrase: pull up stakes - move or go to live elsewhere. 搬家或去别的地方生活。
+
+  6. phrase: stake a claim - assert one's right to something. 主张某人对某事的权利。
+
+  7. phrase: stake out - mark an area with stakes so as to claim ownership of it. 用桩标记一个区域，以声称拥有它。
+
+  8. noun: a sum of money or something else of value gambled on the outcome of a risky game or venture. 一笔金钱或其他有价值的东西赌在有风险的比赛或冒险的结果上。
+
+     - a share or interest in a business, situation, or system. 在商业，环境，或系统中的股份或权益。
+
+     - prize money, especially in horse racing. 奖金，尤其是赛马。
+
+     - a horse race. 赛马比赛。
+
+     - a situation involving competition in a specified area. 在特定领域竞争的情况。
+
+  9. verb: gamble (money or something else of value) on the outcome of a game or race. 对比赛或竞赛的结果进行赌博（金钱或其他有价值的东西）。
+
+  10. verb(INFORMAL·NORTH AMERICAN): give financial or other support to. 给予财政或其他支持。
+
+  11. phrase: at stake - to be won or lost; at risk. 可能赢或输；有风险。
+
+- stakeholder
+
+  1. noun: (in gambling) an independent party with whom each of those who make a wager deposits the money or conters wagered. （在赌博中）一个独立的一方，每个下注的人都向其存钱或对抗其赌注，即庄家。
+
+  2. noun: a person with an interest or concern in something, especially a business. 对某事（尤其是企业）有兴趣或关心的人，即股东，利益相关者。
+
 - stalk
 
   1. noun: the main stem of herbaceous plant. 草本植物的主干、主茎。
@@ -2832,6 +3086,10 @@ categories: English
      1. a stealthy pursuit of someone or something. 对某人或某事的偷偷追踪。
 
      2. a stiff, striding gait. 僵硬或大步的步态。
+
+- statesman
+
+  1. noun: a skilled, experienced, and respected political leader or figure. 一个熟练，经验丰富，且受人尊敬的政治领袖或人物。
 
 - stir
 
@@ -2888,6 +3146,10 @@ categories: English
   6. verb: subject to pressure or tension. 承受压力或紧张。
 
   7. verb: cause mental or emotional strain or tension in. 导致精神或情绪紧张。
+
+- strive
+
+  1. verb: make great efforts to achieve or obtain something. 为实现或获得某物而付出巨大的努力。
 
 - stuff
 
@@ -3089,6 +3351,12 @@ categories: English
 
   1. noun: treatment intended to relieve or heal a disorder. 旨在缓解或治愈疾病的治疗。
 
+- thereby
+
+  1. adverb: by that means; as a result of that. 由此方式；作为结果是。
+
+  2. phrase: thereby hangs a tale - used to indicate that there is more to say about something. 用于表示关于某事还有更多话要说。
+
 - think tank
 
   1. noun: a body of experts providing advice and ideas on specific political or economic problems. 在特定的政治或经济问题提供建议和想法的一组专家。
@@ -3156,6 +3424,10 @@ categories: English
 - understatement
 
   1. noun: the presentation of someting as being smaller, worse, or less important than it actually is. 将某物展现得比实际更小，更差，或更不重要，即轻描淡写。
+
+- uninformed
+
+  1. adjective: not having or showing awareness or understanding of the facts. 没有或没表现出对事实的认识或理解。
 
 - unison
 
@@ -3249,6 +3521,14 @@ categories: English
 
   1. adverb: by means of words. 在语言上。
 
+- vicious
+
+  1. adjective: deliberately cruel or violent. 故意的残忍或暴力。
+
+  2. adjective(LITERARY): immoral. （文学）不道德的。
+
+  3. adjective(ARCHAIC): (of language or a line of reasoning) imperfect; defective. （古老）（语言或推理上）不完美；有缺陷的。
+
 - vigorously
 
   1. adverb: in a way that involves physical strength, effort, or energy; strenuously. 以一种涉及体力，努力，或能量的方式；用力地。
@@ -3282,6 +3562,10 @@ categories: English
   2. noun: a road, track, path, or street for traveling along. 用于行驶的道路、轨道、路径或街道。
 
   3. adverb(INFORMAL 非正式): at or to a considerable distance or extent. 在一个相当远的距离或范围; far 非常 (used before an adverb or preposition for emphasis) 用在副词与介词间表强调。
+
+- well-meaning
+
+  1. adjective: well intentioned. 善意的。
 
 - whereas
 

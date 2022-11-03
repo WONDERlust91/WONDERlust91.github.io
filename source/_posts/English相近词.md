@@ -25,11 +25,11 @@ categories: English
 
   substitute n. 替代物；v. 替代
 
-- adapt v. 适应
+- adapt vi. 适应，不及物，固定搭配 to; vt. 改编，及物
 
-  adept adj. 精通; n. 老手
+  adept adj. 精通，固定搭配 be adept at，等于 be good at; n. 老手
 
-  adopt v. 收养，使用
+  adopt vt. 收养，使用
 
 - devise v. 设计，发明; n. 遗赠
 
@@ -48,6 +48,10 @@ categories: English
 - vacation n. 假期 v. 度假
 
   vocation n. 职业，工作
+
+- epidemic n. 传染病，疫情
+
+  pandemic adj. 全球流行的（传染病） n. 全球疫情的爆发
 
 ## 近义词
 
@@ -212,3 +216,11 @@ categories: English
   v. rejuvenate 复原
 
   v. revitalize 振兴
+
+- plagiarize v. 抄袭
+
+  paraphrase v. n. 改写
+
+- citizen n. 公民（由国籍决定）
+
+  resident n. 居民（由居住地决定）
