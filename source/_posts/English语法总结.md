@@ -495,3 +495,7 @@ have been doing 从过去到现在一直做某事
   such 还可能提前到大的概念之前，意思完全不变。
 
   My dad likes to read such books as history books and math books.
+
+- allow sb to do sth.
+
+  allow for sth.

@@ -225,6 +225,14 @@ categories: English
 
   6. noun: the quality of being attractive or interesting. 有吸引力或有趣的质量。
 
+- apprehension
+
+  1. noun: anxiety or fear that something bad or unpleasant will happen. 不好或不愉快的事会发生的担心或害怕。
+
+  2. noun: understanding; grasp. 理解；抓牢。
+
+  3. noun: the action of arresting someone. 逮捕某人的行为。
+
 - apprenticeship
 
   1. noun: the position of an apprentice. 学徒的地位。
@@ -242,6 +250,20 @@ categories: English
   5. noun: an initial proposal or request made to someone. 向某人提出的初步建议或请求。
 
   6. noun: the action of coming near or nearer to someone or something in distance or time. 在距离或时间上接近某人或某物的动作。
+
+- arbiter
+
+  1. noun: a person who settles a dispute or has ultimate authority in a matter. 解决争端或在某事上拥有最终权力的人。
+
+- arbitration
+
+  1. noun: the use of an arbitrator to settle a dispute. 使用仲裁员解决争议。
+
+  2. phrase: go to arbitration - submit a dispute to an arbitrator. 将争议提交给仲裁员。
+
+- arbitrary
+
+  1. adjective: based on random choice or personal whim, rather than any reason or system. 基于随机选择或个人突发奇想，而不是任何原因或系统。
 
 - archer
 
@@ -407,6 +429,20 @@ categories: English
 
   1. noun: a small book or magazine containing pictures and information about a product or service. 包含有关产品或服务的图片和信息的小书或杂志。
 
+- bulk
+
+  1. noun: the mass or magnitude of something large. 大东西的质量或大小。
+
+  2. verb: be or semm to be of great size or importance. 具有或似乎具有很大规模或重要性。
+
+  3. verb: treat (a product) so that its quantity appears greater than it in fact is. 对待（产品），使其数量看起来比实际数量大。
+
+  4. phrase: in bulk
+
+     - (especially of goods) in large quantities, usually at a reduced price. （尤其是商品）以大量的形式，通常以较低的价格。
+
+     - (of a cargo or commodity) loose; not packaged. （货物或商品）松散的；未打包的。
+
 - bypass
 
   1. noun: a road passing around a town or its center to provide an alternative route for through traffic. 绕过城镇或其中心的道路，为通过交通提供替代路线。
@@ -451,11 +487,27 @@ categories: English
 
   9. phrase: with a capital - used to give emphasis to the word or concept in question. 用于强调问题中的词或概念。
 
+- captive
+
+  1. noun: a person who has been taken prisoner or an animal that has been confined. 被俘的人或被囚禁的动物。
+
+  2. adjective: imprisoned or confined. 被监禁或囚禁的。
+
 - carpenter
 
   1. noun: a person who makes and repairs wooden objects and structures. 制造和修理木制物品和结构的人。
 
   2. verb: make by shaping wood. 通过塑造木头来制作东西。
+
+- carrier
+
+  1. noun: a person or thing that carries, holds, or conveys something. 携带、持有或传送某物的人或物。
+
+  2. noun: a person or company that undertakes the professional conveyance of goods or people. 从事职业运输货物或人的个人或公司。
+
+  3. noun: a person or animal that transmits a disease-causing organism to others. Typically, the carrier suffers no symptoms of the disease. 将致病有机体传播给他人的人或动物。通常，携带者没有疾病症状。
+
+  4. noun: a substance used to support or convey another substance such as a pigment, catalyst, or radioactive material. 用于支持或输送另一种物质（如颜料，催化剂，或放射性物质）的物质。
 
 - casualty
 
@@ -724,6 +776,12 @@ categories: English
   6. noun: a person favouring free enterprise, private ownership, and socially traditional ideas. 支持自由企业，私有制，和社会传统观念的人。
 
   7. phrase: conservative with a small 'c' - said of someone who is conservative in outlook but does not necessarily vote for or support a conservative party. 保守派，但是个小写 c - 是说某人表面看起来是保守派，但不一定投票给保守党。
+
+- consolidate
+
+  1. verb: make (something) physically stronger or more solid. 使（某物）在身体上更强壮或更坚固。
+
+  2. verb: combine (a number of things) into a single more effective or coherent whole. 将（许多事物）组合成一个更有效或更连贯的整体。
 
 - constitute
 
@@ -1016,6 +1074,14 @@ categories: English
   1. verb: get rid of (someone or something) as no longer useful or desirable. 摆脱（某人或某物）因为不在有用或合意。
 
   2. noun: a person or thing rejected as no longer useful or desirable. 因不再有用或合意而被拒绝的人或物。
+
+- discrimination
+
+  1. noun: the unjust or prejudicial treatment of different categories of people or things, especially on the grounds of race, age, or sex. 对不同类别的人或事物的不公正或偏见的对待，尤其是基于种族，年龄，或性别的原因。
+
+  2. noun: recognition and understanding of the difference between one thing and another. 认识和理解两个事物间的区别。
+
+  3. noun(ELECTRONICS): the selection of a signal having a required characteristic, such as frequency or amplitude, by means of a discriminatior that rejects all unwanted signals. 对具有需要的特性的信号的选择，例如频率或幅度，通过鉴别器来拒绝所有不需要的信号。
 
 - disgraced
 
@@ -1381,6 +1447,12 @@ categories: English
 
   2. adjective: (of a person, animal, or plant) able to conceive young or produce seed. （人，动物，植物）能够怀孕或能够产生种子。
 
+- fierce
+
+  1. adjective: having or displaying an intense or ferocious aggressiveness. 具有或表现出强烈或凶猛的攻击性。
+
+  2. phrase: something fierce - to a great and almost overwhelming extent. 在很大程度上，几乎是压倒性的。
+
 - figure
 
   1. noun: a number, especially one which forms part of official statistics or relates to the financial performance of a company. 一个数字，尤其是构成官方统计数据的一部分或与公司业绩表现相关的数字。
@@ -1433,6 +1505,22 @@ categories: English
 
   2. noun: a material or mixture prepared according to a particular formula. 根据特定西方制备的材料或混合物。
 
+- fortune
+
+  1. noun: chance or luck as an external, arbitrary force affecting human affairs. 机会或运气作为影响人类事务的外在，随机力量，即命运。
+
+  2. noun: a large amount of money or assets. 大量金钱或资产，即财富。
+
+  3. phrase: fortune favors the brave - a successful person is often one who is willing to take risks. 成功的人往往是一个愿意冒险的人。
+
+  4. phrase: the fortunes of war - the unpredictable, haphazard events of war. 不可预知的，偶然的战争事件。
+
+  5. phrase: make a fortune - acquire great wealth by one's own efforts. 通过自己的努力获取巨大的财富。
+
+  6. phrase: a small fortune - a large amount of money. 一大笔钱。
+
+  7. phrase: tell someone's fortune - make predictions about a person's future by palmistry, using a crystal ball, reading tarot cards, or similar divining methods. 通过手相，水晶球，塔罗牌或类似的占卜方法预测一个人的未来。
+
 - fraction
 
   1. noun: a numerical quantity that is not a whole number (e.g. 1/2, 0.5). 不是整数的数字量（例如 1/2，0.5）。
@@ -1442,6 +1530,18 @@ categories: English
   3. noun(CHEMISTRY): each of the portions into which a mixture may be separated by a process in which the individual components behave differently according to their physical properties. 每一个部分，这个部分是化合物可以被通过一个过程分离开的，在这个过程中独立的成分根据它们不同的物理特性表现不同。
 
   4. noun: (in the Christian Church) the breaking of the Eucharistic bread. （在基督教中）分开圣餐面包。
+
+- freight
+
+  1. noun: goods transported in bulk by truck, train, ship, or aircraft. 通过卡车，火车，轮船或飞机批量运输的货物。
+
+  2. noun(US): a freight train. （美国）货运列车。
+
+  3. noun: a load or burden. 负载或负担。
+
+  4. verb: transport (goods) in bulk by truck, train, ship, or aircraft. 通过卡车，火车，轮船，或飞机大量运输（货物）。
+
+  5. verb: be laden or burdened with. 承载或负担。
 
 - from time to time
 
@@ -1585,6 +1685,12 @@ categories: English
 
   4. verb: appear as the star perfomer at (a concert). 在（音乐会）上作为明星表演者出现。
 
+- heighten
+
+  1. verb: make or become more intense. 使或变得更加激烈。
+
+  2. verb: make (something) higher. 使（某物）更高。
+
 - hemisphere
 
   1. noun: a half of a sphere. 半球。
@@ -1720,6 +1826,10 @@ categories: English
 - indifference
 
   1. noun: lack of interest, concern, or sympathy. 缺乏兴趣、关心或同情。
+
+- indignation
+
+  1. noun: anger or annoyance provoked by what is perceived as unfair treatment. 被认为是不公平的待遇所激起的愤怒或烦恼。
 
 - inedible
 
@@ -2090,6 +2200,12 @@ categories: English
   1. adverb: for a very short time. 很短的时间。
 
   2. adverb(NORTH AMERICAN): at any moment; very soon. （北美）任何时候；很快。
+
+- monopoly
+
+  1. noun: the exclusive possession or control of the supply of or trade in a commodity or service. 独家占有或控制商品或服务的供应或交易。
+
+  2. noun(TRADEMARK): a board game in which players engage in simulated property and financial dealings using imitation money. It was invented in the US and the name was coined by Charles Darrow c. 1935. （商标）一种棋盘游戏，玩家在其中使用模拟货币进行模拟财产和金融交易。它是在美国发明的，这个游戏发明于美国，并且名字是由 Charles Darrow c 在 1935 年创造的。
 
 - montor
 
@@ -2659,6 +2775,20 @@ categories: English
 
   1. verb: strengthen or support (an object or substance), especially with additional material. 加强或支持（物体或物质），尤其是用额外的材料。
 
+- relief
+
+  1. noun: a feeling of reassurance and relaxation following release from anxiety or distress. 从焦虑或痛苦中解脱出来后的一种安心和放松的感觉。
+
+  2. noun: assistance, especially in the form of food, clothing, or money, given to those in special need or difficulty. 帮助，尤其是以食物，衣服或金钱的形式，给予那些有特殊需要或困难的人。
+
+  3. noun: a person or group of people replacing others who have been on duty. 一个人或一群人代替其他当值的人。
+
+  4. noun: the state of being clearly visible or obvious due to being accentuated in some way. 由于以某种方式被突出而使之更清晰可见或明显的状态。
+
+  5. phrase: in relief - carved, molded, or stamped so as to stand out from the surface. 雕刻，模制，或冲压以使从表面突出。
+
+  6. phrase: on relief - receiving government assistance because of need. 因需要而接受政府援助。
+
 - relieve
 
   1. verb: cause (pain, distress, or difficulty) to become less severe or serious. 导致（疼痛、痛苦，或困难）变得不那么严峻或严重。
@@ -2807,8 +2937,6 @@ categories: English
 
   10. verb(VULGAR SLANG): have sex with. 与某人发生性关系。
 
-  11. impart spin or curl to (a ball or shot). 给（球或射门）以旋转或卷曲。
-
 - scribble
 
   1. verb: write or draw (something) carelessly or hurriedly. 不细心或匆忙地书写或绘画某物。
@@ -2868,6 +2996,10 @@ categories: English
   5. phrase: settle one's affairs - make any necessary arrangements, such as writing a will, before one's death. 在死前做任何必要的安排，例如写遗嘱。
 
   6. noun: a wooden bench with a high back and arms, typically incorporating a box under the seat. 带高背和扶手的木制长凳，通常在座椅下方装有一个盒子。
+
+- shipper
+
+  1. noun: a person or company that sends or transports goods by sea, land, or air. 通过海运，陆运或空运发出或运送货物的个人或公司，即托运人。
 
 - shot
 
@@ -3201,6 +3333,14 @@ categories: English
 
   3. noun(GRAMMAR): the subjective case. 主观情况。
 
+- substantial
+
+  1. adjective: of considerable importance, size, or worth. 具有相当的重要性，规模，或价值。
+
+  2. adjective: concerning the essentials of something. 关于事物的本质。
+
+  3. adjective: real and tangible rather than imaginary. 真实和有形的，而不是想象的。
+
 - superficial
 
   1. adjective: existing or occurring at or on the surface. 存在或发生在表面上。
@@ -3214,6 +3354,12 @@ categories: English
 - supervise
 
   1. verb: observe and direct the execution of (a task, project, or activity). 观察和指导（任务、项目或活动）的执行。
+
+- surge
+
+  1. noun: a sudden powerful forward or upward movement, especially by a crowd or by a natural force such as the waves or tide. 一个突然的有力的向上或向前的运动，尤其是由人群或自然力量，如波浪或潮汐引起的。
+
+  2. verb: (of a crowd or a natural force) move suddenly and powerfully forward or upward. （人群或自然力量）突然地有力地向前或向上移动。
 
 - surpass
 
@@ -3442,6 +3588,10 @@ categories: English
   1. adjective: relating to or done by all people or things in the world or in a particular group; applicable to all cases. 与所有人相关或被所有人完成的事情，或在全世界范围或特定的组织中的事情；适用所有情况。
 
   2. noun: a thing having universal effect, currency, or application. 具有普遍影响，流通，或应用的事物。
+
+- unlikely
+
+  1. adjective: not likely to happen, be done, or be true; improbable. 不太可能发生，被完成，或是真的；不可能的（注意是词性是形容词，不是副词）。
 
 - unparalleled
 

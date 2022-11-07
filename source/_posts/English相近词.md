@@ -201,6 +201,8 @@ categories: English
 
   on account of
 
+  on the grounds of
+
 - vocational training 职业的培训，工作内容相关。
 
   professional training 专业的培训，描述培训专业性，不是业余水准的。
@@ -224,3 +226,57 @@ categories: English
 - citizen n. 公民（由国籍决定）
 
   resident n. 居民（由居住地决定）
+
+- 表示“垄断”
+
+  monopoly n. 垄断（指整体概念）；大富翁游戏
+
+  trust n. 垄断（指具体企业）
+
+- 表示“货物，商品”
+
+  freight n. 货物
+
+  cargo n. 货物
+
+  goods n. 商品（集合）
+
+  merchandise n. 商品（不可数，指代概念）
+
+  commodity n. 商品（可数）
+
+- 表示“费用”
+
+  charge v. 收费； 商家 charge 消费者
+
+  cost v. 使...花费； 商品 cost 消费者 some money
+
+  spend v 花费； sb spend money on sth
+
+- 表示“长期”，“短期”的词组
+
+  in the long run/term 在长期来看
+
+  in the short run/ term 在短期来看
+
+－ 会计上的各种收入
+
+    (+) revenue 收入
+
+    (-) cost 成本
+
+    (=) gross profit/margin 毛利
+
+    (-) salary 薪资
+
+    (-) rent 租金
+
+    (-) utility 公共事业费用
+
+    (=) operating income 运营收入
+
+    (-) tax 税费
+
+    (-) interest 利息
+
+    (=) net income 净利润
