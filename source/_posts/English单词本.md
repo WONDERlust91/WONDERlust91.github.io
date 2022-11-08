@@ -515,6 +515,12 @@ categories: English
 
   2. noun(BRITISH): the department of a hospital providing immediate treatment for emergency cases. 医院为紧急情况提供即时治疗的部门。
 
+- cataract
+
+  1. noun: a medical condition in which the lens of the eye becomes progressively opaque, resulting in blurred vision. 一种医疗情况，在这种情况下眼睛的晶状体逐渐变得不透明，导致视力模糊。
+
+  2. noun: a large waterfall. 巨大的瀑布。
+
 - cause
 
   1. noun: a person or thing that gives rise to an action, phenomenon, or condition. 引起动作，现象，或状况的人或事物，即缘由。
@@ -574,6 +580,12 @@ categories: English
 - cling-film
 
   1. noun: a thin transparent plastic film that adheres to surfaces and to itself, used as a wrapping or covering for food; plastic wrap. 一种薄的透明的塑料薄膜，可以吸附在表面或自身上，用作食品的包装或覆盖；塑料的包装。即保鲜膜。
+
+- clinical
+
+  1. adjective: relating to the observation and treatment of actual patients ratherthan theoretical or laboratory studies. 与实际患者的观察和治疗有关，而不是理论或实验室研究，即临床的。
+
+  2. adjective: efficient and unemotional; coldly detached. 高效而冷静；冷漠地分离。
 
 - code
 
@@ -727,6 +739,10 @@ categories: English
 
   1. verb: comply with rules, standards, or laws. 遵守规则、标准或法律，即顺从，顺应（固定搭配加 to ）。
 
+- confront
+
+  1. verb: meet (someone) face to face with hostile or argumentative intent. 以敌对或争论的意图与（某人）面对面。
+
 - confusion
 
   1. noun: lack of understanding; uncertainty. 缺乏理解、不确定。
@@ -740,6 +756,16 @@ categories: English
 - conscious
 
   1. adjective: aware of and responding to one's surroundings; awake. 了解并响应周围的环境；苏醒，即有察觉的，有意识的。
+
+- consent
+
+  1. noun: permisson for something to happen or agreement to do something. 对某事发生的允许或对做某事的同意。
+
+  2. verb: give permission for something to happen. 允许某事发生。
+
+  3. phrase: by common consent - with the agreement of all. 经过所有人的同意。
+
+  4. phrase: informed consent - permisssion granted in the knowledge of the possible consequences, typically that which is given by a patient to a doctor for treatment with full knowledge of the possible risks and benefits. 许可被授予在知道可能的结果的情况下，通常是被患者给予医生的，对完全知道可能的风险与收益的治疗手段，即知情同意。
 
 - consequence
 
@@ -967,6 +993,12 @@ categories: English
 
   5. phrase: from dawn to dusk - all day; ceaselessly. 一整天；不断的。
 
+- dazzle
+
+  1. verb: (of a bright light) blind (a person) temporarily. （明亮的光）暂时使（人）失明。
+
+  2. noun: brightness that confuses someone's vision temporarily. 使某人视力暂时混乱的亮度。
+
 - dean
 
   1. the head of the chapter of a cathedral or collegiate church. 大教堂或学院教堂分会的负责人。
@@ -1086,6 +1118,10 @@ categories: English
 - disgraced
 
   1. adjective: having fallen from favor or a position of power or honor; discredited. 失去青睐或失去权力或荣誉的地位；名誉扫地。
+
+- disintegrate
+
+  1. verb: break up into small parts, typically as the result of impact or decay. 分裂成小部分，通常是由于撞击或腐烂的结果。
 
 - disparaging
 
@@ -1375,6 +1411,14 @@ categories: English
 
   2. verb: make a physical or mental effort. 作出身体或精神上的努力。
 
+- expectancy
+
+  1. noun: the state of thinking or hoping that something, especially something pleasant, will happen or be the case. 一种思考或希望的状态，希望某事，尤其是令人愉快的事情，将会发生或成为这样的状态。
+
+- extravagant
+
+  1. adjective: lacking restraint in spending money or using resources. 在花钱或使用资源方面缺乏节制。
+
 - eyebrow
 
   1. noun: the strip of hair growing on the ridge above a person's eye socket. 长在人眼眶上方脊上的条状毛发，即眉毛。
@@ -1595,6 +1639,16 @@ categories: English
 
   4. verb: be or look depressed or despondent. 变得或看起来郁闷或沮丧。
 
+- governor
+
+  1. noun: the elected executive head of a state of the US. 美国一个州的民选行政首长。
+
+  2. noun(BRITISH): the head of a public institution. 公共机构的负责人。
+
+  3. noun(INFORMAL·BRITISH): the person in authority; one's employer. 负责人；雇主。
+
+  4. noun: a device automatically regulating the supply of fuel, steam, or water to a machine, ensuring uniform motion or limiting speed. 一种自动调节机器供应的燃料，蒸汽，或水的装置，以确保匀速运动或限制速度。
+
 - grant
 
   1. verb: agree to give or allow (something requested) to. 同意给予或允许（要求的东西）。
@@ -1721,6 +1775,14 @@ categories: English
 
   5. exclamation: used to express hesitation or dissent. 用于表示犹豫或反对。
 
+- humble
+
+  1. adjective: having or showing a modest or low estimate of one's own importance. 对自己的重要性有或表示出谦虚或较低的估计。
+
+  2. adjective: of low social, administrative, or political rank. 社会，行政，或政治地位低的人。
+
+  3. adjective: (of a thing) of modest pretensions or dimensions. （事物）谦虚的断言或维度。
+
 - hydraulic
 
   1. adjective: denoting, relating to, or operated by a liquid moving in a confined space under pressure. 表示、有关或通过液体在压力下在密闭空间中移动来操作。
@@ -1840,6 +1902,10 @@ categories: English
   1. phrase: to be replaced by. 被替换。
 
   2. phrase: in support or to the advantage of. 支持或受益，即倾向于。
+
+- infirm
+
+  1. adjective: not physically or mentally strong, especially through age or illness. 身体或精神上不强壮，尤其是由于年龄或疾病。
 
 - infringement
 
@@ -2475,6 +2541,12 @@ categories: English
 
   1. noun: the ability to see, hear, or become aware of something through the senses. 通过感官看到、听到或意识到某事的能力，即洞察力。
 
+- perish
+
+  1. verb: suffer death, typically in a violent, sudden, or untimely way. 遭受死亡，通常以暴力，突然，或过早的方式。
+
+  2. phrase: perish the thought - used, often ironically, to show that one finds a suggestion or idea completely ridiculous or unwelcome. 用于（通常具有讽刺意味的）表示某人认为建议或想法完全是荒唐或不受欢迎的。
+
 - perplex
 
   1. verb: (of something complicated or unaccountable) cause (someone) to feel completely baffled. （复杂或无法解释的）使（某人）感到完全困惑。
@@ -2616,6 +2688,12 @@ categories: English
   1. noun: the state or fact of existing, occurring, or being present in a place or thing. 存在，发生，或被呈现在一个地方或东西中的状态或事实。
 
   2. phrase: presence of mind - the ability to remain calm and take quick, sensible action. 保持冷静并采取快速，明智行为的能力。
+
+- pressing
+
+  1. adjective: (of a problem, need, or situation) requiring quick or immediate action or attention. （关于问题，需求，或情况）需要迅速或立即采取行动或注意的。
+
+  2. noun: a record or other object made by the application of force or weight. 通过施加力量或重量而制成的唱片或其他物体。
 
 - presumptive
 
@@ -2914,6 +2992,10 @@ categories: English
   2. noun: (in the Bible) a goat sent into the wilderness after the Jewish chief priest had symbolically laid the sins of the people upon it(Lev. 16). （在圣经中）一只山羊被送去旷野，在犹太大祭司象征性地将人类的罪孽归咎于它后（利未记 16）。
 
   3. verb: make a scapegoat of. 做替罪羊。
+
+- scholar
+
+  1. noun: a specialist in a particular branch of study, especially the humanities; a distinguished academic. 特定研究分支的专家，尤其是在人文学科；杰出的学者。
 
 - screw
 
@@ -3473,7 +3555,7 @@ categories: English
 
   8. phrase: come to terms with - come to accept (a new and painful or difficult event or situation); reconcile oneself to. 开始接受（新的并且痛苦或困难的事情或情况）；某人和解对某事。
 
-  9. phrase: in terms of - with regard to the particular aspect or subject specifid. 关于特定的方面或指定的主题。
+  9. phrase: in terms of - with regard to the particular aspect or subject specified. 关于特定的方面或指定的主题。
 
   10. phrase: in the long term - over or for a long period of time. 超过或在很长一段时间。
 
@@ -3654,6 +3736,16 @@ categories: English
   3. verb: clean with a vacuum cleaner. 用吸尘器清洁。
 
   4. phrase: in a vacuum - (of an activity or problem to be considered) isolated from the context normal to it and in which it can best be understood or assessed. （要考虑的活动或问题）与正常的上下文环境隔离开，并且在其中可以最好地理解或评估它。
+
+- vain
+
+  1. adjective: having or showing an excessively high opinion of one's appearance, abilities, or worth. 对自己外貌，能力，或价值有过高的评价。
+
+  2. adjective: producing no result; useless. 没有结果的；无用的。
+
+  3. phrase: in vain - without success or a result. 没有成功或结果，即徒劳的。
+
+  4. phrase: take someone's name in vain - use someone's name in a way that shows a lack of respect. 以缺乏尊重的方式使用某人的名字。
 
 - vanish
 
@@ -3846,6 +3938,30 @@ categories: English
   7. phrase: as God is my witness - an invocation of God as confirmation of the truth of a statement. 向上帝祈祷作为陈述真实性的确认。
 
   8. phrase: call someone or something to witness - appeal or refer to someone or something for confirmation or evidence of something. 要求或提及某人或某物用来确认或作为某事的证据。
+
+- wonder
+
+  1. noun: a feeling of surprise mingled with admiration, caused by something beautiful, unexpected, unfamiliar, or inexplicable. 由美丽的，出乎意料的，不熟悉的，或莫名其妙的事物引起的惊奇混合了钦佩的感受。
+
+  2. verb: desire or becurious to know something. 渴望或好奇地知道某事。
+
+  3. verb: feel doubt. 感到怀疑。
+
+  4. verb: feel admiration and amazement; marvel. 感到钦佩和惊奇；惊异。
+
+  5. phrase: I shouldn't wonder - I think it likely. 我认为很有可能。
+
+  6. phrase: no wonder - it is not surprising. 这并不奇怪。
+
+  7. phrase: small wonder - not very surprising. 没那么奇怪。
+
+  8. phrase: one-day wonder - something that attracts great interest for a short while but is then forgotten. 短时间内引起极大兴趣但随后被遗忘的事物。
+
+  9. phrase: ninety-day wonder - a person who has had intensive military training for the specified time. 在规定时间内接受过密集军事训练的人。
+
+  10. phrase: wonders will never cease - an exclamation of great surprise at something pleasing. 对令人愉快的事情的非常惊讶的感叹。
+
+  11. phrase: work wonders - have a very beneficial effect on someone or something. 对某人或某事有非常有益的影响。
 
 ## X
 

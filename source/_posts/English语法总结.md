@@ -464,6 +464,12 @@ have been doing 从过去到现在一直做某事
 
 - call A B 称呼 A 为 B，中间无介词，遇到要注意将 A 和 B 分开。
 
+  类似的还有
+
+  offer A B
+
+  give A B
+
 - to the extent that 词性为 adv. 到了（从句中描述的）程度。
 
   I can do this, to the extent that ... 我能做这个事情，能做到...的程度。
@@ -499,3 +505,43 @@ have been doing 从过去到现在一直做某事
 - allow sb to do sth.
 
   allow for sth.
+
+- 并列句谓语相同时可能省略
+
+  I like apples, I like pears, and I like watermelons.
+
+  可省略为
+
+  I like apples, I pears, and I watermelons.
+
+- 保护，阻止等固定搭配为 from 的词组，from 应该翻译为免于
+
+  shield sb from sth
+
+  protect sb from sth
+
+  prevant sb from sth
+
+- ability 固定搭配 to，表示关于某事的能力
+
+  I want to have your ability to read books.
+
+  这里要注意不能理解为 have sth to do，不是有某种能力再去做某事，而是 ability to do，有做某事的能力。
+
+- so that 与 such that
+
+  1. so that 作连词，表示递进关系
+
+     句子 1, so that 句子 2
+
+  2. so adj./adv. that 完整句子
+
+     I am so smart that I know all of this.
+
+     I do sth so smart that 这是错误的，smart 不是形容 sth，而是用来修饰 do，所以应该使用副词
+
+     I do sth so smartly that ... 正确
+
+  3. such n. that 完整句子
+
+     You are such a good boy that you can do this.
