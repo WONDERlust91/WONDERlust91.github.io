@@ -53,6 +53,14 @@ categories: English
 
   pandemic adj. 全球流行的（传染病） n. 全球疫情的爆发
 
+- criteria n. 标准（复数）
+
+  criterion n. 标准（单数）
+
+- implicit adj. 含蓄的；不直接说明的
+
+  explicit adj. 清楚明白的；易于理解的
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -280,3 +288,25 @@ categories: English
     (-) interest 利息
 
     (=) net income 净利润
+
+- “找工作”相关
+
+  hunt/look for a job 找工作
+
+  land/find/get a job 找到工作
+
+- 表示“意外发现”，“偶遇”
+
+  stumble across
+
+  come across
+
+  run into
+
+- “律师”
+
+  counselor n. 律师，顾问
+
+  lawyer n. 律师
+
+  attorney n. 律师

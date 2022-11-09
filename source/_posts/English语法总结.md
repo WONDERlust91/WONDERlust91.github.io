@@ -468,7 +468,11 @@ have been doing 从过去到现在一直做某事
 
   offer A B
 
-  give A B
+  give A (to) B
+
+  consider A (as) B
+
+  find A B
 
 - to the extent that 词性为 adv. 到了（从句中描述的）程度。
 
@@ -545,3 +549,19 @@ have been doing 从过去到现在一直做某事
   3. such n. that 完整句子
 
      You are such a good boy that you can do this.
+
+- 时间加完整句子作状语：时间 + 主谓宾, 主谓宾.
+
+  Every time
+
+  The day
+
+  One hour after
+
+  The moment
+
+  例句：
+
+  The day you saw me, you were happy.
+
+  The moment I saw you, I fell in love with you.

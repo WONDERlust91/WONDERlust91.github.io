@@ -9,6 +9,16 @@ categories: English
 
 ## A
 
+- abreast
+
+  1. adverb: side by side and facing the same way. 并排并面向同一方向。
+
+  2. adverb: alongside or even with something. 旁边或与某物一起。
+
+  3. phrase: keep abreast of - stay or cause to stay up-to-date with. 保持或导致保持最新状态。
+
+<!-- more -->
+
 - abuse
 
   1. verb: use (something) to bad effect or for a bad purpose; misuse. 使用（某物）产生不良影响或用于不良目的；错误地使用。
@@ -22,8 +32,6 @@ categories: English
   5. noun: cruel and violent treatment of a person or animal. 对人或动物的残忍和暴力对待。
 
   6. noun: insulting and offensive language. 侮辱性和攻击性的语言。
-
-<!-- more -->
 
 - accommodate
 
@@ -639,6 +647,10 @@ categories: English
 
   2. verb: reduce or counteract (something unwelcome or unpleasant) by exerting an opposite force or effect. 通过施加相反的力或影响的方式减少或抵消（一些不受欢迎或不愉快的事）。
 
+- compensation
+
+  1. noun: something, typically money, awarded to someone as a recompense for loss, injury, or suffering. 奖励给某人的东西，通常是金钱，作为对损失，伤害，或痛苦的补偿。（北美，常用于表示薪水）
+
 - competent
 
   1. adjective: having the necessary ability, knowledge, or skill to do something successfully. 具有成功地做某事所必需的能力，知识或技能。
@@ -874,6 +886,18 @@ categories: English
   1. adjective: based on or in accordance with what is generally done or believed. 基于或根据通常所做的或相信的。
 
   2. adjective(BRIDGE): (of a bid) intended to convey a particular meaning according to an agreed convention. （桥）（投标）旨在根据商定的约定传达特定的含义。
+
+- counsel
+
+  1. noun: advice, especially that given formally. 建议，尤其是正式给出的建议。
+
+  2. noun: the lawyer or lawyers conducting a case. 执行案件的律师。
+
+  3. verb: give advice to (someone). 向某人提供专业咨询。
+
+  4. phrase: keep one's own counsel - say nothing about what one believes, knows, or plans. 对一个人的信仰、知道或计划什么都不说。
+
+  5. phrase: take counsel - discuss a problem. 讨论一个问题。
 
 - counterpart
 
@@ -1892,6 +1916,10 @@ categories: English
 - indignation
 
   1. noun: anger or annoyance provoked by what is perceived as unfair treatment. 被认为是不公平的待遇所激起的愤怒或烦恼。
+
+- indispensable
+
+  1. adjective: absolutely necessary. 绝对必要的，不可或缺的。
 
 - inedible
 
@@ -3361,6 +3389,82 @@ categories: English
 
   7. verb: cause mental or emotional strain or tension in. 导致精神或情绪紧张。
 
+- strike
+
+  1. verb: hit forcibly and deliberately with one's hand or a weapon or other implement. 用手或武器或其他工具强行故意地击打。
+
+  2. verb: (of a disaster, disease, or other unwelcome phenomenon) occur suddenly and have harmful or damaging effects on. （灾难，疾病，或其他不受欢迎的现象）突然发生并产生有害或破坏性影响。
+
+  3. verb: (of a thought or idea) come into the mind of (someone) suddenly or unexpectedly. （一个想法或主意）突然地或意外地出现在（某人）的脑海中。
+
+  4. verb: (of a clock) indicate the time by sounding a chime or stroke. （钟表）通过发出钟声或敲击声来指示时间。
+
+  5. verb: ignite (a match) by rubbing it briskly against an abrasive surface. 点燃（火柴）通过在粗糙表面轻快地摩擦的方式。
+
+  6. verb: (of employees) refuse to work as a form of organized protest, typically in an attempt to obtain a particular concession or concessions from their employer. （雇员）拒绝工作以有组织的抗议的形式，通常是为了从雇主那里获得特定的让步。
+
+  7. verb: cancel, remove, or cross out with or as if with a pen. 用钢笔或其他取消，删除，或划掉。
+
+  8. verb: make (a coin or medal) by stamping metal. 通过冲压金属制造（硬币或奖章）。
+
+  9. verb: reach, achieve, or agree to (something involving agreement, balance, or compromise). 达成，实现，或同意（涉及协议，平衡，或妥协的事情）。
+
+  10. verb: discover (gold, minerals, or oil) by drilling or mining. 发现（黄金，矿物，或石油）通过钻探或挖矿的方式。
+
+  11. verb: move or proceed vigorously or purposefully. 大力地或有目的地移动或前进。
+
+  12. verb: take down (a tent or the tents of an encampment). 拆除（营地的帐篷）。
+
+  13. verb: insert (a cutting of a plant) in soil to take root. 插入（修剪过的植物）到土壤以便生根。
+
+  14. verb(FISHING): secure a hook in the mouth of a fish by jerking or tightening the line after it has taken the bait or fly. 在鱼上钩后，通过猛拉或拉紧鱼线，将鱼钩固定在鱼嘴中。
+
+  15. noun: a refusal to work organized by a body of employees as a form of protest, typically in an attempt to gain a concession or concessions from their employer. 由一群雇员组织的拒绝工作，作为一种抗议的形式，通常是为了从雇主那里获得让步。
+
+  16. noun: a sudden attack, typically a military one. 突然袭击，通常是军事袭击。
+
+  17. noun: a discovery of gold, minerals, or oil by drilling or mining. 通过钻探或采矿对黄金，矿物，或石油的发现。
+
+  18. noun(BASEBALL): a pitch that is counted against the batter, in particular one that the batter swings at and misses, or that passes through the strike zone without the batter swinging, or that the batter hits foul (unless two strikes have already been called). A batter accumulating three strikes is out. 对击球手进行计数的投掷，特别是击球手挥击但未命中，或未挥击就通过了击球区，或击球手击球犯规（除非两次击打已经被调用）。击球手累积三击出局。
+
+  19. noun: the horizontal or compass direction of a stratum, fault, or other geological feature. 地层，断层，或其他地质特征的水平或罗盘方向。
+
+  20. noun: short for fly strike. 动物感染蝇蛆的简写形式。
+
+  21. phrase: strike a pose - hold one's body in a particular position to create an impression. 将自己的身体保持在特定位置以产生印象。
+
+  22. phrase: strike a blow against - do something to hinder a cause, belief, or principle. 做某事来阻碍事业，信念，或原则。
+
+  23. phrase: strike a blow for - do something to help a cause, belief, or principle. 做某事来帮助事业，信念，或原则。
+
+  24. phrase: strike gold - discover gold during the course of drilling or mining. 在钻探或采矿过程中发现黄金。
+
+  25. phrase: strike hands - (of two people) clasp hands to seal a deal or agreement. （两个人）握手以达成交易或协议。
+
+  26. phrase: strike it lucky - have good luck in a particular matter. 在特定的事情上有好的运气。
+
+  27. phrase: strike it rich - acquire a great deal of money, typically in a sudden or unexpected way. 获得大量金钱，通常以突然或意想不到的方式获得。
+
+  28. phrase: strike while the iron is hot - make use of an oppotunity immediately. 立即利用机会。
+
+  29. phrase: strike me pink - used to express astonishment or indignation. 用于表示惊讶或愤慨。
+
+  30. phrase: strike back - retaliate. 报复。
+
+  31. phrase: strike down - kill or seriously incapacitate someone. 杀死某人或使某人严重丧失行为能力。
+
+  32. phrase: strike in - intervene in a conversation or discussion. 介入谈话或讨论。
+
+  33. phrase: strike into - cause or create a particular strong emotion in someone. 对某人引起或产生特别强烈的情绪。
+
+  34. phrase: strike off - officially remove someone from membership of a professional group. 正式将某人从职业团体成员中除名。
+
+  35. phrase: strike on - discover or think of something, especially unexpectedly or by chance. 发现或想到某事，尤其是意外或偶然。
+
+  36. phrase: strike out - start out on a new or independent course or endeavor. 开始新的或独立的课程或努力。
+
+  37. phrase: strike up - (of a band or orchestra) begin to play a piece of music. （乐队或管弦乐队）开始演奏一段音乐。
+
 - strive
 
   1. verb: make great efforts to achieve or obtain something. 为实现或获得某物而付出巨大的努力。
@@ -3374,6 +3478,14 @@ categories: English
   3. verb: fill (a receptacle or space) tightly with something. 用东西紧紧地填满（容器或空间）。
 
   4. verb(INFORMAL·BRITISH): used to express indifference toward or rejection of (something). 用于表达对某事的漠不关心和拒绝。
+
+- stumble
+
+  1. verb: trip or momentarily lose one's balance; almost fall. 绊住或暂时失去平衡；几乎跌倒。
+
+  2. noun: an act of stumbling. 绊住的动作。
+
+  3. idiom: stumble across - to find or learn about (something) unexpectedly. 意外发现或了解（某事）。
 
 - stunt
 
@@ -3536,6 +3648,12 @@ categories: English
   3. noun: a person who tells something. 讲述某事的人。
 
   4. noun: a person appointed to count votes, especially in a legislature. 被任命为计票的人，尤其是在立法机构中。
+
+- temptation
+
+  1. noun: the desire to do something, especially something wrong or unwise. 做某事的欲望，尤其是错误或不明智的事情。
+
+  2. phrase: resist temptation. 抵制诱惑。
 
 - term
 
@@ -3762,6 +3880,12 @@ categories: English
 - verbally
 
   1. adverb: by means of words. 在语言上。
+
+- vice
+
+  1. noun: immoral or wicked behavior. 不道德或邪恶的行为。
+
+  2. preposition: as a substitute for. 作为替代品，即副的。
 
 - vicious
 
