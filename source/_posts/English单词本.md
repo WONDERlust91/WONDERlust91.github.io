@@ -333,6 +333,12 @@ categories: English
 
   2. noun: recoil arising between parts of a mechanism. 机械部件间生产的后坐力。
 
+- ballot
+
+  1. noun: a process of voting, in writing and typically in secret. 投票的过程，以书面形式，通常是秘密的（常用于表示总票数或纸质选票本身）。
+
+  2. verb: (of an organization) elicit a secret vote from (members) on a particular issue. （组织）就特定问题征集（成员）的无记名投票（常用于表示抽签或表决）。
+
 - barely
 
   1. adverb: only just; almost not. 只是仅仅；几乎没有。
@@ -737,6 +743,12 @@ categories: English
 
   4. verb(ARCHAIC): form (something) into a mass; solidify. （古老）将（某物）形成一团；固化。
 
+- condemn
+
+  1. verb: express complete disapproval of, typically in public; censure. 表达完全不赞成，通常在是公开场合；谴责。
+
+  2. verb: sentence (someone) to a particular punishment, especially death. 判处（某人）特定的惩罚，尤其是死刑。
+
 - confer
 
   1. verb: grant or bestow (a title, degree, benefit, or right). 授予或赐予（头衔，学位，福利，或权利）。
@@ -820,6 +832,12 @@ categories: English
   1. verb: make (something) physically stronger or more solid. 使（某物）在身体上更强壮或更坚固。
 
   2. verb: combine (a number of things) into a single more effective or coherent whole. 将（许多事物）组合成一个更有效或更连贯的整体。
+
+- conspicuous
+
+  1. adjective: standing out so as to be clearly visible. 突出以便可以清晰看见。
+
+  2. phrase: conspicuous by one's absence - obviously not present in a place where one should be. 明显缺席在某人本应该在的地方。
 
 - constitute
 
@@ -1177,6 +1195,14 @@ categories: English
 
   3. phrase: in small doses - when experienced or engaged in a little at a time. 一次只体验或参与很少量。
 
+- doze
+
+  1. verb: sleep lightly. 浅睡。
+
+  2. noun: a short, light sleep. 短暂的浅睡。
+
+  3. phrase: doze off - to fall asleep especially for a short period of time. 睡着，尤其是短时间的。
+
 - drain
 
   1. verb: cause the water or other liquid in (something) to run out, leaving it empty, dry, or drier. 使（某物）中的水或其他液体耗尽，使之空、干燥。
@@ -1410,6 +1436,50 @@ categories: English
   1. verb: roughly calculate or judge the value, number, quantity, or extent of. 粗略计算或判断其价值，数目，数量，或程度。
 
   2. noun: an approximate calculation or judgment of the value, number, quantity, or extent of something. 对某物的价值，数目，数量，或范围的挖计算或判断。
+
+- even
+
+  1. adjective: flat and smooth. 平整且光滑的。
+
+  2. adjective: equal in number, amount, or value. 在数目，数量，或价值上相等。
+
+  3. adjective: (of a number, such as 2, 6, or 108) divisible by two without a remainder. （一个数，例如 2，6，或 108）可以被 2 整除没有余数，即偶数。
+
+  4. verb: make or become even. 使或变得平滑或相等。
+
+  5. adverb: used to emphasize something surprising or extreme. 用于强调令人惊讶或极端的事情。
+
+  6. phrase: even as - at the very same time as. 与此同时。
+
+  7. phrase: an even break - a fair chance. 一个公平的机会。
+
+  8. phrase: even if - despite the possibility that; no matter whether. 尽管可能；不论是否。
+
+  9. phrase: even now - now as well as before. 现在和以前一样，即使现在。
+
+  10. phrase: even then - then as well as before. 然后和以前一样，即使之后。
+
+  11. phrase: even so - in spite of that; nevertheless. 尽管如此。
+
+  12. phrase: even though - despite the fact that. 尽管事实上。
+
+  13. phrase: get even - inflict trouble or harm on someone similar to that which they have inflicted on oneself. 给某人带来麻烦或伤害，类似他们对自己造成的一样，即报复。
+
+  14. phrase: I can't even - used without a following phrase to indicate that the speaker is overwhelmed with emotion. 不使用后续的短语来表明说话者情绪激动。
+
+  15. phrase: of even date - of the same date. 同日。
+
+  16. phrase: on an even keel - (of a ship or aircraft) having the same draft forward and aft. （船舶或飞机）在前后有同样的吃水深度，即平衡。
+
+  17. noun(ARCHAIC·LITERARY): the end of the day; evening. （古老·文学）一天的结束；晚上。
+
+- evenly （注意，evenly 是 even 形容词的副词，与 even 本身的副词无关）
+
+  1. adverb: so as to present a flat or uniform surface or line. 以呈现平坦或均匀的表面或线条。
+
+  2. in equal numbers, amounts, or values. 以相等的数目，数量，或价值。
+
+  3. used to indicate a number that is divisible by two without a remainder. 用于表示被 2 整除无余数的数。
 
 - excess
 
@@ -1807,6 +1877,10 @@ categories: English
 
   3. adjective: (of a thing) of modest pretensions or dimensions. （事物）谦虚的断言或维度。
 
+- humiliate
+
+  1. verb: make (someone) feel ashamed and foolish by injuring their dignity and self-respect, especially publicly. 使（某人）感到羞耻和愚蠢，通过伤害他们的尊严和自尊，尤其是在公开场合。
+
 - hydraulic
 
   1. adjective: denoting, relating to, or operated by a liquid moving in a confined space under pressure. 表示、有关或通过液体在压力下在密闭空间中移动来操作。
@@ -1925,6 +1999,10 @@ categories: English
 
   1. adjective: not fit or suitable for eating. 不适合食用。
 
+- infant
+
+  1. noun: a very young child or baby. 非常年幼的孩子或婴儿。
+
 - in favour of
 
   1. phrase: to be replaced by. 被替换。
@@ -1940,6 +2018,10 @@ categories: English
   1. noun: the action of breaking the terms of a law, agreement, etc.; violation. 破坏法律、协议等条款的行为；侵害。
 
   2. noun: the action of limiting or undermining something. 限制或破坏某事的行为。
+
+- insidious
+
+  1. adjective: proceeding in a gradual, subtle way, but with harmful effects. 以一种逐渐的，精细的形式进行，但带有有害的影响，即暗中有害的。
 
 - insist
 
@@ -2146,6 +2228,12 @@ categories: English
   1. adverb: in the same way; also. 以同样的方式；还。
 
   2. adverb: in a like manner; similarly. 以类似的方式；相似地。
+
+- literally
+
+  1. adverb: in a literal manner or sense; exactly. 在字面意思上；准确地。
+
+  2. adverb(INFORMAL): used for emphasis or to express strong feeling while not being literally true. 用于强调或表达强烈的感觉，而不是字面上那样，可译为确实地。
 
 - loom
 
@@ -2507,6 +2595,16 @@ categories: English
 
   2. phrase(INFORMAL·AUSTRALIAN·NEW ZEALAND): unusually good. （非正式，澳大利亚，新西兰）异常的好。
 
+- overlook
+
+  1. verb: fail to notice (something). 没有注意到（某事）。
+
+  2. verb: have a view from above. 从上面看过去。
+
+  3. verb(ARCHAIC): supervise; oversee. （古老）监管；监督。
+
+  4. verb(ARCHAIC): bewitch with the evil eye. （古老）用邪恶的眼睛迷惑。
+
 ## P
 
 - painstaking
@@ -2640,6 +2738,22 @@ categories: English
   12. phrase: plain as day - very clearly. 非常清楚。
 
   13. verb(ARCHAIC): mourn or lament. （古老的）哀悼或悲叹。
+
+- plow (北美以外写作 plough)
+
+  1. noun: a large farming implement with one or more blades fixed in a frame, drawn by a tractor or by animals and used for cutting furrows in the soil and turning it over, especially to prepare for the planting of seeds. 大型农具，带有一个或多个刀片固定在框架中，被拖拉机或动物牵引，并用于在土壤中开沟和翻土，尤其是准备播种时。
+
+  2. noun: a yoga pose assumed by lying on one's back and swinging one's legs over one's head until the outstretched feet approach or touch the floor. 一种瑜伽姿势，假想是仰卧双腿摆过头，直到伸出的双脚接近或接触地面。
+
+  3. verb: turn up the earth of (an area of land) with a plow, especially before sowing. 用犁翻起（一块土地）的泥土，尤其是在播种前。
+
+  4. verb: (especially of a vehicle) move in a fast and uncontrolled manner. （尤其是车辆）以快速和不受控制的方式移动。
+
+  5. verb(NORTH AMERICAN): clear snow from (a road) using a snowplow. （北美）使用扫雪车清除（路上）的雪。
+
+  6. verb(DATED·INFORMAL): fail (an examination). （过时·非正式）考试失败。
+
+  7. phrase: plow through - to finish doing something that takes a longtime and is difficult or boring. 完成需要很长时间且困难或无聊的事情。
 
 - populate
 
@@ -2785,13 +2899,19 @@ categories: English
 
   3. noun: a project, task , idea, etc. considered in terms of its likely success or difficulty. 一个项目，任务，想法等等。深思熟虑过其可能的成功或困难。
 
-  4. verb(INFORMAL): make a suggestion of sex to (someone), especially in an unsubtle way. 向（某人）提出性提议，尤其是含蓄的方式。
+  4. verb(INFORMAL): make a suggestion of sex to (someone), especially in an unsubtle way. 向（某人）提出性提议，尤其是直白的方式。
 
   5. phrase: not a proposition - unlikely to succeed; not a viable option. 不太可能成功；不是可行选择。
 
 - publication
 
   1. noun: the preparation and issuing of a book, journal, piece of music, or other work for public sale. 准备和发行书籍，期刊，音乐，或其他作品以供公开销售。
+
+- pupil
+
+  1. noun: a student in school. 小学学生。
+
+  2. noun: the dark circular opening in the center of the iris of the eye, varying in size to regulate the amount of light reaching the retina. 在眼睛虹膜中心的黑色圆形开口，大小可变以调节到达视网膜的通光量，即瞳孔。
 
 - put down roots
 
@@ -2840,6 +2960,12 @@ categories: English
   9. noun: the root or base form of a wood. 形成树木的根或基本。
 
   10. noun(MATHEMATICS): a quantity forming or expressed as the root of another. 形成或表达为另一个量的根的量。
+
+- recipient
+
+  1. noun: a person or thing that receives or is awarded something. 接受或被授予某物的人或物。
+
+  2. adjective: receiving or capable of receiving something. 接收的或能够接收某物的。
 
 - reckon
 
@@ -2939,6 +3065,10 @@ categories: English
 
   8. phrase: lender of last resort - an institution, usually a country's central bank, that provides loans to banks or that are near collapse. 一个机构，通常是一个国家的央行，在银行接近破产时为其提供贷款。
 
+- respectively
+
+  1. adverb: separately or individually and in the order already mentioned (used when enumerating two or more items or facts that refer back to a previous statement). 分开地或单独地并按照已经提及的顺序（用于当枚举两个或多个项目或事实，在之前陈述中提及的），即分别地（注意这个词永远后置于项目后，不可跟在动词前）。
+
 - reveal
 
   1. verb: make (previously unknown or secret information) known to others. 使（先前未知或保密的信息）被其他人知道。
@@ -2964,6 +3094,18 @@ categories: English
   1. noun: a person or thing competing with another for the same objective or for superiority in the same field of activity. 为同一目标或为同一活动领域的优势而与其他方竞争的人或事务。
 
   2. verb: be or seem to be equal or comparable to. 相等或看起来相等或可比。
+
+- rot
+
+  1. verb: (chiefly of animal or vegetable matter) decay or cause tto deay by the action of bacteria and fungi; decompose. （主要是动物或植物）在细菌和真菌的作用下腐烂或导致腐烂；分解。
+
+  2. noun: the process of decaying. 腐烂的过程。
+
+  3. noun(BRITISH): a process of deterioration; a decline in standards. 恶化的过程；标准的下降。(US) corruption on the part of officials.（美国）官员腐败。
+
+  4. noun(INFORMAL·BRITISH): nonsense; rubbish. 废话；垃圾。
+
+  5. phrase: the rot sets in. 腐败形成。
 
 - roughly
 
@@ -3534,6 +3676,10 @@ categories: English
   2. adjective: concerning the essentials of something. 关于事物的本质。
 
   3. adjective: real and tangible rather than imaginary. 真实和有形的，而不是想象的。
+
+- subtle
+
+  1. adjective: (especially of a change or distinction) so delicate or precise as to be difficult to analyze or describe. （尤其是变化或区别）太精细或精确以至于很难分析或描述。
 
 - superficial
 

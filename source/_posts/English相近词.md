@@ -310,3 +310,9 @@ categories: English
   lawyer n. 律师
 
   attorney n. 律师
+
+- “一个字母”或“一个文字”
+
+  letter n. 字母（常指拉丁语中一个字母）
+
+  character n. 字（常指日文，中文中一个字）

@@ -167,9 +167,22 @@ As
 
 - 介词：作为 + n.
 - 连词：
+
   - 当/随着
+
   - 因为；例如主句表达一个现象，as 句子
+
   - 正如；as sb./sth. v. ；通常在句首或当插入语
+
+- as 的固定搭配
+
+  as yet 副词 至今还
+
+  as of + time 介词 自...起，从...开始
+
+  as for = about 介词
+
+  as to = in terms of 介词
 
 as ... as 中间可以是任何成分，视句子结构而定。
 
@@ -382,6 +395,18 @@ This book is among many books. 倒装 Among many books is this book.
 
   "..." the reply came 常倒装为 "..." came the reply
 
+- 形容词和介词短语开头（形容词和介词短语不可能作主语，故它们开头时是倒装，这样倒装是为了防止主语过长）
+
+  Smart is this student who has many computers and books.
+
+  正常语序
+
+  This student who has many computers and books is smart.
+
+- As be sb. 正如某人一样
+
+  正常语序：As sb. be
+
 ### With/Without
 
 With + ... 相当于介词短语，不能当主句
@@ -452,7 +477,13 @@ have been doing 从过去到现在一直做某事
 
   have nothing to do with 无关
 
-- control over sth. 对某事的控制。注意 control 常与 over 搭配。
+- 常与 over 搭配的动词
+
+  control over sth. 对某事的控制。
+
+  advantage over sb./sth. 比某人或某事更有优势。
+
+  edge over 同上，也表示优势。
 
 - one, the other 一个，另一个。总数只有两个。
 
