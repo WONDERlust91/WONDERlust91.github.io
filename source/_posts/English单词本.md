@@ -363,6 +363,12 @@ categories: English
 
   2. phrase: in/on one's behalf - in the interest or aid of (someone). 为了（某人）的利益或帮助。
 
+- bellyful
+
+  1. noun: a quantity of food sufficient to fill one's stomach; a sustaining meal. 足以填饱肚子的食物量；一顿持续管饱的饭。
+
+  2. phrase: have a bellyful - become intolerant of someone or something after lengthy or repeated contact. 在长期或反复接触后变得对某人或某事不能容忍。
+
 - beneath
 
   1. preposition: extending or directly underneath. 延伸或直接在下方。
@@ -661,6 +667,12 @@ categories: English
 
   1. adjective: having the necessary ability, knowledge, or skill to do something successfully. 具有成功地做某事所必需的能力，知识或技能。
 
+- complementary
+
+  1. adjective: combining in such a way as to enhance or emphasize the qualities of each other or another. 以某种方式结合以增强或强调彼此或另一个人的品质，即附加，补充，辅助。
+
+  2. adjective: relating to complementary medicine. 关于辅助医学的。
+
 - comprehend
 
   1. verb: grasp mentally; understand. 精神上把握；理解。
@@ -853,6 +865,10 @@ categories: English
 
   2. noun(NORTH AMERICAN): an act of consulting a professional; a consultation. 名词（北美）：咨询专业人士的行为；咨询。
 
+- contemplate
+
+  1. verb: look thoughtfully for a long time at. 若有所思地看了很长时间，即凝视，也常表示深思。
+
 - contemptible
 
   1. adjective: deserving contempt; despicable. 值得鄙视的；卑鄙的。
@@ -916,6 +932,12 @@ categories: English
   4. phrase: keep one's own counsel - say nothing about what one believes, knows, or plans. 对一个人的信仰、知道或计划什么都不说。
 
   5. phrase: take counsel - discuss a problem. 讨论一个问题。
+
+- counterbalance
+
+  1. noun: a weight that balances another weight. 平衡另一个重量的重量。
+
+  2. verb: (of a weight) balance (another weight). （一个重量）平衡（另一个重量）。
 
 - counterpart
 
@@ -1143,6 +1165,12 @@ categories: English
 
   1. verb: make or become less. 使变少。
 
+- diner
+
+  1. noun: a person who is eating, typically a customer in a restaurant. 正在吃饭的人，通常是餐馆的顾客。
+
+  2. noun: a dining car on a train. 火车上的餐车（北美常用于形容路边小餐馆）。
+
 - discard
 
   1. verb: get rid of (someone or something) as no longer useful or desirable. 摆脱（某人或某物）因为不在有用或合意。
@@ -1168,6 +1196,10 @@ categories: English
 - disparaging
 
   1. adjective: expressing the opinion that something is of little worth; derogatory. 表达某事物没价值的观点；贬低的。
+
+- distaste
+
+  1. noun: mild dislike or aversion. 轻微的不喜欢或厌恶。
 
 - distinction
 
@@ -1481,6 +1513,12 @@ categories: English
 
   3. used to indicate a number that is divisible by two without a remainder. 用于表示被 2 整除无余数的数。
 
+- evolve
+
+  1. verb: develop gradually, especially from a simple to a more complex form. 逐渐发展，尤其是从简单到复杂的形式。
+
+  2. verb(CHEMISTRY): give off (gas or heat). 释放出（气体或热量）。
+
 - excess
 
   1. noun: an amount of something that is more than necessary, permitted, or desirable. 某物的数量，这个数量超过了必要的，许可的，或可取的。
@@ -1499,6 +1537,10 @@ categories: English
 
   3. noun: the branch of a government responsible for putting decisions or laws into effect. 负责使决定或法律生效的政府部门。
 
+- exemplify
+
+  1. verb: be a typical example of. 作为一个典型的例子，可译为印证了。
+
 - exert
 
   1. verb: apply or bring to bear (a force, influence, or quality). 施加或使承受（力量，影响或品质）。
@@ -1508,6 +1550,14 @@ categories: English
 - expectancy
 
   1. noun: the state of thinking or hoping that something, especially something pleasant, will happen or be the case. 一种思考或希望的状态，希望某事，尤其是令人愉快的事情，将会发生或成为这样的状态。
+
+- exploit
+
+  1. verb: make full use of and derive benefit from (a resource). 充分利用（资源）并从中获取利益（也指剥削）。
+
+  2. noun: a bold or daring feat. 大胆的壮举。
+
+  3. noun: a software tool designed to take advantage of a flaw in a computer system, typically for malicious purposes such as installing malware. 一种软件工具，被设计用于利用计算机系统漏洞，通常用于恶意目的，例如安装恶意软件。
 
 - extravagant
 
@@ -1625,6 +1675,22 @@ categories: English
 
   16. phrase: figure out - solve a problem or discover the answer to a question. 解决问题或发现问题的答案。
 
+- file
+
+  1. noun: a folder or box for holding loose papers that are typically arranged in a particular order for easy reference. 用于存放松散纸张的文件夹或盒子，通常以特定的顺序排列以便于查找。
+
+  2. verb: place (a document) in a cabinet, box, or folder in a particular order for preservation and easy reference. 将（文件）以特定顺序放在柜子，盒子，或文件夹中，以便保存和参考。
+
+  3. phrase: on file - in a file or filing system. 在文件或归档系统中。
+
+  4. noun: a line of people or things one behind another. 一个接一个排成一行的人或事物。
+
+  5. verb: (of a group of people) walk one behind the other, typically in an orderly and solemn manner. （一群人）一个接一个地走，通常以有序和庄严的方式。
+
+  6. noun: a tool with a roughened surface or surfaces, typically of steel, used for smoothing or shaping a hard material. 具有一个或多个粗糙表面的工具，通常是钢制的，用于打磨或塑造硬质材料，即锉刀。
+
+  7. verb: smooth or shape (something) with a file. 用锉刀打磨或塑造（某物）。
+
 - flee
 
   1. verb: run away from a place or situation of danger. 逃离某地或危险的情况。
@@ -1681,6 +1747,10 @@ categories: English
 
   5. verb: be laden or burdened with. 承载或负担。
 
+- frenzy
+
+  1. noun: a stated or period of uncontrolled excitement or wild behavior. 不受控的兴奋或狂野的行为的状态或时期。
+
 - from time to time
 
   1. phrase: sometimes, but not regulary. 有时但不经常。
@@ -1732,6 +1802,20 @@ categories: English
   3. verb(LITERARY): have a dark or somber appearance. （文学的）有一个黑暗或阴沉的外观。
 
   4. verb: be or look depressed or despondent. 变得或看起来郁闷或沮丧。
+
+- goodness
+
+  1. noun: the quality of being morally good or virtuous. 在道德上好或有德行的品质。
+
+  2. noun: the beneficial or nourishing element of food. 食物中有益或有营养的元素。
+
+  3. exclamation: (as a substitution for "God") expressing surprise, anger, etc. （代替"GOD"）表示惊讶，愤怒等。
+
+  4. phrase: goodness of fit - the extent to which observed data match the values expected by theory. 观测数据与理论预期值的匹配程度。
+
+  5. phrase: have the goodness to do something - used in exaggeratedly polite requests. 用在夸张地礼貌请求中。
+
+  6. phrase: out of the goodness of one's heart - motivated by kindness and generosity rather than the hope of personal gain. 出于善良和慷慨的动机而不是期望获得个人利益。
 
 - governor
 
@@ -1851,6 +1935,10 @@ categories: English
 
   1. noun: a home providing care for the sick or terminally ill. 为病人或绝症病人提供护理的家。
 
+- hostility
+
+  1. noun: hostile behavior; unfriendiness or opposition. 敌对行为；不友好或反对。
+
 - however
 
   1. adverb: used to introduce a statement that contrasts with or seems to contradict something that has been said previously. 用于介绍与先前所说的事物形成对比或似乎矛盾的陈述。
@@ -1926,6 +2014,20 @@ categories: English
   2. adjective: existing only in the imagination; desirable or perfect but not likely to become a reality. 只存在于想象中；理想或完美但不太可能成为现实。
 
   3. noun: a person or thing regarded as perfect. 被视为完美的人或事物。
+
+- identify
+
+  1. verb: establish or indicate who or what (someone or something) is. 确立或指明（某人）是谁或（某物）是什么。
+
+     - recognize or distinguish (especially something considered worthy of attention). 识别或区分（尤其是被认为值得关注的事物）。
+
+     - assign (a particular characteristic or categorization) to oneself; describe oneself as belonging to (a particular category or group). 分配（一个特定的特征或分类）给自己；描述自己属于（特定的类别或群体）。
+
+  2. verb: associate (someone) closely with; regard (someone) as having strong links with. 将（某人）紧密联系到；认为（某人）有很强的关联与（也常用于表示等同于或认同）。
+
+     - equate (someone or something) with. 等同于（某人或某物）（identify A with B）。
+
+     - regard oneself as sharing the same characteristics or thinking as someone else. 认为自己与他人具有相同的特征或想法（identify with sb.）。
 
 - ignorant
 
@@ -2018,6 +2120,10 @@ categories: English
   1. noun: the action of breaking the terms of a law, agreement, etc.; violation. 破坏法律、协议等条款的行为；侵害。
 
   2. noun: the action of limiting or undermining something. 限制或破坏某事的行为。
+
+- innate
+
+  1. adjective: inborn; natural. 先天的；自然的。
 
 - insidious
 
@@ -2177,6 +2283,24 @@ categories: English
 
   3. verb(BRITISH): (with reference to tights or stockings) develop or cause to develop a ladder. （英国）（使用紧身衣或长袜）制造梯子。
 
+- lag
+
+  1. verb: fall behind in movement, progress, or development; not keep pace with another or others. 在运动，进度，或发展上落后；没有跟上其他人的步伐。
+
+  2. verb(NORTH AMERICAN·BILLIARDS): determine the order of play by striking the cue ball from balk to rebound off the top cushion, first stroke going to the player whose ball comes to rest nearer the bottom cushion. （北美·台球）决定比赛顺序，通过在限制区击打母球到顶库并反弹，停球距离底库越近的球员获得第一次击打。
+
+  3. noun: a period of time between one event or phenomenon and another. 一个事件或现象与另一个事件或现象之间的一段时间。
+
+  4. noun(PHYSICS): a retardation in an electric current or movement. （物理学）电流或运动的延迟。
+
+  5. verb: enclose or cover (a boiler, pipes, etc.) with material that provides heat isulation. 使用隔热材料封闭或覆盖（锅炉，管道等等）。
+
+  6. noun: the non-heat-conducting cover of a boiler, pippes, etc.; lagging. 锅炉，管道等的非导热盖；隔热。
+
+  7. noun(INFORMAL·BRITISH): a person who has been frequently convicted and sent to prison. （非正式·英国）经常被定罪并送进监狱的人。
+
+  8. verb(ARCHAIC): arrest or send to prison. （古老）逮捕或送进监狱。
+
 - lateral
 
   1. adjective: of, at, toward, or from the side or sides. 的侧边，在侧边，朝向侧边，或从侧边。
@@ -2254,6 +2378,12 @@ categories: English
   1. noun: a female domestic servant. 女佣。
 
   2. noun(ARCHAIC): an unmarried girl or young woman. （古老）未婚少女或年轻女子。
+
+- manicure
+
+  1. noun: a cosmetic treatment of the hands involving shaping and often painting of the nails, removal of the cuticles, and softening of the skin. 一种手部美容治疗，包括修整和经常涂指甲，去除角质层和软化皮肤，即美甲。
+
+  2. verb: give a manicure to. 给...做美甲。
 
 - manner
 
@@ -2333,6 +2463,12 @@ categories: English
 
   7. phrase: with might and main - with all one's strength or power. 使出某人所有的力量。
 
+- militant
+
+  1. adjective: combative and aggressive in support of a political or social cause, and typically favoring extreme, violent, or confrontational methods. 好斗或气势汹汹的在支持政治或社会事业上，并通常倾向于极端，暴力或对抗的方式。
+
+  2. noun: a militant person. 一个激进的人。
+
 - mindset
 
   1. noun: the established set of attitudes held by someone. 某人持有的既定的一系列态度，即心态。
@@ -2352,6 +2488,14 @@ categories: English
   2. adjective: not authentic or real, but without the intention to deceive. 不是确切或真实的，但没有欺骗的意图。
 
   3. noun(DATED): an object of derision. （过时的）嘲笑的对象。
+
+- modest
+
+  1. adjective: unassuming or moderate in the estimation of one's abilities or a chievements. 谦逊或适度地评估一个人的能力或成就。
+
+  2. adjective: (of an amount, rate, or level) relatively moderate, limited, or small. （数量，比率，或水平）相对适中，有限，或小。
+
+  3. adjective: dressing or behaving so as to avoid impropriety or indecency, especially to avoid attracting sexual attention (typically used of a woman). 着装或行为避免不当或不雅，尤其是避免引起性注意（通常用于女性）。
 
 - moisture
 
@@ -2452,6 +2596,16 @@ categories: English
 - newsletter
 
   1. noun: a bulletin issued periodically to the members of a society, business, or organization. 定期向社会，企业，或组织的成员发布的公告。
+
+- noble
+
+  1. adjective: belonging to a hereditary class with high social or political status; aristoratic. 属于较高社会或政治地位地位的世袭阶层；贵族的。
+
+  2. adjective: having or showing fine personal qualities or high moral principles and ideals. 具有或表现出良好的个人品质或崇高的道德原则和理想。
+
+  3. noun: (especially in former times) a person of noble rank or birth. （尤其是过去）具有贵族地位或出身的人。
+
+  4. noun(HISTORICAL): a former English gold coin. （历史）以前英国的金币。
 
 - nonconformist
 
@@ -2589,6 +2743,14 @@ categories: English
 
   1. noun: an exclamation or shout. 感叹或喊叫。
 
+- outlet
+
+  1. noun: a pipe or hole through which water or gas may escape. 水或气体可从中逸出的管道或孔（也常用来指河口或插座）。
+
+  2. noun: a place from which goods are sold or distributed. 销售或分销商品的地方。
+
+  3. noun: a means of expressing one's talents, energy, or emotions. 表达一个人才能，精力，或情感的方式。
+
 - out of the box
 
   1. phrase(INFORMAL): used to refer to the immediate usability or functionality of a newly purchased product, typically an electronic device or a piece of software. （非正式）开箱即用的。
@@ -2677,6 +2839,14 @@ categories: English
 
   1. verb: (of something complicated or unaccountable) cause (someone) to feel completely baffled. （复杂或无法解释的）使（某人）感到完全困惑。
 
+- pervade
+
+  1. verb: (especially of a smell) spread through and be perceived in every part of. （尤其是指气味）在每个部分传播并被感知。
+
+- pervasive
+
+  1. adjective: (especially of an unwelcome influence or physical effect) spreading widely throughtout an area or a group of people. （尤其是不受欢迎的影响或身体上的影响）在一个地区或一群人中广泛传播。
+
 - pessimistic
 
   1. adjective: tending to see the worst aspect of things or believe that the worst will happen. 倾向于看到事情最糟糕的一面或相信最糟糕的事情会发生，即悲观主义。
@@ -2755,6 +2925,14 @@ categories: English
 
   7. phrase: plow through - to finish doing something that takes a longtime and is difficult or boring. 完成需要很长时间且困难或无聊的事情。
 
+- polish
+
+  1. verb: make the surface of (something) smooth and shiny by rubbing it. 通过摩擦使（某物）表面光滑有光泽。
+
+- ponder
+
+  1. verb: think about (something) carefully, especially before making a decision or reaching a conclusion. 仔细考虑（某事），尤其是在做出决定或得出结论之前。
+
 - populate
 
   1. verb: cause people to settle in (an area or place). 使人们在（一个地区或地方）定居。
@@ -2762,6 +2940,12 @@ categories: English
   2. verb: fill or be present in (a place, environment, or domain). 填充或出现在（地点，环境，或领域）。
 
   3. verb(COMPUTING): add data to a previously empty section of (an electronic form, document, etc.). 把数据添加到（电子表格、文档等）的先前空白的区域。
+
+- populist
+
+  1. noun: a person, especially a politician, who strives to appeal to ordinary poeple who feel that their concerns are disregarded by established elite groups. 一个人，尤其是政治家，努力吸引普通人，这些普通人感到他们所关心的事情被既有精英群体所忽视，即平民主义者。
+
+  2. adjective: relating to or characteristic of a political approach that strives to appeal to ordinary people who feel that their concerns are disregarded by established elite groups. 与一种政治方法有关或具有政治方法的特征，即努力吸引普通人，这些普通人感到他们关心的事情被既有精英群体所忽视，即平民主义的。
 
 - pose
 
@@ -2849,6 +3033,10 @@ categories: English
 
   3. noun(PSYCHOLOGY): the fact of an item having been presented earlier to the subject (especially as increasing its likelihood of being remembered). （心理学）一个条目已经被较早地展现给了主体（尤其是增加了它被记住的可能性）。
 
+- proclaim
+
+  1. verb: announce offcially or publicly. 正式或公开宣布。
+
 - profess
 
   1. verb: claim that one has (a quality or feeling), especially when this is not the case. 宣称某人有（品质或感觉），尤其当情况并非如此时。
@@ -2887,9 +3075,37 @@ categories: English
 
   7. phrase: in profile - (in reference to someone's face) as seen from one side. （指某人的脸）被从一侧看。
 
+- profound
+
+  1. adjective: (of a state, quality, or emotion) very great or intense. （状态，品质，或感情）非常大或激烈。
+
+  2. adjective: (of a person or statement) having or showing great knowledge or insight. （人或陈述）具有或表现出丰富的知识或洞察力。
+
+  3. adjective(ARCHAIC): at, from, or extending to a great depth; very deep. 在，从，或延伸到很深的地方；很深的。
+
+  4. noun(LITERARY): the vast depth of the ocean or of the mind. 海洋或思想的巨大的深度。
+
 - prolong
 
   1. verb: extend the duration of. 延长某事的期间。
+
+- promise
+
+  1. noun: a declaration or assurance that one will do a particular thing or that a particular thing will happen. 一个人将做某件特定的事或某件特定的事将会发生的声明或保证。
+
+     - the quality of potential excellence. 潜在卓越的品质。
+
+     - an indication that something specified is expected or likely to occur. 指定的某事预期或可能发生的迹象。
+
+  2. verb: assure someone that one will definitely do, give, or arrange something; undertake or delare that something will happen. 向某人保证绝对会做，给予，或安排某事；承诺或宣布某事将会发生。
+
+  3. verb: give good grounds for expecting (a particular occurrence or situation). 对期待的（特定事件或情况）提供良好的根据。
+
+  4. phrase: I promise - used for emphasis, especially so as to reassure, encourage, or threaten someone. 用于强调，尤其是用来安抚，鼓励，或威胁某人。
+
+  5. phrase: promise the moon - make extravagant promises that are unlikely to be fulfilled. 做出一个奢侈的承诺，这个承诺是不太可能被实现的。
+
+  6. phrase: promises, promises - used to indicate that the speaker is skeptical about someone's stated intention to do something. 用于表示说话者对某人陈述的做某事的意图持怀疑态度。
 
 - proposition
 
@@ -2967,6 +3183,10 @@ categories: English
 
   2. adjective: receiving or capable of receiving something. 接收的或能够接收某物的。
 
+- recitation
+
+  1. noun: the action of repeating something aloud from memory. 从记忆中大声重复某事的动作，即背诵。
+
 - reckon
 
   1. verb: establish by calculation. 通过计算确定。
@@ -3035,6 +3255,10 @@ categories: English
 
   6. verb(ARCHAIC): make (something) stand out. 使（某物）脱颖而出。
 
+- reluctant
+
+  1. adjective: unwilling and hesitant; disinclined. 不情愿和犹豫；不愿意的。
+
 - remark
 
   1. verb: say something as a comment; mention. 说些事作为评论；提及。
@@ -3042,6 +3266,14 @@ categories: English
   2. verb: regard with attention; notice. 重视；注意。
 
   3. noun: a written or spoken comment. 书面或口头评论。
+
+- remedy
+
+  1. noun: a medicine or treatment for a disease or injury. 治疗疾病或伤害的药物或疗法（也常指对抗或消除不良的方法）。
+
+  2. noun: the margin within which coins as minted may differ from the standard fineness and weight. 铸造的硬币与标准的精细度和重量的不同的量。
+
+  3. verb: set right (an undesirable situation). （不好的情况）设置回正确，即补救。
 
 - resent
 
@@ -3089,6 +3321,10 @@ categories: English
 
   3. noun: a lorry which is not articulated. 没有铰链的货车。
 
+- rigorous
+
+  1. adjective: extremely thorough, exhaustive, or accurate. 极其彻底，详尽，或准确的，即严苛的。
+
 - rival
 
   1. noun: a person or thing competing with another for the same objective or for superiority in the same field of activity. 为同一目标或为同一活动领域的优势而与其他方竞争的人或事务。
@@ -3124,6 +3360,22 @@ categories: English
   1. phrase: exclude something as a possibility. 排除某人或某事的可能性。
 
 ## S
+
+- sake
+
+  1. noun: for the purpose of; in the interest of; in order to achieve or preserve. 为了...的目的；为了...的利益；为了实现或保持。
+
+  2. noun: out of consideration for or in order to help someone. 出于对某人的考虑或为了帮助某人。
+
+  3. noun: used to express impatience, annoyance, urgency, or desperation. 用于表达不耐烦，烦躁，紧急，或绝望。
+
+  4. phrase: for the sake of - in order to. 为了。
+
+  5. phrase: for God's sake - an exclamation of anger, surprise, or impatience. 表示愤怒，惊讶，或不耐烦的感叹。
+
+  6. phrase: for old times' sake - in memory of former times; in acknowledgement of a shared past. 怀念以前的时光；承认共同的过去。
+
+  7. noun: a Japanese alcoholic drink made from fermented rice, traditionally drunk warm in small porcelain cups. 一种由发酵大米制成的日本酒精饮料，传统上是在小瓷杯中趁热饮用，即清酒。
 
 - sanitary
 
@@ -3298,6 +3550,10 @@ categories: English
   2. verb: move back or away, especially because of fear or disgust. 后退或离开，尤其是因为恐惧或厌恶。
 
   3. noun(INFORMAL): a psychiatrist. 精神科医生。
+
+- sliver lining
+
+  noun: a consoling or hopeful prospect. 令人欣慰或充满希望的前景。
 
 - skeptical (sceptical)
 
@@ -3695,6 +3951,10 @@ categories: English
 
   1. verb: observe and direct the execution of (a task, project, or activity). 观察和指导（任务、项目或活动）的执行。
 
+- suppress
+
+  1. verb: forcibly put an end to. 强行终止。
+
 - surge
 
   1. noun: a sudden powerful forward or upward movement, especially by a crowd or by a natural force such as the waves or tide. 一个突然的有力的向上或向前的运动，尤其是由人群或自然力量，如波浪或潮汐引起的。
@@ -3724,6 +3984,16 @@ categories: English
 - suspicious
 
   1. adjective: having or showing a cautious distrust of someone or something. 有或表现出谨慎的怀疑对某人或某事。
+
+- sustain
+
+  1. verb: strengthen or support physically or mentally. 在身体上或精神上加强或支持。
+
+  2. verb: undergo or suffer (something unpleasant, especially an injury). 经历或遭受（不愉快的事情，尤其是受伤）。
+
+  3. verb: cause to continue or be prolonged for an extended period or without interruption. 导致持续或延长一段较长的时间或没有中断。
+
+  4. verb: uphold, affirm, or confirm the justice or validity of. 坚持，肯定，确认正义或有效。
 
 - swing
 
@@ -3765,6 +4035,10 @@ categories: English
 
   2. noun: a drinking party or convivial discussion, especially as held in ancient Greece after a banquet (and notable as the title of a work by Plato). 酒会或欢乐的讨论，尤其是古希腊宴会后举行的（以柏拉图作品的标题著称）。
 
+- symptom
+
+  1. noun: a physical or mental feature which is regarded as indicating a condition of disease, particularly such a feature that is apparent to the patient. 身体或心理的特征，这些特征被认为指示了疾病的情况，尤其是对患者明显的特征，即症状。
+
 - synonymous
 
   1. adjective: (of words or expressions) having the same, or nearly the same, meaning. （词语或表达）有相同或几乎相同的含义。
@@ -3794,6 +4068,24 @@ categories: English
   3. noun: a person who tells something. 讲述某事的人。
 
   4. noun: a person appointed to count votes, especially in a legislature. 被任命为计票的人，尤其是在立法机构中。
+
+- temper
+
+  1. noun: a person's state of mind seen in terms of their being angry or calm. 人的心理状态，关于生气或平静。
+
+  2. noun: the degree of hardness and elasticity in steel or other metal. 钢或其他金属的硬度和延展性。
+
+  3. verb: improve the hardness and elasticity of (steel or other metal) by reheating and then cooling it. 通过重新加热后再冷却，来提高（钢或其他金属）的硬度和延展性，即淬火。
+
+  4. verb: act as a neutralizing or counterbalancing force to (something). 作为（某物）中和或制衡的力。
+
+  5. verb: tune (a piano or other instrument) so as to adjust the note intervals correctly. 调整（钢琴或其他乐器）的音，以正确地调整音符的间隔。
+
+  6. phrase: keep one's temper - retain composure when angry. 在生气时保持冷静。
+
+  7. phrase: lose one's temper - fail to retain composure when angry. 在生气时无法保持冷静。
+
+  8. phrase: out of temper - in an irritable mood. 心情烦躁。
 
 - temptation
 
@@ -3872,6 +4164,20 @@ categories: English
   5. verb: (of a clock or other mechanical device) make regular short sharp sounds, typically one for every second of time that passes. （时钟或其他机械设备）发出规律短促尖锐的声音，通常每秒发出一次。
 
   6. verb(BRITISH): mark (an item) with a tick or select (a box) on a form, questionnaire, etc., to indicate that something has been chosen, checked, approved, or dealt with. 在表格或问卷上用对钩标记（项目）或选中（方框），以表明某事已经被选择，检查，批准或处理。
+
+- toast
+
+  1. noun: sliced bread browned on both sides by exposure to radiant heat. 通过暴露在热辐射下，两面都变成褐色的切片面包。
+
+  2. noun: a call to a gathering of people to raise their glasses and drink together in honor of a person or thing, or an instance of drinking in this way. 号召一群人举起酒杯一起喝酒来庆祝某人或某物，或以这种方式喝酒的事例。
+
+  3. verb: cook or brown (food, especially bread or cheese) by exposure to a grill, fire, or other source of radiant heat. 通过暴露于烤架，火，或其他辐射热源来烹调或使变褐色（食物，尤其是面包或奶酪）。
+
+  4. verb: drink to the health or in honor of (someone or something) by raising one's glass to gether with others. 为了健康或为了庆祝（某人或某物）而与他人举杯共饮。
+
+  5. phrase: be toast - be or be likely to become finished, defunct, or dead. 处于或可能处于完成，失效，或死亡。
+
+  6. verb: (of a DJ) accompany a reggae backing track or music with improvised rhythmic speech. （DJ 相关）结合雷鬼伴奏或音乐到即兴说唱。
 
 - transient
 
@@ -3966,6 +4272,14 @@ categories: English
   3. verb: increase the size or improve the quality of. 增大尺寸或改善质量。
 
   4. verb: convert (an image or video) so that it displays correctly in a higher resolution format. 转换（图片或视频）以便于以更高的分辨率正确地展示。
+
+- upside
+
+  1. noun: the positive or favorable aspect of something. 某事积极或有利的方面。
+
+  2. noun: an upward movement of stock prices. 股票价格向上的浮动。
+
+  3. phrase: upside the head - on the side of head. 在头上。
 
 - urge
 
@@ -4064,6 +4378,10 @@ categories: English
 - vulgar
 
   1. adjective: lacking sophistication or good taste; unrefined. 缺少精致或好的品位；粗的；
+
+- vulnerable （固定搭配介词 to）
+
+  1. adjective: susceptible to physical or emotional attack or harm. 容易受到身体或情感上的攻击或伤害。
 
 ## W
 

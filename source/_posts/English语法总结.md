@@ -596,3 +596,23 @@ have been doing 从过去到现在一直做某事
   The day you saw me, you were happy.
 
   The moment I saw you, I fell in love with you.
+
+- place a value on sth
+
+  Value has been placed on sth
+
+  两个固定搭配，上价值，即重视某事。
+
+- anything but 任何事除了
+
+  everything but 任何事除了
+
+  nothing but 什么都不是除了
+
+  这里可以把 but 翻译为除了，主要强调 but 后的意思。
+
+  例句：
+
+  You are everything but smart. = You are not smart.
+
+  He is nothing but important. = He is important.

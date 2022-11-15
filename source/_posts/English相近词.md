@@ -316,3 +316,21 @@ categories: English
   letter n. 字母（常指拉丁语中一个字母）
 
   character n. 字（常指日文，中文中一个字）
+
+- “医疗”相关词
+
+  symptom n. 症状
+
+  prescribe v. 开药方
+
+  prescription n. 药方
+
+  diagnose v. 诊断
+
+  diagnosis n. 诊断
+
+- 表示“沉思”
+
+  contemplate v. 凝视；考虑；深思
+
+  ponder v. 仔细思考
