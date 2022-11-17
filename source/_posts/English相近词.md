@@ -334,3 +334,19 @@ categories: English
   contemplate v. 凝视；考虑；深思
 
   ponder v. 仔细思考
+
+- 表示“能够”词组
+
+  be capable of doing/n.
+
+  be able to do
+
+- 表示“来自于”词组
+
+  stem from
+
+  come from
+
+  spring from
+
+  originate from

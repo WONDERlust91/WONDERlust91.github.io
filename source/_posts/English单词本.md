@@ -33,6 +33,10 @@ categories: English
 
   6. noun: insulting and offensive language. 侮辱性和攻击性的语言。
 
+- abundant
+
+  1. existing or available in large quantities; plentiful. 大量存在或可用；丰富的。
+
 - accommodate
 
   1. verb: (of physical space, especially a building) provide lodging or sufficient space for. （物理空间，尤其是建筑物）提供住宿或足够的空间。
@@ -142,6 +146,10 @@ categories: English
   1. adjective: very skilled or proficient at something. 非常熟练或精通某事。
 
   2. noun: a person who is skilled or proficient at something. 擅长或精通某事的人。
+
+- adjoin
+
+  1. verb: be next to and joined with (a building, room, or piece of land). 与（建筑，房间，或一块土地）相邻并与之相连。
 
 - admit
 
@@ -571,9 +579,21 @@ categories: English
 
   2. noun: the ritual observances and procedures performed at grand and formal occasions. 在隆重和正式场合举行的纪念仪式或流程。
 
+- chamber
+
+  1. noun: a large room used for formal or public events. 用于正式或公共事件的大房间。
+
+  2. noun(ARCHAIC): a private room, especially a bedroom. （古老）私人房间，尤其是卧室。
+
+  3. noun: an enclosed space or cavity. 封闭的空间或空腔。
+
+  4. noun(MUSIC): of or for a small group of instruments. （音乐）关于一小组乐器。
+
+  5. verb: place (a bullet) into the chamber of a gun. 将（一颗子弹）放入枪膛。
+
 - chances are
 
-  1. idiom: it is very likely that 很有可能
+  1. idiom: it is very likely that. 很有可能。
 
 - citizenry
 
@@ -636,6 +656,18 @@ categories: English
   3. verb(MATHEMATICS): (of two operations or quantities) have a commutative relation. （数学）（两个操作或数量）具有交换关系。
 
   4. noun: a regular journey of some distance to and from one's place of work. 往返工作地的一定距离的常规路程。
+
+- companion
+
+  1. noun: a person or animal with whom one spends a lot of time or with whom one travels. 共度大量时光或一起旅行的人或动物。
+
+  2. noun: one of a pair of things intended to complement or match each other. 一对事物中的一个，目的是补充或匹配另一个。
+
+  3. noun: a member of the lowest grade of certain orders of knighthood. 某些骑士团中最低等级成员。
+
+  4. verb(FORMAL): accompany. （正式）陪伴。
+
+  5. noun: a covering over the hatchway leading below decks. 在通往甲板下方的舱口上的覆盖。
 
 - compassion
 
@@ -1841,6 +1873,10 @@ categories: English
 
      2. assume that something is true without questioning it. 假定某事是真实的而不去质疑。
 
+- grievance
+
+  1. noun: a real or imagined wrong or other cause for complaint or protest, especially unfair treatment. 真实的或想象中的错误或其他原因，对于投诉或抗议，尤其是不公平的待遇，即不平或怨愤。
+
 - grip
 
   1. verb: take and keep a firm hold of; grasp tightly. 抓住并牢牢把握；紧紧抓住。
@@ -2061,6 +2097,16 @@ categories: English
 
   1. adjective: lacking the quality or quantity required; insufficient for a purpose. 缺乏所需要的质量或数量；不足以达到目的的。
 
+- incline
+
+  1. verb: feel willing or favorably disposed toward (an action, belief, or attitude). 感到愿意或赞同地倾向（行为，信仰，或态度）。
+
+  2. verb: have a tendency to do something. 有做某事的倾向。
+
+  3. verb: lean or turn away from a given plane or direction, especially the vertical or horizontal. 倾斜或远离给定的平面或方向，尤其是垂直或水平方向。
+
+  4. noun: an inclined surface or plane; a slope, especially on a road or railway. 倾斜的表面或平面；斜坡，尤其是路上或铁路上的。
+
 - incorporate
 
   1. verb: take in or contain (something) as part of whole; include. 将（某物）作为整体的一部分纳入或包含；包括。
@@ -2097,6 +2143,16 @@ categories: English
 
   1. adjective: absolutely necessary. 绝对必要的，不可或缺的。
 
+- induce
+
+  1. verb: succeed in persuading or influencing (someone) to do something. 成功说服或影响（某人）做某事。
+
+  2. verb: bring about or give rise to. 导致或引起。
+
+  3. verb(MEDICINE): bring on (the birth of a baby) artificially, typically by the use of drugs. （医药）人工地带来（婴儿的出生），通常通过使用药物的方式，即引产。
+
+  4. verb(LOGIC): derive by inductive reasoning. （逻辑）由归纳的推理派生而出。
+
 - inedible
 
   1. adjective: not fit or suitable for eating. 不适合食用。
@@ -2132,6 +2188,14 @@ categories: English
 - insist
 
   1. verb: demand something forcefully, not accepting refusal. 强求某事，不接受拒绝。
+
+- instruction
+
+  1. noun: a direction or order. 指示或命令。
+
+  2. noun: detailed information telling how something should be done, operated, or assembled. 告知如何完成，操作，或组装某事的详细信息。
+
+  3. noun: teaching; education. 教学；教育。
 
 - intelligence
 
@@ -2336,6 +2400,12 @@ categories: English
   1. adjective: conforming to the law or to rules. 符合法律或规则的。
 
   2. verb: make legitimate; justify or make lawful. 使合法；正名或使合法。
+
+- lesser
+
+  1. adjective: not so great or important as the other or the rest. 没有其他或剩下的那么好或重要。
+
+  2. phrase: the lesser evil - the less harmful or unpleasant of two bad choices or possibilities. 较少的危害或不愉快在两个糟糕的选择或可能中。
 
 - lest
 
@@ -3177,6 +3247,12 @@ categories: English
 
   10. noun(MATHEMATICS): a quantity forming or expressed as the root of another. 形成或表达为另一个量的根的量。
 
+- readily
+
+  1. adverb: without hesitation or reluctance; willingly. 没有犹豫或没有不情愿的；心甘情愿的。
+
+     - without delay or difficulty; easily. 没有延迟或困难；容易地。
+
 - recipient
 
   1. noun: a person or thing that receives or is awarded something. 接受或被授予某物的人或物。
@@ -3312,6 +3388,12 @@ categories: English
 - revive
 
   1. verb: restore to life or consciousness. 恢复生命或意识。
+
+- righteous
+
+  1. adjective: (of a person or conduct) morally right or justifiable; virtuous. （人或行为）道德上正确或正当的；有德行的。
+
+  2. adjective(INFORMAL·US): very good; excellent. （非正式·美国）很好的；出色的。
 
 - rigid
 
@@ -3551,6 +3633,38 @@ categories: English
 
   3. noun(INFORMAL): a psychiatrist. 精神科医生。
 
+- slack
+
+  1. adjective: not taut or held tightly in position; loose. 没有拉紧或没有紧紧固定在位置上；松动的。
+
+  2. adjective: (of business) characterized by a lack of work or activity; quiet. （商业上）以缺乏工作或活动为特征的；安静的。
+
+  3. adjective: having or showing laziness or negligence. 有或表现出懒惰或疏忽。
+
+  4. adjective: (of a tide) neither ebbing nor flowing. （潮汐）既不退潮，也不流动。
+
+  5. noun: the part of a rope or line which is not held taut; the loose or unused part. 绳子或线没有拉紧的部分；松弛或未使用的部分。
+
+  6. noun: a spell of inactivity or laziness. 无所事事或懒惰。
+
+  7. noun: casual trousers. 休闲裤。
+
+  8. verb: loosen (something, especially a rope). 松开（某物，尤其是绳子）。
+
+  9. verb: decrease or reduce in intensity, quantity, or speed. 在强度，数量，或速度上减少或降低。
+
+  10. verb(INFORMAL·BRITISH): workslowly or lazily. 缓慢或懒惰地工作。
+
+  11. verb: slake (lime). （生石灰）遇水反应。
+
+  12. adverb: loosely. 松散地。
+
+  13. phrase: cut someone some slack - allow someone some leeway in their conduct. 允许某人在他们的行为上有一定的余地。
+
+  14. phrase: pick up the slack - use up a surplus or improve the use of resources to avoid an undesirable lull in business. 用完盈余或改善资源的使用，以避免业务出现不良停滞。
+
+  15. noun: coal dust or small pieces of coal. 煤粉或小煤块。
+
 - sliver lining
 
   noun: a consoling or hopeful prospect. 令人欣慰或充满希望的前景。
@@ -3730,6 +3844,34 @@ categories: English
 - statesman
 
   1. noun: a skilled, experienced, and respected political leader or figure. 一个熟练，经验丰富，且受人尊敬的政治领袖或人物。
+
+- stem
+
+  1. noun: the main body or stalk of a plant or shrub, typically rising above ground but occasionally subterranean. 植物或灌木的主体或茎，通常长出地面，但偶尔会在地下。
+
+  2. noun: a long, thin supportive or main section of something. 某物的细长支撑或主要部分。
+
+  3. noun(GRAMMAR): the root or main part of a noun, adjective, or other word, to which inflections or formative elements are added. （语法）名词，形容词，或其他词的词根或主要部分，词形变化或形成元素被加在其上。
+
+     - (ARCHAIC·LITERARY) the main line of descent of a family or nation. （古老·文学）家庭或国家血统的主线。
+
+  4. noun: the main upright timber or metal piece at the bow of a ship, to which the ship's sides are joined. 船首的主要直立木料或金属块，船舷与之相连。
+
+  5. noun(INFORMAL·US): a pipe used for smoking crack or opium. （非正式·美国）用来吸可卡因或鸦片的管子。
+
+  6. verb: originate in or be caused by. 起源于或由于。
+
+     - stem from 固定搭配介词 from.
+
+  7. verb: remove the stems from (fruit or tobacco leaves). 去除（水果或烟叶）的茎。
+
+  8. verb: (of a boat) make headway against (the tide or current). （船）逆着（潮汐或洋流）前进。
+
+  9. phrase: from stem to stern - from the front to the back, especially of a ship. 从前到后，尤其是船。
+
+  10. verb: stop or restrict (the flow of something). 停止或限制（某物的流动）。
+
+  11. verb(SKIING): slide the tail of one ski or both skis outward in order to turn or slow down. 将一个或两个滑雪板的尾部向外滑动，以便转弯或减速。
 
 - stir
 
@@ -4179,6 +4321,48 @@ categories: English
 
   6. verb: (of a DJ) accompany a reggae backing track or music with improvised rhythmic speech. （DJ 相关）结合雷鬼伴奏或音乐到即兴说唱。
 
+- token
+
+  1. noun: a thing serving as a visible or tangible representation of a fact, quality, feeling, etc. 一个东西作为可见或有形的事实，质量，感受等等的代表。
+
+  2. noun: a voucher that can be exchanged for goods or services, typically one given as a gift or offered as part of a promotional offer. 可以用于兑换商品或服务的代金券，通常是被作为礼物赠送或被提供作为促销优惠的一部分。
+
+  3. noun(LINGUISTICS): an individual occurrence of a linguistic unit in speech or writing, as contrasted with the type or class of linguistic unit of which it is an instance. （语言学）在演讲或写作中一个语言单位的独立出现，作为与实例的语言单位的类型或类别的对照。
+
+     - (COMPUTING) the smallest meaningful unit of information in a sequence of data for a compiler. 编译器数据序列中有意义的最小信息单元。
+
+  4. noun(COMPUTING): a sequence of bits passed continuously between nodes in a fixed order and enabling a node to transmit information. 在固定顺序在节点之间连续传递的比特序列，使节点能够传输信息。
+
+  5. noun: a member of a minority group included in an otherwise homogeneous set of people in order to give the appearance of diversity. 被包含在同质人群中的少数群体成员，目的是为了多样性的表现。
+
+  6. adjective: done for the sake of appearances or as a symbolic gesture. 为了外表或作为象征性姿态而做。
+
+  7. phrase: by the same token - in the same way or for the same reason. 以同样的方式或出于同样的原因。
+
+  8. phrase: in token of - as a sign or symbol of. 作为标志或象征。
+
+- toss
+
+  1. verb: throw (something) somewhere lightly, easily, or casually. 轻轻地，轻松地，或随便地把（某物）扔到某处。
+
+  2. verb: move or cause to move from side to side or back and forth. 移动或导致移动，从一边到一边或从后到前。
+
+  3. verb(INFORMAL·NORTH AMERICAN): search (a place). （非正式·北美）搜索（一个地方）。
+
+  4. noun: an action or instance of tossing something. 扔东西的动作或实例。
+
+     - the action of tossing a coin as a method of deciding which team has the right to make a particular decision at the beginning of a game. 抛硬币的行为作为决定哪支队伍在比赛开始时有权作出特定决定的方法。
+
+  5. phrase: give a toss - care at all. 根本上在乎（常用于否定中，加 not，即根本不在乎）。
+
+  6. phrase: toss one's cookies - vomit. 呕吐。
+
+  7. phrase: toss for - settle a matter with someone by tossing a coin. 解决与某的问题，通过抛硬币的方式。
+
+  8. phrase: toss off - produce something rapidly or without thought or effort. 迅速或不假思索或不费力地做出某事。
+
+  9. phrase: toss up - throw a coin into the air in order to make a decision between two alternatives, based on which side of the coin faces up when it lands. 将一枚硬币抛向空中，以便在两个选择中做出决定，决定基于硬币落地时哪一面向上。
+
 - transient
 
   1. adjective: lasting only for a short time; impermanent. 只持续很短的时间；暂时的。
@@ -4392,6 +4576,26 @@ categories: English
   2. noun: a road, track, path, or street for traveling along. 用于行驶的道路、轨道、路径或街道。
 
   3. adverb(INFORMAL 非正式): at or to a considerable distance or extent. 在一个相当远的距离或范围; far 非常 (used before an adverb or preposition for emphasis) 用在副词与介词间表强调。
+
+- weigh
+
+  1. verb: find out how heavy (someone or something) is, typically using scales. 找出（某人或某物）的重量，通常使用秤。
+
+  2. verb: assess the nature or importance of, especially with a view to a decision or action. 评估性质或重要性，尤其是考虑到决定或行动。
+
+  3. phrase: weigh one's word - carefully choose the way one expresses something. 仔细选择表达某事的方式。
+
+  4. phrase: weigh down - (of something heavy and cumbersome) impede or hold down someone. （沉重或麻烦的东西）阻碍或限制某人。
+
+  5. phrase: weigh in - make a forceful contribution to a competition or argument. 对竞争和争论做出有力贡献。
+
+  6. phrase: weigh into - join in with a activity forcefully or enthusiastically. 有力地或热情地参加一项活动。
+
+  7. phrase: weigh on - be depressing or burdensome to someone. 使某人感到沮丧或负担。
+
+  8. phrase: weigh out - measure and take a portion of a particular weight from a larger quantity of a substance. 从大量物质中测量并取出特定重量的一部分。
+
+  9. phrase: weigh up - carefully assess someone or something. 仔细评估某人或某事。
 
 - well-meaning
 
