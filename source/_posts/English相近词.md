@@ -61,6 +61,10 @@ categories: English
 
   explicit adj. 清楚明白的；易于理解的
 
+- insist v. 坚称，咬定
+
+  persist v. 坚持
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -350,3 +354,9 @@ categories: English
   spring from
 
   originate from
+
+- 表示“谨慎”
+
+  prudent adj. 谨慎的，远虑的
+
+  meticulous adj. 谨慎的，仔细的

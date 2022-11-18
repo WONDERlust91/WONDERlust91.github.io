@@ -195,6 +195,12 @@ categories: English
 
   2. noun: a person or organization officially attached to a larger body. 正式附属于更大机构的个人或组织。
 
+- aggravate
+
+  1. verb: make (a problem, injury, or offense) worse or more serious. 使（问题，伤害，或冒犯）变得更糟或更严重。
+
+  2. verb(INFORMAL): annoy or exasperate (someone), especially persistently. （非正式）惹恼或激怒（某人），尤其是执着地。
+
 - agony
 
   1. noun: extreme physical or mental suffering. 极度的身体上或精神上的痛苦。
@@ -390,6 +396,32 @@ categories: English
 - better off
 
   1. phrase: in a more desirable or advantageous position, especially in financial terms. 处于更理想或更有利的位置，尤其是在财务方面。（同义词：well off）
+
+- bill
+
+  1. noun: an amount of money owed for goods supplied or services rendered, set out in a printed or written statement of charges. 对已供应的商品或已提供的服务所欠的金额，罗列在打印或手写的收费声明中。
+
+  2. noun: a draft of a proposed law presented to parliament for discussion. 提交议会讨论的法案草案。
+
+  3. noun: a program of entertainment, especially at a theater. 娱乐节目，尤指在剧院。
+
+  4. noun(NORTH AMERICAN): a banknote; a piece of paper money. （北美）一张钞票；一张纸币。
+
+  5. noun: a poster or handbill. 海报或传单。
+
+  6. verb: list (a person or event) in a program. 在程序中列出（一个人或事件）。
+
+  7. verb: send a note of charges to (someone). 向（某人）发送收费单。
+
+  8. phrase: fit the bill - be suitable for a particular purpose. 适合特定的目的。
+
+  9. noun: the beak of a bird, especially when it is slender, flattened, or weak, or belongs to a web-footed bird or a bird of the pigeon family. 鸟的喙，尤其当它细长，扁平，或脆弱，或属于蹼足鸟或鸽科鸟类时。
+
+  10. verb: (of birds, especially doves) stroke bill with bill during courtship. （鸟类，尤其是鸽子）在求偶期间用喙轻抚喙。
+
+  11. phrase: bill and coo - exchange caresses or affectionate words; behave or talk in a very loving or sentimental way. 交换爱抚或深情的话语；以充满爱意或感伤的方式行事或说话。
+
+  12. noun: a medieval weapon like a halberd with a hook instead of a blade. 中世纪的武器，比如有钩的戟，而不是有刀锋的。
 
 - bland
 
@@ -1793,6 +1825,16 @@ categories: English
 
   2. noun: the prevention of the progress, success, or fulfilment of something. 进展，成功，或实现某事的阻碍，即挫折。
 
+- fume
+
+  1. noun: gas, smoke, or vapor that smells strongly or is dangerous to inhale. 气体，烟雾，或蒸汽，是气味强烈或吸入有危险的。
+
+  2. verb: feel, show, or express great anger. 感到，表现，或表达极大的愤怒。
+
+  3. verb: emit gas, smoke, or vapor. 放出气体，烟雾，或蒸气。
+
+  4. verb: expose (something, especially wood) to ammonia fumes in order to produce dark tints. 将（某物，尤其是木头）暴露在氨气中以产生深色。
+
 - futurist
 
   1. noun: an adherent of Futurism. 未来主义的拥护者。
@@ -2097,6 +2139,10 @@ categories: English
 
   1. adjective: lacking the quality or quantity required; insufficient for a purpose. 缺乏所需要的质量或数量；不足以达到目的的。
 
+- incentive
+
+  1. noun: a thing that motivates or encourages one to do something. 激励或鼓励某人做某事的事物。
+
 - incline
 
   1. verb: feel willing or favorably disposed toward (an action, belief, or attitude). 感到愿意或赞同地倾向（行为，信仰，或态度）。
@@ -2176,6 +2222,20 @@ categories: English
   1. noun: the action of breaking the terms of a law, agreement, etc.; violation. 破坏法律、协议等条款的行为；侵害。
 
   2. noun: the action of limiting or undermining something. 限制或破坏某事的行为。
+
+- initiative
+
+  1. noun: the ability to assess and initiate things independently. 独立评估并发起事物的能力。
+
+  2. noun: the power or opportunity to act or take charge before others do. 在他人前面行动或负责的权力或机会。
+
+  3. noun: an act or strategy intended to resolve a difficulty or improve a situation; a fresh approach to something. 旨在解决困难或改善情况的行为或策略；对某事的新方法。
+
+  4. noun: (especially in some US states and Switzerland) the right of citizens outside the legislature to originate legislation. （特别是在美国一些州和瑞士）立法机关以外的公民的权利，来发起立法。
+
+  5. phrase: on one's own initiative - without being prompted by others. 不是被他人所促进。
+
+  6. phrase: take the initiative - be the first to take action in a particular situation. 在特殊情况下，第一个采取行动。
 
 - innate
 
@@ -2429,6 +2489,14 @@ categories: English
 
   2. adverb(INFORMAL): used for emphasis or to express strong feeling while not being literally true. 用于强调或表达强烈的感觉，而不是字面上那样，可译为确实地。
 
+- lobby
+
+  1. noun: a room providing a space out of which one or more other rooms or corridors lead, typically one near the entrance of a public building. 提供空间的房间，在这个空间之外有一个或多个房间或通向走廊，通常是一个靠近公共建筑的入口。
+
+  2. noun: a group of people seeking to influence politicians or public officials on a particular issue. 一群人，试图在特定事件上影响政客或公职人员。
+
+  3. verb: seek to influence (a politician or public official) on an issue. 试图在某个问题上影响（政客或公职人员）。
+
 - loom
 
   1. noun: an apparatus for making fabric by weaving yarn or thred. 一种通过编织纱线或线来制造织物的设备，即织布机。
@@ -2504,6 +2572,10 @@ categories: English
   1. noun: the quality of being particularly good or worthy, especially so as to deserve praise or reward. 特别好或值得的品质，尤其是关于值得称赞或奖励的。
 
   2. verb: deserve or be owrthy of (reward, punishment, or attention). 值得（奖励，惩罚，或关注）。
+
+- meticulous
+
+  1. adjective: showing great attention to detail; very careful and precise. 表现出对细节的高度关注；非常仔细和精确。
 
 - metropolitan
 
@@ -2654,6 +2726,10 @@ categories: English
   3. adjective: physically or mentally damaging or harmful. 身体或精神上的伤害的。
 
   4. noun(INFORMAL): an unpleasant or harmful person or thing. （非正式）不愉快或有害的人或事物。
+
+- negligence
+
+  1. noun: failure to take proper care in doing something. 做某事时没有采取适当的谨慎。
 
 - nervertheless
 
@@ -2849,6 +2925,44 @@ categories: English
 
   2. noun: an outbreak of a pandemic disease. 全球疫情的爆发。
 
+- panel
+
+  1. noun: a flat or curved component, typically rectangular, that forms or is set into the surface of a door, wall, or ceiling. 平整或弯曲的组件，通常是矩形，形成或嵌入门，墙壁，或天花板的表面。
+
+  2. noun: a flat board on which instruments or controls are fixed. 一块平板，仪器或控制器固定在其上。
+
+  3. noun: a small group of people brought together to discuss, investigate, or decide on a particular matter, especially in the context of business or government. 一小组人聚集在一起来讨论，调查，或决定一个特别的事项，尤其是在商业或政府背景下。
+
+  4. verb: cover (a wall or other surface) with panels. 用面板覆盖（墙壁或其他表面）。
+
+- parallel
+
+  1. adjective: (of lines, planes, surfaces, or objects) side by side and having the same distance continuously between them. （线，面，表面，或物体）并排排列并在它们之间连续地具有相同的距离。
+
+     - occurring or existing at the same time or in a similar way; corresponding. 同时或以类似方式发生或存在；相应的（例如平行宇宙，a parallel universe）。
+
+     - (COMPUTING) involving the simultaneous performance of operations. （计算机）涉及同时进行的操作（即并行操作）。
+
+     - of or denoting electrical components or circuits connected to common points at each end, rather than one to another in sequence. 关于或表示电气元件或电路，每一端都连接到常规点，而不是按顺序一个接一个，即并联电路。
+
+  2. noun: a person or thing that is similar or analogous to another. 与另一个人或事物相似或类似的人或事物。
+
+  3. noun: each of the imaginary parallel circles of constant latitude on the earth's surface. 地球表面纬度固定的任一个假想平行圆。
+
+  4. noun(PRINTING): two parallel lines (||) as a reference mark.（印刷）两条平行线（||）作为参考标记。
+
+  5. verb: (of something extending in a line) be side by side with (something extending in a line), always keeping the same distance. （在一条直线上延伸的东西）并排于（一条直线上延伸的东西），始终保持相同的距离。
+
+     - be similar or corresponding to (something). 与（某事）相似或对应。
+
+  6. phrase: in parallel - occurring at the same time and having some connection. 同时发生并有某种联系。
+
+- paralysis
+
+  1. noun: the loss of the ability to move (and sometimes to feel anything) in part or most of the body, typically as result of illness, poison, or injury. 身体一部分或大部分失去行动能力（并且有时是感觉不到任何东西），通常是因为疾病，中毒，或受伤。
+
+     - inability to act or function in a person, organization, or place. 个人，组织，或地方无法发挥功能。
+
 - paraphrase
 
   1. verb: express the meaning of (the writer or speaker or something written or spoken) using different words, especially to achieve greater clarity. 用不同的词表达（作者或演讲者或写或说的东西）的意思，尤其是为了达到更清楚的目的。
@@ -2979,6 +3093,20 @@ categories: English
 
   13. verb(ARCHAIC): mourn or lament. （古老的）哀悼或悲叹。
 
+- plant
+
+  1. noun: a living organism of the kind exemplified by trees, shrubs, herbs, grasses, ferns, and mosses, typically growing in a permanent site, absorbing water and inorganic substances through its roots, and synthesizing nutrients in its leaves by photossynthesis using the green pigment chlorophyll. 以树木，灌木，草本植物，草，蕨类植物和苔藓为例的生物体，通常生长在固定地点，通过根部吸收水和无机物，并在叶子中合成养分，通过使用绿色色素叶绿素的光合作用。
+
+  2. noun: a place where an industrial or manufacturing process takes place. 工业或制造过程发生的地方。
+
+  3. noun: a person placed in a group as a spy or informer. 被安插在一个组织中作为间谍或告密者的人。
+
+  4. verb: place (a seed, bulb, or plant) in the ground so that it can grow. 把（种子，球茎，或植物）放在地里，以使其生长。
+
+     - (INFORMAL) bury (someone). （非正式）埋葬（某人）。
+
+  5. verb: place or fix in a specified position. 放置或固定在指定位置。
+
 - plow (北美以外写作 plough)
 
   1. noun: a large farming implement with one or more blades fixed in a frame, drawn by a tractor or by animals and used for cutting furrows in the soil and turning it over, especially to prepare for the planting of seeds. 大型农具，带有一个或多个刀片固定在框架中，被拖拉机或动物牵引，并用于在土壤中开沟和翻土，尤其是准备播种时。
@@ -3070,6 +3198,12 @@ categories: English
   1. noun: the state or condition of being greater in number or amount. 在数量上变得更多的状态或情况。
 
   2. noun: the prossession or exertion of control or power. 对控制与权利的拥有与行使。
+
+- preface
+
+  1. noun: an introduction to a book, typically stating its subject, scope, or aims. 一本书的介绍，通常说明其主题，范围，或目标。
+
+  2. verb: provide (a book) with a preface. 为（一本书）提供序言。
 
 - prescribe
 
@@ -3188,6 +3322,10 @@ categories: English
   4. verb(INFORMAL): make a suggestion of sex to (someone), especially in an unsubtle way. 向（某人）提出性提议，尤其是直白的方式。
 
   5. phrase: not a proposition - unlikely to succeed; not a viable option. 不太可能成功；不是可行选择。
+
+- prudent
+
+  1. adjective: acting with or showing care and thought for the future. 谨慎地行动或表现的谨慎并且考虑到未来。
 
 - publication
 
@@ -3699,6 +3837,42 @@ categories: English
 
   2. adjective: (of a machine, system, or technique) developed to a high degree of complexity. （机器，系统，技术）发展到高度复杂。
 
+- sound
+
+  1. noun: vibrations that travel through the air or another medium and can be heard when they reach a person's or animal's ear. 通过空气或其他介质传播并在到达人或动物的耳朵时可以听到的振动。
+
+  2. noun: sound produced by continuous and regular vibrations, as opposed to noise. 连续并有规律的振动产生的声音，与噪音相反。
+
+  3. noun: music, speech, and sound effects when recorded, used to accompany a film or video production, or broadcast. 录制的音乐，演讲，和声音效果，用于伴随电影或视频制作或广播。
+
+  4. noun: the ideas or impressions conveyed by words. 说话传达的想法或印象。
+
+  5. verb: emit or cause to emit sound. 发出或导致发出声音。
+
+  6. verb: convey a specified impression when heard. 当听到时表达具体的印象。
+
+  7. phrase: sound off - express one's opinion in a loud or forceful manner. 大声或有力地表达自己的意见。
+
+  8. adjective: in good condition; not damaged, injured, or diseased. 状态良好；没有损坏，受伤，或患病。
+
+  9. adjective: based on reason, sense, or judgment. 基于理性，感觉，或判断的。
+
+  10. adjective: (of sleep) deep and undisturbed. （睡眠）深度且不受干扰的。
+
+  11. adjective: severe. 严重的。
+
+  12. adverb: soundly. 深度且不受干扰地。
+
+  13. verb: ascertain (the depth of water), typically by means of a line or pole or using sound echoes. 确定（水的深度），通常通过线或杆或使用回声的方式。
+
+  14. verb: question (someone), typically in a cautious or discreet way, as to their opinions or feelings on a subject. 询问（某人），通常以谨慎或慎重的方式，关于某个主题的意见或感受。
+
+  15. verb: (especially of a whale) dive down steeply to a great depth. （尤其是鲸鱼）急剧下潜到很深的地方。
+
+  16. noun: a long surgical probe, typically with a curved, blunt end. 一种长的手术探针，通常带有弯曲的，钝的末端。
+
+  17. noun: a narrow stretch of water forming an inlet or connecting two wider areas of water such as two seas or a sea and a lake. 形成入海口或连接两个更宽的水域，例如两片海或一片海和一个湖，的狭窄水域。
+
 - sovereignty
 
   1. noun: supreme power or authority. 最高权力或权威。常指国家主权。
@@ -3872,6 +4046,22 @@ categories: English
   10. verb: stop or restrict (the flow of something). 停止或限制（某物的流动）。
 
   11. verb(SKIING): slide the tail of one ski or both skis outward in order to turn or slow down. 将一个或两个滑雪板的尾部向外滑动，以便转弯或减速。
+
+- steward
+
+  1. noun: a person who looks after the passengers on a ship, aircraft, or train and brings them meal. 在轮船，飞机，或火车上照顾乘客并为他们送餐的人。
+
+  2. noun: a person responsible for supplies of food to a college, club, or other institution. 负责向大学，俱乐部或其他机构提供食物的人。
+
+  3. noun: an official appointed to supervise arrangements or keep order at a large public event, for example a sporting event. 被任命监督大型公共活动（例如体育赛事）安排或维持秩序的官员。
+
+  4. noun: short for shop steward. 工会代表的简写。
+
+  5. noun: a person employed to manage another's property, especially a large house or estate. 受雇管理他人财产的人，尤其是大房子或庄园。
+
+  6. verb: (of an official) supervise arrangements or keep order at (a large public event). （官员）监督安排或维持秩序在（大型公共活动中）。
+
+  7. verb: manage or look after (another's property). 管理或照看（他人的财产）。
 
 - stir
 

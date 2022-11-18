@@ -616,3 +616,15 @@ have been doing 从过去到现在一直做某事
   You are everything but smart. = You are not smart.
 
   He is nothing but important. = He is important.
+
+- way 相关词组
+
+  out of the way 不挡道
+
+  in the way 阻止 get in the way of
+
+  in a/one's way 以...方法
+
+  on one's way 快到了
+
+  by the way 顺便说一下
