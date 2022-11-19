@@ -628,3 +628,13 @@ have been doing 从过去到现在一直做某事
   on one's way 快到了
 
   by the way 顺便说一下
+
+- Of n., 主谓宾
+
+  该句型中，of 翻译为在...中，n.是一个较大的概念，而后半句的主语通常是较大概念中的一个小概念。
+
+- sb. keep doing sth. 某人持续做某事。
+
+  sth. keep sb. (from) doing sth. 某事阻止某人做另外某事，注意 from 有时省略。
+
+- sleep/dream on sth. 睡过去，不用管某事。

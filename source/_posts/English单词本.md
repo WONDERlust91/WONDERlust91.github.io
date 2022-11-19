@@ -513,6 +513,10 @@ categories: English
 
   4. verb: go past or around. 穿过或绕过。
 
+- byproduct
+
+  1. noun: an incidental or secondary product made in the manufacture or synthesis of something else. 在制造或合成其他东西时产生的附带或次要产品。
+
 ## C
 
 - canteen
@@ -985,6 +989,10 @@ categories: English
 
   2. adjective(BRIDGE): (of a bid) intended to convey a particular meaning according to an agreed convention. （桥）（投标）旨在根据商定的约定传达特定的含义。
 
+- cortex
+
+  1. noun(ANATOMY): the outer layer of the cerebrum (the cerebral cortex), composed of folded gray matter and playing an important role in consciousness. 大脑的外层（大脑皮层），由折叠的灰质组成，在意识中起重要作用，即皮层。
+
 - counsel
 
   1. noun: advice, especially that given formally. 建议，尤其是正式给出的建议。
@@ -1008,6 +1016,50 @@ categories: English
   1. noun: a person or thing that corresponds to or has the same function as another person or thing in a different place or situation. 在不同地方或环境下与另一个人或事物对应或具有相同功能的人或事物。
 
   2. noun(LAW): one of two copies of a legal document. 法律文件的两份副本之一。
+
+- course
+
+  1. noun: the route or direction followed by a ship, aircraft, road, or river. 船舶，飞机，道路，或漂流遵循的路线或方向。
+
+     - the way in which something progresses or develops. 事物进展或发展的方式。
+
+     - a procedure adopted to deal with a situation. 为处理某种情况而采取的程序。
+
+  2. noun: a dish, or a set of dishes served together, forming one of the successive parts of a meal. 一起上菜的一道菜或一组菜，构成一顿饭的连续部分之一。
+
+  3. noun: an area of land set aside and prepared for racing, golf, or another sport. 为赛车，高尔夫，或其他运动而预留和准备的一块地。
+
+  4. noun: a series of lectures or lessons in a particular subject, typically leading to a qualification. 特定主题的一系列讲座或课程，通常会获得资格证书。
+
+     - (MEDICINE) a series of repeated treatments or doses of medication. （医药）一系列重复治疗或药物剂量。
+
+  5. noun: a continuous horizontal layer of brick, stone, or other material in a building. 建筑物中使用砖，石，或其他材料的连续水平层。
+
+  6. noun: a pursuit of game (especially hares) with greyhounds by sight rather than scent. 使用灵缇犬的追猎比赛（尤其是追野兔），通过视觉而不是气味。
+
+  7. noun: the lowest sail on a square-rigged mast. 方形桅杆上最低的帆。
+
+  8. noun: a set of adjacent strings on a guitar, lute, etc., tuned to the same note. 吉他，琵琶等上的一组相邻的弦，调成相同的音。
+
+  9. verb: (of liquid) move without obstruction; flow. （液体）没有阻碍地移动；流动。
+
+  10. verb: pursue (game, especially hares) with greyhounds using sight rather than scent. 通过视力而不是气味使用灵缇犬追逐（比赛，尤其是野兔）。
+
+  11. phrase: course of action - a procedure adopted to deal with a situation. 为处理某种情况而采取的程序。
+
+  12. phrase: the course of nature - events or processes which are normal and to be expected. 正常或意料中的事件或过程。
+
+  13. phrase: in the course of - undergoing the specified process. 正在进行特定的程序。
+
+  14. phrase: of course - used to introduce an idea or turn of events as being obvious or to be expected. 用于引入一个想法或事件的转变作为明显或预料到的。
+
+  15. phrase: off course - not following the intended route. 没有遵循预定的路线。
+
+  16. phrase: on course - following the intended route. 按照预定的路线。
+
+  17. phrase: over the course of time - as time goes by. 随着时间的推移。
+
+  18. phrase: run its course - complete its natural development without interference. 不受干扰地完成其自然发展。
 
 - craft
 
@@ -1252,6 +1304,12 @@ categories: English
 - disgraced
 
   1. adjective: having fallen from favor or a position of power or honor; discredited. 失去青睐或失去权力或荣誉的地位；名誉扫地。
+
+- disguise
+
+  1. verb: give (someone or oneself) a different appearance in order to conceal one's identity. 给（某人或自己）一个不同的外表来隐藏自己的身份。
+
+  2. noun: a means of altering one's appearance or concealing one's identity. 改变一个人的外表或隐藏一个人身份的一种手段。
 
 - disintegrate
 
@@ -1604,6 +1662,20 @@ categories: English
 - exemplify
 
   1. verb: be a typical example of. 作为一个典型的例子，可译为印证了。
+
+- exercise
+
+  1. noun: activity require physical effort, carried out to sustain or improve health and fitness. 为维持或改善健康或身体素质而进行的需要体力劳动的活动。
+
+  2. noun: a process or activity carried out for a specific purpose, especially one concerned with a specified area or skill. 为特定目的举行的过程或活动，尤其是关于特定领域或技能的。
+
+  3. noun: the use or application of a faculty, right, or process. 能力，权利，或过程的使用或应用。
+
+  4. verb: use or apply (a faculty, right, or process). 使用或应用（能力，权利，或过程）。
+
+  5. verb: engage in physical activity to sustain or improve health and fitness; take exercise. 参与体育活动来维持或改善健康或身体素质；做锻炼。
+
+  6. verb: occupy the thoughts of; worry or perplex. 占据思想；担心或困惑。
 
 - exert
 
@@ -1970,6 +2042,22 @@ categories: English
   1. verb: make (a function) a permanent feature in a computer by means of permanently connected circuits, so that it cannot be altered by software. 通过永久连接的电路使（某功能）成为计算机中的永久功能，使其不能被软件改动。
 
   2. verb: make (a pattern of behaviour or belief) standard or instinctive. 使（行为或信仰的模式）成为标准或本能。
+
+- harness
+
+  1. noun: a set of straps and fittings by which a horse or other draft animal is fastened to a cart, plow, etc. and is controlled by its driver. 一套带子和配件，用来将马或其他役畜绑在推车，犁等上，并由司机控制。
+
+     - an arrangement of straps for fastening something to a person's body, such as a parachute, or for restraining a young child. 用于将某物固定在人身上的一套带子，例如降落伞，或约束幼儿的。
+
+  2. verb: put a harness on (a horse or other draft animal). 给（马或其他役畜）套上挽具。
+
+  3. verb: control and make use of (natural resources), especially to produce energy. 控制并利用（自然资源），尤其是用于生产能源。
+
+  4. phrase: in harness - (of a horse or other animal) used for driving or draft work. （马或其他动物）用于驾驶或牵引工作。
+
+     - in the routine of daily work. 在日常的工作中。
+
+     - working closely with someone to achieve something. 与某人密切合作以取得成就。
 
 - haste
 
@@ -3205,6 +3293,14 @@ categories: English
 
   2. verb: provide (a book) with a preface. 为（一本书）提供序言。
 
+- prefrontal
+
+  1. adjective(ANATOMY): in or relating to the foremost part of the frontal lobe of the brain. （解剖学）在大脑额叶的最前面部分或与其有关的部分。
+
+  2. adjective(ZOOLOGY): relating to or denoting bone in front of the eye socket in some lower vertebrates (equivalent to part of the human ethmoid bone). （动物学）关于或表示某些低等脊椎动物眼窝前的骨头（相当于人类筛骨的一部分）。
+
+  3. noun(ZOOLOGY): a prefrontal bone. （动物学）前额骨。
+
 - prescribe
 
   1. verb: (of a medical practitioner) advise and authorize the use of (a medicine or treatment) for someone, especially in writing. （医生）为某人建议并授权使用（药物或治疗），尤其是书面上的。
@@ -3420,6 +3516,10 @@ categories: English
 - recruiter
 
   1. noun: a person whose job is to enlist or enroll people as employees, in the armed forces, or as members of an organization. 在武装部队招募人员或为组织招聘雇员的人。
+
+- recur
+
+  1. verb: occur again periodically or repeatedly. 周期性或重复地再次发生。
 
 - redundancy
 
@@ -4303,6 +4403,12 @@ categories: English
 
   2. adjective: more than what is needed or used; excess. 超过需要或使用的；过量的。
 
+- susceptible
+
+  1. adjective: likely or liable to be influenced or harmed by a particular thing. 可能或容易受到特定事物影响或伤害的。
+
+  2. adjective: capable or admitting of. 有能力或承认的。
+
 - suspension
 
   1. noun: the temporary prevention of something from continuing or being in force or effect. 暂时阻止某事继续或生效。
@@ -4472,6 +4578,10 @@ categories: English
   1. adverb: by that means; as a result of that. 由此方式；作为结果是。
 
   2. phrase: thereby hangs a tale - used to indicate that there is more to say about something. 用于表示关于某事还有更多话要说。
+
+- thermostat
+
+  1. noun: a device that automatically regulates temperature, or that activates a device when the temperature reaches a certain point. 自动调节温度的装置，或当温度达到特定点时启动装置的装置。
 
 - think tank
 
