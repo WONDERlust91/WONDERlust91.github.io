@@ -303,6 +303,12 @@ categories: English
 
   1. noun: a worker in a skilled trade, especially one that involves making things by hand. 熟练工种的工人，尤其是涉及手工制作的行业。
 
+- aspire
+
+  1. verb: direct one's hopes or ambitions towards achieving something. 将一个人的希望或抱负指向实现某事。
+
+  2. verb(LITERARY): rise high; tower. 高高升起；耸立。
+
 - aspiring
 
   1. adjective: directing one's hopes or ambitions toward becoming a specified type of person. 形容将希望或志向导向实现的特定类型的人，即有抱负的人。
@@ -334,6 +340,10 @@ categories: English
   1. verb: succeed in achieving (something that one has worked for). 成功实现（某人为之努力的事情）。
 
   2. verb: reach (a specified age, size, or amount). 达到（指定的年龄，大小，或数量）。
+
+- authentic
+
+  1. adjective: of undisputed origin; genuine. 无可争议的来源；真的。
 
 ## B
 
@@ -973,6 +983,10 @@ categories: English
 
   1. adjective: mutually opposed or inconsistent. 互相对立或不一致。
 
+- controversial
+
+  1. adjective: giving rise or likely to give rise to public disagreement. 引起或可能引起公众的反对，即有争议的。
+
 - convention
 
   1. noun: a way in which something is usually done, especially within a particular area or activity. 通常做某事的方式，尤其在特定的领域或活动中。
@@ -1131,6 +1145,10 @@ categories: English
 
   2. noun: the crotch of the body or a garment. 身体或衣服的胯部。
 
+- cult
+
+  1. noun: a system of religious veneration and devotion directed toward a particular figure or object. 导向特定人或物的宗教崇拜和奉献的系统（常用于邪教等贬义环境）。
+
 - cultivate
 
   1. verb: prepare and use (land) for crops or gardening. 为庄稼或园艺准备和使用（土地）。
@@ -1266,6 +1284,12 @@ categories: English
   2. verb(LAW): leave (real estate) to someone by the terms of a will. （法律）根据遗嘱条款，留下（不动产）给某人。
 
   3. noun(LAW): a clause in a will leaving something, especially real estate, to someone. （法律）遗嘱中的一个条款关于留下的某物，尤其是留给某人的房产。
+
+- dialect
+
+  1. noun: a particular form of a language which is peculiar to a specific region or social group. 特定地区或社会群体特有的特定语言形式。
+
+     - (COMPUTING) a particular version of a programming language. 编程语言的特定版本。
 
 - dig
 
@@ -1524,6 +1548,18 @@ categories: English
   10. phrase: to the effect that - used to refer to the general sense of something written or spoken. 用于指代总体感受关于写的或说的东西。
 
   11. phrase: to that effect - having that result, purpose, or meaning. 有那个结果，目的，或意义。
+
+- elaborate
+
+  1. adjective: involving many carefully arranged parts or details; detailed and complicated in design and planning. 涉及很多仔细安排的部分或细节；在计划或设计上详细和复杂的。
+
+     - (of an action) lengthy and exaggerated. （动作）冗长的和夸张的。
+
+  2. verb: develop or present (a theory, policy, or system) in detail. 详细地发展或呈现（理论，政策，或系统）。
+
+     - add more detail concerning what has already been said. 增加更多细节，关于已经说过的事情。（固定搭配：elaborate on sth. 详细阐述某事）
+
+  3. verb(BIOLOGY): (of a natural agency) produce (a substance) from its elements or simpler constituents. （自然媒介）产生（物质）从它的元素或更简单的成分中。
 
 - ember
 
@@ -1925,6 +1961,10 @@ categories: English
 
   1. noun: an item of clothing. 一件衣服。
 
+- genre (注意发音)
+
+  1. noun: a category of artistic composition, as in music or literature, characterized by similarities in form, style, or subject matter. 一类艺术作品，如在音乐或文学中，特定是在形式，风格，或主题方面相似。
+
 - geology
 
   1. noun: the science that deals with the earth's physical structure and substance, its history, and the processes that act on it. 处理地球的物理结构和物质，其历史以及作用于它的过程的科学，即地质学。
@@ -1990,6 +2030,12 @@ categories: English
 - grievance
 
   1. noun: a real or imagined wrong or other cause for complaint or protest, especially unfair treatment. 真实的或想象中的错误或其他原因，对于投诉或抗议，尤其是不公平的待遇，即不平或怨愤。
+
+- grieve
+
+  1. verb: suffer grief. 承受悲伤。
+
+  2. noun(SCOTTISH): an overseer or manager on a farm. （苏格兰语）农场监督员或经理。
 
 - grip
 
@@ -2577,6 +2623,12 @@ categories: English
 
   2. adverb(INFORMAL): used for emphasis or to express strong feeling while not being literally true. 用于强调或表达强烈的感觉，而不是字面上那样，可译为确实地。
 
+- liveliness
+
+  1. noun: the quality of being outgoing, energetic, and enthusiastic. 外向，精力充沛，和热情的品质，即活力。
+
+     - an atmosphere of excitement and activity. 兴奋和活跃的气氛。
+
 - lobby
 
   1. noun: a room providing a space out of which one or more other rooms or corridors lead, typically one near the entrance of a public building. 提供空间的房间，在这个空间之外有一个或多个房间或通向走廊，通常是一个靠近公共建筑的入口。
@@ -3107,6 +3159,14 @@ categories: English
 
   2. phrase: perish the thought - used, often ironically, to show that one finds a suggestion or idea completely ridiculous or unwelcome. 用于（通常具有讽刺意味的）表示某人认为建议或想法完全是荒唐或不受欢迎的。
 
+- permissive
+
+  1. adjective: allowing or characterized by great or excessive freedom of behavior. 允许或以极大或过度行为的自由为特征。
+
+  2. adjective(LAW): allowed but not obligatory; optional. （法律）允许但不是必须的；可选的。
+
+  3. adjective(BIOLOGY): allowing a biological or biochemical process to occur. （生物学）允许生物或生化过程出现。
+
 - perplex
 
   1. verb: (of something complicated or unaccountable) cause (someone) to feel completely baffled. （复杂或无法解释的）使（某人）感到完全困惑。
@@ -3461,7 +3521,7 @@ categories: English
 
 - radical
 
-  1. adjective: (especially of change or action) relating to or affecting the fundamental nature of something; far-reaching or thorough. （尤其是变化或行动）关于或影响某事物的基本性质；深远的或彻底的。
+  1. adjective: (especially of change or action) relating to or affecting the fundamental nature of something; far-reaching or thorough. （尤其是变化或行动）关于或影响某事物的基本性质；深远的或彻底的，即激进的。
 
   2. adjective: advocating or based on thorough or complete political or social change; representing or supporting an extreme or progressive section of a political party. 倡导或基于彻底的政治或社会变革；代表或支持极端或左倾部分的政党。
 
@@ -3977,6 +4037,18 @@ categories: English
 
   1. noun: supreme power or authority. 最高权力或权威。常指国家主权。
 
+- specialty (speciality)
+
+  1. noun: a pursuit, area of study, or skill to which someone has devoted much time and effort and in which they are expert. 追求，研究领域，或技能，是某人花费大量时间和精力并成为专家的。
+
+     - a product, especially a type of food, which a person or region is famous for making well. 一个产品，尤其是一种食物，一个人或地区在制作这个产品上很出名。
+
+     - meeting particular tastes or needs. 满足特别的口味或需求。
+
+  2. noun: a branch of medicine or surgery. 医学或外科的一个分支。
+
+  3. noun(LAW): a contract under seal. （法律）盖章的合同。
+
 - specification
 
   1. noun: an act of identifying something precisely or of stating a precise requirement. 精确识别某物或精确陈述要求的行为。
@@ -3999,7 +4071,7 @@ categories: English
 
   1. verb: write or name the letters that form (a word) in correct sequence. 以正确的顺序写出或称呼形成（单词）的字母。
 
-  2. verb: be a sign or characteristic of. 是某事物的标志或特征。
+  2. verb: be a sign or characteristic of. 是某事物的标志或特征，即表示，预示。
 
   3. phrase: spell out - speak the letters that form a word in sequence. 按顺序说出组成单词的字母。
 
@@ -4014,6 +4086,10 @@ categories: English
   8. verb(NORTH AMERICAN): allow (someone) to rest briefly by taking their place in some activity. （北美）允许（某人）短暂休息，当在某项活动中忙碌的时候。
 
   9. noun: a splinter of wood. 一片木头。
+
+- spontaneous
+
+  1. adjective: performed or occurring as a result of a sudden inner impulse or inclination and without premeditation or external stimulus. 表现或发生，因为突然的内在冲动或倾向并没有预谋或外部刺激，即即兴的，自发的。
 
 - spook
 
@@ -5072,6 +5148,8 @@ categories: English
   5. phrase: as yet - until now or a particular time in the past. 直到现在或一个特定的过去的时间。
 
   6. phrase: have/be yet to - events which are necessary or which must happen at some time, but which have not happened at the time of speaking. 事件必需在某个时间发生，但在说话时还没发生。yet 有否定意思在其中。
+
+  7. phrase: yet another - another. 另外一个。
 
   总结：yet 常见用法，用在句首，表转折，译为尽管；用在肯定句中，表否定，当作 not；用在否定或疑问句，表示直到现在或某个时间点，译为还没。
 

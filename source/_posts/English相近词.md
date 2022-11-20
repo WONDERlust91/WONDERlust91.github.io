@@ -360,3 +360,21 @@ categories: English
   prudent adj. 谨慎的，远虑的
 
   meticulous adj. 谨慎的，仔细的
+
+## 反义词
+
+- radical adj. 激进的，左倾的
+
+  conservative adj. 保守的，右倾的
+
+- humble adj. 地位低的；谦虚的，低估的
+
+  noble adj. 地位高的，贵族的；崇高的
+
+- functional adj. 功能性的
+
+  artistic adj. 艺术性的
+
+- temporary adj. 临时的
+
+  permanent adj. 永久的

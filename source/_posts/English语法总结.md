@@ -166,6 +166,19 @@ Although/Though/While 都是尽管（但是）没有实质区别
 As
 
 - 介词：作为 + n.
+
+  As a student, you should ...
+
+  regard A as B
+
+  see A as B
+
+  think of A as B
+
+  值得注意的是，as 后还有跟形容词的特殊情况。
+
+  I regard you as important.
+
 - 连词：
 
   - 当/随着
@@ -638,3 +651,5 @@ have been doing 从过去到现在一直做某事
   sth. keep sb. (from) doing sth. 某事阻止某人做另外某事，注意 from 有时省略。
 
 - sleep/dream on sth. 睡过去，不用管某事。
+
+- bring about = lead to 导致。
