@@ -8983,6 +8983,75 @@ cordova emulate android<span aria-hidden="true" class="line-numbers-rows"><span>
       </tags>
   </entry>
   <entry>
+    <title>css保持盒模型纵横比</title>
+    <url>/2022/11/20/css%E4%BF%9D%E6%8C%81%E7%9B%92%E6%A8%A1%E5%9E%8B%E7%BA%B5%E6%A8%AA%E6%AF%94/</url>
+    <content><![CDATA[<p>在使用媒体查询与响应式布局过程中，我们常常需要让一个盒模型按一定的纵横比响应，即盒子的高度取决于盒子的宽度。常见需求如在响应过程中保持盒子为正方形，或保持盒子为 16:9 的比例。那么如何实现这样的需求呢？</p>
+<h2 id="aspect-ratio"><a href="#aspect-ratio" class="headerlink" title="aspect-ratio"></a>aspect-ratio</h2><p>2022 年了，<code>aspect-ratio</code>属性已经成为了 css 标准，在主流的浏览器中都有不错的支持。使用纵横比属性，很容易就能实现盒模型的固定比例。</p>
+<span id="more"></span>
+
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.div1</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token comment">/* 默认值 auto，遵循浏览器原本宽高计算规则 */</span>
+  <span class="token property">aspect-ratio</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.div2</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token comment">/* 比值写法，1比1则宽高相等 */</span>
+  <span class="token property">aspect-ratio</span><span class="token punctuation">:</span> 1 / 1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.div3</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token comment">/* 比值写法，分母为宽，分子为高 */</span>
+  <span class="token property">aspect-ratio</span><span class="token punctuation">:</span> 16 / 9<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.div4</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token comment">/* 小数写法，即宽是高的几倍 */</span>
+  <span class="token property">aspect-ratio</span><span class="token punctuation">:</span> 0.5<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>尽管现代浏览器都已经支持了纵横比的属性，但是手机端微信浏览器，或其他国产浏览器，对纵横比属性的支持并不好。那么此时又该如何实现盒子的纵横比呢？</p>
+<h2 id="margin-x2F-padding"><a href="#margin-x2F-padding" class="headerlink" title="margin&#x2F;padding"></a>margin&#x2F;padding</h2><p>相信熟悉 css 标准的小伙伴已经想到了办法，那就是利用<code>margin</code>和<code>padding</code>的百分比计算机制。因为<code>margin</code>和<code>padding</code>的百分比是相对宽<code>width</code>计算的。</p>
+<p>原理：</p>
+<ol>
+<li><p>用<code>padding-top</code>或<code>padding-bottom</code>百分比来表示盒子高度是宽度的几倍;</p>
+</li>
+<li><p>盒子高度<code>height</code>设置为 0，因为<code>padding</code>已经把盒子撑开到需要的高度了，盒子本身高度应为 0;</p>
+</li>
+<li><p>新增一个子盒子作为实际内容盒子，因为父盒子高度为 0，无法承载内容;</p>
+</li>
+<li><p>将子盒子相对父盒子绝对定位，并撑开至与父盒子大小一致，即在父盒子上增加<code>position: relative;</code>属性，在子盒子上增加<code>position: absolute; top: 0; right: 0; bottom: 0; left: 0;</code>属性;</p>
+</li>
+</ol>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.parent</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">padding-bottom</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.child</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>参考资料</p>
+<p><a href="https://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout">Height equal to dynamic width (CSS fluid layout) </a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">aspect-ratio</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>纵横比</tag>
+        <tag>aspect-ratio</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css内联元素的vertical-align</title>
     <url>/2019/08/05/css%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E7%9A%84vertical-align/</url>
     <content><![CDATA[<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="vertical-align-的使用范围"><a href="#vertical-align-的使用范围" class="headerlink" title="vertical-align 的使用范围"></a>vertical-align 的使用范围</h3><p>vertical-align 只能应用于 inline 元素，即 display 为 inline、inline-block、inline-table 的元素，img 与 span 都是 inline 元素</p>

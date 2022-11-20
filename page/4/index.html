@@ -153,7 +153,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">135</span>
+          <span class="site-state-item-count">136</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -164,7 +164,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">241</span>
+        <span class="site-state-item-count">243</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -193,6 +193,112 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/09/01/css%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BB%BA%E8%AE%AEfont-size%E8%AE%BE%E7%BD%AE%E4%B8%BA12px%E4%BB%A5%E4%B8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/09/01/css%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BB%BA%E8%AE%AEfont-size%E8%AE%BE%E7%BD%AE%E4%B8%BA12px%E4%BB%A5%E4%B8%8B/" class="post-title-link" itemprop="url">css为什么不建议font-size设置为12px以下</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-01 09:48:05" itemprop="dateCreated datePublished" datetime="2021-09-01T09:48:05+00:00">2021-09-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-20 15:33:30" itemprop="dateModified" datetime="2022-11-20T15:33:30+00:00">2022-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/09/01/css%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BB%BA%E8%AE%AEfont-size%E8%AE%BE%E7%BD%AE%E4%B8%BA12px%E4%BB%A5%E4%B8%8B/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/09/01/css为什么不建议font-size设置为12px以下/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>在业务中发现设置小于 12px 的字号不生效，最小只能设置为 12px 的问题。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>由于中文字体笔划较密，小于 12px 时，展示效果不佳，故 chrome 浏览器中文版默认最小字号为 12px，英文版则没有最小字号为 12px 的限制。为了有更为统一的用户体验，而无需用户自行修改浏览器默认配置，不使用小于 12px 的字号，是最佳实践。</p>
+<h2 id="修改最小字号"><a href="#修改最小字号" class="headerlink" title="修改最小字号"></a>修改最小字号</h2><p>如果一定要修改最小字号，地址栏输入<code>chorme://settings/fonts</code>，进入字体设置，调整最小字号为 0，即可使小于 12px 的字号生效了。</p>
+<blockquote>
+<p>参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/22374961">「每日一题」为什么不建议将 font-size 设置为 12px 以下？</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/69695071">再谈 Chrome 的最小字体 12px 限制</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -238,7 +344,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-20 13:34:37" itemprop="dateModified" datetime="2022-11-20T13:34:37+00:00">2022-11-20</time>
+      <time title="修改时间：2022-11-20 15:33:30" itemprop="dateModified" datetime="2022-11-20T15:33:30+00:00">2022-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -372,7 +478,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-20 13:34:37" itemprop="dateModified" datetime="2022-11-20T13:34:37+00:00">2022-11-20</time>
+      <time title="修改时间：2022-11-20 15:33:30" itemprop="dateModified" datetime="2022-11-20T15:33:30+00:00">2022-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -476,7 +582,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-20 13:34:37" itemprop="dateModified" datetime="2022-11-20T13:34:37+00:00">2022-11-20</time>
+      <time title="修改时间：2022-11-20 15:33:30" itemprop="dateModified" datetime="2022-11-20T15:33:30+00:00">2022-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -584,7 +690,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-20 13:34:37" itemprop="dateModified" datetime="2022-11-20T13:34:37+00:00">2022-11-20</time>
+      <time title="修改时间：2022-11-20 15:33:30" itemprop="dateModified" datetime="2022-11-20T15:33:30+00:00">2022-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -691,7 +797,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-20 13:34:37" itemprop="dateModified" datetime="2022-11-20T13:34:37+00:00">2022-11-20</time>
+      <time title="修改时间：2022-11-20 15:33:30" itemprop="dateModified" datetime="2022-11-20T15:33:30+00:00">2022-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -996,7 +1102,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-20 13:34:37" itemprop="dateModified" datetime="2022-11-20T13:34:37+00:00">2022-11-20</time>
+      <time title="修改时间：2022-11-20 15:33:30" itemprop="dateModified" datetime="2022-11-20T15:33:30+00:00">2022-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1110,7 +1216,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-20 13:34:37" itemprop="dateModified" datetime="2022-11-20T13:34:37+00:00">2022-11-20</time>
+      <time title="修改时间：2022-11-20 15:33:30" itemprop="dateModified" datetime="2022-11-20T15:33:30+00:00">2022-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1222,7 +1328,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-20 13:34:37" itemprop="dateModified" datetime="2022-11-20T13:34:37+00:00">2022-11-20</time>
+      <time title="修改时间：2022-11-20 15:33:30" itemprop="dateModified" datetime="2022-11-20T15:33:30+00:00">2022-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1354,7 +1460,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-20 13:34:37" itemprop="dateModified" datetime="2022-11-20T13:34:37+00:00">2022-11-20</time>
+      <time title="修改时间：2022-11-20 15:33:30" itemprop="dateModified" datetime="2022-11-20T15:33:30+00:00">2022-11-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1400,107 +1506,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/06/07/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%A0%E8%BD%BDecharts%E5%9B%BE%E8%A1%A8%E6%8A%A5%E9%94%99%E6%97%A0%E6%B3%95%E4%BB%8Eundefined%E4%B8%8A%E8%AF%BB%E5%8F%96createView%E5%B1%9E%E6%80%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/07/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%A0%E8%BD%BDecharts%E5%9B%BE%E8%A1%A8%E6%8A%A5%E9%94%99%E6%97%A0%E6%B3%95%E4%BB%8Eundefined%E4%B8%8A%E8%AF%BB%E5%8F%96createView%E5%B1%9E%E6%80%A7/" class="post-title-link" itemprop="url">微信小程序加载echarts图表报错无法从undefined上读取createView属性</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-06-07 09:56:30" itemprop="dateCreated datePublished" datetime="2021-06-07T09:56:30+00:00">2021-06-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-20 13:34:37" itemprop="dateModified" datetime="2022-11-20T13:34:37+00:00">2022-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">微信小程序</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2021/06/07/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%A0%E8%BD%BDecharts%E5%9B%BE%E8%A1%A8%E6%8A%A5%E9%94%99%E6%97%A0%E6%B3%95%E4%BB%8Eundefined%E4%B8%8A%E8%AF%BB%E5%8F%96createView%E5%B1%9E%E6%80%A7/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/06/07/微信小程序加载echarts图表报错无法从undefined上读取createView属性/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>小程序中按 echarts 官方文档引入 echarts，而后将 web 端 echarts 图表的配置（setOption 中需要的 options 对象）复制过来使用，发现小程序开发工具中可以正常加载图表，但一使用预览，就无法加载图表，而在预览下打开 vConsole 调试，直接闪退；使用真机调试，直接报错<code>Cannot not read property &#39;createView&#39; of undefined</code>。</p>
-<h2 id="微信开放社区讨论"><a href="#微信开放社区讨论" class="headerlink" title="微信开放社区讨论"></a>微信开放社区讨论</h2><p>在微信开放社区查找相关错误，发现社区中关于真机调试报<code>Cannot not read property &#39;createView&#39; of undefined</code>错误的原因是真机调试不支持 canvas 2d，但预览模式是没问题的，故判断无法加载图表并闪退并非因为<code>Cannot not read property &#39;createView&#39; of undefined</code>错误造成。</p>
-<h2 id="排除错误"><a href="#排除错误" class="headerlink" title="排除错误"></a>排除错误</h2><p>对比 echarts 官方示例，发现 echarts 官方示例加载完全没有问题，这时才开始怀疑是配置对象造成了加载失败（一直没有怀疑是因为 web 端加载无误，开发工具中加载也无误）。逐个调试配置对象，终于发现配置对象中，对颜色的定义有一行为<code>rgb(20 194 59)</code>，rgb 值中间未使用逗号分隔，这是 CSS4 的标准，而小程序并不支持 CSS4 标准的 color，用逗号分隔后，就没有问题了。</p>
-
       
     </div>
 
