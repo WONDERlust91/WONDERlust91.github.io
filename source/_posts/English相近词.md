@@ -65,21 +65,73 @@ categories: English
 
   persist v. 坚持
 
+- assume v. 假设；承担
+
+  assumption n. 臆测；承担
+
+  consume v. 消耗；消费
+
+  consumption n. 消费
+
+  presume v. 假设；鲁莽地做
+
+  presumption n. 假说；放肆行为
+
+  resume v. 恢复 noun. 简历
+
+  resumption n. 恢复
+
+  subsume v. 吸收，归入
+
+- precedent n. 先例 adj. 领先
+
+  president n. 总统
+
+- assist v.n. 协助
+
+  insist v. 坚称，咬定（表坚定，不容拒绝）
+
+  persist v. 坚持（表持续，不会中断）
+
+  resist v. 抵抗 n. 保护涂层
+
+- index n. 索引；指数；幕指数；指针，指标
+
+  indices n. index 复数
+
+- efficient adj. 高效的
+
+  proficient adj. 精通的 n. 精通某事的人
+
+  sufficient adj. 足够的
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
 
-  conj. whereas
+  1. conj. + 完整句子
 
-  conj. although
+     - conj. whereas (弱转折，表对比)
 
-  conj. though
+     - conj. although
 
-  conj. but （but 词性很多，澳洲非正式场合也会在副词词性下使用 but 表转折）
+     - conj. though
 
-  adverb. however
+     - conj. while
 
-  adverb. nevertheless
+     - conj. but （but 词性很多，澳洲非正式场合也会在副词词性下使用 but 表转折）
+
+  2. adverb. 修饰动词，形容词，或作为插入语
+
+     - adverb. however
+
+     - adverb. nevertheless
+
+  3. prep. + n.
+
+     - prep. in spite of
+
+     - prep. despite
 
 - 与“大”相关的形容词
 
@@ -361,6 +413,14 @@ categories: English
 
   meticulous adj. 谨慎的，仔细的
 
+- 表示“恶化”
+
+  deteriorate v. 恶化
+
+  exacerbate v. 恶化
+
+  aggravate v. 加剧，恶化
+
 ## 反义词
 
 - radical adj. 激进的，左倾的
@@ -378,3 +438,13 @@ categories: English
 - temporary adj. 临时的
 
   permanent adj. 永久的
+
+- homo- prefix 前缀：相同的；同时也当作 homosexual（同性的）的缩写
+
+  hetero- prefix 前缀：其他，不同的；同时也当作 heterosexual（异性的）的缩写
+
+- predecessor n. 前任
+
+  incumbent n. 现任 adj. 义务的；现任的
+
+  successor n. 继任

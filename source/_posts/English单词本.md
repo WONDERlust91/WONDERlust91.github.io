@@ -325,6 +325,12 @@ categories: English
 
   1. verb: evaluate or estimate the nature, ability, or quality of. 评估或估计性质，能力，或质量。
 
+- assimilate
+
+  1. verb: take in (information, ideas, or culture) and understand fully. 吸收（信息，想法，或文化）并充分理解，即同化，吸收。
+
+  2. verb: cause (something) to resemble; liken. 使（某物）相似；比喻成，比作。
+
 - astonish
 
   1. verb: suprise or impress (someone) greatly. 使（某人）大吃一惊或给（某人）留下深刻印象。
@@ -595,6 +601,12 @@ categories: English
 
   2. noun: a large waterfall. 巨大的瀑布。
 
+- cater
+
+  1. verb(NORTH AMERICAN): provide food and drink, typically at social events and in a professional capacity. 提供食物和饮料，通常在社交活动中并以专业身份。
+
+  2. phrase: cater for/to - provide someone with what is needed or required. 为某人提供需要或必要的东西，即迎合。
+
 - cause
 
   1. noun: a person or thing that gives rise to an action, phenomenon, or condition. 引起动作，现象，或状况的人或事物，即缘由。
@@ -614,6 +626,10 @@ categories: English
   8. phrase: make common cause - unite in order to achieve a shared aim. 团结起来，以实现共同的目标。
 
   9. phrase: a rebel without a cause - a person who is dissatisfied with society but does not have a specific aim to fight for. 对社会不满意但没有具体要奋斗的目标的人。
+
+- census
+
+  1. noun: an official count or survey of a population, typically recording various detail of individuals. 对人口的官方统计或调查，通常记录个人的各种细节，即人口普查。
 
 - centurion
 
@@ -1227,6 +1243,12 @@ categories: English
 
   3. noun(OFFENSIVE·DATED): a person with mental disabilities. （攻击性的·过时的）有精神障碍的人。
 
+- deference
+
+  1. noun: humble submission and respect. 谦卑的服从和尊重。
+
+  2. phrase: in deference to - out of respect for; in consideration of. 出于尊重；考虑到。
+
 - delicate
 
   1. adjective: very fine in texture or structure; of intricate workmanship or quality. 材质或结构上非常精细；复杂的工艺或质量。
@@ -1253,6 +1275,12 @@ categories: English
 
   6. phrase: take delivery of - receive (something purchased). 收到（已购买的东西）。
 
+- democratize
+
+  1. verb: introduce a democratic system or democratic principles to. 引入民主制度或民主原则，即民主化。
+
+     - make (something) accessible to everyone. 使（某物）对每个人都可用，即全民化。
+
 - descendant
 
   1. noun: a person, plant, or animal that is descended from a particular ancestor. 来自特定祖先的人，植物，或动物，即后代。
@@ -1268,6 +1296,10 @@ categories: English
   4. adjective: (of a person) having a great need or desire for something. （某个人）对某事有很大的需要或意愿。
 
   5. adjective: (of a person or flight) violent or dangerous. （某人或战斗）暴力或危险的。
+
+- deteriorate
+
+  1. verb: become progressively worse. 逐渐恶化。
 
 - detrimental
 
@@ -1317,6 +1349,12 @@ categories: English
 
   2. noun: a person or thing rejected as no longer useful or desirable. 因不再有用或合意而被拒绝的人或物。
 
+- discourse
+
+  1. noun: written or spoken communication or debate. 书面或口头交流或辩论。
+
+  2. verb: speak or write authoritatively about a topic. 以权威的方式谈论或写作某个话题。
+
 - discrimination
 
   1. noun: the unjust or prejudicial treatment of different categories of people or things, especially on the grounds of race, age, or sex. 对不同类别的人或事物的不公正或偏见的对待，尤其是基于种族，年龄，或性别的原因。
@@ -1352,6 +1390,10 @@ categories: English
   1. noun: a difference or contrast between similar things or people. 在相似事物或人之间的差异或对比。
 
   2. noun: excellence that sets someone or something apart from others. 将人或物与其他区分开来的卓越。
+
+- divisive
+
+  1. adjective: tending to cause disagreement or hostility between people. 容易导致人与人之间分歧或敌意的。
 
 - doom
 
@@ -1676,6 +1718,14 @@ categories: English
   1. verb: develop gradually, especially from a simple to a more complex form. 逐渐发展，尤其是从简单到复杂的形式。
 
   2. verb(CHEMISTRY): give off (gas or heat). 释放出（气体或热量）。
+
+- exacerbate
+
+  1. verb: make (a problem, bad situation, or negative feeling) worse. 使（问题，坏的情况，或消极的感觉）变得更糟。
+
+- exasperate
+
+  1. verb: irritate and frustrate (someone) intensely. 强烈地激怒和挫败（某人）。
 
 - excess
 
@@ -2139,9 +2189,33 @@ categories: English
 
   1. noun: a half of a sphere. 半球。
 
+- hence
+
+  1. adverb: as a consequence; for this reason. 作为结果；为此原因，即因此。
+
+  2. adverb: in the future (used after a period of time). 将来（用在一段时间后），即此后。
+
+  3. adverb(ARCHAIC): from here. （古老）从这里。
+
+- Hispanic
+
+  1. adjective: relating to Spain or to Spanish-speaking countries, especially those of Latin America. 与西班牙或讲西班牙语的国家有关，尤其是拉丁美洲国家。
+
+  2. noun: a Spanish-speaking person living in the US, especially one of Latin American descent. 居住在美国的讲西班牙语的人，尤其是拉丁美洲血统的人。
+
 - homicide
 
   1. noun: the deliberate and unlawful killing of one person by another; murder. 一个人故意和非法杀害另一个人；谋杀。
+
+- homogeneous
+
+  1. adjective: of the same kind; alike. 同类；一样。
+
+- homogenize
+
+  1. verb: subject (milk) to a process in which the fat droplets are emulsified and the cream does not separate. 使（牛奶）经过一个过程，在这个过程中脂肪滴被乳化并且奶油没有被分离。
+
+  2. verb: make uniform or similar. 使一致或相似，即同质化。
 
 - hospice
 
@@ -2401,6 +2475,26 @@ categories: English
 
   1. phrase: used for emphasis in questions, especially to express astonishment or disbelief. 用于强调问题，尤其是表达惊讶或不相信，常译为到底，究竟。
 
+- intimate
+
+  1. adjective: closely acquainted; familiar, close. 熟识的；熟悉，接近的。
+
+     - (of a place or setting) having or creating an informal friendly atmosphere. （地方或环境）具有或创造出一种非正式的友好气氛。
+
+     - involving very close connection. 涉及非常密切的联系。
+
+     - (of knowledge) detailed or thorough. （知识）详细的或彻底的。
+
+  2. adjective: private and personal. 私人和个人的。
+
+     - (EUPHEMISTIC) used euphemistically to indicate that a couple is having a sexual relationship. （委婉的）用于委婉地表示一对夫妇正在发生性关系。
+
+  3. noun: a very close friend. 一个非常亲密的朋友。
+
+  4. verb: imply or hint. 暗示或隐射。
+
+     - state or make known. 陈述或公开。
+
 - introduce
 
   1. verb: bring (something, especially a product, measure, or concept) into use or operation for the first time. 首次将（某物，尤其是产品，措施，或概念）投入使用或操作。
@@ -2570,6 +2664,34 @@ categories: English
   4. noun(AMERICAN FOOTBALL): a pass thrown either sideways or backward from the position of the passer. （美式足球）传球者从侧边或后方的传球。
 
   5. verb(US): throw (a football) in a sideways or backward direction. （美国）从侧边或后方传（球）。
+
+- launch
+
+  1. verb: set (a boat) in motion by pushing it or allowing it to roll into the water. 使（船）动起来，通过推或使其滚入水中。
+
+     - set (a newly built ship or boat) afloat for the first time, typically as part of an official ceremony. （新建的船或小舟）首次入水，通常作为正式仪式的一部分。
+
+     - send (a missile, satellite, spacecraft) on its course or into orbit. 将（导弹，卫星，航天器）送入轨道。
+
+     - hurl (something) forcefully. 用力投掷（某物）。
+
+     - (of a person) make a sudden energetic movement. （人）突然做出有力的动作。
+
+     - utter (criticism or a threat) vehemently. 激烈地说出（批评或威胁）。
+
+  2. verb: start or set in motion (an activity or enterprise). 开始或启动（一项活动或企业）。
+
+     - introduce (a new product or publication) to the public for the first time. 第一次向公众介绍（新产品或出版物）。
+
+  3. noun: an act or instance of launching something. 发射某物的行为或实例。
+
+     - an occasion at which a new product or publication is introduced to the public. 向公众介绍新产品或出版物的场合。
+
+  4. phrase: launch into - begin something energetically and enthusiastically. 充满活力和热情地开始某事。
+
+  5. phrase: launch out - make a start on a new and challenging enterprise. 开创一个新的，具有挑战性的事业。
+
+  6. noun: a large motorboat, used especially for short trips. 大型摩托艇，尤其用于短途旅行。
 
 - lean
 
@@ -3053,6 +3175,18 @@ categories: English
 
   4. verb(ARCHAIC): bewitch with the evil eye. （古老）用邪恶的眼睛迷惑。
 
+- owe
+
+  1. verb: have an obligation to pay or repay (something, especially money) in return for something received. 有义务支付或偿还（某物，尤其是金钱）作为对收到的东西的回报，即欠。
+
+  2. phrase: owe it to oneself to do something - need to do something to protect one's own interests. 需要做点什么来保护自己的利益。
+
+  3. phrase: owe someone a living - used to express disapproval of someone who expects to receive financial support or other benefits without doing any work. 用于表示不赞成某些人，这些人希望在不做任何工作的情况下获得经济支持或其他好处。
+
+  4. phrase: owe someone one - feel indebted to someone for a favor done. 对某人的帮助感到亏欠。
+
+  5. phrase: owing to - because of or on account of. 因为或由于。
+
 ## P
 
 - painstaking
@@ -3341,6 +3475,18 @@ categories: English
 
   3. phrase: preach to the chair - advocate something to people who already share one's convictions about merits or importance. 宣扬某事对那些已经互相分享了关于优秀品质或重要性的信念的人们。
 
+- precede
+
+  1. verb: come before (something) in time, order, or position. 在时间，顺序，或位置上，在（某事）之前。
+
+     - preface or introduce something with. 作序或介绍某事。
+
+- precedent
+
+  1. noun: an earlier event or action that is regarded as an example or guide to be considered in subsequent similar circumstances. 较早的事件或行动被视为在随后的类似情况下应考虑的例子或指南，即先例。
+
+  2. adjective: preceding in time, order, or importance. 在时间，顺序，或重要性上领先。
+
 - predominance
 
   1. noun: the state or condition of being greater in number or amount. 在数量上变得更多的状态或情况。
@@ -3404,6 +3550,12 @@ categories: English
   2. verb: affirm one's faith in or allegiance to (a religion or set of beliefs). 肯定某人的信仰或忠诚关于（宗教或一系列信仰）。
 
   3. verb(ARCHAIC·HUMOROUS): teach (a subject) as a professor. （古老·幽默）作为教授，教授（一门学科）。
+
+- proficient
+
+  1. adjective: competent or skilled in doing or using something. 有能力的或熟练的在做或使用某事上，即精通。
+
+  2. noun(RARE): a person who is proficient. （稀有）精通某事的人。
 
 - profile
 
@@ -3652,6 +3804,12 @@ categories: English
 - resent
 
   1. verb: feel bitterness or indignation at (a circumstance, action, or person). 对（情况，行为，或人）感到苦涩或愤慨。
+
+- resist
+
+  1. verb: withstand the action or effect of. 抵抗行为或影响。
+
+  2. noun: a resistant substance applied as a coating to protect a surface during some process, for example to prevent dye or glaze adhering. 抗性物质用作保护表面的涂层在某些过程中，例如防止染料或釉料粘附。
 
 - resort
 
@@ -4757,6 +4915,12 @@ categories: English
 
   2. noun: members of tribal communities, especially in South Asia. 部落社区的成员，尤其是在南亚。
 
+- turbulent
+
+  1. adjective: characterized by conflict, disorder, or confusion; not controlled or calm. 以冲突，无序，混乱为特征；不受控制或不冷静的。
+
+     - (of air or water) moving unsteadily or violently. （空气或水）不稳定或猛烈地移动。
+
 ## U
 
 - ultimate
@@ -4783,6 +4947,10 @@ categories: English
 
   1. noun: the presentation of someting as being smaller, worse, or less important than it actually is. 将某物展现得比实际更小，更差，或更不重要，即轻描淡写。
 
+- uniformity
+
+  1. noun: the quality or state of being uniform. 变得一致的状态或质量。
+
 - uninformed
 
   1. adjective: not having or showing awareness or understanding of the facts. 没有或没表现出对事实的认识或理解。
@@ -4807,7 +4975,11 @@ categories: English
 
 - unparalleled
 
-  1. adjective: having no parallel or equal; exceptional. 没有平行或相等；特殊的。
+  1. adjective: having no parallel or equal; exceptional. 没有平行或相等；特殊的，即空前的。
+
+- unprecedented
+
+  1. adjective: never done or known before. 从未被完成或知晓的，即史无前例的。
 
 - unsolicited
 
@@ -4979,7 +5151,7 @@ categories: English
 
 - whereas
 
-  1. conjunction: in contrast or comparison iwth the fact that. 与事实对照或比较，表转折。
+  1. conjunction: in contrast or comparison with the fact that. 与事实对照或比较，表转折。
 
 - whereby
 
@@ -5141,7 +5313,7 @@ categories: English
 
   2. adverb: still; even (used to emphasize increase or repetition). 仍然（多用于肯定句，表示情况还在继续，但期望不再继续）；甚至（用于强调增加或重复，常用于 another，again 前）。
 
-  3. adverb: neverthe less; inspite of that. 尽管。表转折，常用于句首。
+  3. adverb: nevertheless; inspite of that. 尽管。表转折，常用于句首。
 
   4. conjunction: but at the same time; but nevertheless. 但同时；但尽管。表转折。
 

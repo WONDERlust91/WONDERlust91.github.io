@@ -653,3 +653,5 @@ have been doing 从过去到现在一直做某事
 - sleep/dream on sth. 睡过去，不用管某事。
 
 - bring about = lead to 导致。
+
+- be immune to (from) sth. 对某物产生免疫。
