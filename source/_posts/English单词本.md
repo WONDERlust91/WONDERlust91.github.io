@@ -355,7 +355,7 @@ categories: English
 
 - back and forth
 
-  1. to and fro. 来来回回，扯皮。
+  1. phrase: to and fro. 来来回回，扯皮。
 
 - backlash
 
@@ -368,6 +368,12 @@ categories: English
   1. noun: a process of voting, in writing and typically in secret. 投票的过程，以书面形式，通常是秘密的（常用于表示总票数或纸质选票本身）。
 
   2. verb: (of an organization) elicit a secret vote from (members) on a particular issue. （组织）就特定问题征集（成员）的无记名投票（常用于表示抽签或表决）。
+
+- banquet
+
+  1. noun: an elaborate and formal meal for many people. 为很多人准备的精致又正式的一餐，即宴会。
+
+  2. verb: entertain with a banquet. 设宴款待。
 
 - barely
 
@@ -495,7 +501,7 @@ categories: English
 
   1. verb: (of animals) mate and then produce offspring. （动物）交配，然后生产后代。
 
-  2. noun: a stock of animals or plants within a species having a distinctive appearance and typically having been developed by deliberate selection. 动物或植物种群中某物种中具有独特外观，通常是经过深思熟虑发展起来的。
+  2. noun: a stock of animals or plants within a species having a distinctive appearance and typically having been developed by deliberate selection. 动物或植物种群中某物种中具有独特外观，通常是经过有意的选择发展起来的。
 
   3. phrase: a breed apart - a sort or kind of person that is very different from the norm. 与规范非常不同的一种或一类人。
 
@@ -509,7 +515,7 @@ categories: English
 
   1. noun: the mass or magnitude of something large. 大东西的质量或大小。
 
-  2. verb: be or semm to be of great size or importance. 具有或似乎具有很大规模或重要性。
+  2. verb: be or seem to be of great size or importance. 具有或似乎具有很大规模或重要性。
 
   3. verb: treat (a product) so that its quantity appears greater than it in fact is. 对待（产品），使其数量看起来比实际数量大。
 
@@ -518,6 +524,14 @@ categories: English
      - (especially of goods) in large quantities, usually at a reduced price. （尤其是商品）以大量的形式，通常以较低的价格。
 
      - (of a cargo or commodity) loose; not packaged. （货物或商品）松散的；未打包的。
+
+- bun
+
+  1. noun: a bread roll of various shapes and flavorings, typically sweetened and often containing dried fruit. 各种形状和口味的面包卷，通常加糖并含有干果。
+
+  2. noun: a hairstyle in which the hair is drawn back into a tight coil at the back of the head. 一种发型，将头发向后拉在脑后形成一个紧紧的圈，即丸子头。
+
+  3. noun(INFORMAL·NORTH AMERICAN): a person's buttocks. （非正式·北美）一个人的臀部。
 
 - bypass
 
@@ -678,6 +692,10 @@ categories: English
   5. verb: (of colours) appear discordant or ugly when placed close to each other. （颜色）当被放置在一起时显得不协调或难看。
 
   6. verb: strike (cymbals) together, producing a loud discordant sound. 敲击（钹）到一起，产生巨大的不和谐的声音。
+
+- clientele
+
+  1. noun: clients collectively. 客户群体。
 
 - cling-film
 
@@ -969,9 +987,11 @@ categories: English
 
 - contend
 
-  1. verb: struggle to surmount (a difficulty or danger). 努力克服（困难或危险）。
+  1. verb: struggle to surmount (a difficulty or danger). 努力克服（困难或危险）。（常见固定搭配 contend with sth.）
 
-  2. verb: assert something as a position in an argument. 断言某事作为争论中的立场。
+     - engage in a competition or campaign in order to win or achieve (something). 为了赢得或实现（某事）而参与竞争或征战。（常见固定搭配 contend for sth.）
+
+  2. verb: assert something as a position in an argument. 断言某事作为争论中的立场。（常跟宾语从句 contend that）
 
 - content
 
@@ -1248,6 +1268,18 @@ categories: English
   1. noun: humble submission and respect. 谦卑的服从和尊重。
 
   2. phrase: in deference to - out of respect for; in consideration of. 出于尊重；考虑到。
+
+- deliberate
+
+  1. adjective: done consciously and intentionally. 有意识并有目的地做的。
+
+  2. verb: engage in long and careful consideration. 进行长期而仔细的考虑。
+
+- deliberately
+
+  1. adverb: consciously and intentionally; on purpose. 有意识地和有目的的；有意地。
+
+  2. adverb: in a careful and unhurried way. 以小心又不紧不慢的方式，即从容地。
 
 - delicate
 
@@ -1921,6 +1953,16 @@ categories: English
 
   1. verb: rise and fall irrgularly in number or amount. 在数目或数量上不规则地上升和下降，即波动。
 
+- folk
+
+  1. noun(INFORMAL): people in general. （非正式）普通人。
+
+  2. noun: folk music. 民谣。
+
+  3. adjective: relating to the traditional art or culture of a community or nation. 关于一个社群或国家的传统艺术或文化。
+
+  4. adjective: relating to folk music. 民谣。
+
 - formerly
 
   1. adverb: in the past; in earlier time. 以前；在早些时候。注意与 formally （正式地）的区别。
@@ -1956,6 +1998,16 @@ categories: English
   3. noun(CHEMISTRY): each of the portions into which a mixture may be separated by a process in which the individual components behave differently according to their physical properties. 每一个部分，这个部分是化合物可以被通过一个过程分离开的，在这个过程中独立的成分根据它们不同的物理特性表现不同。
 
   4. noun: (in the Christian Church) the breaking of the Eucharistic bread. （在基督教中）分开圣餐面包。
+
+- frank
+
+  1. adjective: open, honest, and direct in speech or writing, especially when dealing with unpalatable matters. 公开，诚实，并直接的在演讲或写作中，尤其是处理令人不快的事情时。
+
+  2. verb: stamp an official mark on (a letter or parcel), especially to indicate that postage has been paid or does not need to be paid. 在（信或包裹）上盖上官方标记，尤其表示邮资已付或无需支付时。
+
+  3. noun: an official mark or signature on a letter or parcel, especially to indicate that postage has been paid or does not need to be paid. 信件或包裹上的官方标记或签名，尤其是表明邮资已付或无需支付。
+
+  4. noun: short for frankfurter. 法兰克福香肠的缩写。
 
 - freight
 
@@ -2221,6 +2273,10 @@ categories: English
 
   1. noun: a home providing care for the sick or terminally ill. 为病人或绝症病人提供护理的家。
 
+- hostile
+
+  1. adjective: unfriendly; antagonistic. 不友好；敌对的。
+
 - hostility
 
   1. noun: hostile behavior; unfriendiness or opposition. 敌对行为；不友好或反对。
@@ -2322,6 +2378,10 @@ categories: English
   2. adjective(INFORMAL): discourteous or rude. （非正式）无礼或粗鲁的。
 
   3. adjective(WEST INDIAN): angry or quick-tempered. （西印度）生气或脾气暴躁的。
+
+- imitate
+
+  1. verb: take or follow as a model. 效仿或以之为模型。
 
 - immunization
 
@@ -2770,6 +2830,12 @@ categories: English
 - lottery
 
   1. noun: a means of raising money by selling numbered tickets and giving prizes to the holders of numbers drawn at random. 一种通过售卖编号票据并随机抽取编号持有者给予奖励的筹集资金的手段，即彩票。
+
+- lounge
+
+  1. verb: lie, sit, or stand in a relaxed or lazy way. 以放松或慵懒的方式躺着，坐着，或站着。
+
+  2. noun: a public room, as in a hotel, theater, or club, in which to sit and relax. 一个公共的房间，例如在宾馆，剧院，或俱乐部，供人坐下来放松的地方。
 
 ## M
 
@@ -3915,6 +3981,12 @@ categories: English
 
   7. noun: a Japanese alcoholic drink made from fermented rice, traditionally drunk warm in small porcelain cups. 一种由发酵大米制成的日本酒精饮料，传统上是在小瓷杯中趁热饮用，即清酒。
 
+- sandal
+
+  1. noun: a light shoe with either an openwork upper or straps attaching the sole to the foot. 一种轻便的鞋，要么是有镂空的鞋面，要么是将鞋底通过系带绑在脚上，即凉拖。
+
+  2. noun: short for sandalwood. 檀香木的缩写。
+
 - sanitary
 
   1. adjective: relating to the conditions that affect hygiene and health, especially the supply of sewage facilities and clean drinking water. 关于影响卫生和健康的条件，尤其是排污设施和清洁饮用水的供应。
@@ -3986,6 +4058,18 @@ categories: English
   2. noun: a piece of writing or a picture produced carelessly or hurriedly. 粗心或匆忙地产出的一段文字或一副画。
 
   3. verb: card (wool, cotton, etc.) coarsely. 粗略地梳理（羊毛，棉花，等等）。
+
+- seeth
+
+  1. verb: (of a liquid) bubble up as a result of being boiled. （液体）由于沸腾而冒泡。
+
+     - (ARCHAIC) cook (food) by boiling it in a liquid. （古老）将（食物）放入液体中煮沸。
+
+     - (of a person) be filled with intense but unexpressed anger. （一个人）充满强烈但未表达的愤怒。
+
+     - (of a place) be crowded with people or things moving about in a rapid or hectic way. （一个地方）挤满了以快速或忙碌的方式移动的人或事物。
+
+     - (of a crowd of people) move in a rapid or hectic way. （一群人）以快速或忙碌的方式移动。
 
 - sensational
 
@@ -4453,7 +4537,7 @@ categories: English
 
   7. verb: cause mental or emotional strain or tension in. 导致精神或情绪紧张。
 
-- strike
+- strike (注意过去式不是 stroke 是 struck)
 
   1. verb: hit forcibly and deliberately with one's hand or a weapon or other implement. 用手或武器或其他工具强行故意地击打。
 
@@ -4533,6 +4617,38 @@ categories: English
 
   1. verb: make great efforts to achieve or obtain something. 为实现或获得某物而付出巨大的努力。
 
+- stroke
+
+  1. noun: an act of hitting or striking someone or something; a blow. 击打或打击某人或某物的行为；一击。
+
+  2. noun: a mark made by drawing a pen, pencil, or painbrush in one direction across paper or canvas. 用钢笔，铅笔，或画笔沿一个方向在纸或画布上画出的标记。
+
+  3. noun: an act of moving one's hand across a surface with gentle pressure. 用轻微的压力将手在一个表面上移动的动作。
+
+  4. noun: a movement, especially one of a series, in which something moves out of its position and back into it; a beat. 一种运动，尤其是一系列中的一种，在这个运动中，某物移出它的位置再移入（常用来指活塞的往复运动或游泳时划水、划船时划桨的动作）；一个节拍。
+
+  5. noun: a sudden disabling attack or loss of consciousness caused by an interruption in the flow of blood to the brain, especially through thrombosis. 突然的致残性发作或意识丧失，由于大脑中血流的中断，尤其是血栓造成的。
+
+  6. verb: move one's hand with gentle pressure over (a surface, especially hair, fur, or skin), typically repeatedly; caress. 移动某人的手以轻柔的压力在（一个表面，尤其是头发，皮毛，或皮肤），通常是反复地；抚摸。
+
+  7. verb: act as the stroke of (a boat or crew). 作为（船或船员）中的桨手。
+
+  8. verb: hit or kick (a ball) smoothly and deliberately. 流畅并从容地击打或踢出（球）。
+
+  9. phrase: at a stroke - by a single action having immediate effect. 通过单一的行动产生立刻的影响。
+
+  10. phrase: not do a stroke of work - do no work at all. 根本没做任何工作。
+
+  11. phrase: on the stroke of - precisely at the specified time. 准确地在一个特定的时间。
+
+  12. phrase: put someone off their stroke - disconcert someone so that they do not work or perform as well as they might; break the pattern or rhythm of someone's work. 扰乱某人以使他们无法工作或表现良好；打破某人工作的模式或节奏。
+
+  13. phrase: stroke of genius - an outstandingly brilliant and original idea. 一个非常聪明且原创的想法，即神来之笔。
+
+  14. phrase: stroke of luck - a fortunate occurrence that could not have been predicted or expected. 无法预测或预期的幸运事件。
+
+  15. phrase: stroke of business - a profitable transaction. 有利可图的交易。
+
 - stuff
 
   1. noun: matter, material, articles, or activities of a specified or indeterminate kink that are being referred to, indicated, or implied. 被提及、指明或暗示的特定或不确定的类型的物质、材料、文章或活动。
@@ -4591,6 +4707,10 @@ categories: English
 
   3. noun(GRAMMAR): the subjective case. 主观情况。
 
+- subsidy
+
+  1. noun: a sum of money granted by the government or a public body to assist an industry or business so that the price of a commodity or service may remain low or competitive. 政府或公共机构提供的一笔资金，目的是帮助工业或商业使商品或服务的价格保持低或有竞争力的，即补贴。
+
 - substantial
 
   1. adjective: of considerable importance, size, or worth. 具有相当的重要性，规模，或价值。
@@ -4602,6 +4722,12 @@ categories: English
 - subtle
 
   1. adjective: (especially of a change or distinction) so delicate or precise as to be difficult to analyze or describe. （尤其是变化或区别）太精细或精确以至于很难分析或描述。
+
+- superb
+
+  1. adjective: excellent. 出色的。
+
+  2. adjective: impressively splendid. 令人印象深刻的辉煌。
 
 - superficial
 
@@ -4791,7 +4917,7 @@ categories: English
 
   12. phrase: in the short term - over or for a short period of time. 超过或持续短的一段时间。
 
-  13. phrase: on ... terms - in a specified relation or on a specified footing. 在指定的关系或指定的立足点上。
+  13. phrase: on ... terms - in a specified relation or on a specified footing. 在指定的关系或指定的立足点上。（例如 on good terms 即关系很好）
 
 - textile
 
@@ -5302,6 +5428,12 @@ categories: English
   10. phrase: wonders will never cease - an exclamation of great surprise at something pleasing. 对令人愉快的事情的非常惊讶的感叹。
 
   11. phrase: work wonders - have a very beneficial effect on someone or something. 对某人或某事有非常有益的影响。
+
+- worthy
+
+  1. adjective: having or showing the qualities or abilities that merit recognition in a specified way. 具有或表现出以特定方式值得认可的品质或能力。
+
+  2. noun(OFTEN HUMOROUS): a person notable or important in a particular sphere. （常用于幽默）在特定领域著名或重要的人。
 
 ## X
 

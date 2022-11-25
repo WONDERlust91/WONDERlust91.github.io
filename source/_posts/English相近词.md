@@ -421,6 +421,10 @@ categories: English
 
   aggravate v. 加剧，恶化
 
+- 表示“依赖...生活”
+
+  live off = live on
+
 ## 反义词
 
 - radical adj. 激进的，左倾的
@@ -448,3 +452,7 @@ categories: English
   incumbent n. 现任 adj. 义务的；现任的
 
   successor n. 继任
+
+- detach A from B v. 分离
+
+  attach A to B v. 连接 附上
