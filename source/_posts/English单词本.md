@@ -215,6 +215,12 @@ categories: English
 
   2. adjective(INFORMAL): having a strong dislike for. （非正式）有强烈的厌恶感。
 
+- ambiguous
+
+  1. adjective: (of a language) open to more than one interpretation; having a double meaning. （语言）接受不止一种解释；有双重含义。
+
+     - unclear or inexact because a choice between alternatives has not been made. 不清楚或不准确，因为尚未在备选项间做出选择。
+
 - amid
 
   1. preposition: surrounded by; in the middle of. 被围绕；在中间。相当于 in 或 among。
@@ -293,6 +299,10 @@ categories: English
 
   2. noun: the zodiacal sign or constellation Sagittarius. 黄道带标志或星座射手座。
 
+- arrogant
+
+  1. adjective: having or revealing an exaggerated sense of one's own importance or abilities. 对自己的重要性或能力有或表现出夸张的感觉，即傲慢，自大。
+
 - artifact (artefact)
 
   1. noun: an object made by a human being, typically one of cultural or historical interest. 由人类制造的物品，通常具有文化或历史意义。
@@ -362,6 +372,12 @@ categories: English
   1. noun: a strong and adverse reaction by a large number of people, especially to a social or political development. 很多人的强烈并敌对的反应，尤其是对社会或政治发展方面。
 
   2. noun: recoil arising between parts of a mechanism. 机械部件间生产的后坐力。
+
+- bait
+
+  1. verb: deliberately annoy or taunt (someone). 故意惹恼或嘲笑（某人）。
+
+  2. verb: prepare (a hook, trap, net, or fishing area) with bait to entice fish or animals as prey. 用诱饵准备（鱼钩，陷阱，网或钓鱼区）以诱惑鱼或动物作为猎物。
 
 - ballot
 
@@ -444,6 +460,12 @@ categories: English
   11. phrase: bill and coo - exchange caresses or affectionate words; behave or talk in a very loving or sentimental way. 交换爱抚或深情的话语；以充满爱意或感伤的方式行事或说话。
 
   12. noun: a medieval weapon like a halberd with a hook instead of a blade. 中世纪的武器，比如有钩的戟，而不是有刀锋的。
+
+- biomass
+
+  1. noun: the total mass of organisms in a given area or volume. 给定区域或体积内生物体的总量。
+
+     - organic matter used as a fuel, especially in a power station for the generation of electricity. 用作燃料的有机物质，特别是在发电站发电。
 
 - bland
 
@@ -791,13 +813,13 @@ categories: English
 
   2. verb(FORMAL): include, comprise, or encompass. （正式）包括，包含，或涵盖。
 
-- compulsion（compel 的变形）
+- compulsion (compel 的变形)
 
   1. noun: the action or state of forcing or being forced to do something; constraint. 强迫或被迫做某事的行为或状态；约束，即义务。
 
-  2. noun: an irresistible urge to behave in a certain way, especially against one's conscious wishes. 一种不可抗拒的以某种方式行事的冲动，尤其是违背一个人有意识的意愿。
+  2. noun: an irresistible urge to behave in a certain way, especially against one's conscious wishes. 一种不可抗拒的以某种方式行事的冲动，尤其是违背一个人有意识的意愿，即强迫症。
 
-- compulsive（compel 的变形）
+- compulsive (compel 的变形)
 
   1. adjective: resulting from or relating to an irresistible urge, especially one that is against one's conscious wishes. 由于或关于不可抗拒的冲动，尤其是违背某人有意识的意愿的。
 
@@ -1813,6 +1835,12 @@ categories: English
 
   3. noun: a software tool designed to take advantage of a flaw in a computer system, typically for malicious purposes such as installing malware. 一种软件工具，被设计用于利用计算机系统漏洞，通常用于恶意目的，例如安装恶意软件。
 
+- extinct
+
+  1. adjective: (of a species, family, or other group of animals or plants) having no living members; no longer in existence. （一个特种，家族，或其他动植物种群）没有活着的成员；不再存在，即灭绝。
+
+  2. adjective: (of a volcano) not having erupted in recorded history. （火山）在历史记载中没有爆发过。
+
 - extravagant
 
   1. adjective: lacking restraint in spending money or using resources. 在花钱或使用资源方面缺乏节制。
@@ -2059,6 +2087,54 @@ categories: English
 
 ## G
 
+- game
+
+  1. noun: a form of play or sport, especially a competitive one played according to rules and decided by skill, strength, or luck. 一种游戏或运动的形式，尤其是按照一定规则竞争的，并且由技巧，力量，或运气决定结果，即比赛。
+
+  2. noun: a complete episode or period of play, ending in a definite result. 完整的一局或一段游戏，以一个确定的结果结束，即游戏。
+
+  3. noun(INFORMAL): a type of activity or business regarded as a game. （非正式）一种类型的活动或商业被认为是一场游戏。
+
+  4. noun: wild mammals or birds hunted for sport or food. 为运动或食物而猎杀的野生哺乳动物或鸟类，即猎物。
+
+  5. adjective: eager or willing to do something new or challenging. 渴望或愿意做一些新的或具有挑战性的事情。
+
+  6. verb: manipulate (a situation), typically in a way that is unfair or unscrupulous. 操纵（情况），通常以不公平或恣意的方式。
+
+  7. verb: play video or computer games. 玩电视或电脑游戏。
+
+  8. verb: play games of chance for money; gamble. 玩为了钱的概率游戏；赌博。
+
+  9. phrase: ahead of the game - ahead of one's competitors or peer in the same sphere of activity. 在同一活动领域领先于竞争对手或同辈。
+
+  10. phrase: back in the game - once again active or able to succeed in something. 再次活跃或能够在某事上成功。
+
+  11. phrase: beat someone at their own game - use someone's own methods to outdo them in their chosen activity. 使用某人自己的方法在他们选择的活动中超越他们。
+
+  12. phrase: behind the game - lagging behind one's competitors or peers in the same sphere of activity. 在同一活动领域落后于竞争对手或同辈。
+
+  13. phrase: game over - said when a situation is regarded as hopeless or irreversible. 当情况被认为是没有希望或不可逆转的时说的话。
+
+  14. phrase: make game of - mock; taunt. 嘲弄；嘲讽。
+
+  15. phrase: off one's game - playing badly. （比赛）比得不好。
+
+  16. phrase: on one's game - playing well. （比赛）比得很好。
+
+  17. phrase: the only game in town - the best, the most important, or the only thing worth considering. 最好的，最重要的，或唯一值得考虑的事情。
+
+  18. phrase: play the game - behave in a fair or honorable way; abide by the rules or conventions. 以公平或正直的方式行事；遵守规则或惯例。
+
+  19. phrase: play games - deal with someone or something in a way that lacks due seriousness or respect. 对待某人或某事以一种缺乏应有的严肃或尊重的方式。
+
+  20. phrase: still in the game - still active or able to succeed in something. 仍然活跃或能够在某事上取得成功。
+
+  21. phrase: what's your game? - what's going on? 怎么样？用于问候。
+
+  22. phrase: make a game of it - make a contest more closely competitive. 使比赛更紧密地竞争。
+
+  23. adjective(DATED): (of a person's leg) permanently injured or disabled. （过时的）（某人的腿）永久性损伤或残疾。
+
 - garment
 
   1. noun: an item of clothing. 一件衣服。
@@ -2220,6 +2296,16 @@ categories: English
 - hasten
 
   1. verb: be quick to do something. 快点做某事。
+
+- haunt
+
+  1. verb: (of a ghost) manifest itself at (a place) regularly. （鬼）经常出现在（一个地方）。
+
+     - (of a person or animal) frequent (a place). （人或动物）常去（一个地方）
+
+     - be persistently in the mind of (someone). 持续在（某人）的脑海中，可译为困扰。
+
+     - be persistently and disturbingly present in (something). 持续并令人不安地出现在（某事物）中，可译为笼罩。
 
 - headline
 
@@ -2387,6 +2473,12 @@ categories: English
 
   1. noun: the action of making a person or animal immune to infection, typically by inoculation. 使人或动物对感染免疫的行为，通常通过接种的形式。
 
+- impetus
+
+  1. noun: the force or energy with which a body moves. 身体移动的力量或能量。
+
+  2. noun: something that makes a process or activity happen or happen more quickly. 使过程或活动发生或发生得更快的东西。
+
 - implication
 
   1. noun: the conclusion that can be drawn from something although it is not explicitly stated. 可以从某事中得出的结论，尽管没有明确说明。
@@ -2402,6 +2494,18 @@ categories: English
 - impoverished
 
   1. adjective: (of a person or area) made poor. （某人或地区）变穷的。
+
+- impulse
+
+  1. noun: a sudden strong and unreflective urge or desire to act. 突然强烈的并不加思索的冲动或行动欲望。
+
+  2. noun: a driving or motivating force; an impetus. 驱动力或动力；一种动力。
+
+  3. noun: a pulse of electrical energy; a brief current. 电能脉冲；短暂的电流。
+
+  4. noun(PHYSICS): a force acting briefly on a body and producing a finite change of momentum. （物理）短暂作用于物体并产生有限动量变化的力。
+
+  5. phrase: on impulse - suddenly and without forethought; impulsively. 突然并且没有深思熟虑的；冲动地。
 
 - inadequate
 
@@ -2569,24 +2673,6 @@ categories: English
 
   1.  noun: the action of invoking something or someone for assistance or as an authority. 请求某人或某物作为帮助或权威的行为。
 
-- impetus
-
-  1. noun: the force or energy with which a body moves. 身体移动的力量或能量。
-
-  2. noun: something that makes a process or activity happen or happen more quickly. 使过程或活动发生或发生得更快的东西。
-
-- impulse
-
-  1. noun: a sudden strong and unreflective urge or desire to act. 突然强烈的并不加思索的冲动或行动欲望。
-
-  2. noun: a driving or motivating force; an impetus. 驱动力或动力；一种动力。
-
-  3. noun: a pulse of electrical energy; a brief current. 电能脉冲；短暂的电流。
-
-  4. noun(PHYSICS): a force acting briefly on a body and producing a finite change of momentum. （物理）短暂作用于物体并产生有限动量变化的力。
-
-  5. phrase: on impulse - suddenly and without forethought; impulsively. 突然并且没有深思熟虑的；冲动地。
-
 - inevitable
 
   1. adjective: certain to happen; unavoidable. 肯定会发生，不可避免的。
@@ -2620,6 +2706,14 @@ categories: English
   1. verb: overwhelm (someone) with things or people to be dealt with. 被要处理的人或事物所压倒
 
   2. verb: flood. 淹没、泛滥
+
+- irrational
+
+  1. adjective: not logical or reasonable. 不合逻辑或不合理。
+
+  2. adjective(MATHEMATICS): (of a number, quantity, or expression) not expressible as a ratio of two integers, and having an infinite and nonrecurring expansion when expressed as a decimal. Examples of irrational numbers are the number π and the square root of 2. （数学）（数字，数量，或表达式）不能表示为两个整数的比率，并且当表示为小数时具有无限和非循环性扩展。无理数的例子是数字 π 和 2 的平方根。
+
+  3. noun(MATHEMATICS): an irrational number. （数学）一个无理数。
 
 - issue
 
@@ -2685,6 +2779,10 @@ categories: English
 
   8. phrase: for keeps - permanently; indefinitely. 永久地；无限期地。
 
+- ketchup
+
+  1. noun: a smooth sauce made chiefly from tomatoes and vinegar, used as a condiment. 一种丝滑的酱汁，主要由西红柿和醋制成，用作调味品。
+
 ## L
 
 - ladder
@@ -2712,6 +2810,10 @@ categories: English
   7. noun(INFORMAL·BRITISH): a person who has been frequently convicted and sent to prison. （非正式·英国）经常被定罪并送进监狱的人。
 
   8. verb(ARCHAIC): arrest or send to prison. （古老）逮捕或送进监狱。
+
+- lamppost
+
+  1. noun: a tall pole with a light at the top; a street light. 一个高杆，顶部带有灯光；路灯。
 
 - lateral
 
@@ -2837,6 +2939,16 @@ categories: English
 
   2. noun: a public room, as in a hotel, theater, or club, in which to sit and relax. 一个公共的房间，例如在宾馆，剧院，或俱乐部，供人坐下来放松的地方。
 
+- lunatic
+
+  1. noun: a mentally ill person (not in technical use). 精神病患者（不用于技术上）。
+
+     - an extremely foolish or eccentric person. 极度愚蠢或古怪的人。
+
+  2. adjective: mentally ill (not in technical use). 精神病的（不用于技术上）。
+
+     - extremely foolish, eccentric, or absurd. 极其愚蠢，古怪，或荒谬的。
+
 ## M
 
 - maid
@@ -2891,6 +3003,12 @@ categories: English
 
   1. noun: the quality or state of being mediocre. 平庸的质量或状态。
 
+- meme
+
+  1. noun: an element of a culture or system of behavior that may be considered to be passed from one individual to another by nongenetic means, especially imitation. 一种关于行为的文化或系统的元素，被认为以非遗传方式从个人传播给其他个人，尤其是通过模仿。
+
+     - a humorous image, video, piece of text, etc., that is copied (often with slight variations) and spread rapidly by internet users. 幽默的图片，视频，一段文字等，被互联网用户复制（通常有细微的变化）并迅速传播。（如表情包，梗等）
+
 - Merger and Acquisition (M&A)
 
   1. phrase: trasactions in which the ownership of companies or their operating units - including all associated assets and liablilities - is transferred to another entity. A merger is the consolidation of two entities into one, whereas an acquisition occurs when one company takes over ownership of another. 兼并收购，将公司或其经营单位的所有权（包括所有相关资产和负债）转让给另一实体的交易。兼并是将两个实体合并为一个，而收购发生在一家公司接管另一家公司的所有权时。
@@ -2900,6 +3018,12 @@ categories: English
   1. noun: the quality of being particularly good or worthy, especially so as to deserve praise or reward. 特别好或值得的品质，尤其是关于值得称赞或奖励的。
 
   2. verb: deserve or be owrthy of (reward, punishment, or attention). 值得（奖励，惩罚，或关注）。
+
+- metaphor
+
+  1. noun: a figure of speech in which a word or phrase is applied to an object or action to which it is not literallly applicable. 一种修辞手法，词或词组被应用到一个对应或行为上，在字面上并不可用，即比喻。
+
+     - a thing regarded as representative or symbolic of something else, especially something abstract. 被视为某事物的代表或象征的东西，尤其是抽象事物。
 
 - meticulous
 
@@ -3091,6 +3215,10 @@ categories: English
 
   4. adjective: relating to Nonconformists or their principles and practices. 关于非国教徒或其原则和做法，即异教徒的。
 
+- nostalgia
+
+  1. noun: a sentimental longing or wistful affection for the past, typically for a period or place with happy personal associations. 对过去的一种感伤的渴望之情，通常是有快乐的个人联想的时期或地方，即怀旧。
+
 - note
 
   1. noun: a brief record of facts, topics, or thoughts, written down as an aid to memory. 对事实，主题，或想法的简要记录，写下来以便辅助记忆，即笔记。
@@ -3118,6 +3246,14 @@ categories: English
   12. phrase: sound a note of - express (a particular feeling or view) about something. 表达（特定的感受或观点）关于某事。
 
   13. phrase: take note - pay attention. 注意。
+
+- notion
+
+  1. noun: a conception of or belief about something. 对某事的概念或信念。对某事的概念或信念。
+
+  2. noun: an impulse or desire, especially one of a whimsical kind. 一种冲动或欲望，尤其是异想天开的那种。
+
+  3. noun(NORTH AMERICAN): items used in sewing, such as buttons, pins, and hooks. （北美）用于缝纫的物品，例如纽扣，别针，和钩子。
 
 - not least
 
@@ -3224,6 +3360,10 @@ categories: English
   2. noun: a place from which goods are sold or distributed. 销售或分销商品的地方。
 
   3. noun: a means of expressing one's talents, energy, or emotions. 表达一个人才能，精力，或情感的方式。
+
+- outlive
+
+  1. verb: (of a person) live longer than (another person). （一个人）比（另一个人）活得更久。
 
 - out of the box
 
@@ -3371,6 +3511,24 @@ categories: English
 
   1. verb: (of something complicated or unaccountable) cause (someone) to feel completely baffled. （复杂或无法解释的）使（某人）感到完全困惑。
 
+- perspective
+
+  1. noun: the art of drawing solid objects on a two-dimensional surface so as to give the right impression of their height, width, depth, and position in relation to each other when viewed from a particular point. 在二维表面绘制固定物体的艺术，以便给出正确的印象关于它们的高，宽，深，和彼此位置的关系，当从一个特定点观察时，即透视。
+
+  2. noun: a particular attitude toward or way of regarding something; a point of view. 看待某事的特定态度或方式；观点。
+
+  3. noun: an apparent spatial distribution in perceived sound. 在感知到的声音中，明显的空间分布。
+
+  4. phrase: in perspective - showing the right relationship between visible objects. 在可见物体间显示出正确的关系。
+
+     - correctly regarded in terms of relative importance. 正确看待关于相对重要性。
+
+  5. phrase: out of perspective - showing the wrong relationship between visible objects. 在可见物体间显示出错误的关系。
+
+     - incorrectly regarded in terms of relative importance. 错误看待关于相对重要性。
+
+  6. phrase: put something into perspective - correctly regard something in terms of relative importance. 正确看待关于相对重要性。
+
 - pervade
 
   1. verb: (especially of a smell) spread through and be perceived in every part of. （尤其是指气味）在每个部分传播并被感知。
@@ -3402,6 +3560,12 @@ categories: English
   8. phrase: in phase - being or happening in synchrony or harmony. 同步或和谐存在或发生。
 
   9. phrase: out of phase - being or happening out of synchrony or harmony. 不同步或不和谐的存在或发生。
+
+- phobia
+
+  1. noun: an extreme or irrational fear of or aversion to something. 对某事的一种极端或非理性的恐惧或厌恶。
+
+  2. suffix: extreme or irrational fear or dislike of a specified thing or group. 对特定事物或群体的极端或非理性的恐惧或厌恶，即某恐惧症，用于后缀。
 
 - physician
 
@@ -3553,6 +3717,14 @@ categories: English
 
   2. adjective: preceding in time, order, or importance. 在时间，顺序，或重要性上领先。
 
+- predator
+
+  1. noun: an animal that naturally preys on others. 天生捕食其他生物的动物，即掠食者。
+
+  2. noun: a person or group that ruthlessly exploits others. 无情地剥削他人的个人或团体。
+
+     - a company that tries to take over another. 试图兼并其他公司的公司。
+
 - predominance
 
   1. noun: the state or condition of being greater in number or amount. 在数量上变得更多的状态或情况。
@@ -3572,6 +3744,10 @@ categories: English
   2. adjective(ZOOLOGY): relating to or denoting bone in front of the eye socket in some lower vertebrates (equivalent to part of the human ethmoid bone). （动物学）关于或表示某些低等脊椎动物眼窝前的骨头（相当于人类筛骨的一部分）。
 
   3. noun(ZOOLOGY): a prefrontal bone. （动物学）前额骨。
+
+- prehistoric
+
+  1. adjective: relating to or denoting the period before written records. 关于或表示有书面记录之前的时期，即史前的。
 
 - prescribe
 
@@ -3596,6 +3772,20 @@ categories: English
 - presumptive
 
   1. adjective: of the nature of a presumption; presumed in the absence of further information. 关于推断的性质的；在没有进一步信息的情况下推测的。
+
+- prey
+
+  1. noun: an animal that is hunted and killed by another for food. 被其他动物猎杀作为食物的动物，即猎物。
+
+     - a person or thing easily injured or taken advantage of. 容易受伤或被利用的人或物。
+
+  2. verb: hunt and kill for food. 猎杀食物。
+
+     - take advantage of; exploit or injure. 利用；剥削或伤害。
+
+     - cause constant trouble and distress to. 造成持续的麻烦和困扰。
+
+  3. phrase: fall prey to - be hunted and killed by (an animal). 被（动物）猎杀。
 
 - primacy
 
@@ -3696,6 +3886,10 @@ categories: English
   4. verb(INFORMAL): make a suggestion of sex to (someone), especially in an unsubtle way. 向（某人）提出性提议，尤其是直白的方式。
 
   5. phrase: not a proposition - unlikely to succeed; not a viable option. 不太可能成功；不是可行选择。
+
+- prospective
+
+  1. adjective: (of a person) expected or expecting to be something particular in the future. （一个人）在将来被期望或期望成为某事。
 
 - prudent
 
@@ -3990,6 +4184,24 @@ categories: English
 - sanitary
 
   1. adjective: relating to the conditions that affect hygiene and health, especially the supply of sewage facilities and clean drinking water. 关于影响卫生和健康的条件，尤其是排污设施和清洁饮用水的供应。
+
+- saturate
+
+  1. verb: cause (something) to become thoroughly soaked with liquid so that no more can be absorbed. 使（某物）被液体彻底浸透，不能再吸收更多。（常见搭配 be saturated with）
+
+     - cause (a substance) to combine with, dissolve, or hold the greatest possible quantity of another substance. 使（一种物质）结合，溶解，保有（另一种物质）尽可能多的量。
+
+     - magnetize or charge (a substance or device) fully. 完全地磁化或充电（物质或设备）。
+
+     - fill (something or someone) with something until no more can be held or absorbed. 用某物填充（某物或某人）直到不能容纳或吸收为止。
+
+     - supply (a market) beyond the point at which the demand for a product is satisfied. 供应（市场）超过对产品需求的满足点。
+
+     - overwhelm (an enemy target area) by concentrated bombing. 通过集中轰炸压倒（敌方目标区域）。
+
+  2. noun: a saturated fat. 饱和脂肪。
+
+  3. adjective: saturated with moisture. 充满水分。
 
 - savage
 
@@ -5199,6 +5411,14 @@ categories: English
 
   1. adverb: by means of words. 在语言上。
 
+- vessel
+
+  1. noun: a ship or large boat. 船或大船。
+
+  2. noun: a hollow container, especially one used to hold liquid, such as a bowl or cask. 空心容器，尤其是用于盛装液体的，例如碗或木桶。
+
+  3. noun(ANATOMY·ZOOLOGY): a duct or canal holding or conveying blood or other fluid. 容纳或输送血液或其他液体的导管或管道。
+
 - vice
 
   1. noun: immoral or wicked behavior. 不道德或邪恶的行为。
@@ -5222,6 +5442,12 @@ categories: English
 - vitality
 
   1. noun: the state of being strong and active; energy. 强壮并活跃的状态；活力。
+
+- vitally
+
+  1. adverb: in a way that is absolutely necessary or essential. 以一种绝对必要或必不可少的方式。（常见搭配 vitally important，至关重要）
+
+  2. adverb: in an energetic or lively manner. 以充满活力或活泼的态度。
 
 - vocation
 
@@ -5457,7 +5683,7 @@ categories: English
 
   总结：yet 常见用法，用在句首，表转折，译为尽管；用在肯定句中，表否定，当作 not；用在否定或疑问句，表示直到现在或某个时间点，译为还没。
 
-- yield
+- yield (及物动词：生产；不及物动词：屈服，固定搭配 yield to)
 
   1. verb: producing or provide (a natural, agricultural, or industrial product). 生产或提供（天然、农业或工业产品）。
 

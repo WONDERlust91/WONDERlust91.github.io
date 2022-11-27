@@ -105,6 +105,14 @@ categories: English
 
   sufficient adj. 足够的
 
+- perspective n. 透视；观点
+
+  prospective adj. 期望的；预期的
+
+- pray v. 祈祷 adv. 礼貌请求的前缀语
+
+  prey n. 掠食者 v. 猎杀作为食物
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -249,23 +257,47 @@ categories: English
 
   adj. sly
 
-- 表“因为”，介词词组
+- 表“因为”
 
-  thanks to
+  - 介词词组
 
-  because of
+    thanks to
 
-  due to
+    because of
 
-  since
+    due to
 
-  owing to
+    owing to
 
-  as a result of
+    as a result of
 
-  on account of
+    on account of
 
-  on the grounds of
+    on the grounds of
+
+    in consequence
+
+  - 连词
+
+    since
+
+    for
+
+  - 副词
+
+    therefore
+
+    thence
+
+    thus
+
+    hence
+
+    ergo
+
+    consequently
+
+    accordingly
 
 - vocational training 职业的培训，工作内容相关。
 
@@ -424,6 +456,20 @@ categories: English
 - 表示“依赖...生活”
 
   live off = live on
+
+- 表示“船”
+
+  ship n. 大船；组 cp（非原剧中的一对，而是粉丝支持的一对） v. 船运；组 cp
+
+  boat n. 小船；船形盘 v. 乘船游玩
+
+  vessel n. 船；容器；管道
+
+  cruise v. 漫游；巡航；小孩刚学走路 n. 游轮
+
+  yacht n. 游艇 v. 乘游艇
+
+  raft n. 木筏；漂浮物；大量的 v. 乘坐木筏；将船绑在一起
 
 ## 反义词
 

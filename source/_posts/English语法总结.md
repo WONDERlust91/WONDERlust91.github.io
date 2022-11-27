@@ -655,3 +655,9 @@ have been doing 从过去到现在一直做某事
 - bring about = lead to 导致。
 
 - be immune to (from) sth. 对某物产生免疫。
+
+- out 作为前缀的词，表示程度更深
+
+  A outlive B - A 比 B 活得更久
+
+  A outsmart B - A 更聪明胜过 B
