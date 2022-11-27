@@ -661,3 +661,13 @@ have been doing 从过去到现在一直做某事
   A outlive B - A 比 B 活得更久
 
   A outsmart B - A 更聪明胜过 B
+
+- 句子 A, before 句子 B = Before 句子 B, 句子 A
+
+  英语中常常分句做状语后置，而中国人习惯状语前置，故一定注意两种形式表达的意思完全一致。
+
+  句子 A 先发生，句子 B 后发生。
+
+- in the wake of = after
+
+- more often than not = usually

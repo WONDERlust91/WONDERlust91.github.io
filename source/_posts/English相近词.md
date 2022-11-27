@@ -61,10 +61,6 @@ categories: English
 
   explicit adj. 清楚明白的；易于理解的
 
-- insist v. 坚称，咬定
-
-  persist v. 坚持
-
 - assume v. 假设；承担
 
   assumption n. 臆测；承担
@@ -112,6 +108,34 @@ categories: English
 - pray v. 祈祷 adv. 礼貌请求的前缀语
 
   prey n. 掠食者 v. 猎杀作为食物
+
+- apprehension n. 顾虑；理解，抓牢；抓捕
+
+  comprehension n. 理解力
+
+- assemble v. 聚集；组合
+
+  resemble v. 相似
+
+- appear v. 出现；似乎
+
+  appeal v. n. 呼吁；吸引
+
+- conceive v. 怀孕；设计
+
+  deceive v. 欺骗
+
+  perceive v. 洞察；看待
+
+  receive v. 接收；承受；接待
+
+- council n. 议会
+
+  conunsel n. 建议；律师 v. 咨询
+
+- vein n. 静脉；矿脉；性情
+
+  vain adj. 自负的；徒劳的；无用的
 
 ## 近义词
 
@@ -471,6 +495,18 @@ categories: English
 
   raft n. 木筏；漂浮物；大量的 v. 乘坐木筏；将船绑在一起
 
+- 表示“大量的”
+
+  abundant
+
+  ample
+
+  numerous
+
+  plentiful
+
+  considerable
+
 ## 反义词
 
 - radical adj. 激进的，左倾的
@@ -502,3 +538,7 @@ categories: English
 - detach A from B v. 分离
 
   attach A to B v. 连接 附上
+
+- concrete adj. 具体的 n. 水泥 v. 浇注水泥；硬化
+
+  abstract adj. 抽象的 n. 抽象；摘要 v. 分离；提取；总结

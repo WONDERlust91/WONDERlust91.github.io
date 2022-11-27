@@ -195,6 +195,20 @@ categories: English
 
   2. noun: a person or organization officially attached to a larger body. 正式附属于更大机构的个人或组织。
 
+- agenda
+
+  1. noun: a list of items to be discussed at a formal meeting. 将在正式会议上讨论的项目清单。
+
+     - a plan of things to be done or problems to be addressed. 要做的事情或要解决的问题的计划。
+
+     - the underlying intentions or motives of a particular person or group. 特定个人或团体的潜在意图或动机。
+
+  2. noun(NORTH AMERICAN): an appointment diary. 约会日记。
+
+  3. phrase: on the agenda - scheduled for discussion at a meeting. 安排在会议上讨论。
+
+  4. phrase: set the agenda - draw up a list of items to be discussed at a meeting. 起草一份会议要讨论的项目清单。
+
 - aggravate
 
   1. verb: make (a problem, injury, or offense) worse or more serious. 使（问题，伤害，或冒犯）变得更糟或更严重。
@@ -228,6 +242,22 @@ categories: English
 - ample
 
   1. adjective: enough or more than enough; plentiful. 足够或绰绰有余；丰富的。
+
+- anchor
+
+  1. noun: a heavy object attached to a rope or chain and used to moor a vessel to the sea bottom, typically one having a metal shank with a ring at one end for the rope and a pair of curved and/or barbed flukes at the other. 连接在绳索或链条上并用于将船只系泊到海底的重物，通常有一个金属柄，一端有一个用于绳索的环，另一端有一对弯曲和/或带倒钩的锚链。
+
+     - a person or thing that provides stability or confidence in an otherwise uncertain situation. 在不确定的情况下提供稳定性或信心的人或事物。
+
+  2. noun(NORTH AMERICAN): an anchorman or anchorwoman, especially in broadcasting or athletics. （北美）男主持或女主持，尤其在广播或运动中。
+
+  3. verb: moor (a ship) to the sea bottom with an anchor. 用锚把（船）停泊在海底。
+
+     - secure firmly in position. 牢固地固定到位。
+
+     - provide with a firm basis or foundation. 提供坚实的基础或基础。
+
+  4. verb(NORTH AMERICAN): act as an anchor for (a television program or sporting event). 担任（电视节目或体育赛事）的主播。
 
 - apparent
 
@@ -302,6 +332,10 @@ categories: English
 - arrogant
 
   1. adjective: having or revealing an exaggerated sense of one's own importance or abilities. 对自己的重要性或能力有或表现出夸张的感觉，即傲慢，自大。
+
+- arthritis
+
+  1. noun: painful inflammation and stiffness of the joints. 疼痛的炎症和关节僵硬，即关节炎。
 
 - artifact (artefact)
 
@@ -408,6 +442,30 @@ categories: English
   2. noun(NORTH AMERICAN): a large shed used for storing vehicles. （北美）用于存放车辆的大型棚。
 
   3. noun: a unit of area, 10^-28 square meters, used especially in particle physics. 面积单位，10 的 -28 次方平方米，特别是用于粒子物理。
+
+- beam
+
+  1. noun: a long, sturdy piece of squared timber or metal spanning an opening or part of a building, usually to support the roof or floor above. 横跨建筑物开口或部分的长而坚固的方形木材或金属，通常用于支撑上方的屋顶或地板，即横梁。
+
+  2. noun: a ray or shaft of light. 一束光。
+
+  3. noun: a radiant or good-natured look or smile. 容光焕发或和蔼可亲的表情或微笑。
+
+  4. verb: transmit (a radio signal or broadcast) in a specified direction. 向指定方向发射（无线电信号或广播）。
+
+  5. verb: (of a light or light source) shine brightly. （灯或光源）明亮地闪耀。
+
+  6. verb: smile radiantly. 笑容灿烂。
+
+  7. verb: construct a ceiling with exposed beams. 用裸露的横梁建造天花板。
+
+  8. phrase: a fault that is greater in oneself than in the person one is finding fault with. 自己的错误比被指责的人的错误更大。
+
+  9. phrase: off beam - on the wrong track; mistaken. 在错误的轨道上；错误。
+
+  10. phrase: on the beam - on the right track. 在正确的轨道上。
+
+  11. phrase: on her beam ends - (of a ship) heeled on its side; almost capsized. （船）侧倾；几乎翻船。
 
 - behalf
 
@@ -546,6 +604,14 @@ categories: English
      - (especially of goods) in large quantities, usually at a reduced price. （尤其是商品）以大量的形式，通常以较低的价格。
 
      - (of a cargo or commodity) loose; not packaged. （货物或商品）松散的；未打包的。
+
+- bummer
+
+  1. noun: a thing that is annoying or disappointing. 一个恼人或扫兴的事物。
+
+  2. noun(NORTH AMERICAN): a loafer or vagrant. （北美）浪子或流浪汉。
+
+  3. exclamation(INFORMAL): used to express frustration or disappointment, typically sympathetically. （非正式）用于表达沮丧或失望，通常是同情地。
 
 - bun
 
@@ -987,7 +1053,7 @@ categories: English
 
 - constitute
 
-  1. verb: be (a part) of a whole. 作为整体的（一部分）。
+  1. verb: be (a part) of a whole. 作为整体的（一部分），即构成。
 
   2. verb: be or be equivalent to (something). 是或等同于（某物）。
 
@@ -1334,6 +1400,12 @@ categories: English
   1. verb: introduce a democratic system or democratic principles to. 引入民主制度或民主原则，即民主化。
 
      - make (something) accessible to everyone. 使（某物）对每个人都可用，即全民化。
+
+- depict
+
+  1. verb: show or represent by a drawing, painting, or other art form. 以图画，绘画，或其他艺术形式展示或表现。
+
+     - portray in words; describe. 用文字描绘；描述。
 
 - descendant
 
@@ -1701,6 +1773,10 @@ categories: English
 
   2. noun: a person or thing that is equal to or corresponds with another in value, amount, function, meaning, etc. 在价值，数量，功能，意义等方面与其他相等或对应的人或物。
 
+- era
+
+  1. noun: a long and distinct period of history with a particular feature or characteristic. 具有特定特征或特性的一段漫长而独特的历史时期，即时代，纪元。
+
 - espionage
 
   1. noun: the practice of spying or of using spies, typically by governments to obtain political and military information. 间谍活动或使用间谍的做法，通常由政府获取政治或军事信息。
@@ -1910,6 +1986,18 @@ categories: English
 - far-fetched
 
   1. adjective: unlikely and unconvincing; implausible. 不太可能且没有说服力的；难以置信的。
+
+- feature
+
+  1. noun: a distinctive attribute or aspect of something. 某物的独特属性或方面。
+
+  2. noun: a newspaper or magazine article or a broadcast program devoted to the treatment of a particular topic, typically at length. 专门处理特定主题的报纸或杂志文章或广播节目，通常是长篇大论。
+
+  3. verb: have as a prominent attribute or aspect. 具有突出的属性或方面。（做动词时不好翻译，宾语在后面，翻译时又得先翻译宾语，因此可直接翻译成有。例如 The film feature a star. 正常翻译：这部电影以一个明星做为主演。另一种翻译：这部电影有一个明星）
+
+     - have as an important actor or participant. 作为重要的演员或参与者。
+
+     - be a significant characteristic of or take an important part in. 具有重要特征或在其中发挥重要作用。
 
 - fertile
 
@@ -2152,6 +2240,20 @@ categories: English
   1. phrase: coax or persuade someone to do or allow something that they initially do not want to do. 哄骗或说服某人做或同意他们最初不想做的事情。
 
   2. phrase: deal successfully with a problem. 成功处理一个问题。
+
+- given
+
+  1. verb: past participle of give. give 的过去分词。
+
+  2. adjective: specified or stated. 指定或说明。
+
+  3. adjective: inclined or disposed to. 倾向于。
+
+  4. adjective(ARCHAIC·LAW): (of a document) signed and dated. （文件的）签名和日期。
+
+  5. preposition: taking into account. 考虑到。（介词是重点，常用在句首，Given n.）
+
+  6. noun: a known or established fact or situation. 已知或确定的事实或情况。
 
 - gizmo
 
@@ -2409,7 +2511,7 @@ categories: English
 
   1. noun: extravagant or intensive publicity or promotion. 奢侈或密集的宣传或促销。
 
-  2. verb: promote or publicize (a product or idea) intensively, ofen exaggerating its importance or benefits. 密集地促销或宣传（产品或想法），通常夸大其重要性或好处。
+  2. verb: promote or publicize (a product or idea) intensively, often exaggerating its importance or benefits. 密集地促销或宣传（产品或想法），通常夸大其重要性或好处。
 
   3. noun: a hypodermic needle or injection. 皮下注射针头或注射剂（常指吸毒者）。
 
@@ -2457,6 +2559,12 @@ categories: English
 
      - regard oneself as sharing the same characteristics or thinking as someone else. 认为自己与他人具有相同的特征或想法（identify with sb.）。
 
+- ideology
+
+  1. noun: a system of ideas and ideals, especially one which forms the basis of economic or political theory and policy. 一种思想和理想体系，尤其是构成经济或政治理论和政策基础的体系。
+
+     - the ideas and manner of thinking characteristic of a group, social class, or individual. 一个群体、社会阶层或个人的想法和思维方式，即意识形态。
+
 - ignorant
 
   1. adjective: lacking knowledge or awareness in general; uneducated or unsophisticated. 通常缺乏知识和意识；未受过教育或不成熟的。 固定搭配：be ignorant of sth. 对某事无知的。
@@ -2464,6 +2572,14 @@ categories: English
   2. adjective(INFORMAL): discourteous or rude. （非正式）无礼或粗鲁的。
 
   3. adjective(WEST INDIAN): angry or quick-tempered. （西印度）生气或脾气暴躁的。
+
+- illusion
+
+  1. noun: a thing that is or is likely to be wrongly perceived or interpreted by the senses. 被感官错误地感知或解释的事物，即错觉。
+
+  2. phrase: be under the illusion that - believe mistakenly that. 误以为。
+
+  3. phrase: be under no illusion - be fully aware of the true state of affairs. 充分了解事情的真实情况。
 
 - imitate
 
@@ -2612,6 +2728,26 @@ categories: English
 - innate
 
   1. adjective: inborn; natural. 先天的；自然的。
+
+- innocent
+
+  1. adjective: not guilty of a crime or offense. 对罪行或冒犯没有犯罪的，即无辜的。
+
+     - without experience or knowledge of. 没有经验或知识的，即无知的。
+
+     - without; lacking. 没有；不足。
+
+  2. adjective: not responsible for or directly involved in an event yet suffering its consequences. 没有负责或没有直接参与的事件，但仍然承受了它的后果。
+
+  3. adjective: free from moral wrong; not corrupted. 没有道德错误；没有损坏。
+
+     - simple; naive. 简单的；幼稚的。
+
+  4. adjective: not intended to cause harm or offense; harmless. 不是有意导致伤害或冒犯；无害的。
+
+  5. noun: a pure, guileless, or naive person. 纯洁，朴实，或幼稚的人。
+
+  6. noun: a person involved by chance in a situation, especially a victim of crime or war. 偶然卷入某种情况的人，尤其是犯罪或战争的受害者。
 
 - insidious
 
@@ -2901,6 +3037,10 @@ categories: English
 
   2. adverb: in a like manner; similarly. 以类似的方式；相似地。
 
+- literacy
+
+  1. noun: the ability to read and write. 读写的能力。
+
 - literally
 
   1. adverb: in a literal manner or sense; exactly. 在字面意思上；准确地。
@@ -2949,6 +3089,12 @@ categories: English
 
      - extremely foolish, eccentric, or absurd. 极其愚蠢，古怪，或荒谬的。
 
+- lure
+
+  1. verb: tempt (a person or animal) to do something or to go somewhere, especially by offering some form of reward. 诱惑（人或动物）做某事或去某处，尤指通过提供某种形式的奖励。
+
+  2. noun: something that tempts or is used to tempt a person or animal to do something. 引诱或被用来引诱人或动物做某事的东西。
+
 ## M
 
 - maid
@@ -2988,6 +3134,16 @@ categories: English
   3. verb: provide with an edge or border. 提供边缘或边界。
 
   4. verb: deposit an amount of money with a broker as security for (an account or transaction). 向经纪人存入一定数额的资金作为（账户或交易）的担保。
+
+- massacre
+
+  1. noun: an indiscriminate and brutal slaughter of people. 对人不加辨别并残忍地屠杀。
+
+     - (INFORMAL) a heavy defeat of a sports team or contestant. （非正式）体育队或参赛者的惨败。
+
+  2. verb: deliberately and violently kill (a large number of people). 蓄意和暴力地杀害（大量的人）。
+
+     - (INFORMAL) inflict a heavy defeat on (a sports team or contestant). （非正式）造成（体育队或参赛者）遭受惨败。
 
 - materialism
 
@@ -3074,6 +3230,16 @@ categories: English
 - minutely
 
   1. adverb: with great attention to detail; meticulously. 非常注重细节；精心地。
+
+- misery
+
+  1. noun: a state or feeling of great distress or discomfort of mind or body. 身心极大的痛苦或不适的状态或感受。
+
+     - a cause or source of great distress or discomfort. 极大的痛苦或不适的原来或来源。
+
+  2. phrase: make someone's life a misery - cause someone severe distress by continued unpleasantness or harassment. 通过持续的不愉快或骚扰给某人造成严重的痛苦。
+
+  3. phrase: put someone or something out of their misery - end the suffering of a person or animal in pain by killing them. 通过杀死他们来结束人或动物遭受的痛苦。
 
 - mock
 
@@ -3507,6 +3673,14 @@ categories: English
 
   3. adjective(BIOLOGY): allowing a biological or biochemical process to occur. （生物学）允许生物或生化过程出现。
 
+- perpetual
+
+  1. adjective: never ending or changing. 永不结束或改变。
+
+  2. adjective: occurring repeatedly; so frequent as to seem endless and uninterrupted. 反复发生；太频繁以至于似乎无穷无尽且不间断。
+
+  3. adjective: (of a plant) blooming or fruiting several times in one season. （植物）在一个季节中开花或结果数次。
+
 - perplex
 
   1. verb: (of something complicated or unaccountable) cause (someone) to feel completely baffled. （复杂或无法解释的）使（某人）感到完全困惑。
@@ -3566,6 +3740,12 @@ categories: English
   1. noun: an extreme or irrational fear of or aversion to something. 对某事的一种极端或非理性的恐惧或厌恶。
 
   2. suffix: extreme or irrational fear or dislike of a specified thing or group. 对特定事物或群体的极端或非理性的恐惧或厌恶，即某恐惧症，用于后缀。
+
+- phony
+
+  1. adjective(INFORMAL): not genuine; fraudulent. 不是真诚的；欺诈的。
+
+  2. noun: a fraudulent person or thing. 欺诈的人或事。
 
 - physician
 
@@ -4421,7 +4601,7 @@ categories: English
 
   noun: a consoling or hopeful prospect. 令人欣慰或充满希望的前景。
 
-- skeptical (sceptical)
+- skeptical (sceptical) (固定搭配 be skeptical of)
 
   1. adjective: not easily convinced; having doubts or reservations. 不能轻易确信；持有怀疑态度或有所保留。
 
@@ -5411,6 +5591,12 @@ categories: English
 
   1. adverb: by means of words. 在语言上。
 
+- very
+
+  1. adverb: in a high degree. 以很高的程度，即非常。
+
+  2. adjective: actual; precise (used to emphasize the exact identity of a particular person or thing). 确实的；精确的（用于强调特定人或事物的确切特性）。
+
 - vessel
 
   1. noun: a ship or large boat. 船或大船。
@@ -5654,6 +5840,12 @@ categories: English
   10. phrase: wonders will never cease - an exclamation of great surprise at something pleasing. 对令人愉快的事情的非常惊讶的感叹。
 
   11. phrase: work wonders - have a very beneficial effect on someone or something. 对某人或某事有非常有益的影响。
+
+- worship
+
+  1. noun: the feeling or expression of reverence and adoration for a deity. 对神明的崇敬和崇拜的感觉或表达，即礼拜。
+
+  2. verb: show reverence and adoration for (a deity); honor with religous rites. 对（神灵）表示崇敬和崇拜；以宗教仪式表示敬意，即朝拜。
 
 - worthy
 
