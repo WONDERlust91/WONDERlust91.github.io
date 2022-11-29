@@ -1445,7 +1445,7 @@ categories: English
 
 - dialect
 
-  1. noun: a particular form of a language which is peculiar to a specific region or social group. 特定地区或社会群体特有的特定语言形式。
+  1. noun: a particular form of a language which is peculiar to a specific region or social group. 特定地区或社会群体特有的特定语言形式，即方言。
 
      - (COMPUTING) a particular version of a programming language. 编程语言的特定版本。
 
@@ -1495,7 +1495,7 @@ categories: English
 
 - disguise
 
-  1. verb: give (someone or oneself) a different appearance in order to conceal one's identity. 给（某人或自己）一个不同的外表来隐藏自己的身份。
+  1. verb: give (someone or oneself) a different appearance in order to conceal one's identity. 给（某人或自己）一个不同的外表来隐藏自己的身份，即伪装。
 
   2. noun: a means of altering one's appearance or concealing one's identity. 改变一个人的外表或隐藏一个人身份的一种手段。
 
@@ -1503,9 +1503,9 @@ categories: English
 
   1. verb: break up into small parts, typically as the result of impact or decay. 分裂成小部分，通常是由于撞击或腐烂的结果。
 
-- disparaging
+- disparage
 
-  1. adjective: expressing the opinion that something is of little worth; derogatory. 表达某事物没价值的观点；贬低的。
+  1. verb: regard or represent as being of little worth. 认为或代表没有价值，即贬低。
 
 - distaste
 
@@ -1535,7 +1535,7 @@ categories: English
 
 - dose
 
-  1. noun: a quantity of a medicine or drug taken or recommended to be taken at a particular time. 药物的量或在特定时间建议服务药物的量。
+  1. noun: a quantity of a medicine or drug taken or recommended to be taken at a particular time. 药物的量或在特定时间建议服用药物的量。
 
   2. verb: administer a dose to (a person or animal). 对（人或动物）给药。
 

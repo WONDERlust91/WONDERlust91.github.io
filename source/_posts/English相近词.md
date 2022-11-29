@@ -137,6 +137,36 @@ categories: English
 
   vain adj. 自负的；徒劳的；无用的
 
+- confess v. 承认；忏悔
+
+  profess v. 宣称；肯定；教授
+
+- convention n. 惯例；公约；大会
+
+  invention n. 发明
+
+- distinct adj. 不同的；易区分的
+
+  instinct n. 本能；直觉 adj. 充满（好的品质）
+
+- deference n. 尊重
+
+  difference n. 区别
+
+- affective adj. 情感的（心理学）
+
+  defective adj. 有缺陷的；有精神障碍的 n. 有精神障碍的人
+
+  effective adj. 有效果的；实际上的 n. 适合服役的士兵
+
+  infective adj. 有传染性的
+
+  perfective adj. 完成时的（斯拉夫语） n. 动词的完成时
+
+- dedicate v. 致力；投身
+
+  delicate adj. 精细的；易坏的；脆弱的；敏感的
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -507,6 +537,16 @@ categories: English
 
   considerable
 
+- 表示“认为”
+
+  think
+
+  consider
+
+  regard
+
+  deem
+
 ## 反义词
 
 - radical adj. 激进的，左倾的
@@ -542,3 +582,7 @@ categories: English
 - concrete adj. 具体的 n. 水泥 v. 浇注水泥；硬化
 
   abstract adj. 抽象的 n. 抽象；摘要 v. 分离；提取；总结
+
+- dawn n. 黎明；开始 v. 开始；变得明显；被感知
+
+  dusk n. 黄昏 v. 变暗 adj. 昏暗的
