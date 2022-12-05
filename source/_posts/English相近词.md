@@ -97,6 +97,8 @@ categories: English
 
 - efficient adj. 高效的
 
+  deficient adj. 不足的；精神障碍的
+
   proficient adj. 精通的 n. 精通某事的人
 
   sufficient adj. 足够的
@@ -153,6 +155,8 @@ categories: English
 
   difference n. 区别
 
+  transference n. 转移；（心理学）移情
+
 - affective adj. 情感的（心理学）
 
   defective adj. 有缺陷的；有精神障碍的 n. 有精神障碍的人
@@ -166,6 +170,84 @@ categories: English
 - dedicate v. 致力；投身
 
   delicate adj. 精细的；易坏的；脆弱的；敏感的
+
+- affine adj. （数学）仿射 n. （人类学）婚姻产生的亲戚
+
+  define v. 定义；界定
+
+  refine v. 提炼；改进
+
+- conform v. 遵守；遵循
+
+  deform v. 使变形
+
+  inform v. 告知；形成
+
+  perform v. 履行；表现；演出
+
+  preform v. 预成型
+
+  proform n. （语言学）代替词（如 She likes chocolate and so do I. 这里 do 就是 likes 的 proform）
+
+  reform v. 改进；（石油）裂化 n. 改革
+
+  transform v. 转变 n. 转变的产物
+
+  uniform adj. 统一的；不变的；制服的 n. 制服；（非正式）警察；（无线电）字母 U v. 使统一
+
+- complement n. 补充；（补充的）量；（几何）余角；（数学）补集；（语法）补语；（医学）补体 v. 补充；补完
+
+  implement n. 器具 v. 实现；施行
+
+  supplement n. 补充；（几何）补角 v. 补贴；补充
+
+  （complement 指补充完整，完美；supplement 指补充额外的数量）
+
+- confer v. 授予；商讨
+
+  defer v. 推迟；听从
+
+  differ v. 不同；不同意
+
+  infer v. 推测
+
+  offer v. 提供；愿意；尝试 n. 愿意的表达（要约）；出价；优惠；求婚
+
+  prefer v. 更喜欢；（正式）提交，呈上；（古老）提拔
+
+  proffer v. 提请；提出 n. 要约或提案
+
+  refer v. 提到或暗示；转交，咨询；（古老）归因
+
+  suffer v. 经历，遭受；容忍
+
+  transfer v. 移动，转移，转换 n. 转移；转印；转乘
+
+- aspect n. 方面；方位；时态 v. （占星）形成相位
+
+  inspect v. 检查
+
+  perspective n. 透视；全景；视角，观点；权重
+
+  prospect n. 期望，前景；全景 v. 勘探，寻找
+
+  respect n. 尊重；体贴；方面 v. 尊重，遵守
+
+  suspect v. 猜想；怀疑 n. 嫌疑人 adj. 可疑的
+
+- confound v. 困扰（与预期相反），证明为错，击败；混淆 excl. （感叹词）表示愤怒或烦恼
+
+  profound adj. 程度深的；深刻的 n. 思想或海洋的广阔深度
+
+- attest v. 证明；认证
+
+  contest n. 竞赛；竞争 v. 竞争；异议
+
+  detest v. 憎恶
+
+  protest n. 抗议；拒付 v. 抗议；反驳；拒付
+
+  retest v. n. 复试
 
 ## 近义词
 
