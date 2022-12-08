@@ -518,6 +518,8 @@ have been doing 从过去到现在一直做某事
 
   find A B
 
+  make A B
+
 - to the extent that 词性为 adv. 到了（从句中描述的）程度。
 
   I can do this, to the extent that ... 我能做这个事情，能做到...的程度。
@@ -671,3 +673,7 @@ have been doing 从过去到现在一直做某事
 - in the wake of = after
 
 - more often than not = usually
+
+- coupled with 加上
+
+  My ability, coupled with your skills, can help us do many things.

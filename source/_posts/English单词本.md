@@ -379,6 +379,12 @@ categories: English
 
   1. verb: suprise or impress (someone) greatly. 使（某人）大吃一惊或给（某人）留下深刻印象。
 
+- astrology
+
+  1. noun: the study of the movements and relative positions of celestial bodies interpreted as having an influence on human affairs and the natural world. 关于天体运动和相位的研究，被作为对人类事务和自然世界影响的解释。
+
+  2. phrase: astrological signs = zodiac signs 星座。
+
 - at a loss
 
   1. phrase: puzzled or uncertain what to think, say, or do. 困惑或不确定想什么，说什么，做什么。
@@ -518,6 +524,14 @@ categories: English
   11. phrase: bill and coo - exchange caresses or affectionate words; behave or talk in a very loving or sentimental way. 交换爱抚或深情的话语；以充满爱意或感伤的方式行事或说话。
 
   12. noun: a medieval weapon like a halberd with a hook instead of a blade. 中世纪的武器，比如有钩的戟，而不是有刀锋的。
+
+- biography
+
+  1. noun: an account of someone's life written by someone else. 其他人写的关于某人的生活记录，即传记。
+
+     - biographies as a branch of literature. 传记作为文学的一个分支，即传记文学。
+
+     - a human life in its course. 一个人的生活轨迹。
 
 - biomass
 
@@ -811,6 +825,12 @@ categories: English
 
   7. phrase(NORTH AMERICAN): bring something up to code - renovate or update an old building in line with the latest building regulations. （北美）根据最新的建筑法规翻新或更新旧建筑。
 
+- cognition
+
+  1. noun: the mental action or process of acquiring knowledge and understanding through thought, experience, and the senses. 通过思想、经验和感官获取知识和理解的心理活动或过程，即认知。
+
+     - a perception, sensation, idea, or intuition resulting from the process of cognition. 由认知过程产生的知觉、感觉、想法或直觉。
+
 - commodity
 
   1. noun: a raw material or primary agricultural product that can be bought and sold, such as copper or coffee. 可以被买卖的原材料或初级农产品，例如铜或咖啡，即商品。
@@ -960,6 +980,22 @@ categories: English
   1. verb: express complete disapproval of, typically in public; censure. 表达完全不赞成，通常在是公开场合；谴责。
 
   2. verb: sentence (someone) to a particular punishment, especially death. 判处（某人）特定的惩罚，尤其是死刑。
+
+- conduct
+
+  1. noun: the manner in which a person behaves, especially on a particular occasion or in a particular context. 一个人的行为方式，尤其是在特定场合或特定情况下。
+
+  2. noun: the action or manner of managing an activity or organization. 管理活动或组织的行为或方式。
+
+  3. verb: organize and carry out. 组织并实施。
+
+  4. verb: lead or guide (someone) to or around a particular place. 带领或引导（某人）到一个特定的地方或其周围。
+
+  5. verb(PHYSICS): transmit (a form of energy such as heat or electricity) by conduction. （物理）通过传导来传输（一种能量形式，如热或电）。
+
+  6. verb: direct the performance of (a piece of music or a musical ensemble). 执导表演（一段音乐或音乐合奏）。
+
+  7. verb: behave in a specified way. 以特定的方式表现或行事。
 
 - confer
 
@@ -1745,6 +1781,14 @@ categories: English
 
   1. verb: officially register as a member of an institution or a student on a course. 正式注册成为机构成员或课程学生。
 
+- entail
+
+  1. verb: involve (something) as a necessary or inevitable part or consequence. 涉及（某事）作为必要或不可避免的部分或结果，译为意味着。
+
+  2. verb(LAW): 解决（财产）在后代间的继承，以便所有权保留在特定群体，通常是一个家庭中，翻译为继承，固定搭配 entail on/upon sb。
+
+  3. noun: a settlement of the inheritance of property over a number of generations so that it remains within a family or other group. 在后代间财产继承的安排，以便财产保持在一个家庭或其他群体中。
+
 - entitle
 
   1. verb: give (someone) a legal right or a just claim to receive or do something. 给予（某人）接受或做某事的合法权利或公正要求。
@@ -1898,6 +1942,18 @@ categories: English
   1. verb: apply or bring to bear (a force, influence, or quality). 施加或使承受（力量，影响或品质）。
 
   2. verb: make a physical or mental effort. 作出身体或精神上的努力。
+
+- exhibit
+
+  1. verb: publicly display (a work of art or item of interest) in an art gallery or museum or at a trade fair. 在艺术画廊或博物馆或交易会上公开展示（一件艺术品或感兴趣的物品）。
+
+  2. verb: manifest or deliberately display (a quality or a type of behavior). 表现或有意表现（一种品质或一种行为）。
+
+  3. noun: an object or collection of objects on public display in an art gallery or museum or at a trade fair. 在艺术画廊或博物馆或交易会上公开展示的物品或物品集合。
+
+     - (NORTH AMERICAN) an exhibition. （北美）展览。
+
+     - (LAW) a document or other object produced in a court as evidence. （法律）在法庭上作为证据出示的文件或其他物品。
 
 - expectancy
 
@@ -2535,6 +2591,10 @@ categories: English
 
   1. the practice of claiming to have moral standards or beliefs to which one's own behavior does not conform; pretense. 声称具有道德标准或信仰但实际自己的行为并不符合的做法；虚伪。
 
+- hysteria
+
+  1. noun: exaggerated or uncontrollable emotion or excitement. 夸大或无法控制的情绪或兴奋，即歇斯底里。
+
 ## I
 
 - ideal
@@ -2691,6 +2751,14 @@ categories: English
 
   1. adjective: not fit or suitable for eating. 不适合食用。
 
+- inevitable
+
+  1. adjective: certain to happen; unavoidable. 肯定会发生，不可避免的。
+
+  2. adjective(INFORMAL): so frequently experienced or seen that it is completely predictable. 太过频繁地经历或看到以致于完全可以预测。
+
+  3. noun: a situation that is unavoidable. 不可避免的情况。
+
 - infant
 
   1. noun: a very young child or baby. 非常年幼的孩子或婴儿。
@@ -2710,6 +2778,12 @@ categories: English
   1. noun: the action of breaking the terms of a law, agreement, etc.; violation. 破坏法律、协议等条款的行为；侵害。
 
   2. noun: the action of limiting or undermining something. 限制或破坏某事的行为。
+
+- ingenious
+
+  1. adjective: (of a person) clever, original, and inventive. （人）聪明的，独创的，有创造力的。
+
+  2. adjective: (of a machine or idea) cleverly and originally devised and well suited to its purpose. （机器或想法）被聪明或原创性地设计，且非常适合其目的。
 
 - initiative
 
@@ -2749,6 +2823,16 @@ categories: English
 
   6. noun: a person involved by chance in a situation, especially a victim of crime or war. 偶然卷入某种情况的人，尤其是犯罪或战争的受害者。
 
+- in place
+
+  1. phrase: working or ready to work; established. 工作或对工作准备就绪；已确立的。
+
+  2. phrase(NORTH AMERICAN): on the spot; not travelling any distance. 当场；没有旅行任何距离。
+
+- inquiry
+
+  1. noun: an act of asking for information. 询问信息的行为。
+
 - insidious
 
   1. adjective: proceeding in a gradual, subtle way, but with harmful effects. 以一种逐渐的，精细的形式进行，但带有有害的影响，即暗中有害的。
@@ -2770,6 +2854,10 @@ categories: English
   1. noun: the ability to acquire and apply knowledge and skills. 获得和应用知识和技能的能力，即智慧。
 
   2. noun: the collection of information of military or political value. 收集具有军事或政治价值的信息，即情报。
+
+- intervention
+
+  1. noun: the action or process of intervening. 干预的行动或过程。
 
 - in the world
 
@@ -2805,43 +2893,19 @@ categories: English
 
   4. verb: occur at the start of; open. 发生在开始；开幕。
 
-- invocation
+- intuition
 
-  1.  noun: the action of invoking something or someone for assistance or as an authority. 请求某人或某物作为帮助或权威的行为。
-
-- inevitable
-
-  1. adjective: certain to happen; unavoidable. 肯定会发生，不可避免的。
-
-  2. adjective(INFORMAL): so frequently experienced or seen that it is completely predictable. 太过频繁地经历或看到以致于完全可以预测。
-
-  3. noun: a situation that is unavoidable. 不可避免的情况。
-
-- ingenious
-
-  1. adjective: (of a person) clever, original, and inventive. （人）聪明的，独创的，有创造力的。
-
-  2. adjective: (of a machine or idea) cleverly and originally devised and well suited to its purpose. （机器或想法）被聪明或原创性地设计，且非常适合其目的。
-
-- in place
-
-  1. phrase: working or ready to work; established. 工作或对工作准备就绪；已确立的。
-
-  2. phrase(NORTH AMERICAN): on the spot; not travelling any distance. 当场；没有旅行任何距离。
-
-- inquiry
-
-  1. noun: an act of asking for information. 询问信息的行为。
-
-- intervention
-
-  1. noun: the action or process of intervening. 干预的行动或过程。
+  1. noun: the ability to understand something immediately, without the need for conscious reasoning. 无需有意识的推理即可立即理解某事的能力，即直觉。
 
 - inundate
 
   1. verb: overwhelm (someone) with things or people to be dealt with. 被要处理的人或事物所压倒
 
   2. verb: flood. 淹没、泛滥
+
+- invocation
+
+  1.  noun: the action of invoking something or someone for assistance or as an authority. 请求某人或某物作为帮助或权威的行为。
 
 - irrational
 
@@ -3102,6 +3166,14 @@ categories: English
   1. noun: a female domestic servant. 女佣。
 
   2. noun(ARCHAIC): an unmarried girl or young woman. （古老）未婚少女或年轻女子。
+
+- mania
+
+  1. noun: mental illness marked by periods of great excitement or euphoria, delusions, and overactivity. 以周期性的极度兴奋或欣快，妄想，和过度活跃为特征的精神疾病。
+
+     - an excessive enthusiasm or desire; an obsession. 一种过度的热情或渴望；一种痴迷。
+
+  2. suffix: denoting a specified type of mental abnormality or obsession or extreme enthusiasm or admiration. （后缀）表示一种特定的精神异常或痴迷或极度的热情或敬仰。
 
 - manicure
 
@@ -3413,6 +3485,10 @@ categories: English
 
   13. phrase: take note - pay attention. 注意。
 
+- noteworthy
+
+  1. adjective: interesting, significant, or unusual. 有趣的，重要的，或不同寻常的，即值得注意的。
+
 - notion
 
   1. noun: a conception of or belief about something. 对某事的概念或信念。对某事的概念或信念。
@@ -3434,6 +3510,12 @@ categories: English
   1. noun: a fictitious prose narrative of book length, typically representing character and action with some degree of realism. 一本书那么长的虚构散文叙述，通常以某种程度的现实主义表现人物和行为。
 
   2. adjective: interestingly new or unusual. 有趣的新的或不寻常的。
+
+- nurture
+
+  1. verb: care for and encourage the growth or development of. 关心和鼓励成长或发展，即培育。
+
+  2. noun: the process of caring for and encouraging the growth or development of someone or something. 关心和鼓励某人或某事的成长或发展的过程。
 
 ## O
 
@@ -4055,6 +4137,18 @@ categories: English
 
   6. phrase: promises, promises - used to indicate that the speaker is skeptical about someone's stated intention to do something. 用于表示说话者对某人陈述的做某事的意图持怀疑态度。
 
+- pronounce
+
+  1. verb: make the sound of (a word or part of a word) in the correct or a particular way. 以正确或特定的方式发出（单词或单词一部分）的发音。
+
+  2. verb: declare or announce, typically formally, or solemnly. 宣布或宣称，通常是正式或庄严地。
+
+     - pass judgment or make a decision on. 作出判断或决定。
+
+- pronounced
+
+  1. adjective: very noticeable or marked; conspicuous. 非常引人注意或明显的；显眼的。
+
 - proposition
 
   1. noun: a statement or assertion that expresses a judgement or opinion. 表达判断或意见的陈述或断言。
@@ -4108,6 +4202,18 @@ categories: English
 - quick-witted
 
   1. adjective: showing or characterized by an ability to think or respond quickly and effectively. 表现出或具有快速有效地思考或反应的能力。
+
+- quirk
+
+  1. noun: a peculiar behavioral habit. 一种特殊的行为习惯。
+
+     - a strange chance occurrence. 一个奇怪的偶然事件。
+
+     - a sudden twist, turn, or curve. 一个突然的缠绕，转动，或弯曲。
+
+  2. noun(ARCHITECTURE): an acute hollow between convex or other moldings. （建筑学）一个锐角的空洞在凸形或其他形状间。
+
+  3. verb: (with reference to a person's mouth or eyebrow) move or twist suddenly. especially to express surprise or amusement. （指人的嘴或眉毛）突然移动或扭曲，尤指表示惊讶或好笑。
 
 ## R
 
@@ -4671,6 +4777,18 @@ categories: English
 
   1. noun: supreme power or authority. 最高权力或权威。常指国家主权。
 
+- span
+
+  1. noun: the full extent of something from end to end; the amount of space that something covers. 某事物从一端到另一端的全部范围；某物覆盖的空间量，即跨度。
+
+  2. verb: (of a bridge, arch, etc.) extend from side to side of. （桥梁，拱门等）从一边延伸到另一边，即横跨。
+
+  3. noun(NAUTICAL): a rope with its ends fastened at different points to a spar or other object in order to provide a purchase. 一根绳子，其末端在不同的点上固定在桅杆或其他物体上，以提供购买。
+
+  4. noun(NORTH AMERICAN): a matched pair of horses, mules, or oxen. 配对的马、骡子或牛。
+
+  5. phrase: spick and span - spotlessly clean and well looked after. 一尘不染，并照看得很好。
+
 - specialty (speciality)
 
   1. noun: a pursuit, area of study, or skill to which someone has devoted much time and effort and in which they are expert. 追求，研究领域，或技能，是某人花费大量时间和精力并成为专家的。
@@ -4732,6 +4850,14 @@ categories: English
   2. noun(INFORMAL·NORTH AMERICAN): a spy. 间谍。
 
   3. verb(INFORMAL): frighten; unnerve. 吓唬；不安。
+
+- spotlight
+
+  1. noun: a lamp projecting a narrow, intense beam of light directly on to a place or person, especially a performer on stage. 一种将窄而强的光束直接投射到某个地方或人，尤其是舞台上的表演者的灯，即聚光灯。
+
+  2. verb: illuminate with a spotlight. 用聚光灯照亮。
+
+     - direct attention to (a particular problem or situation). 引导注意力到（一个特定的问题或情况），即聚焦，强调。
 
 - sprint
 
@@ -4824,6 +4950,14 @@ categories: English
      1. a stealthy pursuit of someone or something. 对某人或某事的偷偷追踪。
 
      2. a stiff, striding gait. 僵硬或大步的步态。
+
+- stamina
+
+  1. noun: the ability to sustain prolonged physical or mental effort. 维持长时间体力或脑力劳作的能力，即耐力，体力。
+
+- startle
+
+  1. verb: cause (a person or animal) to feel sudden shock or alarm. 使（人或动物）感到突然的震惊或惊慌。
 
 - statesman
 
@@ -5185,6 +5319,14 @@ categories: English
 
   4. verb: uphold, affirm, or confirm the justice or validity of. 坚持，肯定，确认正义或有效。
 
+- swamp
+
+  1. noun: an area of low-lying, uncultivated ground where water collects; a bog or marsh. 积水的低洼未开垦地区；沼泽。
+
+     - used to emphasize the degree to which a piece of ground is waterlogged. 用来强调一块地被水淹的程度。
+
+  2. verb: overwhelm or flood with water. 被水淹没。
+
 - swing
 
   1. verb: move or cause to move back and forth or from side to side while suspended or on an axis. 在轴线上悬挂时移动或前后移动或左右移动。
@@ -5414,6 +5556,10 @@ categories: English
   8. phrase: toss off - produce something rapidly or without thought or effort. 迅速或不假思索或不费力地做出某事。
 
   9. phrase: toss up - throw a coin into the air in order to make a decision between two alternatives, based on which side of the coin faces up when it lands. 将一枚硬币抛向空中，以便在两个选择中做出决定，决定基于硬币落地时哪一面向上。
+
+- trait
+
+  1. noun: a distinguishing quality or characteristic, typically one belonging to a person. 一种有区别的品质或特点，通常属于一个人。
 
 - transient
 

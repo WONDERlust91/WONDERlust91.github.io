@@ -313,6 +313,44 @@ categories: English
 
   formerly adv. 以前
 
+- adduce v. 引用作为证据
+
+  adduct v. （肌肉）内收 n. （化学）加合物
+
+  adduction n. （肌肉）内收的运动
+
+  conduce v. 有助于
+
+  conduct n. 行为；管理 v. 实施；引导；传导（电，热）；（音乐）指挥，执导；表现
+
+  conduction n. 传导（热，电，波，神经递质等）
+
+  deduce v. 推断
+
+  deduct v. 扣除，减除
+
+  deduction n. 扣除行为；扣除额；推理，推论
+
+  induce v. 促使；导致；（电磁）感应；（物理）射线轰击导致放射性；（生化）启动或加强（生化过程）；（医疗）引产；（逻辑）由归纳推理派生出
+
+  induct v. 入选；征召入伍
+
+  induction n. 入选的行为或过程；正式的入门简介；引导的过程或行为，（医学）引产；（逻辑）归纳；电磁感应；内燃机吸气阶段
+
+  produce v. 生产，产出，产生，创作；导致，引发，实现，产生；展示，提供 n. 农产品
+
+  product n. 产品；结果，产物；（数学）乘积
+
+  production n. 生产过程；制作过程（电影，戏剧等）
+
+  reduce v. 减少，炙干（水分），减重，（底片或打印）减少密度，（发音）弱读；带到（较低或弱的状态），沦为，陷入，屈服；改变为（基本形式），简化；（化学）氢化，还原；（脱臼）复位；
+
+  reduction n. 减少，简化，（数学）约分，（生物）减数分裂；（脱臼，骨折）复位；（化学）还原反应；（发音）弱化。
+
+  seduce v. 勾引，诱导，吸引
+
+  seduction n. 诱惑
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -693,6 +731,22 @@ categories: English
 
   deem
 
+- 表示“淹没”
+
+  v. flood
+
+  v. overflow
+
+  v. swamp
+
+  v. inundate
+
+- 表示“归因 A 于 B”
+
+  attribute A to B
+
+  owe A to B
+
 ## 反义词
 
 - radical adj. 激进的，左倾的
@@ -732,3 +786,7 @@ categories: English
 - dawn n. 黎明；开始 v. 开始；变得明显；被感知
 
   dusk n. 黄昏 v. 变暗 adj. 昏暗的
+
+- nature n. 自然，先天特征
+
+  nurture v. n. 后天培育
