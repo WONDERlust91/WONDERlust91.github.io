@@ -1839,9 +1839,9 @@ categories: English
 
   1. adverb: so as to present a flat or uniform surface or line. 以呈现平坦或均匀的表面或线条。
 
-  2. in equal numbers, amounts, or values. 以相等的数目，数量，或价值。
+  2. adverb: in equal numbers, amounts, or values. 以相等的数目，数量，或价值。
 
-  3. used to indicate a number that is divisible by two without a remainder. 用于表示被 2 整除无余数的数。
+  3. adverb: used to indicate a number that is divisible by two without a remainder. 用于表示被 2 整除无余数的数。
 
 - evolve
 
@@ -1961,7 +1961,7 @@ categories: English
 
   13. phrase: a fair deal - equitable treatment. 公平的对待。
 
-  14. phrase: fair enought - used to admit that something is reasonable or acceptable. 用于承认某事是合理的或可接受的。
+  14. phrase: fair enough - used to admit that something is reasonable or acceptable. 用于承认某事是合理的或可接受的。
 
   15. phrase: fair name - a good reputation. 好的名声。
 
@@ -2087,7 +2087,7 @@ categories: English
 
   1. noun: the action of devising or creating something. 设计或创造某物的行为。
 
-  2. noun: a material or mixture prepared according to a particular formula. 根据特定西方制备的材料或混合物。
+  2. noun: a material or mixture prepared according to a particular formula. 根据特定配方制备的材料或混合物。
 
 - fortune
 
