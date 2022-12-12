@@ -351,6 +351,20 @@ categories: English
 
   seduction n. 诱惑
 
+- allude v. 暗示；提及
+
+  conclude v. 结束；总结
+
+  delude v. 欺骗
+
+  elude v. 逃避；难倒；困扰
+
+  exclude v. 排除
+
+  include v. 包括
+
+  prelude n. 简介，序曲，前奏 v. 作为前奏，预示着
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别

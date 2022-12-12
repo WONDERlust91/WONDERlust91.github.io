@@ -243,6 +243,10 @@ categories: English
 
   1. adjective: enough or more than enough; plentiful. 足够或绰绰有余；丰富的。
 
+- analogy
+
+  1. noun: a comparison between two things, typically for the purpose of explanation or clarification. 两件事之间的比较，通常是为了解释或澄清，即类比。
+
 - anchor
 
   1. noun: a heavy object attached to a rope or chain and used to moor a vessel to the sea bottom, typically one having a metal shank with a ring at one end for the rope and a pair of curved and/or barbed flukes at the other. 连接在绳索或链条上并用于将船只系泊到海底的重物，通常有一个金属柄，一端有一个用于绳索的环，另一端有一对弯曲和/或带倒钩的锚链。
@@ -781,6 +785,10 @@ categories: English
 
   1. noun: a burrowing ground squirrel with cheek pouches and light and dark stripes running down the body, found in North America and northern Eurasia. 花栗鼠，在北美和欧亚大陆北部发现的一种地面穴居松鼠，脸部带有颊囊并且有沿着身体延伸的明暗条纹。
 
+- chronological
+
+  1. adjective: (of a record of events) starting with the earliest and following the order in which they occurred. （事件的记录）从最早的开始，按事件发生的顺序，即纪年的，时间顺序的。
+
 - clash
 
   1. noun: a violent confrontation. 激烈的对抗。
@@ -831,6 +839,26 @@ categories: English
 
      - a perception, sensation, idea, or intuition resulting from the process of cognition. 由认知过程产生的知觉、感觉、想法或直觉。
 
+- column
+
+  1. noun: an upright pillar, typically cylindrical and made of stone or concrete, supporting an entablature, arch, or other structure or standing alone as a monument. 一根直立的柱子，通常是圆柱形的，由石头或混凝土制成，支撑着柱顶、拱门或其他结构，或者作为纪念碑。
+
+     - a vertical, roughly cylindrical thing. 垂直，圆柱形的东西。
+
+     - an upright shaft forming part of a machine and typically used for controlling it. 构成机器一部分的直立轴，通常用于控制机器。
+
+  2. noun: a vertical division of a page or text. 页面或文本的垂直划分。
+
+     - a vertical arrangement of figures or other information. 数字或其他信息的垂直排列。
+
+     - a section of a newspaper or magazine regularly devoted to a particular subject or written by a particular person. 报纸或杂志中定期针对特定主题或由特定人撰写的部分，即专栏。
+
+  3. noun: one or more lines of people or vehicles moving in the same direction. 一列或多列人或车向同一方向移动。
+
+     - (MILITARY) a narrow-fronted deep formation of troops in successive lines. 连续窄向纵深排列的部队。
+
+     - a military force or convoy of ships. 部队或护航舰队。
+
 - commodity
 
   1. noun: a raw material or primary agricultural product that can be bought and sold, such as copper or coffee. 可以被买卖的原材料或初级农产品，例如铜或咖啡，即商品。
@@ -856,6 +884,20 @@ categories: English
   4. verb(FORMAL): accompany. （正式）陪伴。
 
   5. noun: a covering over the hatchway leading below decks. 在通往甲板下方的舱口上的覆盖。
+
+- compass
+
+  1. noun: an instrument containing a magnetized pointer which shows the direction of magnetic north and bearings from it. 一种包含磁化指针的仪器，可以显示磁北的方向和方位，即指南针。
+
+  2. noun: an instrument for drawing circles and arcs and measuring distances between points, consisting of two arms linked by a movable joint, one arm ending in a point and the other usually carrying a pencil or pen. 一种用于绘制圆和弧以及测量点之间距离的仪器，由通过活动关节连接的两只手臂组成，一只手臂末端为一个点，另一只通常拿着铅笔或钢笔，即圆规。
+
+  3. noun: the range or scope of something. 某事的范围。
+
+  4. verb(ARCHAIC): go around (something) in a circular course. 绕着（某物）以环形路线。
+
+     - surround or enclose on all sides. 四面包围或封闭。
+
+  5. verb(ARCHAIC): contrive to accomplish (something). 设法完成（某事）。
 
 - compassion
 
@@ -1375,6 +1417,10 @@ categories: English
 
   1. verb: devote (time or effort) to a particular task or purpose. 将（时间或精力）投入到特定的任务或目的中。
 
+- deduce
+
+  1. verb: arrive at (a fact or a conclusion) by reasoning; draw as a logical conclusion. 通过推理得出（事实或结论）；得出合乎逻辑的结论，即推断。
+
 - deem
 
   1. verb(FORMAL): regard or consider in a specified way. （正式）以特定方式看待或考虑。
@@ -1552,6 +1598,30 @@ categories: English
   1. noun: a difference or contrast between similar things or people. 在相似事物或人之间的差异或对比。
 
   2. noun: excellence that sets someone or something apart from others. 将人或物与其他区分开来的卓越。
+
+- divide
+
+  1. verb: separate or be separated into parts. 分开或分成几部分。
+
+  2. verb: disagree or cause to disagree. 不同意或导致不同意。
+
+  3. verb(MATHEMATICS): find how many times (a number) contains another. 计算多少倍（一个数字）包含另一个数字，即除以（固定搭配 A divide by B 或 divide A by B 译为 A 除以 B）。
+
+     - (of a number) be susceptible of division without a remainder. （一个数字）被除没有余数，即被整除（A doesn't divide by B 译为 A 无法被 B 整除）。
+
+     - find how many times (a number) is contained in another. 计算多少倍（一个数字）被另一个数字包含，即除或去除（divide A into B 译为 A 除 B 或 A 去除 B，A 为除数，B 为被除数）。
+
+     - (of a number) be contained in a number without a remainder. （一个数字）被包含在一个数字中而没有余数，即整除（A divide into B 译为 A 整除 B，A 为除数，B 为被除数）。
+
+     - 总结：A divide by B 译为除以或被整除，A 为被除数；A divide into B 译为除或整除，A 为除数。（A，B 为数字时，是除法相关，否则是分开相关）
+
+  4. noun: a wide divergence between two groups, typically producing tension or hostility. 两个群体间的巨大差异，通常产生紧张或敌意。
+
+     - a boundary between two things. 两个事物之间的界限。
+
+  5. phrase: divide and conquer - the policy of maintaining control over one's subordinates or opponents by encouraging dissent between them, thereby preventing them from uniting in opposition. 控制下属或对手的政策，通过鼓励他们之间的异议的方式，从而阻止他们联合起来反对。
+
+  6. phrase: divide against itself - (of a group which should be coherent) split by factional interests. （一个本应团结的群体）因派系利益而分裂。
 
 - divisive
 
@@ -1765,6 +1835,16 @@ categories: English
 
   3. verb(BIOLOGY): (of a natural agency) produce (a substance) from its elements or simpler constituents. （自然媒介）产生（物质）从它的元素或更简单的成分中。
 
+- elude
+
+  1. verb: evade or escape from (a danger, enemy, or pursuer), typically in a skillful or cunning way. 逃避或逃离（危险，敌人，或追捕者），通常以巧妙或狡猾的方式。
+
+     - (of an idea or fact) fail to be grasped or remembered by (someone). （想法或事实）未能被（某人）掌握或记住，即难倒。
+
+     - (of an achievement, or something desired or pursued) fail to be attained by (someone). （成就，或渴望或追求的事物）未能被（某人）获得，即困扰着。
+
+     - avoid compliance with or subjection to (a law, demand, or penalty). 避免遵守或服从（法律、要求或处罚），即逃避。
+
 - ember
 
   1. noun: a small piece of burning or glowing coal or wood in a dying fire. 在即将熄灭的火中燃烧或发光的一小块煤或木头，即余烬。
@@ -1772,6 +1852,12 @@ categories: English
 - emerge
 
   1. verb: move out of or away from something and come into view. 移出或远离某物并出现在视野中。(常用于表示新兴，脱颖而出，摆脱困境，破壳而出) emerging countries 即新兴国家。
+
+- encompass
+
+  1. verb: surround and have or hold within. 包围并拥有或持有，即包括。
+
+  2. verb(ARCHAIC): cause (something) to take place. （古老）使（某事）发生。
 
 - enormous
 
@@ -1798,6 +1884,10 @@ categories: English
 - entitled
 
   1. adjective: believing oneself to be inherently deserving of privileges or special treatment. 相信自己天生就应该享有特权或特殊待遇。
+
+- envision
+
+  1. verb: imagine as a future possibility; visualize.想象未来的可能性；可视化，想象。
 
 - envy
 
@@ -2061,6 +2151,70 @@ categories: English
 
   2. adjective: (of a person, animal, or plant) able to conceive young or produce seed. （人，动物，植物）能够怀孕或能够产生种子。
 
+- field
+
+  1. noun: an area of open land, especially one planted with crops or pasture, typically bounded by hedges or fences. 一块开阔的土地，特别是种植庄稼或牧场的土地，通常以树篱或栅栏为界。
+
+     - a piece of land used for a particular purpose, especially an area marked out for a game or sport. 用于特定目的的一块土地，特别是标明用于比赛或运动的区域。
+
+     - defensive play or the defensive positions collectively. 防守打法或防守位置的统称。
+
+     - a large area of land or water completely covered in a particular substance, especially snow or ice. 大面积的土地或水域完全被某种物质覆盖，尤其是雪或冰。
+
+     - an area rich in a natural product, typically oil or gas. 富含天然产品的地区，通常是石油或天然气。
+
+     - a place where a subject of scientific study or of artistic representation can be observed in its natural location or context. 可以在其自然位置或环境中观察科学研究或艺术表现主题的地方。
+
+     - an area on which a battle is fought. 打仗的地方。
+
+  2. noun: a particular branch of study or sphere of activity or interest. 特定研究分支或活动或兴趣的领域。
+
+     - (COMPUTING) a part of a record, representing an item of data. 记录的一部分，代表数据项。
+
+     - (LINGUISTICS·PSYCHOLOGY) a general area of meaning within which individual words make particular distinctions. 一个一般的意义范围，在这个范围内，个别词有特殊的区别。
+
+  3. noun: a space or range within which objects are visible from a particular viewpoint or through a piece of apparatus. 一个空间或范围，在这个范围内物体能够被看到，从一个特殊视点或设备中，即可视范围。
+
+  4. noun: all the participants in a contest or sport. 比赛或运动中的所有参与者。
+
+  5. noun: an area on a flag with a single background color. 旗帜上具有单一背景色的区域。
+
+  6. noun(PHYSICS): the region in which a particular condition prevails, especially one in which a force or influence is effective regardless of the presence or absence of a material medium. （物理）特定条件占主导的区域，尤其是无论是否存在物质媒介，力或影响都有效的区域。
+
+  7. noun(MATHEMATICS): a system subject to two binary operations analogous to those for the multiplication and addition of real numbers, and having similar commutative and distributive laws. 一个系统进行二进制运算类似实数的乘法和加法，并具有类似的交换律和分配律。
+
+  8. verb(CRICKET·BASEBALL): play as a fielder. （板球·棒球）作为防守者（外野手）。
+
+  9. verb: send out (a team or individual) to play in a game. 派出（团队或个人）参加比赛。
+
+     - (of a political party) nominate (a candidate) to run in an election. （政党）提名（候选人）参加选举。
+
+     - deploy (an army). 部署（军队）。
+
+  10. verb: deal with (a difficult question, phone call, etc.). 处理（难题，电话等）。
+
+  11. adjective: carried out or working in the natural environment, rather than in a laboratory or office. 在自然环境中进行或工作，而不是在实验室或办公室，即实地的。
+
+      - (of military equipment) light and mobile for use on campaign. （军事装备）轻便和可移动的用于战役，即野战的。
+
+      - used in names of animals or plants found in the open country, rather than among buildings or as cultivated varieties. 用于野外发现的动植物命名，而不是建筑物中或作为栽培品种之间。
+
+      - denoting a game played outdoors on a marked field. 表示在户外有标记的场地上进行的游戏。
+
+  12. phrase: in the field - on campaign; (while) engaged in combat or maneuvers. 在战役中；（正在）参与战斗或演习。
+
+      - away from the laboratory or studio; engaged in practical work in a natural environment. 远离实验室或工作室；在自然环境中从事实际工作。
+
+      - (of an employee) away from the home office; working while traveling. （雇员）远离家庭办公室；旅行时工作。
+
+  13. phrase: keep the field - continue a military campaign. 继续军事战斗。
+
+  14. phrase: lead the field - be the leader in a race. 成为比赛中的领先者。
+
+  15. phrase: play the field - indulge in a series of sexual relationships without committing oneself to anyone. 沉迷于一系列的性关系而不向任何人承诺。
+
+  16. phrase: take the field - (of a sports team) go on to a field to begin a game. （运动队）前往场地开始比赛。
+
 - fierce
 
   1. adjective: having or displaying an intense or ferocious aggressiveness. 具有或表现出强烈或凶猛的攻击性。
@@ -2134,6 +2288,10 @@ categories: English
   3. adjective: relating to the traditional art or culture of a community or nation. 关于一个社群或国家的传统艺术或文化。
 
   4. adjective: relating to folk music. 民谣。
+
+- fondness
+
+  1. noun: affection or liking for someone or something. 对某人或某物的感情或喜欢。
 
 - formerly
 
@@ -2648,6 +2806,10 @@ categories: English
 - immunization
 
   1. noun: the action of making a person or animal immune to infection, typically by inoculation. 使人或动物对感染免疫的行为，通常通过接种的形式。
+
+- impartial
+
+  1. adjective: treating all rivals or disputants equally; fair and just. 平等对待所有竞争对手或争论者的；公平公正的。
 
 - impetus
 
@@ -5269,6 +5431,18 @@ categories: English
 
   1. verb: observe and direct the execution of (a task, project, or activity). 观察和指导（任务、项目或活动）的执行。
 
+- supplement
+
+  1. noun: something that completes or enhances something else when added to it. 当添加到其中以完成或增强其他事物的事物，即补充。
+
+     - a substance taken to remedy the deficiencies in a person's diet. 用于补救一个人饮食缺陷而服务的物质，即补剂。
+
+     - a separate section, especially a color magazine, added to a newspaper or periodical. 添加到报纸或期刊中的单独版块，尤指彩色杂志，即副刊。
+
+  2. noun(GEOMETRY): the amount by which an angle is less than 180°. （几何）小于 180 度的角。
+
+  3. verb: add an extra element or amount to. 添加额外的元素或量。
+
 - suppress
 
   1. verb: forcibly put an end to. 强行终止。
@@ -5515,6 +5689,14 @@ categories: English
 
   6. verb: (of a DJ) accompany a reggae backing track or music with improvised rhythmic speech. （DJ 相关）结合雷鬼伴奏或音乐到即兴说唱。
 
+- toil
+
+  1. verb: work extremely hard or incessantly. 极度努力或不停地去做（固定搭配 toil away/through）。
+
+     - move slowly and with difficulty. 缓慢而艰难地移动。
+
+  2. noun: exhausting physical labor. 累人的体力劳动。
+
 - token
 
   1. noun: a thing serving as a visible or tangible representation of a fact, quality, feeling, etc. 一个东西作为可见或有形的事实，质量，感受等等的代表。
@@ -5732,6 +5914,18 @@ categories: English
   1. noun: a plant or part of a plant used as food, typically as accompaniment to meat or fish, such as a cabbage, potato, carrot, or bean. 植物或植物的一部分被用作食物，通常作为肉或鱼的佐菜，例如卷心菜，马铃薯，胡萝卜或豆类。
 
   2. noun(INFORMAL): a person with a dull or inactive life. 生活乏味或不活跃的人。
+
+- verbal
+
+  1. adjective: relating to or in the form of words. 与词有关或以词汇形式。
+
+     - spoken rather than written; oral. 口头的而不是书面的；口头的。
+
+     - tending to talk a lot. 倾向于多说话。
+
+  2. adjective(GRAMMAR): relating to or derived from a verb. （语法）关于动词的或由动词派生的。
+
+  3. noun(GRAMMAR): a word or words functioning as a verb. 作为动词功能的一个词或多个词。
 
 - verbally
 
