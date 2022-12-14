@@ -401,6 +401,16 @@ categories: English
 
   2. verb: reach (a specified age, size, or amount). 达到（指定的年龄，大小，或数量）。
 
+- attendant
+
+  1. noun: a person employed to provide a service to the public in a particular. 在特定地方受雇为公众提供服务的人，即侍者，服务员。
+
+  2. noun: a person who is present at an event, meeting, or function. 出席事件，会议，或活动的人。
+
+  3. adjective: occurring with or as a result of; accompanying. 伴随发生或作为结果；随着的。
+
+     - (of a person or animal) accompanying another as a companion or assistant. （人或动物）作为伴侣或助手陪伴另一个人。
+
 - authentic
 
   1. adjective: of undisputed origin; genuine. 无可争议的来源；真的。
@@ -1399,6 +1409,58 @@ categories: English
 
   2. noun: brightness that confuses someone's vision temporarily. 使某人视力暂时混乱的亮度。
 
+- deal
+
+  1. verb: distribute (cards) in an orderly rotation to players for a game or round. 有序地轮流分发（牌）给玩家，以进行游戏或回合。
+
+     - include a new player in a card game by giving them cards. 通过给新玩家发牌，让他们加入纸牌游戏。
+
+     - distribute or mete out (something) to a person or group. 分发（某物）给个人或群体。
+
+  2. verb: take part in commercial trading of a particular commodity. 参与特定商品的商业交易。
+
+     - be concerned with 关于，关心
+
+     - (INFORMAL) buy and sell illegal drugs. 买卖非法药品。
+
+  3. verb: take measures concerning (someone or something), especially with the intention of putting something right. 对（某人或某事）采取措施，尤其是为了纠正某事。
+
+     - cope with (a difficult person or situation). 应付（困难的人或情况）。
+
+     - treat (someone) in a particular way. 以特定的方式对待（某人）。
+
+     - have relations with (a person or organization), especially in a commercial context. 与（个人或组织）有关系，尤其是在商业环境中。
+
+     - take or have as a subject; discuss. 以或有作为主题；讨论。
+
+  4. verb: inflict (a blow) on (someone or something). 对（某人或某物）造成（打击）。
+
+  5. noun: an agreement entered into by two or more parties for their mutual benefit, especially in a business or political context. 两方或多方为了互利而签订的协议，尤其是在商业或政治背景下。
+
+     - an attractive price on a commodity for a purchaser; a bargain. 对购买者而言具有吸引力的商品价格；便宜货。
+
+     - a particular form of treatment given or received. 给予或接受的特定形式的待遇。
+
+     - (INFORMAL) the situation or state of affairs. 情况或事态。
+
+  6. noun: the process of distributing the cards to players in a card game. 在纸牌游戏中将纸牌分发给玩家的过程。
+
+  7. noun: a significant but unspecified amount of something. 大量但未指定数量的东西。
+
+  8. phrase: a big deal - a thing considered important. 被认为重要的事情。
+
+  9. phrase: a great deal - a large amount. 大量的。
+
+  10. phrase: cut a deal - make an agreement. 达成协议。
+
+  11. phrase: it's a deal - used to express one's assent to an agreement. 用于表示赞成某项协议。
+
+  12. phrase: no big deal - used to indicate that something is of little consequence. 用来表示某事无关紧要。
+
+  13. phrase: the real deal - a person or thing considered to be a genuine or supremely good example of their kind. 被认为是同类中真正的或极好的例子的人或事物。
+
+  14. noun: fir or pine wood, especially when sawn into planks of a standard size. 杉木或松木，尤其是锯成标准尺寸的木板时。
+
 - dean
 
   1. the head of the chapter of a cathedral or collegiate church. 大教堂或学院教堂分会的负责人。
@@ -1420,6 +1482,12 @@ categories: English
 - deduce
 
   1. verb: arrive at (a fact or a conclusion) by reasoning; draw as a logical conclusion. 通过推理得出（事实或结论）；得出合乎逻辑的结论，即推断。
+
+- deductible
+
+  1. adjective: able to be deducted, especially from taxable income or tax to be paid. 可以被扣除的，尤其是从应税收入或应缴税款中扣除。
+
+  2. noun(NORTH AMERICAN): (in an insurance policy) a specified amount of money that the insured must pay before an insurance company will pay a claim. 在保险公司支付索赔前，被保险人必需支付的特定金额，即免赔额。
 
 - deem
 
@@ -1483,11 +1551,21 @@ categories: English
 
      - make (something) accessible to everyone. 使（某物）对每个人都可用，即全民化。
 
+- demographic
+
+  1. adjective: relating to the structure of populations. 关于人口结构的。
+
+  2. noun: a particular sector of a population. 人口的特定部分，即人口统计的结果、情况。
+
 - depict
 
   1. verb: show or represent by a drawing, painting, or other art form. 以图画，绘画，或其他艺术形式展示或表现。
 
      - portray in words; describe. 用文字描绘；描述。
+
+- deprive
+
+  1. verb: deny (a person or place) the possession or use of something. 否认（一个人或地方）拥有或使用某物，即剥夺（常见用法：deprive sb. of sth. 剥夺某人的某物，sb. be deprived of sth. 某人被剥夺了某物）。
 
 - descendant
 
@@ -2129,6 +2207,14 @@ categories: English
 
   24. verb: smooth the lines of (a vehicle, boat, or aircraft) to reduce drag; streamline. 平滑（车辆，船只，或飞机）的线条以减少阻力；流线型。
 
+- fallout
+
+  1. noun: radioactive particles that are carried into the atmosphere after a nuclear explosion or accident and gradually fall back as dust or in precipitation. 核爆炸或事故后进入大气层并逐渐以灰尘或降水形式回落的放射性粒子，即沉降物。
+
+     - airborne substances resulting from an industrial process or accident. 工业过程或事故产生的空气传播物质。
+
+  2. noun: the adverse side effects or results of a situation. 不利的副作用或情况的结果。
+
 - far-fetched
 
   1. adjective: unlikely and unconvincing; implausible. 不太可能且没有说服力的；难以置信的。
@@ -2598,6 +2684,12 @@ categories: English
      - in the routine of daily work. 在日常的工作中。
 
      - working closely with someone to achieve something. 与某人密切合作以取得成就。
+
+- harsh
+
+  1. adjective: unpleasantly rough or jarring to the senses. 令人不愉快的粗糙或刺耳的感觉。
+
+  2. adjective: cruel or severe. 残酷的或严厉的。
 
 - haste
 
@@ -3893,6 +3985,18 @@ categories: English
 
   1. noun: a weight hung from a fixed point so that it can swing freely backward and forward, especially a rod with a weight at the end that regulates the mechanism of a clock. 钟摆，挂在一个固定点上的重物，这样它就能自由地前后摆动，尤其是末端带有长杆的重物可以调节时钟的机制。
 
+- pension
+
+  1. noun: a regular payment made during a person's retirement from an investment fund to which that person or their employer has contributed during their working life. 在一个人退休期间从该人或其雇主在其工作生涯中向其捐款的投资基金中定期支付的款项，即退休金。
+
+     - a regular payment made by the government to people of or above the official retirement age and to some widows and disabled people. 政府定期向法定退休年龄或以上的人以及一些寡妇和残疾人支付的款项，即福利金。
+
+     - (HISTORICAL) a regular payment made to a royal favorite or to an artist or scholar to enable them to carry on work that is of public interest or value. （历史上）定期支付给皇室宠臣或艺术家或学者的款项，使他们能够开展具有公共利益或价值的工作。
+
+  2. verb: dismiss someone from employment, typically because of age or ill health, and pay them a pension. 解雇某人，通常是因为年龄或健康状况不佳，并向他们支付补偿金。
+
+  3. noun: a boarding house in France and other European countries, providing full or partial board at a fixed rate. 法国和其他欧洲国家的寄宿公寓，以固定费率提供全食宿或部分食宿。
+
 - perceive
 
   1. verb: become aware or conscious of (something); come to realize or understand. 知觉或意识到某事；逐渐知觉或理解。
@@ -4769,6 +4873,14 @@ categories: English
 
   15. phrase: serve up - present food or drink to someone. 向某人提供食物或饮料。
 
+- setback
+
+  1. noun: a reversal or check in progress. 在进程中的逆转或阻碍，即挫折。
+
+  2. noun(ARCHITECTURE): a plain, flat offset in a wall. （建筑）墙上平整的壁架。
+
+  3. noun(NORTH AMERICAN): the distance by which a building or part of a building is set back from the property line. （北美）建筑或建筑物的一部分后退到建筑线后的距离。
+
 - settle
 
   1. verb: resolve or reach an agreement about (an argument or problem). 解决或就（争论或问题）达成协议。
@@ -4864,6 +4976,72 @@ categories: English
   14. phrase: pick up the slack - use up a surplus or improve the use of resources to avoid an undesirable lull in business. 用完盈余或改善资源的使用，以避免业务出现不良停滞。
 
   15. noun: coal dust or small pieces of coal. 煤粉或小煤块。
+
+- slip
+
+  1. verb: (of a person or animal) slide unintentionally. for a short distance, typically losing one's balance or footing. （人或动物）无意中滑了一小段距离，通常是失去平衡或失足。
+
+     - (of a thing) accidentally slide or move out of position or from someone's grasp. （某物）不小心滑出或移出位置或从某人的手中滑出。
+
+     - fail to grip or make proper contact with a surface. 无法抓住或正确接触表面。
+
+  2. verb: go or move quietly or quickly, without attracting notice. 安静或快速地走或移动，没有引起注意的。
+
+     - put (something) in a particular place or position quietly, quickly, or stealthily. 安静，迅速，或偷偷地把（某物）放在一个特定的地方或位置。
+
+     - put on (a garment) quickly and easily. 迅速并容易地穿上一件衣服。
+
+     - take off (a garment) quickly and easily. 迅速并容易地脱掉一件衣服。
+
+  3. verb: pass or change to lower, worse, or different condition, typically in a gradual or imperceptible way. 到达或改变到更低，更差，或不同的条件，通常以逐渐或难以察觉的方式。
+
+  4. verb: escape or get loose from (a means of restraint). 逃脱或摆脱（束缚的手段）。
+
+  5. noun: an act of sliding unintentionally for a short distance. 无意识地滑动一小段距离的行为。
+
+  6. noun: a fall to a lower level or standard. 下降到较低的水平或标准。
+
+     - a minor or careless mistake. 一个小的或粗心的错误。
+
+  7. noun: a woman's loose-fitting, dress- or skirt- length undergarment, suspended by shoulder straps (full slip) or by an elasticized waistband (half slip). 一种女性的宽松，连衣裙或短裙长度的内衣，通过肩带（全衬）或弹性腰带（半衬）悬挂，即内衬。
+
+  8. noun: a slope built leading into water, used for launching and landing boats and ships or for building and repairing them. 入水而建的斜坡，供船舶上下水或为建造和修理他们。
+
+  9. noun: a leash which enables a dog to be released quickly. 使狗很快能被放开的皮带。
+
+  10. noun(KNITTING): short for slip stitch. （针织）跳针的缩写。
+
+  11. phrase: give someone the slip - evade or escape from someone. 逃避或逃离某人。
+
+  12. phrase: let something slip - reveal something inadvertently in the course of a conversation. 在谈话过程中不经意地透露一些东西。
+
+  13. phrase: slip through one's fingers (slip from one's grasp) - (of something important or worthwhile) be lost, especially as a result of carelessness or lack of effort. （重要或有价值的东西）丢失，尤指由于粗心或不努力导致的。
+
+  14. phrase: slip of the pen - aminor mistake in writing. 写作中的一个小错误。
+
+  15. phrase: slip of the tongue - a minor mistake in speech. 言语中的一个小错误。
+
+  16. phrase: slip one over on someone - take advantage of someone by trickery. 以诡计占某人便宜。
+
+  17. proverb: there's many a slip 'twixt cup and lip - many things can go wrong between the start of a project and its completion; nothing is certain until it has happened. 在项目开始和完成之间可能会出现很多问题；在事情发生前，没什么是确定的。
+
+  18. phrase: slip away - depart without saying goodbye; leave quietly or surreptitiously. 不辞而别；悄悄或偷偷离开。
+
+  19. phrase: slip in - smoothly insert a remark into a conversation. 顺畅地在对话中插入评论。
+
+  20. phrase: slip out - (of a remark) be uttered inadertently. （评论）不经意间说出。
+
+  21. phrase: slip up - make a careless error. 犯一个粗心的错误。
+
+  22. noun: a small piece of paper, typically a form for writing on or one giving printed information. 一小张纸，通常是一种用于书写或提供打印信息的表格。
+
+  23. noun: a cutting taken from a plant for grafting or planting; a scion. 为嫁接或种植而从植物上截取的一段；一个幼芽，接班人。
+
+  24. phrase: pink slip - notice of dismissal. 解雇通知书。
+
+  25. phrase: a slip of a sb. - used to denote a small, slim person. 用于表示一个小而苗条的人。
+
+  26. phrase: a creamy mixture of clay, water, and typically a pigment, used especially for decorating earthenware. 粘土，水和通常是颜料的乳状混合物，尤其用于装饰陶器。
 
 - sliver lining
 
@@ -5300,6 +5478,16 @@ categories: English
   36. phrase: strike out - start out on a new or independent course or endeavor. 开始新的或独立的课程或努力。
 
   37. phrase: strike up - (of a band or orchestra) begin to play a piece of music. （乐队或管弦乐队）开始演奏一段音乐。
+
+- stripe
+
+  1. noun: a long narrow band or strip, typically of the same width throughout its length, differing in color or texture from the surface on either side of it. 一条长而窄的带子或条带，通常在其整个长度上具有相同的宽度，每个宽度间以两个表面的颜色或材质区分。
+
+  2. noun: a chevron sewn on to a uniform to denote military rank. 缝在制服上的 V 型表示军衔。
+
+  3. noun(NORTH AMERICAN): a type or category. 一种类型或类别（常见 sth./sb. of all stripes 各种各样的某物，后置）。
+
+  4. verb: mark with stripes. 用条纹标记。
 
 - strive
 
@@ -6002,6 +6190,32 @@ categories: English
   2. noun: a road, track, path, or street for traveling along. 用于行驶的道路、轨道、路径或街道。
 
   3. adverb(INFORMAL 非正式): at or to a considerable distance or extent. 在一个相当远的距离或范围; far 非常 (used before an adverb or preposition for emphasis) 用在副词与介词间表强调。
+
+- weather
+
+  1. noun: the state of the atmosphere at a place and time as regards heat, dryness, sunshine, wind, rain, etc. 一个地方和时间下的大气状态，如热，干燥，阳光，风，雨等。
+
+     - cold, wet, and unpleasant or unpredictable atmospheric conditions; the elements. 寒冷，潮湿，不愉快或不可预测的大气条件；极端天气要素。
+
+     - denoting the side from which the wind is blowing, especially on board a ship; windward. 表示风吹来的方向，尤其指在船上；迎风。
+
+  2. verb: wear away or change the appearance or texture of (something) by long exposure to the air. 磨损或改变（某物）的外观或材质，通过长时间暴露在空气中，即侵蚀，风化。
+
+  3. verb: come safely through (a storm). 平安度过（风暴）。
+
+     - withstand (a difficulty or danger). 经受（困难或危险）。
+
+     - (SAILING) (of a ship) get to the windward of (a cape or other obstacle). （航行）（船）到达（海角或其他障碍物）的迎风处。
+
+  4. verb: make (boards or tiles) overlap downward to keep out rain. 使（木板或瓦片）向下重叠用以防雨。
+
+  5. verb(FALCONRY): allow (a hawk) to spend a period perched in the open air. （猎鹰）允许（鹰）在露天栖息一段时间。
+
+  6. phrase: keep a weather eye on - observe very carefully, especially for changes or developments. 非常仔细地观察，尤其是变化或发展。
+
+  7. phrase: make heavy weather of - have unnecessary difficulty in dealing with (a task or problem). 在处理（任务或问题）时遇到不必要的困难。
+
+  8. phrase: under the weather - slightly unwell or in low spirits. 轻微不适或精神不振。
 
 - weigh
 

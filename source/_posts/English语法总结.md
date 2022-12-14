@@ -664,6 +664,8 @@ have been doing 从过去到现在一直做某事
 
   A outsmart B - A 更聪明胜过 B
 
+  A outperform B - A 比 B 表现更好
+
 - 句子 A, before 句子 B = Before 句子 B, 句子 A
 
   英语中常常分句做状语后置，而中国人习惯状语前置，故一定注意两种形式表达的意思完全一致。
@@ -677,3 +679,33 @@ have been doing 从过去到现在一直做某事
 - coupled with 加上
 
   My ability, coupled with your skills, can help us do many things.
+
+- lay off 解雇
+
+  Company lay off employees.
+
+- make up with 弥补，修复，重归于好
+
+- saving account （美国）存款账户，有取款限制有利息，相当于国内定期
+
+  checking account （美国）支票账户，无限制无利息，相当于国内活期
+
+- bear 过去式：bore 过去分词：borne
+
+- a lot of 量词，修饰名词
+
+  I have a lot of books.
+
+  a lot 副词，修饰比较级（形容词）
+
+  You are a lot smarter than me.
+
+  a great/good deal of 量词，修饰不可数名词
+
+  a great/good deal 副词，修饰比较级（形容词）
+
+  You are a good deal smarter than me.
+
+  A looks far less like B, and a good deal more like C. A 看起来远不像 B，并远远更加多像 C。
+
+- in that = because 连词 （in that 单独作为一个意群时）

@@ -531,9 +531,13 @@ categories: English
 
   - 连词
 
+    because
+
     since
 
     for
+
+    in that
 
   - 副词
 
