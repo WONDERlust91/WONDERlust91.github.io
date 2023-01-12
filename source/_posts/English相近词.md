@@ -173,6 +173,10 @@ categories: English
 
   delicate adj. 精细的；易坏的；脆弱的；敏感的
 
+  complicate v. 使更加复杂或混乱
+
+  intricate adj. 非常复杂或详细的
+
 - affine adj. （数学）仿射 n. （人类学）婚姻产生的亲戚
 
   define v. 定义；界定
@@ -764,6 +768,28 @@ categories: English
   attribute A to B
 
   owe A to B
+
+- 表示“遵守，遵从”
+
+  - 介词短语
+
+    comply with + 规则
+
+    abide by + 法律
+
+    adhere to + 原则
+
+  - 单词
+
+    comply
+
+    conform
+
+    follow
+
+    obey
+
+    respect
 
 ## 反义词
 

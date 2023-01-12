@@ -709,3 +709,31 @@ have been doing 从过去到现在一直做某事
   A looks far less like B, and a good deal more like C. A 看起来远不像 B，并远远更加多像 C。
 
 - in that = because 连词 （in that 单独作为一个意群时）
+
+- should 除表示“本应该”外，还用在从句的 that 后，或用在 why，how，who，what 等词后，表示惊讶，译为竟然，还能。
+
+  It is astonishing that we should find violence here. 很惊讶的是我们竟然在这里发现了暴力。
+
+  I was in this store when who should I see across the street but Toby？ 当我在这家商店时，除了托比我还能在街对面看到谁？
+
+- a- 前缀
+
+  1. 表示状态
+
+     asleep 表示 sleep 的状态
+
+     awake 表示 wake 的状态
+
+     astray 表示 stray 的状态
+
+  2. 表示相反
+
+     asynchronize 异步 synchronize 同步
+
+     asymmetric 不对称的 symmetric 对称的
+
+- do the rounds
+
+  1. 新闻或谣言被一个人接一个人地传播并被广泛知晓，即撒播。
+
+  2. 访问或参与很多特定团体的事物，通常是流程的一部分，即走流程。

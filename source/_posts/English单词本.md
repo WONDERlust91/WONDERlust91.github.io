@@ -383,6 +383,14 @@ categories: English
 
   1. verb: suprise or impress (someone) greatly. 使（某人）大吃一惊或给（某人）留下深刻印象。
 
+- astray
+
+  1. adverb: away from the correct path or direction. 偏离正确的路径或方向。
+
+  2. adverb: into error or morally questionable behavior. 进入错误或道德上有问题的行为。
+
+  3. phrase: go astray - (of an object) become lost or mislaid. （一个物体）迷路或放错地方，即误入歧途。
+
 - astrology
 
   1. noun: the study of the movements and relative positions of celestial bodies interpreted as having an influence on human affairs and the natural world. 关于天体运动和相位的研究，被作为对人类事务和自然世界影响的解释。
@@ -945,6 +953,18 @@ categories: English
 
   2. adjective: relating to complementary medicine. 关于辅助医学的。
 
+- compliance (comply 的名词)
+
+  1. noun: the action or fact of complying with a wish or command. 遵从愿望或命令的行为或事实。
+
+     - unworthy or excessive acquiescence. 不值得或过度的默许。
+
+     - the state or fact of according with or meeting rules or standards. 符合或满足规则或标准的状态或事实。
+
+  2. noun(PHYSICS): the property of a material of undergoing elastic deformation or (of a gas) change in volume when subjected to an applied force. It is equal to the reciprocal of stiffness. （物理）材料在受力时发生弹性变形或（气体）体积变化的特性。它等于刚度的倒数。
+
+     - (MEDICINE) the ability of an organ to distend in response to applied pressure. （医学）器官响应施加的压力而扩张的能力。
+
 - comprehend
 
   1. verb: grasp mentally; understand. 精神上把握；理解。
@@ -1190,6 +1210,10 @@ categories: English
   3. verb: oppose (an action, decision, or theory) as mistaken or wrong. 反对（行动，决定，或理论）认为是错误的。
 
   4. phrase: no contest - a plea by which a defendant in a criminal prose cution accepts conviction but does not plead or admit guilt. 刑事诉讼中的被告接受定罪但不认罪的抗辩。
+
+- contractor
+
+  1. noun: a person or company that undertakes a contract to provide materials or labor to perform a service or do a job. 签订合同提供材料或劳动力以执行服务或工作的个人或公司，即承包商。
 
 - contradictory
 
@@ -1619,6 +1643,16 @@ categories: English
 
   4. noun: a push or poke with one's elbow, finger, etc. 用手肘或手指等推或戳。
 
+- dim
+
+  1. verb: make or become less bright or distinct. 使或变得不那么明亮或清晰。
+
+     - lower (a vehicle's headlights) from high to low beam. 将（车辆的前灯）从远光灯调低到近光灯。
+
+     - make or become less intense or favorable. 使或变得不那么强烈或有利。
+
+     - make or become less able to see clearly. 使或变得不太能够清楚地看到。
+
 - diminish
 
   1. verb: make or become less. 使变少。
@@ -1634,6 +1668,12 @@ categories: English
   1. verb: get rid of (someone or something) as no longer useful or desirable. 摆脱（某人或某物）因为不在有用或合意。
 
   2. noun: a person or thing rejected as no longer useful or desirable. 因不再有用或合意而被拒绝的人或物。
+
+- disclose
+
+  1. verb: make (secret or new information) known. 使（秘密或新信息）为人所知，即揭露。
+
+     - allow (something) to be seen, especially by uncovering it. 允许（某物）被看到，尤其是通过揭开它的方式。
 
 - discourse
 
@@ -1676,6 +1716,12 @@ categories: English
   1. noun: a difference or contrast between similar things or people. 在相似事物或人之间的差异或对比。
 
   2. noun: excellence that sets someone or something apart from others. 将人或物与其他区分开来的卓越。
+
+- diverse
+
+  1. adjective: showing a great deal of variety; very different. 表现出多种多样；非常不一样。
+
+  2. adjective: including or involving people from a range of different social and ethnic backgrounds and of different genders, sexual orientations, etc. 包括或涉及来自不同社会和种族背景以及不同性别、性取向等的人。
 
 - divide
 
@@ -1848,6 +1894,32 @@ categories: English
   3. phrase: reject conventional society to pursue an alternative lifestyle. 拒绝传统社会去追求另类的生活方式。
 
   4. phrase(RUGBY): restart play with a drop kick. （橄榄球）用抛落踢球来开始比赛。
+
+- due
+
+  1. adjective: expected at or planned for at a certain time. 预计在或计划在某个时间，即到期。
+
+     - (of a payment) required at a certain time. （付款）被要求在特定时间。
+
+     - (of a person) having reached a point where the thing mentioned is required or owed. （某人）已经达到一个点，在这个情况下所提及的事物应该被要求或被偿还。
+
+     - (of a thing) required or owed as a legal or moral obligation. （事物）作为法律或道德义务而被要求或付出。
+
+  2. adjective: of the proper quality or extent; adequate. 具有适当的质量或范围；足够的，即应有的。
+
+  3. noun: a person's right; what is owed to someone. 一个人的权利；欠某人的东西。
+
+  4. noun: an obligatory payment; a fee. 强制性付款；费用。
+
+  5. adverb: (with reference to a point of the compass) exactly; directly. （关于指南针的指向）准确地；直接地。
+
+  6. phrase: due to - caused by or ascribable to. 由于或归因于。
+
+  7. phrase: give someone their due - be fair to someone. 对某人公平。
+
+  8. phrase: in due course - at the appropriate time. 在适当的时候。
+
+  9. phrase: pay one's dues - fulfill one's obligations. 履行某人的义务。
 
 - dutch
 
@@ -2230,6 +2302,16 @@ categories: English
      - have as an important actor or participant. 作为重要的演员或参与者。
 
      - be a significant characteristic of or take an important part in. 具有重要特征或在其中发挥重要作用。
+
+- feeble
+
+  1. adjective: lacking physical strength, especially as a result of age or illness. 缺乏体力，尤其是由于年龄或疾病，即虚弱的。
+
+     - (of a sound) faint. （声音）微弱。
+
+     - lacking strength of character. 缺乏人格力量。
+
+     - failing to convince or impress. 无法信服或打动。
 
 - fertile
 
@@ -3137,6 +3219,10 @@ categories: English
 
      - state or make known. 陈述或公开。
 
+- intricate
+
+  1. adjective: very complicated or detailed. 非常复杂或详细的。
+
 - introduce
 
   1. verb: bring (something, especially a product, measure, or concept) into use or operation for the first time. 首次将（某物，尤其是产品，措施，或概念）投入使用或操作。
@@ -3883,9 +3969,19 @@ categories: English
 
   4. verb(ARCHAIC): bewitch with the evil eye. （古老）用邪恶的眼睛迷惑。
 
+- overshadow
+
+  1. verb: tower above and cast a shadow over. 耸立在上方并投下阴影，即遮盖。
+
+     - cast gloom over. 笼罩阴霾。
+
+  2. verb: appear much more prominent or important than. 显得比...突出或重要得多。
+
+     - be more impressive or successful than (another person). 比（另一个人）更令人印象深刻或更成功。
+
 - owe
 
-  1. verb: have an obligation to pay or repay (something, especially money) in return for something received. 有义务支付或偿还（某物，尤其是金钱）作为对收到的东西的回报，即欠。
+  1. verb: have an obligation to pay or repay (something, especially money) in return for something received. 有义务支付或偿还（某物，尤其是金钱）作为对收到的东西的回报，即欠或偿还。
 
   2. phrase: owe it to oneself to do something - need to do something to protect one's own interests. 需要做点什么来保护自己的利益。
 
@@ -3980,6 +4076,22 @@ categories: English
 - pave the way for
 
   1. phrase: to make it easier for (something to happen or someone to do something). 使（某事发生或某人做某事）更容易。
+
+- peer
+
+  1. verb: look keenly or with difficulty at someone or something. 敏锐地或困难地注视某人或某物，即窥视，细看。
+
+     - be just visible. 只是可视的。
+
+     - (ARCHAIC) come into view; appear. （古老）来到视野中；出现。
+
+  2. noun: a member of the nobility in Britain or Ireland, comprising the ranks of duke, marquess, earl, viscount, and baron. 英国或爱尔兰的贵族成员，包括公爵、侯爵、伯爵、子爵和男爵，即贵族。
+
+  3. noun: a person of the same age, status, or ability as another specified person. 与另一特定的人具有相同年龄、地位或能力的人，即同辈。
+
+  4. verb(ARCHAIC): make or become equal with or of the same rank. （古老）使或变得与或具有相同的等级。
+
+  5. phrase: without peer - unequaled; unrivaled; peerless. 无可比拟的，无与伦比的；绝世的。
 
 - pendulum
 
@@ -5077,6 +5189,40 @@ categories: English
 
   2. adjective: (of a machine, system, or technique) developed to a high degree of complexity. （机器，系统，技术）发展到高度复杂。
 
+- sort
+
+  1. noun: a category of things or people having some common feature; a type. 具有某些共同特征的一类事物或人；一种。
+
+     - (INFORMAL) a person of a specified nature. 具有特定性质的人。
+
+  2. noun(COMPUTING): the arrangement of data in a prescribed sequence. 按规定顺序排列的数据。
+
+  3. noun(ARCHAIC): a manner or way. （古老）一种态度或方式。
+
+  4. noun(PRINTING): a letter or piece in a font of type. 字体类型的字母或片段。
+
+  5. verb: arrange systematically in groups; separate according to type, class, etc. 系统性地分组在安排上；根据类型，类别等分开。
+
+     - look at (a group of things) one after another in order to classify them or make a selection. 一个接一个地看（一组事物），以便对它们进行分类或做出选择。
+
+  6. verb(INFORMAL): resolve (a problem or difficulty). （非正式）解决（问题或困难）。
+
+  7. phrase: after a sort - after a fashion. 在一定程度上，但不完美或不令人满意。
+
+  8. phrase: in some sort - to a certain extent. 在某种程度上。
+
+  9. phrase: nothing of the sort - used as an emphatic way of denying permission or refuting an earlier statement or assumption. 用作拒绝许可或反驳先前陈述或假设的强调方式。
+
+  10. phrase: of sorts/a sort - of an atypical and typically inferior type. 属于非典型且通常较差的类型。
+
+  11. phrase: out of sorts - slightly unwell. 轻微不适。
+
+  12. phrase: sort of - to some extent; in some way or other (used to convey inexactness or vagueness). 在某种程度上；以某种方式（用于表达不准确或模糊）。
+
+  13. phrase: the ... sort - the kind of person likely to do or be involved with the thing specified. 可能做或参与指定事情的人的类型。
+
+  14. phrase: sort out - arrange things systematically in groups or according to type. 系统地分组或按类型安排事务。
+
 - sound
 
   1. noun: vibrations that travel through the air or another medium and can be heard when they reach a person's or animal's ear. 通过空气或其他介质传播并在到达人或动物的耳朵时可以听到的振动。
@@ -5598,6 +5744,22 @@ categories: English
 - subtle
 
   1. adjective: (especially of a change or distinction) so delicate or precise as to be difficult to analyze or describe. （尤其是变化或区别）太精细或精确以至于很难分析或描述。
+
+- suite
+
+  1. noun: a set of rooms designated for one person's or family's use or for a particular purpose. 指定供一个人或家庭使用或用于特定目的的一组房间，即套房。
+
+     - a set of coordinating furniture. 一套协调的家具。
+
+  2. noun(MUSIC): a set of instrumental compositions, originally in dance style, to be played in succession. 一组器乐作品，最初是舞蹈风格，被连续演奏。
+
+     - a set of selected pieces from an opera or musical, arranged to be played as one instrumental work. 一组从歌剧或音乐剧中选出的曲目，安排作为一件器乐作品演奏。
+
+  3. noun: a group of people in attendance on a monarch or other person of high rank. 侍奉君主或其他高官的一群人。
+
+  4. noun(COMPUTING): a set of programs with a uniform design and the ability to share data. 一系列具有统一设计和共享数据能力的程序。
+
+  5. noun(GEOLOGY): a group of minerals, rocks, or fossils occurring together and characteristic of a location or period. 一组矿物，岩石，或化石一起出现，并具有某个地点或时期的特征。
 
 - superb
 
