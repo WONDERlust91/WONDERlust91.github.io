@@ -10,6 +10,10 @@ categories: css
 
 在使用媒体查询与响应式布局过程中，我们常常需要让一个盒模型按一定的纵横比响应，即盒子的高度取决于盒子的宽度。常见需求如在响应过程中保持盒子为正方形，或保持盒子为 16:9 的比例。那么如何实现这样的需求呢？
 
+## 可替换元素
+
+如果是`<video>`或`<img>`等可替换元素标签，通常需要保持图片或视频素材本身纵横比，因此只需要固定`width`或`height`属性中的一个，并将另一个设置为`auto`即可按内容实现固定的纵横比。
+
 ## aspect-ratio
 
 2022 年了，`aspect-ratio`属性已经成为了 css 标准，在主流的浏览器中都有不错的支持。使用纵横比属性，很容易就能实现盒模型的固定比例。
@@ -75,3 +79,5 @@ categories: css
 > [Height equal to dynamic width (CSS fluid layout) ](https://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout)
 >
 > [aspect-ratio](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)
+>
+> [面试官：CSS 如何实现固定宽高比？](https://cloud.tencent.com/developer/article/1609830)
