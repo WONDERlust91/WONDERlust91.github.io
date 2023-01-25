@@ -294,7 +294,7 @@ as ... as 写作易错点：
 
 ### 动名词做主语
 
-v.ing + 宾语 + 谓语（单数）+ 宾语
+v.ing + 宾语 + 谓语 **（单数）** + 宾语
 
 Thinking that you are good is interesting.
 
@@ -737,3 +737,11 @@ have been doing 从过去到现在一直做某事
   1. 新闻或谣言被一个人接一个人地传播并被广泛知晓，即撒播。
 
   2. 访问或参与很多特定团体的事物，通常是流程的一部分，即走流程。
+
+- have/get sth. done
+
+  表被动，使某事物被做。
+
+  This apple is eaten by me.
+
+  I have/get this apple eaten.

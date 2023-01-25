@@ -369,6 +369,14 @@ categories: English
 
   prelude n. 简介，序曲，前奏 v. 作为前奏，预示着
 
+- psychiatry n. 精神病学
+
+  psycho n. 神经病（不稳定且有攻击性的人） adj. 神经病的 prefix: 精神或心理相关的
+
+  psychology n. 心理学
+
+  physiology n. 生理学
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -834,3 +842,7 @@ categories: English
 - nature n. 自然，先天特征
 
   nurture v. n. 后天培育
+
+- chronic adj. 慢性的
+
+  acute adj. 急性的

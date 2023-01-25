@@ -803,6 +803,22 @@ categories: English
 
   1. noun: a burrowing ground squirrel with cheek pouches and light and dark stripes running down the body, found in North America and northern Eurasia. 花栗鼠，在北美和欧亚大陆北部发现的一种地面穴居松鼠，脸部带有颊囊并且有沿着身体延伸的明暗条纹。
 
+- chronic
+
+  1. adjective: (of an illness) persisting for a long time or constantly recurring.
+
+     - (of a person) having an illness persisting for a long time or constantly recurring.
+
+       "a chronic asthmatic"
+
+     - (of a problem) long-lasting and difficult to eradicate.
+
+       "the school suffers from chronic overcrowding"
+
+     - (of a person) having a particular bad habit.
+
+       "a chronic liar"
+
 - chronological
 
   1. adjective: (of a record of events) starting with the earliest and following the order in which they occurred. （事件的记录）从最早的开始，按事件发生的顺序，即纪年的，时间顺序的。
@@ -1239,6 +1255,18 @@ categories: English
 
   2. adjective(BRIDGE): (of a bid) intended to convey a particular meaning according to an agreed convention. （桥）（投标）旨在根据商定的约定传达特定的含义。
 
+- cope (cope with sth.)
+
+  1. verb: (of a person) deal effectively with something difficult.
+
+     - (of a machine or system) have the capacity to deal successfully with.
+
+  2. noun: a long, loose cloak worn by a priest or bishop on ceremonial occasions.
+
+     - a thing resembling or likened to a cloak.
+
+  3. verb: (in building) cover (a joint or structure) with a coping.
+
 - cortex
 
   1. noun(ANATOMY): the outer layer of the cerebrum (the cerebral cortex), composed of folded gray matter and playing an important role in consciousness. 大脑的外层（大脑皮层），由折叠的灰质组成，在意识中起重要作用，即皮层。
@@ -1619,6 +1647,14 @@ categories: English
 
   1. verb: reduce or underestimate the worth or importance of. 降低或低估价值或重要性。
 
+- devastate
+
+  1. verb: destroy or ruin (something).
+
+     - cause (someone) severe and overwhelming shock or grief.
+
+       "she was devastated by the loss of Damian"
+
 - devise
 
   1. verb: plan or invent (a complex procedure, system, or mechanism) by careful thought. 计划或发明（复杂的程序，系统，或机制）通过仔细的思考。
@@ -1632,6 +1668,16 @@ categories: English
   1. noun: a particular form of a language which is peculiar to a specific region or social group. 特定地区或社会群体特有的特定语言形式，即方言。
 
      - (COMPUTING) a particular version of a programming language. 编程语言的特定版本。
+
+- diffuse
+
+  1. verb: spread or cause to spread over a wide area or among a large number of people.
+
+     "technologies diffuse rapidly"
+
+  2. adjective: spread out over a large area; not concentrated.
+
+     "the diffuse community centered on the church"
 
 - dig
 
@@ -2845,6 +2891,10 @@ categories: English
 
   2. verb: make uniform or similar. 使一致或相似，即同质化。
 
+- hormone
+
+  1. noun: a regulatory substance produced in an organism and transported in tissue fluids such as blood or sap to stimulate specific cells or tissues into action.
+
 - hospice
 
   1. noun: a home providing care for the sick or terminally ill. 为病人或绝症病人提供护理的家。
@@ -3026,6 +3076,22 @@ categories: English
 - incentive
 
   1. noun: a thing that motivates or encourages one to do something. 激励或鼓励某人做某事的事物。
+
+- inclination
+
+  1. noun: a person's natural tendency or urge to act or feel in a particular way; a disposition or propensity.
+
+     - an interest in or liking for (something).
+
+       "John was a scientist by training and inclination"
+
+       "Burger King and Wendy's didn't show any inclination to jump into a price war with McDonald's"
+
+  2. noun: a slope or slant.
+
+     "changes in inclination of the line on the graph"
+
+  3. noun: the angle at which a straight line or plane is inclined to another.
 
 - incline
 
@@ -3958,6 +4024,10 @@ categories: English
   1. phrase(INFORMAL): used to refer to the immediate usability or functionality of a newly purchased product, typically an electronic device or a piece of software. （非正式）开箱即用的。
 
   2. phrase(INFORMAL·AUSTRALIAN·NEW ZEALAND): unusually good. （非正式，澳大利亚，新西兰）异常的好。
+
+- ovary
+
+  1. noun: a female reproductive organ in which ova or eggs are produced, present in humans and other vertebrates as a pair.
 
 - overlook
 
@@ -6111,6 +6181,12 @@ categories: English
 
   2. noun: members of tribal communities, especially in South Asia. 部落社区的成员，尤其是在南亚。
 
+- trivial
+
+  1. adjective: of little value or importance.
+
+     "huge fines were imposed for trivial offenses"
+
 - turbulent
 
   1. adjective: characterized by conflict, disorder, or confusion; not controlled or calm. 以冲突，无序，混乱为特征；不受控制或不冷静的。
@@ -6295,6 +6371,12 @@ categories: English
 
   3. noun(ANATOMY·ZOOLOGY): a duct or canal holding or conveying blood or other fluid. 容纳或输送血液或其他液体的导管或管道。
 
+- veteran
+
+  1. noun: a person who has had long experience in a particular field.
+
+     - a person who has served in the military.
+
 - vice
 
   1. noun: immoral or wicked behavior. 不道德或邪恶的行为。
@@ -6352,6 +6434,94 @@ categories: English
   2. noun: a road, track, path, or street for traveling along. 用于行驶的道路、轨道、路径或街道。
 
   3. adverb(INFORMAL 非正式): at or to a considerable distance or extent. 在一个相当远的距离或范围; far 非常 (used before an adverb or preposition for emphasis) 用在副词与介词间表强调。
+
+- wear
+
+  1. verb: have on one's body or a part of one's body as clothing, decoration, protection, or for some other purpose.
+
+     - habitually have on one's body or be dressed in.
+
+       "although she was a widow, she didn't wear black"
+
+     - exhibit or present (a particular facial expression or appearance).
+
+       "they wear a frozen smile on their faces"
+
+     - have (one's hair or beard) at a specified length or arranged in a specified style.
+
+       "the students wore their hair long"
+
+     - NAUTICAL: (of a ship) fly (a flag).
+
+       "any British registered boat may wear the red ensign"
+
+  2. verb: damage, erode, or destroy by friction or use.
+
+     - undergo damage, erosion, or destruction by friction or use.
+
+       "mountains are wearing down with each passing second"
+
+     - form (a hole, path, etc.) by constant friction or use.
+
+       "the water was forced up through holes it had worn"
+
+     - withstand continued use or life in a specified way.
+
+       "a carpet-type finish seems to wear well"
+
+     - cause weariness or fatigue to.
+
+       "some losses can wear on you"
+
+  3. verb(LITERARY): pass (a period of time) in some activity.
+
+     "spining long stories, wearing half the day"
+
+  4. verb(INFORMAL·BRITISH): tolerate; accept.
+
+     "the environmental health people wouldn't wear it"
+
+  5. noun: the wearing of something or the state of being worn as clothing.
+
+     "some new tops for wear in the evening"
+
+  6. noun: clothing suitable for a particular purpose or of a particular type.
+
+     "evening wear"
+
+  7. noun: damage or deterioration sustained from continuous use.
+
+     "you need to make a deduction for wear and tear on all your belongings"
+
+  8. phrase: wear and tear - damage, erode, or destroy by friction or use.
+
+  9. phrase: wear thin - be gradually used up or become less convincing or acceptable.
+
+     "his patience was wearing thin"
+
+  10. phrase: wear away - become gradually smaller or smoother through use or contact over a long period.
+
+      "over time the sharp edges would wear away"
+
+  11. phrase: wear down - overcome someone or something by persistence.
+
+      "they wore down their opponents to win the marathon match that lasted more than two hours"
+
+  12. phrase: wear off - lose effectiveness or intensity.
+
+      "the effects of the drug were wearing off"
+
+  13. phrase: wear on - (of a period of time) pass, especially slowly or tediously.
+
+      "as the afternoon wore on he began to look unhappy"
+
+  14. phrase: wear out - be used until no longer in good condition or working order.
+
+      "the type was used again and again until it wore out"
+
+  15. verb(SAILING): bring (a ship) about by turning its head away from the wind.
+
+      "Shannon gives the order to wear ship"
 
 - weather
 
