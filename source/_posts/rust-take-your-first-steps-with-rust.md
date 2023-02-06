@@ -640,3 +640,253 @@ error: aborting due to previous error
 ```
 
 The compiler suggests that we can use the `.to_string()` function to make the conversion. In our examples, we use the `String::from(&str)` method.
+
+### Use enum variants for compound data
+
+Enums are types that can be any one of several variants. What Rust calls enums are more commonly known as algebraic data types(ADT). The important detail is that each enum variant can have data to go along with it.
+
+We use the `enum` keyword to create an enum type, which can have any combination of the enum variants. Like structs, enum variants can have named fields, but they can also have fields without names, or no fields at all. Like struct types, enum types are also capitalized.
+
+#### Define an enum
+
+Each variant in the enum is independent and stores different amounts and types of values.
+
+```rust
+enum WebEvent {
+  // An enum variant can be like a unit struct without fields or data types
+  WELoad,
+  // An enum variant can be like a tuple struct with data types but no name fields
+  WEKeys(String, char),
+  // An enum variant can be like a classic struct with named fields and their data types
+  WEClick { x: i64, y: i64 }
+}
+```
+
+We define an enum with variants similar to how we define different kinds of struct types. All the variants are grouped together in the same `WebEvent` enum type. Each variant in the enum isn't its own type. Any function that uses a variant of the `WebEvent` enum must accept all the variants in the enum. We can't have a function that accepts only the `WEClick` variant, but not the other variants.
+
+#### Define an enum with structs
+
+A way to work around enum variant requirements is to define a separate struct for each variant in the enum. Then, each variant in the enum uses the corresponding struct. The struct holds the same data that was held by the corresponding enum variant. This style of definition allows us to refer to each logical variant on its own.
+
+```rust
+// Define a tuple struct
+struct KeyPress(String, char);
+
+// Define a classic struct
+struct MouseClick { x: i64, y: i64 }
+
+// Redefine the enum variants to use the data from the new structs
+// Update the page Load variant to have the boolean type
+enum WebEvent { WELoad(bool), WEClick(MouseClick), WEKeys(KeyPress) }
+```
+
+#### Instantiate an enum
+
+Now let's add code to create instances of our enum variants. For each variant, we use the `let` keyword to make the assignment. To access the specific variant in the enum definition, we use the syntax `<enum>::<variant>` with double colons `::`.
+
+**Simple variant: WELoad(bool)**
+
+The first variant in the `WebEvent` enum has a single boolean value, `WELoad(bool)`. We instantiate this variant in a manner similar to how we worked with booleans in the previous unit:
+
+```rust
+let we_load = WebEvent::WELoad(true);
+```
+
+**Struct variant: WEClick(MouseClick)**
+
+The second variant contains a classic struct `WEClick(MouseClick)`. The struct has two named fields `x` and `y`, and both fields have the `i64` data type. To create this variant, first we instantiate the struct. Then we pass the struct as an argument in the call to instantiate the variant.
+
+```rust
+// Instantiate a MouseClick struct and bind the coordinate values
+let click = MouseClick { x: 100, y: 250 };
+
+// Set the WEClick variant to use the data in the click struct
+let we_click = WebEvent::WEClick(click);
+```
+
+**Tuple variant: WEKeys(KeyPress)**
+
+The last variant contains a tuple `WEKeys(KeyPress)`. The tuple has two fields that use the `String` and `char` data types. To create this variant, first we instantiate the tuple. Then we pass the tuple as an argument in the call to instantiate the variant.
+
+```rust
+// Instantiate a KeyPress tuple and bind the key values
+let keys = KeyPress(String::from("Ctrl+"), 'N');
+
+// Set the WEKeys variant to use the data in the keys tuple
+let we_key = WWebEvent::WEKeys(keys);
+```
+
+#### Enums example
+
+```rust
+// Define a tuple struct
+#[derive(Debug)]
+struct KeyPress(String, char);
+
+// Define a classic struct
+#[derive(Debug)]
+struct MouseClick { x: i64, y: i64 }
+
+// Define the WebEvent enum variants to use the data from the structs
+// and a boolean type for the page Load variant
+#[derive(Debug)]
+enum WebEvent { WELoad(bool), WEClick(MouseClick), WEKeys(KeyPress) }
+
+fn main() {
+    // Instantiate a MouseClick struct and bind the coordinate values
+    let click = MouseClick { x: 100, y: 250 };
+    println!("Mouse click location: {}, {}", click.x, click.y);
+
+    // Instantiate a KeyPress tuple and bind the key values
+    let keys = KeyPress(String::from("Ctrl+"), 'N');
+    println!("\nKeys pressed: {}{}", keys.0, keys.1);
+
+    // Instantiate WebEvent enum variants
+    // Set the boolean page Load value to true
+    let we_load = WebEvent::WELoad(true);
+    // Set the WEClick variant to use the data in the click struct
+    let we_click = WebEvent::WEClick(click);
+    // Set the WEKeys variant to use the data in the keys tuple
+    let we_key = WebEvent::WEKeys(keys);
+
+    // Print the values in the WebEvent enum variants
+    // Use the {:#?} syntax to display the enum structure and data in a readable form
+    println!("\nWebEvent enum structure: \n\n {:#?} \n\n {:#?} \n\n {:#?}", we_load, we_click, we_key);
+}
+```
+
+#### Debug statements
+
+In the previous example, look for the following code statement. This statement is used in several places in the code.
+
+```rust
+// Set the Debug flag so we can check the data in the output
+#[derive(Debug)]
+```
+
+The `#[derive(Debug)]` syntax lets us see certain values during the code execution that aren't otherwise viewable in standard ouput. To view debug data with the `println!` macro, we use the syntax `{:#?}` to format the data in a readable manner.
+
+### Work with functions in Rust
+
+Functions are the primary way code is executed within Rust. You've already seen one of the most important functions in the language, the `main` function. In this unit, we'll cover more of the details about how to define functions.
+
+#### Define a function
+
+Function definitions in Rust start with the `fn` keyword. After the function name, we specify the function's input arguments as a comma-separated list of data types inside parentheses. The curly brackets tell the compiler where the function body begins and ends.
+
+```rust
+fn main() {
+  println!("Hello, world!");
+  goodbye();
+}
+
+fn goodbye() {
+  println!("Goodbye.");
+}
+```
+
+We call a function by using its name along with its input arguments in parentheses. If a function doesn't have any input arguments, we leave the parentheses empty. In our example, both the `main` and `goodbye` functions have no input arguments.
+
+You might have noticed that we defined the `goodbye` function after the `main` function. We could have defined the `goodbye` function before we defined `main`. Rust doesn't care where in the file you define your functions, as long as they're defined somewhere in the file.
+
+#### Pass input arguments
+
+When a function has input arguments, we name each argument and specify the data type at the start of the function declaration. Because arguments are named like variables, we can access the arguments in the function body.
+
+Let's modify our `goodbye` function to take a pointer to some string data as an input argument.
+
+```rust
+fn goodbye(message: &str) {
+  println!("\n{}", message);
+}
+
+fn main() {
+  let formal = "Formal: Goodbye.";
+  let casual = "Casual: See you later!";
+  goodbye(formal);
+  goodbye(casual);
+}
+```
+
+#### Return a value
+
+When a function returns a value, we add the syntax `-> <type>` after the list of function arguments and before the opening curly bracket for the function body. The arrow syntax `->` indicates that the function returns a value to the caller. The `<type>` portion lets the compiler know the data type of the value returned.
+
+In Rust, the common practice is to return a value at the end of a function by having the last line of code in the function be equal to the value to return. The following example shows this behavior. The `divide_by_5` function returns the result of dividing the input number by 5 to the calling function:
+
+```rust
+fn divide_by_5(num: u32) -> u32 {
+  num /5
+}
+
+fn main() {
+  let num = 25;
+  println!("{} divided by 5 = {}", num, divide_by_5(num));
+}
+```
+
+We can use the `return` keyword at any point in the function to halt execution and send a value back to the caller. Usually, the use of the `return` keyword is used in combination with a conditional test.
+
+```rust
+fn divide_by_5(num: u32) -> u32 {
+  if num == 0 {
+    // Return early
+    return 0;
+  }
+  num / 5
+}
+```
+
+When you explicitly use the `return` keyword, you end the statement with a semicolon. If you send back a return value without using the `return` keyword, you don't end the statement with a semicolon. You might have noticed that we didn'tt use the ending semicolon for the `num / 5` return value statement.
+
+### Exercise: Write a function to build a car
+
+```rust
+// Declare Car struct to describe vehicle with four named fields
+struct Car {
+    color: String,
+    transmission: Transmission,
+    convertible: bool,
+    mileage: u32,
+}
+
+#[derive(PartialEq, Debug)]
+// Declare enum for Car transmission type
+// Corrected code: Enum definition uses commas to separate values
+enum Transmission {
+    Manual,
+    SemiAuto,
+    Automatic,
+}
+
+// Build a new "Car" using the values of three input arguments
+// - Color of the car (String)
+// - Transmission type (enum)
+// - Convertible (boolean, true if the car is a convertible)
+// Return an instance of a "Car" struct with the arrow `->` syntax
+fn car_factory(color: String, transmission: Transmission, convertible: bool) -> Car {
+
+    // Create a new "Car" instance with requested characteristics
+    // - Corrected code: return a "Car" struct
+    // - Bind first three fields to value of corresponding input argument
+    // - Set mileage to 0
+    Car {
+        color: color,
+        transmission: transmission,
+        convertible: convertible,
+        mileage: 0
+    }
+}
+
+fn main() {
+    // Order three cars
+    let mut car = car_factory(String::from("Red"), Transmission::Manual, false);
+    println!("Car 1 = {}, {:?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);
+
+    car = car_factory(String::from("Silver"), Transmission::Automatic, true);
+    println!("Car 2 = {}, {:?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);
+
+    car = car_factory(String::from("Yellow"), Transmission::SemiAuto, false);
+    println!("Car 3 = {}, {:?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);
+}
+```
