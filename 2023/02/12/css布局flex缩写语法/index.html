@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.14.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="为什么推荐使用 flex 缩写语法CSS 官方文档明确推荐 flex 属性使用缩写语法，因为单值属性所对应的计算值根据开发者日常使用进行了优化。按照以往经验，缩写语法缺省值应该使用默认值。但 flex 语法不同，单值缩写与双值缩写都是截然不同的计算结果。另外一个原因则是 flex 长语法有更高的理解成本，门槛较高，因此更推荐使用单值缩写语法。 使用 flex 缩写语法的场景   单值语法 等同于">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css布局flex缩写语法">
+<meta property="og:url" content="http://wonderlust91.github.io/2023/02/12/css%E5%B8%83%E5%B1%80flex%E7%BC%A9%E5%86%99%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="为什么推荐使用 flex 缩写语法CSS 官方文档明确推荐 flex 属性使用缩写语法，因为单值属性所对应的计算值根据开发者日常使用进行了优化。按照以往经验，缩写语法缺省值应该使用默认值。但 flex 语法不同，单值缩写与双值缩写都是截然不同的计算结果。另外一个原因则是 flex 长语法有更高的理解成本，门槛较高，因此更推荐使用单值缩写语法。 使用 flex 缩写语法的场景   单值语法 等同于">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-12T14:15:38.000Z">
+<meta property="article:modified_time" content="2023-02-12T14:40:20.915Z">
+<meta property="article:author" content="WONDERlust91">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="flex">
+<meta property="article:tag" content="缩写">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2023/02/12/css%E5%B8%83%E5%B1%80flex%E7%BC%A9%E5%86%99%E8%AF%AD%E6%B3%95/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2023/02/12/css%E5%B8%83%E5%B1%80flex%E7%BC%A9%E5%86%99%E8%AF%AD%E6%B3%95/","path":"2023/02/12/css布局flex缩写语法/","title":"css布局flex缩写语法"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>css布局flex缩写语法 | WONDER's Notes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8-flex-%E7%BC%A9%E5%86%99%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">为什么推荐使用 flex 缩写语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-flex-%E7%BC%A9%E5%86%99%E8%AF%AD%E6%B3%95%E7%9A%84%E5%9C%BA%E6%99%AF"><span class="nav-number">2.</span> <span class="nav-text">使用 flex 缩写语法的场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-initial"><span class="nav-number">2.1.</span> <span class="nav-text">flex: initial</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-0"><span class="nav-number">2.2.</span> <span class="nav-text">flex: 0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-none"><span class="nav-number">2.3.</span> <span class="nav-text">flex: none</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-1"><span class="nav-number">2.4.</span> <span class="nav-text">flex: 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-auto"><span class="nav-number">2.5.</span> <span class="nav-text">flex: auto</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">139</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">248</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2023/02/12/css%E5%B8%83%E5%B1%80flex%E7%BC%A9%E5%86%99%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="css布局flex缩写语法 | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          css布局flex缩写语法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-02-12 14:15:38 / 修改时间：14:40:20" itemprop="dateCreated datePublished" datetime="2023-02-12T14:15:38+00:00">2023-02-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2023/02/12/css%E5%B8%83%E5%B1%80flex%E7%BC%A9%E5%86%99%E8%AF%AD%E6%B3%95/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/02/12/css布局flex缩写语法/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="为什么推荐使用-flex-缩写语法"><a href="#为什么推荐使用-flex-缩写语法" class="headerlink" title="为什么推荐使用 flex 缩写语法"></a>为什么推荐使用 flex 缩写语法</h2><p>CSS 官方文档明确推荐 flex 属性使用缩写语法，因为单值属性所对应的计算值根据开发者日常使用进行了优化。按照以往经验，缩写语法缺省值应该使用默认值。但 flex 语法不同，单值缩写与双值缩写都是截然不同的计算结果。另外一个原因则是 flex 长语法有更高的理解成本，门槛较高，因此更推荐使用单值缩写语法。</p>
+<h2 id="使用-flex-缩写语法的场景"><a href="#使用-flex-缩写语法的场景" class="headerlink" title="使用 flex 缩写语法的场景"></a>使用 flex 缩写语法的场景</h2><table>
+<thead>
+<tr>
+<th>单值语法</th>
+<th>等同于</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex: initial</td>
+<td>flex: 0 1 auto</td>
+<td>初始值常用</td>
+</tr>
+<tr>
+<td>flex: 0</td>
+<td>flex: 0 1 0%</td>
+<td>适用场景少</td>
+</tr>
+<tr>
+<td>flex: none</td>
+<td>flex: 0 0 auto</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>flex: 1</td>
+<td>flex: 1 1 0%</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>flex: auto</td>
+<td>flex: 1 1 auto</td>
+<td>适用场景少</td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+
+<h3 id="flex-initial"><a href="#flex-initial" class="headerlink" title="flex: initial"></a>flex: initial</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">flex</span><span class="token punctuation">:</span> initial<span class="token punctuation">;</span>
+<span class="token comment">/* 等价于 */</span>
+<span class="token property">flex</span><span class="token punctuation">:</span> 0 1 auto<span class="token punctuation">;</span>
+<span class="token comment">/* 等价于 */</span>
+<span class="token property">flex-grow</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token property">flex-shrink</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token property">flex-basis</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>即 flex 元素的父容器空间有剩余时，flex 元素尺寸不会增长；父容器尺寸不足时，元素尺寸会缩小；元素尺寸自适应于内容。</p>
+<div style="
+  display: flex;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试1</div>
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试2</div>
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试3</div>
+</div>
+
+<br />
+
+<div style="
+  display: flex;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试1测试1测试1</div>
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试2测试2测试2</div>
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试3测试3测试3</div>
+</div>
+
+<br />
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.wrapper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px dashed red<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-initial</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 2px 4px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试1测试1测试1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试2测试2测试2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试3测试3测试3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>由于<code>initial</code>是初始值，默认生效，因此日常开发不会特意书写，但并不代表使用场景不多。</p>
+<p><code>initial</code>适用于按钮、标题、小图标等小部件布局，小部件宽度通常都不会很宽，水平位置的控制使用<code>justify-content</code>和<code>margin-left: auto</code>或<code>margin-right: auto</code>实现。</p>
+<div style="
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试1</div>
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试2</div>
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试3</div>
+</div>
+
+<br />
+
+<div style="
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试1</div>
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+    margin-left: auto
+  ">测试2</div>
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试3</div>
+</div>
+
+<br />
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.wrapper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px dashed red<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-initial</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 2px 4px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.auto-left</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">margin-left</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial auto-left<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="flex-0"><a href="#flex-0" class="headerlink" title="flex: 0"></a>flex: 0</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">flex</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token comment">/* 等价于 */</span>
+<span class="token property">flex</span><span class="token punctuation">:</span> 0 1 0%<span class="token punctuation">;</span>
+<span class="token comment">/* 等价于 */</span>
+<span class="token property">flex-grow</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token property">flex-shrink</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token property">flex-basis</span><span class="token punctuation">:</span> 0%<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>即元素尺寸会收缩，但不会扩张，固定分配数量为 0%。那么<code>flex: 0</code>元素的最终尺寸表现为最小内容宽度。</p>
+<div style="
+  display: flex;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    flex: 0;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试1测试1测试1</div>
+  <div style="
+    flex: 0;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试2测试2测试2</div>
+  <div style="
+    flex: 0;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试3测试3测试3</div>
+</div>
+
+<br />
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.wrapper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px dashed red<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-0</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 2px 4px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试1测试1测试1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试2测试2测试2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试3测试3测试3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>由于元素表现为最小内容宽度，因此适用<code>flex: 0</code>的场景并不多，除非元素内容主体是替换元素，如图像等，可以保证宽度永远都是图像宽度。</p>
+<h3 id="flex-none"><a href="#flex-none" class="headerlink" title="flex: none"></a>flex: none</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">flex</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token comment">/* 等价于 */</span>
+<span class="token property">flex</span><span class="token punctuation">:</span> 0 0 auto<span class="token punctuation">;</span>
+<span class="token comment">/* 等价于 */</span>
+<span class="token property">flex-grow</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token property">flex-shrink</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token property">flex-basis</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>即元素尺寸即不会收缩，与不会扩张，元素尺寸由内容决定。此时元素不再有弹性，元素内容不会换行，元素最终尺寸表现为最大内容宽度。</p>
+<div style="
+  display: flex;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    flex: none;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试1测试1测试1</div>
+  <div style="
+    flex: none;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试2测试2测试2</div>
+  <div style="
+    flex: none;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试3测试3测试3</div>
+</div>
+
+<br />
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.wrapper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px dashed red<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-none</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 2px 4px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试1测试1测试1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试2测试2测试2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试3测试3测试3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>flex 元素宽度就是内容宽度，且内容不会换行，则适合使用<code>flex: none</code>。例如列表右侧常会有个操作按钮，按钮内容不能换行，适合使用<code>flex: none</code>。</p>
+<div style="
+  display: flex;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">描述信息描述信息描述信息描述信息</div>
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">按钮</div>
+</div>
+
+<br />
+
+<div style="
+  display: flex;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">描述信息描述信息描述信息描述信息</div>
+  <div style="
+    flex: none;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">按钮</div>
+</div>
+
+<br />
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.wrapper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px dashed red<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-initial</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 2px 4px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-none</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>描述信息描述信息描述信息描述信息<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>描述信息描述信息描述信息描述信息<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial flex-none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="flex-1"><a href="#flex-1" class="headerlink" title="flex: 1"></a>flex: 1</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token comment">/* 等价于 */</span>
+<span class="token property">flex</span><span class="token punctuation">:</span> 1 1 0%<span class="token punctuation">;</span>
+<span class="token comment">/* 等价于 */</span>
+<span class="token property">flex-grow</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token property">flex-shrink</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token property">flex-basis</span><span class="token punctuation">:</span> 0%<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>即元素尺寸可以弹性增大，也可以弹性减小，但在元素尺寸不足时优先最小化内容尺寸。</p>
+<div style="
+  display: flex;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    flex: 1;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试1测试1测试1</div>
+  <div style="
+    flex: 1;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试2</div>
+  <div style="
+    flex: 1;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试3</div>
+</div>
+
+<br />
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.wrapper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px dashed red<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-1</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 2px 4px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试1测试1测试1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当希望元素充分利用剩余空间，但不会侵占其他元素应有宽度时，适合使用<code>flex: 1</code>，例如等分列表，等比例列表。之前<code>flex: none</code>的示例中，我们通过控制按钮元素<code>flex: none</code>实现按钮不换行，同样的效果也可以在描述信息元素上使用<code>flex: 1</code>来实现。</p>
+<div style="
+  display: flex;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    flex: 1;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">描述信息描述信息描述信息描述信息</div>
+  <div style="
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">按钮</div>
+</div>
+
+<br />
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.wrapper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px dashed red<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-initial</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 2px 4px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-1</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>描述信息描述信息描述信息描述信息<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="flex-auto"><a href="#flex-auto" class="headerlink" title="flex: auto"></a>flex: auto</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">flex</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token comment">/* 等价于 */</span>
+<span class="token property">flex</span><span class="token punctuation">:</span> 1 1 auto<span class="token punctuation">;</span>
+<span class="token comment">/* 等价于 */</span>
+<span class="token property">flex-grow</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token property">flex-shrink</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token property">flex-basis</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>即元素尺寸可以弹性变大，也可以弹性变小，在尺寸不足时，会优先最大化内容尺寸。</p>
+<div style="
+  display: flex;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    flex: auto;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试1测试1测试1</div>
+  <div style="
+    flex: auto;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试2</div>
+  <div style="
+    flex: auto;
+    border: 1px solid green;
+    padding: 2px 4px;
+  ">测试3</div>
+</div>
+
+<br />
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.wrapper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px dashed red<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-auto</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 2px 4px<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-auto<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试1测试1测试1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-auto<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-auto<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当希望元素能够充分利用剩余空间，但各自的尺寸按照各自的内容进行分配的时候，适合使用<code>flex: auto</code>。例如导航数量不固定，导航文字数量也不固定的情况。</p>
+<div style="
+  display: flex;
+  width: 200px;
+  border: 1px dashed red;
+">
+  <div style="
+    flex: auto;
+    border: 1px solid green;
+    padding: 2px 4px;
+    text-align: center;
+  ">1</div>
+  <div style="
+    flex: auto;
+    border: 1px solid green;
+    padding: 2px 4px;
+    text-align: center;
+  ">导航测试2</div>
+  <div style="
+    flex: auto;
+    border: 1px solid green;
+    padding: 2px 4px;
+    text-align: center;
+  ">导航3</div>
+</div>
+
+<br />
+
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.wrapper</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px dashed red<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">.flex-auto</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid green<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 2px 4px<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-auto<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-auto<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>导航测试2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flex-auto<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>导航3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/wordpress/2020/10/css-flex-0-1-none/">flex:0 flex:1 flex:none flex:auto 应该在什么场景下使用？</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/css/" rel="tag"># css</a>
+              <a href="/tags/flex/" rel="tag"># flex</a>
+              <a href="/tags/%E7%BC%A9%E5%86%99/" rel="tag"># 缩写</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/10/git-using-a-custom-ssh-port/" rel="prev" title="git-using-a-custom-ssh-port">
+                  <i class="fa fa-chevron-left"></i> git-using-a-custom-ssh-port
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>
