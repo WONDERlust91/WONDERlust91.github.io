@@ -14187,7 +14187,7 @@ app<span class="token punctuation">.</span><span class="token function">on</span
       </tags>
   </entry>
   <entry>
-    <title>git-using-a-custom-ssh-port</title>
+    <title>git using a custom ssh port</title>
     <url>/2023/02/10/git-using-a-custom-ssh-port/</url>
     <content><![CDATA[<h2 id="Questions"><a href="#Questions" class="headerlink" title="Questions"></a>Questions</h2><p>When you have deployed your own gitlab service on web, you may need to use a custom SSH port to clone, pull, or push your code from or to your server. The default SSH port 22 is used by the system SSH service, so you must choose another port for your gitlab service.</p>
 <p>After you get everything done, you may find that you can’t clone your repository because of the access error. If you check carefully, you will find that the default git url is scp-like syntax. You can’t change port to your custom SSH port.</p>
