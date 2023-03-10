@@ -149,18 +149,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">139</span>
+          <span class="site-state-item-count">140</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">248</span>
+        <span class="site-state-item-count">250</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -177,6 +177,132 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/07/05/linux%E7%B3%BB%E7%BB%9Fnginx%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/07/05/linux%E7%B3%BB%E7%BB%9Fnginx%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/" class="post-title-link" itemprop="url">linux系统nginx部署前端项目</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-07-05 13:40:57" itemprop="dateCreated datePublished" datetime="2019-07-05T13:40:57+00:00">2019-07-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2019/07/05/linux%E7%B3%BB%E7%BB%9Fnginx%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/05/linux系统nginx部署前端项目/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>系统环境 centos7，本文中默认使用 root 用户，故没有 sudo 命令，实践中根据用户不同酌情添加。</p>
+<h2 id="安装-nginx-服务器"><a href="#安装-nginx-服务器" class="headerlink" title="安装 nginx 服务器"></a>安装 nginx 服务器</h2><h3 id="1-在-yum-中安装-nginx-源"><a href="#1-在-yum-中安装-nginx-源" class="headerlink" title="1. 在 yum 中安装 nginx 源"></a>1. 在 yum 中安装 nginx 源</h3><p>安装前置环境</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> yum-utils<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>新建文件&#x2F;etc&#x2F;yum.repo.d&#x2F;nginx.repo，内容为</p>
+<pre class="line-numbers language-conf" data-language="conf"><code class="language-conf">[nginx-stable]
+name&#x3D;nginx stable repo
+baseurl&#x3D;http:&#x2F;&#x2F;nginx.org&#x2F;packages&#x2F;centos&#x2F;$releasever&#x2F;$basearch&#x2F;
+gpgcheck&#x3D;1
+enabled&#x3D;1
+gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key
+
+[nginx-mainline]
+name&#x3D;nginx mainline repo
+baseurl&#x3D;http:&#x2F;&#x2F;nginx.org&#x2F;packages&#x2F;mainline&#x2F;centos&#x2F;$releasever&#x2F;$basearch&#x2F;
+gpgcheck&#x3D;1
+enabled&#x3D;0
+gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>默认使用 nginx-stable 的源，若要使用 nginx-mainline 的源，将 enabled 更改为 1。或直接使用以下命令</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum-config-manager <span class="token parameter variable">--enable</span> nginx-mainline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/05/linux%E7%B3%BB%E7%BB%9Fnginx%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +348,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-05 08:55:30" itemprop="dateModified" datetime="2023-03-05T08:55:30+00:00">2023-03-05</time>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -333,7 +459,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-05 08:55:30" itemprop="dateModified" datetime="2023-03-05T08:55:30+00:00">2023-03-05</time>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -443,7 +569,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-05 08:55:30" itemprop="dateModified" datetime="2023-03-05T08:55:30+00:00">2023-03-05</time>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -555,7 +681,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-05 08:55:30" itemprop="dateModified" datetime="2023-03-05T08:55:30+00:00">2023-03-05</time>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -688,7 +814,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-05 08:55:30" itemprop="dateModified" datetime="2023-03-05T08:55:30+00:00">2023-03-05</time>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -810,7 +936,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-05 08:55:30" itemprop="dateModified" datetime="2023-03-05T08:55:30+00:00">2023-03-05</time>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -926,7 +1052,7 @@ cordova create testApp test.example.com testApp<span aria-hidden="true" class="l
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-05 08:55:30" itemprop="dateModified" datetime="2023-03-05T08:55:30+00:00">2023-03-05</time>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1033,7 +1159,7 @@ cordova create testApp test.example.com testApp<span aria-hidden="true" class="l
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-05 08:55:30" itemprop="dateModified" datetime="2023-03-05T08:55:30+00:00">2023-03-05</time>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1184,7 +1310,7 @@ cordova create testApp test.example.com testApp<span aria-hidden="true" class="l
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-05 08:55:30" itemprop="dateModified" datetime="2023-03-05T08:55:30+00:00">2023-03-05</time>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1236,140 +1362,6 @@ cordova create testApp test.example.com testApp<span aria-hidden="true" class="l
   <span class="token property">max-width</span><span class="token punctuation">:</span> 650px<span class="token punctuation">;</span> <span class="token comment">/* 也可以使用100% */</span>
 <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/03/24/node%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B7%A8%E5%9F%9F%E4%BD%BFpdfjs%E5%8A%A0%E8%BD%BD%E9%9D%9E%E5%90%8C%E6%BA%90%E6%96%87%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/24/node%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B7%A8%E5%9F%9F%E4%BD%BFpdfjs%E5%8A%A0%E8%BD%BD%E9%9D%9E%E5%90%8C%E6%BA%90%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">node配置服务器跨域使pdfjs加载非同源文件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-03-24 22:43:57" itemprop="dateCreated datePublished" datetime="2019-03-24T22:43:57+00:00">2019-03-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-05 08:55:30" itemprop="dateModified" datetime="2023-03-05T08:55:30+00:00">2023-03-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/node/" itemprop="url" rel="index"><span itemprop="name">node</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2019/03/24/node%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B7%A8%E5%9F%9F%E4%BD%BFpdfjs%E5%8A%A0%E8%BD%BD%E9%9D%9E%E5%90%8C%E6%BA%90%E6%96%87%E4%BB%B6/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/24/node配置服务器跨域使pdfjs加载非同源文件/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="node配置服务器跨域使pdfjs加载非同源文件"><a href="#node配置服务器跨域使pdfjs加载非同源文件" class="headerlink" title="node配置服务器跨域使pdfjs加载非同源文件"></a>node配置服务器跨域使pdfjs加载非同源文件</h1><p>pdfjs因为同源策略，只能加载本地的pdf，想要加载远程的pdf就会报跨域的错，查看<a target="_blank" rel="noopener" href="https://github.com/mozilla/pdf.js/issues/4530">官方文档</a>后发现pdfjs本身并不阻止加载远程pdf文件，只要文件服务器配置好跨域即可。</p>
-<p>这里使用了node中的express框架搭建了一个简单的静态文件服务器。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// pdfjs官网issue提供的跨域配置方案</span>
-<span class="token comment">// &#123;</span>
-<span class="token comment">//   "Access-Control-Allow-Origin": "*",</span>
-<span class="token comment">//   "Access-Control-Allow-Headers": "range",</span>
-<span class="token comment">//   "Access-Control-Expose-Headers": "content-range, content-length, accept-ranges",</span>
-<span class="token comment">//   "Access-Control-Allow-Methods": "*"</span>
-<span class="token comment">// &#125;</span>
-<span class="token comment">// 引入express</span>
-<span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"express"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 根据官方文档中的issue配置跨域</span>
-app<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">"Access-Control-Allow-Origin"</span><span class="token punctuation">,</span> <span class="token string">"*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">"Access-Control-Allow-Headers"</span><span class="token punctuation">,</span> <span class="token string">"range"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span>
-    <span class="token string">"Access-Control-Expose-Headers"</span><span class="token punctuation">,</span>
-    <span class="token string">"content-range, content-length, accept-ranges"</span>
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">"Access-Control-Allow-Methods"</span><span class="token punctuation">,</span> <span class="token string">"*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 配置静态文件目录</span>
-app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span><span class="token string">"public"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 监听服务器的某个端口</span>
-<span class="token keyword">const</span> server <span class="token operator">=</span> app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8082</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"server-start"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>配置好跨域后，你会发现还是报跨域的错，在pdfjs源码中查找file origin does not match viewer，就会发现源码中只要不是同源就会抛出异常，注释掉原码中的throw error即可。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span>origin <span class="token operator">!==</span> viewerOrigin <span class="token operator">&amp;&amp;</span> protocol <span class="token operator">!==</span> <span class="token string">'blob:'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token comment">// throw new Error('file origin does not match viewer\'s');</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
       
     </div>
 

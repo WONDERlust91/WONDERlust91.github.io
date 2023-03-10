@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to a user’s web browser. The browser may store the cookie and send it back to the same server with later reques">
+<meta property="og:type" content="article">
+<meta property="og:title" content="http using cookies">
+<meta property="og:url" content="http://wonderlust91.github.io/2023/03/06/http-using-cookies/index.html">
+<meta property="og:site_name" content="WONDER&#39;s Notes">
+<meta property="og:description" content="An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to a user’s web browser. The browser may store the cookie and send it back to the same server with later reques">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-06T09:09:35.000Z">
+<meta property="article:modified_time" content="2023-03-10T12:00:47.143Z">
+<meta property="article:author" content="WONDERlust91">
+<meta property="article:tag" content="http">
+<meta property="article:tag" content="cookies">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://wonderlust91.github.io/2023/03/06/http-using-cookies/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://wonderlust91.github.io/2023/03/06/http-using-cookies/","path":"2023/03/06/http-using-cookies/","title":"http using cookies"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>http using cookies | WONDER's Notes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WONDER's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Creating-cookies"><span class="nav-number">1.</span> <span class="nav-text">Creating cookies</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Set-Cookie-and-Cookie-headers"><span class="nav-number">1.1.</span> <span class="nav-text">The Set-Cookie and Cookie headers</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-Cookie"><span class="nav-number">2.</span> <span class="nav-text">Set-Cookie</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Syntax"><span class="nav-number">2.1.</span> <span class="nav-text">Syntax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attributes"><span class="nav-number">2.2.</span> <span class="nav-text">Attributes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">2.3.</span> <span class="nav-text">Examples</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Session-Cookie"><span class="nav-number">2.3.1.</span> <span class="nav-text">Session Cookie</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Permanent-Cookie"><span class="nav-number">2.3.2.</span> <span class="nav-text">Permanent Cookie</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Invalid-domains"><span class="nav-number">2.3.3.</span> <span class="nav-text">Invalid domains</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie-prefixes"><span class="nav-number">2.3.4.</span> <span class="nav-text">Cookie prefixes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Partitioned-cookie"><span class="nav-number">2.3.5.</span> <span class="nav-text">Partitioned cookie</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WONDERlust91</p>
+  <div class="site-description" itemprop="description">又是一个艳阳天</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">140</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">250</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2023/03/06/http-using-cookies/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="http using cookies | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          http using cookies
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-06 09:09:35" itemprop="dateCreated datePublished" datetime="2023-03-06T09:09:35+00:00">2023-03-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-10 12:00:47" itemprop="dateModified" datetime="2023-03-10T12:00:47+00:00">2023-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/http/" itemprop="url" rel="index"><span itemprop="name">http</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2023/03/06/http-using-cookies/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/03/06/http-using-cookies/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to a user’s web browser. The browser may store the cookie and send it back to the same server with later request. Typically, an HTTP cookie is used to tell if two requests come from the same browser – keeping a user logged in, for example. It remembers the stateful information for the stateless HTTP protocol.</p>
+<p>Cookies are mainly used for three purposes:</p>
+<ol>
+<li><p>Session management: logins, shopping carts, game scores, or anything else the server should remember.</p>
+</li>
+<li><p>Personalization: user preferences, themes, and other settings.</p>
+</li>
+<li><p>Tracking: recording and analyzing user behavior.</p>
+</li>
+</ol>
+<span id="more"></span>
+
+<h2 id="Creating-cookies"><a href="#Creating-cookies" class="headerlink" title="Creating cookies"></a>Creating cookies</h2><p>After receiving an HTTP request, a server can send one or more <code>Set-Cookie</code> headers with the response. The browser usually stores the cookie and sends it with the requests made to the same server inside a <code>Cookie</code> HTTP header.</p>
+<h3 id="The-Set-Cookie-and-Cookie-headers"><a href="#The-Set-Cookie-and-Cookie-headers" class="headerlink" title="The Set-Cookie and Cookie headers"></a>The <code>Set-Cookie</code> and <code>Cookie</code> headers</h3><p>The <code>Set-Cookie</code> HTTP response header sends cookies from the server to the user agent. A simple cookie is set like this:</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>This instructs the server sending headers to tell the client to store a pair of cookies:</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token response-status"><span class="token http-version property">HTTP/2.0</span> <span class="token status-code number">200</span> <span class="token reason-phrase string">OK</span></span>
+<span class="token header"><span class="token header-name keyword">Content-Type</span><span class="token punctuation">:</span> <span class="token header-value">text/html</span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">yummy_cookie=choco</span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">tasty_cookie=strawberry</span></span>
+<span class="token text-html">
+[page content]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Then, with every subsequent request to the server, the browser sends all previously stored cookies back to the server using the <code>Cookie</code> header.</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token request-line"><span class="token method property">GET</span> <span class="token request-target url">/sample_page.html</span> <span class="token http-version property">HTTP/2.0</span></span>
+<span class="token header"><span class="token header-name keyword">Host</span><span class="token punctuation">:</span> <span class="token header-value">www.example.org</span></span>
+<span class="token header"><span class="token header-name keyword">Cookie</span><span class="token punctuation">:</span> <span class="token header-value">yummy_cookie=choco; tasty_cookie=strawberry</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Set-Cookie"><a href="#Set-Cookie" class="headerlink" title="Set-Cookie"></a><code>Set-Cookie</code></h2><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value></span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; Domain=&lt;domain-value></span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; Expires=&lt;date></span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; HttpOnly</span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; Max-Age=&lt;number></span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; Partitioned</span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; Path=&lt;path-value></span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; Secure</span></span>
+
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; SameSite=Strict</span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; SameSite=Lax</span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; SameSite=None; Secure</span></span>
+
+// Multiple attributes are also possible, for example:
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">&lt;cookie-name>=&lt;cookie-value>; Domain=&lt;domain-value>; Secure; HttpOnly</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h3><ul>
+<li><p><code>&lt;cookie-name&gt;=&lt;cookie-value&gt;</code></p>
+<p>Defines the cookie name and its value. A cookie definition begins with a name-value pair.</p>
+<p>A <code>&lt;cookie-name&gt;</code> can contain any US-ASCII characters except for: the control character, space, or a tab. It also must not contain separator characters like the following: <code>( ) &lt; &gt; @ , ; : \ &quot; / [ ] ? = &#123; &#125;</code>.</p>
+<p>A <code>&lt;cookie-value&gt;</code> can optionally be wrapped in double quotes and include any US-ASCII character excluding a control character, Whitespace, double quotes, comma, simicolon, and backslash.</p>
+<p>Encoding: Many implementations perform URL encoding on cookie values. However, this is not required by the RFC specification. The URL encoding does help to satisfy the requirement of the character allowed for <code>&lt;cookie-value&gt;</code>.</p>
+<blockquote>
+<p>Note: Some <code>&lt;cookie-name&gt;</code> have a specific semantic:</p>
+<p><code>__Secure-</code> prefix: Cookies with names starting with <code>__Secure-</code> (dash is part of the prefix) must be set with the <code>secure</code> flag from a secure page (HTTPS).</p>
+<p><code>__Host-</code> prefix: Cookies with names starting with <code>__Host-</code> must be set with the <code>secure</code> flag, must be from a secure page (HTTPS), must not have a domin specified (and therefore, are not sent to subdomains), and the path must be <code>/</code>.</p>
+</blockquote>
+</li>
+<li><p><code>domain=&lt;domain-value&gt;</code> (Optional)</p>
+<p>Defines the host to which the cookie will be sent.</p>
+<p>Only the current domain can be set as the value, or a domain of a higher order, unless it is a public suffix. Setting the domain will make the cookie available to it, as well as to all its subdomains.</p>
+<p>If omitted, this attribute defaults to the hosts of the current document URL, not including subdomains.</p>
+<p>Contrary to earlier specifications, leading dots in domain names (<code>.example.com</code>) are ignored.</p>
+<p>Multiple host&#x2F;domain values are not allowed, but if a domain is specified, then subdomains are always included.</p>
+</li>
+<li><p><code>Expires=&lt;date&gt;</code> (Optional)</p>
+<p>Indicates the maximum lifetime of the cookie as an HTTP-date timestamp. See <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Date"><code>Date</code></a> for the required formatting.</p>
+<p>If unspecified, the cookie becomes a session cookie. A session finishes when the client shuts down, after which the session cookie is removed.</p>
+<blockquote>
+<p>Warning: Many web browsers have a session restore feature that will save all tabs and restore them the next time the browser is used. Session cookies will also be restored, as if the browser was never closed.</p>
+</blockquote>
+<p>When an <code>Expires</code> date is set, the deadline is relative to the client the cookie is being set on, not the server.</p>
+</li>
+<li><p><code>HttpOnly</code> (Optional)</p>
+<p>Forbids Javascript from accessing the cookie, for example, through the <code>Document.cookie</code> property. Note that a cookie that has been created with <code>HttpOnly</code> will still be sent with JavaScript-initiated requests, for example, when calling <code>XMLHttpRequest.send()</code> or <code>fetch()</code>. This mitigates attacks against cross-site scripting.</p>
+</li>
+<li><p><code>Max-Age=&lt;number&gt;</code> (Optional)</p>
+<p>Indicates the number of seconds until the cookie expires. A zero or negative number will expire the cookie immediately. If both <code>Expires</code> and <code>Max-Age</code> are set, <code>Max-Age</code> has precedence.</p>
+</li>
+<li><p><code>Partitioned</code> (Optional, Experimental)</p>
+<p>Indicates that the cookie should be stored using partitioned storage. See <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Partitioned_cookies">Cookies Having Independent Partitioned State (CHIPS)</a> for more details.</p>
+</li>
+<li><p><code>Path=&lt;path-value&gt;</code> (Optional)</p>
+<p>Indicates the path that must exist in the requested URL for the browser to send the <code>Cookie</code> header.</p>
+<p>The forward slash (<code>/</code>) character is interpreted as directory seperator, and subdirectories are matched as well. For example, for <code>Path=/docs</code>:</p>
+<ul>
+<li><p>the request paths <code>/docs</code>, <code>/docs/</code>, <code>/docs/Web/</code>, <code>/docs/Web/HTTP</code> will all match.</p>
+</li>
+<li><p>the request paths <code>/</code>, <code>/docsets</code>, <code>/fr/docs</code> will not match.</p>
+</li>
+</ul>
+</li>
+<li><p><code>SameSite=&lt;samesite-value&gt;</code> (Optional)</p>
+<p>Controls whether or not a cookie is sent with cross-site requests, providing some protection against cross-site request forgery attacks(CSRF).</p>
+<p>The possible attribute values are:</p>
+<p><code>Strict</code></p>
+<p>means that the browser sends the cookie only for same-site requests, that is, requests originating from the same-site that set the cookie. If a request originate from a different domain or scheme (even with the same domain), no cookies with the <code>SameSite=Strict</code> attribute are sent.</p>
+<p><code>Lax</code></p>
+<p>means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link). This is the default behavior if the <code>SameSite</code> attribute is not specified.</p>
+<p><code>None</code></p>
+<p>means that the browser sends the cookie with both cross-site and same-site requests. The <code>Secure</code> attribute must also be set when setting this value, like so <code>SameSite=None; Secure</code>.</p>
+<blockquote>
+<p>Note: Standards related to the <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite Cookies</a> recently changed, such that:</p>
+<ol>
+<li><p>The cookie-sending behavior if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously, cookies were sent for all requests by default (<code>SameSite=None</code>).</p>
+</li>
+<li><p>Cookies with <code>SameSite=None</code> must now also specify the <code>Secure</code> attribute (in other words, they require a secure context).</p>
+</li>
+<li><p>Cookies from the same domain no longer considered to be from the same site if sent using a different scheme (<code>http:</code> or <code>https:</code>).</p>
+</li>
+</ol>
+</blockquote>
+</li>
+<li><p><code>Secure</code> (Optional)</p>
+<p>Indicates that the cookie will sent to server only when a request is made with the <code>https:</code> scheme (<strong>except on localhost</strong>), and therefore, is more resistant to man-in-the-middle attacks.</p>
+<blockquote>
+<p>Note: Do not assume that <code>Secure</code> prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read&#x2F;modified either with access to the client’s hard disk or from JavaScript if the <code>HttpOnly</code> cookie attribute is not set.</p>
+<p>Insecure sites (<code>http:</code>) cannot set cookies with the <code>Secure</code> attribute (since Chrome 52 and Firefox 52). For Firefox, the <code>https:</code> requirements are ignored when the <code>Secure</code> attribute is set by localhost (since Firefox 75).</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><h4 id="Session-Cookie"><a href="#Session-Cookie" class="headerlink" title="Session Cookie"></a>Session Cookie</h4><p>Session Cookies are removed when the client shuts down. Cookies are session cookies if they do not specify the <code>Expires</code> or <code>Max-Age</code> attribute.</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">sessionId=38afes7a8</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="Permanent-Cookie"><a href="#Permanent-Cookie" class="headerlink" title="Permanent Cookie"></a>Permanent Cookie</h4><p>Permanent cookies are removed at a specific date (<code>Expires</code>) or after a spcific length of time (<code>Max-Age</code>) and not when the client is closed.</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">id=a3fWa; Max-Age=2592000</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="Invalid-domains"><a href="#Invalid-domains" class="headerlink" title="Invalid domains"></a>Invalid domains</h4><p>A cookie for a domain that does not include the server that set it should be reject by the user agent.</p>
+<p>The following cookie will be rejected if set by a server hosted on <code>originalcompany.com</code>:</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">qwerty=219ffwef9w0f; Domain=somecompany.co.uk</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>A cookie for a subdomain of the serving domain will be rejected.</p>
+<p>The following cookie will be rejected if set by a server hosted on <code>example.com</code>:</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">sessionId=e8bb43229de9; Domain=foo.example.com</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="Cookie-prefixes"><a href="#Cookie-prefixes" class="headerlink" title="Cookie prefixes"></a>Cookie prefixes</h4><p>Cookie names prefixed with <code>__Secure-</code> or <code>__Host-</code> can be used only if they are set with <code>Secure</code> attribute from a secure (HTTPS) origin.</p>
+<p>In addition, cookies with the <code>__Host-</code> prefix must have a path of <code>/</code> (meaning any path at the host) and must not have a <code>Domain</code> attribute.</p>
+<blockquote>
+<p>Warning: For clients that don’t implement cookie prefixes, you can not count on these additional assurances, and prefixed cookies will always be accepted.</p>
+</blockquote>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http">// Both accepted when from a secure origin (HTTPS)
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">__Secure-ID=123; Secure; Domain=example.com</span></span>
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">__Host-ID=123; Secure; Path=/</span></span>
+
+// Rejected due to missing Secure attribute
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">__Secure-id=1</span></span>
+
+// Rejected due to the missing Path=/ attribute
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">__Host-id=1; Secure</span></span>
+
+// Rejected due to setting domain
+<span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">__Host-id=1; Secure; Path=/; Domain=example.com</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Partitioned-cookie"><a href="#Partitioned-cookie" class="headerlink" title="Partitioned cookie"></a>Partitioned cookie</h4><pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Set-Cookie</span><span class="token punctuation">:</span> <span class="token header-value">__Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>Note: Partitioned cookie must be set with <code>Secure</code> and <code>Path=/</code>. In addition, it is recommended to use the <code>__Host-</code> prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.</p>
+</blockquote>
+<blockquote>
+<p>References</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">MDN-Using HTTP cookies</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">MDN-Set-Cookie</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">MDN-SameSite cookies</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/http/" rel="tag"># http</a>
+              <a href="/tags/cookies/" rel="tag"># cookies</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/12/css%E5%B8%83%E5%B1%80flex%E7%BC%A9%E5%86%99%E8%AF%AD%E6%B3%95/" rel="prev" title="css布局flex缩写语法">
+                  <i class="fa fa-chevron-left"></i> css布局flex缩写语法
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WONDERlust91</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>
