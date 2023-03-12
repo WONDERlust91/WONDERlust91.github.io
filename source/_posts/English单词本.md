@@ -809,15 +809,15 @@ categories: English
 
      - (of a person) having an illness persisting for a long time or constantly recurring.
 
-       "a chronic asthmatic"
+       _"a chronic asthmatic"_
 
      - (of a problem) long-lasting and difficult to eradicate.
 
-       "the school suffers from chronic overcrowding"
+       _"the school suffers from chronic overcrowding"_
 
      - (of a person) having a particular bad habit.
 
-       "a chronic liar"
+       _"a chronic liar"_
 
 - chronological
 
@@ -1653,7 +1653,7 @@ categories: English
 
      - cause (someone) severe and overwhelming shock or grief.
 
-       "she was devastated by the loss of Damian"
+       _"she was devastated by the loss of Damian"_
 
 - devise
 
@@ -1673,11 +1673,11 @@ categories: English
 
   1. verb: spread or cause to spread over a wide area or among a large number of people.
 
-     "technologies diffuse rapidly"
+     _"technologies diffuse rapidly"_
 
   2. adjective: spread out over a large area; not concentrated.
 
-     "the diffuse community centered on the church"
+     _"the diffuse community centered on the church"_
 
 - dig
 
@@ -3083,13 +3083,13 @@ categories: English
 
      - an interest in or liking for (something).
 
-       "John was a scientist by training and inclination"
+       _"John was a scientist by training and inclination"_
 
-       "Burger King and Wendy's didn't show any inclination to jump into a price war with McDonald's"
+       _"Burger King and Wendy's didn't show any inclination to jump into a price war with McDonald's"_
 
   2. noun: a slope or slant.
 
-     "changes in inclination of the line on the graph"
+     _"changes in inclination of the line on the graph"_
 
   3. noun: the angle at which a straight line or plane is inclined to another.
 
@@ -4795,6 +4795,32 @@ categories: English
 
   3. verb: set right (an undesirable situation). （不好的情况）设置回正确，即补救。
 
+- render
+
+  1. verb: provide or give (a service, help, etc.).
+
+     _"money serves as a reward for services rendered"_
+
+  2. verb: cause to be or become; make.
+
+     _"the rains rendered his escape impossible"_
+
+  3. verb: represent or depict artistically.
+
+     _"the eyes and the cheeks are exceptionally well rendered"_
+
+  4. verb: covertly send (a foreign criminal or terrorist suspect) for interrogation abroad; subject to extraordinary rendition.
+
+  5. verb: melt down (fat).
+
+     _"the fat was being cut up and rendered for lard"_
+
+  6. verb: cover (stone or brick) with a coat of plaster.
+
+     _"external walls will be rendered and tiled"_
+
+  7. noun: a first coat of plaster applied to a brick or stone surface.
+
 - resent
 
   1. verb: feel bitterness or indignation at (a circumstance, action, or person). 对（情况，行为，或人）感到苦涩或愤慨。
@@ -4882,6 +4908,22 @@ categories: English
   2. adverb: in a manner lacking refinement and precision. 以一种缺乏精细和准确的方式。
 
   3. adverb: approximately. 大约。
+
+- routine
+
+  1. noun: a sequence of actions regularly followed; a fixed program. _"I settled down into a routine of work and sleep."_
+
+     - a set sequence in a performance, such as a dance and comedy act.
+
+     - (COMPUTING) a sequence of instructions for performing a task that forms a program or distict part of one.
+
+  2. adjective: performed as part of a regular procedure rather than for a special reason.
+
+     _"the principal insisted that this was just a routine annual drill"_
+
+  3. verb(RARE): organize according to a routine.
+
+     _"all had been routined with smoothness"_
 
 - rule in
 
@@ -6185,7 +6227,7 @@ categories: English
 
   1. adjective: of little value or importance.
 
-     "huge fines were imposed for trivial offenses"
+     _"huge fines were imposed for trivial offenses"_
 
 - turbulent
 
@@ -6441,87 +6483,87 @@ categories: English
 
      - habitually have on one's body or be dressed in.
 
-       "although she was a widow, she didn't wear black"
+       _"although she was a widow, she didn't wear black"_
 
      - exhibit or present (a particular facial expression or appearance).
 
-       "they wear a frozen smile on their faces"
+       _"they wear a frozen smile on their faces"_
 
      - have (one's hair or beard) at a specified length or arranged in a specified style.
 
-       "the students wore their hair long"
+       _"the students wore their hair long"_
 
      - NAUTICAL: (of a ship) fly (a flag).
 
-       "any British registered boat may wear the red ensign"
+       _"any British registered boat may wear the red ensign"_
 
   2. verb: damage, erode, or destroy by friction or use.
 
      - undergo damage, erosion, or destruction by friction or use.
 
-       "mountains are wearing down with each passing second"
+       _"mountains are wearing down with each passing second"_
 
      - form (a hole, path, etc.) by constant friction or use.
 
-       "the water was forced up through holes it had worn"
+       _"the water was forced up through holes it had worn"_
 
      - withstand continued use or life in a specified way.
 
-       "a carpet-type finish seems to wear well"
+       _"a carpet-type finish seems to wear well"_
 
      - cause weariness or fatigue to.
 
-       "some losses can wear on you"
+       _"some losses can wear on you"_
 
   3. verb(LITERARY): pass (a period of time) in some activity.
 
-     "spining long stories, wearing half the day"
+     _"spining long stories, wearing half the day"_
 
   4. verb(INFORMAL·BRITISH): tolerate; accept.
 
-     "the environmental health people wouldn't wear it"
+     _"the environmental health people wouldn't wear it"_
 
   5. noun: the wearing of something or the state of being worn as clothing.
 
-     "some new tops for wear in the evening"
+     _"some new tops for wear in the evening"_
 
   6. noun: clothing suitable for a particular purpose or of a particular type.
 
-     "evening wear"
+     _"evening wear"_
 
   7. noun: damage or deterioration sustained from continuous use.
 
-     "you need to make a deduction for wear and tear on all your belongings"
+     _"you need to make a deduction for wear and tear on all your belongings"_
 
   8. phrase: wear and tear - damage, erode, or destroy by friction or use.
 
   9. phrase: wear thin - be gradually used up or become less convincing or acceptable.
 
-     "his patience was wearing thin"
+     _"his patience was wearing thin"_
 
   10. phrase: wear away - become gradually smaller or smoother through use or contact over a long period.
 
-      "over time the sharp edges would wear away"
+      _"over time the sharp edges would wear away"_
 
   11. phrase: wear down - overcome someone or something by persistence.
 
-      "they wore down their opponents to win the marathon match that lasted more than two hours"
+      _"they wore down their opponents to win the marathon match that lasted more than two hours"_
 
   12. phrase: wear off - lose effectiveness or intensity.
 
-      "the effects of the drug were wearing off"
+      _"the effects of the drug were wearing off"_
 
   13. phrase: wear on - (of a period of time) pass, especially slowly or tediously.
 
-      "as the afternoon wore on he began to look unhappy"
+      _"as the afternoon wore on he began to look unhappy"_
 
   14. phrase: wear out - be used until no longer in good condition or working order.
 
-      "the type was used again and again until it wore out"
+      _"the type was used again and again until it wore out"_
 
   15. verb(SAILING): bring (a ship) about by turning its head away from the wind.
 
-      "Shannon gives the order to wear ship"
+      _"Shannon gives the order to wear ship"_
 
 - weather
 
