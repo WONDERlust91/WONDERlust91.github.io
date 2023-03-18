@@ -377,6 +377,12 @@ categories: English
 
   physiology n. 生理学
 
+- infant n. 婴儿
+
+  infancy n. 婴儿期
+
+  infantry n. 步兵
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -387,17 +393,23 @@ categories: English
 
      - conj. although
 
-     - conj. though
+     - conj. though （多数时候用作副词）
 
      - conj. while
 
      - conj. but （but 词性很多，澳洲非正式场合也会在副词词性下使用 but 表转折）
+
+     - conj. yet （有时也作副词）
 
   2. adverb. 修饰动词，形容词，或作为插入语
 
      - adverb. however
 
      - adverb. nevertheless
+
+     - adverb. though
+
+     - adverb. yet
 
   3. prep. + n.
 

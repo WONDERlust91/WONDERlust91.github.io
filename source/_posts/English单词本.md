@@ -165,6 +165,16 @@ categories: English
 
   1. noun: a kind of clay used as a building material, typically in the form of sun-dried bricks. 一种用作建筑材料的粘土，通常以晒干的砖的形式出现。
 
+- adolescent
+
+  1. adjective: (of a young person) in the process of developing from a child into an adult.
+
+     _"many parents find it hard to understand their adolescent children"_
+
+  2. noun: an adolescent boy or girl.
+
+     _"the books are aimed at children and adolescents"_
+
 - adopt
 
   1. verb: legally take (another's child) and bring it up as one's own. 合法地把（别人的孩子）当作自己的孩子抚养。
@@ -188,6 +198,20 @@ categories: English
   1. adjective: concerned with beauty or the appreciation of beauty. 关注美或对美的欣赏。
 
   2. noun: a set of principles underlying and guiding the work of a particular artist or artistic movement. 一系列作为特定艺术家或艺术行为的基础或指导的原则。
+
+- affair
+
+  1. noun: an event or sequence of events of a specified kind or that has previously been referred to.
+
+     _"the board admitted responsibility for the affair"_
+
+  2. noun: a sexual relationship between two people, one or both of whom are married to or in a long-term relationship with someone else.
+
+     _"his wife is having an affair"_
+
+  3. noun(INFORMAL): an object of a particular type.
+
+     _"her dress was a black low-cut affair"_
 
 - affiliate
 
@@ -262,6 +286,16 @@ categories: English
      - provide with a firm basis or foundation. 提供坚实的基础或基础。
 
   4. verb(NORTH AMERICAN): act as an anchor for (a television program or sporting event). 担任（电视节目或体育赛事）的主播。
+
+- anthropology
+
+  1. noun: the study of human societies and cultures and their development.
+
+     _"they examine lesser-known findings in archeology and anthropology to highlight all that we don't know about human history"_
+
+  2. noun: the study of human biological and physiological characteristics and their evolution.
+
+     _"I really loved psychology and anthropology and studying primate behavior and cognition"_
 
 - apparent
 
@@ -561,6 +595,10 @@ categories: English
 
      - organic matter used as a fuel, especially in a power station for the generation of electricity. 用作燃料的有机物质，特别是在发电站发电。
 
+- bipedal
+
+  1. adjective(ZOOLOGY): (of an animal) using only two legs for walking.
+
 - bland
 
   1. adjective: lacking strong features or characteristics and therefore uninteresting. 缺乏强大的功能或特性，因此而显得无趣，即平淡无奇。
@@ -657,6 +695,12 @@ categories: English
 
   3. noun(INFORMAL·NORTH AMERICAN): a person's buttocks. （非正式·北美）一个人的臀部。
 
+- by and large
+
+  1. phrase: on the whole; everything considered.
+
+     _"mammals have, by and large, bigger brains than reptiles"_
+
 - bypass
 
   1. noun: a road passing around a town or its center to provide an alternative route for through traffic. 绕过城镇或其中心的道路，为通过交通提供替代路线。
@@ -672,6 +716,12 @@ categories: English
   1. noun: an incidental or secondary product made in the manufacture or synthesis of something else. 在制造或合成其他东西时产生的附带或次要产品。
 
 ## C
+
+- canal
+
+  1. noun: an artificial waterway constructed to allow the passage of boats or ships inland or to convey water for irrigation.
+
+     - a tubular duct in a plant or animal, serving to convey or contain food, liquid, or air. _"the ear canal"_
 
 - canteen
 
@@ -726,6 +776,30 @@ categories: English
   3. noun: a person or animal that transmits a disease-causing organism to others. Typically, the carrier suffers no symptoms of the disease. 将致病有机体传播给他人的人或动物。通常，携带者没有疾病症状。
 
   4. noun: a substance used to support or convey another substance such as a pigment, catalyst, or radioactive material. 用于支持或输送另一种物质（如颜料，催化剂，或放射性物质）的物质。
+
+- carve
+
+  1. verb: cut (a hard material) in order to produce an object, design, or inscription.
+
+     _"the wood was carved with runes"_
+
+  2. verb: cut (cooked meat) into slices for eating.
+
+     _"he stood carving the roast chicken"_
+
+  3. verb: establish (a career, role, or reputation) for oneself through hard work.
+
+     _"she has been busy carving a successful career as a singer"_
+
+  4. verb(SKIING): make (a turn) by tilting one's skis on to their edges and using one's weight to bend them so that they slide in an arc.
+
+  5. phrase: carve out - take something from a larger whole, especially with effort or difficulty.
+
+     _"the company hopes to carve out a greater share of the $20 bn market"_
+
+  6. phrase: carve up - divide something ruthlessly into separate areas or parts.
+
+     _"West Africa was carved up by the Europeans"_
 
 - casualty
 
@@ -802,6 +876,56 @@ categories: English
 - chipmunk
 
   1. noun: a burrowing ground squirrel with cheek pouches and light and dark stripes running down the body, found in North America and northern Eurasia. 花栗鼠，在北美和欧亚大陆北部发现的一种地面穴居松鼠，脸部带有颊囊并且有沿着身体延伸的明暗条纹。
+
+- chop
+
+  1. verb: cut (something) into pieces with repeated sharp blows of an axe or knife.
+
+     _"they chopped up the pulpit for firewood"_
+
+  2. verb: abolish or reduce the size of (something) in a way regarded as ruthless.
+
+     _"their training courses are to be chopped"_
+
+  3. noun: a downward cutting blow or movement, typically with the hand.
+
+     _"an effective chop to the back of the neck"_
+
+  4. noun(INFORMAL·BRITISH): dismissal from employment.
+
+     _"hundreds more workers have been given the chop"_
+
+  5. noun: a thick slice of meat, especially pork or lamb, adjacent to and often including a rib.
+
+     _"he lived on liver or chops"_
+
+  6. noun(NORTH AMERICAN): crushed or ground grain used as animal feed.
+
+     _"the pile of chop was dropped into the calves' feeder"_
+
+  7. noun: the broken motion of water, typically due to the action of the wind against the tide.
+
+     _"we started our run into a two-foot chop"_
+
+  8. phrase: chop logic — argue in a tiresomely pedantic way; quibble.
+
+  9. noun(ARCHAIC): a trademark; a brand of goods.
+
+  10. phrase: not much chop — unsatisfactory.
+
+      _"that veranda's not much chop in bad weather"_
+
+  11. verb(WEST AFRICAN): eat.
+
+      _"come chop the soup I made for you"_
+
+  12. verb(WEST AFRICAN): acquire (money) quickly or easily, typically by dishonest means.
+
+      _"we're chopping money like we're just plucking it from a tree"_
+
+  13. noun(WET AFRICAN): a small dish that can conveniently be eaten with the fingers, typically served as an appetizer.
+
+      _"wedding guests have come to expect a good selection of mouthwatering small chops"_
 
 - chronic
 
@@ -986,6 +1110,24 @@ categories: English
   1. verb: grasp mentally; understand. 精神上把握；理解。
 
   2. verb(FORMAL): include, comprise, or encompass. （正式）包括，包含，或涵盖。
+
+- compromise
+
+  1. noun: an agreement or a settlement of a dispute that is reached by each side making concessions.
+
+     _"an ability to listen to two sides in a dispute, and devise a compromise acceptable to both"_
+
+  2. verb: settle a dispute by mutual concession.
+
+     _"in the end we compromised and deferred the issue"_
+
+  3. verb: accept standards that are lower than is desirable.
+
+     _"we were not prepared to compromise on safety"_
+
+  4. verb: bring into disrepute or danger by indiscreet, foolish, or reckless behavior.
+
+     _"situations in which his troops could be compromised"_
 
 - compulsion (compel 的变形)
 
@@ -3049,6 +3191,18 @@ categories: English
 
   3. phrase: by implication - by what is implied or suggested rather than by formal expression. 通过暗示或建议而不是正式的表达。
 
+- impose
+
+  1. verb: force (something unwelcome or unfamiliar) to be accepted or put in place.
+
+     _"the decision was theirs and was not imposed on them by others"_
+
+  2. verb: take advantage of someone by demanding their attention or commitment.
+
+     _"she realized that she had imposed on Miss Hatherby's kindness"_
+
+  3. verb(PRINTING): arrange (pages of type) so that they will be in the correct order after printing and folding.
+
 - impoverish
 
   1. verb: make (a person or area) poor. 使（一个人或一个地区）贫穷。
@@ -3243,6 +3397,20 @@ categories: English
 
   1. verb: demand something forcefully, not accepting refusal. 强求某事，不接受拒绝。
 
+- institution
+
+  1. noun: a society or organization founded for a religious, educational, social, or similar purpose.
+
+     _"a certificate from a professional institution"_
+
+  2. noun: an established law, practice, or custom.
+
+     _"the institution of marriage"_
+
+  3. noun: the action of instituting something.
+
+     _"a delay in the institution of proceedings"_
+
 - instruction
 
   1. noun: a direction or order. 指示或命令。
@@ -3352,6 +3520,14 @@ categories: English
   3. noun(MATHEMATICS): a quantity arrived at by iteration. 数学名词：通过迭代得出的量。
 
 ## J
+
+- jaw
+
+  1. noun: each of the upper and lower bony structures in vertebrates forming the framework of the mouth and containing the teeth.
+
+  2. verb(INFORMAL): talk at length; chatter.
+
+     _"he could still hear men jawing away about the vacuum cleaners"_
 
 - juggle
 
@@ -3506,6 +3682,18 @@ categories: English
   1. adverb: in the same way; also. 以同样的方式；还。
 
   2. adverb: in a like manner; similarly. 以类似的方式；相似地。
+
+- limb
+
+  1. noun: an arm or leg of a person or four-legged animal, or a bird's wing.
+
+  2. noun(ASTRONOMY): the edge of the disk of a celestial object, especially the sun or moon.
+
+     _"the eastern limb of the moon"_
+
+  3. noun(BOTANY): the blade or broad part of a leaf or petal.
+
+  4. noun: the graduated arc of a quadrant or other scientific instrument, used for measuring angles.
 
 - literacy
 
@@ -3925,6 +4113,16 @@ categories: English
 
 ## O
 
+- obscure
+
+  1. adjective: not discovered or known about; uncertain.
+
+     _"his origins and parentage are obscure."_
+
+  2. verb: keep from being seen; conceal.
+
+     _"gray clouds obscure the sun."_
+
 - obsession
 
   1. noun: the state of being obsessed with someone or something. 对某人或某事的痴迷状态。 an idea or thought that continually preoccupies or intrudes on a person's mind. 持续不断出现在人脑海中的想法。
@@ -4146,6 +4344,40 @@ categories: English
 - pave the way for
 
   1. phrase: to make it easier for (something to happen or someone to do something). 使（某事发生或某人做某事）更容易。
+
+- peculiar
+
+  1. adjective: strange or odd; unusual.
+
+     _"his accent was a peculiar mixture of Cockney and Irish"_
+
+  2. adjective: particular; special.
+
+     _"any attempt to explicate the theme is bound to run into peculiar difficulties"_
+
+  3. noun: a parish or church exempt from the jurisdiction of the diocese in which it lies, through being subject to the jurisdiction of the monarch or an archbishop.
+
+- pedal
+
+  1. noun: each of a pair of foot-operated levers used for powering a bicycle or other vehicle propelled by the legs.
+
+  2. noun: a foot-operated throttle, brake, or clutch control in a motor vehicle.
+
+  3. noun: each of a set of two or three levers on a piano, particularly (also sustaining pedal ) one that, when depressed by the foot, prevents the dampers from stopping the sound when the keys are released. The second is the soft pedal ; a third, if present, produces either selective sustaining or complete muffling of the tone.
+
+  4. verb: move by working the pedals of a bicycle.
+
+     _"they pedaled along the canal towpath"_
+
+  5. verb: use the pedals of a piano, organ, or other keyboard instrument, especially in a particular style.
+
+     _"the organist pedaled furiously, her feet travelling musical miles"_
+
+  6. phrase: with the pedal to the metal — with the accelerator of a car pressed to the floor.
+
+     _"she loved careening down the highway with the pedal to the metal"_
+
+  7. adjective(PHYSIOLOGY·ZOOLOGY): relating to the foot or feet.
 
 - peer
 
@@ -4383,11 +4615,67 @@ categories: English
 
   7. verb(ARCHAIC): puzzle or perplex (someone) with a question or problem. 困扰或困惑（某人）以问题或难题。
 
+- posture
+
+  1. noun: the position in which someone holds their body when standing or sitting.
+
+     _"he stood in a flamboyant posture with his hands on his hips"_
+
+  2. noun: a particular way of dealing with or considering something; an approach or attitude.
+
+     _"labor unions adopted a more militant posture in wage negotiations"_
+
+  3. verb: behave in a way that is intended to impress or mislead.
+
+     _"a billionaire posturing as a hero of the working class"_
+
+  4. verb(ARCHAIC): place (someone) in a particular attitude or pose.
+
+     _"and still these two were postured motionless"_
+
 - poverty
 
   1. noun: the state of being extremely poor. 极度贫困的状态。
 
   2. noun: the state of being inferior in quality or insufficient in amount. 数量不足或是质量低劣的状态。
+
+- practice
+
+  1. noun: the actual application or use of an idea, belief, or method, as opposed to theories relating to it.
+
+     _"the principles and practice of teaching"_
+
+  2. noun: the customary, habitual, or expected procedure or way of doing of something.
+
+     _"current nursing practice"_
+
+  3. noun: repeated exercise in or performance of an activity or skill so as to acquire or maintain proficiency in it.
+
+     _"it must have taken a lot of practice to become so fluent"_
+
+  4. verb: perform (an activity) or exercise (a skill) repeatedly or regularly in order to improve or maintain one's proficiency.
+
+     _"I need to practice my French"_
+
+  5. verb: carry out or perform (a particular activity, method, or custom) habitually or regularly.
+
+     _"we still practice some of these rituals today"_
+
+  6. phrase: in practice - in reality (used to refer to what actually happens as opposed to what is meant or believed to happen).
+
+     _"in theory this method is ideal—in practice it is unrealistic"_
+
+  7. phrase: out of practice - not currently proficient in a particular activity or skill due to not having exercised or performed it for some time.
+
+     _"he was out of practice at interrogation"_
+
+  8. phrase: practice makes perfect - used to convey that regular exercise of an activity or skill is the way to become proficient in it, especially when encouraging someone to persist in it.
+
+  9. phrase: practice what one preaches - do what one advises others to do.
+
+- practitioner
+
+  1. noun: a person actively engaged in an art, discipline, or profession, especially mecicine. 积极从事艺术、学科，或职业的人，尤其是医学上。
 
 - praise
 
@@ -4402,10 +4690,6 @@ categories: English
   5. phrase: praise be - used as an expression of relief, joy, or gratitude. 用于表示解脱，喜悦，或感激之情。"'How is your sister?''On the mend, praise be.'" “你姐姐怎么样了？”“好起来了，谢天谢地。”
 
   6. phrase: sing the praises of - express enthusiastic approval or admiration of. 唱赞歌。表达狂热的赞同或钦佩。
-
-- practitioner
-
-  1. noun: a person actively engaged in an art, discipline, or profession, especially mecicine. 积极从事艺术、学科，或职业的人，尤其是医学上。
 
 - preach
 
@@ -4479,9 +4763,21 @@ categories: English
 
   2. noun: a record or other object made by the application of force or weight. 通过施加力量或重量而制成的唱片或其他物体。
 
+- prestige
+
+  1. noun: widespread respect and admiration felt for someone or something on the basis of a perception of their achievements or quality.
+
+     _"he experienced a tremendous increase in prestige following his victory"_
+
 - presumptive
 
   1. adjective: of the nature of a presumption; presumed in the absence of further information. 关于推断的性质的；在没有进一步信息的情况下推测的。
+
+- pretty much
+
+  1. phrase: very nearly.
+
+     _"the case is pretty much over"_
 
 - prey
 
@@ -5047,6 +5343,22 @@ categories: English
 
   3. verb: card (wool, cotton, etc.) coarsely. 粗略地梳理（羊毛，棉花，等等）。
 
+- secular
+
+  1. adjective: denoting attitudes, activities, or other things that have no religious or spiritual basis.
+
+     _"secular buildings"_
+
+  2. adjective(ASTRONOMY): of or denoting slow changes in the motion of the sun or planets.
+
+  3. adjective(ECONOMICS): (of a fluctuation or trend) occurring or persisting over an indefinitely long period.
+
+     _"there is evidence that the slump is not cyclical but secular"_
+
+  4. adjective: occurring once every century or similarly long period (used especially in reference to celebratory games in ancient Rome).
+
+  5. noun: a secular priest.
+
 - seeth
 
   1. verb: (of a liquid) bubble up as a result of being boiled. （液体）由于沸腾而冒泡。
@@ -5465,6 +5777,34 @@ categories: English
 
   3. noun: (especially in software development) a set period of time during which specific tasks must be completed. （尤其是在软件开发中）必需完成特定任务的一段时间。
 
+- spur
+
+  1. noun: a device with a small spike or a spiked wheel that is worn on a rider's heel and used for urging a horse forward.
+
+  2. noun: a thing that prompts or encourages someone; an incentive.
+
+     _"profit was both the spur and the reward of enterprise"_
+
+  3. noun: a projection from a mountain or mountain range.
+
+     _"it's an easy walk up the spur that leads to the summit"_
+
+  4. verb: urge (a horse) forward by digging one's spurs into its sides.
+
+     _"she spurred her horse towards the hedge"_
+
+  5. verb: give an incentive or encouragement to (someone).
+
+     _"her sons' passion for computer games spurred her on to set up a software business"_
+
+  6. verb: prune in (a side shoot of a plant) so as to form a spur close to the stem.
+
+     _"spur back the lateral shoots"_
+
+  7. phrase: on the spur of the moment — on impulse; without planning in advance.
+
+     _"I don't generally do things on the spur of the moment"_
+
 - squeeze
 
   1. verb: firmly press (something soft or yielding), typically with one's fingers. 用力按压（柔软或易弯折的东西），通常使用手指。
@@ -5494,6 +5834,22 @@ categories: English
   13. phrase: squeeze out - extract liquid or a soft substance from something by compressing or twisting it firmly. 通过用压力或紧紧扭转从某物中提取液体或柔软的物质。
 
   14. phrase: squeeze up - move closer to someone or something so that one is pressed tightly against them or it. 靠近某人或某物，以便将某人紧紧地压在他们或某物上。
+
+- stain
+
+  1. verb: mark (something) with colored patches or dirty marks that are not easily removed.
+
+     _"her clothing was stained with blood"_
+
+  2. verb: color (a material or object) by applying a penetrative dye or chemical.
+
+     _"wood can always be stained to a darker shade"_
+
+  3. noun: a colored patch or dirty mark that is difficult to remove.
+
+     _"there were mud stains on my shoes"_
+
+  4. noun: a penetrative dye or chemical used in coloring a material or object.
 
 - stake
 
@@ -6137,6 +6493,20 @@ categories: English
 
   6. verb(BRITISH): mark (an item) with a tick or select (a box) on a form, questionnaire, etc., to indicate that something has been chosen, checked, approved, or dealt with. 在表格或问卷上用对钩标记（项目）或选中（方框），以表明某事已经被选择，检查，批准或处理。
 
+- tissue
+
+  1. noun: any of the distinct types of material of which animals or plants are made, consisting of specialized cells and their products.
+
+     _"inflammation is a reaction of living tissue to infection or injury"_
+
+  2. noun: tissue paper.
+
+     _"a slim package wrapped in blue tissue"_
+
+  3. noun: an intricate structure or network made from a number of connected items.
+
+     _"such scandalous stories are a tissue of lies"_
+
 - toast
 
   1. noun: sliced bread browned on both sides by exposure to radiant heat. 通过暴露在热辐射下，两面都变成褐色的切片面包。
@@ -6650,6 +7020,26 @@ categories: English
   3. adjective: done on a large scale; extensive. 大规模完成的；广泛的。
 
   4. verb: sell (goods) in large quantities at low prices to be retailed by others. 以低价大量出售（商品）以供他人零售。
+
+- will
+
+  1. noun: the faculty by which a person decides on and initiates action.
+
+     _"she has an iron will"_
+
+  2. noun: a legal document containing instructions as to what should be done with one's money and property after one's death.
+
+  3. verb: make or try to make (someone) do something or (something) happen by the exercise of mental powers.
+
+     _"reluctantly he willed himself to turn and go back"_
+
+  4. verb(FORMAL·LITERARY): intend, desire, or wish (something) to happen.
+
+     _"their friendship flourished particularly because Adams willed it"_
+
+  5. verb: bequeath something to (someone) by the terms of one's will.
+
+     _"his father willed the farm to Mr. Timms"_
 
 - wind
 

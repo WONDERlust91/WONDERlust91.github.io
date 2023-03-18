@@ -640,7 +640,7 @@ have been doing 从过去到现在一直做某事
 
   in a/one's way 以...方法
 
-  on one's way 快到了
+  on the/one's way 快到了
 
   by the way 顺便说一下
 
