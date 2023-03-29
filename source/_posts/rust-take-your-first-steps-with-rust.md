@@ -29,6 +29,8 @@ Rust also offers the following advantages that make it a great fit for a wide ra
 
 - Target bare metal: Rust can target embedded and "bare metal" programming, making it suitable to write an operating system kernel or device drivers.
 
+<!-- more -->
+
 ### Unique features of Rust
 
 Rust module system is composed of crates, modules, and paths, and tools to work with those items.
