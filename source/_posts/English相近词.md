@@ -719,6 +719,8 @@ categories: English
 
   originate from
 
+  derive from
+
 - 表示“谨慎”
 
   prudent adj. 谨慎的，远虑的

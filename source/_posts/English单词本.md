@@ -1021,6 +1021,10 @@ categories: English
 
   1. noun: a raw material or primary agricultural product that can be bought and sold, such as copper or coffee. 可以被买卖的原材料或初级农产品，例如铜或咖啡，即商品。
 
+- commonness
+
+  1. noun: the quality of being general or widespread or having general applicability. the state of being that is commonly observed.
+
 - commute
 
   1. verb: travel some distance between one's home and place of work on a regular basis. 定期往返于家和工作地点之间的一段距离，即通勤。
@@ -1891,6 +1895,22 @@ categories: English
 
   1. verb: break up into small parts, typically as the result of impact or decay. 分裂成小部分，通常是由于撞击或腐烂的结果。
 
+- dismiss
+
+  1. verb: order or allow to leave; send away. _"she dismissed the taxi at the corner of the road"_
+
+     - remove from employment or office, typically on the grounds of unsatisfactory performance. _"the prime minister dismissed five members of his cabinet"_
+
+     - (of a group assembled under someone's authority) disperse. _"he told his company to dismiss"_
+
+     - (CRICKET) end the innings of (a batter or team). _"Australia were dismissed for 118"_
+
+  2. verb: treat as unworthy of serious consideration. _"it would be easy to dismiss him as all brawn and no brain"_
+
+     - deliberately cease to think about. _"he suspected a double meaning in her words, but dismissed the thought"_
+
+     - (LAW) refuse further hearing to (a case). _"the judge dismissed the case for lack of evidence"_
+
 - disparage
 
   1. verb: regard or represent as being of little worth. 认为或代表没有价值，即贬低。
@@ -2675,6 +2695,16 @@ categories: English
 
   7. phrase: tell someone's fortune - make predictions about a person's future by palmistry, using a crystal ball, reading tarot cards, or similar divining methods. 通过手相，水晶球，塔罗牌或类似的占卜方法预测一个人的未来。
 
+- foster
+
+  1. verb: encourage the development of (something, especially something desirable).
+
+     _"the teacher's task is to foster learning"_
+
+  2. verb: bring up (a child that is not one's own by birth).
+
+     _"a person who would foster Holly was found"_
+
 - fraction
 
   1. noun: a numerical quantity that is not a whole number (e.g. 1/2, 0.5). 不是整数的数字量（例如 1/2，0.5）。
@@ -3013,6 +3043,28 @@ categories: English
 
   3. adverb(ARCHAIC): from here. （古老）从这里。
 
+- herd
+
+  1. noun: a large group of animals, especially hoofed mammals, that live together or are kept together as livestock.
+
+     _"a herd of elephants"_
+
+  2. noun(DEROGATORY): a large group of people with a shared characteristic.
+
+     _"I dodged herds of joggers"_
+
+  3. verb: (with reference to a group of people or animals) move in a group.
+
+     _"they were herded into a bus"_
+
+  4. verb: keep or look after (livestock).
+
+     _"they live by herding reindeer"_
+
+- hippocampus
+
+  1. noun(ANATOMY): the elongated ridges on the floor of each lateral ventricle of the brain, thought to be the centre of emotion, memory, and the autonomic nervous system.
+
 - Hispanic
 
   1. adjective: relating to Spain or to Spanish-speaking countries, especially those of Latin America. 与西班牙或讲西班牙语的国家有关，尤其是拉丁美洲国家。
@@ -3340,6 +3392,22 @@ categories: English
   1. adjective: (of a person) clever, original, and inventive. （人）聪明的，独创的，有创造力的。
 
   2. adjective: (of a machine or idea) cleverly and originally devised and well suited to its purpose. （机器或想法）被聪明或原创性地设计，且非常适合其目的。
+
+- ingrain
+
+  1. verb: firmly fix or establish (a habit, belief, or attitude) in a person.
+
+     _"they trivialize the struggle and further ingrain the long-standing attitudes"_
+
+  2. adjective: (of a textile) composed of fibres which have been dyed different colours before being woven.
+
+- inherent
+
+  1. adjective: existing in something as a permanent, essential, or characteristic attribute. _"any form of mountaineering has its inherent dangers"_
+
+     - (LAW) vested in someone as a right or privilege. _"the president's inherent foreign affairs power"_
+
+     - (LINGUISTICS) (of an adjective) having the same meaning in both attributive and predicative uses.
 
 - initiative
 
@@ -4281,6 +4349,14 @@ categories: English
 
   4. verb: cover (a wall or other surface) with panels. 用面板覆盖（墙壁或其他表面）。
 
+- paradox
+
+  1. noun: a seemingly absurd or contradictory statement or proposition which when investigated may prove to be well founded or true. _"the uncertainty principle leads to all sorts of paradoxes, like the particles being in two places at once"_
+
+     - a statement or proposition which, despite sound (or apparently sound) reasoning from acceptable premises, leads to a conclusion that seems logically unacceptable or self-contradictory. _"the liar paradox"_
+
+     - a person or thing that combines contradictory features or qualities. _"cathedrals face the paradox of having enormous wealth in treasures but huge annual expenses"_
+
 - parallel
 
   1. adjective: (of lines, planes, surfaces, or objects) side by side and having the same distance continuously between them. （线，面，表面，或物体）并排排列并在它们之间连续地具有相同的距离。
@@ -4442,6 +4518,12 @@ categories: English
   2. adjective: occurring repeatedly; so frequent as to seem endless and uninterrupted. 反复发生；太频繁以至于似乎无穷无尽且不间断。
 
   3. adjective: (of a plant) blooming or fruiting several times in one season. （植物）在一个季节中开花或结果数次。
+
+- perpetuate
+
+  1. verb: make (something) continue indefinitely.
+
+     _"the confusion was perpetuated through inadvertence"_
 
 - perplex
 
@@ -5228,6 +5310,24 @@ categories: English
 - rule out
 
   1. phrase: exclude something as a possibility. 排除某人或某事的可能性。
+
+- rut
+
+  1. noun: a long, deep track made by the repeated passage of the wheels of vehicles.
+
+     _"a stretch of road made impassable by ruts, holes, or waterlogging"_
+
+  2. noun: a habit or pattern of behaviour that has become dull and unproductive but is hard to change.
+
+     _"the administration was stuck in a rut and was losing its direction"_
+
+  3. noun: an annual period of sexual activity in deer and some other mammals, during which the males fight each other for access to the females.
+
+     _"a moose in rut"_
+
+  4. verb: (of a deer or other mammal) engage in the rut or annual period of sexual activity. _"researchers say the deer are rutting earlier"_
+
+     - (DEROGATORY) engage in promiscuous or indiscriminate sexual activity. _"if you want to smoke and cuss and rut and get completely drunk, then go for it"_
 
 ## S
 
@@ -6664,6 +6764,16 @@ categories: English
 - unprecedented
 
   1. adjective: never done or known before. 从未被完成或知晓的，即史无前例的。
+
+- unreflecting
+
+  1. adjective: not engaging in reflection or thought.
+
+     _"an unreflecting hedonist"_
+
+  2. adjective: not reflecting light.
+
+     _"the sea was a dreary, unreflecting grey"_
 
 - unsolicited
 
