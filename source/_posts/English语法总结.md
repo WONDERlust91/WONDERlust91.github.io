@@ -745,3 +745,7 @@ have been doing 从过去到现在一直做某事
   This apple is eaten by me.
 
   I have/get this apple eaten.
+
+- range from A to B
+
+  The store sells something to public, ranging in price from $2 to $4.

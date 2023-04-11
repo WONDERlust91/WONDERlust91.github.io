@@ -1429,6 +1429,56 @@ categories: English
 
   5. phrase: take counsel - discuss a problem. 讨论一个问题。
 
+- counter
+
+  1. noun: a long flat-topped fitment across which business is conducted in a shop or bank or refreshments are served in a cafeteria.
+
+  2. noun: a small disc used in board games for keeping the score or as a place marker.
+
+  3. noun: a device used for counting.
+
+     _"the counter tells you how many pictures you have taken"_
+
+  4. phrase: behind the counter - serving in a shop or bank.
+
+     _"he drove to the store and flirted with two sisters behind the counter"_
+
+  5. phrase: over the counter(OTC) - by ordinary retail purchase, with no need for a prescription or licence.
+
+     _"over-the-counter medicines"_
+
+  6. phrase: under the counter - (with reference to goods bought or sold) surreptitiously and typically illegally.
+
+     _"hard porn is legally banned, but still available under the counter"_
+
+  7. verb: speak or act in opposition to.
+
+     _"the second argument is more difficult to counter"_
+
+  8. adverb: in the opposite direction or in opposition to.
+
+     _"his writing ran counter to the dominant trends of the decade"_
+
+  9. adjective: responding to something of the same kind, especially in opposition.
+
+     _"after years of argument and counter argument there is no conclusive answer"_
+
+  10. noun: a thing which opposes or prevents something else.
+
+      _"the stimulus to employers' organization was partly a counter to growing union power"_
+
+  11. noun: the curved part of the stern of a ship projecting aft above the waterline.
+
+  12. noun(PRINTING): the white space enclosed by a letter such as O or c.
+
+  13. phrase: go counter - run or ride against the direction taken by a quarry.
+
+  14. noun: the back part of a shoe or boot, enclosing the heel.
+
+  15. prefix: denoting opposition, retaliation, or rivalry.
+
+      _"counter-attack"_
+
 - counterbalance
 
   1. noun: a weight that balances another weight. 平衡另一个重量的重量。
@@ -3015,6 +3065,36 @@ categories: English
 
      - be persistently and disturbingly present in (something). 持续并令人不安地出现在（某事物）中，可译为笼罩。
 
+- hawk
+
+  1. noun: a bird of prey with broad rounded wings and a long tail, typically taking prey by surprise with a short chase.
+
+  2. noun: a person who advocates an aggressive or warlike policy, especially in foreign affairs.
+
+     _"severe limits were put on the peace plan by party hawks"_
+
+  3. verb: (of a person) hunt game with a trained hawk.
+
+  4. verb: (of a bird or dragonfly) hunt on the wing for food.
+
+     _"swifts hawked low over the water"_
+
+  5. phrase: have eyes like a hawk - miss nothing of what is going on around one.
+
+  6. phrase: watch someone like a hawk - keep a vigilant eye on someone, especially to check that they do nothing wrong.
+
+     _"she watched them like a hawk because some of them were bound to cheat"_
+
+  7. verb: carry about and offer (goods) for sale, typically advertising them by shouting.
+
+     _"street traders were hawking costume jewellery"_
+
+  8. verb: clear the throat noisily.
+
+     _"he hawked and spat into the flames"_
+
+  9. noun: a plasterer's square board with a handle underneath for carrying plaster or mortar.
+
 - headline
 
   1. noun: a heading at the top of an article or page in a newspaper or magazine. 报纸或杂志的文章或页面顶部的标题。
@@ -3633,6 +3713,10 @@ categories: English
 
   1. noun: a smooth sauce made chiefly from tomatoes and vinegar, used as a condiment. 一种丝滑的酱汁，主要由西红柿和醋制成，用作调味品。
 
+- kinship
+
+  1. noun: blood relationship.
+
 ## L
 
 - ladder
@@ -3763,6 +3847,16 @@ categories: English
 
   4. noun: the graduated arc of a quadrant or other scientific instrument, used for measuring angles.
 
+- lineage
+
+  1. noun: direct descent from an ancestor; ancestry or pedigree.
+
+     _"a Dutch nobleman of ancient lineage"_
+
+  2. noun: a sequence of species each of which is considered to have evolved from its predecessor.
+
+     _"the chimpanzee and gorilla lineages"_
+
 - literacy
 
   1. noun: the ability to read and write. 读写的能力。
@@ -3804,6 +3898,40 @@ categories: English
   1. verb: lie, sit, or stand in a relaxed or lazy way. 以放松或慵懒的方式躺着，坐着，或站着。
 
   2. noun: a public room, as in a hotel, theater, or club, in which to sit and relax. 一个公共的房间，例如在宾馆，剧院，或俱乐部，供人坐下来放松的地方。
+
+- lump
+
+  1. noun: a compact mass of a substance, especially one without a definite or regular shape. _"there was a lump of ice floating in the milk"_
+
+     - a swelling under the skin, especially one caused by injury or disease. _"he was unhurt apart from a huge lump on his head"_
+
+     - a small cube of sugar.
+
+     - (DEROGATORY·INFORMAL) a heavy, ungainly, or slow-witted person. _"I won't stand a chance against a big lump like you"_
+
+  2. noun(INFORMAL·BRITISH): the state of being self-employed and paid without deduction of tax, especially in the building industry.
+
+     _"‘Working?’ ‘Only on the lump, here and there’"_
+
+  3. verb: put in an indiscriminate mass or group; treat as alike without regard for particulars.
+
+     _"Hong Kong and Bangkok tend to be lumped together in holiday brochures"_
+
+  4. verb(BRITISH): carry (a heavy load) somewhere with difficulty.
+
+     _"the coalman had to lump one-hundredweight sacks right through the house"_
+
+  5. phrase: a lump in the throat - a feeling of tightness or dryness in the throat caused by strong emotion, especially sadness.
+
+     _"there was a lump in her throat as she gazed down at her uncle's gaunt features"_
+
+  6. phrase: take ones lumps - suffer punishment; be attacked or defeated.
+
+     _"Jason decided to lie doggo and let Faraday take his lumps"_
+
+  7. verb(INFORMAL): accept or tolerate a disagreeable situation whether one likes it or not.
+
+     _"you can like it or lump it but I've got to work"_
 
 - lunatic
 
@@ -4415,7 +4543,53 @@ categories: English
 
 - pastime
 
-  1. an activity that someone does regularly fooor enjoyment rather than work; a hobby. 某人为了享受而不是工作而定期进行的活动；一个爱好。
+  1. none: an activity that someone does regularly fooor enjoyment rather than work; a hobby. 某人为了享受而不是工作而定期进行的活动；一个爱好。
+
+- patent
+
+  1. noun: a government authority or licence conferring a right or title for a set period, especially the sole right to exclude others from making, using, or selling an invention.
+
+     _"he took out a patent for an improved steam hammer"_
+
+  2. noun: patent leather.
+
+     _"designs in a wide range of textures featuring super-chic patent, soft suede, or sophisticated nappa"_
+
+  3. adjective: easily recognizable; obvious.
+
+     _"she was smiling with patent insincerity"_
+
+  4. adjective(MEDICINE): (of a vessel, duct, or aperture) open and unobstructed; failing to close. _"the patient is usually left with a patent vessel"_
+
+     - (of a parasitic infection) showing detectable parasites in the tissues or faeces. _"there are a few recorded cases of patent infection in man"_
+
+  5. adjective: made and marketed under a patent; proprietary.
+
+     _"patent milk powder"_
+
+  6. verb: obtain a patent for (an invention).
+
+     _"an invention is not your own until it is patented"_
+
+- paternal
+
+  1. adjective: of or appropriate to a father.
+
+     _"he reasserted his paternal authority"_
+
+  2. adjective: related through the father.
+
+     _"his father and paternal grandfather were porcelain painters"_
+
+- paternity
+
+  1. noun: (especially in legal contexts) the state of being someone's father.
+
+     _"he refused to admit paternity of the child"_
+
+  2. noun: paternal origin.
+
+     _"his enemies made great play of the supposed dubiety of his paternity"_
 
 - pave the way for
 
@@ -4833,6 +5007,18 @@ categories: English
 
   3. verb: state authoritatively or as a rule that (an action or procedure) should be carried out. 权威地陈述或作为必须执行的行为或程序的规则。
 
+- prescription
+
+  1. noun: an instruction written by a medical practitioner that authorizes a patient to be issued with a medicine or treatment.
+
+     _"he scribbled a prescription for tranquillizers"_
+
+  2. noun: a recommendation that is authoritatively put forward.
+
+     _"effective prescriptions for sustaining rural communities"_
+
+  3. noun(LAW): the establishment of a claim founded on the basis of a long or indefinite period of uninterrupted use or of long-standing custom.
+
 - presence
 
   1. noun: the state or fact of existing, occurring, or being present in a place or thing. 存在，发生，或被呈现在一个地方或东西中的状态或事实。
@@ -5064,6 +5250,28 @@ categories: English
   9. noun: the root or base form of a wood. 形成树木的根或基本。
 
   10. noun(MATHEMATICS): a quantity forming or expressed as the root of another. 形成或表达为另一个量的根的量。
+
+- rage
+
+  1. noun: violent uncontrollable anger.
+
+     _"her face was distorted with rage"_
+
+  2. noun: a vehement desire or passion.
+
+     _"a rage for absolute honesty informs much western art"_
+
+  3. noun(INFORMAL·AUSTRALIAN): a lively party.
+
+     _"the sound of the rage filled the campus"_
+
+  4. verb: feel or express violent uncontrollable anger.
+
+     _"he raged at the futility of it all"_
+
+  5. verb(INFORMAL): enjoy oneself at a party or other lively gathering, typically with drinking and music.
+
+     _"we're gonna rage through the weekend"_
 
 - readily
 
@@ -5347,6 +5555,10 @@ categories: English
 
   7. noun: a Japanese alcoholic drink made from fermented rice, traditionally drunk warm in small porcelain cups. 一种由发酵大米制成的日本酒精饮料，传统上是在小瓷杯中趁热饮用，即清酒。
 
+- saliva
+
+  1. noun: watery liquid secreted into the mouth by glands, providing lubrication for chewing and swallowing, and aiding digestion.
+
 - sandal
 
   1. noun: a light shoe with either an openwork upper or straps attaching the sole to the foot. 一种轻便的鞋，要么是有镂空的鞋面，要么是将鞋底通过系带绑在脚上，即凉拖。
@@ -5530,6 +5742,44 @@ categories: English
   5. phrase: settle one's affairs - make any necessary arrangements, such as writing a will, before one's death. 在死前做任何必要的安排，例如写遗嘱。
 
   6. noun: a wooden bench with a high back and arms, typically incorporating a box under the seat. 带高背和扶手的木制长凳，通常在座椅下方装有一个盒子。
+
+- shell
+
+  1. noun: the hard protective outer case of a mollusc or crustacean.
+
+     _"cowrie shells"_
+
+  2. noun: an explosive artillery projectile or bomb.
+
+     _"the sound of the shell passing over, followed by the explosion"_
+
+  3. noun: something resembling or likened to a shell because of its shape or its function as an outer case.
+
+     _"pasta shells"_
+
+  4. noun: the metal framework of a vehicle body.
+
+  5. noun: a light racing boat.
+
+  6. noun: an inner or roughly made coffin.
+
+  7. noun: the hand guard of a sword.
+
+  8. noun(PHYSICS): each of a set of orbitals around the nucleus of an atom, occupied or able to be occupied by electrons of similar energies.
+
+  9. noun(COMPUTING): short for shell program.
+
+  10. verb: bombard with shells.
+
+      _"several villages north of the security zone were shelled"_
+
+  11. verb: remove the shell or pod from (a nut or seed).
+
+      _"they were shelling peas"_
+
+  12. phrase: shell out - pay a specified amount of money, especially an amount that is resented as being excessive.
+
+      _"she ended up shelling out for two rooms"_
 
 - shipper
 
@@ -6410,6 +6660,20 @@ categories: English
   3. verb: cause to continue or be prolonged for an extended period or without interruption. 导致持续或延长一段较长的时间或没有中断。
 
   4. verb: uphold, affirm, or confirm the justice or validity of. 坚持，肯定，确认正义或有效。
+
+- swab
+
+  1. noun: an absorbent pad or piece of material, often on a stick or rod, used in surgery and medicine for cleaning wounds and skin, applying medication, or taking specimens.
+
+  2. noun: a mop or other absorbent device for cleaning or mopping up a floor or other surface.
+
+  3. verb: take a specimen of tissue or secretions from (a person or part of the body) for examination.
+
+     _"we need to be swabbing people with any hint of illness"_
+
+  4. verb: clean (a floor or other surface) with a mop or other absorbent device.
+
+     _"the crew were swabbing down the decks"_
 
 - swamp
 
