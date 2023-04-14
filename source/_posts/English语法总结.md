@@ -716,9 +716,11 @@ have been doing 从过去到现在一直做某事
 
   I was in this store when who should I see across the street but Toby？ 当我在这家商店时，除了托比我还能在街对面看到谁？
 
-- a- 前缀
+- a- 前缀 (大部分情况为 adjective 词性)
 
   1. 表示状态
+
+     alike 表示 like (相似) 的状态 (也有副词用法)
 
      asleep 表示 sleep 的状态
 

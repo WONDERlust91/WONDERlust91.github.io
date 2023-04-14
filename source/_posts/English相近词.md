@@ -85,11 +85,19 @@ categories: English
 
 - assist v.n. 协助
 
+  consist v. 组成；与...一致 n. 列车组
+
+  desist v. 停止做某事，弃权
+
   insist v. 坚称，咬定（表坚定，不容拒绝）
 
   persist v. 坚持（表持续，不会中断）
 
   resist v. 抵抗 n. 保护涂层
+
+- consistent adj. 一贯；连贯；一致
+
+  constant adj. 不变的 n. 不变的情况；常量
 
 - index n. 索引；指数；幕指数；指针，指标
 

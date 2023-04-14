@@ -399,7 +399,7 @@ categories: English
 
   1. verb: (of people) gather together in one place for a common purpose. （人）为了共同的目的聚集在一个地方。
 
-  2. verb: fit together the separate component parts of (a machine or other object). 将（机器或其他物体）的独立组件装配在一起。
+  2. verb: fit together the separate component parts of (a machine or other object). 将（机器或其他物体）的独立组件装配在一起(汽车流水线：automotive-assembly-line)。
 
   3. verb(COMPUTING): translate (a program) from a higher-level programming language into machine code. （计算机）将（程序）高级编程语言编译成机器码。
 
@@ -1815,6 +1815,12 @@ categories: English
 
   1. verb: deny (a person or place) the possession or use of something. 否认（一个人或地方）拥有或使用某物，即剥夺（常见用法：deprive sb. of sth. 剥夺某人的某物，sb. be deprived of sth. 某人被剥夺了某物）。
 
+- deride
+
+  1. verb: express contempt for; ridicule.
+
+     _"the decision was derided by environmentalists"_
+
 - descendant
 
   1. noun: a person, plant, or animal that is descended from a particular ancestor. 来自特定祖先的人，植物，或动物，即后代。
@@ -2729,6 +2735,12 @@ categories: English
 
   2. noun: a material or mixture prepared according to a particular formula. 根据特定配方制备的材料或混合物。
 
+- forseeable
+
+  1. adjective: able to be foreseen or predicted.
+
+     _"the situation is unlikely to change in the foreseeable future"_
+
 - fortune
 
   1. noun: chance or luck as an external, arbitrary force affecting human affairs. 机会或运气作为影响人类事务的外在，随机力量，即命运。
@@ -3288,6 +3300,16 @@ categories: English
   2. adjective(INFORMAL): discourteous or rude. （非正式）无礼或粗鲁的。
 
   3. adjective(WEST INDIAN): angry or quick-tempered. （西印度）生气或脾气暴躁的。
+
+- illiterate
+
+  1. adjective: unable to read or write.
+
+     _"his parents were illiterate"_
+
+  2. noun: a person who is unable to read or write.
+
+  3. phrase: functionally illiterate — lacking the literacy necessary for coping with most jobs and many everyday situations.
 
 - illusion
 
