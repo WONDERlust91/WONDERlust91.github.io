@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">141</span>
+          <span class="site-state-item-count">142</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,6 +177,125 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/05/03/typescript%E5%85%A8%E5%B1%80%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/03/typescript%E5%85%A8%E5%B1%80%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">typescript全局类型声明问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-05-03 20:34:09" itemprop="dateCreated datePublished" datetime="2021-05-03T20:34:09+00:00">2021-05-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/typescript/" itemprop="url" rel="index"><span itemprop="name">typescript</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2021/05/03/typescript%E5%85%A8%E5%B1%80%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E9%97%AE%E9%A2%98/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/05/03/typescript全局类型声明问题/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="d-ts-中使用-import-语法，导致全局类型失效问题"><a href="#d-ts-中使用-import-语法，导致全局类型失效问题" class="headerlink" title="d.ts 中使用 import 语法，导致全局类型失效问题"></a>d.ts 中使用 import 语法，导致全局类型失效问题</h2><p>一个常见的应用场景，即我们需要扩展 window 全局变量，但 window 的类型声明不包括我们新增的属性，故会通过在全局的 d.ts 文件中书写 window 的 interface 来给 window 增加新的属性，当新属性的类型引用到某个导出的类型时，就要使用 import 语法导入这个类型，一旦使用 import 语法，d.ts 文件就从默认全局转为了默认模块。如何解决全局类型失效的问题呢？</p>
+<p>使用 global 的 namespace 即可</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 使用三斜线语法引入类型，该d.ts文件还是全局，但这个文件本身引用不到/ref-path下的类型</span>
+<span class="token comment">/// &lt;reference path="/ref-path"></span>
+<span class="token keyword">interface</span> <span class="token class-name">window</span> <span class="token punctuation">&#123;</span>
+  prop<span class="token operator">:</span> MyType<span class="token punctuation">;</span> <span class="token comment">// Error 虽然MyType在/ref-path下，但该文件中还是读取不到</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 使用import语法引入类型，该d.ts文件默认转为模块，需要使用global命名空间来使某些声明成为全局</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> MyType <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"/ref-path"</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> global <span class="token punctuation">&#123;</span>
+  <span class="token keyword">interface</span> <span class="token class-name">window</span> <span class="token punctuation">&#123;</span>
+    prop<span class="token operator">:</span> MyType<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013727805/article/details/114758672">*.d.ts 导入 import 其它类型导致全局类型失效问题</a></p>
+<p><a target="_blank" rel="noopener" href="https://ts.xcatliu.com/basics/declaration-files.html">Typescript 入门教程</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +341,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -334,7 +453,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -447,7 +566,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -562,7 +681,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -684,7 +803,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -793,7 +912,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -942,7 +1061,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1051,7 +1170,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1169,7 +1288,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1231,121 +1350,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </ul>
 <h2 id="ODM"><a href="#ODM" class="headerlink" title="ODM"></a>ODM</h2><p>ORM对应的是关系型数据库，如MySQL，那么ODM就对应的是文档型数据库，如MongoDB。ODM是Object-Document-Mapping缩写，即对象文档映射。MongoDB对应Node的ODM库是Mongoose。</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2020/05/03/%E7%A8%8B%E5%BA%8F%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/05/03/%E7%A8%8B%E5%BA%8F%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">程序架构模式</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-05-03 19:11:29" itemprop="dateCreated datePublished" datetime="2020-05-03T19:11:29+00:00">2020-05-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">软件工程</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/05/03/%E7%A8%8B%E5%BA%8F%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/03/程序架构模式/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>复杂的软件一定要有架构设计，好的架构模式使得软件更易于维护与扩展。架构模式（architectural pattern），属于编程方法论。</p>
-<h2 id="MVC-模式"><a href="#MVC-模式" class="headerlink" title="MVC 模式"></a>MVC 模式</h2><p>MVC 是 View-Model-Controller 的缩写，该架构模式是指将软件系统分为三个基本部分：</p>
-<ul>
-<li><p>模型（Model）：用于封装与应用程序业务逻辑相关的数据以及对数据的处理方法。Model 有对数据直接访问的权力，例如对数据库的访问。Model 不依赖 View 和 Controller，也就是说 Model 不关心它会被如何显示或如何被操作。但是 Model 中数据的变化一般会通过一种刷新机制被公布。为了实现这种机制，那些用于监视此 Model 的 View 必须事先在此 Model 上注册，从而使 View 可以了解在数据 Model 上发生的改变。（如：软件设计模式中的观察者模式）</p>
-</li>
-<li><p>视图（View）：能够实现数据有目的地显示。在 View 中一般没有程序上的逻辑。为了实现 View 上的刷新功能，View 需要访问它监视的数据模型（Model），因此应该事先在被它监视的数据那时注册。</p>
-</li>
-<li><p>控制器（Controller）：起到不同层面间的组织作用，用于控制应用程序的流程。它处理事件并作出响应。“事件”包括用户的行为和数据 Model 上的改变。</p>
-</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/03/%E7%A8%8B%E5%BA%8F%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 

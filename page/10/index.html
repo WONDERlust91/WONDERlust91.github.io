@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">141</span>
+          <span class="site-state-item-count">142</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,6 +177,157 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/05/13/css%E4%BD%BF%E7%94%A8inline-block%E6%97%B6%E5%8E%BB%E9%99%A4%E9%97%B4%E9%9A%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/05/13/css%E4%BD%BF%E7%94%A8inline-block%E6%97%B6%E5%8E%BB%E9%99%A4%E9%97%B4%E9%9A%99/" class="post-title-link" itemprop="url">css使用inline-block时去除间隙</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-05-13 13:16:06" itemprop="dateCreated datePublished" datetime="2019-05-13T13:16:06+00:00">2019-05-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2019/05/13/css%E4%BD%BF%E7%94%A8inline-block%E6%97%B6%E5%8E%BB%E9%99%A4%E9%97%B4%E9%9A%99/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/13/css使用inline-block时去除间隙/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>属性为display: inline-block的元素之间，换行显示或用空格分隔的情况下会产生间距。</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>一<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>二<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>三<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>四<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">ul li</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>这种间距会影响到我们布局，如何去除这种间距？</p>
+<h2 id="经典解决方案"><a href="#经典解决方案" class="headerlink" title="经典解决方案"></a>经典解决方案</h2><h3 id="使用html解决，将inline-block元素写在一行里，或让标签首尾不换行"><a href="#使用html解决，将inline-block元素写在一行里，或让标签首尾不换行" class="headerlink" title="使用html解决，将inline-block元素写在一行里，或让标签首尾不换行"></a>使用html解决，将inline-block元素写在一行里，或让标签首尾不换行</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!-- 将inline-block元素写在一行 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>一<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>二<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>三<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>四<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- 标签首尾不换行 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+  一<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+  二<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+  三<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+  四
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>缺点：影响代码美观与格式化</p>
+<h3 id="使用css解决，设置父元素font-size为0，或设置子元素margin或letter-spacing或word-spacing属性为负值"><a href="#使用css解决，设置父元素font-size为0，或设置子元素margin或letter-spacing或word-spacing属性为负值" class="headerlink" title="使用css解决，设置父元素font-size为0，或设置子元素margin或letter-spacing或word-spacing属性为负值"></a>使用css解决，设置父元素font-size为0，或设置子元素margin或letter-spacing或word-spacing属性为负值</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 设置font-size */</span>
+<span class="token selector">ul</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">ul li</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* 设置margin或letter-spacing或word-spacing */</span>
+<span class="token selector">ul li</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">ul li</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">letter-spacing</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">ul li</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">word-spacing</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>缺点：跨浏览器兼容不好</p>
+<h2 id="终级解决方案"><a href="#终级解决方案" class="headerlink" title="终级解决方案"></a>终级解决方案</h2><h3 id="在父元素上使用display-flex"><a href="#在父元素上使用display-flex" class="headerlink" title="在父元素上使用display: flex"></a>在父元素上使用display: flex</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">ul</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">ul li</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +373,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -335,7 +486,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -469,7 +620,7 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -610,7 +761,7 @@ ele<span class="token punctuation">.</span><span class="token function">click</s
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -741,7 +892,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -840,7 +991,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -967,7 +1118,7 @@ element<span class="token punctuation">.</span><span class="token function">setA
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1086,7 +1237,7 @@ element<span class="token punctuation">.</span><span class="token function">setA
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1193,7 +1344,7 @@ element<span class="token punctuation">.</span><span class="token function">setA
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1269,143 +1420,6 @@ element<span class="token punctuation">.</span><span class="token function">setA
   <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/02/11/css%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93%E4%BD%BF%E7%94%A8flex%E5%B8%83%E5%B1%80%E5%9B%BA%E5%AE%9A%E6%AF%8F%E8%A1%8C%E5%B8%83%E5%B1%80%E6%95%B0%E9%87%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/02/11/css%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93%E4%BD%BF%E7%94%A8flex%E5%B8%83%E5%B1%80%E5%9B%BA%E5%AE%9A%E6%AF%8F%E8%A1%8C%E5%B8%83%E5%B1%80%E6%95%B0%E9%87%8F/" class="post-title-link" itemprop="url">css列表渲染使用flex布局固定每行布局数量</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-02-11 16:43:06" itemprop="dateCreated datePublished" datetime="2019-02-11T16:43:06+00:00">2019-02-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2019/02/11/css%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93%E4%BD%BF%E7%94%A8flex%E5%B8%83%E5%B1%80%E5%9B%BA%E5%AE%9A%E6%AF%8F%E8%A1%8C%E5%B8%83%E5%B1%80%E6%95%B0%E9%87%8F/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/11/css列表渲染使用flex布局固定每行布局数量/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="css列表渲染使用flex布局固定每行布局数量"><a href="#css列表渲染使用flex布局固定每行布局数量" class="headerlink" title="css列表渲染使用flex布局固定每行布局数量"></a>css列表渲染使用flex布局固定每行布局数量</h1><p>在实际应用中，我们常常会使用for循环渲染输出html内容块，然后使用flex布局及flex布局中的flex-wrap属性来使循环渲染的内容块自动换行。这样做的弊端是当浏览器的宽度改变时每行的内容块数量也会改变，无法获得统一的视觉体验。如何使浏览器宽度改变时flex布局每行布局数量不变呢？</p>
-<p>这里有一个小技巧，即对html内容块使用百分比宽度布局。</p>
-<p>仅使用百分比宽度布局则会发现无法给内容块之间设置间距，每个内容块都是紧密相连的。大家可能会想到使用justify-content属性与align-items属性来增加间距，justify-content中的space-around、space-evenly等属性值可以使内容块水平分散对齐，但是最后一行如果未填满，也会被居中，视觉体验并不好。那么如何解决间距问题呢？</p>
-<p>这里我们把刚刚的内容块作为一个容器，给内容块设置一个padding值。这样就有了间距。真正的内容放置在内容块内层的div中即可。</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-    <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.block</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 25%<span class="token punctuation">;</span> <span class="token comment">/* 每行4个 */</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 20%<span class="token punctuation">;</span> <span class="token comment">/* 每行5个 */</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.content</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-    <span class="token property">background</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
       
     </div>
 

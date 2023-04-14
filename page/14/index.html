@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">141</span>
+          <span class="site-state-item-count">142</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,6 +177,126 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2018/04/10/html%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/04/10/html%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/" class="post-title-link" itemprop="url">html特殊字符</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-04-10 12:23:24" itemprop="dateCreated datePublished" datetime="2018-04-10T12:23:24+00:00">2018-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/html/" itemprop="url" rel="index"><span itemprop="name">html</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2018/04/10/html%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/04/10/html特殊字符/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="html-特殊字符"><a href="#html-特殊字符" class="headerlink" title="html 特殊字符"></a>html 特殊字符</h1><h2 id="转义字符串的由来"><a href="#转义字符串的由来" class="headerlink" title="转义字符串的由来"></a>转义字符串的由来</h2><p>HTML 中&lt;，&gt;，&amp;等有特殊含义（&lt;，&gt;，用于链接签，&amp;用于转义），不能直接使用。这些符号是不显示在我们最终看到的网页里的，倘若我们需要在页面中显示这些字符，就需要用到转义字符串了。</p>
+<h2 id="转义字符串的组成"><a href="#转义字符串的组成" class="headerlink" title="转义字符串的组成"></a>转义字符串的组成</h2><p>一个完整的转义字符串，分为三个部分：</p>
+<ul>
+<li>一个&amp;符号(英文为 ampersand)；</li>
+<li>实体名字或#号加上实体编号；</li>
+<li>一个;号；<br>  例如，常用的大于号&gt;，使用转义字符串后的写法为<code>&amp;gt;</code>或<code>&amp;#62;</code>。</li>
+</ul>
+<p>我们注意到，上面的大于号使用了 2 种方式的转义，第一种称为实体名称，第二种为实体编号，区别在于实体名称的优点为便于记忆，但兼容性不完美，实体编号则反之。</p>
+<h2 id="html、css、js-特殊字符"><a href="#html、css、js-特殊字符" class="headerlink" title="html、css、js 特殊字符"></a>html、css、js 特殊字符</h2><p>html 本身存在很多的特殊字符，像我们常见的 Copyright 符号 ©，使用特殊字符需要注意以下几点：</p>
+<ul>
+<li>这些字符属于 unicode 字符集，你的文档需要声明为 utf-8;</li>
+<li>这些字符在 html、css、js 中的书写方式各有不同，例如向左的箭头 ⇠，如下：<ul>
+<li>HTML： <code>&amp;#8672;</code></li>
+<li>CSS： \21E0, css 的写法需要加上反斜杠，常用在 content 属性中</li>
+<li>JS： \u21E0，js 的写法需在 css 的基础上前面加个 u</li>
+</ul>
+</li>
+<li>字符在各浏览器的表现略有区别，使用需谨慎。</li>
+</ul>
+<blockquote>
+<p>引自 <a target="_blank" rel="noopener" href="https://007sair.github.io/2016/07/04/UNICODE/">https://007sair.github.io/2016/07/04/UNICODE/</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +342,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -378,7 +498,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -500,7 +620,7 @@ yum update<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -626,7 +746,7 @@ arr<span class="token punctuation">.</span><span class="token function">concat</
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -768,7 +888,7 @@ arr<span class="token punctuation">.</span><span class="token function">concat</
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -875,7 +995,7 @@ arr<span class="token punctuation">.</span><span class="token function">concat</
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -989,7 +1109,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1099,7 +1219,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1205,7 +1325,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1248,112 +1368,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/02/26/javascript%E7%82%B9%E4%B8%8E%E6%96%B9%E6%8B%AC%E5%8F%B7%E5%8C%BA%E5%88%AB/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2018/02/21/git%E5%BB%BA%E7%AB%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/02/21/git%E5%BB%BA%E7%AB%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="post-title-link" itemprop="url">如何用git配合github或VPS做代码仓库</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2018-02-21 13:09:59" itemprop="dateCreated datePublished" datetime="2018-02-21T13:09:59+00:00">2018-02-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/02/21/git%E5%BB%BA%E7%AB%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/02/21/git建立远程仓库/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>虽然git做为版本控制工具，最大的特点是分布式多人协作，但是对个人开发者来说git除了用来版本控制，还可以当作中心版本库，用来在各个设备间同步代码，省去了用U盘和云盘管理代码的麻烦。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2018/02/21/git%E5%BB%BA%E7%AB%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>

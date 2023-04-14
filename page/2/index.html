@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">141</span>
+          <span class="site-state-item-count">142</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,6 +177,118 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2022/05/01/vps%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E4%B8%8E%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/05/01/vps%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E4%B8%8E%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/" class="post-title-link" itemprop="url">vps安全防护与网站建设</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-05-01 13:41:46" itemprop="dateCreated datePublished" datetime="2022-05-01T13:41:46+00:00">2022-05-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/vps/" itemprop="url" rel="index"><span itemprop="name">vps</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/05/01/vps%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E4%B8%8E%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/05/01/vps安全防护与网站建设/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文基于<a target="_blank" rel="noopener" href="https://xtls.github.io/document/level-0">Project X - 使用指南 - 快速入门文档 - 小小白白话文</a>改写而来，原文是非常非常细致且新手友好的教学文档，十分十分推荐大家阅读。本文在原文基础上，删减了部分篇章，增加了部分说明，增加了个人推荐的工具等，作为个人笔记存档。</p>
+<h2 id="原料准备"><a href="#原料准备" class="headerlink" title="原料准备"></a>原料准备</h2><h3 id="一台-VPS"><a href="#一台-VPS" class="headerlink" title="一台 VPS"></a>一台 VPS</h3><p>首先需要购买一台 VPS。</p>
+<p>VPS（Virtual Private Server）虚拟专用主机，传统虚拟主机是多人共享 IP，共享服务器资源，通过用户权限进行隔离，互相之间会影响，不是很方便；而 VPS 之间虽然可能还是同一台物理主机，但通过虚拟化技术，做到了用户之间操作系统级别的完全隔离，具有 VPS 的最高权限，独享 IP，独享带宽，各 VPS 间互不影响。</p>
+<p>因此购买云服务器时，一定要购买 VPS，而不是共享式的传统虚拟主机。根据个人喜好，选择合适的云服务器商进行购买。</p>
+<p>这里以<a target="_blank" rel="noopener" href="https://bandwagonhost.com/index.php">bandwagonhost</a>为例，10G KVM VPS 年费用为 20$（已无货），20G KVM VPS年费用为50$。</p>
+<p>购买好 VPS 后，登录 VPS 管理后台，安装 Linux 系统。如果不熟悉 Linux 各发行版，或有 Linux 发行版选择困难，这里推荐选择 Debian 11。使用 Debian 11 足以让你的 VPS 服务器在安全、稳健运行的同时得到足够的优化（如 cloud 专用内核、及时的 bbr 支持等）。</p>
+<p>系统安装完成后，在 VPS 管理后台，查看并记录下 VPS 的 IP 地址与 SSH 端口号、Root 账户密码。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/05/01/vps%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E4%B8%8E%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +334,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -334,7 +446,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -447,7 +559,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -554,7 +666,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -680,7 +792,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -871,7 +983,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -980,7 +1092,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1089,7 +1201,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1211,7 +1323,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
+      <time title="Modified: 2023-04-14 04:13:41" itemprop="dateModified" datetime="2023-04-14T04:13:41+00:00">2023-04-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1264,126 +1376,6 @@
 
 <blockquote>
 <p>参考资料 <a target="_blank" rel="noopener" href="https://www.codeleading.com/article/52573150204/">锚点跳转过渡动画</a></p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2022/02/09/typescript%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E6%97%A0%E6%B3%95%E7%94%A8%E4%BA%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%B4%A2%E5%BC%95%E7%AD%BE%E5%90%8D%E5%8F%82%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/09/typescript%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E6%97%A0%E6%B3%95%E7%94%A8%E4%BA%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%B4%A2%E5%BC%95%E7%AD%BE%E5%90%8D%E5%8F%82%E6%95%B0/" class="post-title-link" itemprop="url">typescript联合类型无法用于对象的索引签名参数</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-02-09 16:16:39" itemprop="dateCreated datePublished" datetime="2022-02-09T16:16:39+00:00">2022-02-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-09 10:12:55" itemprop="dateModified" datetime="2023-04-09T10:12:55+00:00">2023-04-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/typescript/" itemprop="url" rel="index"><span itemprop="name">typescript</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2022/02/09/typescript%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E6%97%A0%E6%B3%95%E7%94%A8%E4%BA%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%B4%A2%E5%BC%95%E7%AD%BE%E5%90%8D%E5%8F%82%E6%95%B0/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/09/typescript联合类型无法用于对象的索引签名参数/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>声明了一个联合类型，想要将联合类型作为对象的 key，但是报错。</p>
-<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">type</span> <span class="token class-name">TestUnionType</span> <span class="token operator">=</span> <span class="token string">"foo"</span> <span class="token operator">|</span> <span class="token string">"bar"</span><span class="token punctuation">;</span>
-
-<span class="token keyword">interface</span> <span class="token class-name">TestInterface</span> <span class="token punctuation">&#123;</span>
-  <span class="token punctuation">[</span>index<span class="token operator">:</span> TestUnionType<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token comment">// error message</span>
-<span class="token comment">// An index signature parameter type cannot be a union type. Consider using a mapped object type instead.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>通过报错信息可以看出，联合类型不能作为对象索引签名参数，而应该使用映射对象类型。</p>
-<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">type</span> <span class="token class-name">TestUnionType</span> <span class="token operator">=</span> <span class="token string">"foo"</span> <span class="token operator">|</span> <span class="token string">"bar"</span><span class="token punctuation">;</span>
-
-<span class="token keyword">interface</span> <span class="token class-name">TestInterface</span> <span class="token punctuation">&#123;</span>
-  <span class="token punctuation">[</span>index <span class="token keyword">in</span> TestUnionType<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>参考资料</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/microsoft/TypeScript/issues/24220">Quick fix for ‘unions can’t be used in index signatures, use a mapped object type instead’</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.typescriptlang.org/docs/handbook/2/mapped-types.html">Mapped Types</a></p>
 </blockquote>
 
       
