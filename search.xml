@@ -473,7 +473,7 @@
 <ol>
 <li><p>verb: (of people) gather together in one place for a common purpose. （人）为了共同的目的聚集在一个地方。</p>
 </li>
-<li><p>verb: fit together the separate component parts of (a machine or other object). 将（机器或其他物体）的独立组件装配在一起。</p>
+<li><p>verb: fit together the separate component parts of (a machine or other object). 将（机器或其他物体）的独立组件装配在一起(汽车流水线：automotive-assembly-line)。</p>
 </li>
 <li><p>verb(COMPUTING): translate (a program) from a higher-level programming language into machine code. （计算机）将（程序）高级编程语言编译成机器码。</p>
 </li>
@@ -2159,6 +2159,13 @@
 <li>verb: deny (a person or place) the possession or use of something. 否认（一个人或地方）拥有或使用某物，即剥夺（常见用法：deprive sb. of sth. 剥夺某人的某物，sb. be deprived of sth. 某人被剥夺了某物）。</li>
 </ol>
 </li>
+<li><p>deride</p>
+<ol>
+<li><p>verb: express contempt for; ridicule.</p>
+<p><em>“the decision was derided by environmentalists”</em></p>
+</li>
+</ol>
+</li>
 <li><p>descendant</p>
 <ol>
 <li>noun: a person, plant, or animal that is descended from a particular ancestor. 来自特定祖先的人，植物，或动物，即后代。</li>
@@ -3266,6 +3273,13 @@
 </li>
 </ol>
 </li>
+<li><p>forseeable</p>
+<ol>
+<li><p>adjective: able to be foreseen or predicted.</p>
+<p><em>“the situation is unlikely to change in the foreseeable future”</em></p>
+</li>
+</ol>
+</li>
 <li><p>fortune</p>
 <ol>
 <li><p>noun: chance or luck as an external, arbitrary force affecting human affairs. 机会或运气作为影响人类事务的外在，随机力量，即命运。</p>
@@ -3927,6 +3941,17 @@
 <li><p>adjective(INFORMAL): discourteous or rude. （非正式）无礼或粗鲁的。</p>
 </li>
 <li><p>adjective(WEST INDIAN): angry or quick-tempered. （西印度）生气或脾气暴躁的。</p>
+</li>
+</ol>
+</li>
+<li><p>illiterate</p>
+<ol>
+<li><p>adjective: unable to read or write.</p>
+<p><em>“his parents were illiterate”</em></p>
+</li>
+<li><p>noun: a person who is unable to read or write.</p>
+</li>
+<li><p>phrase: functionally illiterate — lacking the literacy necessary for coping with most jobs and many everyday situations.</p>
 </li>
 </ol>
 </li>
@@ -9009,9 +9034,14 @@
 <p>president n. 总统</p>
 </li>
 <li><p>assist v.n. 协助</p>
+<p>consist v. 组成；与…一致 n. 列车组</p>
+<p>desist v. 停止做某事，弃权</p>
 <p>insist v. 坚称，咬定（表坚定，不容拒绝）</p>
 <p>persist v. 坚持（表持续，不会中断）</p>
 <p>resist v. 抵抗 n. 保护涂层</p>
+</li>
+<li><p>consistent adj. 一贯；连贯；一致</p>
+<p>constant adj. 不变的 n. 不变的情况；常量</p>
 </li>
 <li><p>index n. 索引；指数；幕指数；指针，指标</p>
 <p>indices n. index 复数</p>
@@ -9984,9 +10014,10 @@
 <p>It is astonishing that we should find violence here. 很惊讶的是我们竟然在这里发现了暴力。</p>
 <p>I was in this store when who should I see across the street but Toby？ 当我在这家商店时，除了托比我还能在街对面看到谁？</p>
 </li>
-<li><p>a- 前缀</p>
+<li><p>a- 前缀 (大部分情况为 adjective 词性)</p>
 <ol>
 <li><p>表示状态</p>
+<p>alike 表示 like (相似) 的状态 (也有副词用法)</p>
 <p>asleep 表示 sleep 的状态</p>
 <p>awake 表示 wake 的状态</p>
 <p>astray 表示 stray 的状态</p>
