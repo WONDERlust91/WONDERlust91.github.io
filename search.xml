@@ -12295,6 +12295,60 @@ cordova emulate android<span aria-hidden="true" class="line-numbers-rows"><span>
       </tags>
   </entry>
   <entry>
+    <title>css-transition height from 0 to auto</title>
+    <url>/2023/04/16/css-transition-height-from-0-to-auto/</url>
+    <content><![CDATA[<p>If you are facing issues with the transition of a element from <code>height: 0</code> to <code>height: auto</code>, resulting in a jerky or stuck animation, there is a simple solution to this problem.</p>
+<p>The problem arises because the final height of the element is unknown as it depends on the content inside it. CSS transitions work by calculating the difference between the initial and final states of a property and animating that difference over a specified duration. However, since the final height of the element is not known in advance, the browser cannot calculate the difference and therefore cannot create a transition between the two states.</p>
+<span id="more"></span>
+
+<h2 id="max-height"><a href="#max-height" class="headerlink" title="max-height"></a>max-height</h2><p>One solution to this problem is to use <code>max-height</code> instead of <code>height</code>. Set a value for <code>max-height</code> that is larger than the actual height of the element. The transition will be smooth because the browser knows the final <code>max-height</code> of the element. The <code>height</code> of the element can still be <code>auto</code>.</p>
+<p>However, be sure not to set the <code>max-height</code> value too high. The larger the value is, the faster the animation will be. For example, if the actual <code>height</code> of the element is <code>500px</code>, but you set <code>max-height</code> to <code>5000px</code>. The transition will animate from 0 to 5000 in duration time. This means that the <code>500px</code> of <code>height</code> will only use one fifth of duration time to animate. Therefore, it’s better to set the <code>max-height</code> value as close to the actual height of the element as possible to ensure that transition’s duration is accurate.</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.start</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">max-height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> max-height 0.5s ease-out<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.end</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">/* actual height is less than 500px */</span>
+  <span class="token property">max-height</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<div>
+  <style>
+    .transition-height-from-0-to-auto__demo__trigger:hover + .transition-height-from-0-to-auto__demo__content {
+      max-height: 150px;
+    }
+    .transition-height-from-0-to-auto__demo__content {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease-out;
+    }
+  </style>
+  <p class="transition-height-from-0-to-auto__demo__trigger">hover to show</p>
+  <ul class="transition-height-from-0-to-auto__demo__content">
+    <li>content 1</li>
+    <li>content 2</li>
+    <li>content 3</li>
+    <li>content 4</li>
+  </ul>
+</div>
+<br />
+
+<blockquote>
+<p>References</p>
+<p><a href="https://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css?page=1&tab=scoredesc#tab-top">How can I transition height: 0; to height: auto; using CSS? - stackoverflow</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>transition</tag>
+        <tag>animation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css为什么不建议font-size设置为12px以下</title>
     <url>/2021/09/01/css%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BB%BA%E8%AE%AEfont-size%E8%AE%BE%E7%BD%AE%E4%B8%BA12px%E4%BB%A5%E4%B8%8B/</url>
     <content><![CDATA[<h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>在业务中发现设置小于 12px 的字号不生效，最小只能设置为 12px 的问题。</p>

@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">142</span>
+          <span class="site-state-item-count">143</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,7 +160,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">252</span>
+        <span class="site-state-item-count">254</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,129 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2020/05/03/ORM%E4%B8%8EODM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/05/03/ORM%E4%B8%8EODM/" class="post-title-link" itemprop="url">ORM与ODM</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-05-03 22:49:35" itemprop="dateCreated datePublished" datetime="2020-05-03T22:49:35+00:00">2020-05-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">软件工程</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/05/03/ORM%E4%B8%8EODM/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/03/ORM与ODM/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="ORM"><a href="#ORM" class="headerlink" title="ORM"></a>ORM</h2><p>ORM是Object-Relational-Mapping的缩写。即通过面向对象的语法，完成关系型数据库的操作，这样的对象-关系映射模型就是ORM。通常ORM是作为MVC架构中的Model层。</p>
+<p>ORM使用对象封装了数据库操作，不用书写SQL语言。开发者只要面向对象编程，通过数据对象交互，不用关心底层数据库。</p>
+<p>ORM优点：</p>
+<ul>
+<li><p>数据模型在一个地方定义，易于更新与维护。</p>
+</li>
+<li><p>ORM有现成的工具，很多功能可以自动完成，如数据预处理、事务等。</p>
+</li>
+<li><p>迫使你使用MVC架构，ORM是天然的Model。</p>
+</li>
+<li><p>基于ORM的业务代码简单，代码量少，语义性好，易理解。</p>
+</li>
+<li><p>不必编写性能不佳的SQL语句。</p>
+</li>
+</ul>
+<p>ORM缺点：</p>
+<ul>
+<li><p>ORM库通常都不是轻量级工具，是有一定学习曲线的。</p>
+</li>
+<li><p>对于复杂查询，ORM要么无法表达，要么性能不如原生SQL。</p>
+</li>
+<li><p>ORM抽象了数据库层，开发者无法了解底层的数据库操作，也无法定制一些特殊SQL。</p>
+</li>
+</ul>
+<h2 id="ODM"><a href="#ODM" class="headerlink" title="ODM"></a>ODM</h2><p>ORM对应的是关系型数据库，如MySQL，那么ODM就对应的是文档型数据库，如MongoDB。ODM是Object-Document-Mapping缩写，即对象文档映射。MongoDB对应Node的ODM库是Mongoose。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +345,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -337,7 +460,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -444,7 +567,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -557,7 +680,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -678,7 +801,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -779,7 +902,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -891,7 +1014,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1018,7 +1141,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1134,7 +1257,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1190,133 +1313,6 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
 <p>参考链接 <a target="_blank" rel="noopener" href="https://juejin.im/post/5a94f8eff265da4e9b593c29">JavaScript复制内容到剪贴板</a></p>
 </blockquote>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/07/18/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/07/18/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">SQL学习笔记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-07-18 08:51:08" itemprop="dateCreated datePublished" datetime="2019-07-18T08:51:08+00:00">2019-07-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2019/07/18/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/18/SQL学习笔记/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>SQL 是 Structured Query Language 的缩写。SQL 不是某个特定数据库供应商专有的语言。几乎所有重要的 DMBMS 都支持 SQL。标准 SQL 由 ANSI 标准委员会管理，称为 ANSI SQL。所有主要的 DBMS 即使有自己的扩展，也都支持 ANSI SQL。</p>
-<h3 id="发音"><a href="#发音" class="headerlink" title="发音"></a>发音</h3><ol>
-<li><p>S-Q-L</p>
-</li>
-<li><p>see·kwl</p>
-</li>
-</ol>
-<h3 id="数据库-database：保存有组织数据的容器"><a href="#数据库-database：保存有组织数据的容器" class="headerlink" title="数据库 database：保存有组织数据的容器"></a>数据库 database：保存有组织数据的容器</h3><p>人们常用数据库这个术语来代表他们使用的数据库软件，这是不正确的。数据库软件应称为数据库管理系统（DBMS），数据库是通过 DBMS 创建和操纵的容器。</p>
-<h3 id="表-table：一种用于存储特定类型数据的结构化的文件"><a href="#表-table：一种用于存储特定类型数据的结构化的文件" class="headerlink" title="表 table：一种用于存储特定类型数据的结构化的文件"></a>表 table：一种用于存储特定类型数据的结构化的文件</h3><p>表名是唯一的，用来标识表本身。</p>
-<h3 id="模式-schema：关于数据库和表的布局及特性的信息"><a href="#模式-schema：关于数据库和表的布局及特性的信息" class="headerlink" title="模式 schema：关于数据库和表的布局及特性的信息"></a>模式 schema：关于数据库和表的布局及特性的信息</h3><p>模式定义了数据在表中如何存储以及数据库中表的关系，也包括对特定表的描述。</p>
-<h3 id="列-column：表中的一个字段"><a href="#列-column：表中的一个字段" class="headerlink" title="列 column：表中的一个字段"></a>列 column：表中的一个字段</h3><p>所有表都是由一个或多个列组成。</p>
-<h3 id="数据类型-datatype：定义了列可以存储哪些数据种类，每个列都有相应的数据类型"><a href="#数据类型-datatype：定义了列可以存储哪些数据种类，每个列都有相应的数据类型" class="headerlink" title="数据类型 datatype：定义了列可以存储哪些数据种类，每个列都有相应的数据类型"></a>数据类型 datatype：定义了列可以存储哪些数据种类，每个列都有相应的数据类型</h3><p>数据类型及其名称是 SQL 不兼容的一个主要原因。</p>
-<p>注意：<strong>字符串类型值在 SQL 中都使用单引号’’</strong></p>
-<h3 id="行-row：表中的一个记录-record"><a href="#行-row：表中的一个记录-record" class="headerlink" title="行 row：表中的一个记录 record"></a>行 row：表中的一个记录 record</h3><h3 id="主键-primary-key：能够唯一标识表中每一行的列或一组列"><a href="#主键-primary-key：能够唯一标识表中每一行的列或一组列" class="headerlink" title="主键 primary key：能够唯一标识表中每一行的列或一组列"></a>主键 primary key：能够唯一标识表中每一行的列或一组列</h3><p>每个表都应该具有一个主键，以便后续的数据操作与管理。</p>
-<p>表中任何列都可以做为主键，只要满足下列条件：</p>
-<ol>
-<li>任意两行都不具有相同的主键值；</li>
-<li>每一行都必须具有一个主键值（主键列不允许 NULL 值）；</li>
-<li><strong>主键列中的值不允许修改或更新</strong>；</li>
-<li><strong>主键值不能重用（如果某行从表中删除，它的主键不能不能赋给以后的新行）</strong>。</li>
-</ol>
-<p>在使用多列做为主键时，上述条件必须应用到所有列，所有列值的组合必须是唯一的（但是单个列的值可以不唯一）。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/07/18/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 

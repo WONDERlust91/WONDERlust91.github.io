@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">142</span>
+          <span class="site-state-item-count">143</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,7 +160,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">252</span>
+        <span class="site-state-item-count">254</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,114 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/10/23/css%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E9%80%89%E6%8B%A9%E7%9B%B8%E9%82%BB%E7%9A%84%E5%89%8D%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/10/23/css%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E9%80%89%E6%8B%A9%E7%9B%B8%E9%82%BB%E7%9A%84%E5%89%8D%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/" class="post-title-link" itemprop="url">css为什么不能选择相邻的前一个元素</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-10-23 10:03:22" itemprop="dateCreated datePublished" datetime="2021-10-23T10:03:22+00:00">2021-10-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2021/10/23/css%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E9%80%89%E6%8B%A9%E7%9B%B8%E9%82%BB%E7%9A%84%E5%89%8D%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/10/23/css为什么不能选择相邻的前一个元素/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>UI 设计了一个特殊的 Tab 页效果，需要在选中某个 Tab 后，改变相邻两个 Tab 的样式。因此需要选中后一个兄弟元素与前一个兄弟元素。</p>
+<h2 id="为什么没有前一个兄弟元素的选择器"><a href="#为什么没有前一个兄弟元素的选择器" class="headerlink" title="为什么没有前一个兄弟元素的选择器"></a>为什么没有前一个兄弟元素的选择器</h2><p>CSS 中有<code>~</code>来选中所有后续兄弟元素，<code>+</code>来选中紧邻的后续兄弟元素，为什么没有语法能选中紧邻的前一个兄弟元素？</p>
+<p>查阅资料后发现，诸如 查找子元素的直接父元素、查找子元素的祖先元素、查找某元素的前一个紧邻兄弟元素 这样的选择器，CSS 中都未实现。<strong>因为这样的选择器会导致回溯。</strong></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/10/23/css%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E9%80%89%E6%8B%A9%E7%9B%B8%E9%82%BB%E7%9A%84%E5%89%8D%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +330,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -330,7 +438,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -440,7 +548,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -557,7 +665,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -680,7 +788,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -789,7 +897,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -899,7 +1007,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1005,7 +1113,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1139,7 +1247,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1182,114 +1290,6 @@
 <p><a target="_blank" rel="noopener" href="https://drafts.csswg.org/css-color/#rgb-functions">rgb-functions</a></p>
 </blockquote>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/07/25/vue3-vite-typescript-element-plus%E5%88%9D%E6%8E%A2%E4%B8%8E%E8%B8%A9%E5%9D%91%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/25/vue3-vite-typescript-element-plus%E5%88%9D%E6%8E%A2%E4%B8%8E%E8%B8%A9%E5%9D%91%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">vue3_vite_typescript_element-plus初探与踩坑总结</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-25 16:01:59" itemprop="dateCreated datePublished" datetime="2021-07-25T16:01:59+00:00">2021-07-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/vue3/" itemprop="url" rel="index"><span itemprop="name">vue3</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/07/25/vue3-vite-typescript-element-plus%E5%88%9D%E6%8E%A2%E4%B8%8E%E8%B8%A9%E5%9D%91%E6%80%BB%E7%BB%93/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/25/vue3-vite-typescript-element-plus初探与踩坑总结/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>平时公司都在用 react，最近正好一个项目原先的代码使用了 vue 框架，项目只是 demo 阶段，代码量还很少，而且 vue3 已发布接近一年了，就考虑在这个项目上切换 vue3 框架。</p>
-<h2 id="当下的-vue3-背景情况"><a href="#当下的-vue3-背景情况" class="headerlink" title="当下的 vue3 背景情况"></a>当下的 vue3 背景情况</h2><p>自 2020 年 9 月 vue 正式发布 vue3 版本后，已接近一年时间，官方已经有了中文版 vue3 文档，通读官方文档并尝试后，感觉与 typescript 结合使用，并没有想象中那么丝滑。遂又去官方 github 上查询资料，发现 script setup 标签更适合与 typescript 结合使用。犹记得 2020 年底时 script setup 标签与 ref 语法糖还是引起了很大的争议的，而官方文档中却又都未提及。查询 rfcs 后发现 script setup 标签刚刚正式定版，在 3.1.3 版本中正式发布，在 3.2.0 版本中去除试验状态，成为正式的语法。而 ref 语法糖因为太过激进，语法与 js 差异太大，而被废除。</p>
-<p>综合来看，当下 vue 官方文档对 vue3 的介绍重点还在于与 vue2 版本的兼容，vue2 的绝大部分语法，vue3 依然支持，vue3 只是在 vue2 的基础上增加了 setup 函数。与 typescript 的结合使用，也是基于 vue2 兼容加 setup 函数的基础上介绍，甚至在 props 定义类型时，还混合了 typescript 类型断言与 js 的类型构造函数，感觉有些别扭。而官方文档中尚未提及的 script setup 标签语法，才像是 vue3 不考虑 vue2 语法兼容性的功能完整释放，借助一系列 API，也可以与 typescript 有更好的结合使用体验。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/07/25/vue3-vite-typescript-element-plus%E5%88%9D%E6%8E%A2%E4%B8%8E%E8%B8%A9%E5%9D%91%E6%80%BB%E7%BB%93/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 

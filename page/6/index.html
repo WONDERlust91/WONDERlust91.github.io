@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">142</span>
+          <span class="site-state-item-count">143</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,7 +160,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">252</span>
+        <span class="site-state-item-count">254</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,179 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/06/02/javascript%E7%94%9F%E6%88%90%E5%9C%86%E5%BD%A2%E5%88%86%E5%B8%83%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%9D%90%E6%A0%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/06/02/javascript%E7%94%9F%E6%88%90%E5%9C%86%E5%BD%A2%E5%88%86%E5%B8%83%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%9D%90%E6%A0%87/" class="post-title-link" itemprop="url">javascript生成圆形分布的位置坐标</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-06-02 16:27:27" itemprop="dateCreated datePublished" datetime="2021-06-02T16:27:27+00:00">2021-06-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2021/06/02/javascript%E7%94%9F%E6%88%90%E5%9C%86%E5%BD%A2%E5%88%86%E5%B8%83%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%9D%90%E6%A0%87/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/06/02/javascript生成圆形分布的位置坐标/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="圆形布局-应用场景"><a href="#圆形布局-应用场景" class="headerlink" title="圆形布局-应用场景"></a>圆形布局-应用场景</h2><p>在使用 echarts 关系图 graph 时，若要使用圆形或引力自动布局坐标系必须为 null；想要使关系图连线有动态效果，又需要使用动态的路线图 lines，lines 必需使用 cartesian2d 或 geo 的坐标系；因此为了实现动效，只能放弃自动圆形布局，手动计算出一个圆形布局的坐标。</p>
+<h2 id="圆形布局-代码示例"><a href="#圆形布局-代码示例" class="headerlink" title="圆形布局-代码示例"></a>圆形布局-代码示例</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
+ * 根据中心位置坐标、布局半径、布局数量及布局角度范围，按圆平均计算布局位置
+ * @param &#123;array&#125; centerPosition 中心位置数组
+ * @param &#123;number&#125; r 布局半径
+ * @param &#123;number&#125; number 布局数量
+ * @param &#123;number&#125; startAngle 布局起始角度，默认为0
+ * @param &#123;number&#125; endAngle 布局结束角度，默认为360
+ * @returns 生成的布局位置数组
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">calcLayoutCircular</span><span class="token punctuation">(</span><span class="token parameter">centerPosition<span class="token punctuation">,</span> r<span class="token punctuation">,</span> number<span class="token punctuation">,</span> startAngle <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> endAngle <span class="token operator">=</span> <span class="token number">360</span></span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">/**
+   * 将传入的任意角度转换为0-360度的角度
+   * @param &#123;number&#125;&#125; angle 传入角度
+   * @returns 转换后的角度
+   */</span>
+  <span class="token keyword">function</span> <span class="token function">normalizeAngle</span><span class="token punctuation">(</span><span class="token parameter">angle</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 任意角度相对360度取余数</span>
+    <span class="token keyword">const</span> normalizedAngle <span class="token operator">=</span> angle <span class="token operator">%</span> <span class="token number">360</span><span class="token punctuation">;</span>
+    <span class="token comment">// 若为负角度则加上360度，转换为正角度</span>
+    <span class="token keyword">return</span> normalizedAngle <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">?</span> normalizedAngle <span class="token operator">+</span> <span class="token number">360</span> <span class="token operator">:</span> normalizedAngle<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  startAngle <span class="token operator">=</span> <span class="token function">normalizeAngle</span><span class="token punctuation">(</span>startAngle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  endAngle <span class="token operator">=</span> <span class="token function">normalizeAngle</span><span class="token punctuation">(</span>endAngle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> intervalAngle<span class="token punctuation">;</span>
+  <span class="token comment">// 计算间隔角度</span>
+  <span class="token comment">// 若角度范围是完整圆周，起始角度与结束角度只占用一个布局数量，按布局数量平均分配角度即可；</span>
+  <span class="token comment">// 若角度范围不是完整圆周，则起始角度与结束角度会占用两个布局数量，需要以 number - 1 计算角度间隔，若number为1时不减1</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>endAngle <span class="token operator">-</span> startAngle <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    intervalAngle <span class="token operator">=</span> <span class="token number">360</span> <span class="token operator">/</span> number<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+    intervalAngle <span class="token operator">=</span> <span class="token function">normalizeAngle</span><span class="token punctuation">(</span>endAngle <span class="token operator">-</span> startAngle<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>number <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token comment">// 根据布局数量与间隔角度计算所有布局位置</span>
+  <span class="token keyword">const</span> positionArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> number<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> angle <span class="token operator">=</span> <span class="token function">normalizeAngle</span><span class="token punctuation">(</span>startAngle <span class="token operator">+</span> intervalAngle <span class="token operator">*</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> x <span class="token operator">=</span> centerPosition<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> r <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">sin</span><span class="token punctuation">(</span><span class="token punctuation">(</span>angle <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> y <span class="token operator">=</span> centerPosition<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> r <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">cos</span><span class="token punctuation">(</span><span class="token punctuation">(</span>angle <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    positionArr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      angle<span class="token punctuation">,</span>
+      <span class="token literal-property property">position</span><span class="token operator">:</span> <span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> positionArr<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="标签位置-应用场景"><a href="#标签位置-应用场景" class="headerlink" title="标签位置-应用场景"></a>标签位置-应用场景</h2><p>使用圆形布局后，当元素标签不放在元素上居中显示，而要根据相对圆心的位置，显示在上、右、下、左等不同方位时，使用此方法计算。</p>
+<h2 id="标签位置-代码示例"><a href="#标签位置-代码示例" class="headerlink" title="标签位置-代码示例"></a>标签位置-代码示例</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
+ * 根据传入的角度（当前元素相对圆心的角度）计算出标签位置，简单模式只计算左右，非简单模式计算上下左右
+ * @param &#123;number&#125; angle 传入的角度
+ * @param &#123;boolean&#125; simple 是否简单模式
+ * @returns 位置字符串
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">calcLabelPositionByAngle</span><span class="token punctuation">(</span><span class="token parameter">angle<span class="token punctuation">,</span> simple <span class="token operator">=</span> <span class="token boolean">true</span></span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>simple<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>angle <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> angle <span class="token operator">&lt;</span> <span class="token number">180</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token string">"right"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token string">"left"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>angle <span class="token operator">></span> <span class="token number">275</span> <span class="token operator">||</span> angle <span class="token operator">&lt;=</span> <span class="token number">45</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token string">"top"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>angle <span class="token operator">></span> <span class="token number">45</span> <span class="token operator">&amp;&amp;</span> angle <span class="token operator">&lt;=</span> <span class="token number">135</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token string">"right"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>angle <span class="token operator">></span> <span class="token number">135</span> <span class="token operator">&amp;&amp;</span> angle <span class="token operator">&lt;=</span> <span class="token number">215</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token string">"bottom"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>angle <span class="token operator">></span> <span class="token number">215</span> <span class="token operator">&amp;&amp;</span> angle <span class="token operator">&lt;=</span> <span class="token number">275</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token string">"left"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token string">"top"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +395,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -374,7 +547,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -545,7 +718,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -650,7 +823,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -861,7 +1034,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -968,7 +1141,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1078,7 +1251,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1186,7 +1359,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1296,7 +1469,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1337,122 +1510,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/05/06/javascript%E6%89%B9%E9%87%8F%E5%8F%96%E6%B6%88%E8%AF%B7%E6%B1%82/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/05/06/javascript%E5%9C%A8fetch%E4%B8%AD%E4%BD%BF%E7%94%A8POST%E6%96%B9%E6%B3%95%E4%BC%A0%E8%BE%93x-www-form-urlencoded%E6%A0%BC%E5%BC%8F%E6%95%B0%E6%8D%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/06/javascript%E5%9C%A8fetch%E4%B8%AD%E4%BD%BF%E7%94%A8POST%E6%96%B9%E6%B3%95%E4%BC%A0%E8%BE%93x-www-form-urlencoded%E6%A0%BC%E5%BC%8F%E6%95%B0%E6%8D%AE/" class="post-title-link" itemprop="url">javascript在fetch中使用POST方法传输x-www-form-urlencoded格式数据</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-05-06 10:00:07" itemprop="dateCreated datePublished" datetime="2021-05-06T10:00:07+00:00">2021-05-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/05/06/javascript%E5%9C%A8fetch%E4%B8%AD%E4%BD%BF%E7%94%A8POST%E6%96%B9%E6%B3%95%E4%BC%A0%E8%BE%93x-www-form-urlencoded%E6%A0%BC%E5%BC%8F%E6%95%B0%E6%8D%AE/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/05/06/javascript在fetch中使用POST方法传输x-www-form-urlencoded格式数据/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="使用-fetch"><a href="#使用-fetch" class="headerlink" title="使用 fetch"></a>使用 fetch</h2><p>fetch 与 XMLHttpRequest 实现的 jQuery.ajax() 有以下三点不同：</p>
-<ul>
-<li>当接收到一个代表错误的 HTTP 状态码时（即使响应的 HTTP 状态码是 404 或 500），从 fetch 返回的 Promise 不会被标记为 reject。它会将 Promise 状态标记为 resolve（但是会将 resolve 返回值的 ok 属性设置为 false），仅当网络故障时或请求被阻止时，才会标记为 reject；</li>
-<li>fetch 可以接受跨域 cookies；</li>
-<li>fetch 默认不发送 cookies，除非你使用了 credentials 选项；</li>
-</ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"http:// example.com/movies.json"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">return</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p><code>fetch()</code> 获取到的只是一个 HTTP 响应，而不是真正的 JSON，为了获取真正的 JSON 内容，需要使用 <code>json()</code> 方法。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/06/javascript%E5%9C%A8fetch%E4%B8%AD%E4%BD%BF%E7%94%A8POST%E6%96%B9%E6%B3%95%E4%BC%A0%E8%BE%93x-www-form-urlencoded%E6%A0%BC%E5%BC%8F%E6%95%B0%E6%8D%AE/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>

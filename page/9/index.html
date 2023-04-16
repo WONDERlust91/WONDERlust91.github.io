@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">142</span>
+          <span class="site-state-item-count">143</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,7 +160,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">252</span>
+        <span class="site-state-item-count">254</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,133 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/07/18/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/07/18/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">SQL学习笔记</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-07-18 08:51:08" itemprop="dateCreated datePublished" datetime="2019-07-18T08:51:08+00:00">2019-07-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2019/07/18/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/18/SQL学习笔记/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>SQL 是 Structured Query Language 的缩写。SQL 不是某个特定数据库供应商专有的语言。几乎所有重要的 DMBMS 都支持 SQL。标准 SQL 由 ANSI 标准委员会管理，称为 ANSI SQL。所有主要的 DBMS 即使有自己的扩展，也都支持 ANSI SQL。</p>
+<h3 id="发音"><a href="#发音" class="headerlink" title="发音"></a>发音</h3><ol>
+<li><p>S-Q-L</p>
+</li>
+<li><p>see·kwl</p>
+</li>
+</ol>
+<h3 id="数据库-database：保存有组织数据的容器"><a href="#数据库-database：保存有组织数据的容器" class="headerlink" title="数据库 database：保存有组织数据的容器"></a>数据库 database：保存有组织数据的容器</h3><p>人们常用数据库这个术语来代表他们使用的数据库软件，这是不正确的。数据库软件应称为数据库管理系统（DBMS），数据库是通过 DBMS 创建和操纵的容器。</p>
+<h3 id="表-table：一种用于存储特定类型数据的结构化的文件"><a href="#表-table：一种用于存储特定类型数据的结构化的文件" class="headerlink" title="表 table：一种用于存储特定类型数据的结构化的文件"></a>表 table：一种用于存储特定类型数据的结构化的文件</h3><p>表名是唯一的，用来标识表本身。</p>
+<h3 id="模式-schema：关于数据库和表的布局及特性的信息"><a href="#模式-schema：关于数据库和表的布局及特性的信息" class="headerlink" title="模式 schema：关于数据库和表的布局及特性的信息"></a>模式 schema：关于数据库和表的布局及特性的信息</h3><p>模式定义了数据在表中如何存储以及数据库中表的关系，也包括对特定表的描述。</p>
+<h3 id="列-column：表中的一个字段"><a href="#列-column：表中的一个字段" class="headerlink" title="列 column：表中的一个字段"></a>列 column：表中的一个字段</h3><p>所有表都是由一个或多个列组成。</p>
+<h3 id="数据类型-datatype：定义了列可以存储哪些数据种类，每个列都有相应的数据类型"><a href="#数据类型-datatype：定义了列可以存储哪些数据种类，每个列都有相应的数据类型" class="headerlink" title="数据类型 datatype：定义了列可以存储哪些数据种类，每个列都有相应的数据类型"></a>数据类型 datatype：定义了列可以存储哪些数据种类，每个列都有相应的数据类型</h3><p>数据类型及其名称是 SQL 不兼容的一个主要原因。</p>
+<p>注意：<strong>字符串类型值在 SQL 中都使用单引号’’</strong></p>
+<h3 id="行-row：表中的一个记录-record"><a href="#行-row：表中的一个记录-record" class="headerlink" title="行 row：表中的一个记录 record"></a>行 row：表中的一个记录 record</h3><h3 id="主键-primary-key：能够唯一标识表中每一行的列或一组列"><a href="#主键-primary-key：能够唯一标识表中每一行的列或一组列" class="headerlink" title="主键 primary key：能够唯一标识表中每一行的列或一组列"></a>主键 primary key：能够唯一标识表中每一行的列或一组列</h3><p>每个表都应该具有一个主键，以便后续的数据操作与管理。</p>
+<p>表中任何列都可以做为主键，只要满足下列条件：</p>
+<ol>
+<li>任意两行都不具有相同的主键值；</li>
+<li>每一行都必须具有一个主键值（主键列不允许 NULL 值）；</li>
+<li><strong>主键列中的值不允许修改或更新</strong>；</li>
+<li><strong>主键值不能重用（如果某行从表中删除，它的主键不能不能赋给以后的新行）</strong>。</li>
+</ol>
+<p>在使用多列做为主键时，上述条件必须应用到所有列，所有列值的组合必须是唯一的（但是单个列的值可以不唯一）。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/07/18/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +349,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -346,7 +473,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -471,7 +598,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -597,7 +724,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -708,7 +835,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -818,7 +945,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -930,7 +1057,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1063,7 +1190,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1185,7 +1312,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
+      <time title="Modified: 2023-04-16 04:25:36" itemprop="dateModified" datetime="2023-04-16T04:25:36+00:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1235,113 +1362,6 @@ cordova create testApp test.example.com testApp<span aria-hidden="true" class="l
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/06/03/cordova%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85androidApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/06/01/css%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8scoped%E5%B1%9E%E6%80%A7%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/06/01/css%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8scoped%E5%B1%9E%E6%80%A7%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">css在vue组件中使用scoped属性无法修改另一个组件的全局样式</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-06-01 10:10:15" itemprop="dateCreated datePublished" datetime="2019-06-01T10:10:15+00:00">2019-06-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 16:35:57" itemprop="dateModified" datetime="2023-04-14T16:35:57+00:00">2023-04-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2019/06/01/css%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8scoped%E5%B1%9E%E6%80%A7%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/01/css在vue中使用scoped属性无法修改全局样式/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>我们在 vue 的使用过程中常常会遇到这样的问题，想要在局部的 vue 文件中修改一个组件中的全局样式，且不影响全局，只在当前的 vue 文件中生效。我们直觉上就是通过 style 标签上 scoped 属性来实现局部生效，不影响全局。但是事实上这样做并没有效果，局部的样式并没有生效，这是为什么呢？</p>
-<p>让我们用一个例子来说明问题，假设我们在当前组件 A 中使用的另一个组件 B，组件 B 中使用了一个全局的样式：字为红色。我们想让 B 组件在 A 组件中使用时字为蓝色，而在其他地方使用时字依然是红色。我们在 A 组件中给 style 标签设置了 scoped 属性，然后设置.foo 的类为蓝色，结果并未生效。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/06/01/css%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8scoped%E5%B1%9E%E6%80%A7%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
