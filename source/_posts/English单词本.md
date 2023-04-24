@@ -873,6 +873,12 @@ categories: English
 
   1. noun: the citizens of a place regarded collectively. 被统一看待的一个地方的公民们，即公民（抽象概念上的）。
 
+- civility
+
+  1. noun: formal politeness and courtesy in behavior or speech.
+
+     _"I hope we can treat each other with civility and respect"_
+
 - chipmunk
 
   1. noun: a burrowing ground squirrel with cheek pouches and light and dark stripes running down the body, found in North America and northern Eurasia. 花栗鼠，在北美和欧亚大陆北部发现的一种地面穴居松鼠，脸部带有颊囊并且有沿着身体延伸的明暗条纹。
@@ -961,6 +967,12 @@ categories: English
 
   6. verb: strike (cymbals) together, producing a loud discordant sound. 敲击（钹）到一起，产生巨大的不和谐的声音。
 
+- clergy
+
+  1. noun: the body of all people ordained for religious duties, especially in the Christian Church.
+
+     _"all marriages were to be solemnized by the clergy"_
+
 - clientele
 
   1. noun: clients collectively. 客户群体。
@@ -1016,6 +1028,16 @@ categories: English
      - (MILITARY) a narrow-fronted deep formation of troops in successive lines. 连续窄向纵深排列的部队。
 
      - a military force or convoy of ships. 部队或护航舰队。
+
+- commitment
+
+  1. noun: the state or quality of being dedicated to a cause, activity, etc.
+
+     _"the company's commitment to quality"_
+
+  2. noun: an engagement or obligation that restricts freedom of action.
+
+     _"business commitments"_
 
 - commodity
 
@@ -1108,6 +1130,42 @@ categories: English
   2. noun(PHYSICS): the property of a material of undergoing elastic deformation or (of a gas) change in volume when subjected to an applied force. It is equal to the reciprocal of stiffness. （物理）材料在受力时发生弹性变形或（气体）体积变化的特性。它等于刚度的倒数。
 
      - (MEDICINE) the ability of an organ to distend in response to applied pressure. （医学）器官响应施加的压力而扩张的能力。
+
+- compose
+
+  1. verb: write or create (a work of art, especially music or poetry).
+
+     _"he composed the First Violin Sonata four years earlier"_
+
+  2. verb: (of elements) constitute or make up (a whole).
+
+     _"the system is composed of a group of machines"_
+
+  3. verb: calm or settle (oneself or one's features or thoughts).
+
+     _"she tried to compose herself"_
+
+  4. verb: prepare (a text) for printing by manually, mechanically, or electronically setting up the letters and other characters in the order to be printed.
+
+     _"in offices where close-set text was composed both men and women pieceworkers were normally employed"_
+
+- composition
+
+  1. noun: the nature of something's ingredients or constituents; the way in which a whole or mixture is made up.
+
+     _"the social composition of villages"_
+
+  2. noun: a work of music, literature, or art.
+
+     _"Chopin's most romantic compositions"_
+
+  3. noun: the preparing of text for printing by setting up the characters in order.
+
+     _"an external contractor providing computerized composition and typesetting"_
+
+  4. noun: a legal agreement to pay an amount of money in lieu of a larger debt or other obligation.
+
+     _"he had been released by deed on making a composition with the creditors"_
 
 - comprehend
 
@@ -1805,6 +1863,24 @@ categories: English
 
   2. noun: a particular sector of a population. 人口的特定部分，即人口统计的结果、情况。
 
+- dependent
+
+  1. adjective: contingent on or determined by.
+
+     _"the various benefits will be dependent on length of service"_
+
+  2. adjective: requiring someone or something for financial, emotional, or other support.
+
+     _"an economy heavily dependent on oil exports"_
+
+  3. adjective(GRAMMAR): (of a clause, phrase, or word) subordinate to another clause, phrase, or word.
+
+     _"a clause dependent on another clause"_
+
+  4. noun: a person who relies on another, especially a family member, for financial support.
+
+     _"a single man with no dependents"_
+
 - depict
 
   1. verb: show or represent by a drawing, painting, or other art form. 以图画，绘画，或其他艺术形式展示或表现。
@@ -2014,6 +2090,18 @@ categories: English
 - divisive
 
   1. adjective: tending to cause disagreement or hostility between people. 容易导致人与人之间分歧或敌意的。
+
+- dominant
+
+  1. adjective: most important, powerful, or influential.
+
+     _"they are now in an even more dominant position in the market"_
+
+  2. noun(GENETICS): a dominant trait or gene.
+
+     _"this disorder is inherited as a dominant"_
+
+  3. noun(MUSIC): the fifth note of the diatonic scale of any key, or the key based on this, considered in relation to the key of the tonic.
 
 - doom
 
@@ -2314,6 +2402,12 @@ categories: English
   1. noun: a widespread occurrence of an infectious disease in a community at a particular time. 在特定时间在社区中广泛发生的传染病。
 
   2. adjective: of the nature of an epidemic. 流行病的性质的。
+
+- episode
+
+  1. noun: an event or a group of events occurring as part of a larger sequence; an incident or period considered in isolation.
+
+     _"the latest episode in the feud"_
 
 - equivalent
 
@@ -3589,6 +3683,16 @@ categories: English
 
   3. noun: teaching; education. 教学；教育。
 
+- intellectual
+
+  1. adjective: relating to intellect.
+
+     _"children need intellectual stimulation"_
+
+  2. noun: a person possessing a highly developed intellect.
+
+     _"a prominent political thinker and intellectual"_
+
 - intelligence
 
   1. noun: the ability to acquire and apply knowledge and skills. 获得和应用知识和技能的能力，即智慧。
@@ -4039,6 +4143,12 @@ categories: English
 
   1. noun: the state, fact, or period of being mature. 成熟的状态、事实或时期。
 
+- meanwhile
+
+  1. adverb: in the intervening period of time.
+
+     _"Julie has meanwhile found herself another dancing partner"_
+
 - mediocrity
 
   1. noun: the quality or state of being mediocre. 平庸的质量或状态。
@@ -4340,6 +4450,12 @@ categories: English
   2. verb: keep from being seen; conceal.
 
      _"gray clouds obscure the sun."_
+
+- obsess
+
+  1. verb: preoccupy or fill the mind of (someone) continually, intrusively, and to a troubling extent.
+
+     _"he was obsessed with the theme of death"_
 
 - obsession
 
@@ -5021,6 +5137,12 @@ categories: English
 
   1. adjective: relating to or denoting the period before written records. 关于或表示有书面记录之前的时期，即史前的。
 
+- preoccupy
+
+  1. verb: (of a matter or subject) dominate or engross the mind of (someone) to the exclusion of other thoughts.
+
+     _"his mother was preoccupied with paying the bills"_
+
 - prescribe
 
   1. verb: (of a medical practitioner) advise and authorize the use of (a medicine or treatment) for someone, especially in writing. （医生）为某人建议并授权使用（药物或治疗），尤其是书面上的。
@@ -5212,6 +5334,14 @@ categories: English
   1. noun: a student in school. 小学学生。
 
   2. noun: the dark circular opening in the center of the iris of the eye, varying in size to regulate the amount of light reaching the retina. 在眼睛虹膜中心的黑色圆形开口，大小可变以调节到达视网膜的通光量，即瞳孔。
+
+- Puritan
+
+  1. noun: a member of a group of English Protestants of the late 16th and 17th centuries who regarded the Reformation of the Church of England under Elizabeth as incomplete and sought to simplify and regulate forms of worship.
+
+  2. adjective: relating to the Puritans.
+
+     _"a Puritan parliamentarian"_
 
 - put down roots
 
@@ -5710,6 +5840,10 @@ categories: English
   1. adjective: causing great public interest and excitement. 引起公众极大的兴趣和兴奋。
 
   2. adjective(INFORMAL): very good indeed; very impressive or attractive. 确实非常好；非常令人印象深刻或有吸引力。
+
+- sermen
+
+  1. noun: a talk on a religious or moral subject, especially one given during a church service and based on a passage from the Bible.
 
 - serve
 
@@ -6617,6 +6751,18 @@ categories: English
 
   4. adjective(BRITISH·BUILDING): denoting a quantity of a material expressed in terms of area covered rather than linear dimension or volume. （英国·建筑）表示以覆盖面积而不是以线性尺寸或体积表示的材料数量。
 
+- superstition
+
+  1. noun: excessively credulous belief in and reverence for supernatural beings.
+
+     _"he dismissed the ghost stories as mere superstition"_
+
+- superstitious
+
+  1. adjective: having or showing a belief in superstitions.
+
+     _"many superstitious beliefs and practices are connected with sneezing"_
+
 - supervise
 
   1. verb: observe and direct the execution of (a task, project, or activity). 观察和指导（任务、项目或活动）的执行。
@@ -6769,6 +6915,16 @@ categories: English
 
   5. verb: make determined efforts to deal with (a problem or difficult task). 下定决心去处理（问题或困难的任务）。
 
+- tailor
+
+  1. noun: a person whose occupation is making fitted clothes such as suits, pants, and jackets to fit individual customers.
+
+  2. noun: another term for bluefish.
+
+  3. verb: (of a tailor) make (clothes) to fit individual customers.
+
+     _"he was wearing a sports coat that had obviously been tailored in New York"_
+
 - teller
 
   1. noun(NORTH AMERICAN): a person employed to deal with customers' transactions in a bank. （北美）受雇于银行处理客户交易的人。
@@ -6837,6 +6993,12 @@ categories: English
 
   2. noun(INFORMAL): used by nudists to describe someone wearing clothes, especially on a beach. 裸体主义者用于形容穿衣服的人，尤其是在沙滩上。
 
+- theology
+
+  1. noun: the study of the nature of God and religious belief.
+
+     _"a theology degree"_
+
 - therapist
 
   1. noun: a person skilled in a particular kind of therapy. 擅长某种特定疗法的人。
@@ -6858,6 +7020,12 @@ categories: English
 - think tank
 
   1. noun: a body of experts providing advice and ideas on specific political or economic problems. 在特定的政治或经济问题提供建议和想法的一组专家。
+
+- thorough
+
+  1. adjective: complete with regard to every detail; not superficial or partial.
+
+     _"planners need a thorough understanding of the subject"_
 
 - thrift
 
@@ -7204,6 +7372,12 @@ categories: English
   1. adverb: in a way that involves physical strength, effort, or energy; strenuously. 以一种涉及体力，努力，或能量的方式；用力地。
 
   2. adverb: forcefully. 强行地，极力地。
+
+- virtuosity
+
+  1. noun: great skill in music or another artistic pursuit.
+
+     _"a performance of considerable virtuosity"_
 
 - vitality
 

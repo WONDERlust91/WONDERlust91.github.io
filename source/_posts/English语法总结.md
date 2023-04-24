@@ -751,3 +751,7 @@ have been doing 从过去到现在一直做某事
 - range from A to B
 
   The store sells something to public, ranging in price from $2 to $4.
+
+- attach importance/significance/value/weight to
+
+  People attach too much importance to economic forecasts.

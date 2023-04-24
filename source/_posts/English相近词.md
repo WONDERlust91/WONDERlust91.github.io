@@ -217,6 +217,10 @@ categories: English
 
   （complement 指补充完整，完美；supplement 指补充额外的数量）
 
+- complementary adj. 补充的，补强的；辅助治疗的
+
+  complimentary adj. 表示赞美，赞同；免费提供
+
 - confer v. 授予；商讨
 
   defer v. 推迟；听从
@@ -611,6 +615,12 @@ categories: English
 
   resident n. 居民（由居住地决定）
 
+- civil adj. 国民的，平民的；客气的，礼貌的
+
+  civil servant n. 公务员
+
+  civility n. 正式的礼貌或礼节
+
 - 表示“垄断”
 
   monopoly n. 垄断（指整体概念）；大富翁游戏
@@ -820,6 +830,18 @@ categories: English
     obey
 
     respect
+
+- “移民”相关
+
+  immigrate v. 移民（移入）
+
+  immigrant n. 移民
+
+  emigrate v. 移出
+
+  migrate v. 迁徙（无国家概念）
+
+  migrant n. 迁徙者（外地打工）
 
 ## 反义词
 
