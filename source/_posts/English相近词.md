@@ -85,7 +85,7 @@ categories: English
 
 - assist v.n. 协助
 
-  consist v. 组成；与...一致 n. 列车组
+  consist v. 组成；与...一致（固定搭配 of） n. 列车组
 
   desist v. 停止做某事，弃权
 
@@ -394,6 +394,22 @@ categories: English
   infancy n. 婴儿期
 
   infantry n. 步兵
+
+- far-reaching adj. 深远的
+
+  far-fetched adj. 不太可能的，难以置信的
+
+  far-flung adj. 遥远的；广泛的
+
+  farsighted adj. 远视的；有远见的
+
+  far out adj. 非传统的，前卫的；极好的
+
+  far off adj. 遥远的（在时间或空间上）
+
+- farther adv. 更远的（距离上）
+
+  further adv. 更进一步的（程度上）
 
 ## 近义词
 

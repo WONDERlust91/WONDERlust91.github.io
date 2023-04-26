@@ -437,6 +437,16 @@ categories: English
 
   2. phrase: making less money than is spent buying, operating, or producing something. 挣得钱比花在采购，运营，或生产某物要少。
 
+- at length
+
+  1. phrase: in detail; fully.
+
+     _"these aspects have been discussed at length"_
+
+  2. phrase: after a long time.
+
+     _"at length she laid down the pencil"_
+
 - attain
 
   1. verb: succeed in achieving (something that one has worked for). 成功实现（某人为之努力的事情）。
@@ -456,6 +466,12 @@ categories: English
 - authentic
 
   1. adjective: of undisputed origin; genuine. 无可争议的来源；真的。
+
+- autobiography
+
+  1. noun: an account of a person's life written by that person.
+
+     _"he gives a vivid description of his childhood in his autobiography"_
 
 ## B
 
@@ -1397,6 +1413,20 @@ categories: English
 
   1. verb: look thoughtfully for a long time at. 若有所思地看了很长时间，即凝视，也常表示深思。
 
+- contempt
+
+  1. verb: the feeling that a person or a thing is beneath consideration, worthless, or deserving scorn.
+
+     _"he showed his contempt for his job by doing it very badly"_
+
+  2. phrase: beneath contempt - utterly worthless or despicable.
+
+     _"tawdry trash that is beneath contempt"_
+
+  3. phrase: hold in contempt - judge (someone) to have committed the offense of contempt of court.
+
+     _"the advocate was held in contempt for subpoenaing the judge"_
+
 - contemptible
 
   1. adjective: deserving contempt; despicable. 值得鄙视的；卑鄙的。
@@ -1413,7 +1443,7 @@ categories: English
 
   1. adjective: in a state of peaceful happiness. 处于平和幸福的状态。
 
-  2. verb: satisfy (someone). 满足（某人）。
+  2. verb: satisfy (someone). 满足（某人）（固定搭配 be content with）。
 
   3. noun: a state of satisfaction. 满意的状态。
 
@@ -1593,6 +1623,16 @@ categories: English
 
   18. phrase: run its course - complete its natural development without interference. 不受干扰地完成其自然发展。
 
+- coverage
+
+  1. noun: the extent to which something deals with or applies to something else.
+
+     _"the grammar did not offer total coverage of the language"_
+
+  2. noun: the treatment of an issue by the media. 报道。
+
+     _"the program won an award for its news coverage"_
+
 - craft
 
   1. noun: an activity involving skill in making things by hand. 一种涉及手工制作东西的技能的活动。
@@ -1648,6 +1688,40 @@ categories: English
   4. adjective: having the shape of a crescent. 具有月牙形状的。
 
   5. adjective(LITERARY): growing, increasing, or developing. （文学上）增长、增加或发展。
+
+- cricket
+
+  1. noun: an insect related to the grasshoppers. The male produces a characteristic rhythmical chirping sound.
+
+  2. noun: an open-air game played on a large grass field with ball, bats, and two wickets, between teams of eleven players, the object of the game being to score more runs than the opposition.
+
+     _"a game of cricket"_
+
+  3. phrase: not cricket — something contrary to traditional standards of fairness or rectitude.
+
+     _"an appeal by the Crown against too lenient a sentence is simply not cricket"_
+
+  4. noun: a low wooden stool; a footstool.
+
+- critic
+
+  1. noun: a person who expresses an unfavorable opinion of something.
+
+     _"critics say many schools are not prepared to handle the influx of foreign students"_
+
+  2. noun: a person who judges the merits of literary, artistic, or musical works, especially one who does so professionally.
+
+     _"a film critic"_
+
+- criticism
+
+  1. noun: the expression of disapproval of someone or something based on perceived faults or mistakes.
+
+     _"he received a lot of criticism"_
+
+  2. noun: the analysis and judgment of the merits and faults of a literary or artistic work.
+
+     _"alternative methods of criticism supported by well-developed literary theories"_
 
 - crude
 
@@ -1797,7 +1871,7 @@ categories: English
 
 - deem
 
-  1. verb(FORMAL): regard or consider in a specified way. （正式）以特定方式看待或考虑。
+  1. verb(FORMAL): regard or consider in a specified way. （正式）以特定方式看待或考虑（deem A as B 或用作系动词 deem adj.）。
 
 - defective
 
@@ -1987,6 +2061,10 @@ categories: English
 
   2. noun: a dining car on a train. 火车上的餐车（北美常用于形容路边小餐馆）。
 
+- dirt cheap
+
+  1. adjective: as cheap as dirt; very inexpensive.
+
 - discard
 
   1. verb: get rid of (someone or something) as no longer useful or desirable. 摆脱（某人或某物）因为不在有用或合意。
@@ -2046,6 +2124,28 @@ categories: English
 - disparage
 
   1. verb: regard or represent as being of little worth. 认为或代表没有价值，即贬低。
+
+- dispute
+
+  1. noun: a disagreement, argument, or debate.
+
+     _"a territorial dispute between the two countries"_
+
+  2. verb: argue about (something); discuss heatedly.
+
+     _"he taught and disputed with local poets"_
+
+  3. verb: compete for; strive to win.
+
+     _"the two drivers crashed while disputing the lead"_
+
+  4. phrase: beyond dispute - certain or certainly; without doubt.
+
+     _"the main part of his argument was beyond dispute"_
+
+  5. phrase: open to dispute - not definitely decided.
+
+     _"such estimates are always open to dispute"_
 
 - distaste
 
@@ -3057,7 +3157,7 @@ categories: English
 
   3. noun: a sum of money given by a government or other organization for a particular purpose. 政府或其他组织为特定目的而给予的一笔款项。
 
-  4. phrase: take for granted. 认为是理所当然的。
+  4. phrase: take for granted. 认为是理所当然的（用法 take sth. for granted; It is taken for granted that）。
 
      1. fail to properly appreciate (someone or something), especially as a result of overfamiliarity. 不能正确地赞赏（某人或某事），尤其是由于过度熟悉。
 
@@ -3210,6 +3310,20 @@ categories: English
   3. verb: provide with a headline. 提供标题。
 
   4. verb: appear as the star perfomer at (a concert). 在（音乐会）上作为明星表演者出现。
+
+- headlong
+
+  1. adverb: with the head foremost.
+
+     _"he fell headlong into the tent"_
+
+  2. adverb: in a rush; with reckless haste.
+
+     _"those who rush headlong to join in the latest craze"_
+
+  3. adjective: extremely or recklessly hasty.
+
+     _"a headlong dash through the house"_
 
 - heighten
 
@@ -3563,6 +3677,16 @@ categories: English
 
   3. noun: a situation that is unavoidable. 不可避免的情况。
 
+- inexorable
+
+  1. adjective: impossible to stop or prevant.
+
+     _"the seemingly inexorable march of new technology"_
+
+  2. adjective: (of a person) impossible to persuade by request or entreaty.
+
+     _"the doctors were inexorable, and there was nothing to be done"_
+
 - infant
 
   1. noun: a very young child or baby. 非常年幼的孩子或婴儿。
@@ -3843,6 +3967,22 @@ categories: English
 
   1. noun: blood relationship.
 
+- knight
+
+  1. noun: (in the Middle Ages) a man who served his sovereign or lord as a mounted soldier in armor.
+
+  2. noun: (in the UK) a man awarded a nonhereditary title by the sovereign in recognition of merit or service and entitled to use the honorific “Sir” in front of his name.
+
+  3. noun: a chess piece, typically with its top shaped like a horse's head, that moves by jumping to the opposite corner of a rectangle two squares by three.
+
+  4. verb: invest (someone) with the title of knight.
+
+     _"he was knighted for his services to industry"_
+
+  5. phrase: knight in shining armor - an idealized or chivalrous man who comes to the rescue of a woman in a difficult situation.
+
+  6. phrase: knight of the road - a man who frequents the roads, for example, a traveling salesman, a vagrant, or (formerly) a highwayman.
+
 ## L
 
 - ladder
@@ -3983,6 +4123,16 @@ categories: English
 
      _"the chimpanzee and gorilla lineages"_
 
+- linen
+
+  1. noun: cloth woven from flax.
+
+     _"a linen suit"_
+
+  2. noun: garments or other household articles such as sheets made, or originally made, of linen.
+
+     _"the linen cupboard"_
+
 - literacy
 
   1. noun: the ability to read and write. 读写的能力。
@@ -4122,6 +4272,16 @@ categories: English
   3. verb: provide with an edge or border. 提供边缘或边界。
 
   4. verb: deposit an amount of money with a broker as security for (an account or transaction). 向经纪人存入一定数额的资金作为（账户或交易）的担保。
+
+- marvel
+
+  1. verb: be filled with wonder or astonishment.
+
+     _"she marveled at Jeffrey's composure"_
+
+  2. noun: a wonderful or astonishing person or thing.
+
+     _"the marvels of technology"_
 
 - massacre
 
@@ -4307,6 +4467,12 @@ categories: English
 
   4. noun: standards of behaviour; principles of right and wrong. 行为标准；对与错的原则。
 
+- moreover
+
+  1. adverb: as a further matter; besides.
+
+     _"moreover, glass is electrically insulating"_
+
 - morphine
 
   1. noun: an analgesic and narcotic drug obtained from opium and used medicinally to relieve pain. 一种镇痛和麻醉药物，提取于鸦片并药用于缓解疼痛，即吗啡。
@@ -4316,6 +4482,12 @@ categories: English
   1. noun: the state of being subject to death. 经历死亡的状态。
 
   2. noun: death, especially on a large scale. 死亡，尤其是指大规模死亡。
+
+- mournful
+
+  1. adjective: feeling, expressing, or inducing sadness, regret, or grief.
+
+     _"the third boy stared fixedly at me with mournful, basset-hound eyes"_
 
 - multinational
 
@@ -4354,6 +4526,10 @@ categories: English
 - newsletter
 
   1. noun: a bulletin issued periodically to the members of a society, business, or organization. 定期向社会，企业，或组织的成员发布的公告。
+
+- newsprint
+
+  1. noun: cheap, low-quality absorbent printing paper made from coarse wood pulp and used chiefly for newspapers.
 
 - noble
 
@@ -4530,6 +4706,16 @@ categories: English
   5. noun: a food produced by organic farming. 有机农业生产的食品。
 
   6. noun: an organic chemical compound. 有机化合物。
+
+- ornament
+
+  1. noun: a thing used to make something look more attractive but usually having no practical purpose, especially a small object such as a figurine.
+
+     _"it served more for ornament than for protection"_
+
+  2. verb: make (something) look more attractive by adding decorative items.
+
+     _"the men and women in the Stone Age ornamented their caves"_
 
 - outcome
 
@@ -5169,6 +5355,44 @@ categories: English
 
   2. phrase: presence of mind - the ability to remain calm and take quick, sensible action. 保持冷静并采取快速，明智行为的能力。
 
+- press
+
+  1. verb: move or cause to move into a position of contact with something by exerting continuous physical force.
+
+     _"he pressed his face to the glass"_
+
+  2. verb: apply pressure to (something) to flatten, shape, or smooth it, typically by ironing.
+
+     _"she pressed her nicest blouse"_
+
+  3. verb: forcefully put forward (an opinion, claim, or course of action).
+
+     _"Rose did not press the point"_
+
+  4. verb(WEIGHTLIFTING): raise (a specified weight) by first lifting it to shoulder height and then gradually pushing it upward above the head.
+
+  5. verb(GOLF): try too hard to achieve distance with a shot, at the risk of inaccuracy.
+
+  6. noun: a device for applying pressure to something in order to flatten or shape it or to extract juice or oil.
+
+     _"a flower press"_
+
+  7. noun: a printing press.
+
+  8. noun: newspapers or journalists viewed collectively. 媒体（press conference 媒体发布会；go to the press 去向媒体曝光）。
+
+     _"the press was notified"_
+
+  9. noun: an act of pressing something.
+
+     _"the system summons medical help at the press of a button"_
+
+  10. noun(WEIGHTLIFTING): an act of raising a weight to shoulder height and then gradually pushing it above the head.
+
+  11. noun(SCOTTISH · IRISH): a large cupboard.
+
+  _"the necessary linen was kept in a large press, and in another was the silver plate and several sets of china"_
+
 - pressing
 
   1. adjective: (of a problem, need, or situation) requiring quick or immediate action or attention. （关于问题，需求，或情况）需要迅速或立即采取行动或注意的。
@@ -5275,6 +5499,20 @@ categories: English
 
   1. verb: extend the duration of. 延长某事的期间。
 
+- prominent
+
+  1. adjective: important; famous.
+
+     _"she was a prominent member of the city council"_
+
+  2. adjective: projecting from something; protuberant.
+
+     _"a man with big, prominent eyes like a lobster's"_
+
+  3. adjective: situated so as to catch the attention; noticeable.
+
+     _"the new housing developments are prominent landmarks"_
+
 - promise
 
   1. noun: a declaration or assurance that one will do a particular thing or that a particular thing will happen. 一个人将做某件特定的事或某件特定的事将会发生的声明或保证。
@@ -5316,6 +5554,18 @@ categories: English
   4. verb(INFORMAL): make a suggestion of sex to (someone), especially in an unsubtle way. 向（某人）提出性提议，尤其是直白的方式。
 
   5. phrase: not a proposition - unlikely to succeed; not a viable option. 不太可能成功；不是可行选择。
+
+- prose
+
+  1. noun: written or spoken language in its ordinary form, without metrical structure.
+
+     _"a short story in prose"_
+
+  2. verb: talk tediously.
+
+     _"prosing on about female beauty"_
+
+  3. verb(DATED): compose in or convert into prose.
 
 - prospective
 
@@ -5598,6 +5848,12 @@ categories: English
   2. noun: (in a movie or television show) a final revelation of information that has previously been kept from the characters or viewers. （在电影或电视节目中） 先前对角色或观众保密的信息最终被揭示。
 
   3. noun: either side surface of an aperture in a wall for a door or window. 在墙壁两面都有孔洞，以便于安装门或窗。
+
+- revival
+
+  1. noun: an improvement in the condition or strength of something.
+
+     _"a revival in the fortunes of the party"_
 
 - revive
 
@@ -6671,6 +6927,16 @@ categories: English
 
   3. verb: perform stunts, especially aerobatics. 表演特技，尤其是特技飞行。
 
+- stylish
+
+  1. adjective: fashionably elegant and sophisticated.
+
+     _"you don't have to be a designer to create a stylish look in your own small room"_
+
+  2. adjective: neat, confident, and skillful.
+
+     _"he put his heart and soul into a stylish performance"_
+
 - subject
 
   1. noun: a person or thing that is being discussed, described, or dealt with. 被讨论、描述，或对待的人或事。
@@ -6952,6 +7218,16 @@ categories: English
   7. phrase: lose one's temper - fail to retain composure when angry. 在生气时无法保持冷静。
 
   8. phrase: out of temper - in an irritable mood. 心情烦躁。
+
+- tempt
+
+  1. verb: entice or attempt to entice (someone) to do or acquire something that they find attractive but know to be wrong or not beneficial.
+
+     _"there'll always be someone tempted by the rich pickings of poaching"_
+
+  2. phrase: tempt fate — do something that is risky or dangerous.
+
+     _"bike couriers tempt fate at every traffic light"_
 
 - temptation
 
@@ -7243,6 +7519,12 @@ categories: English
 
   1. adjective: as good as or better than any other. 与任何其他一样好或更好，即卓绝的，优异的。
 
+- upholster
+
+  1. verb: provide (furniture) with a soft, padded covering.
+
+     _"the chairs were upholstered in red velvet"_
+
 - upscale
 
   1. adjective(NORTH AMERICAN): relatively expensive and designed to appeal to affluent consumers; upmarket. 相对昂贵，旨在吸引富裕消费者；高档。
@@ -7372,6 +7654,16 @@ categories: English
   1. adverb: in a way that involves physical strength, effort, or energy; strenuously. 以一种涉及体力，努力，或能量的方式；用力地。
 
   2. adverb: forcefully. 强行地，极力地。
+
+- virtual
+
+  1. adjective: almost or nearly as described, but not completely or according to strict definition. 几乎。
+
+     _"the virtual absence of border controls"_
+
+  2. adjective(COMPUTING): not physically existing as such but made by software to appear to do so.
+
+     _"Virtual reality(VR) and augmented reality(AR)"_
 
 - virtuosity
 
