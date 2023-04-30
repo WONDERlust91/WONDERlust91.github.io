@@ -95,6 +95,8 @@ categories: English
 
   resist v. 抵抗 n. 保护涂层
 
+  subsist v. 维持生活（固定搭配 on）；（法律）继续有效
+
 - consistent adj. 一贯；连贯；一致
 
   constant adj. 不变的 n. 不变的情况；常量
@@ -859,6 +861,28 @@ categories: English
 
   migrant n. 迁徙者（外地打工）
 
+- 法官
+
+  Justice n. 仅指最高法院法官
+
+  Judge n. 普通法官
+
+- 表“抱怨” v.
+
+  moan
+
+  whine
+
+  grumble
+
+  complain
+
+- 表“屈服”
+
+  yield to
+
+  give in
+
 ## 反义词
 
 - radical adj. 激进的，左倾的
@@ -906,3 +930,7 @@ categories: English
 - chronic adj. 慢性的
 
   acute adj. 急性的
+
+- scale up v. 扩大
+
+  scale back/down v. 缩小

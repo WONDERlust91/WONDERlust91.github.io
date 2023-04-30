@@ -740,9 +740,13 @@ have been doing 从过去到现在一直做某事
 
   2. 访问或参与很多特定团体的事物，通常是流程的一部分，即走流程。
 
-- have/get sth. done
+- have sb. to do sth.
 
-  表被动，使某事物被做。
+  使某人做某事
+
+- have/get sth./sb. done
+
+  表被动，使某事物或某人被做。
 
   This apple is eaten by me.
 
@@ -755,3 +759,5 @@ have been doing 从过去到现在一直做某事
 - attach importance/significance/value/weight to
 
   People attach too much importance to economic forecasts.
+
+- behind the scenes 表示“在幕后”

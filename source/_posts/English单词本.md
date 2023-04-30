@@ -37,6 +37,12 @@ categories: English
 
   1. existing or available in large quantities; plentiful. 大量存在或可用；丰富的。
 
+- abuzz (a + buzz 表示 buzz 的状态，例如 asleep)
+
+  1. adjective: filled with a continuous humming sound.
+
+     _"the room was abuzz with mosquitoes"_
+
 - accommodate
 
   1. verb: (of physical space, especially a building) provide lodging or sufficient space for. （物理空间，尤其是建筑物）提供住宿或足够的空间。
@@ -287,6 +293,12 @@ categories: English
 
   4. verb(NORTH AMERICAN): act as an anchor for (a television program or sporting event). 担任（电视节目或体育赛事）的主播。
 
+- anecdotal
+
+  1. adjective: (of an account) not necessarily true or reliable, because based on personal accounts rather than facts or research.
+
+     _"while there was much anecdotal evidence there was little hard fact"_
+
 - anthropology
 
   1. noun: the study of human societies and cultures and their development.
@@ -309,11 +321,11 @@ categories: English
 
 - appeal
 
-  1. verb: make a serious or urgent request, typically to the public. 提出严重或紧急的请求，通常是向公众提出。
+  1. verb: make a serious or urgent request, typically to the public. 提出严重或紧急的请求，通常是向公众提出。(sb. appeal to sb. to do sth.)
 
-  2. verb(LAW): apply to a higher court for a reversal of the decision of a lower court. 向上级法院申请撤销下级法院的决定。
+  2. verb(LAW): apply to a higher court for a reversal of the decision of a lower court. 向上级法院申请撤销下级法院的决定，即上诉。
 
-  3. verb: be attractive or interesting. 有吸引力或有趣。
+  3. verb: be attractive or interesting. 有吸引力或有趣。(sth. appeal to sb.)
 
   4. noun: a serious or urgent request, typically one made to the public. 严重或紧急的要求，通常是向公众提出的。
 
@@ -513,6 +525,24 @@ categories: English
 
   4. adverb(ARCHAIC): openly; explicitly. （古老的）公开地；明确的。
 
+- bargain
+
+  1. noun: an agreement between two or more people or groups as to what each will do for the other.
+
+     _"bargains between political parties supporting the government"_
+
+  2. noun: a thing bought or offered for sale much more cheaply than is usual or expected.
+
+     _"the table was a real bargain"_
+
+  3. verb: negotiate the terms and conditions of a transaction.
+
+     _"he bargained with the local council to rent the stadium"_
+
+  4. verb: be prepared for; expect.
+
+     _"I got more information than I'd bargained for"_
+
 - barn
 
   1. noun: a large farm building used for storing grain, hay, or straw or for housing livestock. 用于储存谷物，干草，或稻草或饲养牲畜的大型农场建筑。
@@ -681,6 +711,30 @@ categories: English
 
   1. noun: a small book or magazine containing pictures and information about a product or service. 包含有关产品或服务的图片和信息的小书或杂志。
 
+- bruise
+
+  1. noun: an injury appearing as an area of discoloured skin on the body, caused by a blow or impact rupturing underlying blood vessels.
+
+     _"his body was a mass of bruises after he had been attacked"_
+
+  2. verb: inflict a bruise or bruises on (a part of the body).
+
+     _"I fell and bruised my knee"_
+
+  3. verb: crush or pound (food).
+
+     _"add the beans, tomatoes, and lime wedges and roughly bruise with the pestle"_
+
+- bruising
+
+  1. adjective: causing a bruise or bruises.
+
+     _"his legs took the bruising blows"_
+
+     - adjective: (of a competitive situation) conducted in an aggressive way and likely to be stressful.
+
+       _"a bruising cabinet battle over public spending"_
+
 - bulk
 
   1. noun: the mass or magnitude of something large. 大东西的质量或大小。
@@ -710,6 +764,38 @@ categories: English
   2. noun: a hairstyle in which the hair is drawn back into a tight coil at the back of the head. 一种发型，将头发向后拉在脑后形成一个紧紧的圈，即丸子头。
 
   3. noun(INFORMAL·NORTH AMERICAN): a person's buttocks. （非正式·北美）一个人的臀部。
+
+- buzz
+
+  1. noun: a low, continuous humming or murmuring sound, made by or similar to that made by an insect.
+
+     _"the buzz of the bees"_
+
+  2. noun: an atmosphere of excitement and activity.
+
+     _"there is a real buzz about the place"_
+
+  3. noun(INFORMAL): a rumour.
+
+     _"there's a strong buzz that he's in Scotland"_
+
+  4. verb: make a low, continuous humming sound.
+
+     _"mosquitoes were buzzing all around us"_
+
+  5. verb: move quickly or busily.
+
+     _"she buzzed along the M1 back into town"_
+
+  6. verb: (of a place) have an air of excitement or be full of lively activity.
+
+     _"Westminster is buzzing with anticipation"_
+
+  7. verb(INFORMAL·BRITISH): throw (something) hard.
+
+  8. phrase: buzz off - go away.
+
+     _"we know what we're doing, so buzz off!"_
 
 - by and large
 
@@ -816,6 +902,30 @@ categories: English
   6. phrase: carve up - divide something ruthlessly into separate areas or parts.
 
      _"West Africa was carved up by the Europeans"_
+
+- cascade
+
+  1. noun: a small waterfall, typically one of several that fall in stages down a steep rocky slope.
+
+     _"the waterfall raced down in a series of cascades"_
+
+     - noun: a large number or amount of something occurring at the same time.
+
+       _"a cascade of anti-war literature"_
+
+  2. noun: a process whereby something, typically information or knowledge, is successively passed on.
+
+     _"the greater the number of people who are well briefed, the wider the cascade effect"_
+
+  3. verb: (of water) pour downwards rapidly and in large quantities.
+
+     _"water was cascading down the stairs"_
+
+  4. verb: pass (something) on to a succession of others.
+
+     _"teachers who are able to cascade their experience effectively"_
+
+  5. verb: arrange (a number of devices or objects) in a series or sequence.
 
 - casualty
 
@@ -982,6 +1092,8 @@ categories: English
   5. verb: (of colours) appear discordant or ugly when placed close to each other. （颜色）当被放置在一起时显得不协调或难看。
 
   6. verb: strike (cymbals) together, producing a loud discordant sound. 敲击（钹）到一起，产生巨大的不和谐的声音。
+
+- class action 集体诉讼
 
 - clergy
 
@@ -1763,6 +1875,30 @@ categories: English
 
   3. noun: skill in achieving one's ends by deceit. 通过欺骗达到目的的技能，即狡诈。
 
+- curb (常用作马路牙子，根本意思为阻止)
+
+  1. noun: a check or restraint on something.
+
+     _"plans to introduce tougher curbs on insider dealing"_
+
+  2. noun: a type of bit with a strap or chain attached which passes under a horse's lower jaw, used as a check.
+
+  3. noun: variant spelling of kerb.
+
+  4. noun: a swelling on the back of a horse's hock, caused by spraining a ligament.
+
+  5. verb: restrain or keep in check.
+
+     _"she promised she would curb her temper"_
+
+  6. verb: lead (a dog being walked) near the curb to urinate or defecate, in order to avoid soiling buildings, pavements, etc.
+
+- cursory
+
+  1. adjective: hasty and therefore not thorough or detailed.
+
+     _"a cursory glance at the figures"_
+
 - customary
 
   1. adjective: according to the customs or usual practices associated with a particular society, place, or set of circumstances. 根据与特定社会，地点，或一系列环境相关的习俗或惯例。
@@ -2391,6 +2527,26 @@ categories: English
 
   6. phrase: in Dutch - in trouble. 处于麻烦中。
 
+- dynamic
+
+  1. adjective: (of a process or system) characterized by constant change, activity, or progress.
+
+     _"a dynamic economy"_
+
+  2. adjective: (of a person) positive in attitude and full of energy and new ideas.
+
+     _"a dynamic young advertising executive"_
+
+  3. adjective: relating to the volume of sound produced by an instrument, voice, or recording.
+
+  4. adjective: (of a memory device) needing to be refreshed by the periodic application of a voltage.
+
+  5. noun: a force that stimulates change or progress within a system or process. （常译为动力学，或机制）
+
+     _"evaluation is part of the basic dynamic of the project"_
+
+  6. noun(MUSIC): the varying levels of volume of sound in different parts of a musical performance. (常用复数形式)
+
 ## E
 
 - earnest
@@ -2535,11 +2691,31 @@ categories: English
 
   1. adverb: used to emphasize the basic, fundamental, or intrinsic nature of a person or thing. 用于强调一个人或事物的基本，根本，或内在本质。
 
+- esteem
+
+  1. noun: respect and admiration.
+
+     _"he was held in high esteem by colleagues"_
+
+  2. verb: respect and admire.
+
+     _"many of these qualities are esteemed by managers"_
+
+  3. verb: consider; deem.
+
+     _"I should esteem it a favour if you could speak to them"_
+
 - estimate
 
   1. verb: roughly calculate or judge the value, number, quantity, or extent of. 粗略计算或判断其价值，数目，数量，或程度。
 
   2. noun: an approximate calculation or judgment of the value, number, quantity, or extent of something. 对某物的价值，数目，数量，或范围的挖计算或判断。
+
+- evade
+
+  1. verb: escape or avoid (someone or something), especially by guile or trickery.
+
+     _"friends helped him to evade capture for a time"_
 
 - even
 
@@ -2761,6 +2937,8 @@ categories: English
 
      - be a significant characteristic of or take an important part in. 具有重要特征或在其中发挥重要作用。
 
+- Federal Circuit 美国联邦巡回法庭（circuit 本身还有电路的意思）
+
 - feeble
 
   1. adjective: lacking physical strength, especially as a result of age or illness. 缺乏体力，尤其是由于年龄或疾病，即虚弱的。
@@ -2886,6 +3064,10 @@ categories: English
   1. noun: a folder or box for holding loose papers that are typically arranged in a particular order for easy reference. 用于存放松散纸张的文件夹或盒子，通常以特定的顺序排列以便于查找。
 
   2. verb: place (a document) in a cabinet, box, or folder in a particular order for preservation and easy reference. 将（文件）以特定顺序放在柜子，盒子，或文件夹中，以便保存和参考。
+
+     - verb: submit (a legal document, application, or charge) to be placed on record by the appropriate authority.
+
+       _"criminal charges were filed against the firm"_
 
   3. phrase: on file - in a file or filing system. 在文件或归档系统中。
 
@@ -3324,6 +3506,34 @@ categories: English
   3. adjective: extremely or recklessly hasty.
 
      _"a headlong dash through the house"_
+
+- hedge
+
+  1. noun: a fence or boundary formed by closely growing bushes or shrubs.
+
+     _"a privet hedge"_
+
+  2. noun: a way of protecting oneself against financial loss or other adverse circumstances. (对冲)
+
+     _"index-linked gilts are a useful hedge against inflation"_
+
+  3. noun: a word or phrase used to avoid overprecise commitment, for example etc., often, or sometimes.
+
+  4. verb: surround with a hedge.
+
+     _"a garden hedged with yew"_
+
+  5. verb: limit or qualify (something) by conditions or exceptions.
+
+     _"they hedged their story about with provisos"_
+
+  6. verb: protect oneself against loss on (a bet or investment) by making balancing or compensating transactions.
+
+     _"the company hedged its investment position on the futures market"_
+
+  7. phrase: hedge one's bets — avoid committing oneself when faced with a difficult choice.
+
+     _"they hedged their bets by saying they might apply"_
 
 - heighten
 
@@ -3809,7 +4019,7 @@ categories: English
 
 - intellectual
 
-  1. adjective: relating to intellect.
+  1. adjective: relating to intellect. (intellectual property 知识产权)
 
      _"children need intellectual stimulation"_
 
@@ -4155,7 +4365,7 @@ categories: English
 
   2. noun: a group of people seeking to influence politicians or public officials on a particular issue. 一群人，试图在特定事件上影响政客或公职人员。
 
-  3. verb: seek to influence (a politician or public official) on an issue. 试图在某个问题上影响（政客或公职人员）。
+  3. verb: seek to influence (a politician or public official) on an issue. 试图在某个问题上影响（政客或公职人员），可译为游说。
 
 - loom
 
@@ -4495,6 +4705,10 @@ categories: English
 
   2. noun: a company operating in several countries. 在多个国家经营的公司，即跨国公司。
 
+- mutual fund
+
+  1. noun: an investment programme funded by shareholders that trades in diversified holdings and is professionally managed. (共同基金)
+
 - mythical
 
   1. adjective: occurring in or characteristic of myths or folk tales. 发生在神话或民间故事中或具有它们的特点。
@@ -4693,6 +4907,12 @@ categories: English
 
   2. phrase(CLIMBING): roped together. （攀登）绑在一起。
 
+- oppose
+
+  1. verb: disagree with and attempt to prevent, especially by argument.
+
+     _"a majority of the electorate opposed EC membership"_
+
 - organic
 
   1. adjective: relating to or derived from living matter. 与生物有关的或来源于生物的。
@@ -4766,6 +4986,12 @@ categories: English
   2. verb: appear much more prominent or important than. 显得比...突出或重要得多。
 
      - be more impressive or successful than (another person). 比（另一个人）更令人印象深刻或更成功。
+
+- overstate
+
+  1. verb: state too strongly; exaggerate.
+
+     _"I overstated my case to make my point"_
 
 - owe
 
@@ -5141,6 +5367,12 @@ categories: English
 
   5. verb: place or fix in a specified position. 放置或固定在指定位置。
 
+- plausible
+
+  1. adjective: (of an argument or statement) seeming reasonable or probable.
+
+     _"a plausible explanation"_
+
 - plow (北美以外写作 plough)
 
   1. noun: a large farming implement with one or more blades fixed in a frame, drawn by a tractor or by animals and used for cutting furrows in the soil and turning it over, especially to prepare for the planting of seeds. 大型农具，带有一个或多个刀片固定在框架中，被拖拉机或动物牵引，并用于在土壤中开沟和翻土，尤其是准备播种时。
@@ -5164,6 +5396,32 @@ categories: English
 - ponder
 
   1. verb: think about (something) carefully, especially before making a decision or reaching a conclusion. 仔细考虑（某事），尤其是在做出决定或得出结论之前。
+
+- pool
+
+  1. noun: a small area of still water, typically one formed naturally.
+
+  2. verb: (of liquid) form a pool on the ground or another surface.
+
+     _(of liquid) form a pool on the ground or another surface._
+
+  3. noun: a shared supply of vehicles or resources to be drawn on when needed.
+
+     _"a car pool"_
+
+  4. noun: a game played on a small billiard table using two sets of seven coloured and numbered balls together with one black ball and a white cue ball, with the aim of pocketing all one's own balls and then the black.
+
+  5. noun: a group of contestants who compete against each other in a tournament for the right to advance to the next round.
+
+     _"the sides in Pool A"_
+
+  6. noun: an arrangement, illegal in many countries, between competing parties to fix prices or rates and share business in order to eliminate competition.
+
+     _"pool arrangements by the competing networks reduce individual costs"_
+
+  7. verb: (of two or more people or organizations) put (money or other assets) into a common fund.
+
+     _"they entered a contract to pool any gains and invest them profitably"_
 
 - populate
 
@@ -5543,6 +5801,26 @@ categories: English
 
   1. adjective: very noticeable or marked; conspicuous. 非常引人注意或明显的；显眼的。
 
+- propaganda
+
+  1. noun: information, especially of a biased or misleading nature, used to promote a political cause or point of view.
+
+     _"he was charged with distributing enemy propaganda"_
+
+- propagate
+
+  1. verb: breed specimens of (a plant or animal) by natural processes from the parent stock.
+
+     _"try propagating your own houseplants from cuttings"_
+
+  2. verb: spread and promote (an idea, theory, etc.) widely.
+
+     _"the French propagated the idea that the English were drunkards"_
+
+  3. verb: (with reference to motion, light, sound, etc.) transmit or be transmitted in a particular direction or through a medium.
+
+     _"electromagnetic effects can be propagated at a finite velocity only through material substances"_
+
 - proposition
 
   1. noun: a statement or assertion that expresses a judgement or opinion. 表达判断或意见的陈述或断言。
@@ -5918,6 +6196,24 @@ categories: English
   3. verb(RARE): organize according to a routine.
 
      _"all had been routined with smoothness"_
+
+- rule (ruling 裁决)
+
+  1. verb: exercise ultimate power or authority over (an area and its people).
+
+     _"the region today is ruled by elected politicians"_
+
+  2. verb: pronounce authoritatively and legally to be the case.
+
+     _"an industrial tribunal ruled that he was unfairly dismissed from his job"_
+
+  3. verb: make parallel lines across (paper).
+
+     _"rule the pages horizontally and print the information within the rules."_
+
+  4. verb: (of a price or a traded commodity with regard to its price) have a specified general level or strength.
+
+     _"in the jutes section Indus and Pak Jute ruled firm"_
 
 - rule in
 
