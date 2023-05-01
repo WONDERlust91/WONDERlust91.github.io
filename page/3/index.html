@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">143</span>
+          <span class="site-state-item-count">144</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,7 +160,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">254</span>
+        <span class="site-state-item-count">255</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,128 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2022/02/10/nginx%E8%B7%A8%E5%9F%9F%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/10/nginx%E8%B7%A8%E5%9F%9F%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">nginx跨域配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-02-10 09:46:47" itemprop="dateCreated datePublished" datetime="2022-02-10T09:46:47+00:00">2022-02-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/nginx/" itemprop="url" rel="index"><span itemprop="name">nginx</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/02/10/nginx%E8%B7%A8%E5%9F%9F%E9%85%8D%E7%BD%AE/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/10/nginx跨域配置/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在使用 nginx 存放静态资源时，直接访问不会有问题，但是通过 fetch 去请求资源时，就会触发浏览器跨域限制。如何配置静态资源的 nginx 服务，以避免跨域问题呢？</p>
+<h2 id="最简配置"><a href="#最简配置" class="headerlink" title="最简配置"></a>最简配置</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">server <span class="token punctuation">&#123;</span>
+  <span class="token comment"># 通常不建议在 server 块下直接进行配置，因为 server 块下的 if 块内不支持 add_header，而location块下是支持的。</span>
+  location / <span class="token punctuation">&#123;</span>
+    <span class="token comment"># 任意 OPTIONS 预检请求，都返回成功</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$request_method</span> <span class="token operator">=</span> <span class="token string">'OPTIONS'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token comment"># 204表示无返回内容的成功</span>
+      <span class="token builtin class-name">return</span> <span class="token number">204</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment"># 增加允许跨域主机源的头</span>
+    add_header Access-Control-Allow-Origin <span class="token string">"*"</span><span class="token punctuation">;</span> <span class="token comment"># "*" 为任意主机源，生产环境安全起见最好配置为具体的IP或域名</span>
+    <span class="token comment"># 增加允许跨域请求方法的头</span>
+    add_header Access-Control-Allow-Methods <span class="token string">"GET, POST, OPTIONS"</span><span class="token punctuation">;</span>
+    <span class="token comment"># 增加允许跨域请求头字段的头，注意如果有一些自定义增加的头如Authorization等，也要加到这个配置中</span>
+    add_header Access-Control-Allow-Headers <span class="token string">"DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/10/nginx%E8%B7%A8%E5%9F%9F%E9%85%8D%E7%BD%AE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +344,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -338,7 +460,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -458,7 +580,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -600,7 +722,7 @@ option <span class="token operator">=</span> <span class="token punctuation">&#1
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -735,7 +857,7 @@ option <span class="token operator">=</span> <span class="token punctuation">&#1
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -859,7 +981,7 @@ option <span class="token operator">=</span> <span class="token punctuation">&#1
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -967,7 +1089,7 @@ option <span class="token operator">=</span> <span class="token punctuation">&#1
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1093,7 +1215,7 @@ myFunction<span class="token punctuation">.</span>prop <span class="token operat
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1262,7 +1384,7 @@ request<span class="token punctuation">.</span><span class="token function-varia
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1302,120 +1424,6 @@ request<span class="token punctuation">.</span><span class="token function-varia
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/01/13/react%E5%9C%A8%E7%BB%84%E4%BB%B6%E5%A4%96%E4%BD%BF%E7%94%A8redux%E7%9A%84dispatch/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/12/16/windows10%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/12/16/windows10%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/" class="post-title-link" itemprop="url">windows10本地用户密码重置</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-12-16 17:01:23" itemprop="dateCreated datePublished" datetime="2021-12-16T17:01:23+00:00">2021-12-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/windows/" itemprop="url" rel="index"><span itemprop="name">windows</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/12/16/windows10%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/16/windows10本地用户密码重置/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>win10 系统忘记用户密码，无法登录。首先区分帐户类型：</p>
-<ul>
-<li><p>已登录 windows 帐号的网络帐户，直接在 windows 的网络帐户管理网站上重置密码即可，参考<a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/account-billing/%E9%87%8D%E7%BD%AE%E5%BF%98%E8%AE%B0%E7%9A%84-microsoft-%E5%B8%90%E6%88%B7%E5%AF%86%E7%A0%81-eff4f067-5042-c1a3-fe72-b04d60556c37">重置忘记的 Microsoft 帐户密码</a>;</p>
-</li>
-<li><p>本地帐户如记得密码提示问题，或生成过密码重置盘，则可以直接重置，否则就需要一些额外的技术手段来重置了。</p>
-</li>
-</ul>
-<h2 id="重置密码，不使用第三方软件，仅需系统安装盘"><a href="#重置密码，不使用第三方软件，仅需系统安装盘" class="headerlink" title="重置密码，不使用第三方软件，仅需系统安装盘"></a>重置密码，不使用第三方软件，仅需系统安装盘</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>使 cmd 命令行工具在系统环境下，绕过 windows 密码执行，然后重置用户密码</p>
-<h3 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h3><p>win10 登录界面右下角有一个轻松使用按钮，将轻松使用替换为 cmd 命令行，再重置用户密码</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/16/windows10%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>

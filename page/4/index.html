@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">143</span>
+          <span class="site-state-item-count">144</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,7 +160,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">254</span>
+        <span class="site-state-item-count">255</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,120 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/12/16/windows10%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/12/16/windows10%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/" class="post-title-link" itemprop="url">windows10本地用户密码重置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-12-16 17:01:23" itemprop="dateCreated datePublished" datetime="2021-12-16T17:01:23+00:00">2021-12-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/windows/" itemprop="url" rel="index"><span itemprop="name">windows</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2021/12/16/windows10%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/16/windows10本地用户密码重置/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>win10 系统忘记用户密码，无法登录。首先区分帐户类型：</p>
+<ul>
+<li><p>已登录 windows 帐号的网络帐户，直接在 windows 的网络帐户管理网站上重置密码即可，参考<a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/account-billing/%E9%87%8D%E7%BD%AE%E5%BF%98%E8%AE%B0%E7%9A%84-microsoft-%E5%B8%90%E6%88%B7%E5%AF%86%E7%A0%81-eff4f067-5042-c1a3-fe72-b04d60556c37">重置忘记的 Microsoft 帐户密码</a>;</p>
+</li>
+<li><p>本地帐户如记得密码提示问题，或生成过密码重置盘，则可以直接重置，否则就需要一些额外的技术手段来重置了。</p>
+</li>
+</ul>
+<h2 id="重置密码，不使用第三方软件，仅需系统安装盘"><a href="#重置密码，不使用第三方软件，仅需系统安装盘" class="headerlink" title="重置密码，不使用第三方软件，仅需系统安装盘"></a>重置密码，不使用第三方软件，仅需系统安装盘</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>使 cmd 命令行工具在系统环境下，绕过 windows 密码执行，然后重置用户密码</p>
+<h3 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h3><p>win10 登录界面右下角有一个轻松使用按钮，将轻松使用替换为 cmd 命令行，再重置用户密码</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/12/16/windows10%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +336,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -330,7 +444,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -438,7 +552,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -548,7 +662,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -665,7 +779,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -788,7 +902,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -897,7 +1011,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1007,7 +1121,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1113,7 +1227,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1186,110 +1300,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/08/01/css%E6%96%B0%E6%A0%87%E5%87%86%E9%A2%9C%E8%89%B2%E8%AF%AD%E6%B3%95%E9%80%A0%E6%88%90%E7%9A%84%E9%94%99%E8%AF%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/01/css%E6%96%B0%E6%A0%87%E5%87%86%E9%A2%9C%E8%89%B2%E8%AF%AD%E6%B3%95%E9%80%A0%E6%88%90%E7%9A%84%E9%94%99%E8%AF%AF/" class="post-title-link" itemprop="url">css新标准颜色语法造成的错误</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-08-01 20:50:05" itemprop="dateCreated datePublished" datetime="2021-08-01T20:50:05+00:00">2021-08-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/08/01/css%E6%96%B0%E6%A0%87%E5%87%86%E9%A2%9C%E8%89%B2%E8%AF%AD%E6%B3%95%E9%80%A0%E6%88%90%E7%9A%84%E9%94%99%E8%AF%AF/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/08/01/css新标准颜色语法造成的错误/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="css-新标准下的颜色语法"><a href="#css-新标准下的颜色语法" class="headerlink" title="css 新标准下的颜色语法"></a>css 新标准下的颜色语法</h2><p>css 新标准下透明度也可写在 rgb 方法中，且可以不写逗号如<code>rgb(0 0 0 / 100%)</code>，该标准已被最新的浏览器实现，但尚未被 CSS 预处理器如 sass 和微信小程序实现，故暂时不推荐使用最新的写法，会造成预处理器编译错误和小程序白屏。</p>
-<blockquote>
-<p>参考资料</p>
-<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/66825515/getting-error-in-css-with-rgb0-0-0-15">Getting error in CSS with <code>rgb(0 0 0 / 15%)</code></a></p>
-<p><a target="_blank" rel="noopener" href="https://drafts.csswg.org/css-color/#rgb-functions">rgb-functions</a></p>
-</blockquote>
-
       
     </div>
 

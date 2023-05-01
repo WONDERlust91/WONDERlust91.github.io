@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">143</span>
+          <span class="site-state-item-count">144</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,7 +160,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">254</span>
+        <span class="site-state-item-count">255</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,123 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/08/05/javascript%E5%A4%8D%E5%88%B6%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/08/05/javascript%E5%A4%8D%E5%88%B6%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/" class="post-title-link" itemprop="url">javascript复制到剪贴板</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-08-05 10:09:06" itemprop="dateCreated datePublished" datetime="2019-08-05T10:09:06+00:00">2019-08-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2019/08/05/javascript%E5%A4%8D%E5%88%B6%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/05/javascript复制到剪贴板/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><ol>
+<li>第三方库：clipboard.js</li>
+<li>原生api：Clipboard API（还处于草案阶段，兼容性差）</li>
+<li>document.execCommand()</li>
+</ol>
+<p>若是项目中需要经常操作剪贴板，推荐使用第三方库，若仅是轻量使用，推荐document.exeCommand()方法。待原生api稳定后，使用原生api是更为优雅的方式。</p>
+<p>这里我们着重讲document.execCommand()方法</p>
+<h2 id="document-execCommand"><a href="#document-execCommand" class="headerlink" title="document.execCommand()"></a>document.execCommand()</h2><p>首先需要注意的是document.execCommand()方法只能操作可编辑区域的内容，如input、textarea等，像div这类无法聚焦的元素原则上是无法使用document.execCommand()方法的，在div上增加tabIndex属性，让div变成一个可聚焦可编辑元素，这里仅提供一个思路，不做详细展开。</p>
+<p>我们使用textarea做为可编辑区域，在文档对象中新建一个textarea元素，然后挂载到文档末尾，再将要获取的文本赋值给textarea，最后通过document.execCommand()方法获取textarea中选中的值并删除这个textarea元素。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> textarea <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"textarea"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>textarea<span class="token punctuation">)</span><span class="token punctuation">;</span>
+textarea<span class="token punctuation">.</span>value  <span class="token operator">=</span> <span class="token string">"test string"</span><span class="token punctuation">;</span>
+textarea<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">execCommand</span><span class="token punctuation">(</span><span class="token string">"copy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>textarea<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>参考链接 <a target="_blank" rel="noopener" href="https://juejin.im/post/5a94f8eff265da4e9b593c29">JavaScript复制内容到剪贴板</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +339,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -349,7 +466,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -473,7 +590,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -598,7 +715,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -724,7 +841,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -835,7 +952,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -945,7 +1062,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1057,7 +1174,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1190,7 +1307,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1246,122 +1363,6 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/06/03/electron%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2windowsApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/06/03/cordova%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85androidApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/06/03/cordova%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85androidApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">cordova安装与打包androidApp基础教程</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-06-03 14:35:42" itemprop="dateCreated datePublished" datetime="2019-06-03T14:35:42+00:00">2019-06-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/cordova/" itemprop="url" rel="index"><span itemprop="name">cordova</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2019/06/03/cordova%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85androidApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/03/cordova安装与打包androidApp基础教程/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="前置环境-nodeJS-v10-16-0，node-版本最好不要低于-v8-0-0"><a href="#前置环境-nodeJS-v10-16-0，node-版本最好不要低于-v8-0-0" class="headerlink" title="前置环境 nodeJS v10.16.0，node 版本最好不要低于 v8.0.0"></a>前置环境 nodeJS v10.16.0，node 版本最好不要低于 v8.0.0</h2><h2 id="安装-cordova"><a href="#安装-cordova" class="headerlink" title="安装 cordova"></a>安装 cordova</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> cordova
-<span class="token comment"># 若安装过慢，请使用淘宝镜像</span>
-<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> cordova <span class="token parameter variable">--registry</span><span class="token operator">=</span>https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="创建新的-cordova-项目"><a href="#创建新的-cordova-项目" class="headerlink" title="创建新的 cordova 项目"></a>创建新的 cordova 项目</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># testApp为目录名path</span>
-<span class="token comment"># test.example.com为项目id</span>
-<span class="token comment"># testApp为项目名name</span>
-cordova create testApp test.example.com testApp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="/../images/cordova1.png" alt="image.png"></p>
-<p>发送使用信息选 No</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/06/03/cordova%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85androidApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>

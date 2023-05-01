@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">143</span>
+          <span class="site-state-item-count">144</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,7 +160,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">254</span>
+        <span class="site-state-item-count">255</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,108 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2023/05/01/nginx%E5%9C%A8%E8%AE%BF%E9%97%AE%E9%93%BE%E6%8E%A5%E6%9C%AB%E5%B0%BE%E4%B8%8D%E5%8A%A0%E6%96%9C%E6%9D%A0%E5%AF%BC%E8%87%B4%E7%9A%84%E8%87%AA%E5%8A%A8%E9%87%8D%E5%AE%9A%E5%90%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/05/01/nginx%E5%9C%A8%E8%AE%BF%E9%97%AE%E9%93%BE%E6%8E%A5%E6%9C%AB%E5%B0%BE%E4%B8%8D%E5%8A%A0%E6%96%9C%E6%9D%A0%E5%AF%BC%E8%87%B4%E7%9A%84%E8%87%AA%E5%8A%A8%E9%87%8D%E5%AE%9A%E5%90%91/" class="post-title-link" itemprop="url">nginx在访问链接末尾不加斜杠导致的自动重定向</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-05-01 11:08:13 / Modified: 04:50:20" itemprop="dateCreated datePublished" datetime="2023-05-01T11:08:13+00:00">2023-05-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/nginx/" itemprop="url" rel="index"><span itemprop="name">nginx</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/05/01/nginx%E5%9C%A8%E8%AE%BF%E9%97%AE%E9%93%BE%E6%8E%A5%E6%9C%AB%E5%B0%BE%E4%B8%8D%E5%8A%A0%E6%96%9C%E6%9D%A0%E5%AF%BC%E8%87%B4%E7%9A%84%E8%87%AA%E5%8A%A8%E9%87%8D%E5%AE%9A%E5%90%91/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/05/01/nginx在访问链接末尾不加斜杠导致的自动重定向/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在访问网站链接时，我们通常不会注意链接的末尾是否加了<code>/</code>，如果我们没有加<code>/</code>，那么 Nginx 会自动使用 301 重定向，帮我们加上<code>/</code>，以确保访问的是目录。</p>
+<p>若 Nginx 前端还有其他服务（如负载均衡），且这个服务的端口与 Nginx 服务端口不一致时，Nginx 的自动重定向就会导致端口错误。</p>
+<p>例如<code>443</code>端口为负载均衡服务，<code>8080</code>端口为 Nginx 服务，对<code>443</code>的访问最终都回落到了<code>8080</code>下，那么我们访问<code>https://www.example.com/foo</code>时，由于链接最后没加<code>/</code>，Nginx 会自动重定向补<code>/</code>，我们期待的结果是<code>https://www.example.com/foo/</code>，但实际结果为<code>http://www.example.com:8080/foo/</code>，重定向带上了原始服务的端口。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/05/01/nginx%E5%9C%A8%E8%AE%BF%E9%97%AE%E9%93%BE%E6%8E%A5%E6%9C%AB%E5%B0%BE%E4%B8%8D%E5%8A%A0%E6%96%9C%E6%9D%A0%E5%AF%BC%E8%87%B4%E7%9A%84%E8%87%AA%E5%8A%A8%E9%87%8D%E5%AE%9A%E5%90%91/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +324,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -329,7 +431,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -437,7 +539,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -544,7 +646,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -659,7 +761,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -799,7 +901,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -914,7 +1016,7 @@ Please make sure you have the correct access rights and the repository exists.<s
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1036,7 +1138,7 @@ Please make sure you have the correct access rights and the repository exists.<s
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1144,7 +1246,7 @@ Please make sure you have the correct access rights and the repository exists.<s
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1188,123 +1290,6 @@ Please make sure you have the correct access rights and the repository exists.<s
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/10/12/English%E7%9B%B8%E8%BF%91%E8%AF%8D/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2022/08/24/English%E5%8D%95%E8%AF%8D%E6%9C%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/08/24/English%E5%8D%95%E8%AF%8D%E6%9C%AC/" class="post-title-link" itemprop="url">English单词本</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-08-24 09:20:02" itemprop="dateCreated datePublished" datetime="2022-08-24T09:20:02+00:00">2022-08-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/English/" itemprop="url" rel="index"><span itemprop="name">English</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2022/08/24/English%E5%8D%95%E8%AF%8D%E6%9C%AC/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/08/24/English单词本/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="A"><a href="#A" class="headerlink" title="A"></a>A</h2><ul>
-<li><p>abreast</p>
-<ol>
-<li><p>adverb: side by side and facing the same way. 并排并面向同一方向。</p>
-</li>
-<li><p>adverb: alongside or even with something. 旁边或与某物一起。</p>
-</li>
-<li><p>phrase: keep abreast of - stay or cause to stay up-to-date with. 保持或导致保持最新状态。</p>
-</li>
-</ol>
-</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/08/24/English%E5%8D%95%E8%AF%8D%E6%9C%AC/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>

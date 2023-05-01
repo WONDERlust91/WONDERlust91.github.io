@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">143</span>
+          <span class="site-state-item-count">144</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -160,7 +160,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">254</span>
+        <span class="site-state-item-count">255</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,124 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2020/05/03/javascript%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/05/03/javascript%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/" class="post-title-link" itemprop="url">javascript逻辑运算符</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-05-03 23:17:04" itemprop="dateCreated datePublished" datetime="2020-05-03T23:17:04+00:00">2020-05-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/05/03/javascript%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/03/javascript逻辑运算符/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>前端通常使用逻辑运算符作为条件判断语句的条件，只关心返回值是 truthy 还是 falsy。但非常容易忽略逻辑运算符可以被应用于任意类型值，多个任意类型值的逻辑运算返回值到底是什么。</p>
+<blockquote>
+<p>下面所有代码示例中的返回值均指运算返回值，而不是 console.log 函数返回值</p>
+</blockquote>
+<h2 id="（或）"><a href="#（或）" class="headerlink" title="||（或）"></a>||（或）</h2><p><strong>一个||（或）运算链将返回从左向右第一个真值，如果不存在真值，则返回运算链的最后一个值</strong>，例如：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为1（第一个真值）</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token operator">||</span> <span class="token string">'no matter what'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为true（第一个真值）</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">null</span> <span class="token operator">||</span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为1（第一个真值）</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">null</span> <span class="token operator">||</span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为undefined（运算链最后一个值）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="amp-amp-（与）"><a href="#amp-amp-（与）" class="headerlink" title="&amp;&amp;（与）"></a>&amp;&amp;（与）</h2><p><strong>一个&amp;&amp;（与）运算链将返回从左向右第一个假值，如果不存在假值，则返回运算链的最后一个值</strong>，例如：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为0（第一个假值）</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token operator">&amp;&amp;</span> <span class="token string">'no matter what'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为'no matter what'（运算链最后一个值）</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为null（第一个假值）</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为3（运算链最后一个值）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="（非）"><a href="#（非）" class="headerlink" title="!（非）"></a>!（非）</h2><p>!（非）运算符将操作数转化为布尔类型，并返回相反的值，两个非运算<code>!!</code>用来将某个值转化为布尔类型，也可以使用内置的 Boolean 函数来转换为布尔类型。<strong>非运算符在所有逻辑运算符中优先级最高，它总在<code>&amp;&amp;</code>和<code>||</code>前执行</strong>。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为false</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">Boolean</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回值为false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +340,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -345,7 +463,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -460,7 +578,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -567,7 +685,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -680,7 +798,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -801,7 +919,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -902,7 +1020,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1014,7 +1132,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1141,7 +1259,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
+      <time title="Modified: 2023-05-01 04:50:20" itemprop="dateModified" datetime="2023-05-01T04:50:20+00:00">2023-05-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1196,123 +1314,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/08/05/javascript%E5%A4%8D%E5%88%B6%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/08/05/javascript%E5%A4%8D%E5%88%B6%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/" class="post-title-link" itemprop="url">javascript复制到剪贴板</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-08-05 10:09:06" itemprop="dateCreated datePublished" datetime="2019-08-05T10:09:06+00:00">2019-08-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-26 10:32:18" itemprop="dateModified" datetime="2023-04-26T10:32:18+00:00">2023-04-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2019/08/05/javascript%E5%A4%8D%E5%88%B6%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/05/javascript复制到剪贴板/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><ol>
-<li>第三方库：clipboard.js</li>
-<li>原生api：Clipboard API（还处于草案阶段，兼容性差）</li>
-<li>document.execCommand()</li>
-</ol>
-<p>若是项目中需要经常操作剪贴板，推荐使用第三方库，若仅是轻量使用，推荐document.exeCommand()方法。待原生api稳定后，使用原生api是更为优雅的方式。</p>
-<p>这里我们着重讲document.execCommand()方法</p>
-<h2 id="document-execCommand"><a href="#document-execCommand" class="headerlink" title="document.execCommand()"></a>document.execCommand()</h2><p>首先需要注意的是document.execCommand()方法只能操作可编辑区域的内容，如input、textarea等，像div这类无法聚焦的元素原则上是无法使用document.execCommand()方法的，在div上增加tabIndex属性，让div变成一个可聚焦可编辑元素，这里仅提供一个思路，不做详细展开。</p>
-<p>我们使用textarea做为可编辑区域，在文档对象中新建一个textarea元素，然后挂载到文档末尾，再将要获取的文本赋值给textarea，最后通过document.execCommand()方法获取textarea中选中的值并删除这个textarea元素。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> textarea <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"textarea"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>textarea<span class="token punctuation">)</span><span class="token punctuation">;</span>
-textarea<span class="token punctuation">.</span>value  <span class="token operator">=</span> <span class="token string">"test string"</span><span class="token punctuation">;</span>
-textarea<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-document<span class="token punctuation">.</span><span class="token function">execCommand</span><span class="token punctuation">(</span><span class="token string">"copy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>textarea<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>参考链接 <a target="_blank" rel="noopener" href="https://juejin.im/post/5a94f8eff265da4e9b593c29">JavaScript复制内容到剪贴板</a></p>
-</blockquote>
-
       
     </div>
 
