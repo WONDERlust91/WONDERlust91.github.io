@@ -1525,6 +1525,20 @@ categories: English
 
   1. verb: look thoughtfully for a long time at. 若有所思地看了很长时间，即凝视，也常表示深思。
 
+- contemporary
+
+  1. adjective: living or occurring at the same time.
+
+     _"the event was recorded by a contemporary historian"_
+
+  2. adjective: belonging to or occurring in the present.
+
+     _"the tension and complexities of our contemporary society"_
+
+  3. noun: a person or thing living or existing at the same time as another.
+
+     _"he was a contemporary of Darwin"_
+
 - contempt
 
   1. verb: the feeling that a person or a thing is beneath consideration, worthless, or deserving scorn.
@@ -2061,6 +2075,20 @@ categories: English
 
   6. phrase: take delivery of - receive (something purchased). 收到（已购买的东西）。
 
+- delve
+
+  1. verb: reach inside a receptacle and search for something.
+
+     _"she delved in her pocket"_
+
+     - research or make painstaking inquiries into something.
+
+       _"the society is determined to delve deeper into the matter"_
+
+  2. verb(ARCHAIC): dig; excavate.
+
+     _"when Adam delved and Eve span, who was then the gentleman?"_
+
 - democratize
 
   1. verb: introduce a democratic system or democratic principles to. 引入民主制度或民主原则，即民主化。
@@ -2196,6 +2224,50 @@ categories: English
   1. noun: a person who is eating, typically a customer in a restaurant. 正在吃饭的人，通常是餐馆的顾客。
 
   2. noun: a dining car on a train. 火车上的餐车（北美常用于形容路边小餐馆）。
+
+- dip
+
+  1. verb: put or let something down quickly or briefly in or into (liquid).
+
+     _"he dipped a brush in the paint"_
+
+  2. verb: put a hand or implement into (a bag or container) in order to take something out.
+
+     _"Ian dipped into his briefcase and pulled out a photograph"_
+
+  3. verb: sink, drop, or slope downwards.
+
+     _"the sun had dipped below the horizon"_
+
+  4. verb(INFORMAL·AUSTRALIAN): miss an opportunity; fail.
+
+  5. verb(DATED·INFORMAL): pick (someone's pocket).
+
+  6. noun: a brief swim.
+
+     _"they cooled off by taking a dip in the pool"_
+
+  7. noun: a thick sauce in which pieces of food are dipped before eating.
+
+     _"tasty garlic dip"_
+
+  8. noun: a brief downward slope followed by an upward one.
+
+     _"the big hedge at the bottom of the dip"_
+
+  9. noun(TECHNICAL): the extent to which something is angled downward from the horizontal.
+
+  10. noun(INFORMAL·US): powdered or finely cut tobacco that is held in the mouth, typically between the gums and lip, rather than smoked.
+
+      _"he threw out all of his cans of dip and swore off tobacco"_
+
+  11. noun(INFORMAL·NORTH AMERICAN): a stupid or foolish person.
+
+  12. noun(DATED·INFORMAL): a pickpocket.
+
+  13. noun(ARCHAIC): a candle made by immersing a wick repeatedly in hot wax.
+
+  14. phrase: dip one's toe into — put one's toe briefly in (water), typically to check the temperature.
 
 - dirt cheap
 
@@ -3079,6 +3151,20 @@ categories: English
 
   7. verb: smooth or shape (something) with a file. 用锉刀打磨或塑造（某物）。
 
+- flaw
+
+  1. noun: a mark, blemish, or other imperfection which mars a substance or object.
+
+     _"a flaw in the glass"_
+
+  2. verb: mar, weaken, or invalidate (something).
+
+     _"the computer game was flawed by poor programming"_
+
+  3. noun(LITERARY): a squall of wind; a short storm.
+
+     _"the ship had turned, caught in a windy flaw"_
+
 - flee
 
   1. verb: run away from a place or situation of danger. 逃离某地或危险的情况。
@@ -3400,6 +3486,16 @@ categories: English
   3. noun: a disadvantage imposed on a superior competitor in sports such as golf, horse racing, and competitive sailing in order to make the chances more equal. 在运动，例如高尔夫、赛马和竞技帆船，中强加给优秀竞争者的不利条件，以使机会更加平等。
 
   4. verb: act as an impediment to. 起到阻碍作用。
+
+- hands-on
+
+  1. adjective: involving direct involvement or intervention.
+
+     _"increasingly, CEOs are taking a hands-on approach to information security"_
+
+     - involving or offering active participation rather than theory.
+
+       _"hands-on in-service training"_
 
 - hardwire
 
@@ -5321,6 +5417,14 @@ categories: English
 
   2. phrase: physician, heal thyself - before attempting to correct others, make sure that you aren't guilty of the same faults. 医生，先治好你自己 - 在尝试纠正他人前，确保自己没有犯同样的错误。
 
+- pitfall
+
+  1. noun: a hidden or unsuspected danger or difficulty.
+
+     _"the pitfalls of buying goods at public auctions"_
+
+  2. noun: a covered pit for use as a trap.
+
 - plagiarize
 
   1. verb: take (the work or an idea of someone else) and pass it off as one's own. 拿走（别人的工作或想法）并把它当作自己的，即抄袭。
@@ -5392,6 +5496,40 @@ categories: English
 - polish
 
   1. verb: make the surface of (something) smooth and shiny by rubbing it. 通过摩擦使（某物）表面光滑有光泽。
+
+     _"behind the bar the steward polished glasses busily"_
+
+     - improve, refine, or add the finishing touches to.
+
+       _"after you and your editor have polished the manuscript, the copyeditors read it"_
+
+  2. noun: a substance used to give something a smooth and shiny surface when rubbed in.
+
+     _"a tin of shoe polish"_
+
+     - refinement or elegance in a person or thing.
+
+       _"his poetry has clarity and polish"_
+
+  3. phrase: polish off — quickly finish or consume something.
+
+     _"they polished off most of the sausages"_
+
+- polished
+
+  1. adjective: shiny as a result of being rubbed.
+
+     _"a polished mahogany table"_
+
+     - accomplished and skilful.
+
+       _"his polished performance in the film"_
+
+     - refined, sophisticated, or elegant.
+
+       _"he was polished and charming"_
+
+     - (of rice) having had the outer husk removed during milling.
 
 - ponder
 
@@ -5789,6 +5927,24 @@ categories: English
 
   6. phrase: promises, promises - used to indicate that the speaker is skeptical about someone's stated intention to do something. 用于表示说话者对某人陈述的做某事的意图持怀疑态度。
 
+- prone
+
+  1. adjective: likely or liable to suffer from, do, or experience something unpleasant or regrettable.
+
+     _"farmed fish are prone to disease"_
+
+  2. adjective: lying flat, especially face downwards.
+
+     _"I was lying prone on a foam mattress"_
+
+  3. verb(MEDICINE): turn (a patient) so as to lie face down for a period of time in order to improve the exchange of oxygen and carbon dioxide in the lungs during mechanical ventilation.
+
+     _"twice a day he was proned to try and get as much oxygen into his body as possible"_
+
+  4. verb(US): drop into a prone position; lie face down.
+
+     _"they searched him and told him to prone out on the ground next to his car"_
+
 - pronounce
 
   1. verb: make the sound of (a word or part of a word) in the correct or a particular way. 以正确或特定的方式发出（单词或单词一部分）的发音。
@@ -5958,6 +6114,16 @@ categories: English
   1. adverb: without hesitation or reluctance; willingly. 没有犹豫或没有不情愿的；心甘情愿的。
 
      - without delay or difficulty; easily. 没有延迟或困难；容易地。
+
+- recap
+
+  1. verb: state again as a summary; recapitulate.
+
+     _"a way of recapping the story so far"_
+
+  2. noun: a summary of what has been said; a recapitulation.
+
+     _"a quick recap of the idea and its main advantages"_
 
 - recipient
 
@@ -6756,6 +6922,16 @@ categories: English
   4. noun(NORTH AMERICAN): a matched pair of horses, mules, or oxen. 配对的马、骡子或牛。
 
   5. phrase: spick and span - spotlessly clean and well looked after. 一尘不染，并照看得很好。
+
+- sparse
+
+  1. adjective: thinly dispersed or scattered.
+
+     _"areas of sparse population"_
+
+     - scanty; in short supply.
+
+       _"information on earnings is sparse"_
 
 - specialty (speciality)
 
@@ -7696,6 +7872,12 @@ categories: English
   8. phrase: toss off - produce something rapidly or without thought or effort. 迅速或不假思索或不费力地做出某事。
 
   9. phrase: toss up - throw a coin into the air in order to make a decision between two alternatives, based on which side of the coin faces up when it lands. 将一枚硬币抛向空中，以便在两个选择中做出决定，决定基于硬币落地时哪一面向上。
+
+- trade-off
+
+  1. noun: a balance achieved between two desirable but incompatible features; a compromise.
+
+     _"a trade-off between objectivity and relevance"_
 
 - trait
 
