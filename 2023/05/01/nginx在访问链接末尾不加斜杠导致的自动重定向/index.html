@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="问题描述在访问网站链接时，我们通常不会注意链接的末尾是否加了&#x2F;，如果我们没有加&#x2F;，那么 Nginx 会自动使用 301 重定向，帮我们加上&#x2F;，以确保访问的是目录。 若 Nginx 前端还有其他服务（如负载均衡），且这个服务的端口与 Nginx 服务端口不一致时，Nginx 的自动重定向就会导致端口错误。 例如443端口为负载均衡服务，8080端口为 Nginx 服务，对443的访问最终都回落到了8">
 <meta property="og:type" content="article">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="问题描述在访问网站链接时，我们通常不会注意链接的末尾是否加了&#x2F;，如果我们没有加&#x2F;，那么 Nginx 会自动使用 301 重定向，帮我们加上&#x2F;，以确保访问的是目录。 若 Nginx 前端还有其他服务（如负载均衡），且这个服务的端口与 Nginx 服务端口不一致时，Nginx 的自动重定向就会导致端口错误。 例如443端口为负载均衡服务，8080端口为 Nginx 服务，对443的访问最终都回落到了8">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-01T11:08:13.000Z">
-<meta property="article:modified_time" content="2023-05-12T05:09:16.673Z">
+<meta property="article:modified_time" content="2023-05-12T05:56:21.819Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="nginx">
 <meta property="article:tag" content="重定向">
@@ -228,7 +228,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -263,24 +263,15 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在访问网站链接时，我们通常不会注意链接的末尾是否加了<code>/</code>，如果我们没有加<code>/</code>，那么 Nginx 会自动使用 301 重定向，帮我们加上<code>/</code>，以确保访问的是目录。</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在访问网站链接时，我们通常不会注意链接的末尾是否加了<code>/</code>，如果我们没有加<code>/</code>，那么 Nginx 会自动使用 301 重定向，帮我们加上<code>/</code>，以确保访问的是目录。</p>
 <p>若 Nginx 前端还有其他服务（如负载均衡），且这个服务的端口与 Nginx 服务端口不一致时，Nginx 的自动重定向就会导致端口错误。</p>
 <p>例如<code>443</code>端口为负载均衡服务，<code>8080</code>端口为 Nginx 服务，对<code>443</code>的访问最终都回落到了<code>8080</code>下，那么我们访问<code>https://www.example.com/foo</code>时，由于链接最后没加<code>/</code>，Nginx 会自动重定向补<code>/</code>，我们期待的结果是<code>https://www.example.com/foo/</code>，但实际结果为<code>http://www.example.com:8080/foo/</code>，重定向带上了原始服务的端口。</p>
 <span id="more"></span>
 
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="方法一：设置absolute-redirect"><a href="#方法一：设置absolute-redirect" class="headerlink" title="方法一：设置absolute_redirect"></a>方法一：设置<code>absolute_redirect</code></h3><pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">server</span> <span class="token value attr-value">&#123;</span>
-<span class="token key attr-name">  listen</span> <span class="token value attr-value">8080;</span>
-<span class="token key attr-name">  server_name</span> <span class="token value attr-value">www.example.com;</span>
-<span class="token key attr-name">  absolute_redirect</span> <span class="token value attr-value">off;</span>
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="方法一：设置absolute-redirect"><a href="#方法一：设置absolute-redirect" class="headerlink" title="方法一：设置absolute_redirect"></a>方法一：设置<code>absolute_redirect</code></h3><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server</span> <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">listen</span> <span class="string">8080;</span></span><br><span class="line">  <span class="attr">server_name</span> <span class="string">www.example.com;</span></span><br><span class="line">  <span class="attr">absolute_redirect</span> <span class="string">off;</span></span><br><span class="line"><span class="attr">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>关闭绝对路径重定向，仅对相对路径部分<code>/foo</code>进行重定向。</p>
-<h3 id="方法二：设置port-in-redirect"><a href="#方法二：设置port-in-redirect" class="headerlink" title="方法二：设置port_in_redirect"></a>方法二：设置<code>port_in_redirect</code></h3><pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">server</span> <span class="token value attr-value">&#123;</span>
-<span class="token key attr-name">  listen</span> <span class="token value attr-value">8080;</span>
-<span class="token key attr-name">  server_name</span> <span class="token value attr-value">www.example.com;</span>
-<span class="token key attr-name">  port_in_redirect</span> <span class="token value attr-value">off;</span>
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="方法二：设置port-in-redirect"><a href="#方法二：设置port-in-redirect" class="headerlink" title="方法二：设置port_in_redirect"></a>方法二：设置<code>port_in_redirect</code></h3><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server</span> <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">listen</span> <span class="string">8080;</span></span><br><span class="line">  <span class="attr">server_name</span> <span class="string">www.example.com;</span></span><br><span class="line">  <span class="attr">port_in_redirect</span> <span class="string">off;</span></span><br><span class="line"><span class="attr">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>保持绝对路径重定向，但重定向时不携带端口号。</p>
 <h3 id="Nginx-重定向配置"><a href="#Nginx-重定向配置" class="headerlink" title="Nginx 重定向配置"></a>Nginx 重定向配置</h3><table>
@@ -314,31 +305,13 @@
 <h2 id="扩展知识"><a href="#扩展知识" class="headerlink" title="扩展知识"></a>扩展知识</h2><p>Nginx 配置中<code>proxy_pass</code>的 URL 是否包含子路径，决定了是否会替换<code>location</code>中匹配的路径。</p>
 <p>如果<code>proxy_pass</code>中的 URL 不包含子路径，则<code>location</code>中的路径不会被替换，仍被拼接在代理的 URL 后，即<code>proxy_pass</code> + <code>location</code>。</p>
 <p>如果<code>proxy_pass</code>中的 URL 包含子路径（哪怕是<code>/</code>），则<code>location</code>中的路径被替换，即直接使用<code>proxy_pass</code>。</p>
-<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">server</span> <span class="token value attr-value">&#123;</span>
-<span class="token key attr-name">  server_name</span> <span class="token value attr-value">www.example.com;</span>
-
-<span class="token key attr-name">  location</span> <span class="token value attr-value">~^/foo &#123;</span>
-<span class="token key attr-name">    proxy_pass</span> <span class="token value attr-value">https://www.test.com;</span>
-  &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server</span> <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">server_name</span> <span class="string">www.example.com;</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">location</span> <span class="string">~^/foo &#123;</span></span><br><span class="line">    <span class="attr">proxy_pass</span> <span class="string">https://www.test.com;</span></span><br><span class="line">  <span class="attr">&#125;</span></span><br><span class="line"><span class="attr">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>上述例子中，访问<code>www.example.com/foo</code> 会被代理到<code>https://www.test.com/foo</code>。</p>
-<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">server</span> <span class="token value attr-value">&#123;</span>
-<span class="token key attr-name">  server_name</span> <span class="token value attr-value">www.example.com;</span>
-
-<span class="token key attr-name">  location</span> <span class="token value attr-value">~^/foo &#123;</span>
-<span class="token key attr-name">    proxy_pass</span> <span class="token value attr-value">https://www.test.com/;</span>
-  &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server</span> <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">server_name</span> <span class="string">www.example.com;</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">location</span> <span class="string">~^/foo &#123;</span></span><br><span class="line">    <span class="attr">proxy_pass</span> <span class="string">https://www.test.com/;</span></span><br><span class="line">  <span class="attr">&#125;</span></span><br><span class="line"><span class="attr">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>上述例子中，访问<code>www.example.com/foo</code> 会被代理到<code>https://www.test.com/</code>。</p>
-<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">server</span> <span class="token value attr-value">&#123;</span>
-<span class="token key attr-name">  server_name</span> <span class="token value attr-value">www.example.com;</span>
-
-<span class="token key attr-name">  location</span> <span class="token value attr-value">~^/foo &#123;</span>
-<span class="token key attr-name">    proxy_pass</span> <span class="token value attr-value">https://www.test.com/bar;</span>
-  &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server</span> <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">server_name</span> <span class="string">www.example.com;</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">location</span> <span class="string">~^/foo &#123;</span></span><br><span class="line">    <span class="attr">proxy_pass</span> <span class="string">https://www.test.com/bar;</span></span><br><span class="line">  <span class="attr">&#125;</span></span><br><span class="line"><span class="attr">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>上述例子中，访问<code>www.example.com/foo</code> 会被代理到<code>https://www.test.com/bar</code>。</p>
 <blockquote>
@@ -429,6 +402,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
+
 
 
 

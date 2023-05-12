@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="在使用媒体查询与响应式布局过程中，我们常常需要让一个盒模型按一定的纵横比响应，即盒子的高度取决于盒子的宽度。常见需求如在响应过程中保持盒子为正方形，或保持盒子为 16:9 的比例。那么如何实现这样的需求呢？ 可替换元素如果是&lt;video&gt;或&lt;img&gt;等可替换元素标签，通常需要保持图片或视频素材本身纵横比，因此只需要固定width或height属性中的一个，并将另一个设置为a">
 <meta property="og:type" content="article">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="在使用媒体查询与响应式布局过程中，我们常常需要让一个盒模型按一定的纵横比响应，即盒子的高度取决于盒子的宽度。常见需求如在响应过程中保持盒子为正方形，或保持盒子为 16:9 的比例。那么如何实现这样的需求呢？ 可替换元素如果是&lt;video&gt;或&lt;img&gt;等可替换元素标签，通常需要保持图片或视频素材本身纵横比，因此只需要固定width或height属性中的一个，并将另一个设置为a">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-20T22:17:44.000Z">
-<meta property="article:modified_time" content="2023-05-12T05:09:16.669Z">
+<meta property="article:modified_time" content="2023-05-12T05:56:21.815Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="css">
 <meta property="article:tag" content="纵横比">
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -264,32 +264,12 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>在使用媒体查询与响应式布局过程中，我们常常需要让一个盒模型按一定的纵横比响应，即盒子的高度取决于盒子的宽度。常见需求如在响应过程中保持盒子为正方形，或保持盒子为 16:9 的比例。那么如何实现这样的需求呢？</p>
+    <div class="post-body" itemprop="articleBody"><p>在使用媒体查询与响应式布局过程中，我们常常需要让一个盒模型按一定的纵横比响应，即盒子的高度取决于盒子的宽度。常见需求如在响应过程中保持盒子为正方形，或保持盒子为 16:9 的比例。那么如何实现这样的需求呢？</p>
 <h2 id="可替换元素"><a href="#可替换元素" class="headerlink" title="可替换元素"></a>可替换元素</h2><p>如果是<code>&lt;video&gt;</code>或<code>&lt;img&gt;</code>等可替换元素标签，通常需要保持图片或视频素材本身纵横比，因此只需要固定<code>width</code>或<code>height</code>属性中的一个，并将另一个设置为<code>auto</code>即可按内容实现固定的纵横比。</p>
 <h2 id="aspect-ratio"><a href="#aspect-ratio" class="headerlink" title="aspect-ratio"></a>aspect-ratio</h2><p>2022 年了，<code>aspect-ratio</code>属性已经成为了 css 标准，在主流的浏览器中都有不错的支持。使用纵横比属性，很容易就能实现盒模型的固定比例。</p>
 <span id="more"></span>
 
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.div1</span> <span class="token punctuation">&#123;</span>
-  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-  <span class="token comment">/* 默认值 auto，遵循浏览器原本宽高计算规则 */</span>
-  <span class="token property">aspect-ratio</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.div2</span> <span class="token punctuation">&#123;</span>
-  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-  <span class="token comment">/* 比值写法，1比1则宽高相等 */</span>
-  <span class="token property">aspect-ratio</span><span class="token punctuation">:</span> 1 / 1<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.div3</span> <span class="token punctuation">&#123;</span>
-  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-  <span class="token comment">/* 比值写法，分母为宽，分子为高 */</span>
-  <span class="token property">aspect-ratio</span><span class="token punctuation">:</span> 16 / 9<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.div4</span> <span class="token punctuation">&#123;</span>
-  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-  <span class="token comment">/* 小数写法，即宽是高的几倍 */</span>
-  <span class="token property">aspect-ratio</span><span class="token punctuation">:</span> 0.5<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.div1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="comment">/* 默认值 auto，遵循浏览器原本宽高计算规则 */</span></span><br><span class="line">  aspect-ratio: auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="comment">/* 比值写法，1比1则宽高相等 */</span></span><br><span class="line">  aspect-ratio: <span class="number">1</span> / <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div3</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="comment">/* 比值写法，分母为宽，分子为高 */</span></span><br><span class="line">  aspect-ratio: <span class="number">16</span> / <span class="number">9</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div4</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="comment">/* 小数写法，即宽是高的几倍 */</span></span><br><span class="line">  aspect-ratio: <span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>尽管现代浏览器都已经支持了纵横比的属性，但是手机端微信浏览器，或其他国产浏览器，对纵横比属性的支持并不好。那么此时又该如何实现盒子的纵横比呢？</p>
 <h2 id="margin-x2F-padding"><a href="#margin-x2F-padding" class="headerlink" title="margin&#x2F;padding"></a>margin&#x2F;padding</h2><p>相信熟悉 css 标准的小伙伴已经想到了办法，那就是利用<code>margin</code>和<code>padding</code>的百分比计算机制。因为<code>margin</code>和<code>padding</code>的百分比是相对宽<code>width</code>计算的。</p>
@@ -304,18 +284,7 @@
 <li><p>将子盒子相对父盒子绝对定位，并撑开至与父盒子大小一致，即在父盒子上增加<code>position: relative;</code>属性，在子盒子上增加<code>position: absolute; top: 0; right: 0; bottom: 0; left: 0;</code>属性;</p>
 </li>
 </ol>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.parent</span> <span class="token punctuation">&#123;</span>
-  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-  <span class="token property">padding-bottom</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.child</span> <span class="token punctuation">&#123;</span>
-  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-  <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">padding-bottom</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>参考资料</p>
@@ -409,6 +378,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
+
 
 
 

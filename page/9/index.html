@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="又是一个艳阳天">
 <meta property="og:type" content="website">
@@ -222,7 +222,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -267,12 +267,7 @@
 <p>这里我们着重讲document.execCommand()方法</p>
 <h2 id="document-execCommand"><a href="#document-execCommand" class="headerlink" title="document.execCommand()"></a>document.execCommand()</h2><p>首先需要注意的是document.execCommand()方法只能操作可编辑区域的内容，如input、textarea等，像div这类无法聚焦的元素原则上是无法使用document.execCommand()方法的，在div上增加tabIndex属性，让div变成一个可聚焦可编辑元素，这里仅提供一个思路，不做详细展开。</p>
 <p>我们使用textarea做为可编辑区域，在文档对象中新建一个textarea元素，然后挂载到文档末尾，再将要获取的文本赋值给textarea，最后通过document.execCommand()方法获取textarea中选中的值并删除这个textarea元素。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> textarea <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"textarea"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>textarea<span class="token punctuation">)</span><span class="token punctuation">;</span>
-textarea<span class="token punctuation">.</span>value  <span class="token operator">=</span> <span class="token string">"test string"</span><span class="token punctuation">;</span>
-textarea<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-document<span class="token punctuation">.</span><span class="token function">execCommand</span><span class="token punctuation">(</span><span class="token string">"copy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>textarea<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> textarea = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;textarea&quot;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(textarea);</span><br><span class="line">textarea.<span class="property">value</span>  = <span class="string">&quot;test string&quot;</span>;</span><br><span class="line">textarea.<span class="title function_">select</span>();</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">execCommand</span>(<span class="string">&quot;copy&quot;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(textarea);</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>参考链接 <a target="_blank" rel="noopener" href="https://juejin.im/post/5a94f8eff265da4e9b593c29">JavaScript复制内容到剪贴板</a></p>
@@ -339,7 +334,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -466,7 +461,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -504,30 +499,10 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
     <div class="post-body" itemprop="articleBody">
           <h2 id="对象与数组的特点"><a href="#对象与数组的特点" class="headerlink" title="对象与数组的特点"></a>对象与数组的特点</h2><p>对象与数组都是与字符串、数字、布尔等基本类型不同的类型，当我们将一个对象或数组赋值给另一个变量时，我们并没有复制这个对象或数组，而是将原对象或原数组在内存位置中的索引赋值给了这个变量，这就导致我们在修改这个变量时，最初的对象或数组也被改变了。因为我们通过变量中的内存位置索引，找到的就是最初的对象或数组本身。</p>
 <h2 id="对象与数组的浅拷贝"><a href="#对象与数组的浅拷贝" class="headerlink" title="对象与数组的浅拷贝"></a>对象与数组的浅拷贝</h2><p>当我们需要复制一个对象或数组，而不是仅仅获得当前对象或数组的索引时，就要用到对象或数组的拷贝。对象的拷贝使用Object.assign方法，Object.assign(target, …sources)，target为目标对象，sources为源对象，源对象可以是一个或多个。数组的拷贝使用Array.from方法，Array.from(arrayLike[, mapFn[, thisArg]])，arrayLike是要转换成数组的伪数组对象或可迭代对象；mapFn可选参数，代表新数组中每个元素会执行的回调函数；thisArg可选参数，执行回调函数mapFn时的this对象。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-  <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> newFoo <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> newBar <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">b</span>: <span class="number">2</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> newFoo = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, foo);</span><br><span class="line"><span class="keyword">const</span> bar = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="keyword">const</span> newBar = <span class="title class_">Array</span>.<span class="title function_">from</span>(bar);</span><br></pre></td></tr></table></figure>
 
 <h2 id="对象与数组的深拷贝"><a href="#对象与数组的深拷贝" class="headerlink" title="对象与数组的深拷贝"></a>对象与数组的深拷贝</h2><p>当对象或数组中嵌套了对象或数组时，对象与数组的浅拷贝无法将嵌套的对象或数组拷贝进去，得到的还是原对象或原数组内存位置的索引。这个时候就要对对象或数组进行深拷贝了。深拷贝需要递归对象或数组进行拷贝，代码如下：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">deepCopyObject</span> <span class="token operator">=</span> <span class="token parameter">obj</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">let</span> newObj<span class="token punctuation">;</span>
-  <span class="token comment">// 判断对象是否为数组</span>
-  Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">(</span>newObj <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>newObj <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token comment">// 获取对象可迭代的键值并遍历</span>
-  Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">key</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// 若对象内的值还是一个对象，则递归；否则直接赋值</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"object"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-      newObj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">deepCopyObject</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
-      newObj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> newObj<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">deepCopyObject</span> = obj =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> newObj;</span><br><span class="line">  <span class="comment">// 判断对象是否为数组</span></span><br><span class="line">  <span class="title class_">Array</span>.<span class="title function_">isArray</span>(obj) ? (newObj = []) : (newObj = &#123;&#125;);</span><br><span class="line">  <span class="comment">// 获取对象可迭代的键值并遍历</span></span><br><span class="line">  <span class="title class_">Object</span>.<span class="title function_">keys</span>(obj).<span class="title function_">forEach</span>(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 若对象内的值还是一个对象，则递归；否则直接赋值</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> obj[key] == <span class="string">&quot;object&quot;</span>) &#123;</span><br><span class="line">      newObj[key] = <span class="title function_">deepCopyObject</span>(obj[key]);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      newObj[key] = obj[key];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> newObj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -590,7 +565,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -628,24 +603,9 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
     <div class="post-body" itemprop="articleBody">
           <h2 id="自定义组件-prop-的双向绑定"><a href="#自定义组件-prop-的双向绑定" class="headerlink" title="自定义组件 prop 的双向绑定"></a>自定义组件 prop 的双向绑定</h2><p>在 vue 中当我们要用到双向绑定的时候，第一反应是使用 v-model 属性，但 v-model 属性只能用在部分表单相关的组件上，如 input、select、textarea。如果我们在自定义的组件传递的 prop 上也想达到双向绑定的效果该如何做呢？答案是使用<a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/components-custom-events.html#sync-%E4%BF%AE%E9%A5%B0%E7%AC%A6">.sync 修饰符</a>。</p>
 <p>.sync 修饰符实质上是 v-bind 与 update 事件的语法糖，我们通过在子组件内给父组件传递事件来更新父组件传给子组件的 prop，以实现双向绑定。</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!-- 在父组件内 --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>custom-component</span> <span class="token attr-name">:foo</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bar<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">@update:</span>foo</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bar = $event<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>custom-component</span><span class="token punctuation">></span></span>
-  <span class="token comment">&lt;!-- 上面的写法等同于 --></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>custom-component</span> <span class="token attr-name">:foo.sync</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>custom-component</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 在父组件内 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">custom-component</span> <span class="attr">:foo</span>=<span class="string">&quot;bar&quot;</span> @<span class="attr">update:foo</span>=<span class="string">&quot;bar = $event&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">custom-component</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 上面的写法等同于 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">custom-component</span> <span class="attr">:foo.sync</span>=<span class="string">&quot;bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">custom-component</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!-- 在子组件内 --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span>
-    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"foo"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-      <span class="token function">updatePropFoo</span><span class="token punctuation">(</span><span class="token parameter">newFoo</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">"update:foo"</span><span class="token punctuation">,</span> newFoo<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
-  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 在子组件内 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">props</span>: [<span class="string">&quot;foo&quot;</span>],</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">updatePropFoo</span>(<span class="params">newFoo</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.$emit(<span class="string">&quot;update:foo&quot;</span>, newFoo);</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/07/11/vue%E9%80%92%E5%BD%92%E7%BB%84%E4%BB%B6props%E7%9A%84%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/#more" rel="contents">
@@ -715,7 +675,7 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -753,25 +713,13 @@ document<span class="token punctuation">.</span>body<span class="token punctuati
     <div class="post-body" itemprop="articleBody">
           <p>系统环境 centos7，本文中默认使用 root 用户，故没有 sudo 命令，实践中根据用户不同酌情添加。</p>
 <h2 id="安装-nginx-服务器"><a href="#安装-nginx-服务器" class="headerlink" title="安装 nginx 服务器"></a>安装 nginx 服务器</h2><h3 id="1-在-yum-中安装-nginx-源"><a href="#1-在-yum-中安装-nginx-源" class="headerlink" title="1. 在 yum 中安装 nginx 源"></a>1. 在 yum 中安装 nginx 源</h3><p>安装前置环境</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> yum-utils<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install yum-utils</span><br></pre></td></tr></table></figure>
 
 <p>新建文件&#x2F;etc&#x2F;yum.repo.d&#x2F;nginx.repo，内容为</p>
-<pre class="line-numbers language-conf" data-language="conf"><code class="language-conf">[nginx-stable]
-name&#x3D;nginx stable repo
-baseurl&#x3D;http:&#x2F;&#x2F;nginx.org&#x2F;packages&#x2F;centos&#x2F;$releasever&#x2F;$basearch&#x2F;
-gpgcheck&#x3D;1
-enabled&#x3D;1
-gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key
-
-[nginx-mainline]
-name&#x3D;nginx mainline repo
-baseurl&#x3D;http:&#x2F;&#x2F;nginx.org&#x2F;packages&#x2F;mainline&#x2F;centos&#x2F;$releasever&#x2F;$basearch&#x2F;
-gpgcheck&#x3D;1
-enabled&#x3D;0
-gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[nginx-stable]</span><br><span class="line">name=nginx stable repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/$releasever/$basearch/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=1</span><br><span class="line">gpgkey=https://nginx.org/keys/nginx_signing.key</span><br><span class="line"></span><br><span class="line">[nginx-mainline]</span><br><span class="line">name=nginx mainline repo</span><br><span class="line">baseurl=http://nginx.org/packages/mainline/centos/$releasever/$basearch/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=0</span><br><span class="line">gpgkey=https://nginx.org/keys/nginx_signing.key</span><br></pre></td></tr></table></figure>
 
 <p>默认使用 nginx-stable 的源，若要使用 nginx-mainline 的源，将 enabled 更改为 1。或直接使用以下命令</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum-config-manager <span class="token parameter variable">--enable</span> nginx-mainline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --enable nginx-mainline</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/07/05/linux%E7%B3%BB%E7%BB%9Fnginx%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/#more" rel="contents">
@@ -841,7 +789,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -881,8 +829,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
 <p>raw-loader webpack插件，将.md文件做为文本引入</p>
 <p>highlight.js 使页面上代码实现高亮的库</p>
 <p>安装Marked.js与highlight.js依赖，将raw-loader安装为开发环境依赖</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> marked highlight.js
-<span class="token function">npm</span> <span class="token function">install</span> --save-dev raw-loader<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install marked highlight.js</span><br><span class="line">npm install --save-dev raw-loader</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/07/01/javascript%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%8A%A0%E8%BD%BDmarkdown%E6%96%87%E4%BB%B6/#more" rel="contents">
@@ -952,7 +899,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -989,10 +936,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="Canvas自适应的问题"><a href="#Canvas自适应的问题" class="headerlink" title="Canvas自适应的问题"></a>Canvas自适应的问题</h2><p>在使用Canvas的过程中，我们遇到的第一个问题就是屏幕自适应的问题，与普通的html标签不同，Canvas标签虽然支持长宽百分比的写法，但是内部绘制的图像并不适应百分比的缩放，我们会发现图像是糊的根本无法查看。好在浏览器的api中有一个resize事件，那么我们就利用resize事件来重新改变Canvas标签的长宽，来达到自适应的效果。</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!-- 这里要注意的一点是使用了flex，因为没有flex属性时，canvas超出了container，产生了滚动条 --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">heigth</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>canvas</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>canvas<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>canvas</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 这里要注意的一点是使用了flex，因为没有flex属性时，canvas超出了container，产生了滚动条 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 100%; heigth: 100%; display: flex;&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;canvas&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/06/14/javascript%E4%B9%8BCanvas%E8%87%AA%E9%80%82%E5%BA%94/#more" rel="contents">
@@ -1062,7 +1006,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1100,11 +1044,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
     <div class="post-body" itemprop="articleBody">
           <p>CSS上古时代连圆形都要靠切图，到了CSS3之后，我们已经可以使用各种方法绘制不同的形状了</p>
 <h2 id="圆形"><a href="#圆形" class="headerlink" title="圆形"></a>圆形</h2><p>通常我们都是依靠设置宽高相同的盒，再设置border-radius为50%来绘制圆形</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.circle</span> <span class="token punctuation">&#123;</span>
-  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.circle</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/06/12/css%E7%BB%98%E5%88%B6%E5%A4%9A%E7%A7%8D%E5%BD%A2%E7%8A%B6/#more" rel="contents">
@@ -1174,7 +1114,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1211,31 +1151,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
     
     <div class="post-body" itemprop="articleBody">
           <p>注意：octet 与 byte 相同都是指 8 位 1 字节，但在计算机网络中 byte 易引起混淆，故都用 octet，译为八位字节</p>
-<h3 id="TCP-头部格式"><a href="#TCP-头部格式" class="headerlink" title="TCP 头部格式"></a>TCP 头部格式</h3><pre class="line-numbers language-text" data-language="text"><code class="language-text">TCP Header Format
-
-    0                   1                   2                   3
-    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |          Source Port          |       Destination Port        |
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |                        Sequence Number                        |
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |                    Acknowledgment Number                      |
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |  Data |           |U|A|P|R|S|F|                               |
-   | Offset| Reserved  |R|C|S|S|Y|I|            Window             |
-   |       |           |G|K|H|T|N|N|                               |
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |           Checksum            |         Urgent Pointer        |
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |                    Options                    |    Padding    |
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |                             data                              |
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-                            TCP Header Format
-
-          Note that one tick mark represents one bit position.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="TCP-头部格式"><a href="#TCP-头部格式" class="headerlink" title="TCP 头部格式"></a>TCP 头部格式</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">TCP Header Format</span><br><span class="line"></span><br><span class="line">    0                   1                   2                   3</span><br><span class="line">    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">   |          Source Port          |       Destination Port        |</span><br><span class="line">   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">   |                        Sequence Number                        |</span><br><span class="line">   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">   |                    Acknowledgment Number                      |</span><br><span class="line">   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">   |  Data |           |U|A|P|R|S|F|                               |</span><br><span class="line">   | Offset| Reserved  |R|C|S|S|Y|I|            Window             |</span><br><span class="line">   |       |           |G|K|H|T|N|N|                               |</span><br><span class="line">   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">   |           Checksum            |         Urgent Pointer        |</span><br><span class="line">   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">   |                    Options                    |    Padding    |</span><br><span class="line">   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">   |                             data                              |</span><br><span class="line">   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line"></span><br><span class="line">                            TCP Header Format</span><br><span class="line"></span><br><span class="line">          Note that one tick mark represents one bit position.</span><br></pre></td></tr></table></figure>
 
 <p>TCP 协议头部一般为 20 字节，最大不超过 60 字节，且是一个整数的 32 位长。</p>
           <!--noindex-->
@@ -1307,7 +1223,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1344,22 +1260,10 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="为-electron-项目新建一个目录，并初始化-npm"><a href="#为-electron-项目新建一个目录，并初始化-npm" class="headerlink" title="为 electron 项目新建一个目录，并初始化 npm"></a>为 electron 项目新建一个目录，并初始化 npm</h2><p>例如新建文件目录为 testDesktopApp，再初始化 npm</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> init
-<span class="token comment"># 一路回车即可</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">一路回车即可</span></span><br></pre></td></tr></table></figure>
 
 <p>修改 package.json 文件，将 name 修改为最终桌面可执行程序的名称，将 main 中的 index.js 修改为 main.js 防止与要打包项目的 js 文件冲突，并在 script 中添加 start 命令。</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
-  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"testdesktopapp"</span><span class="token punctuation">,</span>
-  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"1.0.0"</span><span class="token punctuation">,</span>
-  <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
-  <span class="token property">"main"</span><span class="token operator">:</span> <span class="token string">"main.js"</span><span class="token punctuation">,</span>
-  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">"test"</span><span class="token operator">:</span> <span class="token string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span><span class="token punctuation">,</span>
-    <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"electron ."</span>
-  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-  <span class="token property">"author"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
-  <span class="token property">"license"</span><span class="token operator">:</span> <span class="token string">"ISC"</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;testdesktopapp&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;main.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;electron .&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ISC&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/06/03/electron%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2windowsApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/#more" rel="contents">
@@ -1433,6 +1337,7 @@ gpgkey&#x3D;https:&#x2F;&#x2F;nginx.org&#x2F;keys&#x2F;nginx_signing.key<span ar
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
+
 
 
 

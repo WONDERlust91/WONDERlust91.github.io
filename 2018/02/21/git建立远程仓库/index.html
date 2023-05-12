@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="虽然git做为版本控制工具，最大的特点是分布式多人协作，但是对个人开发者来说git除了用来版本控制，还可以当作中心版本库，用来在各个设备间同步代码，省去了用U盘和云盘管理代码的麻烦。">
 <meta property="og:type" content="article">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="虽然git做为版本控制工具，最大的特点是分布式多人协作，但是对个人开发者来说git除了用来版本控制，还可以当作中心版本库，用来在各个设备间同步代码，省去了用U盘和云盘管理代码的麻烦。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-02-21T13:09:59.000Z">
-<meta property="article:modified_time" content="2023-05-12T05:09:16.669Z">
+<meta property="article:modified_time" content="2023-05-12T05:56:21.815Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="远程仓库">
 <meta name="twitter:card" content="summary">
@@ -227,7 +227,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -262,43 +262,29 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>虽然git做为版本控制工具，最大的特点是分布式多人协作，但是对个人开发者来说git除了用来版本控制，还可以当作中心版本库，用来在各个设备间同步代码，省去了用U盘和云盘管理代码的麻烦。</p>
+    <div class="post-body" itemprop="articleBody"><p>虽然git做为版本控制工具，最大的特点是分布式多人协作，但是对个人开发者来说git除了用来版本控制，还可以当作中心版本库，用来在各个设备间同步代码，省去了用U盘和云盘管理代码的麻烦。</p>
 <span id="more"></span>
 <h2 id="在VPS上建立代码仓库"><a href="#在VPS上建立代码仓库" class="headerlink" title="在VPS上建立代码仓库"></a>在VPS上建立代码仓库</h2><ol>
 <li><p>在VPS上建立新文件夹，并初始化为裸版本库。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> init <span class="token parameter variable">--bare</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init --bare</span><br></pre></td></tr></table></figure>
 
 <p> 注：VPS上的版本库只用来做为同步的中心版本库， 并不用于开发，故建立为裸版本库。</p>
 </li>
 <li><p>在本地PC上的开发版本库目录中，添加远程版本库。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote <span class="token function">add</span> remoteNickname ssh://username@ipAddress<span class="token punctuation">(</span>domainName<span class="token punctuation">)</span>:port/fileAddress<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add remoteNickname ssh://username@ipAddress(domainName):port/fileAddress</span><br></pre></td></tr></table></figure></li>
 <li><p>将本地PC上的开发版本库的分支推送至远程中心版本库</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push origin master <span class="token comment">#将master分支推送至origin</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master <span class="comment">#将master分支推送至origin</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <p>例:<br>在远程VPS上</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> /root/foo <span class="token comment">#在VPS上建立foo文件夹</span>
-<span class="token builtin class-name">cd</span> /root/foo <span class="token comment">#以foo为当前工作目录</span>
-<span class="token function">git</span> init <span class="token parameter variable">--bare</span> <span class="token comment">#在foo中建立裸版本库</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /root/foo <span class="comment">#在VPS上建立foo文件夹</span></span><br><span class="line"><span class="built_in">cd</span> /root/foo <span class="comment">#以foo为当前工作目录</span></span><br><span class="line">git init --bare <span class="comment">#在foo中建立裸版本库</span></span><br></pre></td></tr></table></figure>
 <p>在本地PC上</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> c:/foo <span class="token comment">#假设在开发版本库在本地c盘的foo中，以foo为前工作目录</span>
-
-<span class="token function">git</span> remote <span class="token function">add</span> origin ssh://root@192.169.1.1:28888/root/foo
-<span class="token comment">#远程目录别名一般为origin，用root账户登录ssh，192.169.1.1为你VPS的IP地址，28888为你的ssh端口，/root/foo则是第1步中裸版本库的文件地址</span>
-
-<span class="token function">git</span> push origin master <span class="token comment">#将master分支推送至origin</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> c:/foo <span class="comment">#假设在开发版本库在本地c盘的foo中，以foo为前工作目录</span></span><br><span class="line"></span><br><span class="line">git remote add origin ssh://root@192.169.1.1:28888/root/foo</span><br><span class="line"><span class="comment">#远程目录别名一般为origin，用root账户登录ssh，192.169.1.1为你VPS的IP地址，28888为你的ssh端口，/root/foo则是第1步中裸版本库的文件地址</span></span><br><span class="line"></span><br><span class="line">git push origin master <span class="comment">#将master分支推送至origin</span></span><br></pre></td></tr></table></figure>
 <h2 id="在github上建立代码仓库"><a href="#在github上建立代码仓库" class="headerlink" title="在github上建立代码仓库"></a>在github上建立代码仓库</h2><ol>
 <li>在github网站上建立新的仓库，获取仓库的github链接，可以是https链接也可以是ssh的git链接，两种链接处理方式不同。</li>
-<li>在本地添加远程版本库。<br>如使用https协议，则会提示输入github账户密码；<br>如使用git协议（ssh），则应在本地PC的bash中运行ssh-keygen -t rsa后，将用户目录下的隐藏文件夹.ssh中的id_rsa.pub的文件内容复制到github设置中的ssh key管理页面。<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#https协议</span>
-<span class="token function">git</span> remote <span class="token function">add</span> remoteNickname https://github/yourUsername/yourRepository.git
-
-<span class="token comment">#git（ssh）协议</span>
-ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token comment">#生成ssh公钥</span>
-<span class="token comment">#将ssh公钥在github设置好后</span>
-<span class="token function">git</span> remote <span class="token function">add</span> remoteNickname git@github/yourUsername/yourRepository.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>将本地版本库的一个分支推送至github。<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push remoteNickname master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-注意：向远程版本库推送时如果报错，可以尝试先拉取远程版本库的更新再进行推送。<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> pull remoteNickname master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-如果在创建github仓库时勾选了自动创建md文档，则第一次pull会失败，因为本地仓库与github仓库不是同一个base，在拉取时应使用–allow-unrelated-histories参数<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> pull remoteNickname master --allow-unrelated-histories<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>在本地添加远程版本库。<br>如使用https协议，则会提示输入github账户密码；<br>如使用git协议（ssh），则应在本地PC的bash中运行ssh-keygen -t rsa后，将用户目录下的隐藏文件夹.ssh中的id_rsa.pub的文件内容复制到github设置中的ssh key管理页面。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#https协议</span></span><br><span class="line">git remote add remoteNickname https://github/yourUsername/yourRepository.git</span><br><span class="line"></span><br><span class="line"><span class="comment">#git（ssh）协议</span></span><br><span class="line">ssh-keygen -t rsa <span class="comment">#生成ssh公钥</span></span><br><span class="line"><span class="comment">#将ssh公钥在github设置好后</span></span><br><span class="line">git remote add remoteNickname git@github/yourUsername/yourRepository.git</span><br></pre></td></tr></table></figure></li>
+<li>将本地版本库的一个分支推送至github。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push remoteNickname master</span><br></pre></td></tr></table></figure>
+注意：向远程版本库推送时如果报错，可以尝试先拉取远程版本库的更新再进行推送。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull remoteNickname master</span><br></pre></td></tr></table></figure>
+如果在创建github仓库时勾选了自动创建md文档，则第一次pull会失败，因为本地仓库与github仓库不是同一个base，在拉取时应使用–allow-unrelated-histories参数<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull remoteNickname master --allow-unrelated-histories</span><br></pre></td></tr></table></figure></li>
 </ol>
 
     </div>
@@ -384,6 +370,7 @@ ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="tok
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
+
 
 
 

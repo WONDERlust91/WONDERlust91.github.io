@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -18,17 +18,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="vue 使用相对路径当服务器下不单单运行一个项目时，根目录下会有多个项目，vue 使用默认的根路径打包项目时，项目中文件的依赖会去根目录下查找，而出现找不到当前路径下所依赖的 js 与 css 文件的情况，故应在 vue.config.js 中将默认的基础路径设置为相对路径，即可在多项目服务器下正确运行了。 module.export &#x3D; &amp;#123;   &#x2F;&#x2F; 默认的baseUrl为&quot;&#x2F;&quot;">
+    <meta name="description" content="vue 使用相对路径当服务器下不单单运行一个项目时，根目录下会有多个项目，vue 使用默认的根路径打包项目时，项目中文件的依赖会去根目录下查找，而出现找不到当前路径下所依赖的 js 与 css 文件的情况，故应在 vue.config.js 中将默认的基础路径设置为相对路径，即可在多项目服务器下正确运行了。 1234module.export &#x3D; &amp;#123;  &#x2F;&#x2F; 默认的baseUrl为&amp;qu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue在服务器环境使用相对路径">
 <meta property="og:url" content="http://wonderlust91.github.io/2018/11/08/vue%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84/index.html">
 <meta property="og:site_name" content="WONDER&#39;s Notes">
-<meta property="og:description" content="vue 使用相对路径当服务器下不单单运行一个项目时，根目录下会有多个项目，vue 使用默认的根路径打包项目时，项目中文件的依赖会去根目录下查找，而出现找不到当前路径下所依赖的 js 与 css 文件的情况，故应在 vue.config.js 中将默认的基础路径设置为相对路径，即可在多项目服务器下正确运行了。 module.export &#x3D; &amp;#123;   &#x2F;&#x2F; 默认的baseUrl为&quot;&#x2F;&quot;">
+<meta property="og:description" content="vue 使用相对路径当服务器下不单单运行一个项目时，根目录下会有多个项目，vue 使用默认的根路径打包项目时，项目中文件的依赖会去根目录下查找，而出现找不到当前路径下所依赖的 js 与 css 文件的情况，故应在 vue.config.js 中将默认的基础路径设置为相对路径，即可在多项目服务器下正确运行了。 1234module.export &#x3D; &amp;#123;  &#x2F;&#x2F; 默认的baseUrl为&amp;qu">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-11-08T23:21:51.000Z">
-<meta property="article:modified_time" content="2023-05-12T05:09:16.673Z">
+<meta property="article:modified_time" content="2023-05-12T05:56:21.819Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="vue">
 <meta property="article:tag" content="生产环境">
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -264,12 +264,8 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <h1 id="vue-使用相对路径"><a href="#vue-使用相对路径" class="headerlink" title="vue 使用相对路径"></a>vue 使用相对路径</h1><p>当服务器下不单单运行一个项目时，根目录下会有多个项目，vue 使用默认的根路径打包项目时，项目中文件的依赖会去根目录下查找，而出现找不到当前路径下所依赖的 js 与 css 文件的情况，故应在 vue.config.js 中将默认的基础路径设置为相对路径，即可在多项目服务器下正确运行了。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>export <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-  <span class="token comment">// 默认的baseUrl为"/"</span>
-  <span class="token literal-property property">baseUrl</span><span class="token operator">:</span> <span class="token string">"./"</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+    <div class="post-body" itemprop="articleBody"><h1 id="vue-使用相对路径"><a href="#vue-使用相对路径" class="headerlink" title="vue 使用相对路径"></a>vue 使用相对路径</h1><p>当服务器下不单单运行一个项目时，根目录下会有多个项目，vue 使用默认的根路径打包项目时，项目中文件的依赖会去根目录下查找，而出现找不到当前路径下所依赖的 js 与 css 文件的情况，故应在 vue.config.js 中将默认的基础路径设置为相对路径，即可在多项目服务器下正确运行了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">export</span> = &#123;</span><br><span class="line">  <span class="comment">// 默认的baseUrl为&quot;/&quot;</span></span><br><span class="line">  <span class="attr">baseUrl</span>: <span class="string">&quot;./&quot;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <h2 id="切记！！！-vue-history-模式不要使用相对路径的-baseUrl"><a href="#切记！！！-vue-history-模式不要使用相对路径的-baseUrl" class="headerlink" title="切记！！！ vue history 模式不要使用相对路径的 baseUrl"></a><strong>切记！！！</strong> vue history 模式不要使用相对路径的 baseUrl</h2><blockquote>
 <h2 id="相对-baseUrl-的限制"><a href="#相对-baseUrl-的限制" class="headerlink" title="相对 baseUrl 的限制"></a>相对 baseUrl 的限制</h2><p>相对路径的 baseUrl 有一些使用上的限制。在以下情况下，应当避免使用相对 baseUrl:</p>
@@ -280,11 +276,7 @@
 </blockquote>
 <p>history 模式要对服务器进行配置，详见<a target="_blank" rel="noopener" href="https://router.vuejs.org/zh/guide/essentials/history-mode.html#%E5%90%8E%E7%AB%AF%E9%85%8D%E7%BD%AE%E4%BE%8B%E5%AD%90">官方文档</a></p>
 <h2 id="2019-年-3-月-8-日更新"><a href="#2019-年-3-月-8-日更新" class="headerlink" title="2019 年 3 月 8 日更新"></a>2019 年 3 月 8 日更新</h2><p>由于项目几乎都不会放在根目录下，而且项目都需要使用 history 模式，故无法在基础路径中使用相对路径，因此应该尽量约定好项目在服务器上的目录名，并在基础路径上以绝对路径方式配置。注意，vue-cli 3.3 版本后使用 publicPath 替代了原来 vue.config.js 中 baseUrl 的配置。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-  <span class="token literal-property property">publicPath</span><span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">'production'</span>
-    <span class="token operator">?</span> <span class="token string">'/production-sub-path/'</span>
-    <span class="token operator">:</span> <span class="token string">'/'</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">publicPath</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;production&#x27;</span></span><br><span class="line">    ? <span class="string">&#x27;/production-sub-path/&#x27;</span></span><br><span class="line">    : <span class="string">&#x27;/&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -371,6 +363,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
+
 
 
 

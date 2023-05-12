@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="If you are facing issues with the transition of a element from height: 0 to height: auto, resulting in a jerky or stuck animation, there is a simple solution to this problem. The problem arises becaus">
 <meta property="og:type" content="article">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="If you are facing issues with the transition of a element from height: 0 to height: auto, resulting in a jerky or stuck animation, there is a simple solution to this problem. The problem arises becaus">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-04-16T10:12:02.000Z">
-<meta property="article:modified_time" content="2023-05-12T05:09:16.669Z">
+<meta property="article:modified_time" content="2023-05-12T05:56:21.815Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="css">
 <meta property="article:tag" content="transition">
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -264,22 +264,13 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>If you are facing issues with the transition of a element from <code>height: 0</code> to <code>height: auto</code>, resulting in a jerky or stuck animation, there is a simple solution to this problem.</p>
+    <div class="post-body" itemprop="articleBody"><p>If you are facing issues with the transition of a element from <code>height: 0</code> to <code>height: auto</code>, resulting in a jerky or stuck animation, there is a simple solution to this problem.</p>
 <p>The problem arises because the final height of the element is unknown as it depends on the content inside it. CSS transitions work by calculating the difference between the initial and final states of a property and animating that difference over a specified duration. However, since the final height of the element is not known in advance, the browser cannot calculate the difference and therefore cannot create a transition between the two states.</p>
 <span id="more"></span>
 
 <h2 id="max-height"><a href="#max-height" class="headerlink" title="max-height"></a>max-height</h2><p>One solution to this problem is to use <code>max-height</code> instead of <code>height</code>. Set a value for <code>max-height</code> that is larger than the actual height of the element. The transition will be smooth because the browser knows the final <code>max-height</code> of the element. The <code>height</code> of the element can still be <code>auto</code>.</p>
 <p>However, be sure not to set the <code>max-height</code> value too high. The larger the value is, the faster the animation will be. For example, if the actual <code>height</code> of the element is <code>500px</code>, but you set <code>max-height</code> to <code>5000px</code>. The transition will animate from 0 to 5000 in duration time. This means that the <code>500px</code> of <code>height</code> will only use one fifth of duration time to animate. Therefore, it’s better to set the <code>max-height</code> value as close to the actual height of the element as possible to ensure that transition’s duration is accurate.</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.start</span> <span class="token punctuation">&#123;</span>
-  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
-  <span class="token property">max-height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-  <span class="token property">transition</span><span class="token punctuation">:</span> max-height 0.5s ease-out<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.end</span> <span class="token punctuation">&#123;</span>
-  <span class="token comment">/* actual height is less than 500px */</span>
-  <span class="token property">max-height</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.start</span> &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">max-height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">transition</span>: max-height <span class="number">0.5s</span> ease-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.end</span> &#123;</span><br><span class="line">  <span class="comment">/* actual height is less than 500px */</span></span><br><span class="line">  <span class="attribute">max-height</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <div>
   <style>
@@ -392,6 +383,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
+
 
 
 

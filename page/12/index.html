@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="又是一个艳阳天">
 <meta property="og:type" content="website">
@@ -222,7 +222,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -322,7 +322,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -358,29 +358,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="javascript判断类型"><a href="#javascript判断类型" class="headerlink" title="javascript判断类型"></a>javascript判断类型</h1><h2 id="typeof运算符"><a href="#typeof运算符" class="headerlink" title="typeof运算符"></a>typeof运算符</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">typeof</span> <span class="token string">"a"</span><span class="token punctuation">;</span> <span class="token comment">// "string"</span>
-<span class="token keyword">typeof</span> a<span class="token punctuation">;</span> <span class="token comment">// "undefined" 未声明变量</span>
-<span class="token keyword">typeof</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// "number"</span>
-<span class="token keyword">typeof</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span> <span class="token comment">// "function"</span>
-<span class="token keyword">typeof</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token comment">// "function"</span>
-<span class="token keyword">typeof</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "undefined"</span>
-<span class="token keyword">typeof</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "undefined"</span>
-<span class="token keyword">typeof</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">// "undefined"</span>
-<span class="token keyword">typeof</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// "object"</span>
-<span class="token keyword">typeof</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// "object"</span>
-<span class="token keyword">typeof</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span> <span class="token comment">// "object"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <h1 id="javascript判断类型"><a href="#javascript判断类型" class="headerlink" title="javascript判断类型"></a>javascript判断类型</h1><h2 id="typeof运算符"><a href="#typeof运算符" class="headerlink" title="typeof运算符"></a>typeof运算符</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">&quot;a&quot;</span>; <span class="comment">// &quot;string&quot;</span></span><br><span class="line"><span class="keyword">typeof</span> a; <span class="comment">// &quot;undefined&quot; 未声明变量</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">1</span>; <span class="comment">// &quot;number&quot;</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;&#125;; <span class="comment">// &quot;function&quot;</span></span><br><span class="line"><span class="keyword">typeof</span> (<span class="function">() =&gt;</span> &#123;&#125;) <span class="comment">// &quot;function&quot;</span></span><br><span class="line"><span class="keyword">typeof</span> (<span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;)(); <span class="comment">// &quot;undefined&quot;</span></span><br><span class="line"><span class="keyword">typeof</span> (<span class="function">() =&gt;</span> &#123;&#125;)(); <span class="comment">// &quot;undefined&quot;</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>; <span class="comment">// &quot;undefined&quot;</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">// &quot;object&quot;</span></span><br><span class="line"><span class="keyword">typeof</span> []; <span class="comment">// &quot;object&quot;</span></span><br><span class="line"><span class="keyword">typeof</span> &#123;&#125;; <span class="comment">// &quot;object&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>通过上面的例子可以看出typeof运算符可以判断出除了null、array外的基本类型，IIFE则以return的值为准，无return语句就是默认return了undefined</p>
 <h2 id="instanceof运算符"><a href="#instanceof运算符" class="headerlink" title="instanceof运算符"></a>instanceof运算符</h2><p>instanceof运算符用于测试构造函数的prototype属性是否出现在对象的原型链中的任何位置，这样就可以区分Array与Object</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-arr <span class="token keyword">instanceof</span> <span class="token class-name">Array</span><span class="token punctuation">;</span> <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [];</span><br><span class="line">arr <span class="keyword">instanceof</span> <span class="title class_">Array</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="constructor属性"><a href="#constructor属性" class="headerlink" title="constructor属性"></a>constructor属性</h2><p>还有一种方法就是利用对象的constructor属性，也可以区分Array和Object</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-arr<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Array<span class="token punctuation">;</span> <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [];</span><br><span class="line">arr.<span class="property">constructor</span> === <span class="title class_">Array</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="ES6中新增了Array-isArray-方法来判断是否为数组"><a href="#ES6中新增了Array-isArray-方法来判断是否为数组" class="headerlink" title="ES6中新增了Array.isArray()方法来判断是否为数组"></a>ES6中新增了Array.isArray()方法来判断是否为数组</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="ES6中新增了Array-isArray-方法来判断是否为数组"><a href="#ES6中新增了Array-isArray-方法来判断是否为数组" class="headerlink" title="ES6中新增了Array.isArray()方法来判断是否为数组"></a>ES6中新增了Array.isArray()方法来判断是否为数组</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [];</span><br><span class="line"><span class="title class_">Array</span>.<span class="title function_">isArray</span>(arr); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -442,7 +429,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -478,13 +465,9 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="css隐藏浏览器滚动条"><a href="#css隐藏浏览器滚动条" class="headerlink" title="css隐藏浏览器滚动条"></a>css隐藏浏览器滚动条</h1><h2 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body::-webkit-scrollbar</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+          <h1 id="css隐藏浏览器滚动条"><a href="#css隐藏浏览器滚动条" class="headerlink" title="css隐藏浏览器滚动条"></a>css隐藏浏览器滚动条</h1><h2 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>::-webkit-scrollbar &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="IE-x2F-Edge"><a href="#IE-x2F-Edge" class="headerlink" title="IE&#x2F;Edge"></a>IE&#x2F;Edge</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">-ms-overflow-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="IE-x2F-Edge"><a href="#IE-x2F-Edge" class="headerlink" title="IE&#x2F;Edge"></a>IE&#x2F;Edge</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    -ms-<span class="attribute">overflow</span>-style: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -546,7 +529,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -582,60 +565,13 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="子元素-width-100-后再设置-margin-或-padding-就会溢出父元素"><a href="#子元素-width-100-后再设置-margin-或-padding-就会溢出父元素" class="headerlink" title="子元素 width: 100%后再设置 margin 或 padding 就会溢出父元素"></a>子元素 width: 100%后再设置 margin 或 padding 就会溢出父元素</h2><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
-  <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>
-    width: 200px;
-    height: 50px;
-    background: green;
-    <span class="token punctuation">"</span></span></span>
-<span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
-    <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>
-        width: 100%;
-        height: 100%;
-        background: pink;
-        margin: 10px;
-        <span class="token punctuation">"</span></span></span>
-  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <h2 id="子元素-width-100-后再设置-margin-或-padding-就会溢出父元素"><a href="#子元素-width-100-后再设置-margin-或-padding-就会溢出父元素" class="headerlink" title="子元素 width: 100%后再设置 margin 或 padding 就会溢出父元素"></a>子元素 width: 100%后再设置 margin 或 padding 就会溢出父元素</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span></span></span><br><span class="line"><span class="tag">  <span class="attr">style</span>=<span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="tag">    width: 200px;</span></span></span><br><span class="line"><span class="string"><span class="tag">    height: 50px;</span></span></span><br><span class="line"><span class="string"><span class="tag">    background: green;</span></span></span><br><span class="line"><span class="string"><span class="tag">    &quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span></span></span><br><span class="line"><span class="tag">    <span class="attr">style</span>=<span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="tag">        width: 100%;</span></span></span><br><span class="line"><span class="string"><span class="tag">        height: 100%;</span></span></span><br><span class="line"><span class="string"><span class="tag">        background: pink;</span></span></span><br><span class="line"><span class="string"><span class="tag">        margin: 10px;</span></span></span><br><span class="line"><span class="string"><span class="tag">        &quot;</span></span></span><br><span class="line"><span class="tag">  &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>如何解决？</p>
-<h3 id="一、父元素设置-padding，取消子元素上的-margin-与-padding-设置"><a href="#一、父元素设置-padding，取消子元素上的-margin-与-padding-设置" class="headerlink" title="一、父元素设置 padding，取消子元素上的 margin 与 padding 设置"></a>一、父元素设置 padding，取消子元素上的 margin 与 padding 设置</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
-  <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>
-    width: 200px;
-    height: 50px;
-    background: green;
-    padding: 10px;
-    <span class="token punctuation">"</span></span></span>
-<span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
-    <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>
-        width: 100%;
-        height: 100%;
-        background: pink;
-        <span class="token punctuation">"</span></span></span>
-  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="一、父元素设置-padding，取消子元素上的-margin-与-padding-设置"><a href="#一、父元素设置-padding，取消子元素上的-margin-与-padding-设置" class="headerlink" title="一、父元素设置 padding，取消子元素上的 margin 与 padding 设置"></a>一、父元素设置 padding，取消子元素上的 margin 与 padding 设置</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span></span></span><br><span class="line"><span class="tag">  <span class="attr">style</span>=<span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="tag">    width: 200px;</span></span></span><br><span class="line"><span class="string"><span class="tag">    height: 50px;</span></span></span><br><span class="line"><span class="string"><span class="tag">    background: green;</span></span></span><br><span class="line"><span class="string"><span class="tag">    padding: 10px;</span></span></span><br><span class="line"><span class="string"><span class="tag">    &quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span></span></span><br><span class="line"><span class="tag">    <span class="attr">style</span>=<span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="tag">        width: 100%;</span></span></span><br><span class="line"><span class="string"><span class="tag">        height: 100%;</span></span></span><br><span class="line"><span class="string"><span class="tag">        background: pink;</span></span></span><br><span class="line"><span class="string"><span class="tag">        &quot;</span></span></span><br><span class="line"><span class="tag">  &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="二、box-sizing-border-box"><a href="#二、box-sizing-border-box" class="headerlink" title="二、box-sizing: border-box"></a>二、box-sizing: border-box</h3><p>若子元素只有 padding 设置而没有 margin 设置，则可以在子元素上设置 box-sizing: border-box; 这样子元素的宽度 100%将包含内容宽度、padding 和边框宽度三者。</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
-  <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>
-    width: 200px;
-    height: 50px;
-    background: green;
-    padding: 10px;
-    <span class="token punctuation">"</span></span></span>
-<span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
-    <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>
-        width: 100%;
-        height: 100%;
-        background: pink;
-        padding: 10px;
-        box-sizing: border-box;
-        <span class="token punctuation">"</span></span></span>
-  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span></span></span><br><span class="line"><span class="tag">  <span class="attr">style</span>=<span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="tag">    width: 200px;</span></span></span><br><span class="line"><span class="string"><span class="tag">    height: 50px;</span></span></span><br><span class="line"><span class="string"><span class="tag">    background: green;</span></span></span><br><span class="line"><span class="string"><span class="tag">    padding: 10px;</span></span></span><br><span class="line"><span class="string"><span class="tag">    &quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span></span></span><br><span class="line"><span class="tag">    <span class="attr">style</span>=<span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="tag">        width: 100%;</span></span></span><br><span class="line"><span class="string"><span class="tag">        height: 100%;</span></span></span><br><span class="line"><span class="string"><span class="tag">        background: pink;</span></span></span><br><span class="line"><span class="string"><span class="tag">        padding: 10px;</span></span></span><br><span class="line"><span class="string"><span class="tag">        box-sizing: border-box;</span></span></span><br><span class="line"><span class="string"><span class="tag">        &quot;</span></span></span><br><span class="line"><span class="tag">  &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="知识扩展：box-sizing-的两种取值"><a href="#知识扩展：box-sizing-的两种取值" class="headerlink" title="知识扩展：box-sizing 的两种取值"></a>知识扩展：box-sizing 的两种取值</h3><p>默认取值：content-box，元素占用宽度&#x2F;高度 &#x3D; width&#x2F;height + padding + border + margin</p>
 <p>border-box，元素占用宽度&#x2F;高度 &#x3D; width&#x2F;height + margin，padding 与 border 包含在 width&#x2F;height 中</p>
@@ -701,7 +637,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -800,7 +736,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -838,68 +774,9 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
     <div class="post-body" itemprop="articleBody">
           <h1 id="css实现四角边框"><a href="#css实现四角边框" class="headerlink" title="css实现四角边框"></a>css实现四角边框</h1><p><img src="/images/border.svg" alt="border"></p>
 <p>如何实现上图这种四角的边框？</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.main</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.main span:nth-child(1)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">/* 绝对定位 */</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token comment">/* 将span撑开 */</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> 6px 6.5px<span class="token punctuation">;</span>
-    <span class="token comment">/* 边框宽度，左上角只显示左边框和上边框 */</span>
-    <span class="token property">border-width</span><span class="token punctuation">:</span> 3px 0 0 3px<span class="token punctuation">;</span>
-    <span class="token property">border-style</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
-    <span class="token property">border-color</span><span class="token punctuation">:</span> #4ab2f8<span class="token punctuation">;</span>
-    <span class="token comment">/* 定位到左上角，并使边框离main有一定间距 */</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> -5px<span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> -5px<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.main span:nth-child(2)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">/* 绝对定位 */</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token comment">/* 将span撑开 */</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> 6px 6.5px<span class="token punctuation">;</span>
-    <span class="token comment">/* 边框宽度，右上角只显示右边框和上边框 */</span>
-    <span class="token property">border-width</span><span class="token punctuation">:</span> 3px 3px 0 0<span class="token punctuation">;</span>
-    <span class="token property">border-style</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
-    <span class="token property">border-color</span><span class="token punctuation">:</span> #4ab2f8<span class="token punctuation">;</span>
-    <span class="token comment">/* 定位到右上角，并使边框离main有一定间距 */</span>
-    <span class="token property">right</span><span class="token punctuation">:</span> -5px<span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> -5px<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.main span:nth-child(3)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">/* 绝对定位 */</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token comment">/* 将span撑开 */</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> 6px 6.5px<span class="token punctuation">;</span>
-    <span class="token comment">/* 边框宽度，左下角只显示左边框和下边框 */</span>
-    <span class="token property">border-width</span><span class="token punctuation">:</span> 0 0 3px 3px<span class="token punctuation">;</span>
-    <span class="token property">border-style</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
-    <span class="token property">border-color</span><span class="token punctuation">:</span> #4ab2f8<span class="token punctuation">;</span>
-    <span class="token comment">/* 定位到左下角，并使边框离main有一定间距 */</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> -5px<span class="token punctuation">;</span>
-    <span class="token property">bottom</span><span class="token punctuation">:</span> -5px<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">.main span:nth-child(4)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">/* 绝对定位 */</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token comment">/* 将span撑开 */</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> 6px 6.5px<span class="token punctuation">;</span>
-    <span class="token comment">/* 边框宽度，右下角只显示右边框和下边框 */</span>
-    <span class="token property">border-width</span><span class="token punctuation">:</span> 0 3px 3px 0<span class="token punctuation">;</span>
-    <span class="token property">border-style</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
-    <span class="token property">border-color</span><span class="token punctuation">:</span> #4ab2f8<span class="token punctuation">;</span>
-    <span class="token comment">/* 定位到右下角，并使边框离main有一定间距 */</span>
-    <span class="token property">right</span><span class="token punctuation">:</span> -5px<span class="token punctuation">;</span>
-    <span class="token property">bottom</span><span class="token punctuation">:</span> -5px<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>) &#123;</span><br><span class="line">    <span class="comment">/* 绝对定位 */</span></span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="comment">/* 将span撑开 */</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">6px</span> <span class="number">6.5px</span>;</span><br><span class="line">    <span class="comment">/* 边框宽度，左上角只显示左边框和上边框 */</span></span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">3px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#4ab2f8</span>;</span><br><span class="line">    <span class="comment">/* 定位到左上角，并使边框离main有一定间距 */</span></span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>) &#123;</span><br><span class="line">    <span class="comment">/* 绝对定位 */</span></span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="comment">/* 将span撑开 */</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">6px</span> <span class="number">6.5px</span>;</span><br><span class="line">    <span class="comment">/* 边框宽度，右上角只显示右边框和上边框 */</span></span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">3px</span> <span class="number">3px</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#4ab2f8</span>;</span><br><span class="line">    <span class="comment">/* 定位到右上角，并使边框离main有一定间距 */</span></span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">3</span>) &#123;</span><br><span class="line">    <span class="comment">/* 绝对定位 */</span></span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="comment">/* 将span撑开 */</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">6px</span> <span class="number">6.5px</span>;</span><br><span class="line">    <span class="comment">/* 边框宽度，左下角只显示左边框和下边框 */</span></span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">3px</span> <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#4ab2f8</span>;</span><br><span class="line">    <span class="comment">/* 定位到左下角，并使边框离main有一定间距 */</span></span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">4</span>) &#123;</span><br><span class="line">    <span class="comment">/* 绝对定位 */</span></span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="comment">/* 将span撑开 */</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">6px</span> <span class="number">6.5px</span>;</span><br><span class="line">    <span class="comment">/* 边框宽度，右下角只显示右边框和下边框 */</span></span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">0</span> <span class="number">3px</span> <span class="number">3px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#4ab2f8</span>;</span><br><span class="line">    <span class="comment">/* 定位到右下角，并使边框离main有一定间距 */</span></span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>参考链接<br><a target="_blank" rel="noopener" href="https://www.jb51.net/css/581071.html">https://www.jb51.net/css/581071.html</a></p>
@@ -966,7 +843,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1003,20 +880,11 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="文本超出宽度后不换行，隐藏后显示省略号"><a href="#文本超出宽度后不换行，隐藏后显示省略号" class="headerlink" title="文本超出宽度后不换行，隐藏后显示省略号"></a>文本超出宽度后不换行，隐藏后显示省略号</h1><p>这是众所周知的三行代码</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">td</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">/* 文本不换行 */</span>
-    <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
-    <span class="token comment">/* 超出大小隐藏 */</span>
-    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
-    <span class="token comment">/* 文本超出显示省略号 */</span>
-    <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">td</span> &#123;</span><br><span class="line">    <span class="comment">/* 文本不换行 */</span></span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">    <span class="comment">/* 超出大小隐藏 */</span></span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="comment">/* 文本超出显示省略号 */</span></span><br><span class="line">    <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="表格百分比宽度时无效"><a href="#表格百分比宽度时无效" class="headerlink" title="表格百分比宽度时无效"></a>表格百分比宽度时无效</h2><p>但是当表格td宽度设为百分比时，这三行代码并没有生效，表格还是被撑开了。当表格宽度使用像素px时，这三行代码又可以生效，如何解决这个问题呢？</p>
 <p>在表格table上加一个样式，table-layout: fixed就可以解决了。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">table</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">table-layout</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> &#123;</span><br><span class="line">    <span class="attribute">table-layout</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>table-layout设定为fixed将自动表格布局算法变为了固定表格布局算法，此时布局渲染更快，表格布局只与设定的宽度与间距有关，与内容无关。自动表格布局刚好相反。</p>
 <blockquote>
@@ -1084,7 +952,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1185,7 +1053,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1222,24 +1090,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="使用transform居中"><a href="#使用transform居中" class="headerlink" title="使用transform居中"></a>使用transform居中</h1><p>绝对定位时尽量使用transform中的translate进行定位，而不是用margin为负值进行定位，因为margin为负值的定位是必须要知道自身的宽高的，而transform中的translate可以用-50%这样的百分比。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 父元素 */</span>
-<span class="token selector">.parent</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token comment">/* 子元素 */</span>
-<span class="token selector">.child</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-    <span class="token comment">/* 水平居中 */</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">/* 垂直居中 */</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">/* 可以合并写为 */</span>
-    <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-    <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
-    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>-50%<span class="token punctuation">,</span> -50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 父元素 */</span></span><br><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 子元素 */</span></span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="comment">/* 水平居中 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-<span class="number">50%</span>);</span><br><span class="line">    <span class="comment">/* 垂直居中 */</span></span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">50%</span>);</span><br><span class="line">    <span class="comment">/* 可以合并写为 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1301,7 +1152,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1338,10 +1189,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="vue-使用相对路径"><a href="#vue-使用相对路径" class="headerlink" title="vue 使用相对路径"></a>vue 使用相对路径</h1><p>当服务器下不单单运行一个项目时，根目录下会有多个项目，vue 使用默认的根路径打包项目时，项目中文件的依赖会去根目录下查找，而出现找不到当前路径下所依赖的 js 与 css 文件的情况，故应在 vue.config.js 中将默认的基础路径设置为相对路径，即可在多项目服务器下正确运行了。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>export <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-  <span class="token comment">// 默认的baseUrl为"/"</span>
-  <span class="token literal-property property">baseUrl</span><span class="token operator">:</span> <span class="token string">"./"</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">export</span> = &#123;</span><br><span class="line">  <span class="comment">// 默认的baseUrl为&quot;/&quot;</span></span><br><span class="line">  <span class="attr">baseUrl</span>: <span class="string">&quot;./&quot;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <h2 id="切记！！！-vue-history-模式不要使用相对路径的-baseUrl"><a href="#切记！！！-vue-history-模式不要使用相对路径的-baseUrl" class="headerlink" title="切记！！！ vue history 模式不要使用相对路径的 baseUrl"></a><strong>切记！！！</strong> vue history 模式不要使用相对路径的 baseUrl</h2><blockquote>
 <h2 id="相对-baseUrl-的限制"><a href="#相对-baseUrl-的限制" class="headerlink" title="相对 baseUrl 的限制"></a>相对 baseUrl 的限制</h2><p>相对路径的 baseUrl 有一些使用上的限制。在以下情况下，应当避免使用相对 baseUrl:</p>
@@ -1352,11 +1200,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
 </blockquote>
 <p>history 模式要对服务器进行配置，详见<a target="_blank" rel="noopener" href="https://router.vuejs.org/zh/guide/essentials/history-mode.html#%E5%90%8E%E7%AB%AF%E9%85%8D%E7%BD%AE%E4%BE%8B%E5%AD%90">官方文档</a></p>
 <h2 id="2019-年-3-月-8-日更新"><a href="#2019-年-3-月-8-日更新" class="headerlink" title="2019 年 3 月 8 日更新"></a>2019 年 3 月 8 日更新</h2><p>由于项目几乎都不会放在根目录下，而且项目都需要使用 history 模式，故无法在基础路径中使用相对路径，因此应该尽量约定好项目在服务器上的目录名，并在基础路径上以绝对路径方式配置。注意，vue-cli 3.3 版本后使用 publicPath 替代了原来 vue.config.js 中 baseUrl 的配置。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-  <span class="token literal-property property">publicPath</span><span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">'production'</span>
-    <span class="token operator">?</span> <span class="token string">'/production-sub-path/'</span>
-    <span class="token operator">:</span> <span class="token string">'/'</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">publicPath</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;production&#x27;</span></span><br><span class="line">    ? <span class="string">&#x27;/production-sub-path/&#x27;</span></span><br><span class="line">    : <span class="string">&#x27;/&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1423,6 +1267,7 @@ Array<span class="token punctuation">.</span><span class="token function">isArra
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
+
 
 
 

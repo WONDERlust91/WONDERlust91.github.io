@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -18,17 +18,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="注意：本文所有操作都是默认使用 root 用户，默认服务器系统为 centos7。 安装 shadowsocks添加 epel 源首先添加 epel 源，以保证能正确安装 shadowsocks 的各项依赖 yum install epel-release -y # 安装完成后清理配置并重建缓存 yum clean all yum makecache # 更新 yum update  安装 sha">
+    <meta name="description" content="注意：本文所有操作都是默认使用 root 用户，默认服务器系统为 centos7。 安装 shadowsocks添加 epel 源首先添加 epel 源，以保证能正确安装 shadowsocks 的各项依赖 123456yum install epel-release -y# 安装完成后清理配置并重建缓存yum clean allyum makecache# 更新yum update  安装 sh">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos7下shadowsocks服务端的安装配置与自启动">
 <meta property="og:url" content="http://wonderlust91.github.io/2018/04/07/shadowsocks%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%87%AA%E5%90%AF%E5%8A%A8/index.html">
 <meta property="og:site_name" content="WONDER&#39;s Notes">
-<meta property="og:description" content="注意：本文所有操作都是默认使用 root 用户，默认服务器系统为 centos7。 安装 shadowsocks添加 epel 源首先添加 epel 源，以保证能正确安装 shadowsocks 的各项依赖 yum install epel-release -y # 安装完成后清理配置并重建缓存 yum clean all yum makecache # 更新 yum update  安装 sha">
+<meta property="og:description" content="注意：本文所有操作都是默认使用 root 用户，默认服务器系统为 centos7。 安装 shadowsocks添加 epel 源首先添加 epel 源，以保证能正确安装 shadowsocks 的各项依赖 123456yum install epel-release -y# 安装完成后清理配置并重建缓存yum clean allyum makecache# 更新yum update  安装 sh">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-04-07T00:38:09.000Z">
-<meta property="article:modified_time" content="2023-05-12T05:09:16.673Z">
+<meta property="article:modified_time" content="2023-05-12T05:56:21.819Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="shadowsocks">
 <meta property="article:tag" content="多用户">
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-05-12 05:09:16" itemprop="dateModified" datetime="2023-05-12T05:09:16+00:00">2023-05-12</time>
+      <time title="Modified: 2023-05-12 05:56:21" itemprop="dateModified" datetime="2023-05-12T05:56:21+00:00">2023-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -264,64 +264,26 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>注意：本文所有操作都是默认使用 root 用户，默认服务器系统为 centos7。</p>
+    <div class="post-body" itemprop="articleBody"><p>注意：本文所有操作都是默认使用 root 用户，默认服务器系统为 centos7。</p>
 <h2 id="安装-shadowsocks"><a href="#安装-shadowsocks" class="headerlink" title="安装 shadowsocks"></a>安装 shadowsocks</h2><h3 id="添加-epel-源"><a href="#添加-epel-源" class="headerlink" title="添加 epel 源"></a>添加 epel 源</h3><p>首先添加 epel 源，以保证能正确安装 shadowsocks 的各项依赖</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> epel-release <span class="token parameter variable">-y</span>
-<span class="token comment"># 安装完成后清理配置并重建缓存</span>
-yum clean all
-yum makecache
-<span class="token comment"># 更新</span>
-yum update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release -y</span><br><span class="line"><span class="comment"># 安装完成后清理配置并重建缓存</span></span><br><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br><span class="line"><span class="comment"># 更新</span></span><br><span class="line">yum update</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装-shadowsocks-软件"><a href="#安装-shadowsocks-软件" class="headerlink" title="安装 shadowsocks 软件"></a>安装 shadowsocks 软件</h3><p>首先安装 git 并用 git 下载源码</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> <span class="token function">git</span> <span class="token parameter variable">-y</span>
-<span class="token comment"># git安装完成后下载shadowsocks源码</span>
-<span class="token function">git</span> clone https://github.com/shadowsocks/shadowsocks-libev.git
-<span class="token comment"># 改变工作目录到刚下载的源码目录</span>
-<span class="token builtin class-name">cd</span> shadowsocks-libev
-<span class="token comment"># 更新子模块</span>
-<span class="token function">git</span> submodule update <span class="token parameter variable">--init</span> <span class="token parameter variable">--recursive</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yum install git -y</span><br><span class="line"><span class="comment"># git安装完成后下载shadowsocks源码</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/shadowsocks/shadowsocks-libev.git</span><br><span class="line"><span class="comment"># 改变工作目录到刚下载的源码目录</span></span><br><span class="line"><span class="built_in">cd</span> shadowsocks-libev</span><br><span class="line"><span class="comment"># 更新子模块</span></span><br><span class="line">git submodule update --init --recursive</span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
 <p>接下来安装 shadowsocks 的各种依赖</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 要注意输出的安装信息确保所有依赖正确安装，如各别依赖无法自动安装则需手动安装，一般正确更新了epel源都可以自动安装所有依赖</span>
-yum <span class="token function">install</span> gcc gettext autoconf libtool automake <span class="token function">make</span> pcre-devel asciidoc xmlto c-ares-devel libev-devel libsodium-devel mbedtls-devel <span class="token parameter variable">-y</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 要注意输出的安装信息确保所有依赖正确安装，如各别依赖无法自动安装则需手动安装，一般正确更新了epel源都可以自动安装所有依赖</span></span><br><span class="line">yum install gcc gettext autoconf libtool automake make pcre-devel asciidoc xmlto c-ares-devel libev-devel libsodium-devel mbedtls-devel -y</span><br></pre></td></tr></table></figure>
 
 <p>依赖全部成功安装后，用源码编译安装 shadowsocks</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 注意当前工作目录应为刚下载的shadowsocks-libev源码目录</span>
-./autogen.sh <span class="token operator">&amp;&amp;</span> ./configure <span class="token operator">&amp;&amp;</span> <span class="token function">make</span>
-<span class="token comment"># make完成后进行安装</span>
-<span class="token function">make</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注意当前工作目录应为刚下载的shadowsocks-libev源码目录</span></span><br><span class="line">./autogen.sh &amp;&amp; ./configure &amp;&amp; make</span><br><span class="line"><span class="comment"># make完成后进行安装</span></span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
 
 <h2 id="用户配置"><a href="#用户配置" class="headerlink" title="用户配置"></a>用户配置</h2><h3 id="单用户配置"><a href="#单用户配置" class="headerlink" title="单用户配置"></a>单用户配置</h3><p>在任意目录下建立一个配置文件，例如在 root 目录下建立 ss_serverConfig</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> /root/ss_serverConfig
-<span class="token punctuation">&#123;</span>
-    <span class="token string">"server"</span><span class="token builtin class-name">:</span> <span class="token string">"111.111.111.111"</span>, <span class="token comment"># 你vps的ip地址</span>
-    <span class="token string">"server_port"</span><span class="token builtin class-name">:</span> <span class="token number">8388</span>, <span class="token comment"># shadowsocks server要使用的端口，自行设定</span>
-    <span class="token string">"local_port"</span><span class="token builtin class-name">:</span> <span class="token number">1080</span>, <span class="token comment"># 本地端口，自行设定</span>
-    <span class="token string">"password"</span><span class="token builtin class-name">:</span> <span class="token string">"barfoo!"</span>, <span class="token comment"># 密码，自行设定</span>
-    <span class="token string">"timeout"</span><span class="token builtin class-name">:</span> <span class="token number">600</span>, <span class="token comment"># 超时毫秒数</span>
-    <span class="token string">"method"</span><span class="token builtin class-name">:</span> <span class="token string">"chacha20-ietf-poly1305"</span> <span class="token comment"># 加密方式，建议优先选chacha20-ietf-poly1305，若客户端不支持，可选aes-256-cfb</span>
-<span class="token punctuation">&#125;</span>
-<span class="token comment"># 写好配置文件后运行ss-server（非libev版使用ssserver命令）</span>
-ss-server <span class="token parameter variable">-c</span> /root/ss_serverConfig <span class="token comment"># -c 参数是使用配置文件</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim /root/ss_serverConfig</span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;server&quot;</span>: <span class="string">&quot;111.111.111.111&quot;</span>, <span class="comment"># 你vps的ip地址</span></span><br><span class="line">    <span class="string">&quot;server_port&quot;</span>: 8388, <span class="comment"># shadowsocks server要使用的端口，自行设定</span></span><br><span class="line">    <span class="string">&quot;local_port&quot;</span>: 1080, <span class="comment"># 本地端口，自行设定</span></span><br><span class="line">    <span class="string">&quot;password&quot;</span>: <span class="string">&quot;barfoo!&quot;</span>, <span class="comment"># 密码，自行设定</span></span><br><span class="line">    <span class="string">&quot;timeout&quot;</span>: 600, <span class="comment"># 超时毫秒数</span></span><br><span class="line">    <span class="string">&quot;method&quot;</span>: <span class="string">&quot;chacha20-ietf-poly1305&quot;</span> <span class="comment"># 加密方式，建议优先选chacha20-ietf-poly1305，若客户端不支持，可选aes-256-cfb</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 写好配置文件后运行ss-server（非libev版使用ssserver命令）</span></span><br><span class="line">ss-server -c /root/ss_serverConfig <span class="comment"># -c 参数是使用配置文件</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="多用户配置"><a href="#多用户配置" class="headerlink" title="多用户配置"></a>多用户配置</h3><p>多用户配置文件与单用户不同，我们还是在 root 下创建一个 ss_managerConfig</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> /root/ss_managerConfig
-<span class="token punctuation">&#123;</span>
-    <span class="token string">"server"</span><span class="token builtin class-name">:</span> <span class="token string">"111.111.111.111"</span>, <span class="token comment"># 你vps的ip地址</span>
-    <span class="token string">"local_port"</span><span class="token builtin class-name">:</span> <span class="token number">1080</span>, <span class="token comment"># 本地端口，自行设定</span>
-    <span class="token string">"timeout"</span><span class="token builtin class-name">:</span> <span class="token number">600</span>, <span class="token comment"># 超时毫秒数</span>
-    <span class="token string">"method"</span><span class="token builtin class-name">:</span> <span class="token string">"chacha20-ietf-poly1305"</span>, <span class="token comment"># 加密方式，建议优先选chacha20-ietf-poly1305，若客户端不支持，可选aes-256-cfb</span>
-    <span class="token string">"port_password"</span><span class="token builtin class-name">:</span> <span class="token punctuation">&#123;</span>
-        <span class="token string">"8388"</span><span class="token builtin class-name">:</span> <span class="token string">"barfoo1"</span>, <span class="token comment"># 端口号与密码</span>
-        <span class="token string">"8389"</span><span class="token builtin class-name">:</span> <span class="token string">"barfoo2"</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token comment"># 多用户配置时，应用ss-manager而不是ss-server</span>
-ss-manager <span class="token parameter variable">-c</span> /root/ss_managerConfig<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">vim /root/ss_managerConfig</span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;server&quot;</span>: <span class="string">&quot;111.111.111.111&quot;</span>, <span class="comment"># 你vps的ip地址</span></span><br><span class="line">    <span class="string">&quot;local_port&quot;</span>: 1080, <span class="comment"># 本地端口，自行设定</span></span><br><span class="line">    <span class="string">&quot;timeout&quot;</span>: 600, <span class="comment"># 超时毫秒数</span></span><br><span class="line">    <span class="string">&quot;method&quot;</span>: <span class="string">&quot;chacha20-ietf-poly1305&quot;</span>, <span class="comment"># 加密方式，建议优先选chacha20-ietf-poly1305，若客户端不支持，可选aes-256-cfb</span></span><br><span class="line">    <span class="string">&quot;port_password&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;8388&quot;</span>: <span class="string">&quot;barfoo1&quot;</span>, <span class="comment"># 端口号与密码</span></span><br><span class="line">        <span class="string">&quot;8389&quot;</span>: <span class="string">&quot;barfoo2&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 多用户配置时，应用ss-manager而不是ss-server</span></span><br><span class="line">ss-manager -c /root/ss_managerConfig</span><br></pre></td></tr></table></figure>
 
 <p>这时我们发现不论是 ss-server 还是 ss-manager 都是前台程序，挂在前台执行，监听端口，使用 ctrl+c 停止后，服务也就停止了。有两个方法使程序运行到后台。</p>
 <ol>
@@ -329,44 +291,18 @@ ss-manager <span class="token parameter variable">-c</span> /root/ss_managerConf
 <li>也可以在程序运行代码的后面加一个&amp;符号，使程序一开始就在后台运行。</li>
 </ol>
 <p>这时看起来一切都没问题了，可是当我们退出登陆我们的 vps 后，发现服务又出问题了。原因是后台运行的服务程序与登陆账户是相关的，当登陆账户退出时，通过该账户运行的后台程序也会接到退出信号。这时我们可以使用 nohup 使程序与登陆账户无关，不再接收账户退出时的退出信号。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">nohup</span> ss-server <span class="token parameter variable">-c</span> /root/ss_serverConfig <span class="token operator">&amp;</span>
-<span class="token comment"># 多用户时则用ss-manager</span>
-<span class="token function">nohup</span> ss-manager <span class="token parameter variable">-c</span> /root/ss_managerConfig <span class="token operator">&amp;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">nohup</span> ss-server -c /root/ss_serverConfig &amp;</span><br><span class="line"><span class="comment"># 多用户时则用ss-manager</span></span><br><span class="line"><span class="built_in">nohup</span> ss-manager -c /root/ss_managerConfig &amp;</span><br></pre></td></tr></table></figure>
 
 <h2 id="shadowsocks-开机自启动"><a href="#shadowsocks-开机自启动" class="headerlink" title="shadowsocks 开机自启动"></a>shadowsocks 开机自启动</h2><p>通过上面的文章，我们已经可以使 shadowsocks 服务良好地运行了，但你一定不想每次重启服务器时都要运行一遍上面的代码。那么我们就可以使用 centos7 的 systemctl 将程序注册为一个随着开机自动启动的服务。</p>
 <p>注意：该方法基于 centos7，不适用 centos6。</p>
 <p>centos7 设置自启动时，应在&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system 下新建一个.service 文件，例如 ss.service。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> /usr/lib/systemd/system/ss.service
-
-<span class="token punctuation">[</span>Unit<span class="token punctuation">]</span>
-<span class="token assign-left variable">Description</span><span class="token operator">=</span>shadowsocks manager <span class="token comment"># 服务的描述</span>
-<span class="token assign-left variable">After</span><span class="token operator">=</span>network.target <span class="token comment"># 该服务跟在哪个服务后启动</span>
-
-<span class="token punctuation">[</span>Service<span class="token punctuation">]</span>
-<span class="token assign-left variable">Type</span><span class="token operator">=</span>forking <span class="token comment"># 启动时的进程行为，forking是以fork形式从父进程创建子进程，子进程创建后父进程退出</span>
-<span class="token assign-left variable">ExecStart</span><span class="token operator">=</span>/root/startSS <span class="token comment"># 启动服务时执行的命令</span>
-<span class="token assign-left variable">PrivateTmp</span><span class="token operator">=</span>true <span class="token comment"># 使用私有临时文件目录</span>
-
-<span class="token punctuation">[</span>Install<span class="token punctuation">]</span>
-<span class="token assign-left variable">WantedBy</span><span class="token operator">=</span>multi-user.target <span class="token comment"># 附挂在multi-user.target下</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/lib/systemd/system/ss.service</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=shadowsocks manager <span class="comment"># 服务的描述</span></span><br><span class="line">After=network.target <span class="comment"># 该服务跟在哪个服务后启动</span></span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking <span class="comment"># 启动时的进程行为，forking是以fork形式从父进程创建子进程，子进程创建后父进程退出</span></span><br><span class="line">ExecStart=/root/startSS <span class="comment"># 启动服务时执行的命令</span></span><br><span class="line">PrivateTmp=<span class="literal">true</span> <span class="comment"># 使用私有临时文件目录</span></span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target <span class="comment"># 附挂在multi-user.target下</span></span><br></pre></td></tr></table></figure>
 
 <p>本来直接在 ExecStart 处填 nohup &#x2F;usr&#x2F;local&#x2F;bin&#x2F;ss-manager -c &#x2F;path&#x2F;to&#x2F;config&#x2F;file &amp;<br>但是 ExecStart 指令串仅接受“指令 参数 参数…”的格式，不能接受&lt;，&gt;，&gt;&gt;，|，&amp;等特殊字符，很多的 bash 语法也不支持。所以，要使用这些特殊的字符时，应直接写入到指令脚本里面。故用将以上命令写在一个 bash 可执行文件中，例如 startSS。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> /root/startSS
-<span class="token comment">#!/bin/bash</span>
-<span class="token function">nohup</span> /usr/local/bin/ss-manager <span class="token parameter variable">-c</span> /path/to/config/file <span class="token operator">&amp;</span>
-<span class="token comment"># 保存文件后增加执行权限</span>
-<span class="token function">chmod</span> <span class="token number">754</span> startSS<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim /root/startSS</span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="built_in">nohup</span> /usr/local/bin/ss-manager -c /path/to/config/file &amp;</span><br><span class="line"><span class="comment"># 保存文件后增加执行权限</span></span><br><span class="line"><span class="built_in">chmod</span> 754 startSS</span><br></pre></td></tr></table></figure>
 
 <p>所有配置文件与脚本都设置完毕，使用 systemctl 开启服务。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 更改.service文件后，都要重载守护进程更新systemctl</span>
-systemctl daemon-reload
-<span class="token comment"># 启动服务</span>
-systemctl start ss.service
-<span class="token comment"># 查看服务状态，若为绿色active(running)则说明服务成功启动</span>
-systemctl status ss.service
-<span class="token comment"># 设置服务开机自启动</span>
-systemctl <span class="token builtin class-name">enable</span> ss.service
-<span class="token comment"># 还可使用systemctl restart ss.service重启服务，使用systemctl stop ss.service停止服务</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更改.service文件后，都要重载守护进程更新systemctl</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line"><span class="comment"># 启动服务</span></span><br><span class="line">systemctl start ss.service</span><br><span class="line"><span class="comment"># 查看服务状态，若为绿色active(running)则说明服务成功启动</span></span><br><span class="line">systemctl status ss.service</span><br><span class="line"><span class="comment"># 设置服务开机自启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> ss.service</span><br><span class="line"><span class="comment"># 还可使用systemctl restart ss.service重启服务，使用systemctl stop ss.service停止服务</span></span><br></pre></td></tr></table></figure>
 
 <p>systemctl 相关知识详见:</p>
 <a href="/2018/04/08/linux%E7%B3%BB%E7%BB%9Fsystemctl%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%91%BD%E4%BB%A4/" title="linux系统systemctl配置与命令">linux系统systemctl配置与命令</a>
@@ -456,6 +392,7 @@ systemctl <span class="token builtin class-name">enable</span> ss.service
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
+
 
 
 
