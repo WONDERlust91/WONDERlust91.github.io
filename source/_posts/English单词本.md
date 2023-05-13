@@ -191,6 +191,12 @@ categories: English
 
   4. verb(BRITISH): (of a local authority) accept responsibility for the maintenance of (a road). （英国）（当地政府）承担维护（道路）的责任。
 
+- advisable
+
+  1. adjective: (of a course of action) to be recommended; sensible.
+
+     _"it is advisable to carry one of the major credit cards"_
+
 - advocate
 
   1. noun: a person who publicly supports or recommends a particular cause or policy. 公开支持或推荐特定事业或政策的人。
@@ -276,6 +282,16 @@ categories: English
 - analogy
 
   1. noun: a comparison between two things, typically for the purpose of explanation or clarification. 两件事之间的比较，通常是为了解释或澄清，即类比。
+
+- anatomy
+
+  1. noun: the branch of science concerned with the bodily structure of humans, animals, and other living organisms, especially as revealed by dissection and the separation of parts.
+
+     _"he studied physiology and anatomy"_
+
+  2. noun: a study of the structure or internal workings of something.
+
+     _"a detailed anatomy of a society and its institutions"_
 
 - anchor
 
@@ -372,6 +388,12 @@ categories: English
 - arbitrary
 
   1. adjective: based on random choice or personal whim, rather than any reason or system. 基于随机选择或个人突发奇想，而不是任何原因或系统。
+
+- arcane
+
+  1. adjective: understood by few; mysterious or secret.
+
+     _"arcane procedures for electing people"_
 
 - archer
 
@@ -706,6 +728,16 @@ categories: English
   3. phrase: a breed apart - a sort or kind of person that is very different from the norm. 与规范非常不同的一种或一类人。
 
   4. phrase: a dying breed - a sort or kind of person that is slowly disappearing. 正在慢慢消失的一种或一类人。
+
+- brittle
+
+  1. adjective: hard but liable to break easily.
+
+     _"her bones became fragile and brittle"_
+
+  2. noun: a brittle sweet made from nuts and set melted sugar.
+
+     _"peanut brittle"_
 
 - brochure
 
@@ -1631,6 +1663,34 @@ categories: English
 
   1. noun(ANATOMY): the outer layer of the cerebrum (the cerebral cortex), composed of folded gray matter and playing an important role in consciousness. 大脑的外层（大脑皮层），由折叠的灰质组成，在意识中起重要作用，即皮层。
 
+- cost
+
+  1. verb: (of an object or action) require the payment of (a specified sum of money) before it can be acquired or done.
+
+     _"each issue of the magazine costs £1"_
+
+  2. verb: estimate the price of.
+
+     _"it is their job to plan and cost a media schedule for the campaign"_
+
+  3. noun: an amount that has to be paid or spent to buy or obtain something.
+
+     _"we are able to cover the cost of the event"_
+
+  4. phrase: at all costs - regardless of the price to be paid or the effort needed.
+
+     _"he was anxious to avoid war at all costs"_
+
+  5. phrase: at cost - at cost price; without profit to the seller.
+
+  6. phrase: cost someone dear - involve someone in a serious loss or a heavy penalty.
+
+     _"a couple of individual errors cost us dear"_
+
+  7. phrase: to someone's cost - with loss or disadvantage to someone.
+
+     _"without programmes to play on it, the cleverest machine is useless—as some hardware manufacturers already know to their cost"_
+
 - counsel
 
   1. noun: advice, especially that given formally. 建议，尤其是正式给出的建议。
@@ -1759,6 +1819,38 @@ categories: English
 
      _"the program won an award for its news coverage"_
 
+- crab
+
+  1. noun: a crustacean, found chiefly on seashores, with a broad carapace, stalked eyes, and five pairs of legs, the first pair of which are modified as pincers.
+
+  2. noun: a louse that infests human body hair, especially in the genital region, causing extreme irritation.
+
+  3. noun: a machine for picking up and lifting heavy weights.
+
+  4. verb: move sideways or obliquely.
+
+     _"he began crabbing sideways across the roof"_
+
+  5. verb: fish for crabs.
+
+     _"watermen were crabbing on the bay"_
+
+  6. phrase: catch a crab - make a faulty stroke in which the oar is jammed under water or misses the water altogether.
+
+  7. phrase: draw the crab - attract enemy fire.
+
+     _"a lone tank drew the crabs on them"_
+
+  8. noun: short for crab apple - a small sour apple. "crab apple" can also refer to something that is small and inferior or unpleasant.
+
+  9. noun(INFORMAL): grumble about something petty.
+
+     _"on picnics, I would crab about sand in my food"_
+
+  10. noun(DATED·INFORMAL): act so as to spoil (something).
+
+      _"you're trying to crab my act"_
+
 - craft
 
   1. noun: an activity involving skill in making things by hand. 一种涉及手工制作东西的技能的活动。
@@ -1768,6 +1860,12 @@ categories: English
   3. noun: a boat or ship. 一艘船。
 
   4. verb: exercise skill in making (an object), typically by hand. 练习制作（物品）的技能，通常是手工制作。
+
+- crave
+
+  1. verb: feel a powerful desire for (something).
+
+     _"if only she had shown her daughter the love she craved"_
 
 - credit
 
@@ -2675,6 +2773,12 @@ categories: English
 
      - avoid compliance with or subjection to (a law, demand, or penalty). 避免遵守或服从（法律、要求或处罚），即逃避。
 
+- elusive
+
+  1. adjective: difficult to find, catch, or achieve.
+
+     _"success will become ever more elusive"_
+
 - ember
 
   1. noun: a small piece of burning or glowing coal or wood in a dying fire. 在即将熄灭的火中燃烧或发光的一小块煤或木头，即余烬。
@@ -2905,6 +3009,12 @@ categories: English
 
   1. noun: the state of thinking or hoping that something, especially something pleasant, will happen or be the case. 一种思考或希望的状态，希望某事，尤其是令人愉快的事情，将会发生或成为这样的状态。
 
+- explanatory
+
+  1. adjective: serving to explain something.
+
+     _"explanatory notes"_
+
 - exploit
 
   1. verb: make full use of and derive benefit from (a resource). 充分利用（资源）并从中获取利益（也指剥削）。
@@ -3026,6 +3136,12 @@ categories: English
   1. adjective: (of soil or land) producing or capable of producing abundant vegetation or crops. （土壤或土地）生长或能够生长丰富的植物或农作物。
 
   2. adjective: (of a person, animal, or plant) able to conceive young or produce seed. （人，动物，植物）能够怀孕或能够产生种子。
+
+- fickle
+
+  1. adjective: changing frequently, especially as regards one's loyalties or affections.
+
+     _"celebs trying to appeal to an increasingly fickle public"_
 
 - field
 
@@ -3524,6 +3640,16 @@ categories: English
   1. adjective: unpleasantly rough or jarring to the senses. 令人不愉快的粗糙或刺耳的感觉。
 
   2. adjective: cruel or severe. 残酷的或严厉的。
+
+- hassle
+
+  1. noun(INFORMAL): irritating inconvenience.
+
+     _"all the hassle involved in travel"_
+
+  2. verb: subject (someone) to harassment or pressure to do something; harass or pester.
+
+     _"you want to sit and relax and not get hassled"_
 
 - haste
 
@@ -5417,6 +5543,12 @@ categories: English
 
   2. phrase: physician, heal thyself - before attempting to correct others, make sure that you aren't guilty of the same faults. 医生，先治好你自己 - 在尝试纠正他人前，确保自己没有犯同样的错误。
 
+- pincer
+
+  1. noun: a tool made of two pieces of metal with blunt concave jaws that are arranged like the blades of scissors, used for gripping and pulling things.
+
+  2. noun: a hinged and sharply pointed organ used by an arthropod for feeding or defence, as the mandibles of an insect, or each of the chelae of a crab, lobster, or scorpion.
+
 - pitfall
 
   1. noun: a hidden or unsuspected danger or difficulty.
@@ -5718,6 +5850,18 @@ categories: English
 - prehistoric
 
   1. adjective: relating to or denoting the period before written records. 关于或表示有书面记录之前的时期，即史前的。
+
+- prelude
+
+  1. noun: an action or event serving as an introduction to something more important.
+
+     _"a ceasefire had been agreed as a prelude to full peace negotiations"_
+
+  2. noun: an introductory piece of music, most commonly an orchestral opening to an act of an opera, the first movement of a suite, or a piece preceding a fugue.
+
+  3. verb: serve as a prelude or introduction to.
+
+     _"the bombardment preluded an all-out final attack"_
 
 - preoccupy
 
@@ -6046,6 +6190,24 @@ categories: English
 - quaint
 
   1. adjective: attractively unusual or old-fashioned. 吸引人的不同寻常的或老式的。
+
+- qualify
+
+  1. verb: be entitled to a particular benefit or privilege by fulfilling a necessary condition.
+
+     _"a pensioner who does not qualify for income support"_
+
+  2. verb: become officially recognized as a practitioner of a particular profession or activity, typically by undertaking a course and passing examinations.
+
+     _"the training necessary to qualify as a solicitor"_
+
+  3. verb: make (a statement or assertion) less absolute; add reservations to.
+
+     _"she felt obliged to qualify her first short answer"_
+
+  4. verb(GRAMMAR): (of a word or phrase) attribute a quality to (another word, especially a preceding noun).
+
+     _"the propositions have been qualified as heretical"_
 
 - quick-witted
 
@@ -6822,6 +6984,14 @@ categories: English
   3. adjective: (of an action) surreptitious. （动作）偷偷摸摸的。
 
   4. phrase: on the sly - in a secretive fashion. 以秘密的方式。
+
+- smorgasbord
+
+  1. noun: a range of open sandwiches and delicacies served as hors d'oeuvres or a buffet.
+
+     - a wide range of something; a variety. 大杂烩。
+
+       _"the album is a smorgasbord of different musical styles"_
 
 - solely
 
