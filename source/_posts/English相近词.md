@@ -413,6 +413,18 @@ categories: English
 
   further adv. 更进一步的（程度上）
 
+- prone adj. 易于，易受影响的；面向下平躺的
+
+  prune n. 干的皱的李子；令人不快或不赞同的人 v. 修剪 n. 修剪的行为
+
+- notion n. 概念；冲动；缝纫品
+
+  notation n. 符号；注释
+
+  annotation n. 注释，注解
+
+  connotation n. 隐含意义，联想
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -882,6 +894,12 @@ categories: English
   yield to
 
   give in
+
+- 温度
+
+  Fahrenheit n. 华氏温度
+
+  Celsius n. 摄氏温度
 
 ## 反义词
 

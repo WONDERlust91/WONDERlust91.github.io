@@ -3107,6 +3107,12 @@ categories: English
 
   1. adjective: unlikely and unconvincing; implausible. 不太可能且没有说服力的；难以置信的。
 
+- feasible
+
+  1. adjective: possible to do easily or conveniently.
+
+     _"it is not feasible to put most finds from excavations on public display"_
+
 - feature
 
   1. noun: a distinctive attribute or aspect of something. 某物的独特属性或方面。
@@ -3899,6 +3905,16 @@ categories: English
 
   1. the practice of claiming to have moral standards or beliefs to which one's own behavior does not conform; pretense. 声称具有道德标准或信仰但实际自己的行为并不符合的做法；虚伪。
 
+- hypothetical
+
+  1. adjective: based on or serving as a hypothesis.
+
+     _"let us take a hypothetical case"_
+
+  2. noun: a hypothetical proposition or statement.
+
+     _"officials refuse to discuss military policy except in coy hypotheticals"_
+
 - hysteria
 
   1. noun: exaggerated or uncontrollable emotion or excitement. 夸大或无法控制的情绪或兴奋，即歇斯底里。
@@ -3932,6 +3948,16 @@ categories: English
   1. noun: a system of ideas and ideals, especially one which forms the basis of economic or political theory and policy. 一种思想和理想体系，尤其是构成经济或政治理论和政策基础的体系。
 
      - the ideas and manner of thinking characteristic of a group, social class, or individual. 一个群体、社会阶层或个人的想法和思维方式，即意识形态。
+
+- idiomatic
+
+  1. adjective: using, containing, or denoting expressions that are natural to a native speaker.
+
+     _"he spoke fluent, idiomatic English"_
+
+  2. adjective: appropriate to the style of art or music associated with a particular period, individual, or group.
+
+     _"a short Bach piece containing lots of idiomatic motifs"_
 
 - ignorant
 
@@ -4004,6 +4030,14 @@ categories: English
 - impoverished
 
   1. adjective: (of a person or area) made poor. （某人或地区）变穷的。
+
+- impratical
+
+  1. adjective: not adapted for use or action; not sensible or realistic.
+
+     _"impractical high heels"_
+
+  2. adjective(NORTH AMERICAN): impossible to do; impracticable.
 
 - impulse
 
@@ -4208,6 +4242,12 @@ categories: English
 - inquiry
 
   1. noun: an act of asking for information. 询问信息的行为。
+
+- insatiable
+
+  1. adjective: (of an appetite or desire) impossible to satisfy.
+
+     _"an insatiable hunger for success"_
 
 - insidious
 
@@ -5045,6 +5085,28 @@ categories: English
 
   2. adjective: interestingly new or unusual. 有趣的新的或不寻常的。
 
+- nudge
+
+  1. verb: prod (someone) gently with one's elbow in order to attract attention.
+
+     _"people were nudging each other and pointing at me"_
+
+     - touch or push (something) gently or gradually.
+
+       _"the canoe nudged a bank of reeds"_
+
+     - coax or gently encourage (someone) to do something.
+
+       _"we have to nudge the politicians in the right direction"_
+
+     - approach (an age, figure, or level) very closely.
+
+       _"both men were nudging fifty"_
+
+  2. noun: a light touch or push.
+
+     _"he gave her shoulder a nudge"_
+
 - nurture
 
   1. verb: care for and encourage the growth or development of. 关心和鼓励成长或发展，即培育。
@@ -5542,6 +5604,56 @@ categories: English
   1. noun: a person qualified to practice medicine. 有行医资格的人，即医师。
 
   2. phrase: physician, heal thyself - before attempting to correct others, make sure that you aren't guilty of the same faults. 医生，先治好你自己 - 在尝试纠正他人前，确保自己没有犯同样的错误。
+
+- pile
+
+  1. noun: a heap of things laid or lying one on top of another.
+
+     _"he placed the books in a neat pile"_
+
+  2. noun: a large imposing building or group of buildings.
+
+     _"a Victorian Gothic pile"_
+
+  3. noun: a series of plates of dissimilar metals laid one on another alternately to produce an electric current.
+
+  4. noun(DATED): a nuclear reactor.
+
+  5. verb: place (things) one on top of the other.
+
+     _"she piled all the groceries on the counter"_
+
+  6. verb: (of a group of people) get into or out of a vehicle or space in a disorganized manner.
+
+     _"ten of us piled into the minibus"_
+
+  7. phrase: make one's pile - make a lot of money.
+
+     _"he was a car salesman who had made his pile in the Thatcher years"_
+
+  8. phrase: pile arms - place a number of rifles (usually four) with their butts on the ground and the muzzles together.
+
+  9. phrase: pile it on - exaggerate the seriousness of a situation for effect.
+
+  10. phrase: pile on - add something in large amounts.
+
+      _"they really like piling on the work here"_
+
+  11. phrase: pile up - increase in quantity.
+
+      _"the work has piled up"_
+
+  12. noun: a heavy stake or post driven vertically into the bed of a river, soft ground, etc., to support the foundations of a superstructure.
+
+  13. noun(HERALDRY): a triangular charge or ordinary formed by two lines meeting at an acute angle, usually pointing down from the top of the shield.
+
+  14. verb: strengthen or support (a structure) with piles.
+
+      _"an earlier bridge may have been piled"_
+
+  15. noun: the soft projecting surface of a carpet or a fabric such as velvet or flannel, consisting of many small threads.
+
+      _"the thick pile of the new rugs"_
 
 - pincer
 
@@ -6153,6 +6265,22 @@ categories: English
 
   1. adjective: acting with or showing care and thought for the future. 谨慎地行动或表现的谨慎并且考虑到未来。
 
+- prune
+
+  1. noun: a plum preserved by drying and having a black, wrinkled appearance.
+
+  2. noun(DEROGATORY·INFORMAL): an unpleasant or disagreeable person.
+
+     _"he was a good leader, but a right miserable old prune"_
+
+  3. verb: trim (a tree, shrub, or bush) by cutting away dead or overgrown branches or stems, especially to encourage growth.
+
+     _"now is the time to prune roses"_
+
+  4. noun: an instance of trimming a tree, shrub, or bush.
+
+     _"they need little care other than an annual prune"_
+
 - publication
 
   1. noun: the preparation and issuing of a book, journal, piece of music, or other work for public sale. 准备和发行书籍，期刊，音乐，或其他作品以供公开销售。
@@ -6317,6 +6445,24 @@ categories: English
 
   1. noun: a person whose job is to enlist or enroll people as employees, in the armed forces, or as members of an organization. 在武装部队招募人员或为组织招聘雇员的人。
 
+- rectify
+
+  1. verb: put right; correct.
+
+     _"mistakes made now cannot be rectified later"_
+
+  2. verb: convert (alternating current) to direct current.
+
+     _"the current from the transformers is rectified by high-voltage diodes"_
+
+  3. verb(MATHEMATICS): find a straight line equal in length to (a curve).
+
+     _"his methods of rectifying the cycloid"_
+
+  4. verb(CHEMISTRY): purify or refine (a substance) by repeated or continuous distillation.
+
+     _"butyl lactate was rectified, and the purified butyl lactate was sequentially hydrolysed"_
+
 - recur
 
   1. verb: occur again periodically or repeatedly. 周期性或重复地再次发生。
@@ -6414,6 +6560,16 @@ categories: English
      _"external walls will be rendered and tiled"_
 
   7. noun: a first coat of plaster applied to a brick or stone surface.
+
+- reproduce
+
+  1. verb: produce a copy of.
+
+     _"his works are reproduced on postcards and posters"_
+
+  2. verb: (of an organism) produce offspring by a sexual or asexual process.
+
+     _"bacteria normally divide and reproduce themselves every twenty minutes"_
 
 - resent
 
@@ -7877,6 +8033,16 @@ categories: English
 
   2. phrase: resist temptation. 抵制诱惑。
 
+- tenderloin
+
+  1. noun: the tenderest part of a loin of beef, pork, etc., taken from under the short ribs in the hindquarters.
+
+     _"grilled pork tenderloin"_
+
+  2. noun(INFORMAL·NORTH AMERICAN): a district of a city where vice and corruption are prominent.
+
+     _"every city has a tenderloin"_
+
 - term
 
   1. noun: a word or phrase used to describe a thing or to express a concept, especially in a particular kind of language or branch of study. 用于描述事物或表达概念的词或短语，尤其是在特定种类的语言或研究分支中。
@@ -8082,6 +8248,28 @@ categories: English
   1. adjective: characterized by conflict, disorder, or confusion; not controlled or calm. 以冲突，无序，混乱为特征；不受控制或不冷静的。
 
      - (of air or water) moving unsteadily or violently. （空气或水）不稳定或猛烈地移动。
+
+- tweak
+
+  1. verb: twist or pull (something) sharply.
+
+     _"he tweaked the boy's ear"_
+
+  2. verb: improve (a mechanism or system) by making fine adjustments to it.
+
+     _"engineers tweak the car's operating systems during the race"_
+
+  3. verb(INFORMAL·US): become or cause to become agitated or excited, typically from taking amphetamines or another stimulant.
+
+     _"I just about went crazy yesterday—I was totally tweaking out"_
+
+  4. noun: a sharp twist or pull.
+
+     _"an affectionate tweak"_
+
+  5. noun: a fine adjustment to a mechanism or system.
+
+     _"no tweaks were required"_
 
 ## U
 
@@ -8675,11 +8863,35 @@ categories: English
 
   2. verb: show reverence and adoration for (a deity); honor with religous rites. 对（神灵）表示崇敬和崇拜；以宗教仪式表示敬意，即朝拜。
 
+- worthwhile
+
+  1. adjective: worth the time, money, or effort spent; of value or importance.
+
+     _"extra lighting would make a worthwhile contribution to road safety"_
+
 - worthy
 
   1. adjective: having or showing the qualities or abilities that merit recognition in a specified way. 具有或表现出以特定方式值得认可的品质或能力。
 
   2. noun(OFTEN HUMOROUS): a person notable or important in a particular sphere. （常用于幽默）在特定领域著名或重要的人。
+
+- wrinkle
+
+  1. noun: a slight line or fold in something, especially fabric or the skin of the face.
+
+     _"she smoothed out the wrinkles from her skirt"_
+
+     - a minor difficulty; a snag.
+
+       _"the organizers have the wrinkles pretty well ironed out"_
+
+  2. noun: a clever innovation, or useful piece of information or advice.
+
+     _"learning the wrinkles from someone more experienced saves time"_
+
+  3. verb: make or cause lines or folds in (something, especially fabric or the skin).
+
+     _"his hands and face were wrinkled by age"_
 
 ## X
 
