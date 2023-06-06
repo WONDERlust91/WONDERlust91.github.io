@@ -72,11 +72,11 @@ abcde: fghijk
 abcde: fghijk
 ```
 
-for...of 循环遍历得是元素（值）而非索引（键），对象通常被 for...of 循环认为是不可迭代的，故 foo...of 循环一般用于遍历数组与类数组。
+for...of 循环遍历得是元素（值）而非索引（键），对象通常被 for...of 循环认为是不可迭代的，故 for...of 循环一般用于遍历数组与类数组。
 
 ```javascript
-const playerArr = ['Thomas', 'Midshipman', 25];
-Array.prototype.abcde = 'fghijk'; // 添加原型属性
+const playerArr = ["Thomas", "Midshipman", 25];
+Array.prototype.abcde = "fghijk"; // 添加原型属性
 for (let prop of playerArr) {
   //if(!playerArr.hasOwnProperty(prop)) continue; // 无防止输出原型属性的语句也不会输出原型
   console.log(prop);
