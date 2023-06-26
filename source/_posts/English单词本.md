@@ -895,6 +895,12 @@ categories: English
 
   2. adjective: imprisoned or confined. 被监禁或囚禁的。
 
+- carefree
+
+  1. adjective: free from anxiety or responsibility.
+
+     _"we were young and carefree"_
+
 - carpenter
 
   1. noun: a person who makes and repairs wooden objects and structures. 制造和修理木制物品和结构的人。
@@ -3107,6 +3113,44 @@ categories: English
 
   1. adjective: unlikely and unconvincing; implausible. 不太可能且没有说服力的；难以置信的。
 
+- fashion
+
+  1. noun: a popular or the latest style of clothing, hair, decoration, or behaviour.
+
+     _"the latest Parisian fashions"_
+
+  2. noun: a manner of doing something.
+
+     _"the work is done in a rather casual fashion"_
+
+  3. verb: make into a particular form.
+
+     _"the bottles were fashioned from green glass"_
+
+     - use materials to produce (something).
+
+       _"the skins were fashioned into boots and shoes"_
+
+  4. phrase: after a fashion - to a certain extent but not perfectly.
+
+     _"he could read after a fashion"_
+
+  5. phrase: in the fashion of - in a manner similar to.
+
+     _"it has been built in the fashion of an authentic Irish pub"_
+
+  6. phrase: in fashion - popular and considered to be attractive at the time in question.
+
+     _"the Sixties look is back in fashion"_
+
+  7. phrase: like it's going out of fashion - (with reference to the use or consumption of something) at an excessive rate.
+
+     _"retailers want you to splash cash like it's going out of fashion"_
+
+  8. phrase: out of fashion - unpopular and not considered to be attractive at the time in question.
+
+     _"extreme designs go out of fashion as quickly as they come in"_
+
 - feasible
 
   1. adjective: possible to do easily or conveniently.
@@ -4823,6 +4867,12 @@ categories: English
 
   5. noun: an inhabitant of a metropolis or large city. 大都市或大城市的居民。
 
+- middlebrow
+
+  1. adjective(OFTEN DEROGATORY): demanding, involving, or having only a moderate degree of intellectual application.
+
+     _"middlebrow fiction"_
+
 - might
 
   1. verb: past of may. may 的过去式。
@@ -4976,6 +5026,12 @@ categories: English
   1. adjective: occurring in or characteristic of myths or folk tales. 发生在神话或民间故事中或具有它们的特点。
 
 ## N
+
+- namely
+
+  1. adverb: that is to say; to be specific (used to introduce detailed information or a specific example).
+
+     _"to me there is only one kind of rock, namely, loud rock"_
 
 - nasty
 
@@ -5930,6 +5986,36 @@ categories: English
   1. noun: an earlier event or action that is regarded as an example or guide to be considered in subsequent similar circumstances. 较早的事件或行动被视为在随后的类似情况下应考虑的例子或指南，即先例。
 
   2. adjective: preceding in time, order, or importance. 在时间，顺序，或重要性上领先。
+
+- precious
+
+  1. adjective: of great value; not to be wasted or treated carelessly.
+
+     _"precious works of art"_
+
+     - greatly loved or treasured by someone.
+
+       _"look after my daughter—she's very precious to me"_
+
+     - (INFORMAL) used for emphasis, often in an ironic context.
+
+       _"you and your precious schedule—you've got to lighten up!"_
+
+  2. adjective(DEROGATORY): affectedly concerned with elegant or refined behaviour, language, or manners.
+
+     _"his exaggerated, precious manner"_
+
+  3. noun: used as a term of address for a beloved person.
+
+     _"don't be frightened, my precious"_
+
+  4. phrase: precious few - extremely few (used for emphasis).
+
+     _"you'll find precious few attractions open outside the tourist season"_
+
+  5. phrase: precious little - extremely little (used for emphasis).
+
+     _"police still know precious little about the dead man"_
 
 - predator
 
@@ -7783,6 +7869,22 @@ categories: English
 
   1. adjective: (especially of a change or distinction) so delicate or precise as to be difficult to analyze or describe. （尤其是变化或区别）太精细或精确以至于很难分析或描述。
 
+- suburb
+
+  1. noun: an outlying district of a city, especially a residential one.
+
+     _"a highly respectable suburb of Chicago"_
+
+- suburban
+
+  1. adjective: of or characteristic of a suburb.
+
+     _"suburban life"_
+
+     - contemptibly dull and ordinary.
+
+       _"Elizabeth despised Ann's house-proudness as deeply suburban"_
+
 - suite
 
   1. noun: a set of rooms designated for one person's or family's use or for a particular purpose. 指定供一个人或家庭使用或用于特定目的的一组房间，即套房。
@@ -8116,6 +8218,16 @@ categories: English
   1. noun: the quality of using money and other resources carefully and not wastefully. 谨慎且不浪费地使用金钱或其他资源的品质。
 
   2. noun: a European plant which forms low-growing tufts of slender leaves with rounded pink flower heads, growing chiefly on sea cliffs and mountains. 一种欧洲植物，形成低矮的细长叶子簇，带有圆形粉红色头状花序，主要生长在海崖和山脉上。
+
+- thrive
+
+  1. verb: (of a child, animal, or plant) grow or develop well or vigorously.
+
+     _"the new baby thrived"_
+
+     - prosper; flourish.
+
+       _"education groups thrive on organization"_
 
 - tick
 
@@ -8471,11 +8583,37 @@ categories: English
 
      - a person who has served in the military.
 
+- venture
+
+  1. noun: a risky or daring journey or undertaking.
+
+     _"pioneering ventures into little-known waters"_
+
+  2. verb: undertake a risky or daring journey or course of action.
+
+     _"she ventured out into the blizzard"_
+
+  3. verb: dare to do or say something that may be considered audacious (often used as a polite expression of hesitation or apology).
+
+     _"may I venture to add a few comments?"_
+
+  4. phrase: at a venture - trusting to chance rather than to previous consideration or preparation.
+
+     _"a man drew a bow at a venture"_
+
+  5. phrase: nothing ventured, nothing gained - you can't expect to achieve anything if you never take any risks.
+
 - vice
 
   1. noun: immoral or wicked behavior. 不道德或邪恶的行为。
 
   2. preposition: as a substitute for. 作为替代品，即副的。
+
+- vice versa
+
+  1. adverb: with the main items in the preceding statement the other way around.
+
+     _"science must be at the service of man, and not vice versa"_
 
 - vicious
 
