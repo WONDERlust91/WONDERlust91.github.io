@@ -28,7 +28,7 @@
 <meta property="og:description" content="systemctl配置文件CentOS 7的服务systemctl脚本存放在&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;目录下，&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system目录下是不需要用户登陆，开机就能运行的服务脚本，&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;user目录下是用户登陆后才能运行">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-04-08T17:56:09.000Z">
-<meta property="article:modified_time" content="2023-07-17T14:05:15.309Z">
+<meta property="article:modified_time" content="2023-07-17T14:05:50.743Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="systemctl">
@@ -228,7 +228,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-07-17 14:05:15" itemprop="dateModified" datetime="2023-07-17T14:05:15+00:00">2023-07-17</time>
+      <time title="Modified: 2023-07-17 14:05:50" itemprop="dateModified" datetime="2023-07-17T14:05:50+00:00">2023-07-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -329,7 +329,7 @@
 </tr>
 <tr>
 <td>ExecStart</td>
-<td>启动当前进程的指令或脚本程序。你也可以使用ExecStartPre（之前）以及ExecStartPost（之后）两个设置项目来在实际启动服务前（后），进行额外的指令行为。 但要特别注意的是，指令串仅接受“指令 参数 参数…”的格式，不能接受&lt;, &gt;, &gt;&gt;, &amp;#124;, &amp;等特殊字符，很多的bash语法也不支持，故使用这些特殊的字符时，应直接写入到指令脚本中。</td>
+<td>启动当前进程的指令或脚本程序。你也可以使用ExecStartPre（之前）以及ExecStartPost（之后）两个设置项目来在实际启动服务前（后），进行额外的指令行为。 但要特别注意的是，指令串仅接受“指令 参数 参数…”的格式，不能接受&lt;, &gt;, &gt;&gt;, &#124;, &amp;等特殊字符，很多的bash语法也不支持，故使用这些特殊的字符时，应直接写入到指令脚本中。</td>
 </tr>
 <tr>
 <td>ExecStop</td>

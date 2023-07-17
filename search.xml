@@ -11325,7 +11325,7 @@
 <p>正常语序：As sb. be</p>
 </li>
 </ul>
-<h3 id="With-x2F-Without"><a href="#With-x2F-Without" class="headerlink" title="With&#x2F;Without"></a>With&#x2F;Without</h3><p>With + … 相当于介词短语，不能当主句</p>
+<h3 id="With-Without"><a href="#With-Without" class="headerlink" title="With&#x2F;Without"></a>With&#x2F;Without</h3><p>With + … 相当于介词短语，不能当主句</p>
 <ul>
 <li><p>With n. 用&#x2F;和</p>
 </li>
@@ -13743,7 +13743,7 @@
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.div1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="comment">/* 默认值 auto，遵循浏览器原本宽高计算规则 */</span></span><br><span class="line">  aspect-ratio: auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="comment">/* 比值写法，1比1则宽高相等 */</span></span><br><span class="line">  aspect-ratio: <span class="number">1</span> / <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div3</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="comment">/* 比值写法，分母为宽，分子为高 */</span></span><br><span class="line">  aspect-ratio: <span class="number">16</span> / <span class="number">9</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div4</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="comment">/* 小数写法，即宽是高的几倍 */</span></span><br><span class="line">  aspect-ratio: <span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>尽管现代浏览器都已经支持了纵横比的属性，但是手机端微信浏览器，或其他国产浏览器，对纵横比属性的支持并不好。那么此时又该如何实现盒子的纵横比呢？</p>
-<h2 id="margin-x2F-padding"><a href="#margin-x2F-padding" class="headerlink" title="margin&#x2F;padding"></a>margin&#x2F;padding</h2><p>相信熟悉 css 标准的小伙伴已经想到了办法，那就是利用<code>margin</code>和<code>padding</code>的百分比计算机制。因为<code>margin</code>和<code>padding</code>的百分比是相对宽<code>width</code>计算的。</p>
+<h2 id="margin-padding"><a href="#margin-padding" class="headerlink" title="margin&#x2F;padding"></a>margin&#x2F;padding</h2><p>相信熟悉 css 标准的小伙伴已经想到了办法，那就是利用<code>margin</code>和<code>padding</code>的百分比计算机制。因为<code>margin</code>和<code>padding</code>的百分比是相对宽<code>width</code>计算的。</p>
 <p>原理：</p>
 <ol>
 <li><p>用<code>padding-top</code>或<code>padding-bottom</code>百分比来表示盒子高度是宽度的几倍;</p>
@@ -15276,7 +15276,7 @@ renderXor();
     <url>/2018/11/18/css%E9%9A%90%E8%97%8F%E6%B5%8F%E8%A7%88%E5%99%A8%E6%BB%9A%E5%8A%A8%E6%9D%A1/</url>
     <content><![CDATA[<h1 id="css隐藏浏览器滚动条"><a href="#css隐藏浏览器滚动条" class="headerlink" title="css隐藏浏览器滚动条"></a>css隐藏浏览器滚动条</h1><h2 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span>::-webkit-scrollbar &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="IE-x2F-Edge"><a href="#IE-x2F-Edge" class="headerlink" title="IE&#x2F;Edge"></a>IE&#x2F;Edge</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    -ms-<span class="attribute">overflow</span>-style: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<h2 id="IE-Edge"><a href="#IE-Edge" class="headerlink" title="IE&#x2F;Edge"></a>IE&#x2F;Edge</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    -ms-<span class="attribute">overflow</span>-style: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>css</category>
       </categories>
@@ -15817,10 +15817,10 @@ renderXor();
 </li>
 </ul>
 <p>在markdown表格中使用“|”时，由于竖线在markdown中是表格的特殊字符，故要在markdown表格中输出竖线时，应使用html特殊字符的转义字符串。即<code>&amp;#124;</code></p>
-<p>在hexo中标签插件占用了&amp;#123;&amp;#37; &amp;#37;&amp;#125;，要在文章中输出花括号与百分号时，使用html特殊字符的转义字符。</p>
+<p>在hexo中标签插件占用了&#123;&#37; &#37;&#125;，要在文章中输出花括号与百分号时，使用html特殊字符的转义字符。</p>
 <h3 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h3><p>hexo引用站内的其他文章时，使用标签插件。</p>
-<p>&amp;#123;&amp;#37; post_link slug &amp;#37;&amp;#125; 用来生成文章链接，点击可直接跳转到链接的文章</p>
-<p>&amp;#123;&amp;#37; post_path slug &amp;#37;&amp;#125; 用来生成文章的路径</p>
+<p>&#123;&#37; post_link slug &#37;&#125; 用来生成文章链接，点击可直接跳转到链接的文章</p>
+<p>&#123;&#37; post_path slug &#37;&#125; 用来生成文章的路径</p>
 <p>slug 指文章标题，它是markdown文件名称，而不是front-matter中的title字段。</p>
 ]]></content>
       <categories>
@@ -17659,7 +17659,7 @@ renderXor();
 <h2 id="（或）"><a href="#（或）" class="headerlink" title="||（或）"></a>||（或）</h2><p><strong>一个||（或）运算链将返回从左向右第一个真值，如果不存在真值，则返回运算链的最后一个值</strong>，例如：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span> || <span class="number">0</span>); <span class="comment">// 返回值为1（第一个真值）</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span> || <span class="string">&#x27;no matter what&#x27;</span>); <span class="comment">// 返回值为true（第一个真值）</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">null</span> || <span class="number">0</span> || <span class="number">1</span>); <span class="comment">// 返回值为1（第一个真值）</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">null</span> || <span class="number">0</span> || <span class="literal">undefined</span>); <span class="comment">// 返回值为undefined（运算链最后一个值）</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="amp-amp-（与）"><a href="#amp-amp-（与）" class="headerlink" title="&amp;&amp;（与）"></a>&amp;&amp;（与）</h2><p><strong>一个&amp;&amp;（与）运算链将返回从左向右第一个假值，如果不存在假值，则返回运算链的最后一个值</strong>，例如：</p>
+<h2 id="（与）"><a href="#（与）" class="headerlink" title="&amp;&amp;（与）"></a>&amp;&amp;（与）</h2><p><strong>一个&amp;&amp;（与）运算链将返回从左向右第一个假值，如果不存在假值，则返回运算链的最后一个值</strong>，例如：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span> &amp;&amp; <span class="number">0</span>); <span class="comment">// 返回值为0（第一个假值）</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span> &amp;&amp; <span class="string">&#x27;no matter what&#x27;</span>); <span class="comment">// 返回值为&#x27;no matter what&#x27;（运算链最后一个值）</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span> &amp;&amp; <span class="number">2</span> &amp;&amp; <span class="literal">null</span> &amp;&amp; <span class="number">3</span>); <span class="comment">// 返回值为null（第一个假值）</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span> &amp;&amp; <span class="number">2</span> &amp;&amp; <span class="number">3</span>); <span class="comment">// 返回值为3（运算链最后一个值）</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="（非）"><a href="#（非）" class="headerlink" title="!（非）"></a>!（非）</h2><p>!（非）运算符将操作数转化为布尔类型，并返回相反的值，两个非运算<code>!!</code>用来将某个值转化为布尔类型，也可以使用内置的 Boolean 函数来转换为布尔类型。<strong>非运算符在所有逻辑运算符中优先级最高，它总在<code>&amp;&amp;</code>和<code>||</code>前执行</strong>。</p>
@@ -18030,9 +18030,9 @@ renderXor();
 <h2 id="单页面应用的配置"><a href="#单页面应用的配置" class="headerlink" title="单页面应用的配置"></a>单页面应用的配置</h2><p>做到上面一步，我们已经能通过访问服务器，浏览原生网站了。然而事情并不是这么简单，现代前端开发，大量使用了单页面应用的框架，如 react、vue、angular 等，页面路由不再由后端控制，而是由前端来控制，那么服务器端就需要额外的配置来支持单页面应用的部署。</p>
 <p>针对单页面应用配置的核心思想就是将所有对文件的查找都重定向到 index.html 由 index.html 中引用的 js 来处理所有路由匹配任务。</p>
 <p>这里以 vue 举例，通常情况下，vue.config.js 中的 publicPath 配置为相对路径”.&#x2F;“适应性最强，但是一旦使用了 history 模式就不能使用相对路径了。所以我们只讨论绝对路径的两种情况，一种是在根路径”&#x2F;“，一种是在子路径，如”&#x2F;demo”。</p>
-<h3 id="在根路径”-x2F-“下"><a href="#在根路径”-x2F-“下" class="headerlink" title="在根路径”&#x2F;“下"></a>在根路径”&#x2F;“下</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">  root  /home/www/demo;</span><br><span class="line">  index index.html index.htm;</span><br><span class="line">  try_files $uri $uri/ /index.html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="在根路径”-“下"><a href="#在根路径”-“下" class="headerlink" title="在根路径”&#x2F;“下"></a>在根路径”&#x2F;“下</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">  root  /home/www/demo;</span><br><span class="line">  index index.html index.htm;</span><br><span class="line">  try_files $uri $uri/ /index.html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="在子路径，如”-x2F-demo”下"><a href="#在子路径，如”-x2F-demo”下" class="headerlink" title="在子路径，如”&#x2F;demo”下"></a>在子路径，如”&#x2F;demo”下</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用root指向网站目录</span><br><span class="line">location /demo &#123;</span><br><span class="line">  root  /home/www;</span><br><span class="line">  index index.html index.htm;</span><br><span class="line">  try_files $uri $uri/ /demo/index.html;</span><br><span class="line">&#125;</span><br><span class="line"># 使用alias指向网站目录</span><br><span class="line">location /demo &#123;</span><br><span class="line">  alias  /home/www/demo;</span><br><span class="line">  index index.html index.htm;</span><br><span class="line">  try_files $uri $uri/ /demo/index.html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="在子路径，如”-demo”下"><a href="#在子路径，如”-demo”下" class="headerlink" title="在子路径，如”&#x2F;demo”下"></a>在子路径，如”&#x2F;demo”下</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用root指向网站目录</span><br><span class="line">location /demo &#123;</span><br><span class="line">  root  /home/www;</span><br><span class="line">  index index.html index.htm;</span><br><span class="line">  try_files $uri $uri/ /demo/index.html;</span><br><span class="line">&#125;</span><br><span class="line"># 使用alias指向网站目录</span><br><span class="line">location /demo &#123;</span><br><span class="line">  alias  /home/www/demo;</span><br><span class="line">  index index.html index.htm;</span><br><span class="line">  try_files $uri $uri/ /demo/index.html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="两个服务器，反向代理的方式"><a href="#两个服务器，反向代理的方式" class="headerlink" title="两个服务器，反向代理的方式"></a>两个服务器，反向代理的方式</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 服务器A</span><br><span class="line">server &#123;</span><br><span class="line">  # 监听80端口</span><br><span class="line">  listen 80;</span><br><span class="line">  # nginx示例页面</span><br><span class="line">  location / &#123;</span><br><span class="line">    root /usr/share/nginx/html;</span><br><span class="line">    index index.html index.htm;</span><br><span class="line">  &#125;</span><br><span class="line">  # 反向代理</span><br><span class="line">  location /demo &#123;</span><br><span class="line">    proxy_pass http://localhost:8080/demo;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -18134,7 +18134,7 @@ renderXor();
 </tr>
 <tr>
 <td>ExecStart</td>
-<td>启动当前进程的指令或脚本程序。你也可以使用ExecStartPre（之前）以及ExecStartPost（之后）两个设置项目来在实际启动服务前（后），进行额外的指令行为。 但要特别注意的是，指令串仅接受“指令 参数 参数…”的格式，不能接受&lt;, &gt;, &gt;&gt;, &amp;#124;, &amp;等特殊字符，很多的bash语法也不支持，故使用这些特殊的字符时，应直接写入到指令脚本中。</td>
+<td>启动当前进程的指令或脚本程序。你也可以使用ExecStartPre（之前）以及ExecStartPost（之后）两个设置项目来在实际启动服务前（后），进行额外的指令行为。 但要特别注意的是，指令串仅接受“指令 参数 参数…”的格式，不能接受&lt;, &gt;, &gt;&gt;, &#124;, &amp;等特殊字符，很多的bash语法也不支持，故使用这些特殊的字符时，应直接写入到指令脚本中。</td>
 </tr>
 <tr>
 <td>ExecStop</td>
@@ -18896,7 +18896,7 @@ renderXor();
 <h4 id="Variable-shadowing"><a href="#Variable-shadowing" class="headerlink" title="Variable shadowing"></a>Variable shadowing</h4><p>You can declare a new variable that uses the name of an existing variable. The new declaration creates a new binding. In Rust, this operation is called “shadowing” because the new variable shadows the previous variable. The old variable still exists, but you can’t refer to it in this scope anymore.</p>
 <figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Declare first variable binding with name &quot;shadow_num&quot;</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">shadow_num</span> = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Declare second variable binding, shadows existing variable &quot;shadow_num&quot;</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">shadow_num</span> = shadow_num + <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Declare third variable binding, shadows second binding of variable &quot;shadow_num&quot;</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">shadow_num</span> = shadow_num * <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;This number is &#123;&#125;.&quot;</span>, shadow_num);</span><br></pre></td></tr></table></figure>
 
-<h3 id="Explore-data-types-for-numbers-text-and-true-x2F-false-values"><a href="#Explore-data-types-for-numbers-text-and-true-x2F-false-values" class="headerlink" title="Explore data types for numbers, text, and true&#x2F;false values"></a>Explore data types for numbers, text, and true&#x2F;false values</h3><p>Rust is a statically typed language. The compiler must know the exact data type for all variables in your code for your program to compile and run. The compiler can usually infer the data type for a variable based on the bound value. You don’t always need to explicitly tell the type in your code. When many types are possible, you must inform the compiler the specific type by using type annotations.</p>
+<h3 id="Explore-data-types-for-numbers-text-and-true-false-values"><a href="#Explore-data-types-for-numbers-text-and-true-false-values" class="headerlink" title="Explore data types for numbers, text, and true&#x2F;false values"></a>Explore data types for numbers, text, and true&#x2F;false values</h3><p>Rust is a statically typed language. The compiler must know the exact data type for all variables in your code for your program to compile and run. The compiler can usually infer the data type for a variable based on the bound value. You don’t always need to explicitly tell the type in your code. When many types are possible, you must inform the compiler the specific type by using type annotations.</p>
 <p>In the following example, we tell the compiler to create the <code>number</code> variable as a 32-bit integer. We specify the data type <code>u32</code> after the variable name. Notice the use of the colon <code>:</code> after the variable name.</p>
 <figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">number</span>: <span class="type">u32</span> = <span class="number">14</span>;</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;The number is &#123;&#125;.&quot;</span>, number);</span><br></pre></td></tr></table></figure>
 
@@ -21549,11 +21549,11 @@ renderXor();
 <li><p>一个服务器用于提供可访问的文档，即 httpd 的前身。</p>
 </li>
 </ul>
-<h3 id="HTTP-x2F-0-9-单行协议"><a href="#HTTP-x2F-0-9-单行协议" class="headerlink" title="HTTP&#x2F;0.9 - 单行协议"></a>HTTP&#x2F;0.9 - 单行协议</h3><p>初版 HTTP 协议没有版本号，后来它的版本号被定为 0.9 以区分后来的版本。HTTP&#x2F;0.9 极其简单：请求由单行指令构成，以唯一可用方法 GET 开头，其后跟目标资源的路径。</p>
+<h3 id="HTTP-0-9-单行协议"><a href="#HTTP-0-9-单行协议" class="headerlink" title="HTTP&#x2F;0.9 - 单行协议"></a>HTTP&#x2F;0.9 - 单行协议</h3><p>初版 HTTP 协议没有版本号，后来它的版本号被定为 0.9 以区分后来的版本。HTTP&#x2F;0.9 极其简单：请求由单行指令构成，以唯一可用方法 GET 开头，其后跟目标资源的路径。</p>
 <p><code>GET /mypage.html</code></p>
 <p>响应也极其简单，仅包含 HTML 文档本身。</p>
 <p>HTTP&#x2F;0.9 的响应并不包含 HTTP 头，这意味着只有 HTML 文档可以传送，无法传输其他类型文件，也没有状态码或错误代码：一旦出现问题，一个特殊的包含问题描述信息的 HTML 文件将被发回，供人们查看。</p>
-<h3 id="HTTP-x2F-1-0-构建可扩展性"><a href="#HTTP-x2F-1-0-构建可扩展性" class="headerlink" title="HTTP&#x2F;1.0 - 构建可扩展性"></a>HTTP&#x2F;1.0 - 构建可扩展性</h3><p>HTTP&#x2F;0.9 协议应用十分有限，浏览器和服务器迅速扩展内容使其用途更广：</p>
+<h3 id="HTTP-1-0-构建可扩展性"><a href="#HTTP-1-0-构建可扩展性" class="headerlink" title="HTTP&#x2F;1.0 - 构建可扩展性"></a>HTTP&#x2F;1.0 - 构建可扩展性</h3><p>HTTP&#x2F;0.9 协议应用十分有限，浏览器和服务器迅速扩展内容使其用途更广：</p>
 <ul>
 <li><p>协议版本信息随着每个请求发送。</p>
 </li>
@@ -21567,7 +21567,7 @@ renderXor();
 </li>
 </ul>
 <p>HTTP&#x2F;1.0 的主要缺点是每个 TCP 连接只能发送一个请求。数据发送完毕，连接就关闭，如果还要请求其他资源，必须再新建一个连接。TCP 连接建立成本很高，要经过三次握手，且建立之初发送速率慢。</p>
-<h3 id="HTTP-x2F-1-1-标准化的协议"><a href="#HTTP-x2F-1-1-标准化的协议" class="headerlink" title="HTTP&#x2F;1.1 - 标准化的协议"></a>HTTP&#x2F;1.1 - 标准化的协议</h3><p>HTTP&#x2F;1.0 多种不同的实现方式在实际运用中显得有些混乱，故修订了 HTTP 的第一个标准化版本 HTTP&#x2F;1.1。</p>
+<h3 id="HTTP-1-1-标准化的协议"><a href="#HTTP-1-1-标准化的协议" class="headerlink" title="HTTP&#x2F;1.1 - 标准化的协议"></a>HTTP&#x2F;1.1 - 标准化的协议</h3><p>HTTP&#x2F;1.0 多种不同的实现方式在实际运用中显得有些混乱，故修订了 HTTP 的第一个标准化版本 HTTP&#x2F;1.1。</p>
 <p>HTTP&#x2F;1.1 消除了大量歧义内容并引入了多项改进：</p>
 <ul>
 <li><p>连接可以复用，节省了加载网页文档资源时多次建立 TCP 连接耗费的时间。（对于同一个域名，大多数浏览器允许同时建立 6 个持久连接）。</p>
@@ -21594,7 +21594,7 @@ renderXor();
 <li><p>无状态特性导致巨大的头部</p>
 </li>
 </ul>
-<h3 id="HTTP-x2F-2-更优异的表现"><a href="#HTTP-x2F-2-更优异的表现" class="headerlink" title="HTTP&#x2F;2 - 更优异的表现"></a>HTTP&#x2F;2 - 更优异的表现</h3><p>由于网页逐渐变得复杂，甚至演变为独有的应用，HTTP&#x2F;1.1 的性能堪忧，谷歌通过实验性的 SPDY 协议，解决了响应数量的增加和复杂的数据传输问题，SPDY 成为了 HTTP&#x2F;2 协议的基础。</p>
+<h3 id="HTTP-2-更优异的表现"><a href="#HTTP-2-更优异的表现" class="headerlink" title="HTTP&#x2F;2 - 更优异的表现"></a>HTTP&#x2F;2 - 更优异的表现</h3><p>由于网页逐渐变得复杂，甚至演变为独有的应用，HTTP&#x2F;1.1 的性能堪忧，谷歌通过实验性的 SPDY 协议，解决了响应数量的增加和复杂的数据传输问题，SPDY 成为了 HTTP&#x2F;2 协议的基础。</p>
 <p>HTTP&#x2F;2 的优化：</p>
 <ul>
 <li><p>HTTP&#x2F;2 是二进制协议而不是文本协议。信息都封装在帧中，不再可读，也不可无障碍地手动创建。</p>
@@ -21623,7 +21623,7 @@ renderXor();
 </li>
 </ul>
 <p>HTTP&#x2F;2 能够迅速普及，因为 HTTP&#x2F;2 不需要站点与应用做出改变：使用 HTTP&#x2F;1.1 或 HTTP&#x2F;2 对他们来说是透明的。只要服务器与浏览器进行更新就足够了。但 HTTP&#x2F;2 也凸显出底层 TCP 协议的问题，为 HTTP&#x2F;3 协议更换底层埋下伏笔。</p>
-<h3 id="HTTP-x2F-3-底层传输的变革"><a href="#HTTP-x2F-3-底层传输的变革" class="headerlink" title="HTTP&#x2F;3 底层传输的变革"></a>HTTP&#x2F;3 底层传输的变革</h3><p>HTTP&#x2F;2 协议解决了很多 HTTP 协议内部的问题，但底层 TCP 传输协议造成的问题并没有办法解决，因此 HTTP&#x2F;3 直接更换了传输层协议，基于 UDP 实现。而 UDP 协议本身是不可靠传输的，因此 Google 基于 UDP 实现了可靠传输等 TCP 特性，封装为 QUIC 协议，再基于 QUIC 实现 HTTP&#x2F;3 协议。</p>
+<h3 id="HTTP-3-底层传输的变革"><a href="#HTTP-3-底层传输的变革" class="headerlink" title="HTTP&#x2F;3 底层传输的变革"></a>HTTP&#x2F;3 底层传输的变革</h3><p>HTTP&#x2F;2 协议解决了很多 HTTP 协议内部的问题，但底层 TCP 传输协议造成的问题并没有办法解决，因此 HTTP&#x2F;3 直接更换了传输层协议，基于 UDP 实现。而 UDP 协议本身是不可靠传输的，因此 Google 基于 UDP 实现了可靠传输等 TCP 特性，封装为 QUIC 协议，再基于 QUIC 实现 HTTP&#x2F;3 协议。</p>
 <p>HTTP&#x2F;3 的特点：</p>
 <ul>
 <li><p>使用 QUIC 协议，快速建立连接，没有 TCP 协议的连接延迟，并在 UDP 上实现了 TCP 协议的可靠性，消除了队头阻塞的问题。</p>
