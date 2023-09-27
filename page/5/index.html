@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-count">145</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,6 +177,140 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/08/22/javascript%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%98%AF%E5%90%A6%E5%9C%A8%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9F%9F%E4%B8%AD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/08/22/javascript%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%98%AF%E5%90%A6%E5%9C%A8%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9F%9F%E4%B8%AD/" class="post-title-link" itemprop="url">javascript如何判断一个元素是否在可视区域中</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-08-22 15:24:15" itemprop="dateCreated datePublished" datetime="2021-08-22T15:24:15+00:00">2021-08-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2021/08/22/javascript%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%98%AF%E5%90%A6%E5%9C%A8%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9F%9F%E4%B8%AD/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/08/22/javascript如何判断一个元素是否在可视区域中/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="前置概念"><a href="#前置概念" class="headerlink" title="前置概念"></a>前置概念</h2><h3 id="client-相关"><a href="#client-相关" class="headerlink" title="client 相关"></a>client 相关</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>概念</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>clientWidth</td>
+<td><strong>可视区域</strong>宽度，包含 padding，但并不包含 border、scrollbar、margin</td>
+<td>单位 px，只读，若元素大小超出可视区域，仅计算可视区域</td>
+</tr>
+<tr>
+<td>clientHeight</td>
+<td><strong>可视区域</strong>高度，包含 padding，但并不包含 border、scrollbar、margin</td>
+<td>单位 px，只读，若元素大小超出可视区域，仅计算可视区域</td>
+</tr>
+<tr>
+<td>clientTop</td>
+<td>元素上边框宽度，不包含上部的 padding 与 margin</td>
+<td>单位 px，只读，与 borderTopWidth 属性相同</td>
+</tr>
+<tr>
+<td>clientLeft</td>
+<td>元素左边框宽度，不包含左部的 padding 与 margin</td>
+<td>单位 px，只读，与 borderLeftWidth 属性相同，如果该元素有滚动条且 direction 为 right-to-left，在 windows 平台非 IE 浏览器该属性返回值为左边框宽度+滚动条宽度，IE 返回值为 0，在 macOS 平台均返回左边框宽度</td>
+</tr>
+</tbody></table>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/22/javascript%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%98%AF%E5%90%A6%E5%9C%A8%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9F%9F%E4%B8%AD/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +356,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -326,7 +460,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -434,7 +568,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -541,7 +675,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -846,7 +980,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -960,7 +1094,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1072,7 +1206,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1204,7 +1338,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1311,7 +1445,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1351,116 +1485,6 @@
 <h2 id="微信开放社区讨论"><a href="#微信开放社区讨论" class="headerlink" title="微信开放社区讨论"></a>微信开放社区讨论</h2><p>在微信开放社区查找相关错误，发现社区中关于真机调试报<code>Cannot not read property &#39;createView&#39; of undefined</code>错误的原因是真机调试不支持 canvas 2d，但预览模式是没问题的，故判断无法加载图表并闪退并非因为<code>Cannot not read property &#39;createView&#39; of undefined</code>错误造成。</p>
 <h2 id="排除错误"><a href="#排除错误" class="headerlink" title="排除错误"></a>排除错误</h2><p>对比 echarts 官方示例，发现 echarts 官方示例加载完全没有问题，这时才开始怀疑是配置对象造成了加载失败（一直没有怀疑是因为 web 端加载无误，开发工具中加载也无误）。逐个调试配置对象，终于发现配置对象中，对颜色的定义有一行为<code>rgb(20 194 59)</code>，rgb 值中间未使用逗号分隔，这是 CSS4 的标准，而小程序并不支持 CSS4 标准的 color，用逗号分隔后，就没有问题了。</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/06/04/javascript%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/04/javascript%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/" class="post-title-link" itemprop="url">javascript错误处理机制</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-06-04 13:55:10" itemprop="dateCreated datePublished" datetime="2021-06-04T13:55:10+00:00">2021-06-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/06/04/javascript%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/06/04/javascript错误处理机制/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Error-对象"><a href="#Error-对象" class="headerlink" title="Error 对象"></a>Error 对象</h2><p>JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。JavaScript 原生提供 Error 构造函数，所有抛出的错误都是这个构造函数的实例。</p>
-<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>ECMA-262 规定了 Error 对象包括两个属性：message 和 name。message 保存错误的信息，而 name 保存错误类型。浏览器厂商还对 error 对象属性做了扩展，添加了其他相关信息。其中实现最广泛的是 stack 属性，表示错误的栈信息。</p>
-<p>可以使用 Error 构造函数来创建错误对象，如果指定 message 参数，则该 Error 对象将把它用作 message 属性；若不指定，它将使用空字符串作为 message 属性。</p>
-<p>当不使用 new 操作符，直接使用 Error 构造函数像一个普通函数一样调用时，它的行为与使用 new 操作符时一致。</p>
-<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>Error 对象还有一个 toString 方法，该方法覆盖了对象原型上的 toString 方法，返回代表对象类型与信息的字符串。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/04/javascript%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 

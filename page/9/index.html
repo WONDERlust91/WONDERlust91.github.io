@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-count">145</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,6 +177,122 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/08/05/css%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E7%9A%84vertical-align/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/08/05/css%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E7%9A%84vertical-align/" class="post-title-link" itemprop="url">css内联元素的vertical-align</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-08-05 15:36:54" itemprop="dateCreated datePublished" datetime="2019-08-05T15:36:54+00:00">2019-08-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2019/08/05/css%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E7%9A%84vertical-align/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/05/css内联元素的vertical-align/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="vertical-align-的使用范围"><a href="#vertical-align-的使用范围" class="headerlink" title="vertical-align 的使用范围"></a>vertical-align 的使用范围</h3><p>vertical-align 只能应用于 inline 元素，即 display 为 inline、inline-block、inline-table 的元素，img 与 span 都是 inline 元素</p>
+<h3 id="基线"><a href="#基线" class="headerlink" title="基线"></a>基线</h3><p>图中的 baseline 即为元素的基线，x-height 就是 x 高度</p>
+<p><img src="/../images/css-baseline.png" alt="baseline"></p>
+<p>由图可见<strong>元素基线位置是由元素自身的字体大小与行高决定的</strong>，还会受到子元素影响。</p>
+<h4 id="inline-table-的基线"><a href="#inline-table-的基线" class="headerlink" title="inline-table 的基线"></a>inline-table 的基线</h4><p>以表格第一行的基线为基线</p>
+<h4 id="inline-block-的基线"><a href="#inline-block-的基线" class="headerlink" title="inline-block 的基线"></a>inline-block 的基线</h4><ol>
+<li><p>在有正常文档流内容或 overflow 属性计算值为 visible 以外的值的情况下，inline-block 元素的 baseline 就是最后一个 line-box 元素的 baseline；</p>
+</li>
+<li><p>除上面两种情况外，baseline 是 margin-box 的下边界；</p>
+</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/08/05/css%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E7%9A%84vertical-align/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +338,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -334,7 +450,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -461,7 +577,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -565,7 +681,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -675,7 +791,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -789,7 +905,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -899,7 +1015,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1006,7 +1122,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1114,7 +1230,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1157,116 +1273,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/06/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9CTCP%E5%8D%8F%E8%AE%AE/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/06/03/electron%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2windowsApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/06/03/electron%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2windowsApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">electron安装与打包部署windowsApp基础教程</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-06-03 14:59:11" itemprop="dateCreated datePublished" datetime="2019-06-03T14:59:11+00:00">2019-06-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/electron/" itemprop="url" rel="index"><span itemprop="name">electron</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2019/06/03/electron%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2windowsApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/03/electron安装与打包部署windowsApp基础教程/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="为-electron-项目新建一个目录，并初始化-npm"><a href="#为-electron-项目新建一个目录，并初始化-npm" class="headerlink" title="为 electron 项目新建一个目录，并初始化 npm"></a>为 electron 项目新建一个目录，并初始化 npm</h2><p>例如新建文件目录为 testDesktopApp，再初始化 npm</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">一路回车即可</span></span><br></pre></td></tr></table></figure>
-
-<p>修改 package.json 文件，将 name 修改为最终桌面可执行程序的名称，将 main 中的 index.js 修改为 main.js 防止与要打包项目的 js 文件冲突，并在 script 中添加 start 命令。</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;testdesktopapp&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;main.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;electron .&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ISC&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/06/03/electron%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2windowsApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>

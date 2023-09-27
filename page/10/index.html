@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-count">145</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,6 +177,116 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/06/03/electron%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2windowsApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/06/03/electron%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2windowsApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">electron安装与打包部署windowsApp基础教程</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-06-03 14:59:11" itemprop="dateCreated datePublished" datetime="2019-06-03T14:59:11+00:00">2019-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/electron/" itemprop="url" rel="index"><span itemprop="name">electron</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2019/06/03/electron%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2windowsApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/03/electron安装与打包部署windowsApp基础教程/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="为-electron-项目新建一个目录，并初始化-npm"><a href="#为-electron-项目新建一个目录，并初始化-npm" class="headerlink" title="为 electron 项目新建一个目录，并初始化 npm"></a>为 electron 项目新建一个目录，并初始化 npm</h2><p>例如新建文件目录为 testDesktopApp，再初始化 npm</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">一路回车即可</span></span><br></pre></td></tr></table></figure>
+
+<p>修改 package.json 文件，将 name 修改为最终桌面可执行程序的名称，将 main 中的 index.js 修改为 main.js 防止与要打包项目的 js 文件冲突，并在 script 中添加 start 命令。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;testdesktopapp&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;main.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;electron .&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ISC&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/03/electron%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2windowsApp%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +332,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -333,7 +443,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -440,7 +550,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -551,7 +661,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -651,7 +761,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -754,7 +864,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -860,7 +970,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -962,7 +1072,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1061,7 +1171,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1108,109 +1218,6 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 修改styleSheet</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">styleSheets</span>[<span class="number">0</span>].<span class="title function_">addRule</span>(<span class="string">&#x27;.test::after&#x27;</span>,<span class="string">&#x27;content: hellow&#x27;</span>); <span class="comment">// 支持IE</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">styleSheets</span>[<span class="number">0</span>].<span class="title function_">insertRule</span>(<span class="string">&#x27;.test::after &#123; content: hellow &#125;&#x27;</span>, <span class="number">0</span>); <span class="comment">// 支持非IE的现代浏览器</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- CSS代码 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.test</span><span class="selector-pseudo">::after</span> &#123;</span></span><br><span class="line"><span class="language-css">  <span class="attribute">content</span>: <span class="built_in">attr</span>(data-attr);</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- HTML代码 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;test&quot;</span> <span class="attr">data-attr</span>=<span class="string">&quot;hellow&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- JacaScript代码 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">const</span> element = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;.test&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">element.<span class="title function_">setAttribute</span>(<span class="string">&quot;data-attr&quot;</span>, <span class="string">&quot;hellow&quot;</span>);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/03/08/vue%E5%A6%82%E4%BD%95%E8%AE%A9%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85%E5%85%BC%E5%AE%B9IE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/08/vue%E5%A6%82%E4%BD%95%E8%AE%A9%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85%E5%85%BC%E5%AE%B9IE/" class="post-title-link" itemprop="url">vue如何让第三方包兼容IE</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-03-08 13:25:25" itemprop="dateCreated datePublished" datetime="2019-03-08T13:25:25+00:00">2019-03-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2019/03/08/vue%E5%A6%82%E4%BD%95%E8%AE%A9%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85%E5%85%BC%E5%AE%B9IE/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/08/vue如何让第三方包兼容IE/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="vue如何让第三方包兼容IE"><a href="#vue如何让第三方包兼容IE" class="headerlink" title="vue如何让第三方包兼容IE"></a>vue如何让第三方包兼容IE</h1><p>我们在使用vue的过程中会发现安装了第三方包，却无法在IE浏览器下正常运行的情况，这是因为vue-cli为了打包速度，默认情况下是不会使用babel-loader去处理node_modules下的第三方包的，这里有三种解决方案：</p>
-<h2 id="1-将第三方包移出node-modules文件夹"><a href="#1-将第三方包移出node-modules文件夹" class="headerlink" title="1. 将第三方包移出node_modules文件夹"></a>1. 将第三方包移出node_modules文件夹</h2><p>将包从node_modules中拷贝出来，放入components文件夹下，再将import包的路径改为components下的路径，这样就可以在自己的项目中使用babel-loader去编译第三方的包了，但是这样做很不优雅。</p>
-<h2 id="2-在vue-config-js中配置webpack使babel-loader去编译node-modules中的包"><a href="#2-在vue-config-js中配置webpack使babel-loader去编译node-modules中的包" class="headerlink" title="2. 在vue.config.js中配置webpack使babel-loader去编译node_modules中的包"></a>2. 在vue.config.js中配置webpack使babel-loader去编译node_modules中的包</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">configureWebpack</span>: &#123;</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">      <span class="attr">rules</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</span><br><span class="line">          <span class="attr">exclude</span>: <span class="regexp">/\/node_modules\/tree-table-vue\//</span>,</span><br><span class="line">          <span class="attr">use</span>: &#123;</span><br><span class="line">            <span class="attr">loader</span>: <span class="string">&quot;babel-loader&quot;</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>这里有个疑问一直没搞明白，exclude 是排除的意思，webpack官方文档也是这样解释的，但是这个文件默认就是排除掉的，按照官方文档，应该使用include包含这个路径，但是使用include却无效，而使用exclude是有效的。</p>
-<h2 id="3-终级解决方案，vue-cli的配置项transpileDependencies"><a href="#3-终级解决方案，vue-cli的配置项transpileDependencies" class="headerlink" title="3. 终级解决方案，vue-cli的配置项transpileDependencies"></a>3. 终级解决方案，vue-cli的配置项transpileDependencies</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">transpileDependencies</span>: [<span class="string">&quot;tree-table-vue&quot;</span>]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 

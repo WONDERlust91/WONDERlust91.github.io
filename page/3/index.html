@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-count">145</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,6 +177,115 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2022/02/10/node%E8%A7%A3%E5%86%B3%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/10/node%E8%A7%A3%E5%86%B3%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/" class="post-title-link" itemprop="url">node解决打包过程中的内存不足</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-02-10 13:34:39" itemprop="dateCreated datePublished" datetime="2022-02-10T13:34:39+00:00">2022-02-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/node/" itemprop="url" rel="index"><span itemprop="name">node</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/02/10/node%E8%A7%A3%E5%86%B3%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/10/node解决打包过程中的内存不足/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在打包大的项目时，打包过程中会报错失败。报错信息为 <code>FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory in XXX</code>。</p>
+<p>首先一定要排除代码中是否有会导致内存泄露的可能，如果没有内存泄露，项目又比较大，打包过程确实消耗较大的内存，那么请继续阅读。</p>
+<p>查阅资料后发现，当电脑内存为 8G 时，安装 node，默认分配给堆的内存大小就是 2G，一旦项目运行时超过这个限制就会报错。可以使用如下命令来查看自己的堆大小限制：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -e &#x27;console.log(v8.getHeapStatistics().heap_size_limit/(1024*1024))&#x27;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/10/node%E8%A7%A3%E5%86%B3%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +331,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -329,7 +438,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -436,7 +545,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -545,7 +654,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -655,7 +764,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -790,7 +899,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -906,7 +1015,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1014,7 +1123,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1128,7 +1237,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1168,112 +1277,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/01/14/javascript%E5%B0%81%E8%A3%85%E5%8F%AF%E4%B8%AD%E6%AD%A2%E7%9A%84fetch/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2022/01/13/react%E5%9C%A8%E7%BB%84%E4%BB%B6%E5%A4%96%E4%BD%BF%E7%94%A8redux%E7%9A%84dispatch/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/01/13/react%E5%9C%A8%E7%BB%84%E4%BB%B6%E5%A4%96%E4%BD%BF%E7%94%A8redux%E7%9A%84dispatch/" class="post-title-link" itemprop="url">react在组件外使用redux的dispatch</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-01-13 11:31:25" itemprop="dateCreated datePublished" datetime="2022-01-13T11:31:25+00:00">2022-01-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/react/" itemprop="url" rel="index"><span itemprop="name">react</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2022/01/13/react%E5%9C%A8%E7%BB%84%E4%BB%B6%E5%A4%96%E4%BD%BF%E7%94%A8redux%E7%9A%84dispatch/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/01/13/react在组件外使用redux的dispatch/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>使用 redux-toolkit 管理全局状态（如请求的 token），将一些异步操作也写在 redux 中（如登录接口）。使用 axios 请求数据，在 axios 拦截器中又需要操作全局状态（如获取请求 token、请求发现登录过期，自动退出登录）。这就意味着要在 react-component 之外进行 store 的 state 获取、或者 action 的 dispatch 操作，而在非 tsx 文件中，无法使用 useDispatch 的 hook。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/13/react%E5%9C%A8%E7%BB%84%E4%BB%B6%E5%A4%96%E4%BD%BF%E7%94%A8redux%E7%9A%84dispatch/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>

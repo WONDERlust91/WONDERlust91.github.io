@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-count">145</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,6 +177,106 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/05/06/typescript%E4%B8%AD%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/06/typescript%E4%B8%AD%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">typescript中引入图片的问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-05-06 17:01:06" itemprop="dateCreated datePublished" datetime="2021-05-06T17:01:06+00:00">2021-05-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/typescript/" itemprop="url" rel="index"><span itemprop="name">typescript</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2021/05/06/typescript%E4%B8%AD%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E9%97%AE%E9%A2%98/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/05/06/typescript中引入图片的问题/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Typescript-ts-文件中引入图片时报错，没有正确的类型声明"><a href="#Typescript-ts-文件中引入图片时报错，没有正确的类型声明" class="headerlink" title="Typescript *.ts 文件中引入图片时报错，没有正确的类型声明"></a>Typescript *.ts 文件中引入图片时报错，没有正确的类型声明</h2><p>webpack 都配置完成，但在 ts 文件中引入图片时报错，此时需要在全局 d.ts 文件中增加以下声明</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全局d.ts文件中，增加声明</span></span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.svg&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.png&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.jpg&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.jpeg&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.gif&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.bmp&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.tiff&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样引入图片时就不会报类型错误了</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Img</span> <span class="keyword">from</span> <span class="string">&quot;../xxx.png&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +322,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -329,7 +429,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -443,7 +543,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -550,7 +650,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -654,7 +754,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -760,7 +860,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -875,7 +975,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -997,7 +1097,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1106,7 +1206,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
+      <time title="Modified: 2023-09-27 03:18:25" itemprop="dateModified" datetime="2023-09-27T03:18:25+00:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1193,115 +1293,6 @@
 </li>
 </ul>
 <p>text-shadow因为没有spread-radius所以不能完全实现Photoshop中的效果。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2020/05/31/%E6%89%8B%E6%9C%BAgooglePlay%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/05/31/%E6%89%8B%E6%9C%BAgooglePlay%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/" class="post-title-link" itemprop="url">手机googlePlay安装指南</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-05-31 23:03:35" itemprop="dateCreated datePublished" datetime="2020-05-31T23:03:35+00:00">2020-05-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-15 07:16:31" itemprop="dateModified" datetime="2023-09-15T07:16:31+00:00">2023-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%89%8B%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">手机</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2020/05/31/%E6%89%8B%E6%9C%BAgooglePlay%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/31/手机googlePlay安装指南/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="google-play-安装"><a href="#google-play-安装" class="headerlink" title="google play 安装"></a>google play 安装</h2><p>前置条件：科学上网</p>
-<h3 id="1-在apkmirror网站上下载-Google-Play-Service-与-Google-Play-Store-安装包"><a href="#1-在apkmirror网站上下载-Google-Play-Service-与-Google-Play-Store-安装包" class="headerlink" title="1. 在apkmirror网站上下载 Google Play Service 与 Google Play Store 安装包"></a>1. 在<a target="_blank" rel="noopener" href="https://apkmirror.com/">apkmirror</a>网站上下载 Google Play Service 与 Google Play Store 安装包</h3><h3 id="2-安装成功后在科学上网的环境下使用"><a href="#2-安装成功后在科学上网的环境下使用" class="headerlink" title="2. 安装成功后在科学上网的环境下使用"></a>2. 安装成功后在科学上网的环境下使用</h3><h2 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h2><ol>
-<li><p>安装完成后，无法登陆（确保已科学上网）。报错信息为Couldn’t sign in, There was a problem communicating with Google servers. Try again later.</p>
-</li>
-<li><p>已登陆但报错：从服务器检索信息时出错。DF-DFERH-01。</p>
-</li>
-<li><p>明明已科学上网且登陆成功，但经常无法访问Google 服务。</p>
-</li>
-</ol>
-<p>这些问题都是同一个原因引起的：国产手机系统默认将Google Play Service的请求地址更改为googleapis.cn，而google并未在大陆提供服务，故无法使用，默认状态下，需要很久才能判定googleapis.cn响应超时，转而去请求googleapis.com。可通过root权限修改手机host文件，将谷歌服务框架的请求修改为googleapis.com，或在科学上网工具中加入一条规则，使googleapis.cn重定向到googleapis.com来解决问题。也可以通过请求googleapis.cn时断开网络再重新连接，使对googleapis.cn的请求直接判定为失败，从而直接重定向到googleapis.com上。</p>
-<p>上面的办法都是些治标不治本的法子，建议买外国手机。。。</p>
 
       
     </div>
