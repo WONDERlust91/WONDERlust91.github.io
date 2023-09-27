@@ -736,7 +736,9 @@ have been doing 从过去到现在一直做某事
 
 - do the rounds
 
-  1. 新闻或谣言被一个人接一个人地传播并被广泛知晓，即撒播。
+  1. to be passed from one person to another person and become widely known. 新闻或谣言被一个人接一个人地传播并被广泛知晓，即撒播。
+
+     _"Rumors about his resigning as CEO were doing the rounds."_
 
   2. 访问或参与很多特定团体的事物，通常是流程的一部分，即走流程。
 

@@ -455,9 +455,15 @@ categories: English
 
   1. adverb: away from the correct path or direction. 偏离正确的路径或方向。
 
+     _"we went astray but a man redirected us"_
+
   2. adverb: into error or morally questionable behavior. 进入错误或道德上有问题的行为。
 
+     _"he was led astray by boozy colleagues"_
+
   3. phrase: go astray - (of an object) become lost or mislaid. （一个物体）迷路或放错地方，即误入歧途。
+
+     _"the money had gone astray"_
 
 - astrology
 
@@ -2117,6 +2123,8 @@ categories: English
 
   1. verb: arrive at (a fact or a conclusion) by reasoning; draw as a logical conclusion. 通过推理得出（事实或结论）；得出合乎逻辑的结论，即推断。
 
+     _"little can be safely deduced from these figures"_
+
 - deductible
 
   1. adjective: able to be deducted, especially from taxable income or tax to be paid. 可以被扣除的，尤其是从应税收入或应缴税款中扣除。
@@ -2311,13 +2319,33 @@ categories: English
 
 - dim
 
-  1. verb: make or become less bright or distinct. 使或变得不那么明亮或清晰。
+  1. adjective: (of a light, color, or illuminated object) not shining brightly or clearly.
+
+     _"her face was softened by the dim light"_
+
+  2. adjective: not clearly recalled or formulated in the mind.
+
+     _"the matter was in the dim and distant past"_
+
+  3. adjective(INFORMAL): stupid or slow to understand.
+
+     _"you're just incredibly dim"_
+
+  4. verb: make or become less bright or distinct. 使或变得不那么明亮或清晰。
+
+     _"a smoky inferno that dimmed the sun"_
 
      - lower (a vehicle's headlights) from high to low beam. 将（车辆的前灯）从远光灯调低到近光灯。
 
+       _"the car moved slowly, its headlights dimmed"_
+
      - make or become less intense or favorable. 使或变得不那么强烈或有利。
 
+       _"the difficulty in sleeping couldn't dim her happiness"_
+
      - make or become less able to see clearly. 使或变得不太能够清楚地看到。
+
+       _"his eyes dimmed"_
 
 - diminish
 
@@ -2387,7 +2415,11 @@ categories: English
 
   1. verb: make (secret or new information) known. 使（秘密或新信息）为人所知，即揭露。
 
+     _"they disclosed her name to the press"_
+
      - allow (something) to be seen, especially by uncovering it. 允许（某物）被看到，尤其是通过揭开它的方式。
+
+       _"he cleared away the grass and disclosed a narrow opening descending into the darkness"_
 
 - discourse
 
@@ -2663,27 +2695,51 @@ categories: English
 
   1. adjective: expected at or planned for at a certain time. 预计在或计划在某个时间，即到期。
 
+     _"the baby's due in August"_
+
      - (of a payment) required at a certain time. （付款）被要求在特定时间。
+
+       _"the May installment was due"_
 
      - (of a person) having reached a point where the thing mentioned is required or owed. （某人）已经达到一个点，在这个情况下所提及的事物应该被要求或被偿还。
 
+       _"she was due for a raise"_
+
      - (of a thing) required or owed as a legal or moral obligation. （事物）作为法律或道德义务而被要求或付出。
+
+       _"he was only taking back what was due to him"_
 
   2. adjective: of the proper quality or extent; adequate. 具有适当的质量或范围；足够的，即应有的。
 
+     _"driving without due care and attention"_
+
   3. noun: a person's right; what is owed to someone. 一个人的权利；欠某人的东西。
+
+     _"he attracts more criticism than is his due"_
 
   4. noun: an obligatory payment; a fee. 强制性付款；费用。
 
+     _"he had paid union dues for years"_
+
   5. adverb: (with reference to a point of the compass) exactly; directly. （关于指南针的指向）准确地；直接地。
+
+     _"we'll head due south again on the same road"_
 
   6. phrase: due to - caused by or ascribable to. 由于或归因于。
 
+     _"unemployment due to automation will grow steadily"_
+
   7. phrase: give someone their due - be fair to someone. 对某人公平。
+
+     _"to give him his due, he was a generous employer"_
 
   8. phrase: in due course - at the appropriate time. 在适当的时候。
 
+     _"Reynolds will respond in due course to the letter"_
+
   9. phrase: pay one's dues - fulfill one's obligations. 履行某人的义务。
+
+     _"he had paid his dues to society for his previous convictions"_
 
 - dutch
 
@@ -2811,9 +2867,15 @@ categories: English
 
   1. verb: involve (something) as a necessary or inevitable part or consequence. 涉及（某事）作为必要或不可避免的部分或结果，译为意味着。
 
-  2. verb(LAW): 解决（财产）在后代间的继承，以便所有权保留在特定群体，通常是一个家庭中，翻译为继承，固定搭配 entail on/upon sb。
+     _"a situation that entails considerable risks"_
+
+  2. verb(LAW): 解决（财产）在后代间的继承，以便所有权保留在特定群体，通常是一个家庭中，翻译为继承，固定搭配 entail on/upon sb.。
+
+     _"her father's estate was entailed on a cousin"_
 
   3. noun: a settlement of the inheritance of property over a number of generations so that it remains within a family or other group. 在后代间财产继承的安排，以便财产保持在一个家庭或其他群体中。
+
+     _"the damage being done in England by entails"_
 
 - entitle
 
@@ -3175,11 +3237,19 @@ categories: English
 
   1. adjective: lacking physical strength, especially as a result of age or illness. 缺乏体力，尤其是由于年龄或疾病，即虚弱的。
 
+     _"my legs are very feeble after the flu"_
+
      - (of a sound) faint. （声音）微弱。
+
+       _"his voice sounded feeble and far away"_
 
      - lacking strength of character. 缺乏人格力量。
 
+       _"she overreacted in such a feeble, juvenile way"_
+
      - failing to convince or impress. 无法信服或打动。
+
+       _"a feeble excuse"_
 
 - fertile
 
@@ -3261,7 +3331,11 @@ categories: English
 
   1. adjective: having or displaying an intense or ferocious aggressiveness. 具有或表现出强烈或凶猛的攻击性。
 
+     _"the tiger is the largest member of the cat family and a fierce predator"_
+
   2. phrase: something fierce - to a great and almost overwhelming extent. 在很大程度上，几乎是压倒性的。
+
+     _"he said he missed me something fierce"_
 
 - figure
 
@@ -4041,6 +4115,8 @@ categories: English
 
   1. adjective: treating all rivals or disputants equally; fair and just. 平等对待所有竞争对手或争论者的；公平公正的。
 
+     _"independent and impartial advice"_
+
 - impetus
 
   1. noun: the force or energy with which a body moves. 身体移动的力量或能量。
@@ -4673,6 +4749,12 @@ categories: English
 
   3. verb: seek to influence (a politician or public official) on an issue. 试图在某个问题上影响（政客或公职人员），可译为游说。
 
+- longline
+
+  1. noun: a deep-sea fishing line from which are suspended many short lines with baited hooks.
+
+     _"a longline fishing boat"_
+
 - loom
 
   1. noun: an apparatus for making fabric by weaving yarn or thred. 一种通过编织纱线或线来制造织物的设备，即织布机。
@@ -5037,11 +5119,23 @@ categories: English
 
   1. adjective: highly unpleasant, especially to the senses; physically nauseating. 非常不愉快，尤其是感官上的；生理上令人作呕的。
 
+     _"plastic bags burn with a nasty, acrid smell"_
+
   2. adjective: (of a person or animal) behaving in an unpleasant or spiteful way. （人或动物）以不愉快或恶意的方式行事。
+
+     _"Harry was a nasty, foul-mouthed old devil"_
 
   3. adjective: physically or mentally damaging or harmful. 身体或精神上的伤害的。
 
+     _"a nasty, vicious-looking hatchet"_
+
   4. noun(INFORMAL): an unpleasant or harmful person or thing. （非正式）不愉快或有害的人或事物。
+
+     _"bacteria and other nasties"_
+
+  5. phrase: nasty up - make something dirty or unpleasant.
+
+     _"the dust nastied up people's cars and even shoes just to get from the parking lot"_
 
 - negligence
 
@@ -5321,11 +5415,19 @@ categories: English
 
   1. verb: tower above and cast a shadow over. 耸立在上方并投下阴影，即遮盖。
 
+     _"an enormous oak tree stood overshadowing the cottage"_
+
      - cast gloom over. 笼罩阴霾。
+
+       _"it is easy to let this feeling of tragedy overshadow his story"_
 
   2. verb: appear much more prominent or important than. 显得比...突出或重要得多。
 
+     _"his competitive nature often overshadows the other qualities"_
+
      - be more impressive or successful than (another person). 比（另一个人）更令人印象深刻或更成功。
+
+       _"he was always overshadowed by his brilliant elder brother"_
 
 - overstate
 
@@ -5523,17 +5625,43 @@ categories: English
 
   1. verb: look keenly or with difficulty at someone or something. 敏锐地或困难地注视某人或某物，即窥视，细看。
 
+     _"Blake screwed up his eyes, trying to peer through the fog"_
+
      - be just visible. 只是可视的。
+
+       _"the two towers peer over the roofs"_
 
      - (ARCHAIC) come into view; appear. （古老）来到视野中；出现。
 
+       _"for yet a many of your horsemen peer"_
+
   2. noun: a member of the nobility in Britain or Ireland, comprising the ranks of duke, marquess, earl, viscount, and baron. 英国或爱尔兰的贵族成员，包括公爵、侯爵、伯爵、子爵和男爵，即贵族。
+
+     _"hereditary peers could still dominate the proceedings of the House of Lords"_
 
   3. noun: a person of the same age, status, or ability as another specified person. 与另一特定的人具有相同年龄、地位或能力的人，即同辈。
 
+     _"he has incurred much criticism from his academic peers"_
+
   4. verb(ARCHAIC): make or become equal with or of the same rank. （古老）使或变得与或具有相同的等级。
 
+     _"the Thames could not peer with the mill-streamlet close to my home"_
+
   5. phrase: without peer - unequaled; unrivaled; peerless. 无可比拟的，无与伦比的；绝世的。
+
+     _"he is a goalkeeper without peer"_
+
+- penalty
+
+  1. noun: a punishment imposed for breaking a law, rule, or contract.
+
+     _"the charge carries a maximum penalty of ten years' imprisonment"_
+
+  2. noun: (in sports and games) a disadvantage or handicap imposed on a player or team, typically for infringement of rules.
+
+  3. phrase: under penalty of - under the threat of.
+
+     _"he ordered enterprises to fulfill contracts under penalty of strict fines"_
 
 - pendulum
 
@@ -6319,15 +6447,55 @@ categories: English
 
      _"electromagnetic effects can be propagated at a finite velocity only through material substances"_
 
+- propensity
+
+  1. noun: an inclination or natural tendency to behave in a particular way.
+
+     _"a propensity for violence"_
+
+- proposal
+
+  1. noun: a plan or suggestion, especially a formal or written one, put forward for consideration or discussion by others.
+
+     _"a set of proposals for a major new high-speed rail link"_
+
+  2. noun: an offer of marriage.
+
+     _"surely a woman as beautiful as you has had proposals?"_
+
+- propose
+
+  1. verb: put forward (an idea or plan) for consideration or discussion by others.
+
+     _"he proposed a new nine-point peace plan"_
+
+  2. noun: make an offer of marriage to someone.
+
+     _"I have already proposed to Sarah"_
+
+  3. phrase: propose a toast - ask a group of people at a social occasion to drink to the health and happiness of a specified person.
+
+     _I hereby propose a toast to the bride and groom_
+
+  4. phrase: propose marriage - make an offer of marriage to someone.
+
 - proposition
 
   1. noun: a statement or assertion that expresses a judgement or opinion. 表达判断或意见的陈述或断言。
 
+     _"the proposition that all men are created equal"_
+
   2. noun: a suggested scheme or plan of action, especially in a business context. 建议的行动方案或计划，尤其是在商业环境中。
+
+     _"a detailed investment proposition"_
 
   3. noun: a project, task , idea, etc. considered in terms of its likely success or difficulty. 一个项目，任务，想法等等。深思熟虑过其可能的成功或困难。
 
+     _"a paper that has lost half its readers is unlikely to be an attractive proposition"_
+
   4. verb(INFORMAL): make a suggestion of sex to (someone), especially in an unsubtle way. 向（某人）提出性提议，尤其是直白的方式。
+
+     _"she had been propositioned at the party by an accountant"_
 
   5. phrase: not a proposition - unlikely to succeed; not a viable option. 不太可能成功；不是可行选择。
 
@@ -7253,7 +7421,11 @@ categories: English
 
   1. noun: a category of things or people having some common feature; a type. 具有某些共同特征的一类事物或人；一种。
 
+     _"if only we knew the sort of people she was mixing with"_
+
      - (INFORMAL) a person of a specified nature. 具有特定性质的人。
+
+       _"Frank was a genuinely friendly sort"_
 
   2. noun(COMPUTING): the arrangement of data in a prescribed sequence. 按规定顺序排列的数据。
 
@@ -7263,25 +7435,45 @@ categories: English
 
   5. verb: arrange systematically in groups; separate according to type, class, etc. 系统性地分组在安排上；根据类型，类别等分开。
 
+     _"the mail was sorted"_
+
      - look at (a group of things) one after another in order to classify them or make a selection. 一个接一个地看（一组事物），以便对它们进行分类或做出选择。
 
+       _"she sat down and sorted through her mail"_
+
   6. verb(INFORMAL): resolve (a problem or difficulty). （非正式）解决（问题或困难）。
+
+     _"the problem with the engine was soon sorted"_
 
   7. phrase: after a sort - after a fashion. 在一定程度上，但不完美或不令人满意。
 
   8. phrase: in some sort - to a certain extent. 在某种程度上。
 
+     _"I am in some sort indebted to you"_
+
   9. phrase: nothing of the sort - used as an emphatic way of denying permission or refuting an earlier statement or assumption. 用作拒绝许可或反驳先前陈述或假设的强调方式。
+
+     _"“I'll pay.” “You'll do nothing of the sort.”"_
 
   10. phrase: of sorts/a sort - of an atypical and typically inferior type. 属于非典型且通常较差的类型。
 
+      _"the training camp actually became a tourist attraction of sorts"_
+
   11. phrase: out of sorts - slightly unwell. 轻微不适。
+
+      _"she's been feeling nauseous and generally out of sorts"_
 
   12. phrase: sort of - to some extent; in some way or other (used to convey inexactness or vagueness). 在某种程度上；以某种方式（用于表达不准确或模糊）。
 
+      _"“Do you see what I mean?” “Sort of,” answered Jean cautiously"_
+
   13. phrase: the ... sort - the kind of person likely to do or be involved with the thing specified. 可能做或参与指定事情的人的类型。
 
+      _"she'd never imagined Steve to be the marrying sort"_
+
   14. phrase: sort out - arrange things systematically in groups or according to type. 系统地分组或按类型安排事务。
+
+      _"she sorted out the clothes, some to be kept, some to be thrown away"_
 
 - sound
 
@@ -7558,6 +7750,8 @@ categories: English
 - startle
 
   1. verb: cause (a person or animal) to feel sudden shock or alarm. 使（人或动物）感到突然的震惊或惊慌。
+
+     _"a sudden sound in the doorway startled her"_
 
 - statesman
 
@@ -8355,6 +8549,28 @@ categories: English
 
      _"huge fines were imposed for trivial offenses"_
 
+- trunk
+
+  1. noun: the main woody stem of a tree as distinct from its branches and roots.
+
+     _"you can tell the age of a tree by the rings inside its trunk"_
+
+  2. noun: a person's or animal's body apart from the limbs and head.
+
+     _"the children had an itchy rash on the trunk and extremities"_
+
+  3. noun: the elongated, prehensile nose of an elephant.
+
+     _"an elephant's trunk is so strong and agile, it can push down trees, or pick up a single piece of straw"_
+
+  4. noun: a large box with a hinged lid for storing or transporting clothes and other articles.
+
+     _"libraries, dusty archives, and old trunks in family attics may eventually provide further material"_
+
+  5. noun(NORTH AMERICAN): an enclosed space at the back of a car for carrying luggage and other goods; a boot.
+
+     _"he met them at the curb and placed the bags in the trunk"_
+
 - turbulent
 
   1. adjective: characterized by conflict, disorder, or confusion; not controlled or calm. 以冲突，无序，混乱为特征；不受控制或不冷静的。
@@ -8856,6 +9072,12 @@ categories: English
   3. adjective: done on a large scale; extensive. 大规模完成的；广泛的。
 
   4. verb: sell (goods) in large quantities at low prices to be retailed by others. 以低价大量出售（商品）以供他人零售。
+
+- wieldy
+
+  1. adjective: easily controlled or handled.
+
+     _"the beefy Bentley is far from wieldy"_
 
 - will
 

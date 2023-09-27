@@ -425,6 +425,14 @@ categories: English
 
   connotation n. 隐含意义，联想
 
+- liberty n. 自由，自主
+
+  liberal adj. 自由主义的 n. 自由主义者
+
+  liberate v. 解放，释放
+
+  deliberate adj. 刻意的 v. 慎重考虑
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -952,3 +960,7 @@ categories: English
 - scale up v. 扩大
 
   scale back/down v. 缩小
+
+- predator n. 掠食者
+
+  prey n. 猎物 v. 捕猎
