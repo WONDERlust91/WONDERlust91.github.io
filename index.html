@@ -222,7 +222,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-28 16:38:44" itemprop="dateModified" datetime="2023-09-28T16:38:44+00:00">2023-09-28</time>
+      <time title="Modified: 2023-10-04 10:07:52" itemprop="dateModified" datetime="2023-10-04T10:07:52+00:00">2023-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,7 +258,433 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="Using-Structs-to-Structure-Related-Data"><a href="#Using-Structs-to-Structure-Related-Data" class="headerlink" title="Using Structs to Structure Related Data"></a>Using Structs to Structure Related Data</h2><p>A struct, or structure, is a custom data type that lets you package together and name multiple related values that make up a meaningful group.</p>
+          <h2 id="Understanding-Ownership"><a href="#Understanding-Ownership" class="headerlink" title="Understanding Ownership"></a>Understanding Ownership</h2><p>Ownership enables Rust to make memory safety guarantees without needing a garbage collector, so it’s important to understand how ownership works.</p>
+<h3 id="What-Is-Ownership"><a href="#What-Is-Ownership" class="headerlink" title="What Is Ownership?"></a>What Is Ownership?</h3><p><em>Ownership</em> is a set of rules that govern how a Rust program manages memory.</p>
+<p>Memory is managed through a system of ownership with a set of rules that the compiler checks. If any of the rules are violated, the program won’t compile. None of the features of ownership will slow down your program while it’s running.</p>
+<blockquote>
+<p><strong>The Stack and the Heap</strong></p>
+<p>The stack stores values in the order it gets them and removes the values in the opposite order. This is referred to as <em>last in, first out</em>. Adding data is called <em>pushing onto the stack</em>, and removing data is called <em>popping off the stack</em>. All data stored on the stack must have a known, fixed size. Data with an unknown size at compile time or a size that might change must be stored on the heap instead.</p>
+<p>The heap is less organized: when you put data on the heap, you request a certain amount of space. The memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and returns a <em>pointer</em>, which is the address of that location. This process is called <em>allocating on the heap</em> and is sometimes abbreviated as just <em>allocating</em> (pushing values onto the stack is not considered allocating). Because the pointer to the heap is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer.</p>
+<p>Pushing to the stack is faster than allocating on the heap because the allocator never has to search for a place to store new data; that location is always at the top of the stack. Comparatively, allocating space on the heap requires more work because the allocator must first find a big enough space to hold the data and then perform bookkeeping to prepare for the next allocation.</p>
+<p>Accessing data in the heap is slower than accessing data on the stack because you have to follow a pointer to get there. Contemporary processors are faster if they jump around less in memory. A processor can do its job better if it works on data that’s close to other data (as it is on the stack) rather than farther away (as it can be on the heap).</p>
+<p>When your code calls a function, the values passed into the function (including, potentially, pointers to data on the heap) and the function’s local variables (just the pointers and references, not the data) get pushed onto the stack. When the function is over, those values get popped off the stack.</p>
+</blockquote>
+<h4 id="Ownership-Rules"><a href="#Ownership-Rules" class="headerlink" title="Ownership Rules"></a>Ownership Rules</h4><ul>
+<li><p>Each value in Rust has an <em>owner</em>.</p>
+</li>
+<li><p>There can only be one owner at a time.</p>
+</li>
+<li><p>When the owner goes out of scope, the value will be dropped.</p>
+</li>
+</ul>
+<h4 id="Variable-Scope"><a href="#Variable-Scope" class="headerlink" title="Variable Scope"></a>Variable Scope</h4><p>A scope is the range within a program for which an item is valid.</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;                      <span class="comment">// s is not valid here, it&#x27;s not yet declared</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s</span> = <span class="string">&quot;hello&quot;</span>;   <span class="comment">// s is valid from this point forward</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// do stuff with s</span></span><br><span class="line">&#125;                      <span class="comment">// this scope is now over, and s is no longer valid</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="The-String-Type"><a href="#The-String-Type" class="headerlink" title="The String Type"></a>The String Type</h4><p>String literals are convenient, but they aren’t suitable for every situation in which we may want to use text. One reason is that they’re immutable. Another is that not every string value can be known when we write our code: for example, what if we want to take user input and store it? For these situations, Rust has a second string type, <code>String</code>.</p>
+<p>String type manages data allocated on the heap and as such is able to store an amount of text that is unknown to us at compile time.</p>
+<p>You can create a <code>String</code> from a string literal using the <code>from</code> function, like so:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>The double colon <code>::</code> operator allows us to namespace this particular <code>from</code> function under the <code>String</code> type rather than using some sort of name like <code>string_from</code>.</p>
+<p>This kind of string <em>can</em> be mutated:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">s.<span class="title function_ invoke__">push_str</span>(<span class="string">&quot;, world!&quot;</span>); <span class="comment">// push_str() appends a literal to a String</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, s); <span class="comment">// This will print `hello, world!`</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Memory-and-Allocation"><a href="#Memory-and-Allocation" class="headerlink" title="Memory and Allocation"></a>Memory and Allocation</h4><p>With the <code>String</code> type, in order to support a mutable, growable piece of text, we need to allocate an amount of memory on the heap, unknown at compile time, to hold the contents. This means:</p>
+<ul>
+<li><p>The memory must be requested from the memory allocator at runtime.</p>
+</li>
+<li><p>We need a way of returning this memory to the allocator when we’re done with our <code>String</code>.</p>
+</li>
+</ul>
+<p>That first part is done by us: when we call <code>String::from</code>, its implementation requests the memory it needs. This is pretty much universal in programming languages.</p>
+<p>However, the second part is different. In languages with a <em>garbage collector (GC)</em>, the GC keeps track of and cleans up memory that isn’t being used anymore, and we don’t need to think about it. In most languages without a GC, it’s our responsibility to identify when memory is no longer being used and to call code to explicitly free it, just as we did to request it. Doing this correctly has historically been a difficult programming problem. If we forget, we’ll waste memory. If we do it too early, we’ll have an invalid variable. If we do it twice, that’s a bug too. We need to pair exactly one <code>allocate</code> with exactly one <code>free</code>.</p>
+<p>Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope. Here’s a version of our scope example using a <code>String</code> instead of a string literal:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>); <span class="comment">// s is valid from this point forward</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// do stuff with s</span></span><br><span class="line">&#125;                                  <span class="comment">// this scope is now over, and s is no longer valid</span></span><br></pre></td></tr></table></figure>
+
+<p>There is a natural point at which we can return the memory our <code>String</code> needs to the allocator: when <code>s</code> goes out of scope. When a variable goes out of scope, Rust calls a special function for us. This function is called <code>drop</code>, and it’s where the author of <code>String</code> can put the code to return the memory. Rust calls <code>drop</code> automatically at the closing curly bracket.</p>
+<h5 id="Variables-and-Data-Interacting-with-Move"><a href="#Variables-and-Data-Interacting-with-Move" class="headerlink" title="Variables and Data Interacting with Move"></a>Variables and Data Interacting with Move</h5><p>Multiple variables can interact with the same data in different ways in Rust. Let’s look at an example using an integer in the following listing.</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">x</span> = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="variable">y</span> = x;</span><br></pre></td></tr></table></figure>
+
+<p>We can probably guess what this is doing: “bind the value <code>5</code> to <code>x</code>; then make a copy of the value in <code>x</code> and bind it to <code>y</code>.” We now have two variables, <code>x</code> and <code>y</code>, and both equal <code>5</code>. This is indeed what is happening, because integers are simple values with a known, fixed size, and these two <code>5</code> values are pushed onto the stack.</p>
+<p>Now let’s look at the <code>String</code> version:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s1</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> <span class="variable">s2</span> = s1;</span><br></pre></td></tr></table></figure>
+
+<p><code>s1</code> on the stack (not valid after assigning to <code>s2</code>)</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ptr</td>
+<td>s1 on the heap</td>
+</tr>
+<tr>
+<td>len</td>
+<td>5</td>
+</tr>
+<tr>
+<td>capacity</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p><code>s1</code> on the heap</p>
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>h</td>
+</tr>
+<tr>
+<td>1</td>
+<td>e</td>
+</tr>
+<tr>
+<td>2</td>
+<td>l</td>
+</tr>
+<tr>
+<td>3</td>
+<td>l</td>
+</tr>
+<tr>
+<td>4</td>
+<td>o</td>
+</tr>
+</tbody></table>
+<p><code>s2</code> on the stack</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ptr</td>
+<td>s1 on the heap</td>
+</tr>
+<tr>
+<td>len</td>
+<td>5</td>
+</tr>
+<tr>
+<td>capacity</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p>A String is made up of three parts: a pointer to the memory that holds the contents of the string, a length, and a capacity. This group of data is stored on the stack. The memory on the heap that holds the contents.</p>
+<p>The length is how much memory, in bytes, the contents of the <code>String</code> are currently using. The capacity is the total amount of memory, in bytes, that the <code>String</code> has received from the allocator. The difference between length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.</p>
+<p>When we assign <code>s1</code> to <code>s2</code>, the <code>String</code> data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to.</p>
+<p>If Rust copied the data on the heap, the operation <code>s2 = s1</code> could be very expensive in terms of runtime performance if the data on the heap were large.</p>
+<p>Earlier, we said that when a variable goes out of scope, Rust automatically calls the <code>drop</code> function and cleans up the heap memory for that variable.</p>
+<p>But both data pointers pointing to the same location. This is a problem: when <code>s2</code> and <code>s1</code> go out of scope, they will both try to free the same memory. This is known as a <em>double free</em> error and is one of the memory safety bugs we mentioned previously. Freeing memory twice can lead to memory corruption, which can potentially lead to security vulnerabilities.</p>
+<p>To ensure memory safety, after the line <code>let s2 = s1</code>, Rust considers <code>s1</code> as no longer valid. Therefore, Rust doesn’t need to free anything when <code>s1</code> goes out of scope. Check out what happens when you try to use <code>s1</code> after <code>s2</code> is created; it won’t work:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s1</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> <span class="variable">s2</span> = s1;</span><br><span class="line"></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;, world!&quot;</span>, s1);</span><br><span class="line"><span class="comment">// You&#x27;ll get an error because Rust prevents you from using the invalidated referenc</span></span><br></pre></td></tr></table></figure>
+
+<p>If you’ve heard the terms <em>shallow copy</em> and <em>deep copy</em> while working with other languages, the concept of copying the pointer, length, and capacity without copying the data probably sounds like making a shallow copy. But because Rust also invalidates the first variable, instead of being called a shallow copy, it’s known as a <em>move</em>.</p>
+<p>Rust will never automatically create “deep” copies of your data. Therefore, any <em>automatic</em> copying can be assumed to be inexpensive in terms of runtime performance.</p>
+<h5 id="Variables-and-Data-Interacting-with-Clone"><a href="#Variables-and-Data-Interacting-with-Clone" class="headerlink" title="Variables and Data Interacting with Clone"></a>Variables and Data Interacting with Clone</h5><p>If we do want to deeply copy the heap data of the <code>String</code>, not just the stack data, we can use a common method called <code>clone</code>. Here’s an example of the clone method in action:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s1</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> <span class="variable">s2</span> = s1.<span class="title function_ invoke__">clone</span>();</span><br><span class="line"></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;s1 = &#123;&#125;, s2 = &#123;&#125;&quot;</span>, s1, s2);</span><br></pre></td></tr></table></figure>
+
+<p>When you see a call to <code>clone</code>, you know that some arbitrary code is being executed and that code may be expensive. It’s a visual indicator that something different is going on.</p>
+<h5 id="Stack-Only-Data-Copy"><a href="#Stack-Only-Data-Copy" class="headerlink" title="Stack-Only Data: Copy"></a>Stack-Only Data: Copy</h5><p>This code using integers works and is valid:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">x</span> = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="variable">y</span> = x;</span><br><span class="line"></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;x = &#123;&#125;, y = &#123;&#125;&quot;</span>, x, y);</span><br></pre></td></tr></table></figure>
+
+<p>But this code seems to contradict what we just learned: we don’t have a call to <code>clone</code>, but <code>x</code> is still valid and wasn’t moved into <code>y</code>.</p>
+<p>The reason is that types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make. That means there’s no reason we would want to prevent <code>x</code> from being valid after we create the variable <code>y</code>. In other words, there’s no difference between deep and shallow copying here, so calling <code>clone</code> wouldn’t do anything different from the usual shallow copying, and we can leave it out.</p>
+<p>Rust has a special annotation called the <code>Copy</code> trait that we can place on types that are stored on the stack. If a type implements the <code>Copy</code> trait, variables that use it do not move, but rather are trivially copied, making them still valid after assignment to another variable.</p>
+<p>Rust won’t let us annotate a type with <code>Copy</code> if the type, or any of its parts, has implemented the <code>Drop</code> trait.</p>
+<p>As a general rule, any group of simple scalar values can implement <code>Copy</code>, and nothing that requires allocation or is some form of resource can implement <code>Copy</code>. Here are some of the types that implement <code>Copy</code>:</p>
+<ul>
+<li><p>All the integer types, such as <code>u32</code>.</p>
+</li>
+<li><p>The Boolean type, <code>bool</code>, with values <code>true</code> and <code>false</code>.</p>
+</li>
+<li><p>All the floating-point types, such as <code>f64</code>.</p>
+</li>
+<li><p>The character type, <code>char</code>.</p>
+</li>
+<li><p>Tuples, if they only contain types that also implement <code>Copy</code>. For example, <code>(i32, i32)</code> implements <code>Copy</code>, but <code>(i32, String)</code> does not.</p>
+</li>
+</ul>
+<h4 id="Ownership-and-Functions"><a href="#Ownership-and-Functions" class="headerlink" title="Ownership and Functions"></a>Ownership and Functions</h4><p>Passing a variable to a function will move or copy, just as assignment does. The following listing has an example with some annotations showing where variables go into and out of scope.</p>
+<p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);  <span class="comment">// s comes into scope</span></span><br><span class="line"></span><br><span class="line">    <span class="title function_ invoke__">takes_ownership</span>(s);             <span class="comment">// s&#x27;s value moves into the function...</span></span><br><span class="line">                                    <span class="comment">// ... and so is no longer valid here</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">x</span> = <span class="number">5</span>;                      <span class="comment">// x comes into scope</span></span><br><span class="line"></span><br><span class="line">    <span class="title function_ invoke__">makes_copy</span>(x);                  <span class="comment">// x would move into the function,</span></span><br><span class="line">                                    <span class="comment">// but i32 is Copy, so it&#x27;s okay to still use x afterward</span></span><br><span class="line"></span><br><span class="line">&#125; <span class="comment">// Here, x goes out of scope, then s. But because s&#x27;s value was moved, nothing special happens.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">takes_ownership</span>(some_string: <span class="type">String</span>) &#123; <span class="comment">// some_string comes into scope</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, some_string);</span><br><span class="line">&#125; <span class="comment">// Here, some_string goes out of scope and `drop` is called. The backing memory is freed.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">makes_copy</span>(some_integer: <span class="type">i32</span>) &#123; <span class="comment">// some_integer comes into scope</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, some_integer);</span><br><span class="line">&#125; <span class="comment">// Here, some_integer goes out of scope. Nothing special happens.</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Return-Values-and-Scope"><a href="#Return-Values-and-Scope" class="headerlink" title="Return Values and Scope"></a>Return Values and Scope</h4><p>Returning values can also transfer ownership. The following listing shows an example of a function that returns some value, with similar annotations as those in the previous listing.</p>
+<p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s1</span> = <span class="title function_ invoke__">gives_ownership</span>();         <span class="comment">// gives_ownership moves its return value into s1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s2</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);     <span class="comment">// s2 comes into scope</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s3</span> = <span class="title function_ invoke__">takes_and_gives_back</span>(s2);  <span class="comment">// s2 is moved into takes_and_gives_back, which also moves its return value into s3</span></span><br><span class="line">&#125; <span class="comment">// Here, s3 goes out of scope and is dropped. s2 was moved, so nothing happens. s1 goes out of scope and is dropped.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">gives_ownership</span>() <span class="punctuation">-&gt;</span> <span class="type">String</span> &#123;             <span class="comment">// gives_ownership will move its return value into the function that calls it</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">some_string</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;yours&quot;</span>); <span class="comment">// some_string comes into scope</span></span><br><span class="line"></span><br><span class="line">    some_string                              <span class="comment">// some_string is returned and moves out to the calling function</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// This function takes a String and returns one</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">takes_and_gives_back</span>(a_string: <span class="type">String</span>) <span class="punctuation">-&gt;</span> <span class="type">String</span> &#123; <span class="comment">// a_string comes into scope</span></span><br><span class="line"></span><br><span class="line">    a_string  <span class="comment">// a_string is returned and moves out to the calling function</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The ownership of a variable follows the same pattern every time: assigning a value to another variable moves it. When a variable that includes data on the heap goes out of scope, the value will be cleaned up by <code>drop</code> unless ownership of the data has been moved to another variable.</p>
+<p>While this works, taking ownership and then returning ownership with every function is a bit tedious. What if we want to let a function use a value but not take ownership? It’s quite annoying that anything we pass in also needs to be passed back if we want to use it again, in addition to any data resulting from the body of the function that we might want to return as well.</p>
+<p>Rust does let us return multiple values using a tuple, as shown in the following listing.</p>
+<p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s1</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> (s2, len) = <span class="title function_ invoke__">calculate_length</span>(s1);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;The length of &#x27;&#123;&#125;&#x27; is &#123;&#125;.&quot;</span>, s2, len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">calculate_length</span>(s: <span class="type">String</span>) <span class="punctuation">-&gt;</span> (<span class="type">String</span>, <span class="type">usize</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">length</span> = s.<span class="title function_ invoke__">len</span>(); <span class="comment">// len() returns the length of a String</span></span><br><span class="line"></span><br><span class="line">    (s, length)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>But this is too much ceremony and a lot of work for a concept that should be common. Luckily for us, Rust has a feature for using a value without transferring ownership, called <em>references</em>.</p>
+<h3 id="References-and-Borrowing"><a href="#References-and-Borrowing" class="headerlink" title="References and Borrowing"></a>References and Borrowing</h3><p>A <em>reference</em> is like a pointer in that it’s an address we can follow to access the data stored at that address; that data is owned by some other variable. Unlike a pointer, a reference is guaranteed to point to a valid value of a particular type for the life of that reference.</p>
+<p>Here is how you would define and use a <code>calculate_length</code> function that has a reference to an object as a parameter instead of taking ownership of the value:</p>
+<p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s1</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">len</span> = <span class="title function_ invoke__">calculate_length</span>(&amp;s1);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;The length of &#x27;&#123;&#125;&#x27; is &#123;&#125;.&quot;</span>, s1, len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">calculate_length</span>(s: &amp;<span class="type">String</span>) <span class="punctuation">-&gt;</span> <span class="type">usize</span> &#123; <span class="comment">// s is a reference to a String</span></span><br><span class="line">    s.<span class="title function_ invoke__">len</span>()</span><br><span class="line">&#125; <span class="comment">// Here, s goes out of scope. But because it does not have ownership of what it refers to, it is not dropped.</span></span><br></pre></td></tr></table></figure>
+
+<p>These ampersands(<code>&amp;</code>) represent <em>references</em>, and they allow you to refer to some value without taking ownership of it.</p>
+<p>s on the stack</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ptr</td>
+<td>s1 ptr</td>
+</tr>
+</tbody></table>
+<p>s1 on the stack</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ptr</td>
+<td>s1 on the heap</td>
+</tr>
+<tr>
+<td>len</td>
+<td>5</td>
+</tr>
+<tr>
+<td>capacity</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p>s1 on the heap</p>
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>h</td>
+</tr>
+<tr>
+<td>1</td>
+<td>e</td>
+</tr>
+<tr>
+<td>2</td>
+<td>l</td>
+</tr>
+<tr>
+<td>3</td>
+<td>l</td>
+</tr>
+<tr>
+<td>4</td>
+<td>o</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>Note: The opposite of referencing by using <code>&amp;</code> is <em>dereferencing</em>, which is accomplished with the dereference operator, <code>*</code>.</p>
+</blockquote>
+<p>When functions have references as parameters instead of the actual values, we won’t need to return the values in order to give back ownership, because we never had ownership, the value it points to will not be dropped when the reference stops being used.</p>
+<p>We call the action of creating a reference <em>borrowing</em>.</p>
+<p>Just as variables are immutable by default, so are references. We’re not allowed to modify something we have a reference to.</p>
+<h4 id="Mutable-References"><a href="#Mutable-References" class="headerlink" title="Mutable References"></a>Mutable References</h4><p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="title function_ invoke__">change</span>(&amp;<span class="keyword">mut</span> s);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">change</span>(some_string: &amp;<span class="keyword">mut</span> <span class="type">String</span>) &#123;</span><br><span class="line">    some_string.<span class="title function_ invoke__">push_str</span>(<span class="string">&quot;, world&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>We create a mutable reference with <code>&amp;mut</code>.</p>
+<p>Mutable references have one big restriction: if you have a mutable reference to a value, you can have no other references to that value.</p>
+<p>The benefit of having this restriction is that Rust can prevent data races at compile time. A <em>data race</em> is similar to a race condition and happens when these three behaviors occur:</p>
+<ul>
+<li><p>Two or more pointers access the same data at the same time.</p>
+</li>
+<li><p>At least one of the pointers is being used to write to the data.</p>
+</li>
+<li><p>There’s no mechanism being used to synchronize access to the data.</p>
+</li>
+</ul>
+<p>Data races cause undefined behavior and can be difficult to diagnose and fix when you’re trying to track them down at runtime; Rust prevents this problem by refusing to compile code with data races.</p>
+<p>As always, we can use curly brackets to create a new scope, allowing for multiple mutable references, just not <em>simultaneous</em> ones:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">r1</span> = &amp;<span class="keyword">mut</span> s;</span><br><span class="line">&#125; <span class="comment">// r1 goes out of scope here, so we can make a new reference with no problems.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">r2</span> = &amp;<span class="keyword">mut</span> s;</span><br></pre></td></tr></table></figure>
+
+<p>We also cannot have a mutable reference while we have an immutable one to the same value.</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">r1</span> = &amp;s; <span class="comment">// no problem</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">r2</span> = &amp;s; <span class="comment">// no problem</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">r3</span> = &amp;<span class="keyword">mut</span> s; <span class="comment">// BIG PROBLEM</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;, &#123;&#125;, and &#123;&#125;&quot;</span>, r1, r2, r3);</span><br></pre></td></tr></table></figure>
+
+<p>Users of an immutable reference don’t expect the value to suddenly change out from under them! However, multiple immutable references are allowed because no one who is just reading the data has the ability to affect anyone else’s reading of the data.</p>
+<p>Note that a reference’s scope starts from where it is introduced and continues through the last time that reference is used. For instance, this code will compile because the last usage of the immutable references, the <code>println!</code>, occurs before the mutable reference is introduced:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">r1</span> = &amp;s; <span class="comment">// no problem</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">r2</span> = &amp;s; <span class="comment">// no problem</span></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125; and &#123;&#125;&quot;</span>, r1, r2);</span><br><span class="line"><span class="comment">// variables r1 and r2 will be used after this point</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">r3</span> = &amp;<span class="keyword">mut</span> s; <span class="comment">// no problem</span></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, r3);</span><br></pre></td></tr></table></figure>
+
+<h4 id="Dangling-References"><a href="#Dangling-References" class="headerlink" title="Dangling References"></a>Dangling References</h4><p>In languages with pointers, it’s easy to erroneously create a _dangling pointer_—a pointer that references a location in memory that may have been given to someone else—by freeing some memory while preserving a pointer to that memory.</p>
+<p>In Rust, by contrast, the compiler guarantees that references will never be dangling references: if you have a reference to some data, the compiler will ensure that the data will not go out of scope before the reference to the data does.</p>
+<p>Let’s try to create a dangling reference to see how Rust prevents them with a compile-time error:</p>
+<p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">reference_to_nothing</span> = <span class="title function_ invoke__">dangle</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">dangle</span>() <span class="punctuation">-&gt;</span> &amp;<span class="type">String</span> &#123; <span class="comment">// dangle returns a reference to a String</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>); <span class="comment">// s is a new String</span></span><br><span class="line"></span><br><span class="line">    &amp;s <span class="comment">// we return a reference to the String, s</span></span><br><span class="line">&#125; <span class="comment">// Here, s goes out of scope, and is dropped. Its memory goes away. Danger!</span></span><br></pre></td></tr></table></figure>
+
+<p>Because <code>s</code> is created inside <code>dangle</code>, when the code of <code>dangle</code> is finished, <code>s</code> will be deallocated. But we tried to return a reference to it. That means this reference would be pointing to an invalid <code>String</code>. That’s no good! Rust won’t let us do this.</p>
+<h4 id="The-Rules-of-References"><a href="#The-Rules-of-References" class="headerlink" title="The Rules of References"></a>The Rules of References</h4><ul>
+<li><p>At any given time, you can have <em>either</em> one mutable reference <em>or</em> any number of immutable references.</p>
+</li>
+<li><p>References must always be valid.</p>
+</li>
+</ul>
+<h3 id="The-Slice-Type"><a href="#The-Slice-Type" class="headerlink" title="The Slice Type"></a>The Slice Type</h3><p><em>Slices</em> let you reference a contiguous sequence of elements in a collection rather than the whole collection. A slice is a kind of reference, so it does not have ownership.</p>
+<p>Here’s a small programming problem: write a function that takes a string of words separated by spaces and returns the first word it finds in that string. If the function doesn’t find a space in the string, the whole string must be one word, so the entire string should be returned.</p>
+<p>Let’s work through how we’d write the signature of this function without using slices, to understand the problem that slices will solve:</p>
+<p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">first_word</span>(s: &amp;<span class="type">String</span>) <span class="punctuation">-&gt;</span> <span class="type">usize</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">bytes</span> = s.<span class="title function_ invoke__">as_bytes</span>();  <span class="comment">// Because we need to go through the String element by element and check whether a value is a space, we&#x27;ll convert our String to an array of bytes using the as_bytes method.</span></span><br><span class="line"></span><br><span class="line">    <span class="title function_ invoke__">for</span> (i, &amp;item) <span class="keyword">in</span> bytes.<span class="title function_ invoke__">iter</span>().<span class="title function_ invoke__">enumerate</span>() &#123;  <span class="comment">// iter is a method that returns each element in a collection and that enumerate wraps the result of iter and returns each element as part of a tuple instead. The first element of the tuple returned from enumerate is the index, and the second element is a reference to the element. This is a bit more convenient than calculating the index ourselves.</span></span><br><span class="line">        <span class="keyword">if</span> item == <span class="string">b&#x27; &#x27;</span> &#123;  <span class="comment">// If we find a space, we return the position. Otherwise, we return the length of the string by using s.len().</span></span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    s.<span class="title function_ invoke__">len</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>We’re returning a <code>usize</code> on its own, but it’s only a meaningful number in the context of the <code>&amp;String</code>. In other words, because it’s a separate value from the <code>String</code>, there’s no guarantee that it will still be valid in the future. Consider the program in the following listing that uses the <code>first_word</code> function from the previous listing.</p>
+<p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">word</span> = <span class="title function_ invoke__">first_word</span>(&amp;s); <span class="comment">// word will get the value 5</span></span><br><span class="line"></span><br><span class="line">    s.<span class="title function_ invoke__">clear</span>(); <span class="comment">// this empties the String, making it equal to &quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// word still has the value 5 here, but there&#x27;s no more string that we could meaningfully use the value 5 with. word is now totally invalid!</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Having to worry about the index in <code>word</code> getting out of sync with the data in <code>s</code> is tedious and error prone!</p>
+<h4 id="String-Slices"><a href="#String-Slices" class="headerlink" title="String Slices"></a>String Slices</h4><p>A <em>string slice</em> is a reference to part of a <code>String</code>.</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">hello</span> = &amp;s[<span class="number">0</span>..<span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> <span class="variable">world</span> = &amp;s[<span class="number">6</span>..<span class="number">11</span>];</span><br></pre></td></tr></table></figure>
+
+<p>We create slices using a range within brackets by specifying <code>[starting_index..ending_index]</code>, where <code>starting_index</code> is the first position in the slice and <code>ending_index</code> is one more than the last position in the slice. Internally, the slice data structure stores the starting position and the length of the slice, which corresponds to <code>ending_index</code> minus <code>starting_index</code>.</p>
+<p><code>s</code></p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ptr</td>
+<td>s on the heap at index 0</td>
+</tr>
+<tr>
+<td>len</td>
+<td>11</td>
+</tr>
+<tr>
+<td>capacity</td>
+<td>11</td>
+</tr>
+</tbody></table>
+<p><code>world</code></p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ptr</td>
+<td>s on the heap at index 6</td>
+</tr>
+<tr>
+<td>len</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p><code>s</code> on the heap</p>
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>h</td>
+</tr>
+<tr>
+<td>1</td>
+<td>e</td>
+</tr>
+<tr>
+<td>2</td>
+<td>l</td>
+</tr>
+<tr>
+<td>3</td>
+<td>l</td>
+</tr>
+<tr>
+<td>4</td>
+<td>o</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>w</td>
+</tr>
+<tr>
+<td>7</td>
+<td>o</td>
+</tr>
+<tr>
+<td>8</td>
+<td>r</td>
+</tr>
+<tr>
+<td>9</td>
+<td>l</td>
+</tr>
+<tr>
+<td>10</td>
+<td>d</td>
+</tr>
+</tbody></table>
+<p>With Rust’s <code>..</code> range syntax, if you want to start at index 0, you can drop the value before the two periods. In other words, these are equal:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">slice</span> = &amp;s[<span class="number">0</span>..<span class="number">2</span>];</span><br><span class="line"><span class="keyword">let</span> <span class="variable">slice</span> = &amp;s[..<span class="number">2</span>];</span><br></pre></td></tr></table></figure>
+
+<p>By the same token, if your slice includes the last byte of the <code>String</code>, you can drop the trailing number. That means these are equal:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">len</span> = s.<span class="title function_ invoke__">len</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">slice</span> = &amp;s[<span class="number">3</span>..len];</span><br><span class="line"><span class="keyword">let</span> <span class="variable">slice</span> = &amp;s[<span class="number">3</span>..];</span><br></pre></td></tr></table></figure>
+
+<p>You can also drop both values to take a slice of the entire string. So these are equal:</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">len</span> = s.<span class="title function_ invoke__">len</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">slice</span> = &amp;s[<span class="number">0</span>..len];</span><br><span class="line"><span class="keyword">let</span> <span class="variable">slice</span> = &amp;s[..];</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note: String slice range indices must occur at valid UTF-8 character boundaries. If you attempt to create a string slice in the middle of a multibyte character, your program will exit with an error.</p>
+</blockquote>
+<p>With all this information in mind, let’s rewrite <code>first_word</code> to return a slice. The type that signifies “string slice” is written as <code>&amp;str</code>:</p>
+<p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">first_word</span>(s: &amp;<span class="type">String</span>) <span class="punctuation">-&gt;</span> &amp;<span class="type">str</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">bytes</span> = s.<span class="title function_ invoke__">as_bytes</span>();</span><br><span class="line"></span><br><span class="line">    <span class="title function_ invoke__">for</span> (i, &amp;item) <span class="keyword">in</span> bytes.<span class="title function_ invoke__">iter</span>().<span class="title function_ invoke__">enumerate</span>() &#123;</span><br><span class="line">        <span class="keyword">if</span> item == <span class="string">b&#x27; &#x27;</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> &amp;s[<span class="number">0</span>..i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &amp;s[..]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Remember the bug in the program in the previous listing, when we got the index to the end of the first word but then cleared the string so our index was invalid? That code was logically incorrect but didn’t show any immediate errors. Using the slice version of first_word will throw a compile-time error:</p>
+<p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">word</span> = <span class="title function_ invoke__">first_word</span>(&amp;s); <span class="comment">// immutable borrow occurs here</span></span><br><span class="line"></span><br><span class="line">    s.<span class="title function_ invoke__">clear</span>(); <span class="comment">// error! mutable borrow occurs here</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;the first word is: &#123;&#125;&quot;</span>, word); <span class="comment">// immutable borrow later used here</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Recall from the borrowing rules that if we have an immutable reference to something, we cannot also take a mutable reference.</p>
+<h5 id="String-Literals-as-Slices"><a href="#String-Literals-as-Slices" class="headerlink" title="String Literals as Slices"></a>String Literals as Slices</h5><p>String literals being stored inside the binary.</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s</span> = <span class="string">&quot;Hello, world!&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>The type of <code>s</code> here is <code>&amp;str</code>: it’s a slice pointing to that specific point of the binary. This is also why string literals are immutable; <code>&amp;str</code> is an immutable reference.</p>
+<h5 id="String-Slices-as-Parameters"><a href="#String-Slices-as-Parameters" class="headerlink" title="String Slices as Parameters"></a>String Slices as Parameters</h5><p>Using <code>&amp;str</code> instead of <code>&amp;String</code> as parameters allows us to use the same function on both<code> &amp;String</code> values and <code>&amp;str</code> values. This flexibility takes advantage of deref coercions.</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">first_word</span>(s: &amp;<span class="type">String</span>) <span class="punctuation">-&gt;</span> &amp;<span class="type">str</span> &#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">first_word</span>(s: &amp;<span class="type">str</span>) <span class="punctuation">-&gt;</span> &amp;<span class="type">str</span> &#123;</span><br></pre></td></tr></table></figure>
+
+<p>Defining a function to take a string slice instead of a reference to a <code>String</code> makes our API more general and useful without losing any functionality:</p>
+<p>Filename: src&#x2F;main.rs</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">my_string</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// `first_word` works on slices of `String`s, whether partial or whole</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">word</span> = <span class="title function_ invoke__">first_word</span>(&amp;my_string[<span class="number">0</span>..<span class="number">6</span>]);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">word</span> = <span class="title function_ invoke__">first_word</span>(&amp;my_string[..]);</span><br><span class="line">    <span class="comment">// `first_word` also works on references to `String`s, which are equivalent to whole slices of `String`s</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">word</span> = <span class="title function_ invoke__">first_word</span>(&amp;my_string);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">my_string_literal</span> = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// `first_word` works on slices of string literals, whether partial or whole</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">word</span> = <span class="title function_ invoke__">first_word</span>(&amp;my_string_literal[<span class="number">0</span>..<span class="number">6</span>]);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">word</span> = <span class="title function_ invoke__">first_word</span>(&amp;my_string_literal[..]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Because string literals *are* string slices already, this works too, without the slice syntax!</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">word</span> = <span class="title function_ invoke__">first_word</span>(my_string_literal);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Other-Slices"><a href="#Other-Slices" class="headerlink" title="Other Slices"></a>Other Slices</h4><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="variable">slice</span> = &amp;a[<span class="number">1</span>..<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">assert_eq!</span>(slice, &amp;[<span class="number">2</span>, <span class="number">3</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>This slice has the type <code>&amp;[i32]</code>. It works the same way as string slices do, by storing a reference to the first element and a length. You’ll use this kind of slice for all sorts of other collections.</p>
+<h2 id="Using-Structs-to-Structure-Related-Data"><a href="#Using-Structs-to-Structure-Related-Data" class="headerlink" title="Using Structs to Structure Related Data"></a>Using Structs to Structure Related Data</h2><p>A struct, or structure, is a custom data type that lets you package together and name multiple related values that make up a meaningful group.</p>
 <h3 id="Defining-and-Instantiating-Struct"><a href="#Defining-and-Instantiating-Struct" class="headerlink" title="Defining and Instantiating Struct"></a>Defining and Instantiating Struct</h3><p>For example, the following listing shows a struct that stores information about a user account:</p>
 <p>Filename: src&#x2F;main.rs</p>
 <figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    active: <span class="type">bool</span>,</span><br><span class="line">    username: <span class="type">String</span>,</span><br><span class="line">    email: <span class="type">String</span>,</span><br><span class="line">    sign_in_count: <span class="type">u64</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -818,9 +1244,9 @@
 <ul>
 <li><p>Internal Representation</p>
 <p>A <code>String</code> is a wrapper over a <code>Vec&lt;u8&gt;</code>.</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">hello</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;Hola&quot;</span>);</span><br><span class="line"><span class="comment">// In this case, len will be 4, which means the vector storing the string “Hola” is 4 bytes long. Each of these letters takes 1 byte when encoded in UTF-8.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">hello</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;Hola&quot;</span>);</span><br><span class="line"><span class="comment">// In this case, len will be 4, which means the vector storing the string &quot;Hola&quot; is 4 bytes long. Each of these letters takes 1 byte when encoded in UTF-8.</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">hello</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;Здравствуйте&quot;</span>);</span><br><span class="line"><span class="comment">// In this case, len will be 24, not 12. That&#x27;s the number of bytes it takes to encode “Здравствуйте” in UTF-8, because each Unicode scalar value in that string takes 2 bytes of storage.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">hello</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;Здравствуйте&quot;</span>);</span><br><span class="line"><span class="comment">// In this case, len will be 24, not 12. That&#x27;s the number of bytes it takes to encode &quot;Здравствуйте&quot; in UTF-8, because each Unicode scalar value in that string takes 2 bytes of storage.</span></span><br></pre></td></tr></table></figure>
 
 <p>Different Unicode scalar value takes different bytes of storage. Therefore, an index into the string’s bytes will not always correlate to a valid Unicode scalar value.</p>
 <figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">hello</span> = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="variable">answer</span> = &amp;hello[<span class="number">0</span>];</span><br><span class="line"><span class="comment">// If &amp;&quot;hello&quot;[0] were valid code that returned the byte value, it would return 104, not h.</span></span><br></pre></td></tr></table></figure>
@@ -1080,7 +1506,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-28 16:38:44" itemprop="dateModified" datetime="2023-09-28T16:38:44+00:00">2023-09-28</time>
+      <time title="Modified: 2023-10-04 10:07:52" itemprop="dateModified" datetime="2023-10-04T10:07:52+00:00">2023-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1188,7 +1614,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-28 16:38:44" itemprop="dateModified" datetime="2023-09-28T16:38:44+00:00">2023-09-28</time>
+      <time title="Modified: 2023-10-04 10:07:52" itemprop="dateModified" datetime="2023-10-04T10:07:52+00:00">2023-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1295,7 +1721,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-28 16:38:44" itemprop="dateModified" datetime="2023-09-28T16:38:44+00:00">2023-09-28</time>
+      <time title="Modified: 2023-10-04 10:07:52" itemprop="dateModified" datetime="2023-10-04T10:07:52+00:00">2023-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1403,7 +1829,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-28 16:38:44" itemprop="dateModified" datetime="2023-09-28T16:38:44+00:00">2023-09-28</time>
+      <time title="Modified: 2023-10-04 10:07:52" itemprop="dateModified" datetime="2023-10-04T10:07:52+00:00">2023-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1510,7 +1936,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-28 16:38:44" itemprop="dateModified" datetime="2023-09-28T16:38:44+00:00">2023-09-28</time>
+      <time title="Modified: 2023-10-04 10:07:52" itemprop="dateModified" datetime="2023-10-04T10:07:52+00:00">2023-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1625,7 +2051,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-28 16:38:44" itemprop="dateModified" datetime="2023-09-28T16:38:44+00:00">2023-09-28</time>
+      <time title="Modified: 2023-10-04 10:07:52" itemprop="dateModified" datetime="2023-10-04T10:07:52+00:00">2023-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1765,7 +2191,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-28 16:38:44" itemprop="dateModified" datetime="2023-09-28T16:38:44+00:00">2023-09-28</time>
+      <time title="Modified: 2023-10-04 10:07:52" itemprop="dateModified" datetime="2023-10-04T10:07:52+00:00">2023-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1875,7 +2301,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-28 16:38:44" itemprop="dateModified" datetime="2023-09-28T16:38:44+00:00">2023-09-28</time>
+      <time title="Modified: 2023-10-04 10:07:52" itemprop="dateModified" datetime="2023-10-04T10:07:52+00:00">2023-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1997,7 +2423,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-28 16:38:44" itemprop="dateModified" datetime="2023-09-28T16:38:44+00:00">2023-09-28</time>
+      <time title="Modified: 2023-10-04 10:07:52" itemprop="dateModified" datetime="2023-10-04T10:07:52+00:00">2023-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
