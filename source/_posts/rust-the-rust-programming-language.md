@@ -5,6 +5,663 @@ tags: rust
 categories: rust
 ---
 
+## Understanding Ownership
+
+Ownership enables Rust to make memory safety guarantees without needing a garbage collector, so it's important to understand how ownership works.
+
+### What Is Ownership?
+
+_Ownership_ is a set of rules that govern how a Rust program manages memory.
+
+Memory is managed through a system of ownership with a set of rules that the compiler checks. If any of the rules are violated, the program won't compile. None of the features of ownership will slow down your program while it's running.
+
+> **The Stack and the Heap**
+>
+> The stack stores values in the order it gets them and removes the values in the opposite order. This is referred to as _last in, first out_. Adding data is called _pushing onto the stack_, and removing data is called _popping off the stack_. All data stored on the stack must have a known, fixed size. Data with an unknown size at compile time or a size that might change must be stored on the heap instead.
+>
+> The heap is less organized: when you put data on the heap, you request a certain amount of space. The memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and returns a _pointer_, which is the address of that location. This process is called _allocating on the heap_ and is sometimes abbreviated as just _allocating_ (pushing values onto the stack is not considered allocating). Because the pointer to the heap is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer.
+>
+> Pushing to the stack is faster than allocating on the heap because the allocator never has to search for a place to store new data; that location is always at the top of the stack. Comparatively, allocating space on the heap requires more work because the allocator must first find a big enough space to hold the data and then perform bookkeeping to prepare for the next allocation.
+>
+> Accessing data in the heap is slower than accessing data on the stack because you have to follow a pointer to get there. Contemporary processors are faster if they jump around less in memory. A processor can do its job better if it works on data that's close to other data (as it is on the stack) rather than farther away (as it can be on the heap).
+>
+> When your code calls a function, the values passed into the function (including, potentially, pointers to data on the heap) and the function's local variables (just the pointers and references, not the data) get pushed onto the stack. When the function is over, those values get popped off the stack.
+
+#### Ownership Rules
+
+- Each value in Rust has an _owner_.
+
+- There can only be one owner at a time.
+
+- When the owner goes out of scope, the value will be dropped.
+
+#### Variable Scope
+
+A scope is the range within a program for which an item is valid.
+
+```rust
+    {                      // s is not valid here, it's not yet declared
+        let s = "hello";   // s is valid from this point forward
+
+        // do stuff with s
+    }                      // this scope is now over, and s is no longer valid
+```
+
+#### The String Type
+
+String literals are convenient, but they aren't suitable for every situation in which we may want to use text. One reason is that they're immutable. Another is that not every string value can be known when we write our code: for example, what if we want to take user input and store it? For these situations, Rust has a second string type, `String`.
+
+String type manages data allocated on the heap and as such is able to store an amount of text that is unknown to us at compile time.
+
+You can create a `String` from a string literal using the `from` function, like so:
+
+```rust
+let s = String::from("hello");
+```
+
+The double colon `::` operator allows us to namespace this particular `from` function under the `String` type rather than using some sort of name like `string_from`.
+
+This kind of string _can_ be mutated:
+
+```rust
+    let mut s = String::from("hello");
+
+    s.push_str(", world!"); // push_str() appends a literal to a String
+
+    println!("{}", s); // This will print `hello, world!`
+```
+
+#### Memory and Allocation
+
+With the `String` type, in order to support a mutable, growable piece of text, we need to allocate an amount of memory on the heap, unknown at compile time, to hold the contents. This means:
+
+- The memory must be requested from the memory allocator at runtime.
+
+- We need a way of returning this memory to the allocator when we're done with our `String`.
+
+That first part is done by us: when we call `String::from`, its implementation requests the memory it needs. This is pretty much universal in programming languages.
+
+However, the second part is different. In languages with a _garbage collector (GC)_, the GC keeps track of and cleans up memory that isn't being used anymore, and we don't need to think about it. In most languages without a GC, it's our responsibility to identify when memory is no longer being used and to call code to explicitly free it, just as we did to request it. Doing this correctly has historically been a difficult programming problem. If we forget, we'll waste memory. If we do it too early, we'll have an invalid variable. If we do it twice, that's a bug too. We need to pair exactly one `allocate` with exactly one `free`.
+
+Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope. Here's a version of our scope example using a `String` instead of a string literal:
+
+```rust
+    {
+        let s = String::from("hello"); // s is valid from this point forward
+
+        // do stuff with s
+    }                                  // this scope is now over, and s is no longer valid
+```
+
+There is a natural point at which we can return the memory our `String` needs to the allocator: when `s` goes out of scope. When a variable goes out of scope, Rust calls a special function for us. This function is called `drop`, and it's where the author of `String` can put the code to return the memory. Rust calls `drop` automatically at the closing curly bracket.
+
+##### Variables and Data Interacting with Move
+
+Multiple variables can interact with the same data in different ways in Rust. Let's look at an example using an integer in the following listing.
+
+```rust
+    let x = 5;
+    let y = x;
+```
+
+We can probably guess what this is doing: "bind the value `5` to `x`; then make a copy of the value in `x` and bind it to `y`." We now have two variables, `x` and `y`, and both equal `5`. This is indeed what is happening, because integers are simple values with a known, fixed size, and these two `5` values are pushed onto the stack.
+
+Now let's look at the `String` version:
+
+```rust
+    let s1 = String::from("hello");
+    let s2 = s1;
+```
+
+`s1` on the stack (not valid after assigning to `s2`)
+
+| name     | value          |
+| -------- | -------------- |
+| ptr      | s1 on the heap |
+| len      | 5              |
+| capacity | 5              |
+
+`s1` on the heap
+
+| index | value |
+| ----- | ----- |
+| 0     | h     |
+| 1     | e     |
+| 2     | l     |
+| 3     | l     |
+| 4     | o     |
+
+`s2` on the stack
+
+| name     | value          |
+| -------- | -------------- |
+| ptr      | s1 on the heap |
+| len      | 5              |
+| capacity | 5              |
+
+A String is made up of three parts: a pointer to the memory that holds the contents of the string, a length, and a capacity. This group of data is stored on the stack. The memory on the heap that holds the contents.
+
+The length is how much memory, in bytes, the contents of the `String` are currently using. The capacity is the total amount of memory, in bytes, that the `String` has received from the allocator. The difference between length and capacity matters, but not in this context, so for now, it's fine to ignore the capacity.
+
+When we assign `s1` to `s2`, the `String` data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to.
+
+If Rust copied the data on the heap, the operation `s2 = s1` could be very expensive in terms of runtime performance if the data on the heap were large.
+
+Earlier, we said that when a variable goes out of scope, Rust automatically calls the `drop` function and cleans up the heap memory for that variable.
+
+But both data pointers pointing to the same location. This is a problem: when `s2` and `s1` go out of scope, they will both try to free the same memory. This is known as a _double free_ error and is one of the memory safety bugs we mentioned previously. Freeing memory twice can lead to memory corruption, which can potentially lead to security vulnerabilities.
+
+To ensure memory safety, after the line `let s2 = s1`, Rust considers `s1` as no longer valid. Therefore, Rust doesn't need to free anything when `s1` goes out of scope. Check out what happens when you try to use `s1` after `s2` is created; it won't work:
+
+```rust
+    let s1 = String::from("hello");
+    let s2 = s1;
+
+    println!("{}, world!", s1);
+    // You'll get an error because Rust prevents you from using the invalidated referenc
+```
+
+If you've heard the terms _shallow copy_ and _deep copy_ while working with other languages, the concept of copying the pointer, length, and capacity without copying the data probably sounds like making a shallow copy. But because Rust also invalidates the first variable, instead of being called a shallow copy, it's known as a _move_.
+
+Rust will never automatically create "deep" copies of your data. Therefore, any _automatic_ copying can be assumed to be inexpensive in terms of runtime performance.
+
+##### Variables and Data Interacting with Clone
+
+If we do want to deeply copy the heap data of the `String`, not just the stack data, we can use a common method called `clone`. Here's an example of the clone method in action:
+
+```rust
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+
+    println!("s1 = {}, s2 = {}", s1, s2);
+```
+
+When you see a call to `clone`, you know that some arbitrary code is being executed and that code may be expensive. It's a visual indicator that something different is going on.
+
+##### Stack-Only Data: Copy
+
+This code using integers works and is valid:
+
+```rust
+    let x = 5;
+    let y = x;
+
+    println!("x = {}, y = {}", x, y);
+```
+
+But this code seems to contradict what we just learned: we don't have a call to `clone`, but `x` is still valid and wasn't moved into `y`.
+
+The reason is that types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make. That means there's no reason we would want to prevent `x` from being valid after we create the variable `y`. In other words, there's no difference between deep and shallow copying here, so calling `clone` wouldn't do anything different from the usual shallow copying, and we can leave it out.
+
+Rust has a special annotation called the `Copy` trait that we can place on types that are stored on the stack. If a type implements the `Copy` trait, variables that use it do not move, but rather are trivially copied, making them still valid after assignment to another variable.
+
+Rust won't let us annotate a type with `Copy` if the type, or any of its parts, has implemented the `Drop` trait.
+
+As a general rule, any group of simple scalar values can implement `Copy`, and nothing that requires allocation or is some form of resource can implement `Copy`. Here are some of the types that implement `Copy`:
+
+- All the integer types, such as `u32`.
+
+- The Boolean type, `bool`, with values `true` and `false`.
+
+- All the floating-point types, such as `f64`.
+
+- The character type, `char`.
+
+- Tuples, if they only contain types that also implement `Copy`. For example, `(i32, i32)` implements `Copy`, but `(i32, String)` does not.
+
+#### Ownership and Functions
+
+Passing a variable to a function will move or copy, just as assignment does. The following listing has an example with some annotations showing where variables go into and out of scope.
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let s = String::from("hello");  // s comes into scope
+
+    takes_ownership(s);             // s's value moves into the function...
+                                    // ... and so is no longer valid here
+
+    let x = 5;                      // x comes into scope
+
+    makes_copy(x);                  // x would move into the function,
+                                    // but i32 is Copy, so it's okay to still use x afterward
+
+} // Here, x goes out of scope, then s. But because s's value was moved, nothing special happens.
+
+fn takes_ownership(some_string: String) { // some_string comes into scope
+    println!("{}", some_string);
+} // Here, some_string goes out of scope and `drop` is called. The backing memory is freed.
+
+fn makes_copy(some_integer: i32) { // some_integer comes into scope
+    println!("{}", some_integer);
+} // Here, some_integer goes out of scope. Nothing special happens.
+```
+
+#### Return Values and Scope
+
+Returning values can also transfer ownership. The following listing shows an example of a function that returns some value, with similar annotations as those in the previous listing.
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let s1 = gives_ownership();         // gives_ownership moves its return value into s1
+
+    let s2 = String::from("hello");     // s2 comes into scope
+
+    let s3 = takes_and_gives_back(s2);  // s2 is moved into takes_and_gives_back, which also moves its return value into s3
+} // Here, s3 goes out of scope and is dropped. s2 was moved, so nothing happens. s1 goes out of scope and is dropped.
+
+fn gives_ownership() -> String {             // gives_ownership will move its return value into the function that calls it
+
+    let some_string = String::from("yours"); // some_string comes into scope
+
+    some_string                              // some_string is returned and moves out to the calling function
+}
+
+// This function takes a String and returns one
+fn takes_and_gives_back(a_string: String) -> String { // a_string comes into scope
+
+    a_string  // a_string is returned and moves out to the calling function
+}
+```
+
+The ownership of a variable follows the same pattern every time: assigning a value to another variable moves it. When a variable that includes data on the heap goes out of scope, the value will be cleaned up by `drop` unless ownership of the data has been moved to another variable.
+
+While this works, taking ownership and then returning ownership with every function is a bit tedious. What if we want to let a function use a value but not take ownership? It's quite annoying that anything we pass in also needs to be passed back if we want to use it again, in addition to any data resulting from the body of the function that we might want to return as well.
+
+Rust does let us return multiple values using a tuple, as shown in the following listing.
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+
+    let (s2, len) = calculate_length(s1);
+
+    println!("The length of '{}' is {}.", s2, len);
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len(); // len() returns the length of a String
+
+    (s, length)
+}
+```
+
+But this is too much ceremony and a lot of work for a concept that should be common. Luckily for us, Rust has a feature for using a value without transferring ownership, called _references_.
+
+### References and Borrowing
+
+A _reference_ is like a pointer in that it's an address we can follow to access the data stored at that address; that data is owned by some other variable. Unlike a pointer, a reference is guaranteed to point to a valid value of a particular type for the life of that reference.
+
+Here is how you would define and use a `calculate_length` function that has a reference to an object as a parameter instead of taking ownership of the value:
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+
+    let len = calculate_length(&s1);
+
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize { // s is a reference to a String
+    s.len()
+} // Here, s goes out of scope. But because it does not have ownership of what it refers to, it is not dropped.
+```
+
+These ampersands(`&`) represent _references_, and they allow you to refer to some value without taking ownership of it.
+
+s on the stack
+
+| name | value  |
+| ---- | ------ |
+| ptr  | s1 ptr |
+
+s1 on the stack
+
+| name     | value          |
+| -------- | -------------- |
+| ptr      | s1 on the heap |
+| len      | 5              |
+| capacity | 5              |
+
+s1 on the heap
+
+| index | value |
+| ----- | ----- |
+| 0     | h     |
+| 1     | e     |
+| 2     | l     |
+| 3     | l     |
+| 4     | o     |
+
+> Note: The opposite of referencing by using `&` is _dereferencing_, which is accomplished with the dereference operator, `*`.
+
+When functions have references as parameters instead of the actual values, we won't need to return the values in order to give back ownership, because we never had ownership, the value it points to will not be dropped when the reference stops being used.
+
+We call the action of creating a reference _borrowing_.
+
+Just as variables are immutable by default, so are references. We're not allowed to modify something we have a reference to.
+
+#### Mutable References
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let mut s = String::from("hello");
+
+    change(&mut s);
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", world");
+}
+```
+
+We create a mutable reference with `&mut`.
+
+Mutable references have one big restriction: if you have a mutable reference to a value, you can have no other references to that value.
+
+The benefit of having this restriction is that Rust can prevent data races at compile time. A _data race_ is similar to a race condition and happens when these three behaviors occur:
+
+- Two or more pointers access the same data at the same time.
+
+- At least one of the pointers is being used to write to the data.
+
+- There's no mechanism being used to synchronize access to the data.
+
+Data races cause undefined behavior and can be difficult to diagnose and fix when you're trying to track them down at runtime; Rust prevents this problem by refusing to compile code with data races.
+
+As always, we can use curly brackets to create a new scope, allowing for multiple mutable references, just not _simultaneous_ ones:
+
+```rust
+    let mut s = String::from("hello");
+
+    {
+        let r1 = &mut s;
+    } // r1 goes out of scope here, so we can make a new reference with no problems.
+
+    let r2 = &mut s;
+```
+
+We also cannot have a mutable reference while we have an immutable one to the same value.
+
+```rust
+    let mut s = String::from("hello");
+
+    let r1 = &s; // no problem
+    let r2 = &s; // no problem
+    let r3 = &mut s; // BIG PROBLEM
+
+    println!("{}, {}, and {}", r1, r2, r3);
+```
+
+Users of an immutable reference don't expect the value to suddenly change out from under them! However, multiple immutable references are allowed because no one who is just reading the data has the ability to affect anyone else's reading of the data.
+
+Note that a reference's scope starts from where it is introduced and continues through the last time that reference is used. For instance, this code will compile because the last usage of the immutable references, the `println!`, occurs before the mutable reference is introduced:
+
+```rust
+    let mut s = String::from("hello");
+
+    let r1 = &s; // no problem
+    let r2 = &s; // no problem
+    println!("{} and {}", r1, r2);
+    // variables r1 and r2 will be used after this point
+
+    let r3 = &mut s; // no problem
+    println!("{}", r3);
+```
+
+#### Dangling References
+
+In languages with pointers, it's easy to erroneously create a _dangling pointer_—a pointer that references a location in memory that may have been given to someone else—by freeing some memory while preserving a pointer to that memory.
+
+In Rust, by contrast, the compiler guarantees that references will never be dangling references: if you have a reference to some data, the compiler will ensure that the data will not go out of scope before the reference to the data does.
+
+Let's try to create a dangling reference to see how Rust prevents them with a compile-time error:
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let reference_to_nothing = dangle();
+}
+
+fn dangle() -> &String { // dangle returns a reference to a String
+
+    let s = String::from("hello"); // s is a new String
+
+    &s // we return a reference to the String, s
+} // Here, s goes out of scope, and is dropped. Its memory goes away. Danger!
+```
+
+Because `s` is created inside `dangle`, when the code of `dangle` is finished, `s` will be deallocated. But we tried to return a reference to it. That means this reference would be pointing to an invalid `String`. That's no good! Rust won't let us do this.
+
+#### The Rules of References
+
+- At any given time, you can have _either_ one mutable reference _or_ any number of immutable references.
+
+- References must always be valid.
+
+### The Slice Type
+
+_Slices_ let you reference a contiguous sequence of elements in a collection rather than the whole collection. A slice is a kind of reference, so it does not have ownership.
+
+Here's a small programming problem: write a function that takes a string of words separated by spaces and returns the first word it finds in that string. If the function doesn't find a space in the string, the whole string must be one word, so the entire string should be returned.
+
+Let's work through how we'd write the signature of this function without using slices, to understand the problem that slices will solve:
+
+Filename: src/main.rs
+
+```rust
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();  // Because we need to go through the String element by element and check whether a value is a space, we'll convert our String to an array of bytes using the as_bytes method.
+
+    for (i, &item) in bytes.iter().enumerate() {  // iter is a method that returns each element in a collection and that enumerate wraps the result of iter and returns each element as part of a tuple instead. The first element of the tuple returned from enumerate is the index, and the second element is a reference to the element. This is a bit more convenient than calculating the index ourselves.
+        if item == b' ' {  // If we find a space, we return the position. Otherwise, we return the length of the string by using s.len().
+            return i;
+        }
+    }
+
+    s.len()
+}
+```
+
+We're returning a `usize` on its own, but it's only a meaningful number in the context of the `&String`. In other words, because it's a separate value from the `String`, there's no guarantee that it will still be valid in the future. Consider the program in the following listing that uses the `first_word` function from the previous listing.
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+
+    let word = first_word(&s); // word will get the value 5
+
+    s.clear(); // this empties the String, making it equal to ""
+
+    // word still has the value 5 here, but there's no more string that we could meaningfully use the value 5 with. word is now totally invalid!
+}
+```
+
+Having to worry about the index in `word` getting out of sync with the data in `s` is tedious and error prone!
+
+#### String Slices
+
+A _string slice_ is a reference to part of a `String`.
+
+```rust
+    let s = String::from("hello world");
+
+    let hello = &s[0..5];
+    let world = &s[6..11];
+```
+
+We create slices using a range within brackets by specifying `[starting_index..ending_index]`, where `starting_index` is the first position in the slice and `ending_index` is one more than the last position in the slice. Internally, the slice data structure stores the starting position and the length of the slice, which corresponds to `ending_index` minus `starting_index`.
+
+`s`
+
+| name     | value                    |
+| -------- | ------------------------ |
+| ptr      | s on the heap at index 0 |
+| len      | 11                       |
+| capacity | 11                       |
+
+`world`
+
+| name | value                    |
+| ---- | ------------------------ |
+| ptr  | s on the heap at index 6 |
+| len  | 5                        |
+
+`s` on the heap
+
+| index | value |
+| ----- | ----- |
+| 0     | h     |
+| 1     | e     |
+| 2     | l     |
+| 3     | l     |
+| 4     | o     |
+| 5     |       |
+| 6     | w     |
+| 7     | o     |
+| 8     | r     |
+| 9     | l     |
+| 10    | d     |
+
+With Rust's `..` range syntax, if you want to start at index 0, you can drop the value before the two periods. In other words, these are equal:
+
+```rust
+let s = String::from("hello");
+
+let slice = &s[0..2];
+let slice = &s[..2];
+```
+
+By the same token, if your slice includes the last byte of the `String`, you can drop the trailing number. That means these are equal:
+
+```rust
+let s = String::from("hello");
+
+let len = s.len();
+
+let slice = &s[3..len];
+let slice = &s[3..];
+```
+
+You can also drop both values to take a slice of the entire string. So these are equal:
+
+```rust
+let s = String::from("hello");
+
+let len = s.len();
+
+let slice = &s[0..len];
+let slice = &s[..];
+```
+
+> Note: String slice range indices must occur at valid UTF-8 character boundaries. If you attempt to create a string slice in the middle of a multibyte character, your program will exit with an error.
+
+With all this information in mind, let's rewrite `first_word` to return a slice. The type that signifies "string slice" is written as `&str`:
+
+Filename: src/main.rs
+
+```rust
+fn first_word(s: &String) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    &s[..]
+}
+```
+
+Remember the bug in the program in the previous listing, when we got the index to the end of the first word but then cleared the string so our index was invalid? That code was logically incorrect but didn't show any immediate errors. Using the slice version of first_word will throw a compile-time error:
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+
+    let word = first_word(&s); // immutable borrow occurs here
+
+    s.clear(); // error! mutable borrow occurs here
+
+    println!("the first word is: {}", word); // immutable borrow later used here
+}
+```
+
+Recall from the borrowing rules that if we have an immutable reference to something, we cannot also take a mutable reference.
+
+##### String Literals as Slices
+
+String literals being stored inside the binary.
+
+```rust
+let s = "Hello, world!";
+```
+
+The type of `s` here is `&str`: it's a slice pointing to that specific point of the binary. This is also why string literals are immutable; `&str` is an immutable reference.
+
+##### String Slices as Parameters
+
+Using `&str` instead of `&String` as parameters allows us to use the same function on both` &String` values and `&str` values. This flexibility takes advantage of deref coercions.
+
+```rust
+fn first_word(s: &String) -> &str {
+
+fn first_word(s: &str) -> &str {
+```
+
+Defining a function to take a string slice instead of a reference to a `String` makes our API more general and useful without losing any functionality:
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let my_string = String::from("hello world");
+
+    // `first_word` works on slices of `String`s, whether partial or whole
+    let word = first_word(&my_string[0..6]);
+    let word = first_word(&my_string[..]);
+    // `first_word` also works on references to `String`s, which are equivalent to whole slices of `String`s
+    let word = first_word(&my_string);
+
+    let my_string_literal = "hello world";
+
+    // `first_word` works on slices of string literals, whether partial or whole
+    let word = first_word(&my_string_literal[0..6]);
+    let word = first_word(&my_string_literal[..]);
+
+    // Because string literals *are* string slices already, this works too, without the slice syntax!
+    let word = first_word(my_string_literal);
+}
+```
+
+#### Other Slices
+
+```rust
+let a = [1, 2, 3, 4, 5];
+
+let slice = &a[1..3];
+
+assert_eq!(slice, &[2, 3]);
+```
+
+This slice has the type `&[i32]`. It works the same way as string slices do, by storing a reference to the first element and a length. You'll use this kind of slice for all sorts of other collections.
+
 ## Using Structs to Structure Related Data
 
 A struct, or structure, is a custom data type that lets you package together and name multiple related values that make up a meaningful group.
@@ -924,7 +1581,7 @@ A crate can come in one of two forms: a binary crate or a library crate.
 
 - Library crates don't have a `main` function, and they don't compile to an executable. Instead, they define functionality intended to be shared with multiple projects.
 
-- Most of the time when Rustaceans say “crate”, they mean library crate, and they use “crate” interchangeably with the general programming concept of a “library".
+- Most of the time when Rustaceans say "crate", they mean library crate, and they use "crate" interchangeably with the general programming concept of a "library".
 
 The crate root is a source file that the Rust compiler starts from and makes up the root module of your crate.
 
@@ -944,7 +1601,7 @@ Namely paths that allow you to name items; the `use` keyword that brings a path 
 
 - **Start from the crate root**: When compiling a crate, the compiler first looks in the crate root file (usually _src/lib.rs_ for a library crate or _src/main.rs_ for a binary crate) for code to compile.
 
-- **Declaring modules**: In the crate root file, you can declare new modules; say, you declare a “garden” module with `mod garden`;. The compiler will look for the module's code in these places:
+- **Declaring modules**: In the crate root file, you can declare new modules; say, you declare a "garden" module with `mod garden`;. The compiler will look for the module's code in these places:
 
   - Inline, within curly brackets that replace the semicolon following `mod garden`
 
@@ -1435,7 +2092,7 @@ pub mod hosting {
 }
 ```
 
-Note that you only need to load a file using a `mod` declaration once in your module tree. Once the compiler knows the file is part of the project (and knows where in the module tree the code resides because of where you've put the mod statement), other files in your project should refer to the loaded file's code using a path to where it was declared. In other words, `mod` is not an “include” operation that you may have seen in other programming languages.
+Note that you only need to load a file using a `mod` declaration once in your module tree. Once the compiler knows the file is part of the project (and knows where in the module tree the code resides because of where you've put the mod statement), other files in your project should refer to the loaded file's code using a path to where it was declared. In other words, `mod` is not an "include" operation that you may have seen in other programming languages.
 
 Next, we'll extract the `hosting` module to its own file. The process is a bit different because `hosting` is a child module of `front_of_house`, not of the root module. We'll place the file for `hosting` in a new directory that will be named for its ancestors in the module tree, in this case _src/front_of_house/_.
 
@@ -1744,12 +2401,12 @@ In many other programming languages, accessing individual characters in a string
 
   ```rust
   let hello = String::from("Hola");
-  // In this case, len will be 4, which means the vector storing the string “Hola” is 4 bytes long. Each of these letters takes 1 byte when encoded in UTF-8.
+  // In this case, len will be 4, which means the vector storing the string "Hola" is 4 bytes long. Each of these letters takes 1 byte when encoded in UTF-8.
   ```
 
   ```rust
   let hello = String::from("Здравствуйте");
-  // In this case, len will be 24, not 12. That's the number of bytes it takes to encode “Здравствуйте” in UTF-8, because each Unicode scalar value in that string takes 2 bytes of storage.
+  // In this case, len will be 24, not 12. That's the number of bytes it takes to encode "Здравствуйте" in UTF-8, because each Unicode scalar value in that string takes 2 bytes of storage.
   ```
 
   Different Unicode scalar value takes different bytes of storage. Therefore, an index into the string's bytes will not always correlate to a valid Unicode scalar value.
@@ -1768,7 +2425,7 @@ In many other programming languages, accessing individual characters in a string
 
   Another point about UTF-8 is that there are actually three relevant ways to look at strings from Rust's perspective: as bytes (how computers ultimately store this data), scalar values (what Rust's char type is), and grapheme clusters (the closest thing to what we would call letters).
 
-  If we look at the Hindi word “नमस्ते” written in the Devanagari script, it is stored as a vector of u8 values that looks like this:
+  If we look at the Hindi word "नमस्ते" written in the Devanagari script, it is stored as a vector of u8 values that looks like this:
 
   ```text
   [224, 164, 168, 224, 164, 174, 224, 164, 184, 224, 165, 141, 224, 164, 164, 224, 165, 135]
@@ -2272,7 +2929,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 }
 ```
 
-The `Box<dyn Error>` type is a trait object, which we'll talk about in Chapter 17. For now, you can read `Box<dyn Error>` to mean “any kind of error.” Using `?` on a `Result` value in a `main` function with the error type `Box<dyn Error>` is allowed, because it allows any `Err` value to be returned early.
+The `Box<dyn Error>` type is a trait object, which we'll talk about in Chapter 17. For now, you can read `Box<dyn Error>` to mean "any kind of error." Using `?` on a `Result` value in a `main` function with the error type `Box<dyn Error>` is allowed, because it allows any `Err` value to be returned early.
 
 When a `main` function returns a `Result<(), E>`, the executable will exit with a value of `0` if `main` returns `Ok(())` and will exit with a nonzero value if `main` returns an `Err` value.
 
