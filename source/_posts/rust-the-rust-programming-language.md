@@ -5,6 +5,300 @@ tags: rust
 categories: rust
 ---
 
+## Getting Start
+
+### Installation
+
+We'll download Rust through `rustup`, a command line tool for managing Rust versions and associated tools.
+
+> **Command Line Notation**
+>
+> Lines that you should enter in a terminal all start with `$`. You don't need to type the `$` character; it's the command line prompt shown to indicate the start of each command. Lines that don't start with `$` typically show the output of the previous command. Additionally, PowerShell-specific examples will use `>` rather than `$`.
+
+#### Troubleshooting
+
+To check whether you have Rust installed correctly, open a shell and enter this line:
+
+```bash
+$ rustc --version
+```
+
+If you see this information, you have installed Rust successfully! If you don't see this information, check that Rust is in your `%PATH%` system variable as follows.
+
+In Windows CMD, use:
+
+```cmd
+> echo %PATH%
+```
+
+In PowerShell, use:
+
+```powershell
+> echo $env:Path
+```
+
+In Linux and macOS, use:
+
+```powershell
+$ echo $PATH
+```
+
+#### Updating and Uninstalling
+
+Once Rust is installed via rustup, updating to a newly released version is easy. From your shell, run the following update script:
+
+```bash
+$ rustup update
+```
+
+To uninstall Rust and rustup, run the following uninstall script from your shell:
+
+```bash
+$ rustup self uninstall
+```
+
+#### Local Documentation
+
+The installation of Rust also includes a local copy of the documentation so that you can read it offline. Run `rustup doc` to open the local documentation in your browser.
+
+### Hello, World!
+
+It's traditional when learning a new language to write a little program that prints the text `Hello, world!` to the screen, so we'll do the same here!
+
+> Note: The Rust team has been focusing on enabling great IDE support via `rust-analyzer`.
+
+#### Creating a Project Directory
+
+Open a terminal and enter the following commands to make a _projects_ directory and a directory for the "Hello, world!" project within the _projects_ directory.
+
+For Linux, macOS, and PowerShell on Windows, enter this:
+
+```bash
+$ mkdir ~/projects
+$ cd ~/projects
+$ mkdir hello_world
+$ cd hello_world
+```
+
+For Windows CMD, enter this:
+
+```cmd
+> mkdir "%USERPROFILE%\projects"
+> cd /d "%USERPROFILE%\projects"
+> mkdir hello_world
+> cd hello_world
+```
+
+#### Writing and Running a Rust Program
+
+Next, make a new source file and call it _main.rs_. Rust files always end with the _.rs_ extension. If you're using more than one word in your filename, the convention is to use an underscore to separate them. For example, use _hello_world.rs_ rather than _helloworld.rs_.
+
+Now open the main.rs file you just created and enter the code as following.
+
+Filename: main.rs
+
+```rust
+fn main() {
+    println!("Hello, world!");
+}
+```
+
+Save the file and go back to your terminal window in the _~/projects/hello_world_ directory. On Linux or macOS, enter the following commands to compile and run the file:
+
+```bash
+$ rustc main.rs
+$ ./main
+Hello, world!
+```
+
+On Windows, enter the command `.\main.exe` instead of `./main`:
+
+```powershell
+> rustc main.rs
+> .\main.exe
+Hello, world!
+```
+
+#### Anatomy of a Rust Program
+
+```rust
+fn main() {
+
+}
+```
+
+These lines define a function named `main`. The `main` function is special: it is always the first code that runs in every executable Rust program.
+
+It's good style to place the opening curly bracket on the same line as the function declaration, adding one space in between.
+
+> Note: If you want to stick to a standard style across Rust projects, you can use an automatic formatter tool called `rustfmt` to format your code in a particular style. The Rust team has included this tool with the standard Rust distribution, as `rustc` is, so it should already be installed on your computer!
+
+First, Rust style is to indent with four spaces, not a tab.
+
+Second, `println!` calls a Rust macro. If it had called a function instead, it would be entered as `println` (without the `!`). For now, you just need to know that using a `!` means that you're calling a macro instead of a normal function and that macros don't always follow the same rules as functions.
+
+Third, you see the `"Hello, world!"` string. We pass this string as an argument to `println!`, and the string is printed to the screen.
+
+Fourth, we end the line with a semicolon (`;`), which indicates that this expression is over and the next one is ready to begin. Most lines of Rust code end with a semicolon.
+
+#### Compiling and Running Are Separate Steps
+
+Before running a Rust program, you must compile it using the Rust compiler by entering the `rustc` command and passing it the name of your source file, like this:
+
+```bash
+$ rustc main.rs
+```
+
+After compiling successfully, Rust outputs a binary executable.
+
+On Linux, macOS, and PowerShell on Windows, you can see the executable by entering the `ls` command in your shell:
+
+```bash
+$ ls
+main  main.rs
+```
+
+On Linux and macOS, you'll see two files. With PowerShell on Windows, you'll see the same three files that you would see using CMD. With CMD on Windows, you would enter the following:
+
+```cmd
+> dir /B %= the /B option says to only show the file names =%
+main.exe
+main.pdb
+main.rs
+```
+
+This shows the source code file with the _.rs_ extension, the executable file (_main.exe_ on Windows, but _main_ on all other platforms), and, when using Windows, a file containing debugging information with the _.pdb_ extension. From here, you run the _main_ or _main.exe_ file, like this:
+
+```bash
+$ ./main # or .\main.exe on Windows
+```
+
+If you're more familiar with a dynamic language, such as Ruby, Python, or JavaScript, you might not be used to compiling and running a program as separate steps. Rust is an _ahead-of-time compiled_ language, meaning you can compile a program and give the executable to someone else, and they can run it even without having Rust installed. If you give someone a _.rb_, _.py_, or _.js_ file, they need to have a Ruby, Python, or JavaScript implementation installed (respectively). But in those languages, you only need one command to compile and run your program. Everything is a trade-off in language design.
+
+### Hello, Cargo!
+
+Cargo is Rust's build system and package manager. Cargo comes installed with Rust if you used the official installers.
+
+Cargo handles a lot of tasks for you, such as building your code, downloading the libraries your code depends on, and building those libraries. (We call the libraries that your code needs _dependencies_.)
+
+As you write more complex Rust programs, you'll add dependencies, and if you start a project using Cargo, adding dependencies will be much easier to do.
+
+Check whether Cargo is installed by entering the following in your terminal:
+
+```bash
+$ cargo --version
+```
+
+#### Creating a Project with Cargo
+
+```bash
+$ cargo new hello_cargo
+$ cd hello_cargo
+```
+
+Go into the _hello_cargo_ directory and list the files. You'll see that Cargo has generated two files and one directory for us: a _Cargo.toml_ file and a _src_ directory with a _main.rs_ file inside.
+
+It has also initialized a new Git repository along with a _.gitignore_ file. Git files won't be generated if you run `cargo new` within an existing Git repository; you can override this behavior by using `cargo new --vcs=git`.
+
+> Note: Git is a common version control system. You can change `cargo new` to use a different version control system or no version control system by using the `--vcs` flag.
+
+Open _Cargo.toml_ in your text editor of choice.
+
+Filename: Cargo.toml
+
+```toml
+[package]
+name = "hello_cargo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+```
+
+This file is in the [TOML](https://toml.io) (Tom's Obvious, Minimal Language) format, which is Cargo's configuration format.
+
+The first line, `[package]`, is a section heading that indicates that the following statements are configuring a package.
+
+The last line, `[dependencies]`, is the start of a section for you to list any of your project's dependencies. In Rust, packages of code are referred to as _crates_.
+
+Now open src/main.rs and take a look:
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    println!("Hello, world!");
+}
+```
+
+Cargo expects your source files to live inside the _src_ directory. The top-level project directory is just for README files, license information, configuration files, and anything else not related to your code.
+
+#### Building and Running a Cargo Project
+
+From your _hello_cargo_ directory, build your project by entering the following command:
+
+```bash
+$ cargo build
+```
+
+This command creates an executable file in _target/debug/hello_cargo_ (or _target\debug\hello_cargo.exe_ on Windows) rather than in your current directory. Because the default build is a debug build, Cargo puts the binary in a directory named _debug_. You can run the executable with this command:
+
+```bash
+$ ./target/debug/hello_cargo # or .\target\debug\hello_cargo.exe on Windows
+```
+
+Running `cargo build` for the first time also causes Cargo to create a new file at the top level: _Cargo.lock_. This file keeps track of the exact versions of dependencies in your project. This project doesn't have dependencies, so the file is a bit sparse. You won't ever need to change this file manually; Cargo manages its contents for you.
+
+We can also use `cargo run` to compile the code and then run the resultant executable all in one command:
+
+```bash
+$ cargo run
+```
+
+Using `cargo run` is more convenient than having to remember to run `cargo build` and then use the whole path to the binary, so most developers use `cargo run`.
+
+Cargo figured out that the files hadn't changed, so it didn't rebuild but just ran the binary. If you had modified your source code, Cargo would have rebuilt the project before running it.
+
+Cargo also provides a command called `cargo check`. This command quickly checks your code to make sure it compiles but doesn't produce an executable:
+
+```bash
+$ cargo check
+```
+
+Often, `cargo check` is much faster than `cargo build` because it skips the step of producing an executable. If you're continually checking your work while writing the code, using `cargo check` will speed up the process of letting you know if your project is still compiling! As such, many Rustaceans run `cargo check` periodically as they write their program to make sure it compiles. Then they run `cargo build` when they're ready to use the executable.
+
+#### Building for Release
+
+When your project is finally ready for release, you can use `cargo build --release` to compile it with optimizations. This command will create an executable in _target/release_ instead of _target/debug_. The optimizations make your Rust code run faster, but turning them on lengthens the time it takes for your program to compile. This is why there are two different profiles: one for development, when you want to rebuild quickly and often, and another for building the final program you'll give to a user that won't be rebuilt repeatedly and that will run as fast as possible. If you're benchmarking your code's running time, be sure to run `cargo build --release` and benchmark with the executable in _target/release_.
+
+#### Cargo as Convention
+
+In fact, to work on any existing projects, you can use the following commands to check out the code using Git, change to that project's directory, and build:
+
+```bash
+$ git clone example.org/someproject
+$ cd someproject
+$ cargo build
+```
+
+#### Cargo Summary:
+
+- `cargo new [your_project_name]`: create a project.
+
+- `cargo build`: build a project.
+
+- `cargo build --release`: build a project with optimizations for release.
+
+- `cargo run`: build and run a project in one step.
+
+- `cargo check`: build a project without producing a binary to check for errors.
+
+- `cargo update` - ignore the _Cargo.lock_ file and bump to the latest MINOR SemVer.
+
+- `cargo doc --open` - build documentation provided by all your dependencies locally and open it in your browser.
+
 ## Common Programming Concepts
 
 ### Variables and Mutability
