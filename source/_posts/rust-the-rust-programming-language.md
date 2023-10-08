@@ -299,6 +299,78 @@ $ cargo build
 
 - `cargo doc --open` - build documentation provided by all your dependencies locally and open it in your browser.
 
+## Programming a Guessing Game
+
+```bash
+$ cargo new guessing_game
+$ cd guessing_game
+```
+
+Filename: Cargo.toml
+
+```toml
+[package]
+name = "guessing_game"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.8.5"  # include the rand crate as a dependency
+```
+
+Cargo understands [Semantic Versioning](https://semver.org) (sometimes called SemVer), which is a standard for writing version numbers. The specifier `0.8.5` is actually shorthand for `^0.8.5`, which means any version that is at least 0.8.5 but below 0.9.0.
+
+When you build a project for the first time, Cargo figures out all the versions of the dependencies that fit the criteria and then writes them to the _Cargo.lock_ file. When you build your project in the future, Cargo will see that the _Cargo.lock_ file exists and will use the versions specified there rather than doing all the work of figuring out versions again. In other words, your project will remain at 0.8.5 until you explicitly upgrade, thanks to the _Cargo.lock_ file.
+
+When you do want to update a crate, Cargo provides the command `update`, which will ignore the _Cargo.lock_ file and figure out all the latest versions that fit your specifications in _Cargo.toml_. Cargo will then write those versions to the _Cargo.lock_ file. Otherwise, by default, Cargo will only look for versions greater than 0.8.5 and less than 0.9.0. If the `rand` crate has released the two new versions 0.8.6 and 0.9.0, you would see the version bumped to 0.8.6 rather than 0.9.0. To use `rand` version 0.9.0 or any version in the 0.9.x series, you'd have to update the Cargo.toml file manually.
+
+> Note: Another neat feature of Cargo is that running the `cargo doc --open` command will build documentation provided by all your dependencies locally and open it in your browser.
+
+Filename: src/main.rs
+
+```rust
+// By default, Rust has a set of items defined in the standard library that it brings into the scope of every program. This set is called the prelude. If a type you want to use isn't in the prelude, you have to bring that type into scope explicitly with a use statement.
+use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
+
+fn main() {
+    println!("Guess the number!");
+
+    let secret_number = rand::thread_rng().gen_range(1..=100);
+
+    loop {
+        println!("Please input your guess.");
+
+        let mut guess = String::new();
+
+        // The stdin function returns an instance of std::io::Stdin, which is a type that represents a handle to the standard input for your terminal.
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line");
+
+        // Rust allows us to shadow the previous value of `guess` with a new one. Shadowing lets us reuse the `guess` variable name rather than forcing us to create two unique variables, such as `guess_str` and `guess`, for example.
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        println!("You guessed: {guess}");
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
+        }
+    }
+}
+```
+
 ## Common Programming Concepts
 
 ### Variables and Mutability
