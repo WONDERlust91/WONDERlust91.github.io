@@ -433,13 +433,25 @@ categories: English
 
   deliberate adj. 刻意的 v. 慎重考虑
 
+- coercion n. 强制或强迫
+
+  cohesion n. 凝聚
+
+  coherence n. 逻辑性、一致性；统一性
+
+- clutter v. 被杂乱的东西覆盖或填充 n. 杂物、杂乱的状态
+
+  cluster n. 一组、一簇 v. 聚集
+
+  clutch v. 紧紧地抓住 n. 紧握；离合器；手包；一窝蛋 adj. 关键时刻（游戏或比赛）
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
 
   1. conj. + 完整句子
 
-     - conj. whereas (弱转折，表对比)
+     - conj. whereas （弱转折，表对比）
 
      - conj. although
 
@@ -908,6 +920,18 @@ categories: English
   Fahrenheit n. 华氏温度
 
   Celsius n. 摄氏温度
+
+- 游行
+
+  parade n. v. 阅兵；节日游行
+
+  demonstration n. 示范；游行（反对或表达政见）
+
+  march v. n. 行军；游行
+
+  rally v. 部队集结；恢复（健康）；拉力；逗弄 n. 集会（反对或表达政见）；拉力；反弹（衰退后快速恢复）
+
+  strike v. n. 击打；罢工（不一定是游行形式，常与上几个词汇出现在新闻中）
 
 ## 反义词
 

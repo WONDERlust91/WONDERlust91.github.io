@@ -677,6 +677,30 @@ categories: English
 
   1. adjective: lacking strong features or characteristics and therefore uninteresting. 缺乏强大的功能或特性，因此而显得无趣，即平淡无奇。
 
+- blanket
+
+  1. noun: a large piece of woollen or similar material used as a covering on a bed or else where for warmth.
+
+     _"I slept on the ground covered by my blanket"_
+
+  2. noun(PRINTING): a rubber surface used for transferring the image in ink from the plate to the paper in offset printing.
+
+  3. adjective: covering all cases or instances; total and inclusive.
+
+     _"a blanket ban on tobacco advertising"_
+
+  4. verb: cover completely with a thick layer of something.
+
+     _"the countryside was blanketed in snow"_
+
+     - stifle or keep quiet (sound).
+
+       _"the double glazing blankets the noise a bit"_
+
+  5. verb(SAILING): take wind from the sails of (another craft) by passing to windward.
+
+  6. phrase: born on the wrong side of the blanket - illegitimate.
+
 - board
 
   1. noun: a long, thin, flat piece of wood or other hard or stiff material, used for floors or other building purposes or various purposes. 长，薄，平的一块木头或其他硬质材料，用于地板或其他建筑用途或其他各种用途。
@@ -1485,6 +1509,12 @@ categories: English
 
   2. noun: a situation of panic; a breakdown of order; a disorderly jumble. 恐慌的情况，秩序的毁坏，无序的混乱。
 
+- congregate
+
+  1. verb: gather into a crowd or mass.
+
+     _"some 4,000 demonstrators had congregated at a border point"_
+
 - connotation
 
   1. noun: an idea or feeling that a word invokes in addition to its literal or primary meaning. 一个词除字面或主要意思之外还唤起了其他的想法或感受。
@@ -2213,6 +2243,12 @@ categories: English
 
   2. noun: a particular sector of a population. 人口的特定部分，即人口统计的结果、情况。
 
+- denounce
+
+  1. verb: publicly declare to be wrong or evil.
+
+     _"the Assembly denounced the use of violence"_
+
 - dependent
 
   1. adjective: contingent on or determined by.
@@ -2236,6 +2272,12 @@ categories: English
   1. verb: show or represent by a drawing, painting, or other art form. 以图画，绘画，或其他艺术形式展示或表现。
 
      - portray in words; describe. 用文字描绘；描述。
+
+- deplore
+
+  1. verb: feel or express strong disapproval of (something).
+
+     _"we deplore all violence"_
 
 - deprive
 
@@ -2914,6 +2956,12 @@ categories: English
   1. adjective: equal in value, amount, function, meaning, etc. 在价值，数量，功能，意义等方面相等。
 
   2. noun: a person or thing that is equal to or corresponds with another in value, amount, function, meaning, etc. 在价值，数量，功能，意义等方面与其他相等或对应的人或物。
+
+- equivocal
+
+  1. adjective: open to more than one interpretation; ambiguous.
+
+     _"the equivocal nature of her remarks"_
 
 - era
 
@@ -6653,6 +6701,36 @@ categories: English
 
      _"we're gonna rage through the weekend"_
 
+- rally
+
+  1. verb: (of troops) come together again in order to continue fighting after a defeat or dispersion.
+
+     _"De Montfort's troops rallied and drove back the king's infantry"_
+
+  2. verb: recover or cause to recover in health, spirits, or poise.
+
+     _"he floundered for a moment, then rallied again"_
+
+  3. verb: drive in a rally.
+
+     _"we're driving off to Spain to rally"_
+
+  4. noun: a mass meeting of people making a political protest or showing support for a cause.
+
+     _"a rally attended by around 100,000 people"_
+
+  5. noun: a long-distance race for motor vehicles over public roads or rough terrain, typically in several stages.
+
+     _"a rally driver"_
+
+  6. noun: a quick or marked recovery after a decline.
+
+     _"the market staged a late rally"_
+
+  7. noun: (in tennis and other racket sports) an extended exchange of strokes between players.
+
+     _"a rally of more than three strokes was a rarity"_
+
 - readily
 
   1. adverb: without hesitation or reluctance; willingly. 没有犹豫或没有不情愿的；心甘情愿的。
@@ -7000,6 +7078,24 @@ categories: English
 - saliva
 
   1. noun: watery liquid secreted into the mouth by glands, providing lubrication for chewing and swallowing, and aiding digestion.
+
+- sanction
+
+  1. noun: a threatened penalty for disobeying a law or rule.
+
+     _"a range of sanctions aimed at deterring insider abuse"_
+
+  2. noun: official permission or approval for an action.
+
+     _"he appealed to the bishop for his sanction"_
+
+  3. verb: give official permission or approval for (an action).
+
+     _"the scheme was sanctioned by the court"_
+
+  4. verb: impose a sanction or penalty on.
+
+     _"foreigners in France illegally should be sent home, their employers sanctioned and border controls tightened up"_
 
 - sandal
 
@@ -7932,6 +8028,46 @@ categories: English
   36. phrase: strike out - start out on a new or independent course or endeavor. 开始新的或独立的课程或努力。
 
   37. phrase: strike up - (of a band or orchestra) begin to play a piece of music. （乐队或管弦乐队）开始演奏一段音乐。
+
+- strip
+
+  1. verb: remove all coverings from.
+
+     _"the man had been stripped naked"_
+
+  2. verb: leave bare of accessories or fittings.
+
+     _"thieves stripped the room of luggage"_
+
+  3. verb: deprive someone of (rank, power, or property).
+
+     _"the lieutenant was stripped of his rank"_
+
+  4. verb: sell off (the assets of a company) for profit.
+
+  5. verb: tear the thread or teeth from (a screw, gearwheel, etc.).
+
+  6. verb: (of a bullet) be fired from a rifled gun without spin owing to a loss of surface.
+
+  7. noun: an act of undressing, especially in a striptease.
+
+     _"she got drunk and did a strip on top of the piano"_
+
+  8. noun(BRITISH): the identifying outfit worn by the members of a sports team while playing.
+
+     _"the team's away strip is a garish mix of red, white, and blue"_
+
+  9. noun: a long, narrow piece of cloth, paper, plastic, or some other material.
+
+     _"a strip of linen"_
+
+  10. noun: a comic strip.
+
+      _"a strip cartoon"_
+
+  11. noun(BRITISH): a programme broadcast regularly at the same time.
+
+      _"he hosts a weekly two-hour advice strip"_
 
 - stripe
 
