@@ -5018,3 +5018,1085 @@ where
     }
 }
 ```
+
+## Writing Automated Tests
+
+### How to Write Tests
+
+Tests are Rust functions that verify that the non-test code is functioning in the expected manner. The bodies of test functions typically perform these three actions:
+
+1. Set up any needed data or state.
+
+2. Run the code you want to test.
+
+3. Assert the results are what you expect.
+
+#### The Anatomy of a Test Function
+
+Attributes are metadata about pieces of Rust code. A Test in Rust is a function that's annotated with the `test` attribute.
+
+To change a function into a test function, add `#[test]` on the line before `fn`. When you run your tests with the `cargo test` command, Rust builds a test runner binary that runs the annotated functions and reports on whether each test function passes or fails.
+
+Whenever we make a new library project with Cargo, a test module with a test function in it is automatically generated for us.
+
+Let's create a new library project called `adder` that will add two numbers:
+
+```bash
+$ cargo new adder --lib
+     Created library `adder` project
+$ cd adder
+```
+
+The contents of the _src/lib.rs_ file in your `adder` library should look like the following listing.
+
+Filename: src/lib.rs
+
+```rust
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_works() {
+        let result = 2 + 2;
+        assert_eq!(result, 4);
+    }
+}
+```
+
+For now, let's ignore the top two lines and focus on the function. Note the `#[test]` annotation: this attribute indicates this is a test function, so the test runner knows to treat this function as a test. We might also have non-test functions in the tests module to help set up common scenarios or perform common operations, so we always need to indicate which functions are tests.
+
+The `cargo test` command runs all tests in our project, as shown in the following listing.
+
+```bash
+$ cargo test
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.57s
+     Running unittests src/lib.rs (target/debug/deps/adder-92948b65e88960b4)
+
+running 1 test
+test tests::it_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests adder
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+Cargo compiled and ran the test. We see the line `running 1 test`. The next line shows the name of the generated test function, called `it_works`, and that the result of running that test is `ok`. The overall summary `test result: ok.` means that all the tests passed, and the portion that reads `1 passed; 0 failed` totals the number of tests that passed or failed.
+
+It's possible to mark a test as ignored so it doesn't run in a particular instance. Because we haven't done that here, the summary shows `0 ignored`. We can also pass an argument to the `cargo test` command to run only tests whose name matches a string; this is called filtering. We also haven't filtered the tests being run, so the end of the summary shows `0 filtered out`.
+
+The `0 measured` statistic is for benchmark tests that measure performance. Benchmark tests are, as of this writing, only available in nightly Rust.
+
+The next part of the test output starting at `Doc-tests adder` is for the results of any documentation tests. We don't have any documentation tests yet, but Rust can compile any code examples that appear in our API documentation. This feature helps keep your docs and your code in sync! For now, we'll ignore the `Doc-tests` output.
+
+Let's start to customize the test to our own needs. First change the name of the `it_works` function to a different name, such as `exploration`. Then we'll add another test, but this time we'll make a test that fails! Tests fail when something in the test function panics. Each test is run in a new thread, and when the main thread sees that a test thread has died, the test is marked as failed. Enter the new test as a function named `another`, so your _src/lib.rs_ file looks like the following listing.
+
+Filename: src/lib.rs
+
+```rust
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn exploration() {
+        assert_eq!(2 + 2, 4);
+    }
+
+    #[test]
+    fn another() {
+        panic!("Make this test fail");
+    }
+}
+```
+
+Run the tests again using `cargo test`. The output should look like the following listing, which shows that our `exploration` test passed and `another` failed.
+
+```bash
+$ cargo test
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.72s
+     Running unittests src/lib.rs (target/debug/deps/adder-92948b65e88960b4)
+
+running 2 tests
+test tests::another ... FAILED
+test tests::exploration ... ok
+
+failures:
+
+---- tests::another stdout ----
+thread 'tests::another' panicked at 'Make this test fail', src/lib.rs:10:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::another
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+```
+
+Instead of `ok`, the line `test tests::another` shows `FAILED`. Two new sections appear between the individual results and the summary: the first displays the detailed reason for each test failure. In this case, we get the details that `another` failed because it `panicked at 'Make this test fail'` on line 10 in the _src/lib.rs_ file. The next section lists just the names of all the failing tests, which is useful when there are lots of tests and lots of detailed failing test output. We can use the name of a failing test to run just that test to more easily debug it.
+
+The summary line displays at the end: overall, our test result is `FAILED`. We had one test pass and one test fail.
+
+#### Checking Results with the assert! Macro
+
+The `assert!` macro, provided by the standard library, is useful when you want to ensure that some condition in a test evaluates to `true`. We give the `assert!` macro an argument that evaluates to a `Boolean`.
+
+In the preceding listing, we used a `Rectangle` struct and a `can_hold` method, which are repeated here. Let's put this code in the _src/lib.rs_ file, then write some tests for it using the `assert!` macro.
+
+Filename: src/lib.rs
+
+```rust
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn larger_can_hold_smaller() {
+        let larger = Rectangle {
+            width: 8,
+            height: 7,
+        };
+        let smaller = Rectangle {
+            width: 5,
+            height: 1,
+        };
+
+        assert!(larger.can_hold(&smaller));
+    }
+
+    #[test]
+    fn smaller_cannot_hold_larger() {
+        let larger = Rectangle {
+            width: 8,
+            height: 7,
+        };
+        let smaller = Rectangle {
+            width: 5,
+            height: 1,
+        };
+
+        assert!(!smaller.can_hold(&larger));
+    }
+}
+```
+
+Note that we've added a new line inside the tests module: use `super::*;`. The tests module is a regular module that follows the usual visibility rules. Because the `tests` module is an inner module, we need to bring the code under test in the outer module into the scope of the inner module. We use a glob here so anything we define in the outer module is available to this `tests` module.
+
+```bash
+$ cargo test
+   Compiling rectangle v0.1.0 (file:///projects/rectangle)
+    Finished test [unoptimized + debuginfo] target(s) in 0.66s
+     Running unittests src/lib.rs (target/debug/deps/rectangle-6584c4561e48942e)
+
+running 2 tests
+test tests::larger_can_hold_smaller ... ok
+test tests::smaller_cannot_hold_larger ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rectangle
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+Two tests that pass! Now let's see what happens to our test results when we introduce a bug in our code. We'll change the implementation of the `can_hold` method by replacing the greater-than sign with a less-than sign when it compares the widths:
+
+```rust
+// --snip--
+impl Rectangle {
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width < other.width && self.height > other.height
+    }
+}
+```
+
+Running the tests now produces the following:
+
+```bash
+$ cargo test
+   Compiling rectangle v0.1.0 (file:///projects/rectangle)
+    Finished test [unoptimized + debuginfo] target(s) in 0.66s
+     Running unittests src/lib.rs (target/debug/deps/rectangle-6584c4561e48942e)
+
+running 2 tests
+test tests::larger_can_hold_smaller ... FAILED
+test tests::smaller_cannot_hold_larger ... ok
+
+failures:
+
+---- tests::larger_can_hold_smaller stdout ----
+thread 'tests::larger_can_hold_smaller' panicked at 'assertion failed: larger.can_hold(&smaller)', src/lib.rs:28:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::larger_can_hold_smaller
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+```
+
+Our tests caught the bug!
+
+#### Testing Equality with the assert_eq! and assert_ne! Macros
+
+A common way to verify functionality is to test for equality between the result of the code under test and the value you expect the code to return. However, this is such a common test that the standard library provides a pair of macros—`assert_eq!` and `assert_ne!`—to perform this test more conveniently. These macros compare two arguments for equality or inequality, respectively. They'll also print the two values if the assertion fails, which makes it easier to see why the test failed; conversely, the `assert!` macro only indicates that it got a `false` value for the `==` expression, without printing the values that led to the `false` value.
+
+Filename: src/lib.rs
+
+```rust
+pub fn add_two(a: i32) -> i32 {
+    a + 3
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn it_adds_two() {
+        assert_eq!(4, add_two(2));
+    }
+}
+```
+
+Run the tests:
+
+```bash
+$ cargo test
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.61s
+     Running unittests src/lib.rs (target/debug/deps/adder-92948b65e88960b4)
+
+running 1 test
+test tests::it_adds_two ... FAILED
+
+failures:
+
+---- tests::it_adds_two stdout ----
+thread 'tests::it_adds_two' panicked at 'assertion failed: `(left == right)`
+  left: `4`,
+ right: `5`', src/lib.rs:11:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::it_adds_two
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+```
+
+Note that in some languages and test frameworks, the parameters to equality assertion functions are called `expected` and `actual`, and the order in which we specify the arguments matters. However, in Rust, they're called `left` and `right`, and the order in which we specify the value we expect and the value the code produces doesn't matter.
+
+The `assert_ne!` macro will pass if the two values we give it are not equal and fail if they're equal. This macro is most useful for cases when we're not sure what a value will be, but we know what the value definitely shouldn't be.
+
+Under the surface, the `assert_eq!` and `assert_ne!` macros use the operators `==` and `!=`, respectively. When the assertions fail, these macros print their arguments using debug formatting, which means the values being compared must implement the `PartialEq` and `Debug` traits. All primitive types and most of the standard library types implement these traits. For structs and enums that you define yourself, you'll need to implement `PartialEq` to assert equality of those types. You'll also need to implement `Debug` to print the values when the assertion fails. Because both traits are derivable traits, this is usually as straightforward as adding the `#[derive(PartialEq, Debug)]` annotation to your struct or enum definition.
+
+#### Adding Custom Failure Messages
+
+You can also add a custom message to be printed with the failure message as optional arguments to the `assert!`, `assert_eq!`, and `assert_ne!` macros. Any arguments specified after the required arguments are passed along to the `format!` macro, so you can pass a format string that contains `{}` placeholders and values to go in those placeholders. Custom messages are useful for documenting what an assertion means; when a test fails, you'll have a better idea of what the problem is with the code.
+
+For example, let's say we have a function that greets people by name and we want to test that the name we pass into the function appears in the output:
+
+Filename: src/lib.rs
+
+```rust
+pub fn greeting(name: &str) -> String {
+    format!("Hello {}!", name)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn greeting_contains_name() {
+        let result = greeting("Carol");
+        assert!(result.contains("Carol"));
+    }
+}
+```
+
+Now let's introduce a bug into this code by changing greeting to exclude name to see what the default test failure looks like:
+
+```rust
+pub fn greeting(name: &str) -> String {
+    String::from("Hello!")
+}
+```
+
+Running this test produces the following:
+
+```bash
+$ cargo test
+   Compiling greeter v0.1.0 (file:///projects/greeter)
+    Finished test [unoptimized + debuginfo] target(s) in 0.91s
+     Running unittests src/lib.rs (target/debug/deps/greeter-170b942eb5bf5e3a)
+
+running 1 test
+test tests::greeting_contains_name ... FAILED
+
+failures:
+
+---- tests::greeting_contains_name stdout ----
+thread 'tests::greeting_contains_name' panicked at 'assertion failed: result.contains(\"Carol\")', src/lib.rs:12:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::greeting_contains_name
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+```
+
+This result just indicates that the assertion failed and which line the assertion is on. A more useful failure message would print the value from the `greeting` function. Let's add a custom failure message composed of a format string with a placeholder filled in with the actual value we got from the `greeting` function:
+
+```rust
+    #[test]
+    fn greeting_contains_name() {
+        let result = greeting("Carol");
+        assert!(
+            result.contains("Carol"),
+            "Greeting did not contain name, value was `{}`",
+            result
+        );
+    }
+```
+
+Now when we run the test, we'll get a more informative error message:
+
+```bash
+$ cargo test
+   Compiling greeter v0.1.0 (file:///projects/greeter)
+    Finished test [unoptimized + debuginfo] target(s) in 0.93s
+     Running unittests src/lib.rs (target/debug/deps/greeter-170b942eb5bf5e3a)
+
+running 1 test
+test tests::greeting_contains_name ... FAILED
+
+failures:
+
+---- tests::greeting_contains_name stdout ----
+thread 'tests::greeting_contains_name' panicked at 'Greeting did not contain name, value was `Hello!`', src/lib.rs:12:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::greeting_contains_name
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+```
+
+#### Checking for Panics with should_panic
+
+In addition to checking return values, it's important to check that our code handles error conditions as we expect.
+
+Filename: src/lib.rs
+
+```rust
+pub struct Guess {
+    value: i32,
+}
+
+impl Guess {
+    pub fn new(value: i32) -> Guess {
+        if value < 1 || value > 100 {
+            panic!("Guess value must be between 1 and 100, got {}.", value);
+        }
+
+        Guess { value }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[should_panic]
+    fn greater_than_100() {
+        Guess::new(200);
+    }
+}
+```
+
+We place the `#[should_panic]` attribute after the `#[test]` attribute and before the test function it applies to. Let's look at the result when this test passes:
+
+```bash
+$ cargo test
+   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
+    Finished test [unoptimized + debuginfo] target(s) in 0.58s
+     Running unittests src/lib.rs (target/debug/deps/guessing_game-57d70c3acb738f4d)
+
+running 1 test
+test tests::greater_than_100 - should panic ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests guessing_game
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+Looks good! Now let's introduce a bug in our code by removing the condition that the `new` function will panic if the value is greater than 100:
+
+```rust
+// --snip--
+impl Guess {
+    pub fn new(value: i32) -> Guess {
+        if value < 1 {
+            panic!("Guess value must be between 1 and 100, got {}.", value);
+        }
+
+        Guess { value }
+    }
+}
+```
+
+When we run the test, it will fail:
+
+```bash
+$ cargo test
+   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
+    Finished test [unoptimized + debuginfo] target(s) in 0.62s
+     Running unittests src/lib.rs (target/debug/deps/guessing_game-57d70c3acb738f4d)
+
+running 1 test
+test tests::greater_than_100 - should panic ... FAILED
+
+failures:
+
+---- tests::greater_than_100 stdout ----
+note: test did not panic as expected
+
+failures:
+    tests::greater_than_100
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+```
+
+We don't get a very helpful message in this case, but when we look at the test function, we see that it's annotated with `#[should_panic]`. The failure we got means that the code in the test function did not cause a panic.
+
+Tests that use `should_panic` can be imprecise. A `should_panic` test would pass even if the test panics for a different reason from the one we were expecting. To make `should_panic` tests more precise, we can add an optional `expected` parameter to the `should_panic` attribute. The test harness will make sure that the failure message contains the provided text.
+
+Filename: src/lib.rs
+
+```rust
+// --snip--
+
+impl Guess {
+    pub fn new(value: i32) -> Guess {
+        if value < 1 {
+            panic!(
+                "Guess value must be greater than or equal to 1, got {}.",
+                value
+            );
+        } else if value > 100 {
+            panic!(
+                "Guess value must be less than or equal to 100, got {}.",
+                value
+            );
+        }
+
+        Guess { value }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[should_panic(expected = "less than or equal to 100")]
+    fn greater_than_100() {
+        Guess::new(200);
+    }
+}
+```
+
+This test will pass because the value we put in the `should_panic` attribute's `expected` parameter is a substring of the message that the `Guess::new` function panics with.
+
+To see what happens when a `should_panic` test with an `expected` message fails, let's again introduce a bug into our code by swapping the bodies of the `if value < 1` and the `else if value > 100` blocks:
+
+```rust
+        if value < 1 {
+            panic!(
+                "Guess value must be less than or equal to 100, got {}.",
+                value
+            );
+        } else if value > 100 {
+            panic!(
+                "Guess value must be greater than or equal to 1, got {}.",
+                value
+            );
+        }
+```
+
+This time when we run the `should_panic` test, it will fail:
+
+```bash
+$ cargo test
+   Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
+    Finished test [unoptimized + debuginfo] target(s) in 0.66s
+     Running unittests src/lib.rs (target/debug/deps/guessing_game-57d70c3acb738f4d)
+
+running 1 test
+test tests::greater_than_100 - should panic ... FAILED
+
+failures:
+
+---- tests::greater_than_100 stdout ----
+thread 'tests::greater_than_100' panicked at 'Guess value must be greater than or equal to 1, got 200.', src/lib.rs:13:13
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+note: panic did not contain expected string
+      panic message: `"Guess value must be greater than or equal to 1, got 200."`,
+ expected substring: `"less than or equal to 100"`
+
+failures:
+    tests::greater_than_100
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+```
+
+The failure message indicates that this test did indeed panic as we expected, but the panic message did not include the expected string `'Guess value must be less than or equal to 100'`. The panic message that we did get in this case was `Guess value must be greater than or equal to 1, got 200.`. Now we can start figuring out where our bug is!
+
+#### Using Result<T, E> in Tests
+
+We can also write tests that use `Result<T, E>`!
+
+```rust
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_works() -> Result<(), String> {
+        if 2 + 2 == 4 {
+            Ok(())
+        } else {
+            Err(String::from("two plus two does not equal four"))
+        }
+    }
+}
+```
+
+Writing tests so they return a `Result<T, E>` enables you to use the question mark operator in the body of tests, which can be a convenient way to write tests that should fail if any operation within them returns an `Err` variant.
+
+You can't use the `#[should_panic]` annotation on tests that use `Result<T, E>`. To assert that an operation returns an `Err` variant, don't use the question mark operator on the `Result<T, E>` value. Instead, use `assert!(value.is_err())`.
+
+### Controlling How Tests Are Run
+
+`cargo test` compiles your code in test mode and runs the resulting test binary. The default behavior of the binary produced by cargo test is to run all the tests in parallel and capture output generated during test runs, preventing the output from being displayed and making it easier to read the output related to the test results. You can, however, specify command line options to change this default behavior.
+
+Some command line options go to `cargo test`, and some go to the resulting test binary. To separate these two types of arguments, you list the arguments that go to `cargo test` followed by the separator `--` and then the ones that go to the test binary. Running `cargo test --help` displays the options you can use with `cargo test`, and running `cargo test -- --help` displays the options you can use after the separator.
+
+#### Running Tests in Parallel or Consecutively
+
+When you run multiple tests, by default they run in parallel using threads, meaning they finish running faster and you get feedback quicker. Because the tests are running at the same time, you must make sure your tests don't depend on each other or on any shared state, including a shared environment, such as the current working directory or environment variables.
+
+For example, say each of your tests runs some code that creates a file on disk named _test-output.txt_ and writes some data to that file. Then each test reads the data in that file and asserts that the file contains a particular value, which is different in each test. Because the tests run at the same time, one test might overwrite the file in the time between another test writing and reading the file. The second test will then fail, not because the code is incorrect but because the tests have interfered with each other while running in parallel. One solution is to make sure each test writes to a different file; another solution is to run the tests one at a time.
+
+If you don't want to run the tests in parallel or if you want more fine-grained control over the number of threads used, you can send the `--test-threads` flag and the number of threads you want to use to the test binary. Take a look at the following example:
+
+```bash
+$ cargo test -- --test-threads=1
+```
+
+#### Showing Function Output
+
+By default, if a test passes, Rust's test library captures anything printed to standard output. For example, if we call `println!` in a test and the test passes, we won't see the `println!` output in the terminal; we'll see only the line that indicates the test passed. If a test fails, we'll see whatever was printed to standard output with the rest of the failure message.
+
+Filename: src/lib.rs
+
+```rust
+fn prints_and_returns_10(a: i32) -> i32 {
+    println!("I got the value {}", a);
+    10
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn this_test_will_pass() {
+        let value = prints_and_returns_10(4);
+        assert_eq!(10, value);
+    }
+
+    #[test]
+    fn this_test_will_fail() {
+        let value = prints_and_returns_10(8);
+        assert_eq!(5, value);
+    }
+}
+```
+
+When we run these tests with `cargo test`, we'll see the following output:
+
+```bash
+$ cargo test
+   Compiling silly-function v0.1.0 (file:///projects/silly-function)
+    Finished test [unoptimized + debuginfo] target(s) in 0.58s
+     Running unittests src/lib.rs (target/debug/deps/silly_function-160869f38cff9166)
+
+running 2 tests
+test tests::this_test_will_fail ... FAILED
+test tests::this_test_will_pass ... ok
+
+failures:
+
+---- tests::this_test_will_fail stdout ----
+I got the value 8
+thread 'tests::this_test_will_fail' panicked at 'assertion failed: `(left == right)`
+  left: `5`,
+ right: `10`', src/lib.rs:19:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::this_test_will_fail
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+
+```
+
+Note that nowhere in this output do we see `I got the value 4`, which is what is printed when the test that passes runs. That output has been captured.
+
+If we want to see printed values for passing tests as well, we can tell Rust to also show the output of successful tests with `--show-output`.
+
+```bash
+$ cargo test -- --show-output
+```
+
+```bash
+$ cargo test -- --show-output
+   Compiling silly-function v0.1.0 (file:///projects/silly-function)
+    Finished test [unoptimized + debuginfo] target(s) in 0.60s
+     Running unittests src/lib.rs (target/debug/deps/silly_function-160869f38cff9166)
+
+running 2 tests
+test tests::this_test_will_fail ... FAILED
+test tests::this_test_will_pass ... ok
+
+successes:
+
+---- tests::this_test_will_pass stdout ----
+I got the value 4
+
+
+successes:
+    tests::this_test_will_pass
+
+failures:
+
+---- tests::this_test_will_fail stdout ----
+I got the value 8
+thread 'tests::this_test_will_fail' panicked at 'assertion failed: `(left == right)`
+  left: `5`,
+ right: `10`', src/lib.rs:19:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::this_test_will_fail
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+```
+
+#### Running a Subset of Tests by Name
+
+Sometimes, running a full test suite can take a long time. If you're working on code in a particular area, you might want to run only the tests pertaining to that code. You can choose which tests to run by passing `cargo test` the name or names of the test(s) you want to run as an argument.
+
+Filename: src/lib.rs
+
+```rust
+pub fn add_two(a: i32) -> i32 {
+    a + 2
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn add_two_and_two() {
+        assert_eq!(4, add_two(2));
+    }
+
+    #[test]
+    fn add_three_and_two() {
+        assert_eq!(5, add_two(3));
+    }
+
+    #[test]
+    fn one_hundred() {
+        assert_eq!(102, add_two(100));
+    }
+}
+```
+
+If we run the tests without passing any arguments, as we saw earlier, all the tests will run in parallel:
+
+```bash
+$ cargo test
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.62s
+     Running unittests src/lib.rs (target/debug/deps/adder-92948b65e88960b4)
+
+running 3 tests
+test tests::add_three_and_two ... ok
+test tests::add_two_and_two ... ok
+test tests::one_hundred ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests adder
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+##### Running Single Tests
+
+We can pass the name of any test function to `cargo test` to run only that test:
+
+```bash
+$ cargo test one_hundred
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.69s
+     Running unittests src/lib.rs (target/debug/deps/adder-92948b65e88960b4)
+
+running 1 test
+test tests::one_hundred ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 2 filtered out; finished in 0.00s
+```
+
+The test output lets us know we had more tests that didn't run by displaying `2 filtered` out at the end.
+
+We can't specify the names of multiple tests in this way; only the first value given to `cargo test` will be used. But there is a way to run multiple tests.
+
+##### Filtering to Run Multiple Tests
+
+We can specify part of a test name, and any test whose name matches that value will be run. For example, because two of our tests' names contain `add`, we can run those two by running `cargo test add`:
+
+```bash
+$ cargo test add
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.61s
+     Running unittests src/lib.rs (target/debug/deps/adder-92948b65e88960b4)
+
+running 2 tests
+test tests::add_three_and_two ... ok
+test tests::add_two_and_two ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.00s
+```
+
+Also note that the module in which a test appears becomes part of the test's name, so we can run all the tests in a module by filtering on the module's name.
+
+#### Ignoring Some Tests Unless Specifically Requested
+
+Sometimes a few specific tests can be very time-consuming to execute, so you might want to exclude them during most runs of `cargo test`. Rather than listing as arguments all tests you do want to run, you can instead annotate the time-consuming tests using the `ignore` attribute to exclude them, as shown here:
+
+Filename: src/lib.rs
+
+```rust
+#[test]
+fn it_works() {
+    assert_eq!(2 + 2, 4);
+}
+
+#[test]
+#[ignore]
+fn expensive_test() {
+    // code that takes an hour to run
+}
+```
+
+After `#[test]` we add the `#[ignore]` line to the test we want to exclude. Now when we run our tests, `it_works` runs, but `expensive_test` doesn't:
+
+```bash
+$ cargo test
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.60s
+     Running unittests src/lib.rs (target/debug/deps/adder-92948b65e88960b4)
+
+running 2 tests
+test expensive_test ... ignored
+test it_works ... ok
+
+test result: ok. 1 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests adder
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+The `expensive_test` function is listed as `ignored`. If we want to run only the ignored tests, we can use `cargo test -- --ignored`:
+
+```bash
+$ cargo test -- --ignored
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.61s
+     Running unittests src/lib.rs (target/debug/deps/adder-92948b65e88960b4)
+
+running 1 test
+test expensive_test ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.00s
+
+   Doc-tests adder
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+By controlling which tests run, you can make sure your `cargo test` results will be fast. When you're at a point where it makes sense to check the results of the `ignored` tests and you have time to wait for the results, you can run `cargo test -- --ignored` instead. If you want to run all tests whether they're ignored or not, you can run `cargo test -- --include-ignored`.
+
+### Test Organization
+
+The Rust community thinks about tests in terms of two main categories: unit tests and integration tests. _Unit tests_ are small and more focused, testing one module in isolation at a time, and can test private interfaces. _Integration tests_ are entirely external to your library and use your code in the same way any other external code would, using only the public interface and potentially exercising multiple modules per test.
+
+#### Unit Tests
+
+The purpose of unit tests is to test each unit of code in isolation from the rest of the code to quickly pinpoint where code is and isn't working as expected. You'll put unit tests in the _src_ directory in each file with the code that they're testing. The convention is to create a module named `tests` in each file to contain the test functions and to annotate the module with `cfg(test)`.
+
+##### The Tests Module and #[cfg(test)]
+
+The `#[cfg(test)]` annotation on the tests module tells Rust to compile and run the test code only when you run `cargo test`, not when you run `cargo build`. This saves compile time when you only want to build the library and saves space in the resulting compiled artifact because the tests are not included. You'll see that because integration tests go in a different directory, they don't need the `#[cfg(test)]` annotation. However, because unit tests go in the same files as the code, you'll use `#[cfg(test)]` to specify that they shouldn't be included in the compiled result.
+
+The attribute `cfg` stands for configuration and tells Rust that the following item should only be included given a certain configuration option. In this case, the configuration option is `test`, which is provided by Rust for compiling and running tests. By using the `cfg` attribute, Cargo compiles our test code only if we actively run the tests with `cargo test`. This includes any helper functions that might be within this module, in addition to the functions annotated with `#[test]`.
+
+##### Testing Private Functions
+
+Rust's privacy rules do allow you to test private functions.
+
+Filename: src/lib.rs
+
+```rust
+pub fn add_two(a: i32) -> i32 {
+    internal_adder(a, 2)
+}
+
+fn internal_adder(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn internal() {
+        assert_eq!(4, internal_adder(2, 2));
+    }
+}
+```
+
+Note that the `internal_adder` function is not marked as `pub`. Tests are just Rust code, and the `tests` module is just another module. Items in child modules can use the items in their ancestor modules. In this test, we bring all of the `test` module's parent's items into scope with use `super::*`, and then the test can call `internal_adder`.
+
+#### Integration Tests
+
+In Rust, integration tests are entirely external to your library. They use your library in the same way any other code would, which means they can only call functions that are part of your library's public API. Their purpose is to test whether many parts of your library work together correctly. Units of code that work correctly on their own could have problems when integrated, so test coverage of the integrated code is important as well. To create integration tests, you first need a _tests_ directory.
+
+##### The _tests_ Directory
+
+We create a _tests_ directory at the top level of our project directory, next to _src_. Cargo knows to look for integration test files in this directory. We can then make as many test files as we want, and Cargo will compile each of the files as an individual crate.
+
+Let's create an integration test. Your directory structure should look like this:
+
+```text
+adder
+├── Cargo.lock
+├── Cargo.toml
+├── src
+│   └── lib.rs
+└── tests
+    └── integration_test.rs
+```
+
+Filename: tests/integration_test.rs
+
+```rust
+use adder;
+
+#[test]
+fn it_adds_two() {
+    assert_eq!(4, adder::add_two(2));
+}
+```
+
+Each file in the `tests` directory is a separate crate, so we need to bring our library into each test crate's scope. For that reason we add `use adder` at the top of the code, which we didn't need in the unit tests.
+
+We don't need to annotate any code in _tests/integration_test.rs_ with `#[cfg(test)]`. Cargo treats the `tests` directory specially and compiles files in this directory only when we run `cargo test`. Run `cargo test` now:
+
+```bash
+$ cargo test
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 1.31s
+     Running unittests src/lib.rs (target/debug/deps/adder-1082c4b063a8fbe6)
+
+running 1 test
+test tests::internal ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/integration_test.rs (target/debug/deps/integration_test-1082c4b063a8fbe6)
+
+running 1 test
+test it_adds_two ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests adder
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+The three sections of output include the unit tests, the integration test, and the doc tests. Note that if any test in a section fails, the following sections will not be run. For example, if a unit test fails, there won't be any output for integration and doc tests because those tests will only be run if all unit tests are passing.
+
+The first section for the unit tests is the same as we've been seeing: one line for each unit test and then a summary line for the unit tests.
+
+The integration tests section starts with the line `Running tests/integration_test.rs`. Next, there is a line for each test function in that integration test and a summary line for the results of the integration test just before the `Doc-tests adder` section starts.
+
+Each integration test file has its own section, so if we add more files in the tests directory, there will be more integration test sections.
+
+We can still run a particular integration test function by specifying the test function's name as an argument to `cargo test`. To run all the tests in a particular integration test file, use the `--test` argument of `cargo test` followed by the name of the file:
+
+```bash
+$ cargo test --test integration_test
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.64s
+     Running tests/integration_test.rs (target/debug/deps/integration_test-82e7799c1bc62298)
+
+running 1 test
+test it_adds_two ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+##### Submodules in Integration Tests
+
+As mentioned earlier, each file in the _tests_ directory is compiled as its own separate crate, which is useful for creating separate scopes to more closely imitate the way end users will be using your crate. However, this means files in the _tests_ directory don't share the same behavior as files in _src_ do, as you learned in previous chapter regarding how to separate code into modules and files.
+
+The different behavior of _tests_ directory files is most noticeable when you have a set of helper functions to use in multiple integration test files and you try to follow the steps in previous chapter to extract them into a common module. For example, if we create _tests/common.rs_ and place a function named `setup` in it, we can add some code to `setup` that we want to call from multiple test functions in multiple test files:
+
+Filename: tests/common.rs
+
+```rust
+pub fn setup() {
+    // setup code specific to your library's tests would go here
+}
+```
+
+When we run the tests again, we'll see a new section in the test output for the _common.rs_ file, even though this file doesn't contain any test functions nor did we call the `setup` function from anywhere:
+
+```rust
+$ cargo test
+   Compiling adder v0.1.0 (file:///projects/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.89s
+     Running unittests src/lib.rs (target/debug/deps/adder-92948b65e88960b4)
+
+running 1 test
+test tests::internal ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/common.rs (target/debug/deps/common-92948b65e88960b4)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/integration_test.rs (target/debug/deps/integration_test-92948b65e88960b4)
+
+running 1 test
+test it_adds_two ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests adder
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+Having `common` appear in the test results with `running 0 tests` displayed for it is not what we wanted. We just wanted to share some code with the other integration test files.
+
+To avoid having `common` appear in the test output, instead of creating _tests/common.rs_, we'll create _tests/common/mod.rs_. The project directory now looks like this:
+
+```text
+├── Cargo.lock
+├── Cargo.toml
+├── src
+│   └── lib.rs
+└── tests
+    ├── common
+    │   └── mod.rs
+    └── integration_test.rs
+```
+
+This is the older naming convention that Rust also understands. Naming the file this way tells Rust not to treat the `common` module as an integration test file. Files in subdirectories of the tests directory don't get compiled as separate crates or have sections in the test output.
+
+After we've created _tests/common/mod.rs_, we can use it from any of the integration test files as a module.
+
+Filename: tests/integration_test.rs
+
+```rust
+use adder;
+
+mod common;
+
+#[test]
+fn it_adds_two() {
+    common::setup();
+    assert_eq!(4, adder::add_two(2));
+}
+```
+
+##### Integration Tests for Binary Crates
+
+If our project is a binary crate that only contains a _src/main.rs_ file and doesn't have a _src/lib.rs_ file, we can't create integration tests in the _tests_ directory and bring functions defined in the _src/main.rs_ file into scope with a `use` statement. Only library crates expose functions that other crates can use; binary crates are meant to be run on their own.
