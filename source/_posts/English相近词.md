@@ -445,6 +445,34 @@ categories: English
 
   clutch v. 紧紧地抓住 n. 紧握；离合器；手包；一窝蛋 adj. 关键时刻（游戏或比赛）
 
+- abstract adj. 抽象的；抽象艺术的 v. 抽象；抽取；总结 n. 摘要；抽象艺术作品；抽象
+
+  attract v. 吸引
+
+  contract n. 合同 v. 减小；签订协议；感染；欠债
+
+  detract v. 减损；转移注意
+
+  distract v. 分散注意
+
+  extract v. 提取 n. 摘要；精华
+
+  protract v. 延长
+
+  retract v. 收回；撤回
+
+- stain v. n. 污染，玷污 n. 染色
+
+  strain v. 竭力，拉伤，拉紧；过滤 n. 拉力；拉伤；紧张；一段音乐；种群；一种特定气质
+
+- strip v. 剥下，脱下；洗劫；剥夺 n. 脱衣舞；条；连环画
+
+  stripe n. 条纹；军章；类型 v. 用条纹标记
+
+- prestige n. 声望
+
+  privilege n. 特权 v. 授予特权
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -932,6 +960,16 @@ categories: English
   rally v. 部队集结；恢复（健康）；拉力；逗弄 n. 集会（反对或表达政见）；拉力；反弹（衰退后快速恢复）
 
   strike v. n. 击打；罢工（不一定是游行形式，常与上几个词汇出现在新闻中）
+
+- 表“破坏”，“损毁”
+
+  destroy v. 破坏
+
+  devastate v. 损毁
+
+  ruin n. 废墟 v. 摧毁
+
+  wreck n. 失事 v. 击毁
 
 ## 反义词
 

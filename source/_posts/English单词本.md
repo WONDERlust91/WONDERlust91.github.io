@@ -1123,7 +1123,7 @@ categories: English
 
       _"we're chopping money like we're just plucking it from a tree"_
 
-  13. noun(WET AFRICAN): a small dish that can conveniently be eaten with the fingers, typically served as an appetizer.
+  13. noun(WEST AFRICAN): a small dish that can conveniently be eaten with the fingers, typically served as an appetizer.
 
       _"wedding guests have come to expect a good selection of mouthwatering small chops"_
 
@@ -1204,6 +1204,16 @@ categories: English
   1. noun: the mental action or process of acquiring knowledge and understanding through thought, experience, and the senses. 通过思想、经验和感官获取知识和理解的心理活动或过程，即认知。
 
      - a perception, sensation, idea, or intuition resulting from the process of cognition. 由认知过程产生的知觉、感觉、想法或直觉。
+
+- college
+
+  1. noun: an educational institution or establishment, in particular one providing higher education or specialized professional or vocational training.
+
+     _"my brother wanted to go to college"_
+
+  2. noun: an organized group of professional people with particular aims, duties, and privileges.
+
+     _"the electoral college"_
 
 - column
 
@@ -2195,11 +2205,19 @@ categories: English
 
   1. adjective: very fine in texture or structure; of intricate workmanship or quality. 材质或结构上非常精细；复杂的工艺或质量。
 
+     _"a spider's web, strong yet delicate"_
+
   2. adjective: easily broken or damaged; fragile. 易损坏的；脆弱的。
+
+     _"delicate china"_
 
   3. adjective: requiring sensitive or careful handling. 需要敏感或小心的处理。
 
+     _"delicate negotiations"_
+
   4. noun(INFORMAL): a delicate fabric or garment made of such fabric. 精致的织物或由这样的织物制成的衣服。
+
+     _"the delicates cycle of a washing machine"_
 
   5. phrase: in a delicate condition - pregnant. 怀孕。
 
@@ -2341,13 +2359,21 @@ categories: English
 
 - diffuse
 
-  1. verb: spread or cause to spread over a wide area or among a large number of people.
+  1. verb: spread over a wide area or between a large number of people.
 
      _"technologies diffuse rapidly"_
 
   2. adjective: spread out over a large area; not concentrated.
 
      _"the diffuse community centered on the church"_
+
+     - (of disease) not localized in the body.
+
+       _"diffuse hyperplasia"_
+
+  3. adjective: lacking clarity or conciseness.
+
+     _"the second argument is more diffuse"_
 
 - dig
 
@@ -3145,6 +3171,20 @@ categories: English
 
   2. adjective: (of a volcano) not having erupted in recorded history. （火山）在历史记载中没有爆发过。
 
+- extract
+
+  1. verb: remove or take out, especially by effort or force.
+
+     _"the decayed tooth will have to be extracted"_
+
+  2. noun: a short passage taken from a piece of writing, music, or film.
+
+     _"an extract from a historical film"_
+
+  3. noun: a preparation containing the active ingredient of a substance in concentrated form.
+
+     _"vanilla extract"_
+
 - extravagant
 
   1. adjective: lacking restraint in spending money or using resources. 在花钱或使用资源方面缺乏节制。
@@ -3761,7 +3801,11 @@ categories: English
 
   1. noun: a basket with a carrying handle and a hinged lid, used for food, cutlery, and plates on a picnic. (NORTH AMERICAN) used for laundry. 带提手和铰链式盖子的篮子，用于盛放野餐时的食物、刀具和盘子。（北美）用于洗衣服。
 
+     _"a laundry hamper"_
+
   2. verb: hinder or impede the movement or progress of. 阻碍运动或进程。
+
+     _"their work is hampered by lack of funds"_
 
   3. noun: necessary but cumbersome equipment on a ship. 船上必要但笨重的设备。
 
@@ -3784,6 +3828,16 @@ categories: English
      - involving or offering active participation rather than theory.
 
        _"hands-on in-service training"_
+
+- handsome
+
+  1. adjective: (of a man) good-looking.
+
+  2. adjective: (of a number, sum of money, or margin) substantial.
+
+     _"elected by a handsome majority"_
+
+  3. phrase: handsome is as handsome does - character and behavior are more important than appearance.
 
 - hardwire
 
@@ -7199,15 +7253,17 @@ categories: English
 
      _"secular buildings"_
 
-  2. adjective(ASTRONOMY): of or denoting slow changes in the motion of the sun or planets.
+  2. adjective(CHRISTIAN CHURCH): (of clergy) not subject to or bound by religious rule; not belonging to or living in a monastic or other order.
 
-  3. adjective(ECONOMICS): (of a fluctuation or trend) occurring or persisting over an indefinitely long period.
+  3. adjective(ASTRONOMY): of or denoting slow changes in the motion of the sun or planets.
+
+  4. adjective(ECONOMICS): (of a fluctuation or trend) occurring or persisting over an indefinitely long period.
 
      _"there is evidence that the slump is not cyclical but secular"_
 
-  4. adjective: occurring once every century or similarly long period (used especially in reference to celebratory games in ancient Rome).
+  5. adjective: occurring once every century or similarly long period (used especially in reference to celebratory games in ancient Rome).
 
-  5. noun: a secular priest.
+  6. noun: a secular priest.
 
 - seeth
 
@@ -7775,6 +7831,10 @@ categories: English
 
      _"her clothing was stained with blood"_
 
+     - damage or bring disgrace to (the reputation or image of someone or something).
+
+       _"the awful events would unfairly stain the city's reputation"_
+
   2. verb: color (a material or object) by applying a penetrative dye or chemical.
 
      _"wood can always be stained to a darker shade"_
@@ -7782,6 +7842,10 @@ categories: English
   3. noun: a colored patch or dirty mark that is difficult to remove.
 
      _"there were mud stains on my shoes"_
+
+     - a thing that damages or brings disgrace to someone or something's reputation.
+
+       _"he regarded his time in jail as a stain on his character"_
 
   4. noun: a penetrative dye or chemical used in coloring a material or object.
 
@@ -7923,19 +7987,55 @@ categories: English
 
   1. verb: force (a part of one's body or oneself) to make a strenuous or unusually great effort. 强迫（身体的一部分或自己）做出艰苦的或异常巨大的努力。
 
+     _"I stopped and listened, straining my ears for any sound"_
+
+     - make an unusually great effort.
+
+       _"his voice was so quiet that I had to strain to hear it"_
+
+     - injure (a limb, muscle, or organ) by overexerting it.
+
+       _"on cold days you are more likely to strain a muscle"_
+
+     - make severe or excessive demands on.
+
+       _"he strained her tolerance to the limit"_
+
+     - pull or push forcibly at something.
+
+       _"the bear strained at the chain around its neck"_
+
+     - stretch (something) tightly.
+
+       _"the barbed wire fence was strained to posts six feet high"_
+
+     - (ARCHAIC) embrace (someone) tightly.
+
+       _"she strained the infant to her bosom again"_
+
   2. verb: pour (a mainly liquid substance) through a porous or perforated device or material in order to separate out any solid matter. 倾倒（主要是液体物质）通过多孔或穿孔的装置或材料，以分离出任何固体物质。
+
+     _"strain the custard into a bowl"_
 
   3. noun: a force tending to pull or stretch something to an extreme or damaging degree. 倾向于牵拉或拉伸某物到极端或损坏程度的力。
 
+     _"the usual type of chair puts an enormous strain on the spine"_
+
   4. noun: a servere or excessive demand on the strength, resources, or abilities of someone or something. 对某人或某物的力量，资源，或能力的严重或过度需求。
+
+     _"the accusations put a strain on relations between the two countries"_
 
   5. noun: the sound of a piece of music as it is played or performed. 一段音乐在播放或演奏时的声音。
 
+     _"the distant strains of the brass band grew louder"_
+
   6. phrase: at strain - using the utmost effort. 尽最大努力。
 
-  7. noun: a bread, stock, or variety of an animal or plant developed by breeding. 通过育种开发的动物或植物的品种，种群或种类。
+  7. noun: a particular breed, stock, or variety of an animal or plant. 动物或植物的特定品种、种群或品种。
 
   8. noun: a particular tendency as part of a person's character. 作为人性格一部分的特殊倾向。
+
+     _"there's a strain of Victorian rectitude in him"_
 
 - stress
 
@@ -8299,7 +8399,11 @@ categories: English
 
   1. adjective: likely or liable to be influenced or harmed by a particular thing. 可能或容易受到特定事物影响或伤害的。
 
+     _"patients with liver disease may be susceptible to infection"_
+
   2. adjective: capable or admitting of. 有能力或承认的。
+
+     _"the problem is not susceptible of a simple solution"_
 
 - suspension
 
