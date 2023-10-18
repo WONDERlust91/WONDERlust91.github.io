@@ -43,18 +43,22 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+syntax_highlighter: prismjs
 highlight:
   enable: false
-  line_number: true
   auto_detect: false
+  line_number: true
   tab_replace: ""
   wrap: true
+  exclude_languages: []
+  language_attr: false
   hljs: false
 prismjs:
   enable: true
   preprocess: true
   line_number: true
   tab_replace: ""
+  exclude_languages: []
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
