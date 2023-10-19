@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Typescript *.ts 文件中引入图片时报错，没有正确的类型声明webpack 都配置完成，但在 ts 文件中引入图片时报错，此时需要在全局 d.ts 文件中增加以下声明 1234567891011&#x2F;&#x2F; 全局d.ts文件中，增加声明declare module &quot;*.svg&quot;;declare module &quot;*.png&quot;;declare module">
+    <meta name="description" content="Typescript *.ts 文件中引入图片时报错，没有正确的类型声明webpack 都配置完成，但在 ts 文件中引入图片时报错，此时需要在全局 d.ts 文件中增加以下声明 &#x2F;&#x2F; 全局d.ts文件中，增加声明 declare module &quot;*.svg&quot;; declare module &quot;*.png&quot;; declare module &quot;*.jpg&quot;; declare module &quot;*.jp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="typescript中引入图片的问题">
 <meta property="og:url" content="http://wonderlust91.github.io/2021/05/06/typescript%E4%B8%AD%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="WONDER&#39;s Notes">
-<meta property="og:description" content="Typescript *.ts 文件中引入图片时报错，没有正确的类型声明webpack 都配置完成，但在 ts 文件中引入图片时报错，此时需要在全局 d.ts 文件中增加以下声明 1234567891011&#x2F;&#x2F; 全局d.ts文件中，增加声明declare module &quot;*.svg&quot;;declare module &quot;*.png&quot;;declare module">
+<meta property="og:description" content="Typescript *.ts 文件中引入图片时报错，没有正确的类型声明webpack 都配置完成，但在 ts 文件中引入图片时报错，此时需要在全局 d.ts 文件中增加以下声明 &#x2F;&#x2F; 全局d.ts文件中，增加声明 declare module &quot;*.svg&quot;; declare module &quot;*.png&quot;; declare module &quot;*.jpg&quot;; declare module &quot;*.jp">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-05-06T17:01:06.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.264Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.738Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="图片">
 <meta property="article:tag" content="typescript">
@@ -228,7 +228,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,20 +241,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/05/06/typescript%E4%B8%AD%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E9%97%AE%E9%A2%98/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/05/06/typescript中引入图片的问题/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -264,7 +250,17 @@
     
     
     <div class="post-body" itemprop="articleBody"><h2 id="Typescript-ts-文件中引入图片时报错，没有正确的类型声明"><a href="#Typescript-ts-文件中引入图片时报错，没有正确的类型声明" class="headerlink" title="Typescript *.ts 文件中引入图片时报错，没有正确的类型声明"></a>Typescript *.ts 文件中引入图片时报错，没有正确的类型声明</h2><p>webpack 都配置完成，但在 ts 文件中引入图片时报错，此时需要在全局 d.ts 文件中增加以下声明</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全局d.ts文件中，增加声明</span></span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.svg&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.png&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.jpg&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.jpeg&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.gif&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.bmp&quot;</span>;</span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;*.tiff&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样引入图片时就不会报类型错误了</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Img</span> <span class="keyword">from</span> <span class="string">&quot;../xxx.png&quot;</span>;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 全局d.ts文件中，增加声明</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">"*.svg"</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">"*.png"</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">"*.jpg"</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">"*.jpeg"</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">"*.gif"</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">"*.bmp"</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">"*.tiff"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 这样引入图片时就不会报类型错误了</span>
+<span class="token keyword">import</span> Img <span class="token keyword">from</span> <span class="token string">"../xxx.png"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
     </div>
 
@@ -301,11 +297,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -361,8 +352,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

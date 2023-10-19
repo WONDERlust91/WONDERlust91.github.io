@@ -222,7 +222,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -235,20 +235,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/11/08/vue%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/08/vue在服务器环境使用相对路径/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -259,7 +245,10 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="vue-使用相对路径"><a href="#vue-使用相对路径" class="headerlink" title="vue 使用相对路径"></a>vue 使用相对路径</h1><p>当服务器下不单单运行一个项目时，根目录下会有多个项目，vue 使用默认的根路径打包项目时，项目中文件的依赖会去根目录下查找，而出现找不到当前路径下所依赖的 js 与 css 文件的情况，故应在 vue.config.js 中将默认的基础路径设置为相对路径，即可在多项目服务器下正确运行了。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">export</span> = &#123;</span><br><span class="line">  <span class="comment">// 默认的baseUrl为&quot;/&quot;</span></span><br><span class="line">  <span class="attr">baseUrl</span>: <span class="string">&quot;./&quot;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>export <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 默认的baseUrl为"/"</span>
+  <span class="token literal-property property">baseUrl</span><span class="token operator">:</span> <span class="token string">"./"</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="切记！！！-vue-history-模式不要使用相对路径的-baseUrl"><a href="#切记！！！-vue-history-模式不要使用相对路径的-baseUrl" class="headerlink" title="切记！！！ vue history 模式不要使用相对路径的 baseUrl"></a><strong>切记！！！</strong> vue history 模式不要使用相对路径的 baseUrl</h2><blockquote>
 <h2 id="相对-baseUrl-的限制"><a href="#相对-baseUrl-的限制" class="headerlink" title="相对 baseUrl 的限制"></a>相对 baseUrl 的限制</h2><p>相对路径的 baseUrl 有一些使用上的限制。在以下情况下，应当避免使用相对 baseUrl:</p>
@@ -270,7 +259,11 @@
 </blockquote>
 <p>history 模式要对服务器进行配置，详见<a target="_blank" rel="noopener" href="https://router.vuejs.org/zh/guide/essentials/history-mode.html#%E5%90%8E%E7%AB%AF%E9%85%8D%E7%BD%AE%E4%BE%8B%E5%AD%90">官方文档</a></p>
 <h2 id="2019-年-3-月-8-日更新"><a href="#2019-年-3-月-8-日更新" class="headerlink" title="2019 年 3 月 8 日更新"></a>2019 年 3 月 8 日更新</h2><p>由于项目几乎都不会放在根目录下，而且项目都需要使用 history 模式，故无法在基础路径中使用相对路径，因此应该尽量约定好项目在服务器上的目录名，并在基础路径上以绝对路径方式配置。注意，vue-cli 3.3 版本后使用 publicPath 替代了原来 vue.config.js 中 baseUrl 的配置。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">publicPath</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;production&#x27;</span></span><br><span class="line">    ? <span class="string">&#x27;/production-sub-path/&#x27;</span></span><br><span class="line">    : <span class="string">&#x27;/&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">publicPath</span><span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">'production'</span>
+    <span class="token operator">?</span> <span class="token string">'/production-sub-path/'</span>
+    <span class="token operator">:</span> <span class="token string">'/'</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -333,7 +326,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -346,20 +339,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/11/08/iview%E5%AE%9A%E5%88%B6%E4%B8%BB%E9%A2%98/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/08/iview定制主题/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -370,13 +349,27 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>如果你的项目使用了 webpack 工程，可以通过变量覆盖的方式来实现主题定制。首先在项目中先建一个目录，比如 my-theme，然后在 my-theme 下建立一个 less 文件 index.less，并写入下面内容：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;~iview/src/styles/index.less&#x27;</span>;</span><br><span class="line"><span class="comment">/* 例子 */</span></span><br><span class="line"><span class="comment">/* 完整的变量列表可以查看 默认样式变量。 */</span></span><br><span class="line"><span class="keyword">@primary-color</span>: #<span class="number">8</span>c0776;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">@import &#39;~iview&#x2F;src&#x2F;styles&#x2F;index.less&#39;;
+&#x2F;* 例子 *&#x2F;
+&#x2F;* 完整的变量列表可以查看 默认样式变量。 *&#x2F;
+@primary-color: #8c0776;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后在入口文件 main.js 内导入这个 less 文件即可：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> iView <span class="keyword">from</span> <span class="string">&quot;iview&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;../my-theme/index.less&quot;</span>;</span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(iView);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> iView <span class="token keyword">from</span> <span class="token string">"iview"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"../my-theme/index.less"</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>iView<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意: 要在项目中使用 npm 安装 less 与 less-loader 否则运行和打包时都会报错，在 vue 新的版本中可能安装 less 和 less-loader 后还会报 inline javascript is not enabled. 可以在 vue.config.js 配置文件中写入如下配置来解决：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">css</span>: &#123;</span><br><span class="line">    <span class="attr">loaderOptions</span>: &#123;</span><br><span class="line">      <span class="attr">less</span>: &#123;</span><br><span class="line">        <span class="attr">javascriptEnabled</span>: <span class="literal">true</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">css</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">loaderOptions</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">less</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">javascriptEnabled</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -439,7 +432,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -452,20 +445,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/10/21/scss%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/10/21/scss学习笔记/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -476,7 +455,25 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>&amp;符号代表当前元素</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#main</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">    <span class="selector-tag">a</span> &#123;</span><br><span class="line">        <span class="attribute">font-weight</span>: bold;</span><br><span class="line">        &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">            <span class="attribute">color</span>: red;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// is compiled to</span></span><br><span class="line"><span class="selector-id">#main</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token selector">#main </span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+    <span class="token selector">a </span><span class="token punctuation">&#123;</span>
+        <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+        <span class="token selector"><span class="token parent important">&amp;</span>:hover </span><span class="token punctuation">&#123;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">// is compiled to</span>
+<span class="token selector">#main </span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">#main a </span><span class="token punctuation">&#123;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">#main a:hover </span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -539,7 +536,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -552,20 +549,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/10/21/iview%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98%E6%8A%A5%E9%94%99/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/10/21/iview自定义主题报错/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -576,10 +559,19 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="iview-自定义主题报错"><a href="#iview-自定义主题报错" class="headerlink" title="iview 自定义主题报错"></a>iview 自定义主题报错</h1><p>首先确认安装了 less 和 less-loader，如果仍然报错，且报错为 Inline Javascript is not enabled. Is it set in your option? 这说明 less-loader 的配置没有开启行内使用 Js。应该在 vue.config.js 中设置，由于 vue-cli3.0 后，vue.config.js 不再默认出现在文件目录中，所以要手动新建该文件。然后在文件中设置开启 inline Javascript 如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">css</span>: &#123;</span><br><span class="line">        <span class="attr">loaderOptions</span>: &#123;</span><br><span class="line">            <span class="comment">// 向 CSS 相关的 loader 传递选项</span></span><br><span class="line">            <span class="attr">less</span>: &#123;</span><br><span class="line">                <span class="attr">javascriptEnabled</span>: <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">css</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">loaderOptions</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">// 向 CSS 相关的 loader 传递选项</span>
+            <span class="token literal-property property">less</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+                <span class="token literal-property property">javascriptEnabled</span><span class="token operator">:</span> <span class="token boolean">true</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>若是 vue2.X 版本则应该在 webpack.base.config.js 中配置如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">loader</span>: <span class="string">&#x27;less-loader&#x27;</span>, <span class="attr">options</span>: &#123; <span class="attr">javascriptEnabled</span>: <span class="literal">true</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span> <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'less-loader'</span><span class="token punctuation">,</span> <span class="token literal-property property">options</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">javascriptEnabled</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
       
     </div>
@@ -642,7 +634,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -654,20 +646,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/10/21/css%E5%AD%90%E5%85%83%E7%B4%A0%E6%A0%B9%E6%8D%AE%E7%88%B6%E5%85%83%E7%B4%A0%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/10/21/css子元素根据父元素绝对定位/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -742,7 +720,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -754,20 +732,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/10/21/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8Fscroll-view%E4%B8%8EwindowHeight/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/10/21/微信小程序scroll-view与windowHeight/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -848,7 +812,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -861,20 +825,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/10/20/vscode%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E4%B8%8Evue%E9%A1%B9%E7%9B%AE%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/10/20/vscode用户配置与vue项目通用配置/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -884,10 +834,65 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="用户文件配置"><a href="#用户文件配置" class="headerlink" title="用户文件配置"></a>用户文件配置</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// 设置编辑器的tabSize为2</span></span><br><span class="line">    <span class="attr">&quot;editor.tabSize&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// 关闭基于文件自动检测tabSize与insertSpaces</span></span><br><span class="line">    <span class="attr">&quot;editor.detectIndentation&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// 使用prettier格式化vue中的html</span></span><br><span class="line">    <span class="attr">&quot;vetur.format.defaultFormatter.html&quot;</span><span class="punctuation">:</span> <span class="string">&quot;prettier&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// 不使用vetur的简化版eslint-plugin-vue检查template中的html，因为会报x-invalid-end-tag</span></span><br><span class="line">    <span class="attr">&quot;vetur.validation.template&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// 文件路径改变后自动更新import</span></span><br><span class="line">    <span class="attr">&quot;typescript.updateImportsOnFileMove.enabled&quot;</span><span class="punctuation">:</span> <span class="string">&quot;always&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;javascript.updateImportsOnFileMove.enabled&quot;</span><span class="punctuation">:</span> <span class="string">&quot;always&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// 防止api-extractor init出的json文件中有注释而报错</span></span><br><span class="line">    <span class="attr">&quot;files.associations&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;*.json&quot;</span><span class="punctuation">:</span> <span class="string">&quot;jsonc&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+          <h2 id="用户文件配置"><a href="#用户文件配置" class="headerlink" title="用户文件配置"></a>用户文件配置</h2><pre class="line-numbers language-JSON" data-language="JSON"><code class="language-JSON">&#123;
+    &#x2F;&#x2F; 设置编辑器的tabSize为2
+    &quot;editor.tabSize&quot;: 2,
+    &#x2F;&#x2F; 关闭基于文件自动检测tabSize与insertSpaces
+    &quot;editor.detectIndentation&quot;: false,
+    &#x2F;&#x2F; 使用prettier格式化vue中的html
+    &quot;vetur.format.defaultFormatter.html&quot;: &quot;prettier&quot;,
+    &#x2F;&#x2F; 不使用vetur的简化版eslint-plugin-vue检查template中的html，因为会报x-invalid-end-tag
+    &quot;vetur.validation.template&quot;: false,
+    &#x2F;&#x2F; 文件路径改变后自动更新import
+    &quot;typescript.updateImportsOnFileMove.enabled&quot;: &quot;always&quot;,
+    &quot;javascript.updateImportsOnFileMove.enabled&quot;: &quot;always&quot;,
+    &#x2F;&#x2F; 防止api-extractor init出的json文件中有注释而报错
+    &quot;files.associations&quot;: &#123;
+      &quot;*.json&quot;: &quot;jsonc&quot;
+    &#125;,
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="ESlint-的-rules-文件配置"><a href="#ESlint-的-rules-文件配置" class="headerlink" title="ESlint 的 rules 文件配置"></a>ESlint 的 rules 文件配置</h2><p>使用配置前确保项目中使用 npm 安装了 eslint，eslint-plugin-vue 等包，以及 vetur，prettier 等 vscode 插件，现在 3.3 版本的 vue cli 已安装 eslint-plugin-vue。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">root</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">env</span>: &#123;</span><br><span class="line">    <span class="attr">node</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">extends</span>: [<span class="string">&quot;plugin:vue/essential&quot;</span>, <span class="string">&quot;@vue/prettier&quot;</span>],</span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">    <span class="string">&quot;no-console&quot;</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span> ? <span class="string">&quot;error&quot;</span> : <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;no-debugger&quot;</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span> ? <span class="string">&quot;error&quot;</span> : <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="comment">// 不检查iview等UI框架的“x-invalid-end-tag”错误，使用vetur简化版禁用不全，应安装eslint-plugin-vue</span></span><br><span class="line">    <span class="string">&quot;vue/no-parsing-error&quot;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="string">&quot;x-invalid-end-tag&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">/* // 现已使用两个空格缩进，下面4空格设置废弃</span></span><br><span class="line"><span class="comment">        // 对vue文件中的html缩进检查设置为4</span></span><br><span class="line"><span class="comment">        &quot;vue/html-indent&quot;: [</span></span><br><span class="line"><span class="comment">            &quot;error&quot;,</span></span><br><span class="line"><span class="comment">            4,</span></span><br><span class="line"><span class="comment">            &#123;</span></span><br><span class="line"><span class="comment">                &quot;attribute&quot;: 1,</span></span><br><span class="line"><span class="comment">                &quot;closeBracket&quot;: 0,</span></span><br><span class="line"><span class="comment">                &quot;alignAttributesVertically&quot;: true,</span></span><br><span class="line"><span class="comment">                &quot;ignores&quot;: []</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        ],</span></span><br><span class="line"><span class="comment">        // 将prettier的缩进检查设置为4</span></span><br><span class="line"><span class="comment">        &quot;prettier/prettier&quot;: [</span></span><br><span class="line"><span class="comment">            &quot;error&quot;,</span></span><br><span class="line"><span class="comment">            &#123;</span></span><br><span class="line"><span class="comment">                tabWidth: 4</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        ] */</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">parserOptions</span>: &#123;</span><br><span class="line">    <span class="attr">parser</span>: <span class="string">&quot;babel-eslint&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">root</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">env</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">node</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"plugin:vue/essential"</span><span class="token punctuation">,</span> <span class="token string">"@vue/prettier"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"no-console"</span><span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">"production"</span> <span class="token operator">?</span> <span class="token string">"error"</span> <span class="token operator">:</span> <span class="token string">"off"</span><span class="token punctuation">,</span>
+    <span class="token string-property property">"no-debugger"</span><span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">"production"</span> <span class="token operator">?</span> <span class="token string">"error"</span> <span class="token operator">:</span> <span class="token string">"off"</span><span class="token punctuation">,</span>
+    <span class="token comment">// 不检查iview等UI框架的“x-invalid-end-tag”错误，使用vetur简化版禁用不全，应安装eslint-plugin-vue</span>
+    <span class="token string-property property">"vue/no-parsing-error"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token number">2</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token string-property property">"x-invalid-end-tag"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment">/* // 现已使用两个空格缩进，下面4空格设置废弃
+        // 对vue文件中的html缩进检查设置为4
+        "vue/html-indent": [
+            "error",
+            4,
+            &#123;
+                "attribute": 1,
+                "closeBracket": 0,
+                "alignAttributesVertically": true,
+                "ignores": []
+            &#125;
+        ],
+        // 将prettier的缩进检查设置为4
+        "prettier/prettier": [
+            "error",
+            &#123;
+                tabWidth: 4
+            &#125;
+        ] */</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">parserOptions</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">parser</span><span class="token operator">:</span> <span class="token string">"babel-eslint"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <p>默认已经安装 vetur 插件</p>
@@ -953,7 +958,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -965,20 +970,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/10/20/npm%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/10/20/npm使用淘宝镜像/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -992,14 +983,18 @@
           <p>由于国外镜像太慢，所以使用国内的淘宝npm镜像</p>
 <p>方法一：命令行修改npm配置</p>
 <p>更换registry为淘宝镜像地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更换镜像</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org/</span><br><span class="line"><span class="comment"># 检查更换是否成功</span></span><br><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 更换镜像</span>
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org/
+<span class="token comment"># 检查更换是否成功</span>
+<span class="token function">npm</span> config get registry<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>方法二：直接修改npm配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开npm配置文件</span></span><br><span class="line">npm config edit</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 打开npm配置文件</span>
+<span class="token function">npm</span> config edit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>将 registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npmjs.org/">https://registry.npmjs.org/</a> 更换为 registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org/</a></p>
 <p>注意：将npm源更换为淘宝源后，npm search功能会报错，只能使用npm install功能。可以在使用npm search的时候手动临时使用官方源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm search packageName --registry=https//registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> search packageName <span class="token parameter variable">--registry</span><span class="token operator">=</span>https//registry.npmjs.org/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
       
     </div>
 
@@ -1061,7 +1056,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1074,20 +1069,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/06/15/javascript%E9%97%AD%E5%8C%85%E4%B8%8EIIFE/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/06/15/javascript闭包与IIFE/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -1098,7 +1079,12 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>先来看看这段代码是否能正确运行，我们期望的结果是输出“5，4， 3， 2， 1， go!”</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">5</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i === <span class="number">0</span> ? <span class="string">&#x27;go!&#x27;</span> : i);</span><br><span class="line">  &#125;, (<span class="number">5</span> - i) * <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 延时输出了6个-1</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token string">'go!'</span> <span class="token operator">:</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">-</span> i<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">// 延时输出了6个-1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>运行后发现输出了“-1， -1， -1， -1， -1，-1”，这是为什么呢？</p>
           <!--noindex-->
@@ -1170,7 +1156,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1182,20 +1168,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/06/01/windows%E6%9F%A5%E7%9C%8B%E6%BF%80%E6%B4%BB%E7%8A%B6%E6%80%81/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/06/01/windows查看激活状态/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -1295,8 +1267,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

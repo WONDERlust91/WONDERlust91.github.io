@@ -28,7 +28,7 @@
 <meta property="og:description" content="Error 对象JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。JavaScript 原生提供 Error 构造函数，所有抛出的错误都是这个构造函数的实例。 属性ECMA-262 规定了 Error 对象包括两个属性：message 和 name。message 保存错误的信息，而 name 保存错误类型。浏览器厂商还对 error 对象属性做了扩展，添加了其他相关信息">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-04T13:55:10.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.260Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.738Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="javascript">
 <meta property="article:tag" content="Error">
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,20 +241,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/06/04/javascript%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/06/04/javascript错误处理机制/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -284,23 +270,61 @@
 <li>InternalError (deprecated，非标准) 表示引发 JavaScript 引擎内部错误时发生的错误，例如，无限递归错误</li>
 </ul>
 <h3 id="自定义错误类型"><a href="#自定义错误类型" class="headerlink" title="自定义错误类型"></a>自定义错误类型</h3><p>除原生提供的几种错误类型外，还可以基于基础的错误类型，定义自己的错误对象。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明自定义错误类型</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">CustomedError</span>(<span class="params">message</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">message</span> = message || <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&quot;CustomedError&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">CustomedError</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Error</span>();</span><br><span class="line"><span class="title class_">CustomedError</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">constructor</span> = <span class="title class_">CustomedError</span>;</span><br><span class="line"><span class="comment">// 使用自定义错误类型</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">CustomedError</span>(<span class="string">&quot;这是自定义的错误！&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 声明自定义错误类型</span>
+<span class="token keyword">function</span> <span class="token function">CustomedError</span><span class="token punctuation">(</span><span class="token parameter">message</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>message <span class="token operator">=</span> message <span class="token operator">||</span> <span class="token string">""</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"CustomedError"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token class-name">CustomedError</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">CustomedError</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> CustomedError<span class="token punctuation">;</span>
+<span class="token comment">// 使用自定义错误类型</span>
+<span class="token keyword">new</span> <span class="token class-name">CustomedError</span><span class="token punctuation">(</span><span class="token string">"这是自定义的错误！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>思考：这里是用原型来实现的，ES 如何用 class 来实现？</p>
 <h2 id="throw-语句"><a href="#throw-语句" class="headerlink" title="throw 语句"></a>throw 语句</h2><p>使用 throw 语句抛出异常，当抛出异常时，throw 后面所跟的表达式表示异常值，异常值可以为任何类型。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">throw</span> <span class="string">&quot;Error2&quot;</span>; <span class="comment">// generates an exception with a string value</span></span><br><span class="line"><span class="keyword">throw</span> <span class="number">42</span>; <span class="comment">// generates an exception with the value 42</span></span><br><span class="line"><span class="keyword">throw</span> <span class="literal">true</span>; <span class="comment">// generates an exception with the value true</span></span><br><span class="line"><span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;Required&quot;</span>); <span class="comment">// generates an error object with the message of Required</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">throw</span> <span class="token string">"Error2"</span><span class="token punctuation">;</span> <span class="token comment">// generates an exception with a string value</span>
+<span class="token keyword">throw</span> <span class="token number">42</span><span class="token punctuation">;</span> <span class="token comment">// generates an exception with the value 42</span>
+<span class="token keyword">throw</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// generates an exception with the value true</span>
+<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"Required"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// generates an error object with the message of Required</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>特别要注意的是：<strong>抛出错误的过程是阻塞的，后续的代码将中断不会执行</strong></p>
 <h2 id="try-catch-语句"><a href="#try-catch-语句" class="headerlink" title="try catch 语句"></a>try catch 语句</h2><p>try catch 语句标记了要尝试的语句块，并定义了有异常抛出时的响应。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="comment">// 要执行的语句</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (exception_var) &#123;</span><br><span class="line">  <span class="comment">// exception_var 可选参数，throw抛出的异常变量</span></span><br><span class="line">  <span class="comment">// 若try语句块中抛出错误时需要执行的语句</span></span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">  <span class="comment">// try语句执行后，无论是否有异常抛出还是捕获，都要执行的逻辑</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 要执行的语句</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>exception_var<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// exception_var 可选参数，throw抛出的异常变量</span>
+  <span class="token comment">// 若try语句块中抛出错误时需要执行的语句</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">finally</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// try语句执行后，无论是否有异常抛出还是捕获，都要执行的逻辑</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>try catch 语句块必需包含一个 catch 或 finally 块，或两个都包括。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 包含一个catch块</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">&#125; <span class="keyword">catch</span> &#123;&#125;</span><br><span class="line"><span class="comment">// 包含一个finally块</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 都包含</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">&#125; <span class="keyword">catch</span> &#123;</span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 包含一个catch块</span>
+<span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+<span class="token comment">// 包含一个finally块</span>
+<span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">finally</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">// 都包含</span>
+<span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">finally</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>若有错误从 try 块中抛出，程序会立刻跳转至 catch 块，否则 catch 块会被跳过；finally 块总是在 try 块和 catch 块执行完成后执行，无论是否有异常抛出。</p>
 <p>你甚至可以嵌套 try catch 语句，若内部的 try 块没有对应的 catch 块，则会使用最近父级的 catch 块。</p>
 <p>一个常见的用法是只捕获一小部分预期的错误，然后在其他情况下重新抛出错误：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="comment">// 尝试执行的语句</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">  <span class="keyword">if</span> (e <span class="keyword">instanceof</span> <span class="title class_">RangeError</span>) &#123;</span><br><span class="line">    <span class="comment">// 捕获范围类型错误</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 继续抛出其他类型错误</span></span><br><span class="line">    <span class="keyword">throw</span> e;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 尝试执行的语句</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>e <span class="token keyword">instanceof</span> <span class="token class-name">RangeError</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 捕获范围类型错误</span>
+  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 继续抛出其他类型错误</span>
+    <span class="token keyword">throw</span> e<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>任何嵌套 try catch 语句中的异常都只会被最近的 catch 块捕获一次，除非这个异常再次被抛出。当然在内部抛出的任何新异常，都会被外部捕获。</p>
 <p>需要特别注意的一点是：<strong>如果 finally 块中有返回值，这个值将成为整个 try catch 语句的返回值，无论 try 块和 catch 块中有没有 return 语句。</strong>这也从侧面反映出，不论 try 块与 catch 块中是否有 return 语句，都不会影响 finally 块的执行。</p>
@@ -349,11 +373,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -409,8 +428,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

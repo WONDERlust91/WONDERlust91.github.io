@@ -28,7 +28,7 @@
 <meta property="og:description" content="函数中的参数、非参数、全局、局部变量作用域问题 给函数的参数赋值或在函数中声明与外部相同的变量都不影响外部的变量； 若在函数中，对非声明变量或非参数变量赋值，即对全局变量赋值，会改变外部的全局变量。  即函数的参数与函数中声明的变量都是在函数的内部作用域中，不影响全局作用域。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-03-14T20:26:47.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.260Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.734Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="函数">
 <meta name="twitter:card" content="summary">
@@ -227,7 +227,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,20 +239,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/03/14/javascript%E5%87%BD%E6%95%B0/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/03/14/javascript函数/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -268,10 +254,43 @@
 </ol>
 <p>即函数的参数与函数中声明的变量都是在函数的内部作用域中，不影响全局作用域。</p>
 <span id="more"></span>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">0</span>, b = <span class="number">1</span>, c = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span> (b) &#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">3</span>;</span><br><span class="line">    b = <span class="number">4</span>;</span><br><span class="line">    c = <span class="number">5</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`In foo a = <span class="subst">$&#123;a&#125;</span>, b = <span class="subst">$&#123;b&#125;</span>, c = <span class="subst">$&#123;c&#125;</span>`</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`In global a = <span class="subst">$&#123;a&#125;</span>, b = <span class="subst">$&#123;b&#125;</span>, c = <span class="subst">$&#123;c&#125;</span>`</span>);</span><br><span class="line"><span class="comment">// In foo a = 3, b = 4, c = 5</span></span><br><span class="line"><span class="comment">// In global a = 0, b = 1, c = 5</span></span><br></pre></td></tr></table></figure>
-<h4 id="javascript中基本类型是对原始值的复制，对象是引用型，被赋值的变量和原变量都是对同一对象的引用。复制型会占用更多的内存，不同变量虽然是相同的值，但使用了不同的内存地址。引用型，不同的变量引用相同内存地址的相同对象。"><a href="#javascript中基本类型是对原始值的复制，对象是引用型，被赋值的变量和原变量都是对同一对象的引用。复制型会占用更多的内存，不同变量虽然是相同的值，但使用了不同的内存地址。引用型，不同的变量引用相同内存地址的相同对象。" class="headerlink" title="javascript中基本类型是对原始值的复制，对象是引用型，被赋值的变量和原变量都是对同一对象的引用。复制型会占用更多的内存，不同变量虽然是相同的值，但使用了不同的内存地址。引用型，不同的变量引用相同内存地址的相同对象。"></a>javascript中基本类型是对原始值的复制，对象是引用型，被赋值的变量和原变量都是对同一对象的引用。复制型会占用更多的内存，不同变量虽然是相同的值，但使用了不同的内存地址。引用型，不同的变量引用相同内存地址的相同对象。</h4><h4 id="可以使用任意多个参数去调用任何一个函数，如果调用时没有传入参数，函数就会接收到一个undefined参数。"><a href="#可以使用任意多个参数去调用任何一个函数，如果调用时没有传入参数，函数就会接收到一个undefined参数。" class="headerlink" title="可以使用任意多个参数去调用任何一个函数，如果调用时没有传入参数，函数就会接收到一个undefined参数。"></a>可以使用任意多个参数去调用任何一个函数，如果调用时没有传入参数，函数就会接收到一个undefined参数。</h4><h4 id="ES6：在函数定义中使用展开操作符“…”，展开操作符之后必需为最后一个参数。展开操作符会收集多余的参数，并将多余参数放入以展开操作符后的参数命名的数组中。"><a href="#ES6：在函数定义中使用展开操作符“…”，展开操作符之后必需为最后一个参数。展开操作符会收集多余的参数，并将多余参数放入以展开操作符后的参数命名的数组中。" class="headerlink" title="ES6：在函数定义中使用展开操作符“…”，展开操作符之后必需为最后一个参数。展开操作符会收集多余的参数，并将多余参数放入以展开操作符后的参数命名的数组中。"></a>ES6：在函数定义中使用展开操作符“…”，展开操作符之后必需为最后一个参数。展开操作符会收集多余的参数，并将多余参数放入以展开操作符后的参数命名的数组中。</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">addPrefix</span>(<span class="params">prefix, ...words</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> prefixedWords = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; words.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        prefixedWords.<span class="title function_">push</span>(prefix + words[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> prefixedWords;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">addPrefix</span>(<span class="string">&quot;con&quot;</span>, <span class="string">&quot;verse&quot;</span>, <span class="string">&quot;vex&quot;</span>)</span><br><span class="line"><span class="comment">// prefixedWords = [&quot;converse&quot;, &quot;convex&quot;]</span></span><br></pre></td></tr></table></figure>
-<h4 id="ES6：函数作为对象属性的快捷语法"><a href="#ES6：函数作为对象属性的快捷语法" class="headerlink" title="ES6：函数作为对象属性的快捷语法"></a>ES6：函数作为对象属性的快捷语法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> o = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;Wallace&quot;</span>,</span><br><span class="line">    <span class="attr">bark</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123; <span class="keyword">return</span> <span class="string">&quot;Woof!&quot;</span>; &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 上述对象写法等效于</span></span><br><span class="line"><span class="keyword">const</span> o = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;Wallace&quot;</span>,</span><br><span class="line">    <span class="title function_">bark</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> <span class="string">&quot;Woof!&quot;</span>; &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="具名立即调用函数表达式（具名IIFE）对自身再赋值"><a href="#具名立即调用函数表达式（具名IIFE）对自身再赋值" class="headerlink" title="具名立即调用函数表达式（具名IIFE）对自身再赋值"></a>具名立即调用函数表达式（具名IIFE）对自身再赋值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>)&#123; <span class="comment">// a是函数</span></span><br><span class="line">    a = <span class="number">1</span>; <span class="comment">// a被赋值为1</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 1</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="title function_">a</span>();</span><br><span class="line">(<span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>)&#123; <span class="comment">// a是函数表达式</span></span><br><span class="line">    a = <span class="number">1</span>; <span class="comment">// 这句不执行，无效</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// function a()&#123;...&#125;</span></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">foo</span> <span class="token punctuation">(</span><span class="token parameter">b</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    b <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    c <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">In foo a = </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>a<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">, b = </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>b<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">, c = </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>c<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">In global a = </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>a<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">, b = </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>b<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">, c = </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>c<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// In foo a = 3, b = 4, c = 5</span>
+<span class="token comment">// In global a = 0, b = 1, c = 5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="javascript中基本类型是对原始值的复制，对象是引用型，被赋值的变量和原变量都是对同一对象的引用。复制型会占用更多的内存，不同变量虽然是相同的值，但使用了不同的内存地址。引用型，不同的变量引用相同内存地址的相同对象。"><a href="#javascript中基本类型是对原始值的复制，对象是引用型，被赋值的变量和原变量都是对同一对象的引用。复制型会占用更多的内存，不同变量虽然是相同的值，但使用了不同的内存地址。引用型，不同的变量引用相同内存地址的相同对象。" class="headerlink" title="javascript中基本类型是对原始值的复制，对象是引用型，被赋值的变量和原变量都是对同一对象的引用。复制型会占用更多的内存，不同变量虽然是相同的值，但使用了不同的内存地址。引用型，不同的变量引用相同内存地址的相同对象。"></a>javascript中基本类型是对原始值的复制，对象是引用型，被赋值的变量和原变量都是对同一对象的引用。复制型会占用更多的内存，不同变量虽然是相同的值，但使用了不同的内存地址。引用型，不同的变量引用相同内存地址的相同对象。</h4><h4 id="可以使用任意多个参数去调用任何一个函数，如果调用时没有传入参数，函数就会接收到一个undefined参数。"><a href="#可以使用任意多个参数去调用任何一个函数，如果调用时没有传入参数，函数就会接收到一个undefined参数。" class="headerlink" title="可以使用任意多个参数去调用任何一个函数，如果调用时没有传入参数，函数就会接收到一个undefined参数。"></a>可以使用任意多个参数去调用任何一个函数，如果调用时没有传入参数，函数就会接收到一个undefined参数。</h4><h4 id="ES6：在函数定义中使用展开操作符“…”，展开操作符之后必需为最后一个参数。展开操作符会收集多余的参数，并将多余参数放入以展开操作符后的参数命名的数组中。"><a href="#ES6：在函数定义中使用展开操作符“…”，展开操作符之后必需为最后一个参数。展开操作符会收集多余的参数，并将多余参数放入以展开操作符后的参数命名的数组中。" class="headerlink" title="ES6：在函数定义中使用展开操作符“…”，展开操作符之后必需为最后一个参数。展开操作符会收集多余的参数，并将多余参数放入以展开操作符后的参数命名的数组中。"></a>ES6：在函数定义中使用展开操作符“…”，展开操作符之后必需为最后一个参数。展开操作符会收集多余的参数，并将多余参数放入以展开操作符后的参数命名的数组中。</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">addPrefix</span><span class="token punctuation">(</span><span class="token parameter">prefix<span class="token punctuation">,</span> <span class="token operator">...</span>words</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> prefixedWords <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> words<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        prefixedWords<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>prefix <span class="token operator">+</span> words<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> prefixedWords<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token function">addPrefix</span><span class="token punctuation">(</span><span class="token string">"con"</span><span class="token punctuation">,</span> <span class="token string">"verse"</span><span class="token punctuation">,</span> <span class="token string">"vex"</span><span class="token punctuation">)</span>
+<span class="token comment">// prefixedWords = ["converse", "convex"]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="ES6：函数作为对象属性的快捷语法"><a href="#ES6：函数作为对象属性的快捷语法" class="headerlink" title="ES6：函数作为对象属性的快捷语法"></a>ES6：函数作为对象属性的快捷语法</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> o <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Wallace"</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">bark</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token keyword">return</span> <span class="token string">"Woof!"</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">// 上述对象写法等效于</span>
+<span class="token keyword">const</span> o <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Wallace"</span><span class="token punctuation">,</span>
+    <span class="token function">bark</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token keyword">return</span> <span class="token string">"Woof!"</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="具名立即调用函数表达式（具名IIFE）对自身再赋值"><a href="#具名立即调用函数表达式（具名IIFE）对自身再赋值" class="headerlink" title="具名立即调用函数表达式（具名IIFE）对自身再赋值"></a>具名立即调用函数表达式（具名IIFE）对自身再赋值</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span> <span class="token comment">// a是函数</span>
+    a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// a被赋值为1</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span> <span class="token comment">// a是函数表达式</span>
+    a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 这句不执行，无效</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// function a()&#123;...&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ol>
 <li>IIFE是函数表达式，不是函数</li>
 <li>函数表达式与函数不同，函数表达式的函数名只在函数内部生效，且绑定为一个常数</li>
@@ -312,11 +331,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -372,8 +386,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

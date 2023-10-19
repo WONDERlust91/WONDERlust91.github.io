@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="使用transform居中绝对定位时尽量使用transform中的translate进行定位，而不是用margin为负值进行定位，因为margin为负值的定位是必须要知道自身的宽高的，而transform中的translate可以用-50%这样的百分比。 123456789101112131415161718&#x2F;* 父元素 *&#x2F;.parent &amp;#123;    position: relative">
+    <meta name="description" content="使用transform居中绝对定位时尽量使用transform中的translate进行定位，而不是用margin为负值进行定位，因为margin为负值的定位是必须要知道自身的宽高的，而transform中的translate可以用-50%这样的百分比。 &#x2F;* 父元素 *&#x2F; .parent &amp;#123;     position: relative; &amp;#125; &#x2F;* 子元素 *&#x2F; .child">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css使用transform居中">
 <meta property="og:url" content="http://wonderlust91.github.io/2018/11/09/css%E4%BD%BF%E7%94%A8transform%E5%B1%85%E4%B8%AD/index.html">
 <meta property="og:site_name" content="WONDER&#39;s Notes">
-<meta property="og:description" content="使用transform居中绝对定位时尽量使用transform中的translate进行定位，而不是用margin为负值进行定位，因为margin为负值的定位是必须要知道自身的宽高的，而transform中的translate可以用-50%这样的百分比。 123456789101112131415161718&#x2F;* 父元素 *&#x2F;.parent &amp;#123;    position: relative">
+<meta property="og:description" content="使用transform居中绝对定位时尽量使用transform中的translate进行定位，而不是用margin为负值进行定位，因为margin为负值的定位是必须要知道自身的宽高的，而transform中的translate可以用-50%这样的百分比。 &#x2F;* 父元素 *&#x2F; .parent &amp;#123;     position: relative; &amp;#125; &#x2F;* 子元素 *&#x2F; .child">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-11-09T09:11:40.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.256Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.734Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="css">
 <meta property="article:tag" content="居中">
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -242,20 +242,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/11/09/css%E4%BD%BF%E7%94%A8transform%E5%B1%85%E4%B8%AD/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/09/css使用transform居中/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -265,7 +251,24 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="使用transform居中"><a href="#使用transform居中" class="headerlink" title="使用transform居中"></a>使用transform居中</h1><p>绝对定位时尽量使用transform中的translate进行定位，而不是用margin为负值进行定位，因为margin为负值的定位是必须要知道自身的宽高的，而transform中的translate可以用-50%这样的百分比。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 父元素 */</span></span><br><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 子元素 */</span></span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="comment">/* 水平居中 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-<span class="number">50%</span>);</span><br><span class="line">    <span class="comment">/* 垂直居中 */</span></span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">50%</span>);</span><br><span class="line">    <span class="comment">/* 可以合并写为 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 父元素 */</span>
+<span class="token selector">.parent</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* 子元素 */</span>
+<span class="token selector">.child</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token comment">/* 水平居中 */</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 垂直居中 */</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 可以合并写为 */</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>-50%<span class="token punctuation">,</span> -50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
     </div>
 
     
@@ -302,11 +305,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -362,8 +360,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

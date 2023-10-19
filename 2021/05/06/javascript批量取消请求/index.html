@@ -28,7 +28,7 @@
 <meta property="og:description" content="前端框架时代，越来越多的网站成为了单页应用，路由被前端接管，切换到新的路由，只要请求 json 数据就可以了，但随之而来，也产生了一个问题：上一个路由发出的请求还未收到响应，下一个路由又发了新的请求，而旧请求响应在新请求的响应后才到达，就会发生本应该使用新响应数据的视图却最终使用了旧响应的数据，导致内容文不对题的情况发生。 解决这个问题的思路乍一想也很简单，在路由切换时，取消所有尚未返回响应的请求">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-05-06T14:24:01.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.260Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.734Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="javascript">
 <meta property="article:tag" content="fetch">
@@ -230,7 +230,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -242,20 +242,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/05/06/javascript%E6%89%B9%E9%87%8F%E5%8F%96%E6%B6%88%E8%AF%B7%E6%B1%82/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/05/06/javascript批量取消请求/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -271,7 +257,30 @@
 
 <h2 id="fetch-取消请求"><a href="#fetch-取消请求" class="headerlink" title="fetch 取消请求"></a>fetch 取消请求</h2><p>fetch 现阶段的稳定标准尚不支持取消请求，试验性提案中有一个 signal 配置属性，配合同样处于试验性提案阶段的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/AbortController">AbortController</a> API 可以实现取消请求的效果。(主流浏览器基本均已支持该试验提案)</p>
 <p>取消 fetch 调用的示例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个 AbortController 实例，该实例具有 signal 属性</span></span><br><span class="line"><span class="keyword">const</span> controller = <span class="keyword">new</span> <span class="title class_">AbortController</span>();</span><br><span class="line"><span class="keyword">let</span> signal = controller.<span class="property">signal</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求与取消请求的按钮及事件</span></span><br><span class="line"><span class="keyword">const</span> downloadBtn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;.download&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> abortBtn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;.abort&quot;</span>);</span><br><span class="line">downloadBtn.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, fetchVideo);</span><br><span class="line">abortBtn.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// 调用 AbortController 实例的 abort 方法来取消所有使用该信号的 fetch 请求</span></span><br><span class="line">  controller.<span class="title function_">abort</span>();</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Download aborted&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fetchVideo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// 将 AbortController 实例的 signal 传递给 fetch options 的 signal 属性</span></span><br><span class="line">  <span class="title function_">fetch</span>(url, &#123; signal &#125;)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">response</span>) &#123;</span><br><span class="line">      <span class="comment">//...</span></span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="keyword">function</span> (<span class="params">e</span>) &#123;</span><br><span class="line">      reports.<span class="property">textContent</span> = <span class="string">&quot;Download error: &quot;</span> + e.<span class="property">message</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 创建一个 AbortController 实例，该实例具有 signal 属性</span>
+<span class="token keyword">const</span> controller <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AbortController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> signal <span class="token operator">=</span> controller<span class="token punctuation">.</span>signal<span class="token punctuation">;</span>
+
+<span class="token comment">// 请求与取消请求的按钮及事件</span>
+<span class="token keyword">const</span> downloadBtn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".download"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> abortBtn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".abort"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+downloadBtn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> fetchVideo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+abortBtn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 调用 AbortController 实例的 abort 方法来取消所有使用该信号的 fetch 请求</span>
+  controller<span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Download aborted"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">fetchVideo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 将 AbortController 实例的 signal 传递给 fetch options 的 signal 属性</span>
+  <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> signal <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token comment">//...</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      reports<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">"Download error: "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span>message<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="axios-取消请求"><a href="#axios-取消请求" class="headerlink" title="axios 取消请求"></a>axios 取消请求</h2><p>axios 取消请求使用了已被撤回的可取消 Promise 提案 <a target="_blank" rel="noopener" href="https://github.com/tc39/proposal-cancelable-promises">cancelable promises proposal</a>，初步的使用参考<a target="_blank" rel="noopener" href="https://github.com/axios/axios#cancellation">axios 官方文档 Cancellation</a>。</p>
 <p>axios 官网文档只涉及到了初步的使用，这里还有两点需要注意：</p>
@@ -280,7 +289,31 @@
 <li>可以在每个请求中使用不同的 CancelToken 实例，也可以全局使用一个 CancelToken，来批量取消请求；</li>
 </ol>
 <p>下面是批量取消请求的示例，这里把全局的 CancelToken 实例存储在 window.globalVar 对象下，用于全局访问</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在请求文件中，拦截所有请求，使用全局的CancelToken实例为请求添加cancelToken属性</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&quot;axios&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title class_">Axios</span> = axios.<span class="title function_">create</span>(&#123;</span><br><span class="line">  <span class="attr">baseURL</span>: baseUrl,</span><br><span class="line">  <span class="attr">withCredentials</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">timeout</span>: <span class="number">10000</span>,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 请求拦截函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">handleRequest</span>(<span class="params">req: AxiosRequestConfig</span>) &#123;</span><br><span class="line">  <span class="comment">// 请求时增加全局取消token</span></span><br><span class="line">  req.<span class="property">cancelToken</span> = <span class="variable language_">window</span>.<span class="property">globalVar</span>.<span class="property">cancelTokenSource</span>?.<span class="property">token</span>;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">handleError</span>(<span class="params">err: AxiosError</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(err);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Axios</span>.<span class="property">interceptors</span>.<span class="property">request</span>.<span class="title function_">use</span>(handleRequest, handleError);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在路由文件中，当路由改变需要批量拦截请求时</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&quot;axios&quot;</span>;</span><br><span class="line"><span class="comment">// 批量取消所有请求</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">globalVar</span>.<span class="property">cancelTokenSource</span>?.<span class="title function_">cancel</span>(<span class="string">&quot;上个请求已取消&quot;</span>);</span><br><span class="line"><span class="comment">// 重置全局CancelToken实例，防止下次发起请求时，请求仍处于被取消状态</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">globalVar</span>.<span class="property">cancelTokenSource</span> = axios.<span class="property">CancelToken</span>.<span class="title function_">source</span>();</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 在请求文件中，拦截所有请求，使用全局的CancelToken实例为请求添加cancelToken属性</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">"axios"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> Axios <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  baseURL<span class="token operator">:</span> baseUrl<span class="token punctuation">,</span>
+  withCredentials<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  timeout<span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 请求拦截函数</span>
+<span class="token keyword">function</span> <span class="token function">handleRequest</span><span class="token punctuation">(</span>req<span class="token operator">:</span> AxiosRequestConfig<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 请求时增加全局取消token</span>
+  req<span class="token punctuation">.</span>cancelToken <span class="token operator">=</span> window<span class="token punctuation">.</span>globalVar<span class="token punctuation">.</span>cancelTokenSource<span class="token operator">?.</span>token<span class="token punctuation">;</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function">handleError</span><span class="token punctuation">(</span>err<span class="token operator">:</span> AxiosError<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+Axios<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>handleRequest<span class="token punctuation">,</span> handleError<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 在路由文件中，当路由改变需要批量拦截请求时</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">"axios"</span><span class="token punctuation">;</span>
+<span class="token comment">// 批量取消所有请求</span>
+window<span class="token punctuation">.</span>globalVar<span class="token punctuation">.</span>cancelTokenSource<span class="token operator">?.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token string">"上个请求已取消"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 重置全局CancelToken实例，防止下次发起请求时，请求仍处于被取消状态</span>
+window<span class="token punctuation">.</span>globalVar<span class="token punctuation">.</span>cancelTokenSource <span class="token operator">=</span> axios<span class="token punctuation">.</span>CancelToken<span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>参考资料</p>
@@ -324,11 +357,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -384,8 +412,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

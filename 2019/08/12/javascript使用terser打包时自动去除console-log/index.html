@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="terser由于老牌工具uglify不支持es6，且uglify-es不再更新，我们选择terser作为js代码压缩工具。 123456789# 全局安装terser命令行工具npm install -g terser# 使用terserterser .&#x2F;foo.js -c pure_funcs&#x3D;[console.log],toplevel&#x3D;true -m -o bar.js# -c即compre">
+    <meta name="description" content="terser由于老牌工具uglify不支持es6，且uglify-es不再更新，我们选择terser作为js代码压缩工具。 # 全局安装terser命令行工具 npm install -g terser # 使用terser terser .&#x2F;foo.js -c pure_funcs&#x3D;[console.log],toplevel&#x3D;true -m -o bar.js # -c即compress表示普">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript使用terser打包时自动去除console.log">
 <meta property="og:url" content="http://wonderlust91.github.io/2019/08/12/javascript%E4%BD%BF%E7%94%A8terser%E6%89%93%E5%8C%85%E6%97%B6%E8%87%AA%E5%8A%A8%E5%8E%BB%E9%99%A4console-log/index.html">
 <meta property="og:site_name" content="WONDER&#39;s Notes">
-<meta property="og:description" content="terser由于老牌工具uglify不支持es6，且uglify-es不再更新，我们选择terser作为js代码压缩工具。 123456789# 全局安装terser命令行工具npm install -g terser# 使用terserterser .&#x2F;foo.js -c pure_funcs&#x3D;[console.log],toplevel&#x3D;true -m -o bar.js# -c即compre">
+<meta property="og:description" content="terser由于老牌工具uglify不支持es6，且uglify-es不再更新，我们选择terser作为js代码压缩工具。 # 全局安装terser命令行工具 npm install -g terser # 使用terser terser .&#x2F;foo.js -c pure_funcs&#x3D;[console.log],toplevel&#x3D;true -m -o bar.js # -c即compress表示普">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-08-12T13:43:15.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.260Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.734Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="terser">
 <meta property="article:tag" content="uglify">
@@ -228,7 +228,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,20 +241,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2019/08/12/javascript%E4%BD%BF%E7%94%A8terser%E6%89%93%E5%8C%85%E6%97%B6%E8%87%AA%E5%8A%A8%E5%8E%BB%E9%99%A4console-log/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/12/javascript使用terser打包时自动去除console-log/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -264,12 +250,34 @@
     
     
     <div class="post-body" itemprop="articleBody"><h2 id="terser"><a href="#terser" class="headerlink" title="terser"></a>terser</h2><p>由于老牌工具uglify不支持es6，且uglify-es不再更新，我们选择terser作为js代码压缩工具。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">全局安装terser命令行工具</span></span><br><span class="line">npm install -g terser</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用terser</span></span><br><span class="line">terser ./foo.js -c pure_funcs=[console.log],toplevel=true -m -o bar.js</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">-c即compress表示普通的压缩代码</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">pure_funcs表示删除代码中的console.log方法</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">toplevel为<span class="literal">true</span>表示只在顶级作用域压缩清理变量</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">-m即mangle会压缩变量名等等</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">-o代表输出路径</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 全局安装terser命令行工具</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> terser
+<span class="token comment"># 使用terser</span>
+terser ./foo.js <span class="token parameter variable">-c</span> <span class="token assign-left variable">pure_funcs</span><span class="token operator">=</span><span class="token punctuation">[</span>console.log<span class="token punctuation">]</span>,toplevel<span class="token operator">=</span>true <span class="token parameter variable">-m</span> <span class="token parameter variable">-o</span> bar.js
+<span class="token comment"># -c即compress表示普通的压缩代码</span>
+<span class="token comment"># pure_funcs表示删除代码中的console.log方法</span>
+<span class="token comment"># toplevel为true表示只在顶级作用域压缩清理变量</span>
+<span class="token comment"># -m即mangle会压缩变量名等等</span>
+<span class="token comment"># -o代表输出路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>其他配置可以参考terser官网</p>
 <h2 id="terser-webpack-plugin"><a href="#terser-webpack-plugin" class="headerlink" title="terser-webpack-plugin"></a>terser-webpack-plugin</h2><p>这是terser的webpack插件版。由于vue-cli工具中已经用到了terser-webpack-plugin，因此在vue-cli新建的项目中可以直接引入terser-webpack-plugin，无需安装。</p>
 <p>根据vue-cli3文档，所有对webpack的个性化配置都要写在vue.config.js中，示例如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">TerserPlugin</span> = <span class="built_in">require</span>(<span class="string">&quot;terser-webpack-plugin&quot;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">configureWebpack</span>: &#123;</span><br><span class="line">    <span class="attr">minimizer</span>: [</span><br><span class="line">      <span class="keyword">new</span> <span class="title class_">TerserPlugin</span>(&#123;</span><br><span class="line">        <span class="attr">terserOptions</span>: &#123;</span><br><span class="line">          <span class="attr">compress</span>: &#123;</span><br><span class="line">            <span class="attr">pure_funcs</span>: [<span class="string">&quot;console.log&quot;</span>]</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// vue.config.js</span>
+<span class="token keyword">const</span> TerserPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"terser-webpack-plugin"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">configureWebpack</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">minimizer</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">terserOptions</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+          <span class="token literal-property property">compress</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+            <span class="token literal-property property">pure_funcs</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"console.log"</span><span class="token punctuation">]</span>
+          <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
     </div>
 
@@ -306,11 +314,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -366,8 +369,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

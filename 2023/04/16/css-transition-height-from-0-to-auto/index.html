@@ -28,7 +28,7 @@
 <meta property="og:description" content="If you are facing issues with the transition of a element from height: 0 to height: auto, resulting in a jerky or stuck animation, there is a simple solution to this problem. The problem arises becaus">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-04-16T10:12:02.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.256Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.734Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="css">
 <meta property="article:tag" content="transition">
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,20 +241,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2023/04/16/css-transition-height-from-0-to-auto/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/04/16/css-transition-height-from-0-to-auto/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -270,7 +256,15 @@
 
 <h2 id="max-height"><a href="#max-height" class="headerlink" title="max-height"></a>max-height</h2><p>One solution to this problem is to use <code>max-height</code> instead of <code>height</code>. Set a value for <code>max-height</code> that is larger than the actual height of the element. The transition will be smooth because the browser knows the final <code>max-height</code> of the element. The <code>height</code> of the element can still be <code>auto</code>.</p>
 <p>However, be sure not to set the <code>max-height</code> value too high. The larger the value is, the faster the animation will be. For example, if the actual <code>height</code> of the element is <code>500px</code>, but you set <code>max-height</code> to <code>5000px</code>. The transition will animate from 0 to 5000 in duration time. This means that the <code>500px</code> of <code>height</code> will only use one fifth of duration time to animate. Therefore, it’s better to set the <code>max-height</code> value as close to the actual height of the element as possible to ensure that transition’s duration is accurate.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.start</span> &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">max-height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">transition</span>: max-height <span class="number">0.5s</span> ease-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.end</span> &#123;</span><br><span class="line">  <span class="comment">/* actual height is less than 500px */</span></span><br><span class="line">  <span class="attribute">max-height</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.start</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">max-height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> max-height 0.5s ease-out<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.end</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">/* actual height is less than 500px */</span>
+  <span class="token property">max-height</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <div>
   <style>
@@ -334,11 +328,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -394,8 +383,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

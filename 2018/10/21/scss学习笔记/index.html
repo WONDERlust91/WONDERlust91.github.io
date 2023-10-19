@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="&amp;符号代表当前元素 12345678910111213141516171819#main &amp;#123;    color: black;    a &amp;#123;        font-weight: bold;        &amp;:hover &amp;#123;            color: red;        &amp;#125;    &amp;#125;&amp;#125;&#x2F;&#x2F; is compi">
+    <meta name="description" content="&amp;符号代表当前元素 #main &amp;#123;     color: black;     a &amp;#123;         font-weight: bold;         &amp;:hover &amp;#123;             color: red;         &amp;#125;     &amp;#125; &amp;#125; &#x2F;&#x2F; is compiled to #main &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="scss学习笔记">
 <meta property="og:url" content="http://wonderlust91.github.io/2018/10/21/scss%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="WONDER&#39;s Notes">
-<meta property="og:description" content="&amp;符号代表当前元素 12345678910111213141516171819#main &amp;#123;    color: black;    a &amp;#123;        font-weight: bold;        &amp;:hover &amp;#123;            color: red;        &amp;#125;    &amp;#125;&amp;#125;&#x2F;&#x2F; is compi">
+<meta property="og:description" content="&amp;符号代表当前元素 #main &amp;#123;     color: black;     a &amp;#123;         font-weight: bold;         &amp;:hover &amp;#123;             color: red;         &amp;#125;     &amp;#125; &amp;#125; &#x2F;&#x2F; is compiled to #main &amp;#123;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-10-21T23:35:29.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.264Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.738Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="scss">
 <meta name="twitter:card" content="summary">
@@ -226,7 +226,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,20 +239,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/10/21/scss%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/10/21/scss学习笔记/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -262,7 +248,25 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>&amp;符号代表当前元素</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#main</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">    <span class="selector-tag">a</span> &#123;</span><br><span class="line">        <span class="attribute">font-weight</span>: bold;</span><br><span class="line">        &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">            <span class="attribute">color</span>: red;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// is compiled to</span></span><br><span class="line"><span class="selector-id">#main</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token selector">#main </span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+    <span class="token selector">a </span><span class="token punctuation">&#123;</span>
+        <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+        <span class="token selector"><span class="token parent important">&amp;</span>:hover </span><span class="token punctuation">&#123;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">// is compiled to</span>
+<span class="token selector">#main </span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">#main a </span><span class="token punctuation">&#123;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">#main a:hover </span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
     </div>
 
@@ -298,11 +302,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -358,8 +357,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

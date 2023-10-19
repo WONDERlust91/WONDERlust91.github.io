@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="依赖库及其安装Marked.js 将markdown语法的字符串解析成为html的库 raw-loader webpack插件，将.md文件做为文本引入 highlight.js 使页面上代码实现高亮的库 安装Marked.js与highlight.js依赖，将raw-loader安装为开发环境依赖 12npm install marked highlight.jsnpm install --sa">
+    <meta name="description" content="依赖库及其安装Marked.js 将markdown语法的字符串解析成为html的库 raw-loader webpack插件，将.md文件做为文本引入 highlight.js 使页面上代码实现高亮的库 安装Marked.js与highlight.js依赖，将raw-loader安装为开发环境依赖 npm install marked highlight.js npm install --sav">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript在页面中加载markdown文件">
 <meta property="og:url" content="http://wonderlust91.github.io/2019/07/01/javascript%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%8A%A0%E8%BD%BDmarkdown%E6%96%87%E4%BB%B6/index.html">
 <meta property="og:site_name" content="WONDER&#39;s Notes">
-<meta property="og:description" content="依赖库及其安装Marked.js 将markdown语法的字符串解析成为html的库 raw-loader webpack插件，将.md文件做为文本引入 highlight.js 使页面上代码实现高亮的库 安装Marked.js与highlight.js依赖，将raw-loader安装为开发环境依赖 12npm install marked highlight.jsnpm install --sa">
+<meta property="og:description" content="依赖库及其安装Marked.js 将markdown语法的字符串解析成为html的库 raw-loader webpack插件，将.md文件做为文本引入 highlight.js 使页面上代码实现高亮的库 安装Marked.js与highlight.js依赖，将raw-loader安装为开发环境依赖 npm install marked highlight.js npm install --sav">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-07-01T13:08:44.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.260Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.734Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
@@ -227,7 +227,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,20 +239,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2019/07/01/javascript%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%8A%A0%E8%BD%BDmarkdown%E6%96%87%E4%BB%B6/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/01/javascript在页面中加载markdown文件/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -266,17 +252,79 @@
 <p>raw-loader webpack插件，将.md文件做为文本引入</p>
 <p>highlight.js 使页面上代码实现高亮的库</p>
 <p>安装Marked.js与highlight.js依赖，将raw-loader安装为开发环境依赖</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install marked highlight.js</span><br><span class="line">npm install --save-dev raw-loader</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> marked highlight.js
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev raw-loader<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <span id="more"></span>
 
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>该文档基于vue-cli3生成的项目，故webpack配置项放在vue.config.js中</p>
 <h3 id="1-配置raw-loader"><a href="#1-配置raw-loader" class="headerlink" title="1. 配置raw-loader"></a>1. 配置raw-loader</h3><p>在项目根目录新建vue.config.js，并做如下配置</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">configureWebpack</span>: &#123;</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">      <span class="attr">rules</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">test</span>: <span class="regexp">/\.md%/i</span>,</span><br><span class="line">          <span class="attr">use</span>: <span class="string">&quot;raw-loader&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">configureWebpack</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">&#123;</span>
+          <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.md%</span><span class="token regex-delimiter">/</span><span class="token regex-flags">i</span></span><span class="token punctuation">,</span>
+          <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token string">"raw-loader"</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>配置完成后，就可以在项目中引入后缀为md的文件了</p>
 <h3 id="2-将-md文件载入页面"><a href="#2-将-md文件载入页面" class="headerlink" title="2.将.md文件载入页面"></a>2.将.md文件载入页面</h3><p>由于公司项目基本都在使用iview的UI框架，iview对浏览器默认样式进行了重置，所以需要重新设定诸如h1、h2、表格等css样式，这里我将重设的样式写在<a href="../files/md.less">md.less</a>中；使用highlight.js时也需要引入选择的主题样式，这里我使用了github风格的代码样式。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 使用v-html绑定解析出的html代码，将所有为markdown重写的css样式放在md-container类下，不污染全局样式 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">&quot;md-container&quot;</span> <span class="attr">v-html</span>=<span class="string">&quot;mdHTML&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 载入md文件</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> md <span class="keyword">from</span> <span class="string">&quot;@/../README.md&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 引入marked.js</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> marked <span class="keyword">from</span> <span class="string">&quot;marked&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 引入highlight.js</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> hljs <span class="keyword">from</span> <span class="string">&quot;highlight.js&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 引入github代码样式</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="string">&quot;highlight.js/styles/github.css&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 引入重写的h1、h2、table等css样式</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> <span class="string">&quot;./md.less&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">name</span>: <span class="string">&quot;md-example&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">mdHTML</span>: <span class="literal">null</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">mouted</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 设置marked</span></span></span><br><span class="line"><span class="language-javascript">    marked.<span class="title function_">setOptions</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 代码区域高亮</span></span></span><br><span class="line"><span class="language-javascript">      <span class="attr">highlight</span>: <span class="keyword">function</span>(<span class="params">code</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">return</span> <span class="string">`&lt;pre class=&quot;hljs&quot;&gt;&lt;code&gt;<span class="subst">$&#123;hljs.highlightAuto(code).value&#125;</span>&lt;/code&gt;&lt;/pre&gt;`</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// md中的空行识别为分段，默认为false</span></span></span><br><span class="line"><span class="language-javascript">      <span class="attr">breaks</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// github flavored markdown 解析为github风格的markdown，默认为true，可不设置</span></span></span><br><span class="line"><span class="language-javascript">      <span class="attr">gfm</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 若表格项为true且gfm项也为true，则以github方式解析表格，默认为true，可不设置</span></span></span><br><span class="line"><span class="language-javascript">      <span class="attr">tables</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 将解析后的html文本赋值给mdHTML</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">this</span>.<span class="property">mdHTML</span> = <span class="title function_">marked</span>(md);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 也可以将设置marked与解析赋值合并为一步</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">this</span>.<span class="property">mdHTML</span> = <span class="title function_">marked</span>(md, &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">highlight</span>: <span class="keyword">function</span>(<span class="params">code</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">return</span> <span class="string">`&lt;pre class=&quot;hljs&quot;&gt;&lt;code&gt;<span class="subst">$&#123;hljs.highlightAuto(code).value&#125;</span>&lt;/code&gt;&lt;/pre&gt;`</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">breaks</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">gfm</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">tables</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token comment">&lt;!-- 使用v-html绑定解析出的html代码，将所有为markdown重写的css样式放在md-container类下，不污染全局样式 --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md-container<span class="token punctuation">"</span></span> <span class="token attr-name">v-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mdHTML<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+<span class="token comment">// 载入md文件</span>
+<span class="token keyword">import</span> md <span class="token keyword">from</span> <span class="token string">"@/../README.md"</span><span class="token punctuation">;</span>
+<span class="token comment">// 引入marked.js</span>
+<span class="token keyword">import</span> marked <span class="token keyword">from</span> <span class="token string">"marked"</span><span class="token punctuation">;</span>
+<span class="token comment">// 引入highlight.js</span>
+<span class="token keyword">import</span> hljs <span class="token keyword">from</span> <span class="token string">"highlight.js"</span><span class="token punctuation">;</span>
+<span class="token comment">// 引入github代码样式</span>
+<span class="token keyword">import</span> <span class="token string">"highlight.js/styles/github.css"</span><span class="token punctuation">;</span>
+<span class="token comment">// 引入重写的h1、h2、table等css样式</span>
+<span class="token keyword">import</span> <span class="token string">"./md.less"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"md-example"</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">mdHTML</span><span class="token operator">:</span> <span class="token keyword">null</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token function">mouted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 设置marked</span>
+    marked<span class="token punctuation">.</span><span class="token function">setOptions</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      <span class="token comment">// 代码区域高亮</span>
+      <span class="token function-variable function">highlight</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">code</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;pre class="hljs">&lt;code></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>hljs<span class="token punctuation">.</span><span class="token function">highlightAuto</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&lt;/code>&lt;/pre></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token comment">// md中的空行识别为分段，默认为false</span>
+      <span class="token literal-property property">breaks</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token comment">// github flavored markdown 解析为github风格的markdown，默认为true，可不设置</span>
+      <span class="token literal-property property">gfm</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token comment">// 若表格项为true且gfm项也为true，则以github方式解析表格，默认为true，可不设置</span>
+      <span class="token literal-property property">tables</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 将解析后的html文本赋值给mdHTML</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mdHTML <span class="token operator">=</span> <span class="token function">marked</span><span class="token punctuation">(</span>md<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 也可以将设置marked与解析赋值合并为一步</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mdHTML <span class="token operator">=</span> <span class="token function">marked</span><span class="token punctuation">(</span>md<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+      <span class="token function-variable function">highlight</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">code</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;pre class="hljs">&lt;code></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>hljs<span class="token punctuation">.</span><span class="token function">highlightAuto</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&lt;/code>&lt;/pre></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">breaks</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">gfm</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">tables</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>这样就可以在页面上加载出md文件了，如果一些样式上还有不满意，可以自行调整<a href="../files/md.less">md.less</a>样式文件以及选择不同的highlight主题。</p>
 
@@ -314,11 +362,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -374,8 +417,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

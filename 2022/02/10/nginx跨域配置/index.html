@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="在使用 nginx 存放静态资源时，直接访问不会有问题，但是通过 fetch 去请求资源时，就会触发浏览器跨域限制。如何配置静态资源的 nginx 服务，以避免跨域问题呢？ 最简配置12345678910111213141516server &amp;#123;  # 通常不建议在 server 块下直接进行配置，因为 server 块下的 if 块内不支持 add_header，而location块下是">
+    <meta name="description" content="在使用 nginx 存放静态资源时，直接访问不会有问题，但是通过 fetch 去请求资源时，就会触发浏览器跨域限制。如何配置静态资源的 nginx 服务，以避免跨域问题呢？ 最简配置server &amp;#123;   # 通常不建议在 server 块下直接进行配置，因为 server 块下的 if 块内不支持 add_header，而location块下是支持的。   location &#x2F; &amp;#12">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx跨域配置">
 <meta property="og:url" content="http://wonderlust91.github.io/2022/02/10/nginx%E8%B7%A8%E5%9F%9F%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="WONDER&#39;s Notes">
-<meta property="og:description" content="在使用 nginx 存放静态资源时，直接访问不会有问题，但是通过 fetch 去请求资源时，就会触发浏览器跨域限制。如何配置静态资源的 nginx 服务，以避免跨域问题呢？ 最简配置12345678910111213141516server &amp;#123;  # 通常不建议在 server 块下直接进行配置，因为 server 块下的 if 块内不支持 add_header，而location块下是">
+<meta property="og:description" content="在使用 nginx 存放静态资源时，直接访问不会有问题，但是通过 fetch 去请求资源时，就会触发浏览器跨域限制。如何配置静态资源的 nginx 服务，以避免跨域问题呢？ 最简配置server &amp;#123;   # 通常不建议在 server 块下直接进行配置，因为 server 块下的 if 块内不支持 add_header，而location块下是支持的。   location &#x2F; &amp;#12">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-10T09:46:47.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.260Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.738Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="nginx">
 <meta property="article:tag" content="CORS">
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -242,20 +242,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2022/02/10/nginx%E8%B7%A8%E5%9F%9F%E9%85%8D%E7%BD%AE/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/10/nginx跨域配置/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -265,14 +251,54 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>在使用 nginx 存放静态资源时，直接访问不会有问题，但是通过 fetch 去请求资源时，就会触发浏览器跨域限制。如何配置静态资源的 nginx 服务，以避免跨域问题呢？</p>
-<h2 id="最简配置"><a href="#最简配置" class="headerlink" title="最简配置"></a>最简配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line"><span class="meta prompt_">  # </span><span class="language-bash">通常不建议在 server 块下直接进行配置，因为 server 块下的 <span class="keyword">if</span> 块内不支持 add_header，而location块下是支持的。</span></span><br><span class="line">  location / &#123;</span><br><span class="line">    # 任意 OPTIONS 预检请求，都返回成功</span><br><span class="line">    if ($request_method = &#x27;OPTIONS&#x27;) &#123;</span><br><span class="line">      # 204表示无返回内容的成功</span><br><span class="line">      return 204;</span><br><span class="line">    &#125;</span><br><span class="line">    # 增加允许跨域主机源的头</span><br><span class="line">    add_header Access-Control-Allow-Origin &quot;*&quot;; # &quot;*&quot; 为任意主机源，生产环境安全起见最好配置为具体的IP或域名</span><br><span class="line">    # 增加允许跨域请求方法的头</span><br><span class="line">    add_header Access-Control-Allow-Methods &quot;GET, POST, OPTIONS&quot;;</span><br><span class="line">    # 增加允许跨域请求头字段的头，注意如果有一些自定义增加的头如Authorization等，也要加到这个配置中</span><br><span class="line">    add_header Access-Control-Allow-Headers &quot;DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="最简配置"><a href="#最简配置" class="headerlink" title="最简配置"></a>最简配置</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">server <span class="token punctuation">&#123;</span>
+  <span class="token comment"># 通常不建议在 server 块下直接进行配置，因为 server 块下的 if 块内不支持 add_header，而location块下是支持的。</span>
+  location / <span class="token punctuation">&#123;</span>
+    <span class="token comment"># 任意 OPTIONS 预检请求，都返回成功</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$request_method</span> <span class="token operator">=</span> <span class="token string">'OPTIONS'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token comment"># 204表示无返回内容的成功</span>
+      <span class="token builtin class-name">return</span> <span class="token number">204</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment"># 增加允许跨域主机源的头</span>
+    add_header Access-Control-Allow-Origin <span class="token string">"*"</span><span class="token punctuation">;</span> <span class="token comment"># "*" 为任意主机源，生产环境安全起见最好配置为具体的IP或域名</span>
+    <span class="token comment"># 增加允许跨域请求方法的头</span>
+    add_header Access-Control-Allow-Methods <span class="token string">"GET, POST, OPTIONS"</span><span class="token punctuation">;</span>
+    <span class="token comment"># 增加允许跨域请求头字段的头，注意如果有一些自定义增加的头如Authorization等，也要加到这个配置中</span>
+    add_header Access-Control-Allow-Headers <span class="token string">"DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <span id="more"></span>
 
-<h2 id="分请求方法配置"><a href="#分请求方法配置" class="headerlink" title="分请求方法配置"></a>分请求方法配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">  if ($request_method = &#x27;OPTIONS&#x27;) &#123;</span><br><span class="line">    add_header &#x27;Access-Control-Allow-Origin&#x27; &#x27;*&#x27;;</span><br><span class="line">    add_header &#x27;Access-Control-Allow-Methods&#x27; &#x27;GET, POST, OPTIONS&#x27;;</span><br><span class="line">    add_header &#x27;Access-Control-Allow-Headers&#x27; &#x27;DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range&#x27;;</span><br><span class="line">    # 预检请求（pre-flight）信息有效期为20天</span><br><span class="line">    add_header &#x27;Access-Control-Max-Age&#x27; 1728000;</span><br><span class="line">    # 设置内容类型头</span><br><span class="line">    add_header &#x27;Content-Type&#x27; &#x27;text/plain; charset=utf-8&#x27;;</span><br><span class="line">    # 设置内容长度为0</span><br><span class="line">    add_header &#x27;Content-Length&#x27; 0;</span><br><span class="line">    return 204;</span><br><span class="line">  &#125;</span><br><span class="line">  if ($request_method ~* &quot;(GET|POST)&quot;) &#123;</span><br><span class="line">    add_header &#x27;Access-Control-Allow-Origin&#x27; &#x27;*&#x27; always; # always 参数表示无论返回码（response code）是什么，都会加上该头。</span><br><span class="line">    add_header &#x27;Access-Control-Allow-Methods&#x27; &#x27;GET, POST, OPTIONS&#x27; always;</span><br><span class="line">    add_header &#x27;Access-Control-Allow-Headers&#x27; &#x27;DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization&#x27; always;</span><br><span class="line">    # 暴露头配置，XMLHttpRequest 2 对象的 getResponseHeader() 方法只能返回简单请求的头信息，如：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma</span><br><span class="line">    # 如果需要客户端能获得自定义头与非简单请求的头，就需要把这些头都写在该配置下</span><br><span class="line">    add_header &#x27;Access-Control-Expose-Headers&#x27; &#x27;Content-Length,Content-Range,Authorization&#x27; always;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="分请求方法配置"><a href="#分请求方法配置" class="headerlink" title="分请求方法配置"></a>分请求方法配置</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">location / <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$request_method</span> <span class="token operator">=</span> <span class="token string">'OPTIONS'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    add_header <span class="token string">'Access-Control-Allow-Origin'</span> <span class="token string">'*'</span><span class="token punctuation">;</span>
+    add_header <span class="token string">'Access-Control-Allow-Methods'</span> <span class="token string">'GET, POST, OPTIONS'</span><span class="token punctuation">;</span>
+    add_header <span class="token string">'Access-Control-Allow-Headers'</span> <span class="token string">'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range'</span><span class="token punctuation">;</span>
+    <span class="token comment"># 预检请求（pre-flight）信息有效期为20天</span>
+    add_header <span class="token string">'Access-Control-Max-Age'</span> <span class="token number">1728000</span><span class="token punctuation">;</span>
+    <span class="token comment"># 设置内容类型头</span>
+    add_header <span class="token string">'Content-Type'</span> <span class="token string">'text/plain; charset=utf-8'</span><span class="token punctuation">;</span>
+    <span class="token comment"># 设置内容长度为0</span>
+    add_header <span class="token string">'Content-Length'</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token builtin class-name">return</span> <span class="token number">204</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$request_method</span> ~* <span class="token string">"(GET|POST)"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    add_header <span class="token string">'Access-Control-Allow-Origin'</span> <span class="token string">'*'</span> always<span class="token punctuation">;</span> <span class="token comment"># always 参数表示无论返回码（response code）是什么，都会加上该头。</span>
+    add_header <span class="token string">'Access-Control-Allow-Methods'</span> <span class="token string">'GET, POST, OPTIONS'</span> always<span class="token punctuation">;</span>
+    add_header <span class="token string">'Access-Control-Allow-Headers'</span> <span class="token string">'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization'</span> always<span class="token punctuation">;</span>
+    <span class="token comment"># 暴露头配置，XMLHttpRequest 2 对象的 getResponseHeader() 方法只能返回简单请求的头信息，如：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma</span>
+    <span class="token comment"># 如果需要客户端能获得自定义头与非简单请求的头，就需要把这些头都写在该配置下</span>
+    add_header <span class="token string">'Access-Control-Expose-Headers'</span> <span class="token string">'Content-Length,Content-Range,Authorization'</span> always<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="分文件类型配置"><a href="#分文件类型配置" class="headerlink" title="分文件类型配置"></a>分文件类型配置</h2><p>前面两种配置方法都是全局跨域，如果只想针对特定的文件类型配置跨域，则可按照如下方式配置：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">location ~* \.(eot|ttf|woff|woff2|geojson|json)$ &#123;</span><br><span class="line"><span class="meta prompt_">  # </span><span class="language-bash">其他跨域配置</span></span><br><span class="line">  add_header Access-Control-Allow-Origin *;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">location ~* <span class="token punctuation">\</span>.<span class="token punctuation">(</span>eot<span class="token operator">|</span>ttf<span class="token operator">|</span>woff<span class="token operator">|</span>woff2<span class="token operator">|</span>geojson<span class="token operator">|</span>json<span class="token punctuation">)</span>$ <span class="token punctuation">&#123;</span>
+  <span class="token comment"># 其他跨域配置</span>
+  add_header Access-Control-Allow-Origin *<span class="token punctuation">;</span>
+  <span class="token punctuation">..</span>.
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>参考资料</p>
@@ -316,11 +342,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -376,8 +397,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

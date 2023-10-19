@@ -28,7 +28,7 @@
 <meta property="og:description" content="循环引用，也称为循环依赖（circular dependency），通常指 a 脚本的执行依赖了 b 脚本，而 b 脚本的执行又依赖了 a 脚本。 上面概念中的举例，可以说是最简单的情况，我们很容易就能避免，但实际的项目中，依赖关系复杂了以后，很难避免。在我们不注意的情况下，就会出现 a 依赖 b，b 依赖 c，c 又依赖了 a 这样的情况。那么考虑到这样的情况不可避免，javascript 的引">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-11T19:23:53.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.260Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.738Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="循环引用">
 <meta property="article:tag" content="循环依赖">
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,20 +241,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2022/02/11/javascript%E6%A8%A1%E5%9D%97%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/11/javascript模块循环引用/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -272,15 +258,40 @@
 
 <h2 id="CommonJS-循环引用"><a href="#CommonJS-循环引用" class="headerlink" title="CommonJS 循环引用"></a>CommonJS 循环引用</h2><p>根据<a target="_blank" rel="noopener" href="https://nodejs.org/api/modules.html#cycles">NodeJS 官网给出的循环引用示例</a>，当发生循环引用时，模块的返回值可能是尚未执行完成的结果。</p>
 <p>考虑如下情况：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.js</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a starting&quot;</span>);</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">done</span> = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">const</span> b = <span class="built_in">require</span>(<span class="string">&quot;./b.js&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;in a, b.done = %j&quot;</span>, b.<span class="property">done</span>);</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">done</span> = <span class="literal">true</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a done&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// a.js</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./b.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in a, b.done = %j"</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// b.js</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;b starting&quot;</span>);</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">done</span> = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">const</span> a = <span class="built_in">require</span>(<span class="string">&quot;./a.js&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;in b, a.done = %j&quot;</span>, a.<span class="property">done</span>);</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">done</span> = <span class="literal">true</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;b done&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// b.js</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./a.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in b, a.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;main starting&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> a = <span class="built_in">require</span>(<span class="string">&quot;./a.js&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> b = <span class="built_in">require</span>(<span class="string">&quot;./b.js&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;in main, a.done = %j, b.done = %j&quot;</span>, a.<span class="property">done</span>, b.<span class="property">done</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// main.js</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"main starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./a.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./b.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in main, a.done = %j, b.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>当 main.js 加载 a.js 时，a.js 又需要加载 b.js。b.js 加载时又试图加载 a.js。为了防止无限循环加载，一份尚未完成的 a.js 的导出对象被返回给了 b.js，当 b.js 加载完成后，将 b.js 的导出对象提供给 a.js 作为模块。</p>
 <p>在 main.js 中加载了两个模块，加载过程的输出记录为：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ node main.js</span><br><span class="line"></span><br><span class="line">main starting</span><br><span class="line">a starting</span><br><span class="line">b starting</span><br><span class="line">in b, a.done = false</span><br><span class="line">b done</span><br><span class="line">in a, b.done = true</span><br><span class="line">a done</span><br><span class="line">in main, a.done = true, b.done = true</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">$ node main.js
+
+main starting
+a starting
+b starting
+in b, a.done = false
+b done
+in a, b.done = true
+a done
+in main, a.done = true, b.done = true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>可见：</p>
 <ul>
@@ -295,24 +306,72 @@
 <p>ECMAScript Module 的实现是通过分析文件引用关系，从最外层依赖引用，一直分析到最内层，然后从最内层依赖向外执行，执行时 import 关键字先声明依赖的引用，类似变量提升机制，后续执行到引入模块的 export 关键字进行赋值（这里仅是为了好理解，类比为变量提升、赋值、临时死区等，实际的实现是比较复杂的对象 getter 与 setter 等）。</p>
 <p>此时如果最内层循环引用了外层，且进行了同步式的调用外层，那么内层本就是由外层跳转进入的，此时外层的 export 关键字尚未执行，内层引入的外层，还未进行赋值，类似变量的临时死区。那么 javascript 引擎会向你报错，外层依赖尚未初始化（node 中报错为 <code>Cannot access &#39;XXX&#39; before initialization</code>，浏览器中则会报类似 <code>XXX is undefined</code> 错误），即不支持循环引用。</p>
 <p>示例使用 mjs 后缀，因为 node 环境运行，不配置 package.json 时，使用 js 后缀文件会报错：<code>SyntaxError: Cannot use import statement outside a module</code>。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.mjs</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a starting&quot;</span>);</span><br><span class="line"><span class="keyword">import</span> &#123; b &#125; <span class="keyword">from</span> <span class="string">&quot;./b.mjs&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> a = &#123; <span class="attr">done</span>: <span class="literal">false</span> &#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;in a, b.done = %j&quot;</span>, b.<span class="property">done</span>);</span><br><span class="line">a.<span class="property">done</span> = <span class="literal">true</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a done&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// a.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> b <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./b.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">done</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in a, b.done = %j"</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// b.mjs</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;b starting&quot;</span>);</span><br><span class="line"><span class="keyword">import</span> &#123; a &#125; <span class="keyword">from</span> <span class="string">&quot;./a.mjs&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> b = &#123; <span class="attr">done</span>: <span class="literal">false</span> &#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;in b, a.done = %j&quot;</span>, a.<span class="property">done</span>);</span><br><span class="line">b.<span class="property">done</span> = <span class="literal">true</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;b done&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// b.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> a <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./a.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">done</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in b, a.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.mjs</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;main starting&quot;</span>);</span><br><span class="line"><span class="keyword">import</span> &#123; a &#125; <span class="keyword">from</span> <span class="string">&quot;./a.mjs&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; b &#125; <span class="keyword">from</span> <span class="string">&quot;./b.mjs&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;in main, a.done = %j, b.done = %j&quot;</span>, a.<span class="property">done</span>, b.<span class="property">done</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// main.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"main starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> a <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./a.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> b <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./b.mjs"</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in main, a.done = %j, b.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>运行结果</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ node main.mjs</span><br><span class="line"></span><br><span class="line">b starting</span><br><span class="line">file://path-to-file/b.mjs:4</span><br><span class="line">  console.log(&quot;in b, a.done = %j&quot;, a.done);</span><br><span class="line">ReferenceError: Cannot access &#x27;a&#x27; before initialization</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">$ node main.mjs
+
+b starting
+file://path-to-file/b.mjs:4
+  console.log("in b, a.done = %j", a.done);
+ReferenceError: Cannot access 'a' before initialization<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>另一种情况是在最内层并未进行同步调用，而是导出了使用循环依赖的函数，或对循环的依赖进行了异步调用，那么这种情况就会相对复杂，是否会发生错误，取决于函数或异步调用的时机，若这个时机在初始化之前，则会报错，且在真实复杂依赖的项目中，很难排查。若调用时机，在初始化之后，则不会报错，造成了一种 ECMAScript 支持循环依赖的错觉。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.mjs</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a starting&quot;</span>);</span><br><span class="line"><span class="keyword">import</span> &#123; b &#125; <span class="keyword">from</span> <span class="string">&quot;./b.mjs&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> a = &#123; <span class="attr">done</span>: <span class="literal">false</span> &#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;in a, b.done = %j&quot;</span>, b.<span class="property">done</span>);</span><br><span class="line">a.<span class="property">done</span> = <span class="literal">true</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a done&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// a.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> b <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./b.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">done</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in a, b.done = %j"</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"a done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// b.mjs</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;b starting&quot;</span>);</span><br><span class="line"><span class="keyword">import</span> &#123; a &#125; <span class="keyword">from</span> <span class="string">&quot;./a.mjs&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> b = &#123; <span class="attr">done</span>: <span class="literal">false</span> &#125;;</span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;in b, a.done = %j&quot;</span>, a.<span class="property">done</span>);</span><br><span class="line">  b.<span class="property">done</span> = <span class="literal">true</span>;</span><br><span class="line">&#125;, <span class="number">500</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;b done&quot;</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// b.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> a <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./a.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">done</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in b, a.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  b<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"b done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.mjs</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;main starting&quot;</span>);</span><br><span class="line"><span class="keyword">import</span> &#123; a &#125; <span class="keyword">from</span> <span class="string">&quot;./a.mjs&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; b &#125; <span class="keyword">from</span> <span class="string">&quot;./b.mjs&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;in main, a.done = %j, b.done = %j&quot;</span>, a.<span class="property">done</span>, b.<span class="property">done</span>);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// main.mjs</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"main starting"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> a <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./a.mjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> b <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"./b.mjs"</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"in main, a.done = %j, b.done = %j"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>运行结果</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ node main.mjs</span><br><span class="line"></span><br><span class="line">b starting</span><br><span class="line">b done</span><br><span class="line">a starting</span><br><span class="line">in a, b.done = false</span><br><span class="line">a done</span><br><span class="line">main starting</span><br><span class="line">in main, a.done = true, b.done = false</span><br><span class="line">in b, a.done = true</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">$ node main.mjs
+
+b starting
+b done
+a starting
+in a, b.done = false
+a done
+main starting
+in main, a.done = true, b.done = false
+in b, a.done = true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><p>从内向外（b-a-main），先执行同步代码；</p>
@@ -376,11 +435,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -436,8 +490,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

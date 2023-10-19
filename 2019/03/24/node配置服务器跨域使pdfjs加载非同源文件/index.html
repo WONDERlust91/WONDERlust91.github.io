@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="node配置服务器跨域使pdfjs加载非同源文件pdfjs因为同源策略，只能加载本地的pdf，想要加载远程的pdf就会报跨域的错，查看官方文档后发现pdfjs本身并不阻止加载远程pdf文件，只要文件服务器配置好跨域即可。 这里使用了node中的express框架搭建了一个简单的静态文件服务器。 123456789101112131415161718192021222324252627282930&#x2F;">
+    <meta name="description" content="node配置服务器跨域使pdfjs加载非同源文件pdfjs因为同源策略，只能加载本地的pdf，想要加载远程的pdf就会报跨域的错，查看官方文档后发现pdfjs本身并不阻止加载远程pdf文件，只要文件服务器配置好跨域即可。 这里使用了node中的express框架搭建了一个简单的静态文件服务器。 &#x2F;&#x2F; pdfjs官网issue提供的跨域配置方案 &#x2F;&#x2F; &amp;#123; &#x2F;&#x2F;   &quot;Access-Cont">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node配置服务器跨域使pdfjs加载非同源文件">
 <meta property="og:url" content="http://wonderlust91.github.io/2019/03/24/node%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B7%A8%E5%9F%9F%E4%BD%BFpdfjs%E5%8A%A0%E8%BD%BD%E9%9D%9E%E5%90%8C%E6%BA%90%E6%96%87%E4%BB%B6/index.html">
 <meta property="og:site_name" content="WONDER&#39;s Notes">
-<meta property="og:description" content="node配置服务器跨域使pdfjs加载非同源文件pdfjs因为同源策略，只能加载本地的pdf，想要加载远程的pdf就会报跨域的错，查看官方文档后发现pdfjs本身并不阻止加载远程pdf文件，只要文件服务器配置好跨域即可。 这里使用了node中的express框架搭建了一个简单的静态文件服务器。 123456789101112131415161718192021222324252627282930&#x2F;">
+<meta property="og:description" content="node配置服务器跨域使pdfjs加载非同源文件pdfjs因为同源策略，只能加载本地的pdf，想要加载远程的pdf就会报跨域的错，查看官方文档后发现pdfjs本身并不阻止加载远程pdf文件，只要文件服务器配置好跨域即可。 这里使用了node中的express框架搭建了一个简单的静态文件服务器。 &#x2F;&#x2F; pdfjs官网issue提供的跨域配置方案 &#x2F;&#x2F; &amp;#123; &#x2F;&#x2F;   &quot;Access-Cont">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-03-24T22:43:57.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.260Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.738Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="跨域">
 <meta property="article:tag" content="express">
@@ -230,7 +230,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -243,20 +243,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2019/03/24/node%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B7%A8%E5%9F%9F%E4%BD%BFpdfjs%E5%8A%A0%E8%BD%BD%E9%9D%9E%E5%90%8C%E6%BA%90%E6%96%87%E4%BB%B6/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/24/node配置服务器跨域使pdfjs加载非同源文件/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -267,10 +253,41 @@
     
     <div class="post-body" itemprop="articleBody"><h1 id="node配置服务器跨域使pdfjs加载非同源文件"><a href="#node配置服务器跨域使pdfjs加载非同源文件" class="headerlink" title="node配置服务器跨域使pdfjs加载非同源文件"></a>node配置服务器跨域使pdfjs加载非同源文件</h1><p>pdfjs因为同源策略，只能加载本地的pdf，想要加载远程的pdf就会报跨域的错，查看<a target="_blank" rel="noopener" href="https://github.com/mozilla/pdf.js/issues/4530">官方文档</a>后发现pdfjs本身并不阻止加载远程pdf文件，只要文件服务器配置好跨域即可。</p>
 <p>这里使用了node中的express框架搭建了一个简单的静态文件服务器。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// pdfjs官网issue提供的跨域配置方案</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//   &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,</span></span><br><span class="line"><span class="comment">//   &quot;Access-Control-Allow-Headers&quot;: &quot;range&quot;,</span></span><br><span class="line"><span class="comment">//   &quot;Access-Control-Expose-Headers&quot;: &quot;content-range, content-length, accept-ranges&quot;,</span></span><br><span class="line"><span class="comment">//   &quot;Access-Control-Allow-Methods&quot;: &quot;*&quot;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// 引入express</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&quot;express&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">express</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 根据官方文档中的issue配置跨域</span></span><br><span class="line">app.<span class="title function_">all</span>(<span class="string">&quot;*&quot;</span>, <span class="keyword">function</span>(<span class="params">req, res, next</span>) &#123;</span><br><span class="line">  res.<span class="title function_">header</span>(<span class="string">&quot;Access-Control-Allow-Origin&quot;</span>, <span class="string">&quot;*&quot;</span>);</span><br><span class="line">  res.<span class="title function_">header</span>(<span class="string">&quot;Access-Control-Allow-Headers&quot;</span>, <span class="string">&quot;range&quot;</span>);</span><br><span class="line">  res.<span class="title function_">header</span>(</span><br><span class="line">    <span class="string">&quot;Access-Control-Expose-Headers&quot;</span>,</span><br><span class="line">    <span class="string">&quot;content-range, content-length, accept-ranges&quot;</span></span><br><span class="line">  );</span><br><span class="line">  res.<span class="title function_">header</span>(<span class="string">&quot;Access-Control-Allow-Methods&quot;</span>, <span class="string">&quot;*&quot;</span>);</span><br><span class="line">  <span class="title function_">next</span>();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置静态文件目录</span></span><br><span class="line">app.<span class="title function_">use</span>(express.<span class="title function_">static</span>(<span class="string">&quot;public&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 监听服务器的某个端口</span></span><br><span class="line"><span class="keyword">const</span> server = app.<span class="title function_">listen</span>(<span class="number">8082</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;server-start&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// pdfjs官网issue提供的跨域配置方案</span>
+<span class="token comment">// &#123;</span>
+<span class="token comment">//   "Access-Control-Allow-Origin": "*",</span>
+<span class="token comment">//   "Access-Control-Allow-Headers": "range",</span>
+<span class="token comment">//   "Access-Control-Expose-Headers": "content-range, content-length, accept-ranges",</span>
+<span class="token comment">//   "Access-Control-Allow-Methods": "*"</span>
+<span class="token comment">// &#125;</span>
+<span class="token comment">// 引入express</span>
+<span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"express"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 根据官方文档中的issue配置跨域</span>
+app<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">"Access-Control-Allow-Origin"</span><span class="token punctuation">,</span> <span class="token string">"*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">"Access-Control-Allow-Headers"</span><span class="token punctuation">,</span> <span class="token string">"range"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span>
+    <span class="token string">"Access-Control-Expose-Headers"</span><span class="token punctuation">,</span>
+    <span class="token string">"content-range, content-length, accept-ranges"</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">"Access-Control-Allow-Methods"</span><span class="token punctuation">,</span> <span class="token string">"*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 配置静态文件目录</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span><span class="token string">"public"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 监听服务器的某个端口</span>
+<span class="token keyword">const</span> server <span class="token operator">=</span> app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8082</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"server-start"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>配置好跨域后，你会发现还是报跨域的错，在pdfjs源码中查找file origin does not match viewer，就会发现源码中只要不是同源就会抛出异常，注释掉原码中的throw error即可。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (origin !== viewerOrigin &amp;&amp; protocol !== <span class="string">&#x27;blob:&#x27;</span>) &#123;</span><br><span class="line">  <span class="comment">// throw new Error(&#x27;file origin does not match viewer\&#x27;s&#x27;);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span>origin <span class="token operator">!==</span> viewerOrigin <span class="token operator">&amp;&amp;</span> protocol <span class="token operator">!==</span> <span class="token string">'blob:'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// throw new Error('file origin does not match viewer\'s');</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
     </div>
 
     
@@ -308,11 +325,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -368,8 +380,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

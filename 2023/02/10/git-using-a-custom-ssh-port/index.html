@@ -28,7 +28,7 @@
 <meta property="og:description" content="QuestionsWhen you have deployed your own gitlab service on web, you may need to use a custom SSH port to clone, pull, or push your code from or to your server. The default SSH port 22 is used by the s">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-02-10T10:52:59.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.256Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.734Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="ssh">
@@ -229,7 +229,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -242,20 +242,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2023/02/10/git-using-a-custom-ssh-port/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/02/10/git-using-a-custom-ssh-port/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -266,14 +252,19 @@
     
     <div class="post-body" itemprop="articleBody"><h2 id="Questions"><a href="#Questions" class="headerlink" title="Questions"></a>Questions</h2><p>When you have deployed your own gitlab service on web, you may need to use a custom SSH port to clone, pull, or push your code from or to your server. The default SSH port 22 is used by the system SSH service, so you must choose another port for your gitlab service.</p>
 <p>After you get everything done, you may find that you can’t clone your repository because of the access error. If you check carefully, you will find that the default git url is scp-like syntax. You can’t change port to your custom SSH port.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone user@hostname:/path/to/repo.git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone user@hostname:/path/to/repo.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">output</span><br><span class="line"></span><br><span class="line">ssh: connect to host [hostname] port 22: Connection timed out</span><br><span class="line">fatal: Could not read from remmote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights and the repository exists.</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">output
+
+ssh: connect to host [hostname] port 22: Connection timed out
+fatal: Could not read from remmote repository.
+
+Please make sure you have the correct access rights and the repository exists.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <span id="more"></span>
 
 <h2 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h2><h3 id="Using-Standard-SSH-syntax"><a href="#Using-Standard-SSH-syntax" class="headerlink" title="Using Standard SSH syntax"></a>Using Standard SSH syntax</h3><p>The scp-like syntax separate the hostname and path with a colon, so we can’t use colon to define a custom port. The Standard SSH syntax solve this problem:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone ssh://[user@]hostname[:port]/path/to/repo.git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone ssh://<span class="token punctuation">[</span>user@<span class="token punctuation">]</span>hostname<span class="token punctuation">[</span>:port<span class="token punctuation">]</span>/path/to/repo.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="Using-scp-like-syntax"><a href="#Using-scp-like-syntax" class="headerlink" title="Using scp-like syntax"></a>Using scp-like syntax</h3><p>The url you copy from github or gitlab is always in scp-like syntax. Transforming it from scp-like syntax to standard SSH syntax, which is a little bit complicated when using. Can we still use scp-like syntax, but change the default SSH port to our custom port?</p>
 <p>Definitely sure. Just edit the SSH config file (on Windows):</p>
@@ -281,7 +272,16 @@
 <li><p>Find the <code>.ssh</code> directory. always in <code>C:\\Users\\[username]\\.ssh\\</code>;</p>
 </li>
 <li><p>Edit <code>config</code> file, add your gitlab host config (Don’t add square brackets in your config);</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># your host config name (always the same as your hostname)</span></span><br><span class="line"><span class="attr">Host</span> <span class="string">[your_gitlab_host]</span></span><br><span class="line"><span class="comment">  # your ssh hostname</span></span><br><span class="line">  <span class="attr">HostName</span> <span class="string">[your_gitlab_hostname]</span></span><br><span class="line">  <span class="attr">Port</span> <span class="string">[your_gitlab_custom_ssh_port]</span></span><br><span class="line">  <span class="attr">User</span> <span class="string">[your_gitlab_user_name]</span></span><br><span class="line"><span class="comment">  # use public key for authentication instead of the username and password</span></span><br><span class="line">  <span class="attr">PreferredAuthentications</span> <span class="string">publickey</span></span><br><span class="line"><span class="comment">  # private key path for this host (always in you .ssh directory)</span></span><br><span class="line">  <span class="attr">IdentityFile</span> <span class="string">C:\\Users\\[username]\\.ssh\\[your_ssh_key]</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token comment"># your host config name (always the same as your hostname)</span>
+<span class="token key attr-name">Host</span> <span class="token value attr-value">[your_gitlab_host]</span>
+<span class="token comment">  # your ssh hostname</span>
+<span class="token key attr-name">  HostName</span> <span class="token value attr-value">[your_gitlab_hostname]</span>
+<span class="token key attr-name">  Port</span> <span class="token value attr-value">[your_gitlab_custom_ssh_port]</span>
+<span class="token key attr-name">  User</span> <span class="token value attr-value">[your_gitlab_user_name]</span>
+<span class="token comment">  # use public key for authentication instead of the username and password</span>
+<span class="token key attr-name">  PreferredAuthentications</span> <span class="token value attr-value">publickey</span>
+<span class="token comment">  # private key path for this host (always in you .ssh directory)</span>
+<span class="token key attr-name">  IdentityFile</span> <span class="token value attr-value">C:\\Users\\[username]\\.ssh\\[your_ssh_key]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>If you don’t need an independent IdentityFile for your gitlab, you may delete the line of IdentityFile, the SSH connection will use default key named <code>id_rsa</code> which you generated by default.</p>
 </li>
@@ -326,21 +326,21 @@
 <p>These two syntaxes are mostly equivalent, except the former implies –local option.</p>
 <h3 id="The-Git-Protocols"><a href="#The-Git-Protocols" class="headerlink" title="The Git Protocols"></a>The Git Protocols</h3><p>Git can use four distinct protocols to transfer data: Local, HTTP, Secure Shell (SSH), and Git.</p>
 <h4 id="Local-Protocol"><a href="#Local-Protocol" class="headerlink" title="Local Protocol"></a>Local Protocol</h4><p>The most basic is the Local protocol, in which the remote repository is in another directory on the same host. This is often used if everyone on your team has access to a shared filesystem such as an NFS mount, or in the less likely case that everyone logs in to the same computer.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone /path/to/repo.git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone /path/to/repo.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone file://path/to/repo.git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone file://path/to/repo.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>Git operates slightly differently if you explicitly specify <code>file://</code> at the beginning of the URL. If you just specify the path, Git tries to use hardlinks or directly copy the files it needs. If you specify <code>file://</code>, Git fires up the processes that it normally uses to transfer data over a network, which is generally much less efficient. The main reason to specify the <code>file://</code> prefix is if you want a clean copy of the repository with extraneous references or objects left out - generally after an import from another VCS or something similar. We’ll use the normal path here because doing so is almost always faster.</p>
 <h4 id="The-HTTP-Protocol"><a href="#The-HTTP-Protocol" class="headerlink" title="The HTTP Protocol"></a>The HTTP Protocol</h4><p>Git can communicate over HTTP using two different modes. Prior to Git 1.6.6, there was only one way it could do this which was very simple and generally read-only. In version 1.6.6, a new, smarter protocol was introduced that involved Git being able to intelligently negotiate data transfer in a manner similar to how it does over SSH.</p>
 <p>Smart HTTP operates very similarly to the SSH or Git protocols but runs over standard HTTPS ports and can use various HTTP authentication mechanisms, meaning it’s often easier on the user than something like SSH, since you can use things like username&#x2F;password authentication rather than having to set up SSH keys.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://hostname/path/to/repo.git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://hostname/path/to/repo.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="The-SSH-Protocol"><a href="#The-SSH-Protocol" class="headerlink" title="The SSH Protocol"></a>The SSH Protocol</h4><p>A common transport protocol for Git when self-hosting is over SSH. This is because SSH access to servers is already set up in most places — and if it isn’t, it’s easy to do. SSH is also an authenticated network protocol and, because it’s ubiquitous, it’s generally easy to set up and use.</p>
 <p>To clone a Git repository over SSH, you can specify an ssh:&#x2F;&#x2F; URL like this:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone ssh://[user@]hostname[:port]/path/to/repo.git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone ssh://<span class="token punctuation">[</span>user@<span class="token punctuation">]</span>hostname<span class="token punctuation">[</span>:port<span class="token punctuation">]</span>/path/to/repo.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>Or you can use the shorter scp-like syntax for the SSH protocol:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone [user@]hostname:path/to/repo.git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone <span class="token punctuation">[</span>user@<span class="token punctuation">]</span>hostname:path/to/repo.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>The scp-like syntax uses colon to separate hostname and path, so we can’t specify port with this syntax if we don’t edit SSH config file.</p>
 <h4 id="The-Git-Protocol"><a href="#The-Git-Protocol" class="headerlink" title="The Git Protocol"></a>The Git Protocol</h4><p>Finally, we have the Git protocol. This is a special daemon that comes packaged with Git; it listens on a dedicated port (9418) that provides a service similar to the SSH protocol, but with absolutely no authentication. In order for a repository to be served over the Git protocol, you must create a git-daemon-export-ok file — the daemon won’t serve a repository without that file in it — but, other than that, there is no security. Either the Git repository is available for everyone to clone, or it isn’t. This means that there is generally no pushing over this protocol. You can enable push access but, given the lack of authentication, anyone on the internet who finds your project’s URL could push to that project. Suffice it to say that this is rare.</p>
@@ -387,11 +387,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -447,8 +442,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

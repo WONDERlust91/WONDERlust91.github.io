@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wonderlust91.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="由于国外镜像太慢，所以使用国内的淘宝npm镜像 方法一：命令行修改npm配置 更换registry为淘宝镜像地址 1234# 更换镜像npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;# 检查更换是否成功npm config get registry  方法二：直接修改npm配置文件 12# 打开npm配置文件npm config ed">
+    <meta name="description" content="由于国外镜像太慢，所以使用国内的淘宝npm镜像 方法一：命令行修改npm配置 更换registry为淘宝镜像地址 # 更换镜像 npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F; # 检查更换是否成功 npm config get registry  方法二：直接修改npm配置文件 # 打开npm配置文件 npm config edit">
 <meta property="og:type" content="article">
 <meta property="og:title" content="npm使用淘宝镜像">
 <meta property="og:url" content="http://wonderlust91.github.io/2018/10/20/npm%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F/index.html">
 <meta property="og:site_name" content="WONDER&#39;s Notes">
-<meta property="og:description" content="由于国外镜像太慢，所以使用国内的淘宝npm镜像 方法一：命令行修改npm配置 更换registry为淘宝镜像地址 1234# 更换镜像npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;# 检查更换是否成功npm config get registry  方法二：直接修改npm配置文件 12# 打开npm配置文件npm config ed">
+<meta property="og:description" content="由于国外镜像太慢，所以使用国内的淘宝npm镜像 方法一：命令行修改npm配置 更换registry为淘宝镜像地址 # 更换镜像 npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F; # 检查更换是否成功 npm config get registry  方法二：直接修改npm配置文件 # 打开npm配置文件 npm config edit">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-10-20T23:08:12.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.260Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.738Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="npm">
 <meta name="twitter:card" content="summary">
@@ -226,7 +226,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,20 +239,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018/10/20/npm%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/10/20/npm使用淘宝镜像/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -264,14 +250,18 @@
     <div class="post-body" itemprop="articleBody"><p>由于国外镜像太慢，所以使用国内的淘宝npm镜像</p>
 <p>方法一：命令行修改npm配置</p>
 <p>更换registry为淘宝镜像地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更换镜像</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org/</span><br><span class="line"><span class="comment"># 检查更换是否成功</span></span><br><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 更换镜像</span>
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org/
+<span class="token comment"># 检查更换是否成功</span>
+<span class="token function">npm</span> config get registry<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>方法二：直接修改npm配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开npm配置文件</span></span><br><span class="line">npm config edit</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 打开npm配置文件</span>
+<span class="token function">npm</span> config edit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>将 registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npmjs.org/">https://registry.npmjs.org/</a> 更换为 registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org/</a></p>
 <p>注意：将npm源更换为淘宝源后，npm search功能会报错，只能使用npm install功能。可以在使用npm search的时候手动临时使用官方源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm search packageName --registry=https//registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> search packageName <span class="token parameter variable">--registry</span><span class="token operator">=</span>https//registry.npmjs.org/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
     </div>
 
     
@@ -306,11 +296,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -366,8 +351,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

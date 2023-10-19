@@ -28,7 +28,7 @@
 <meta property="og:description" content="问题背景由于 moment 时间库过大，且不再维护，故想要将之替换为 dayjs 库，antd 官方文档中也提供了两种方式去替换。使用 antd-dayjs-webpack-plugin 这种替换方式，无需使用自定义的日期选择器组件，故选择该方式。 真实开发场景在 Typescript 环境下使用时，发现传参要求还是 moment 类型，与 dayjs 类型不一致。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-09T14:34:26.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.256Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.734Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="日期选择器">
 <meta property="article:tag" content="antd">
@@ -228,7 +228,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -240,20 +240,6 @@
         </span>
     </span>
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/06/09/antd%E6%97%A5%E6%9C%9F%E9%80%89%E6%8B%A9%E5%99%A8%E6%9B%B4%E6%8D%A2%E4%B8%BAdayjs%E5%90%8Etypescript%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E8%BF%98%E8%A6%81%E6%B1%82%E4%BC%A0%E5%8F%82%E7%B1%BB%E5%9E%8B%E4%B8%BAmoment/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/06/09/antd日期选择器更换为dayjs后typescript声明文件还要求传参类型为moment/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
   
 </div>
 
@@ -269,9 +255,24 @@
 
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>官方文档对 antd-dayjs-webpack-plugin 方式说明不详细，实际上这种方式是基于 moment 与 dayjs 接口一致的条件下，在编译阶段将 moment 替换为 dayjs 的，而 antd 关于日期的 ts 类型并未改变。故而书写业务逻辑代码时，还是应该使用 moment，或者覆盖 antd 中的类型。而若要完全脱离 moment 库在业务逻辑代码中使用 dayjs，则必需要使用第一种方式，即自定义日期选择器的形式。</p>
 <p>我最终还是在代码中使用了 moment 而没有覆盖 antd 类型，覆盖类型不优雅，而自定义组件放在框架中不方便，他人使用总是习惯从 antd 中引入，而不是自定义组件中。</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 覆盖antd类型</span></span><br><span class="line"><span class="keyword">declare</span> <span class="variable language_">module</span> <span class="string">&quot;moment&quot;</span> &#123;</span><br><span class="line">  <span class="keyword">import</span> &#123; <span class="title class_">Dayjs</span> &#125; <span class="keyword">from</span> <span class="string">&quot;dayjs&quot;</span>;</span><br><span class="line">  <span class="keyword">namespace</span> moment &#123;</span><br><span class="line">    <span class="keyword">type</span> <span class="title class_">Moment</span> = <span class="title class_">Dayjs</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">export</span> = moment;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">as</span> <span class="keyword">namespace</span> moment;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 覆盖antd类型</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">"moment"</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Dayjs <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"dayjs"</span><span class="token punctuation">;</span>
+  <span class="token keyword">namespace</span> moment <span class="token punctuation">&#123;</span>
+    <span class="token keyword">type</span> <span class="token class-name">Moment</span> <span class="token operator">=</span> Dayjs<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">export</span> <span class="token operator">=</span> moment<span class="token punctuation">;</span>
+  <span class="token keyword">export</span> <span class="token keyword">as</span> <span class="token keyword">namespace</span> moment<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义日期选择器</span></span><br><span class="line"><span class="keyword">import</span> dayjsGenerateConfig <span class="keyword">from</span> <span class="string">&quot;rc-picker/es/generate/dayjs&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> generatePicker <span class="keyword">from</span> <span class="string">&quot;antd/es/date-picker/generatePicker&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;antd/es/date-picker/style/index&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">DatePicker</span> = <span class="title function_">generatePicker</span>(dayjsGenerateConfig);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">DatePicker</span>;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 自定义日期选择器</span>
+<span class="token keyword">import</span> dayjsGenerateConfig <span class="token keyword">from</span> <span class="token string">"rc-picker/es/generate/dayjs"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> generatePicker <span class="token keyword">from</span> <span class="token string">"antd/es/date-picker/generatePicker"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"antd/es/date-picker/style/index"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> DatePicker <span class="token operator">=</span> <span class="token function">generatePicker</span><span class="token punctuation">(</span>dayjsGenerateConfig<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> DatePicker<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>参考资料</p>
@@ -315,11 +316,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -375,8 +371,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

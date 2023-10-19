@@ -28,7 +28,7 @@
 <meta property="og:description" content="问题描述在打包大的项目时，打包过程中会报错失败。报错信息为 FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory in XXX。 首先一定要排除代码中是否有会导致内存泄露的可能，如果没有内存泄露，项目又比较大，打包过程确实消耗较大的内存，那么请">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-10T13:34:39.000Z">
-<meta property="article:modified_time" content="2023-10-13T08:15:53.260Z">
+<meta property="article:modified_time" content="2023-10-19T14:25:47.738Z">
 <meta property="article:author" content="WONDERlust91">
 <meta property="article:tag" content="out of memory">
 <meta property="article:tag" content="打包">
@@ -228,7 +228,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-13 08:15:53" itemprop="dateModified" datetime="2023-10-13T08:15:53+00:00">2023-10-13</time>
+      <time title="Modified: 2023-10-19 14:25:47" itemprop="dateModified" datetime="2023-10-19T14:25:47+00:00">2023-10-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,20 +241,6 @@
     </span>
 
   
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2022/02/10/node%E8%A7%A3%E5%86%B3%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/10/node解决打包过程中的内存不足/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
 </div>
 
         </div>
@@ -266,47 +252,84 @@
     <div class="post-body" itemprop="articleBody"><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在打包大的项目时，打包过程中会报错失败。报错信息为 <code>FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory in XXX</code>。</p>
 <p>首先一定要排除代码中是否有会导致内存泄露的可能，如果没有内存泄露，项目又比较大，打包过程确实消耗较大的内存，那么请继续阅读。</p>
 <p>查阅资料后发现，当电脑内存为 8G 时，安装 node，默认分配给堆的内存大小就是 2G，一旦项目运行时超过这个限制就会报错。可以使用如下命令来查看自己的堆大小限制：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -e &#x27;console.log(v8.getHeapStatistics().heap_size_limit/(1024*1024))&#x27;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">node</span> <span class="token parameter variable">-e</span> <span class="token string">'console.log(v8.getHeapStatistics().heap_size_limit/(1024*1024))'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <span id="more"></span>
 
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>既然是分配给堆的内存大小不够造成的问题，那么在打包时将堆的内存大小设置大一些即可。</p>
-<h3 id="windows-环境下使用-set-关键字设置"><a href="#windows-环境下使用-set-关键字设置" class="headerlink" title="windows 环境下使用 set 关键字设置"></a>windows 环境下使用 set 关键字设置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set NODE_OPTIONS=--max-old-space-size=4096 &amp;&amp; npm run build</span><br></pre></td></tr></table></figure>
+<h3 id="windows-环境下使用-set-关键字设置"><a href="#windows-环境下使用-set-关键字设置" class="headerlink" title="windows 环境下使用 set 关键字设置"></a>windows 环境下使用 set 关键字设置</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">set</span> <span class="token assign-left variable">NODE_OPTIONS</span><span class="token operator">=</span>--max-old-space-size<span class="token operator">=</span><span class="token number">4096</span> <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> run build<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="linux-或-macOS-环境下使用-export-关键字设置"><a href="#linux-或-macOS-环境下使用-export-关键字设置" class="headerlink" title="linux 或 macOS 环境下使用 export 关键字设置"></a>linux 或 macOS 环境下使用 export 关键字设置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export NODE_OPTIONS=--max-old-space-size=4096 &amp;&amp; npm run build</span><br></pre></td></tr></table></figure>
+<h3 id="linux-或-macOS-环境下使用-export-关键字设置"><a href="#linux-或-macOS-环境下使用-export-关键字设置" class="headerlink" title="linux 或 macOS 环境下使用 export 关键字设置"></a>linux 或 macOS 环境下使用 export 关键字设置</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">NODE_OPTIONS</span><span class="token operator">=</span>--max-old-space-size<span class="token operator">=</span><span class="token number">4096</span> <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> run build<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="永久设置"><a href="#永久设置" class="headerlink" title="永久设置"></a>永久设置</h2><p>上述对内存大小的设置，都仅在当前执行环境生效，下次还需要重新设置。如何实现永久化设置？</p>
 <h3 id="windows-环境"><a href="#windows-环境" class="headerlink" title="windows 环境"></a>windows 环境</h3><p>需要通过 我的电脑 - 属性 - 高级系统设置 - 环境变量 来配置。</p>
 <h3 id="linux-或-macOS-环境"><a href="#linux-或-macOS-环境" class="headerlink" title="linux 或 macOS 环境"></a>linux 或 macOS 环境</h3><ul>
 <li>需要修改系统文件，修改所有用户或当前用户皆可。</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">所有用户</span></span><br><span class="line">/etc/profile</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">当前用户</span></span><br><span class="line">~/.bash_profile</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 所有用户</span>
+/etc/profile
+<span class="token comment"># 当前用户</span>
+~/.bash_profile<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>打开文件，并在文件末尾添加对环境变量的修改</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export NODE_OPTIONS=--max-old-space-size=4096</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">NODE_OPTIONS</span><span class="token operator">=</span>--max-old-space-size<span class="token operator">=</span><span class="token number">4096</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ul>
 <li>修改完成后，重新加载系统文件</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">所有用户</span></span><br><span class="line">source /etc/profile</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">当前用户</span></span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 所有用户</span>
+<span class="token builtin class-name">source</span> /etc/profile
+<span class="token comment"># 当前用户</span>
+<span class="token builtin class-name">source</span> ~/.bash_profile<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="跨端设置"><a href="#跨端设置" class="headerlink" title="跨端设置"></a>跨端设置</h2><p>修改环境变量，基本上解决了个人的问题，但基于 DEVOPS 的构建环境，打包动作并不是只在本机运行，那么就会遇到新的问题：CI&#x2F;CD 服务器也可能出现内存资源不足的情况，需要在服务器环境自动构建时，也设置环境变量。</p>
 <p>解决方案：把设置环境变量的操作写入 package.json 的 scripts 中。</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"><span class="comment">// 修改前</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;craco build&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"><span class="comment">// 修改后</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;set NODE_OPTIONS=--max-old-space-size=4096 &amp;&amp; craco build&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token comment">// package.json</span>
+<span class="token comment">// 修改前</span>
+<span class="token punctuation">&#123;</span>
+  ...
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"craco build"</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">// 修改后</span>
+<span class="token punctuation">&#123;</span>
+  ...
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"set NODE_OPTIONS=--max-old-space-size=4096 &amp;&amp; craco build"</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如果本机环境为 windows，CI&#x2F;CD 服务器的环境为 linux，这时你会发现自动构建还是会报错，因为 linux 系统并不支持 set 关键字，而需要使用 export 关键字。如何解决这个跨系统的问题呢？</p>
 <p>网上大量的文章推荐了 cross-env 这个库，当通过 npm 安装这个库后，并修改命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D cross-env</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> i <span class="token parameter variable">-D</span> cross-env<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cross-env NODE_OPTIONS=--max-old-space-size=4096 &amp;&amp; craco build&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+  ...
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token string">"cross-env NODE_OPTIONS=--max-old-space-size=4096 &amp;&amp; craco build"</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>你会发现并没有效果。因为 cross-env 并不支持串行命令，环境变量只影响到了 <code>&amp;&amp;</code> 前的执行环境，<code>&amp;&amp;</code> 后的 <code>craco build</code> 并没有修改到环境变量。</p>
 <p>我最终选择了 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/cross-os">cross-os</a> 这个库，在不同的环境下，执行不同的命令。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装</span></span><br><span class="line">npm i -D cross-os</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装</span>
+<span class="token function">npm</span> i <span class="token parameter variable">-D</span> cross-os<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 配置</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cross-os memory-build&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;cross-os&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;memory-build&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;win32&quot;</span><span class="punctuation">:</span> <span class="string">&quot;set NODE_OPTIONS=--max_old_space_size=4096 &amp;&amp; craco build&quot;</span><span class="punctuation">,</span> <span class="comment">// windows 环境</span></span><br><span class="line">      <span class="attr">&quot;darwin&quot;</span><span class="punctuation">:</span> <span class="string">&quot;export NODE_OPTIONS=--max_old_space_size=4096 &amp;&amp; craco build&quot;</span><span class="punctuation">,</span> <span class="comment">// macOS 环境</span></span><br><span class="line">      <span class="attr">&quot;linux&quot;</span><span class="punctuation">:</span> <span class="string">&quot;export NODE_OPTIONS=--max_old_space_size=4096 &amp;&amp; craco build&quot;</span> <span class="comment">// linux 环境</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token comment">// 配置</span>
+<span class="token punctuation">&#123;</span>
+  ...
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"cross-os memory-build"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token property">"cross-os"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"memory-build"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      <span class="token property">"win32"</span><span class="token operator">:</span> <span class="token string">"set NODE_OPTIONS=--max_old_space_size=4096 &amp;&amp; craco build"</span><span class="token punctuation">,</span> <span class="token comment">// windows 环境</span>
+      <span class="token property">"darwin"</span><span class="token operator">:</span> <span class="token string">"export NODE_OPTIONS=--max_old_space_size=4096 &amp;&amp; craco build"</span><span class="token punctuation">,</span> <span class="token comment">// macOS 环境</span>
+      <span class="token property">"linux"</span><span class="token operator">:</span> <span class="token string">"export NODE_OPTIONS=--max_old_space_size=4096 &amp;&amp; craco build"</span> <span class="token comment">// linux 环境</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>参考资料</p>
 <p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/53230823/fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed-javas">FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory in Ionic 3</a></p>
@@ -350,11 +373,6 @@
 
 
 
-    
-  <div class="comments" id="disqus_thread">
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
-  
 </div>
   </main>
 
@@ -410,8 +428,6 @@
 
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"wonderlust91","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>
