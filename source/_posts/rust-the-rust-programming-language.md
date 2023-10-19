@@ -21,7 +21,7 @@ We'll download Rust through `rustup`, a command line tool for managing Rust vers
 
 To check whether you have Rust installed correctly, open a shell and enter this line:
 
-```bash
+```text
 $ rustc --version
 ```
 
@@ -49,13 +49,13 @@ $ echo $PATH
 
 Once Rust is installed via rustup, updating to a newly released version is easy. From your shell, run the following update script:
 
-```bash
+```text
 $ rustup update
 ```
 
 To uninstall Rust and rustup, run the following uninstall script from your shell:
 
-```bash
+```text
 $ rustup self uninstall
 ```
 
@@ -75,7 +75,7 @@ Open a terminal and enter the following commands to make a _projects_ directory 
 
 For Linux, macOS, and PowerShell on Windows, enter this:
 
-```bash
+```text
 $ mkdir ~/projects
 $ cd ~/projects
 $ mkdir hello_world
@@ -107,7 +107,7 @@ fn main() {
 
 Save the file and go back to your terminal window in the _~/projects/hello_world_ directory. On Linux or macOS, enter the following commands to compile and run the file:
 
-```bash
+```text
 $ rustc main.rs
 $ ./main
 Hello, world!
@@ -147,7 +147,7 @@ Fourth, we end the line with a semicolon (`;`), which indicates that this expres
 
 Before running a Rust program, you must compile it using the Rust compiler by entering the `rustc` command and passing it the name of your source file, like this:
 
-```bash
+```text
 $ rustc main.rs
 ```
 
@@ -155,7 +155,7 @@ After compiling successfully, Rust outputs a binary executable.
 
 On Linux, macOS, and PowerShell on Windows, you can see the executable by entering the `ls` command in your shell:
 
-```bash
+```text
 $ ls
 main  main.rs
 ```
@@ -171,7 +171,7 @@ main.rs
 
 This shows the source code file with the _.rs_ extension, the executable file (_main.exe_ on Windows, but _main_ on all other platforms), and, when using Windows, a file containing debugging information with the _.pdb_ extension. From here, you run the _main_ or _main.exe_ file, like this:
 
-```bash
+```text
 $ ./main # or .\main.exe on Windows
 ```
 
@@ -187,13 +187,13 @@ As you write more complex Rust programs, you'll add dependencies, and if you sta
 
 Check whether Cargo is installed by entering the following in your terminal:
 
-```bash
+```text
 $ cargo --version
 ```
 
 #### Creating a Project with Cargo
 
-```bash
+```text
 $ cargo new hello_cargo
 $ cd hello_cargo
 ```
@@ -241,13 +241,13 @@ Cargo expects your source files to live inside the _src_ directory. The top-leve
 
 From your _hello_cargo_ directory, build your project by entering the following command:
 
-```bash
+```text
 $ cargo build
 ```
 
 This command creates an executable file in _target/debug/hello_cargo_ (or _target\debug\hello_cargo.exe_ on Windows) rather than in your current directory. Because the default build is a debug build, Cargo puts the binary in a directory named _debug_. You can run the executable with this command:
 
-```bash
+```text
 $ ./target/debug/hello_cargo # or .\target\debug\hello_cargo.exe on Windows
 ```
 
@@ -255,7 +255,7 @@ Running `cargo build` for the first time also causes Cargo to create a new file 
 
 We can also use `cargo run` to compile the code and then run the resultant executable all in one command:
 
-```bash
+```text
 $ cargo run
 ```
 
@@ -265,7 +265,7 @@ Cargo figured out that the files hadn't changed, so it didn't rebuild but just r
 
 Cargo also provides a command called `cargo check`. This command quickly checks your code to make sure it compiles but doesn't produce an executable:
 
-```bash
+```text
 $ cargo check
 ```
 
@@ -279,7 +279,7 @@ When your project is finally ready for release, you can use `cargo build --relea
 
 In fact, to work on any existing projects, you can use the following commands to check out the code using Git, change to that project's directory, and build:
 
-```bash
+```text
 $ git clone example.org/someproject
 $ cd someproject
 $ cargo build
@@ -303,7 +303,7 @@ $ cargo build
 
 ## Programming a Guessing Game
 
-```bash
+```text
 $ cargo new guessing_game
 $ cd guessing_game
 ```
@@ -5041,7 +5041,7 @@ Whenever we make a new library project with Cargo, a test module with a test fun
 
 Let's create a new library project called `adder` that will add two numbers:
 
-```bash
+```text
 $ cargo new adder --lib
      Created library `adder` project
 $ cd adder
@@ -5066,7 +5066,7 @@ For now, let's ignore the top two lines and focus on the function. Note the `#[t
 
 The `cargo test` command runs all tests in our project, as shown in the following listing.
 
-```bash
+```text
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.57s
@@ -5113,7 +5113,7 @@ mod tests {
 
 Run the tests again using `cargo test`. The output should look like the following listing, which shows that our `exploration` test passed and `another` failed.
 
-```bash
+```text
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.72s
@@ -5199,7 +5199,7 @@ mod tests {
 
 Note that we've added a new line inside the tests module: use `super::*;`. The tests module is a regular module that follows the usual visibility rules. Because the `tests` module is an inner module, we need to bring the code under test in the outer module into the scope of the inner module. We use a glob here so anything we define in the outer module is available to this `tests` module.
 
-```bash
+```text
 $ cargo test
    Compiling rectangle v0.1.0 (file:///projects/rectangle)
     Finished test [unoptimized + debuginfo] target(s) in 0.66s
@@ -5231,7 +5231,7 @@ impl Rectangle {
 
 Running the tests now produces the following:
 
-```bash
+```text
 $ cargo test
    Compiling rectangle v0.1.0 (file:///projects/rectangle)
     Finished test [unoptimized + debuginfo] target(s) in 0.66s
@@ -5282,7 +5282,7 @@ mod tests {
 
 Run the tests:
 
-```bash
+```text
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.61s
@@ -5349,7 +5349,7 @@ pub fn greeting(name: &str) -> String {
 
 Running this test produces the following:
 
-```bash
+```text
 $ cargo test
    Compiling greeter v0.1.0 (file:///projects/greeter)
     Finished test [unoptimized + debuginfo] target(s) in 0.91s
@@ -5389,7 +5389,7 @@ This result just indicates that the assertion failed and which line the assertio
 
 Now when we run the test, we'll get a more informative error message:
 
-```bash
+```text
 $ cargo test
    Compiling greeter v0.1.0 (file:///projects/greeter)
     Finished test [unoptimized + debuginfo] target(s) in 0.93s
@@ -5448,7 +5448,7 @@ mod tests {
 
 We place the `#[should_panic]` attribute after the `#[test]` attribute and before the test function it applies to. Let's look at the result when this test passes:
 
-```bash
+```text
 $ cargo test
    Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
     Finished test [unoptimized + debuginfo] target(s) in 0.58s
@@ -5483,7 +5483,7 @@ impl Guess {
 
 When we run the test, it will fail:
 
-```bash
+```text
 $ cargo test
    Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
     Finished test [unoptimized + debuginfo] target(s) in 0.62s
@@ -5564,7 +5564,7 @@ To see what happens when a `should_panic` test with an `expected` message fails,
 
 This time when we run the `should_panic` test, it will fail:
 
-```bash
+```text
 $ cargo test
    Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
     Finished test [unoptimized + debuginfo] target(s) in 0.66s
@@ -5628,7 +5628,7 @@ For example, say each of your tests runs some code that creates a file on disk n
 
 If you don't want to run the tests in parallel or if you want more fine-grained control over the number of threads used, you can send the `--test-threads` flag and the number of threads you want to use to the test binary. Take a look at the following example:
 
-```bash
+```text
 $ cargo test -- --test-threads=1
 ```
 
@@ -5664,7 +5664,7 @@ mod tests {
 
 When we run these tests with `cargo test`, we'll see the following output:
 
-```bash
+```text
 $ cargo test
    Compiling silly-function v0.1.0 (file:///projects/silly-function)
     Finished test [unoptimized + debuginfo] target(s) in 0.58s
@@ -5697,11 +5697,11 @@ Note that nowhere in this output do we see `I got the value 4`, which is what is
 
 If we want to see printed values for passing tests as well, we can tell Rust to also show the output of successful tests with `--show-output`.
 
-```bash
+```text
 $ cargo test -- --show-output
 ```
 
-```bash
+```text
 $ cargo test -- --show-output
    Compiling silly-function v0.1.0 (file:///projects/silly-function)
     Finished test [unoptimized + debuginfo] target(s) in 0.60s
@@ -5772,7 +5772,7 @@ mod tests {
 
 If we run the tests without passing any arguments, as we saw earlier, all the tests will run in parallel:
 
-```bash
+```text
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.62s
@@ -5796,7 +5796,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 We can pass the name of any test function to `cargo test` to run only that test:
 
-```bash
+```text
 $ cargo test one_hundred
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.69s
@@ -5816,7 +5816,7 @@ We can't specify the names of multiple tests in this way; only the first value g
 
 We can specify part of a test name, and any test whose name matches that value will be run. For example, because two of our tests' names contain `add`, we can run those two by running `cargo test add`:
 
-```bash
+```text
 $ cargo test add
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.61s
@@ -5852,7 +5852,7 @@ fn expensive_test() {
 
 After `#[test]` we add the `#[ignore]` line to the test we want to exclude. Now when we run our tests, `it_works` runs, but `expensive_test` doesn't:
 
-```bash
+```text
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.60s
@@ -5873,7 +5873,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 The `expensive_test` function is listed as `ignored`. If we want to run only the ignored tests, we can use `cargo test -- --ignored`:
 
-```bash
+```text
 $ cargo test -- --ignored
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.61s
@@ -5970,7 +5970,7 @@ Each file in the `tests` directory is a separate crate, so we need to bring our 
 
 We don't need to annotate any code in _tests/integration_test.rs_ with `#[cfg(test)]`. Cargo treats the `tests` directory specially and compiles files in this directory only when we run `cargo test`. Run `cargo test` now:
 
-```bash
+```text
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 1.31s
@@ -6005,7 +6005,7 @@ Each integration test file has its own section, so if we add more files in the t
 
 We can still run a particular integration test function by specifying the test function's name as an argument to `cargo test`. To run all the tests in a particular integration test file, use the `--test` argument of `cargo test` followed by the name of the file:
 
-```bash
+```text
 $ cargo test --test integration_test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.64s
@@ -6100,3 +6100,984 @@ fn it_adds_two() {
 ##### Integration Tests for Binary Crates
 
 If our project is a binary crate that only contains a _src/main.rs_ file and doesn't have a _src/lib.rs_ file, we can't create integration tests in the _tests_ directory and bring functions defined in the _src/main.rs_ file into scope with a `use` statement. Only library crates expose functions that other crates can use; binary crates are meant to be run on their own.
+
+## An I/O Project: Building a Command Line Program
+
+### Accepting Command Line Arguments
+
+```text
+$ cargo new minigrep
+     Created binary (application) `minigrep` project
+$ cd minigrep
+```
+
+The first task is to make `minigrep` accept its two command line arguments: the file path and a string to search for. That is, we want to be able to run our program with `cargo run`, two hyphens to indicate the following arguments are for our program rather than for `cargo`, a string to search for, and a path to a file to search in, like so:
+
+```text
+$ cargo run -- searchstring example-filename.txt
+```
+
+Right now, the program generated by `cargo new` cannot process arguments we give it. Some existing libraries on [crates.io](https://crates.io) can help with writing a program that accepts command line arguments, but because you're just learning this concept, let's implement this capability ourselves.
+
+#### Reading the Argument Values
+
+To enable `minigrep` to read the values of command line arguments we pass to it, we'll need the `std::env::args` function provided in Rust's standard library. This function returns an iterator of the command line arguments passed to `minigrep`. For now, you only need to know two details about iterators: iterators produce a series of values, and we can call the `collect` method on an iterator to turn it into a collection, such as a vector, that contains all the elements the iterator produces.
+
+Filename: src/main.rs
+
+```rust
+use std::env;
+
+fn main() {
+    let args: Vec<String> = env::args().collect();
+    dbg!(args);
+}
+```
+
+> **The args Function and Invalid Unicode**
+>
+> Note that `std::env::args` will panic if any argument contains invalid Unicode. If your program needs to accept arguments containing invalid Unicode, use `std::env::args_os` instead. That function returns an iterator that produces `OsString` values instead of `String` values. We've chosen to use `std::env::args` here for simplicity, because `OsString` values differ per platform and are more complex to work with than `String` values.
+
+Although we very rarely need to annotate types in Rust, `collect` is one function you do often need to annotate because Rust isn't able to infer the kind of collection you want.
+
+Let's try running the code first with no arguments and then with two arguments:
+
+```text
+$ cargo run
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.61s
+     Running `target/debug/minigrep`
+[src/main.rs:5] args = [
+    "target/debug/minigrep",
+]
+```
+
+```text
+$ cargo run -- needle haystack
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.57s
+     Running `target/debug/minigrep needle haystack`
+[src/main.rs:5] args = [
+    "target/debug/minigrep",
+    "needle",
+    "haystack",
+]
+```
+
+Notice that the first value in the vector is `"target/debug/minigrep"`, which is the name of our binary. This matches the behavior of the arguments list in C, letting programs use the name by which they were invoked in their execution. It's often convenient to have access to the program name in case you want to print it in messages or change behavior of the program based on what command line alias was used to invoke the program.
+
+#### Saving the Argument Values in Variables
+
+Now we need to save the values of the two arguments in variables so we can use the values throughout the rest of the program.
+
+Filename: src/main.rs
+
+```rust
+use std::env;
+
+fn main() {
+    let args: Vec<String> = env::args().collect();
+
+    let query = &args[1];
+    let file_path = &args[2];
+
+    println!("Searching for {}", query);
+    println!("In file {}", file_path);
+}
+```
+
+We temporarily print the values of these variables to prove that the code is working as we intend. Let's run this program again with the arguments `test` and `sample.txt`:
+
+```text
+$ cargo run -- test sample.txt
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.0s
+     Running `target/debug/minigrep test sample.txt`
+Searching for test
+In file sample.txt
+```
+
+### Reading a File
+
+Now we'll add functionality to read the file specified in the `file_path` argument. First, we need a sample file to test it with: we'll use a file with a small amount of text over multiple lines with some repeated words. Create a file called _poem.txt_ at the root level of your project, and enter the poem "I'm Nobody! Who are you?"
+
+Filename: poem.txt
+
+```text
+I'm nobody! Who are you?
+Are you nobody, too?
+Then there's a pair of us - don't tell!
+They'd banish us, you know.
+
+How dreary to be somebody!
+How public, like a frog
+To tell your name the livelong day
+To an admiring bog!
+```
+
+With the text in place, edit _src/main.rs_ and add code to read the file.
+
+Filename: src/main.rs
+
+```rust
+use std::env;
+use std::fs;
+
+fn main() {
+    // --snip--
+    println!("In file {}", file_path);
+
+    let contents = fs::read_to_string(file_path)
+        .expect("Should have been able to read the file");
+
+    println!("With text:\n{contents}");
+}
+```
+
+Let's run this code with any string as the first command line argument (because we haven't implemented the searching part yet) and the _poem.txt_ file as the second argument:
+
+```text
+$ cargo run -- the poem.txt
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.0s
+     Running `target/debug/minigrep the poem.txt`
+Searching for the
+In file poem.txt
+With text:
+I'm nobody! Who are you?
+Are you nobody, too?
+Then there's a pair of us - don't tell!
+They'd banish us, you know.
+
+How dreary to be somebody!
+How public, like a frog
+To tell your name the livelong day
+To an admiring bog!
+```
+
+At the moment, the `main` function has multiple responsibilities: generally, functions are clearer and easier to maintain if each function is responsible for only one idea. The other problem is that we're not handling errors as well as we could. The program is still small, so these flaws aren't a big problem, but as the program grows, it will be harder to fix them cleanly. It's good practice to begin refactoring early on when developing a program, because it's much easier to refactor smaller amounts of code.
+
+### Refactoring to Improve Modularity and Error Handling
+
+As a function gains responsibilities, it becomes more difficult to reason about, harder to test, and harder to change without breaking one of its parts. It's best to separate functionality so each function is responsible for one task.
+
+The longer main becomes, the more variables we'll need to bring into scope; the more variables we have in scope, the harder it will be to keep track of the purpose of each. It's best to group the configuration variables into one structure to make their purpose clear.
+
+Reading a file can fail in a number of ways: for example, the file could be missing, or we might not have permission to open it. Right now, regardless of the situation, we'd print the same error message for everything, which wouldn't give the user any information!
+
+We use `expect` repeatedly to handle different errors, and if the user runs our program without specifying enough arguments, they'll get an `index out of bounds` error from Rust that doesn't clearly explain the problem. It would be best if all the error-handling code were in one place so future maintainers had only one place to consult the code if the error-handling logic needed to change. Having all the error-handling code in one place will also ensure that we're printing messages that will be meaningful to our end users.
+
+#### Separation of Concerns for Binary Projects
+
+The Rust community has developed guidelines for splitting the separate concerns of a binary program when `main` starts getting large. This process has the following steps:
+
+- Split your program into a _main.rs_ and a _lib.rs_ and move your program's logic to _lib.rs_.
+
+- As long as your command line parsing logic is small, it can remain in _main.rs_.
+
+- When the command line parsing logic starts getting complicated, extract it from _main.rs_ and move it to _lib.rs_.
+
+The responsibilities that remain in the `main` function after this process should be limited to the following:
+
+- Calling the command line parsing logic with the argument values
+
+- Setting up any other configuration
+
+- Calling a `run` function in _lib.rs_
+
+- Handling the error if `run` returns an error
+
+This pattern is about separating concerns: _main.rs_ handles running the program, and _lib.rs_ handles all the logic of the task at hand. Because you can't test the `main` function directly, this structure lets you test all of your program's logic by moving it into functions in _lib.rs_. The code that remains in _main.rs_ will be small enough to verify its correctness by reading it.
+
+##### Extracting the Argument Parser
+
+We'll extract the functionality for parsing arguments into a function that `main` will call to prepare for moving the command line parsing logic to _src/lib.rs_.
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let args: Vec<String> = env::args().collect();
+
+    let (query, file_path) = parse_config(&args);
+
+    // --snip--
+}
+
+fn parse_config(args: &[String]) -> (&str, &str) {
+    let query = &args[1];
+    let file_path = &args[2];
+
+    (query, file_path)
+}
+```
+
+##### Grouping Configuration Values
+
+At the moment, we're returning a tuple, but then we immediately break that tuple into individual parts again. This is a sign that perhaps we don't have the right abstraction yet.
+
+We'll instead put the two values into one struct and give each of the struct fields a meaningful name. Doing so will make it easier for future maintainers of this code to understand how the different values relate to each other and what their purpose is.
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let args: Vec<String> = env::args().collect();
+
+    let config = parse_config(&args);
+
+    println!("Searching for {}", config.query);
+    println!("In file {}", config.file_path);
+
+    let contents = fs::read_to_string(config.file_path)
+        .expect("Should have been able to read the file");
+
+    // --snip--
+}
+
+struct Config {
+    query: String,
+    file_path: String,
+}
+
+fn parse_config(args: &[String]) -> Config {
+    let query = args[1].clone();
+    let file_path = args[2].clone();
+
+    Config { query, file_path }
+}
+```
+
+The `args` variable in `main` is the owner of the argument values and is only letting the `parse_config` function borrow them, which means we'd violate Rust's borrowing rules if `Config` tried to take ownership of the values in `args`.
+
+> **The Trade-Offs of Using clone**
+>
+> There's a tendency among many Rustaceans to avoid using `clone` to fix ownership problems because of its runtime cost. But for now, it's better to have a working program that's a bit inefficient than to try to hyperoptimize code on your first pass.
+
+##### Creating a Constructor for Config
+
+So now that the purpose of the `parse_config` function is to create a `Config` instance, we can change `parse_config` from a plain function to a function named `new` that is associated with the `Config` struct. Making this change will make the code more idiomatic.
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let args: Vec<String> = env::args().collect();
+
+    let config = Config::new(&args);
+
+    // --snip--
+}
+
+// --snip--
+
+impl Config {
+    fn new(args: &[String]) -> Config {
+        let query = args[1].clone();
+        let file_path = args[2].clone();
+
+        Config { query, file_path }
+    }
+}
+```
+
+#### Fixing the Error Handling
+
+Recall that attempting to access the values in the `args` vector at index 1 or index 2 will cause the program to panic if the vector contains fewer than three items.
+
+Try running the program without any arguments. The line `index out of bounds: the len is 1 but the index is 1` is an error message intended for programmers. It won't help our end users understand what they should do instead. Let's fix that now.
+
+##### Improving the Error Message
+
+We add a check in the `new` function that will verify that the slice is long enough before accessing index 1 and 2.
+
+Filename: src/main.rs
+
+```rust
+    // --snip--
+    fn new(args: &[String]) -> Config {
+        if args.len() < 3 {
+            panic!("not enough arguments");
+        }
+        // --snip--
+
+```
+
+A call to `panic!` is more appropriate for a programming problem than a usage problem.
+
+##### Returning a Result Instead of Calling panic!
+
+We can instead return a `Result` value that will contain a `Config` instance in the successful case and will describe the problem in the error case. We're also going to change the function name from `new` to `build` because many programmers expect `new` functions to never fail.
+
+Note that this won't compile until we update `main` as well, which we'll do in the next listing.
+
+Filename: src/main.rs
+
+```rust
+impl Config {
+    fn build(args: &[String]) -> Result<Config, &'static str> {
+        if args.len() < 3 {
+            return Err("not enough arguments");
+        }
+
+        let query = args[1].clone();
+        let file_path = args[2].clone();
+
+        Ok(Config { query, file_path })
+    }
+}
+```
+
+##### Calling Config::build and Handling Errors
+
+To handle the error case and print a user-friendly message, we need to update `main` to handle the `Result` being returned by `Config::build`. We'll also take the responsibility of exiting the command line tool with a nonzero error code away from `panic!` and instead implement it by hand. A nonzero exit status is a convention to signal to the process that called our program that the program exited with an error state.
+
+Filename: src/main.rs
+
+```rust
+use std::process;
+
+fn main() {
+    let args: Vec<String> = env::args().collect();
+
+    let config = Config::build(&args).unwrap_or_else(|err| {
+        println!("Problem parsing arguments: {err}");
+        process::exit(1);
+    });
+
+    // --snip--
+```
+
+Using `unwrap_or_else` allows us to define some custom, non-`panic!` error handling. If the `Result` is an `Ok` value, this method's behavior is similar to `unwrap`: it returns the inner value `Ok` is wrapping. However, if the value is an `Err` value, this method calls the code in the closure, which is an anonymous function we define and pass as an argument to `unwrap_or_else`.
+
+The `process::exit` function will stop the program immediately and return the number that was passed as the exit status code. This is similar to the `panic!`-based handling we used, but we no longer get all the extra output. Let's try it:
+
+```text
+$ cargo run
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.48s
+     Running `target/debug/minigrep`
+Problem parsing arguments: not enough arguments
+```
+
+#### Extracting Logic from main
+
+We'll extract a function named `run` that will hold all the logic currently in the `main` function that isn't involved with setting up configuration or handling errors. When we're done, `main` will be concise and easy to verify by inspection, and we'll be able to write tests for all the other logic.
+
+For now, we're just making the small, incremental improvement of extracting the function. We're still defining the function in _src/main.rs_.
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    // --snip--
+
+    println!("Searching for {}", config.query);
+    println!("In file {}", config.file_path);
+
+    run(config);
+}
+
+fn run(config: Config) {
+    let contents = fs::read_to_string(config.file_path)
+        .expect("Should have been able to read the file");
+
+    println!("With text:\n{contents}");
+}
+
+// --snip--
+```
+
+##### Returning Errors from the run Function
+
+Instead of allowing the program to panic by calling `expect`, the `run` function will return a `Result<T, E>` when something goes wrong.
+
+Filename: src/main.rs
+
+```rust
+use std::error::Error;
+
+// --snip--
+
+fn run(config: Config) -> Result<(), Box<dyn Error>> {
+    let contents = fs::read_to_string(config.file_path)?;
+
+    println!("With text:\n{contents}");
+
+    Ok(())
+}
+```
+
+For now, just know that `Box<dyn Error>` means the function will return a type that implements the `Error` trait, but we don't have to specify what particular type the return value will be. This gives us flexibility to return error values that may be of different types in different error cases. The `dyn` keyword is short for "dynamic."
+
+We've removed the call to `expect` in favor of the `?` operator. Rather than `panic!` on an error, `?` will return the error value from the current function for the caller to handle.
+
+This `Ok(())` syntax might look a bit strange at first, but using `()` like this is the idiomatic way to indicate that we're calling `run` for its side effects only; it doesn't return a value we need.
+
+When you run this code, it will compile but will display a warning:
+
+```text
+$ cargo run the poem.txt
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+warning: unused `Result` that must be used
+  --> src/main.rs:19:5
+   |
+19 |     run(config);
+   |     ^^^^^^^^^^^
+   |
+   = note: this `Result` may be an `Err` variant, which should be handled
+   = note: `#[warn(unused_must_use)]` on by default
+
+warning: `minigrep` (bin "minigrep") generated 1 warning
+    Finished dev [unoptimized + debuginfo] target(s) in 0.71s
+     Running `target/debug/minigrep the poem.txt`
+Searching for the
+In file poem.txt
+With text:
+I'm nobody! Who are you?
+Are you nobody, too?
+Then there's a pair of us - don't tell!
+They'd banish us, you know.
+
+How dreary to be somebody!
+How public, like a frog
+To tell your name the livelong day
+To an admiring bog!
+```
+
+Rust tells us that our code ignored the Result value and the Result value might indicate that an error occurred. But we're not checking to see whether or not there was an error, and the compiler reminds us that we probably meant to have some error-handling code here!
+
+##### Handling Errors Returned from run in main
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    // --snip--
+
+    println!("Searching for {}", config.query);
+    println!("In file {}", config.file_path);
+
+    if let Err(e) = run(config) {
+        println!("Application error: {e}");
+        process::exit(1);
+    }
+}
+```
+
+We use `if let` rather than `unwrap_or_else` to check whether `run` returns an `Err` value and call `process::exit(1)` if it does. The `run` function doesn't return a value that we want to `unwrap` in the same way that `Config::build` returns the `Config` instance. Because `run` returns `()` in the success case, we only care about detecting an error, so we don't need `unwrap_or_else` to return the unwrapped value, which would only be `()`.
+
+#### Splitting Code into a Library Crate
+
+Let's move all the code that isn't the `main` function from _src/main.rs_ to _src/lib.rs_:
+
+- The `run` function definition
+
+- The relevant `use` statements
+
+- The definition of `Config`
+
+- The `Config::build` function definition
+
+Filename: src/lib.rs
+
+```rust
+use std::error::Error;
+use std::fs;
+
+pub struct Config {
+    pub query: String,
+    pub file_path: String,
+}
+
+impl Config {
+    pub fn build(args: &[String]) -> Result<Config, &'static str> {
+        // --snip--
+    }
+}
+
+pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
+    // --snip--
+}
+```
+
+Now we need to bring the code we moved to _src/lib.rs_ into the scope of the binary crate in _src/main.rs_.
+
+Filename: src/main.rs
+
+```rust
+use std::env;
+use std::process;
+
+use minigrep::Config;
+
+fn main() {
+    // --snip--
+    if let Err(e) = minigrep::run(config) {
+        // --snip--
+    }
+}
+```
+
+### Developing the Library's Functionality with Test-Driven Development
+
+In this section, we'll add the searching logic to the `minigrep` program using the test-driven development (TDD) process with the following steps:
+
+1. Write a test that fails and run it to make sure it fails for the reason you expect.
+
+2. Write or modify just enough code to make the new test pass.
+
+3. Refactor the code you just added or changed and make sure the tests continue to pass.
+
+4. Repeat from step 1!
+
+#### Writing a Failing Test
+
+Because we don't need them anymore, let's remove the `println!` statements from _src/lib.rs_ and _src/main.rs_ that we used to check the program's behavior. Then, in _src/lib.rs_, add a `tests` module with a test function. The test function specifies the behavior we want the `search` function to have: it will take a query and the text to search, and it will return only the lines from the text that contain the query. The following listing shows this test, which won't compile yet.
+
+Filename: src/lib.rs
+
+```rust
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn one_result() {
+        let query = "duct";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.";
+
+        assert_eq!(vec!["safe, fast, productive."], search(query, contents));
+    }
+}
+```
+
+Note that the backslash after the opening double quote tells Rust not to put a newline character at the beginning of the contents of this string literal.
+
+In accordance with TDD principles, we'll add just enough code to get the test to compile and run by adding a definition of the `search` function that always returns an empty vector. Then the test should compile and fail because an empty vector doesn't match a vector containing the line `"safe, fast, productive."`
+
+Filename: src/lib.rs
+
+```rust
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    vec![]
+}
+```
+
+Notice that we need to define an explicit lifetime `'a` in the signature of `search` and use that lifetime with the `contents` argument and the return value.
+
+In other words, we tell Rust that the data returned by the search function will live as long as the data passed into the search function in the contents argument.
+
+Now let's run the test:
+
+```text
+$ cargo test
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished test [unoptimized + debuginfo] target(s) in 0.97s
+     Running unittests src/lib.rs (target/debug/deps/minigrep-9cd200e5fac0fc94)
+
+running 1 test
+test tests::one_result ... FAILED
+
+failures:
+
+---- tests::one_result stdout ----
+thread 'tests::one_result' panicked at 'assertion failed: `(left == right)`
+  left: `["safe, fast, productive."]`,
+ right: `[]`', src/lib.rs:44:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    tests::one_result
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`
+```
+
+Great, the test fails, exactly as we expected. Let's get the test to pass!
+
+#### Writing Code to Pass the Test
+
+Currently, our test is failing because we always return an empty vector. To fix that and implement `search`, our program needs to follow these steps:
+
+- Iterate through each line of the contents.
+
+- Check whether the line contains our query string.
+
+- If it does, add it to the list of values we're returning.
+
+- If it doesn't, do nothing.
+
+- Return the list of results that match.
+
+##### Iterating Through Lines with the lines Method
+
+Rust has a helpful method to handle line-by-line iteration of strings, conveniently named `lines`. Note this won't compile yet.
+
+Filename: src/lib.rs
+
+```rust
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    for line in contents.lines() {
+        // do something with line
+    }
+}
+```
+
+##### Searching Each Line for the Query
+
+Fortunately, strings have a helpful method named `contains` that check whether the current line contains our query string for us! Note this still won't compile yet.
+
+Filename: src/lib.rs
+
+```rust
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    for line in contents.lines() {
+        if line.contains(query) {
+            // do something with line
+        }
+    }
+}
+```
+
+##### Storing Matching Lines
+
+To finish this function, we need a way to store the matching lines that we want to return. For that, we can make a mutable vector before the `for` loop and call the `push` method to store a `line` in the vector. After the `for` loop, we return the vector, as shown in the following listing.
+
+Filename: src/lib.rs
+
+```rust
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    let mut results = Vec::new();
+
+    for line in contents.lines() {
+        if line.contains(query) {
+            results.push(line);
+        }
+    }
+
+    results
+}
+```
+
+Now the `search` function should return only the lines that contain `query`, and our test should pass. Let's run the test:
+
+```text
+$ cargo test
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished test [unoptimized + debuginfo] target(s) in 1.22s
+     Running unittests src/lib.rs (target/debug/deps/minigrep-9cd200e5fac0fc94)
+
+running 1 test
+test tests::one_result ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/minigrep-9cd200e5fac0fc94)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests minigrep
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+At this point, we could consider opportunities for refactoring the implementation of the search function while keeping the tests passing to maintain the same functionality.
+
+##### Using the search Function in the run Function
+
+We need to pass the `config.query` value and the `contents` that `run` reads from the file to the `search` function. Then `run` will print each line returned from `search`:
+
+Filename: src/lib.rs
+
+```rust
+pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
+    let contents = fs::read_to_string(config.file_path)?;
+
+    for line in search(&config.query, &contents) {
+        println!("{line}");
+    }
+
+    Ok(())
+}
+```
+
+Now the entire program should work! Let's try it out:
+
+```text
+$ cargo run -- frog poem.txt
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.38s
+     Running `target/debug/minigrep frog poem.txt`
+How public, like a frog
+```
+
+```text
+$ cargo run -- body poem.txt
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.0s
+     Running `target/debug/minigrep body poem.txt`
+I'm nobody! Who are you?
+Are you nobody, too?
+How dreary to be somebody!
+```
+
+And finally, let's make sure that we don't get any lines when we search for a word that isn't anywhere in the poem:
+
+```text
+$ cargo run -- monomorphization poem.txt
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.0s
+     Running `target/debug/minigrep monomorphization poem.txt`
+```
+
+### Working with Environment Variables
+
+We'll improve `minigrep` by adding an extra feature: an option for case-insensitive searching that the user can turn on via an environment variable.
+
+#### Writing a Failing Test for the Case-Insensitive search Function
+
+We first add a new `search_case_insensitive` function that will be called when the environment variable has a value. We'll continue to follow the TDD process, so the first step is again to write a failing test. We'll add a new test for the new `search_case_insensitive` function and rename our old test from `one_result` to `case_sensitive` to clarify the differences between the two tests.
+
+Filename: src/lib.rs
+
+```rust
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn case_sensitive() {
+        let query = "duct";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.
+Duct tape.";
+
+        assert_eq!(vec!["safe, fast, productive."], search(query, contents));
+    }
+
+    #[test]
+    fn case_insensitive() {
+        let query = "rUsT";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.
+Trust me.";
+
+        assert_eq!(
+            vec!["Rust:", "Trust me."],
+            search_case_insensitive(query, contents)
+        );
+    }
+}
+```
+
+#### Implementing the search_case_insensitive Function
+
+The `search_case_insensitive` function will be almost the same as the `search` function. The only difference is that we'll lowercase the `query` and each `line` so whatever the case of the input arguments, they'll be the same case when we check whether the line contains the query.
+
+Filename: src/lib.rs
+
+```rust
+pub fn search_case_insensitive<'a>(
+    query: &str,
+    contents: &'a str,
+) -> Vec<&'a str> {
+    let query = query.to_lowercase();
+    let mut results = Vec::new();
+
+    for line in contents.lines() {
+        if line.to_lowercase().contains(&query) {
+            results.push(line);
+        }
+    }
+
+    results
+}
+```
+
+Note that `query` is now a `String` rather than a string slice, because calling `to_lowercase` creates new data rather than referencing existing data.
+
+First, we'll add a configuration option to the `Config` struct to switch between case-sensitive and case-insensitive search. Adding this field will cause compiler errors because we aren't initializing this field anywhere yet:
+
+Filename: src/lib.rs
+
+```rust
+pub struct Config {
+    pub query: String,
+    pub file_path: String,
+    pub ignore_case: bool,
+}
+```
+
+Next, we need the `run` function to check the `ignore_case` field's value and use that to decide whether to call the `search` function or the `search_case_insensitive` function. This still won't compile yet.
+
+Filename: src/lib.rs
+
+```rust
+pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
+    let contents = fs::read_to_string(config.file_path)?;
+
+    let results = if config.ignore_case {
+        search_case_insensitive(&config.query, &contents)
+    } else {
+        search(&config.query, &contents)
+    };
+
+    for line in results {
+        println!("{line}");
+    }
+
+    Ok(())
+}
+```
+
+Finally, we need to check for the environment variable. The functions for working with environment variables are in the `env` module in the standard library, so we bring that module into scope at the top of _src/lib.rs_. Then we'll use the `var` function from the `env` module to check to see if any value has been set for an environment variable named `IGNORE_CASE`.
+
+Filename: src/lib.rs
+
+```rust
+use std::env;
+// --snip--
+
+impl Config {
+    pub fn build(args: &[String]) -> Result<Config, &'static str> {
+        if args.len() < 3 {
+            return Err("not enough arguments");
+        }
+
+        let query = args[1].clone();
+        let file_path = args[2].clone();
+
+        let ignore_case = env::var("IGNORE_CASE").is_ok();
+
+        Ok(Config {
+            query,
+            file_path,
+            ignore_case,
+        })
+    }
+}
+```
+
+The `env::var` function returns a `Result` that will be the successful `Ok` variant that contains the value of the environment variable if the environment variable is set to any value. It will return the `Err` variant if the environment variable is not set.
+
+We don't care about the value of the environment variable, just whether it's set or unset, so we're checking `is_ok` rather than using `unwrap`, `expect`, or any of the other methods we've seen on `Result`.
+
+Let's give it a try! First, we'll run our program without the environment variable set and with the query `to`, which should match any line that contains the word "to" in all lowercase:
+
+```text
+$ cargo run -- to poem.txt
+   Compiling minigrep v0.1.0 (file:///projects/minigrep)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.0s
+     Running `target/debug/minigrep to poem.txt`
+Are you nobody, too?
+How dreary to be somebody!
+```
+
+Now, let's run the program with `IGNORE_CASE` set to 1`but with the same query`to`.
+
+```text
+$ IGNORE_CASE=1 cargo run -- to poem.txt
+```
+
+If you're using PowerShell, you will need to set the environment variable and run the program as separate commands:
+
+```text
+PS> $Env:IGNORE_CASE=1; cargo run -- to poem.txt
+```
+
+This will make `IGNORE_CASE` persist for the remainder of your shell session. It can be unset with the `Remove`-Item cmdlet:
+
+```text
+PS> Remove-Item Env:IGNORE_CASE
+```
+
+We should get lines that contain "to" that might have uppercase letters:
+
+```text
+Are you nobody, too?
+How dreary to be somebody!
+To tell your name the livelong day
+To an admiring bog!
+```
+
+### Writing Error Messages to Standard Error Instead of Standard Output
+
+In most terminals, there are two kinds of output: _standard output_ (`stdout`) for general information and _standard error_ (`stderr`) for error messages. This distinction enables users to choose to direct the successful output of a program to a file but still print error messages to the screen.
+
+The `println!` macro is only capable of printing to standard output, so we have to use something else to print to standard error.
+
+#### Checking Where Errors Are Written
+
+Command line programs are expected to send error messages to the standard error stream so we can still see error messages on the screen even if we redirect the standard output stream to a file.
+
+To demonstrate this behavior, we'll run the program with `>` and the file path, _output.txt_, that we want to redirect the standard output stream to. We won't pass any arguments, which should cause an error:
+
+```text
+$ cargo run > output.txt
+```
+
+The `>` syntax tells the shell to write the contents of standard output to _output.txt_ instead of the screen. We didn't see the error message we were expecting printed to the screen, so that means it must have ended up in the file. This is what _output.txt_ contains:
+
+```text
+Problem parsing arguments: not enough arguments
+```
+
+#### Printing Errors to Standard Error
+
+The standard library provides the `eprintln!` macro that prints to the standard error stream, so let's change the two places we were calling `println!` to print errors to use `eprintln!` instead.
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let args: Vec<String> = env::args().collect();
+
+    let config = Config::build(&args).unwrap_or_else(|err| {
+        eprintln!("Problem parsing arguments: {err}");
+        process::exit(1);
+    });
+
+    if let Err(e) = minigrep::run(config) {
+        eprintln!("Application error: {e}");
+        process::exit(1);
+    }
+}
+```
+
+Let's now run the program again in the same way, without any arguments and redirecting standard output with `>`:
+
+```text
+$ cargo run > output.txt
+Problem parsing arguments: not enough arguments
+```
+
+Now we see the error onscreen and _output.txt_ contains nothing, which is the behavior we expect of command line programs.
+
+Let's run the program again with arguments that don't cause an error but still redirect standard output to a file, like so:
+
+```text
+$ cargo run -- to poem.txt > output.txt
+```
+
+We won't see any output to the terminal, and _output.txt_ will contain our results:
+
+Filename: output.txt
+
+```text
+Are you nobody, too?
+How dreary to be somebody!
+```
