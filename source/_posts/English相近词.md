@@ -45,6 +45,8 @@ categories: English
 
   pesticide n. 杀虫剂，农药
 
+  genocide n. 种族清洗
+
 - vacation n. 假期 v. 度假
 
   vocation n. 职业，工作
@@ -473,6 +475,20 @@ categories: English
 
   privilege n. 特权 v. 授予特权
 
+- below prep. 在...下面；延伸到下面 adv. 在下面
+
+  bellow v. 低吼 n. 低吼声
+
+  blow v. 吹 n. 强风；大麻；有力的打击；开花
+
+- flip v. 快速翻转；快速移动；突然失控；快速贸易 n. 快速移动；快速旅行 adj. 油嘴滑舌 excl. 表达轻微烦恼
+
+  flap v. 扇动；焦躁，恐慌 n. 盖；扇动；恐慌
+
+- slap v. 拍击 n. 拍打；化妆 adv. 突然地 adj. 无力的；软的
+
+  slip v. 滑动；移动；摆脱 n. 滑动；标准降低；内衬；斜坡；小张纸；陶泥
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -500,6 +516,10 @@ categories: English
      - adverb. though
 
      - adverb. yet
+
+     - adverb. still
+
+     - adverbial phrase. all the same
 
   3. prep. + n.
 
@@ -1026,3 +1046,7 @@ categories: English
 - predator n. 掠食者
 
   prey n. 猎物 v. 捕猎
+
+- herbivorous adj. 草食性的
+
+  carnivorous adj. 肉食性的

@@ -293,6 +293,10 @@ categories: English
 
      _"a detailed anatomy of a society and its institutions"_
 
+- anatosaurus
+
+  1. noun: a former name for a type of dinosaur that had a wide beak like a duck: The anatosaurus was a bipedal duck-billed dinosaur of the Late Cretaceous Period.
+
 - anchor
 
   1. noun: a heavy object attached to a rope or chain and used to moor a vessel to the sea bottom, typically one having a metal shank with a ring at one end for the rope and a pair of curved and/or barbed flukes at the other. 连接在绳索或链条上并用于将船只系泊到海底的重物，通常有一个金属柄，一端有一个用于绳索的环，另一端有一对弯曲和/或带倒钩的锚链。
@@ -433,9 +437,15 @@ categories: English
 
   1. verb: (of people) gather together in one place for a common purpose. （人）为了共同的目的聚集在一个地方。
 
+     _"a crowd had assembled outside the gates"_
+
   2. verb: fit together the separate component parts of (a machine or other object). 将（机器或其他物体）的独立组件装配在一起(汽车流水线：automotive-assembly-line)。
 
+     _"my new machine is being assembled and my old one dismantled"_
+
   3. verb(COMPUTING): translate (a program) from a higher-level programming language into machine code. （计算机）将（程序）高级编程语言编译成机器码。
+
+     _"assemble the program and produce a file suitable to input to the simulator"_
 
 - assess
 
@@ -579,6 +589,14 @@ categories: English
 
   3. noun: a unit of area, 10^-28 square meters, used especially in particle physics. 面积单位，10 的 -28 次方平方米，特别是用于粒子物理。
 
+- beak
+
+  1. noun: a bird's norny projecting jaws; a bill.
+
+     _"a parent bird with a caterpillar in its beak"_
+
+  2. noun(INFORMAL·BRITISH): a magistrate or a schoolmaster.
+
 - beam
 
   1. noun: a long, sturdy piece of squared timber or metal spanning an opening or part of a building, usually to support the roof or floor above. 横跨建筑物开口或部分的长而坚固的方形木材或金属，通常用于支撑上方的屋顶或地板，即横梁。
@@ -608,6 +626,16 @@ categories: English
   1. phrase: in/on behalf of - as a representative of or a proxy for. 作为代表。
 
   2. phrase: in/on one's behalf - in the interest or aid of (someone). 为了（某人）的利益或帮助。
+
+- bellow
+
+  1. verb: (of a person or animal) emit a deep loud roar, typically in pain or anger.
+
+     _"he bellowed in agony"_
+
+  2. noun: a deep roaring shout or sound.
+
+     _"a bellow of rage"_
 
 - bellyful
 
@@ -701,6 +729,170 @@ categories: English
 
   6. phrase: born on the wrong side of the blanket - illegitimate.
 
+- blow (past tense: blew; past participle: blown)
+
+  1. verb: (of wind) move creating an air current.
+
+     _"a cold wind began to blow"_
+
+  2. verb: expel air through pursed lips.
+
+     _"Will took a deep breath, and blew"_
+
+  3. verb: (of an explosion or explosive device) displace violently or send flying.
+
+     _"the blast had blown the windows out of the van"_
+
+  4. verb(INFORMAL): spend recklessly.
+
+     _"they blew $100,000 in just eighteen months"_
+
+  5. verb(INFORMAL): completely lose or miss (an opportunity).
+
+     _"the wider issues were to show that politicians had blown it"_
+
+  6. verb(INFORMAL·BRITISH): used in various expressions to express surprise or as a mild oath.
+
+     _"“Well, blow me ,” he said, “I never knew that”"_
+
+  7. verb(VULGAR·SLANG): perform fellatio on (a man).
+
+  8. verb(INFORMAL·US): be extremely bad or unwelcome.
+
+     _""This blows," she sighs, "I want it to be next week already""_
+
+  9. verb: (of flies) lay eggs in or on (something).
+
+  10. noun: a strong wind.
+
+      _"we're in for a blow"_
+
+  11. noun: an act of blowing an instrument.
+
+      _"a number of blows on the whistle"_
+
+  12. noun(INFORMAL·BRITISH): cannabis.
+
+  13. phrase: be blown off course - (of a project) be disrupted by some circumstance.
+
+      _"short-term prospects can be blown off course by inflation"_
+
+  14. phrase: blow someone's brains out - kill someone with a shot in the head.
+
+      _"her third husband had blown his brains out"_
+
+  15. phrase: blow chunks - vomit.
+
+  16. phrase: blow the doors off - be considerably better or more successful than.
+
+      _"a package that blows the doors off anything on the market"_
+
+  17. phrase: blow a fuse - lose one's temper.
+
+      _"it was only a suggestion—there's no need to blow a fuse"_
+
+  18. phrase: blow hot and cold - alternate inconsistently between two moods, attitudes, or courses of action.
+
+      _"he had behaved badly, stringing her along, blowing hot and cold"_
+
+  19. phrase: blow someone a kiss - kiss the tips of one's fingers then blow across them toward someone as a gesture of affection.
+
+      _"she plunged into a waiting cab and blew Graham a kiss"_
+
+  20. phrase: blow someone's mind - affect someone very strongly.
+
+      _"the sound of a twelve-string guitar just blew my mind"_
+
+  21. phrase: blow one's nose - clear one's nose of mucus by blowing through it into a handkerchief.
+
+      _"he's wiping his eyes and blowing his nose into a huge silk handkerchief"_
+
+  22. phrase: blow something out of proportion - exaggerate the importance of something.
+
+  23. phrase: blow someone or something out of the water - completely discredit someone or something by far surpassing them or exposing their flaws.
+
+      _"I thought the first season was good, but season two blows it right out of the water"_
+
+  24. phrase: blow something to pieces - use bombs or other explosives to destroy something, typically a building, completely.
+
+      _"the commandos blew the base to pieces"_
+
+  25. phrase: blow one's lid - lose one's temper.
+
+      _"he really blew his lid in the course of losing"_
+
+  26. phrase: blow one's cool - fail to stay calm or composed.
+
+      _"blowing your cool occasionally doesn't make you a bad person"_
+
+  27. phrase: blow up in one's face - (of an action, project, or situation) go drastically wrong with damaging effects to oneself.
+
+      _"he never knew when a casual remark to a stranger might blow up in his face"_
+
+  28. phrase: blow with the wind - be incapable of maintaining a consistent course of action.
+
+      _"“You lack consistency,” said Bunny. “You blow with the wind.”"_
+
+  29. phrase: blow away - impress someone greatly.
+
+      _"I'm blown away by his new poem"_
+
+  30. phrase: blow in - arrive casually and unannounced.
+
+      _"sometimes he would blow in unexpectedly and say hello"_
+
+  31. phrase: blow off - fail to keep an appointment with someone.
+
+      _"I just made this date before I met you—I didn't want to blow her off"_
+
+  32. phrase: blow out - be extinguished by an air current.
+
+      _"the candles blew out"_
+
+  33. phrase: blow over - (of trouble) fade away without serious consequences.
+
+      _"if he would simply cool off, the whole matter would soon blow over"_
+
+  34. phrase: blow up - explode.
+
+      _"the car blew up as soon as it hit the wall"_
+
+  35. noun: a powerful stroke with a hand, weapon, or hard object.
+
+      _"he received a blow to the skull"_
+
+      - a sudden shock or disappointment.
+
+        _"the news came as a crushing blow"_
+
+  36. phrase: at one blow - by a single stroke; in one operation.
+
+      _"the letter had destroyed his certainty at one blow"_
+
+  37. phrase: come to blows - start fighting after a disagreement.
+
+      _"the two actors reputedly almost came to blows"_
+
+  38. phrase: soften the blow - make it easier to cope with a difficult change or upsetting news.
+
+      _"monetary compensation was offered to soften the blow"_
+
+  39. phrase: strike a blow for - act in support of.
+
+      _"a chance to strike a blow for freedom"_
+
+  40. phrase: strike a blow against - act in opposition to.
+
+      _"voters struck a blow against corporate greed"_
+
+  41. verb(ARCHAIC·LITERARY): produce flowers or be in flower.
+
+      _"I know a bank where the wild thyme blows"_
+
+  42. noun: the state or period of flowering.
+
+      _"stocks in fragrant blow"_
+
 - board
 
   1. noun: a long, thin, flat piece of wood or other hard or stiff material, used for floors or other building purposes or various purposes. 长，薄，平的一块木头或其他硬质材料，用于地板或其他建筑用途或其他各种用途。
@@ -740,6 +932,46 @@ categories: English
   5. phrase: as bold as brass - confident to the point of impudence. 像黄铜一样大胆 - 自信到无礼的地步。
 
   6. phrase: a bold stroke - a daring action or initiative. 大胆的行动或发起的事情。
+
+- bolt
+
+  1. noun: a bar that slides into a socket to fasten a door or window.
+
+  2. noun: a short, heavy arrow shot from a crossbow.
+
+  3. noun: a jagged white flash of lightning.
+
+  4. verb: fasten (a door or window) with a bar that slides into a socket.
+
+  5. phrase: a bolt from the blue - a sudden and unexpected event or piece of news.
+
+     _"the job came like a bolt from the blue"_
+
+  6. phrase: bolt upright - with the back very straight.
+
+     _"she sat bolt upright in bed"_
+
+  7. phrase: have shot one's bolt - have done all that is in one's power.
+
+     _"Jean had shot her bolt as far as her Italian was concerned"_
+
+  8. verb: (of a horse or other animal) run away suddenly, typically from fear.
+
+  9. verb: eat (food) quickly.
+
+     _"there's no need to bolt your food"_
+
+  10. phrase: make a bolt for - try to escape by moving suddenly towards (something).
+
+      _"Ellie made a bolt for the door"_
+
+  11. noun: a roll of fabric, originally as a measure.
+
+      _"the room was stacked with bolts of cloth"_
+
+  12. noun: a folded edge of a piece of paper that is trimmed off to allow it to be opened, as on a section of a book.
+
+  13. verb(ARCHAIC): pass (flour, powder, or other material) through a sieve.
 
 - booth
 
@@ -796,6 +1028,68 @@ categories: English
      - adjective: (of a competitive situation) conducted in an aggressive way and likely to be stressful.
 
        _"a bruising cabinet battle over public spending"_
+
+- brush
+
+  1. noun: an iimplement with a handle, consisting of bristles, hair, or wire set into a block, used for cleaning or scrubbing, applying a liquid or powder to a surface, arranging the hair, or other purposes.
+
+     _"a paint brush"_
+
+  2. noun: a slight and fleeting touch.
+
+     _"the lightest brush of his lips against her cheek"_
+
+     - a brief encounter with someone or something unpleasant or notable.
+
+       _"a brush with death"_
+
+  3. noun: the bushy tail of a fox.
+
+  4. noun: a thin stick set with long wire bristles, used to make a soft hissing sound on drums or cymbals.
+
+  5. noun: a piece of carbon or metal serving as an electrical contact with a moving part in a motor or alternator.
+
+  6. verb: remove (dust or dirt) by sweeping or scrubbing.
+
+     _"we'll be able to brush the mud off easily"_
+
+  7. verb: touch something lightly and gently.
+
+     _"their fingers brushed as she took the glass from him"_
+
+     - push (something) away with a quick movement of the hand.
+
+       _"she brushed a wisp of hair away from her face"_
+
+  8. phrase: brush aside - dismiss something as being unimportant or not worth consideration; disregard something.
+
+     _"this episode raises questions of legality that should not be brushed away"_
+
+  9. phrase: brush back - (of a pitcher) force a batter to step back to avoid being hit by a ball pitched close to the body.
+
+  10. phrase: brush down - clean or neaten someone or something using one's hands or a brush.
+
+      _"the cabin crew smoothed their hair and brushed down their crumpled uniforms"_
+
+  11. phrase: brush off - dismiss someone or something in an abrupt way.
+
+      _"I tried to talk to him but he just brushed me off"_
+
+  12. phrase: brush past - come into contact with someone or something briefly in passing.
+
+      _"Tobias brushed past and disappeared into the darkness"_
+
+  13. phrase: brush up - improve one's previously good knowledge of or skill at a particular thing.
+
+      _"these private lessons will give them a chance to brush up on their technique"_
+
+  14. noun: undergrowth, small trees, and shrubs.
+
+      _"trees and brush alongside the fields and channels are home to birds and other wildlife"_
+
+      - (NORTH AMERICAN) cut brushwood.
+
+        _"volunteers worked at the site, piling up stacks of brush which city workers would later haul off"_
 
 - bulk
 
@@ -918,6 +1212,16 @@ categories: English
   8. phrase: make capital out of - use to one's own advantage. 为某人所用。
 
   9. phrase: with a capital - used to give emphasis to the word or concept in question. 用于强调问题中的词或概念。
+
+- caption
+
+  1. noun: a title or brief explanation appended to an article, illustration, cartoon, or poster.
+
+     _"he designed a series of posters with the caption: “No One is Innocent”"_
+
+  2. verb: provide (an illustration) with a title or explanation.
+
+     _"the photograph was captioned “Three little maids.”"_
 
 - captive
 
@@ -1063,6 +1367,70 @@ categories: English
 
   1. idiom: it is very likely that. 很有可能。
 
+- charge
+
+  1. verb: demand (an amount) as a price from someone for a service rendered or goods supplied.
+
+     _"he charged me 2 euros for the postcard"_
+
+  2. verb: accuse (someone) of something, especially an offense under law.
+
+     _"they were charged with assault"_
+
+  3. verb: entrust (someone) with a task as a duty or responsibility.
+
+     _"the committee was charged with reshaping the educational system"_
+
+  4. verb: store electrical energy in (a battery or battery-operated device).
+
+     _"the shaver can be charged up and used while traveling"_
+
+  5. verb: rush forward in attack.
+
+     _"the plan is to charge headlong at the enemy"_
+
+  6. verb(HERALDRY): place a heraldic bearing on.
+
+     _"a pennant argent, charged with a cross gules"_
+
+  7. noun: a price asked for goods or services.
+
+     _"an admission charge"_
+
+  8. noun: an accusation, typically one formally made against a prisoner brought to trial.
+
+     _"he appeared in court on a charge of attempted murder"_
+
+  9. noun: the responsibility of taking care or control of someone or something.
+
+     _"the people in her charge are pupils and not experimental subjects"_
+
+  10. noun: the property of matter that is responsible for electrical phenomena, existing in a positive or negative form.
+
+  11. noun: a quantity of explosive to be detonated in order to fire a gun or similar weapon.
+
+      _"smaller charges, fired on three minute fuses lit by hand"_
+
+  12. noun: a headlong rush forward, typically one made by attacking soldiers in battle.
+
+      _"a cavalry charge"_
+
+  13. noun(HERALDRY): a device or bearing placed on a shield or crest.
+
+  14. phrase: free of charge - without any payment due.
+
+  15. phrase: in charge - in control or with overall responsibility.
+
+      _"he was in charge of civil aviation matters"_
+
+  16. phrase: press charges - accuse someone formally of a crime so that they can be brought to trial.
+
+      _"the victims often refuse to press charges"_
+
+  17. phrase: take charge - assume control or responsibility.
+
+      _"the candidate must take charge of an actual flight"_
+
 - citizenry
 
   1. noun: the citizens of a place regarded collectively. 被统一看待的一个地方的公民们，即公民（抽象概念上的）。
@@ -1076,6 +1444,18 @@ categories: English
 - chipmunk
 
   1. noun: a burrowing ground squirrel with cheek pouches and light and dark stripes running down the body, found in North America and northern Eurasia. 花栗鼠，在北美和欧亚大陆北部发现的一种地面穴居松鼠，脸部带有颊囊并且有沿着身体延伸的明暗条纹。
+
+- chomp
+
+  1. verb: munch or chew noisily or vigorously.
+
+     _"she chomped on a roll"_
+
+  2. noun: a chewing noise or action.
+
+  3. phrase: chomp at the bit - be restlessly impatint to start doing something.
+
+     _"some students are chomping at the bit to learn"_
 
 - chop
 
@@ -1214,6 +1594,20 @@ categories: English
   2. noun: an organized group of professional people with particular aims, duties, and privileges.
 
      _"the electoral college"_
+
+- colony
+
+  1. noun: a country or area under the full or partial political control of another country, typically a distant one, and occupied by settlers from that country.
+
+     _"Japanese forces overran the French colony of Indo-China"_
+
+  2. noun: a group of people of one nationality or ethnic group living in a foreign city or country.
+
+     _"the British colony in New York"_
+
+  3. noun(BIOLOGY): a community of animals or plants of one kind living close together or forming a physically connected structure.
+
+     _"a colony of seals"_
 
 - column
 
@@ -1919,6 +2313,42 @@ categories: English
 
      _"if only she had shown her daughter the love she craved"_
 
+- crawl
+
+  1. verb: (of a person) move forward on the hands and knees or by dragging the body close to the ground.
+
+     _"they crawled out from under the table"_
+
+  2. verb(INFORMAL): behave obsequiously or ingratiatingly in the hope of gaining someone's favor.
+
+     _"don't come crawling back to me later when you realize your mistake"_
+
+  3. verb: be covered or crowded with insects or people, to an extent that is disgusting or objectionable.
+
+     _"the place was crawling with soldiers"_
+
+  4. verb(COMPUTING): (of a program) systematically visit (a number of web pages) in order to create an index of data.
+
+     _"its automated software robots crawl websites, grabbing copies of pages to index"_
+
+  5. noun: an act of moving on one's hands and knees or dragging one's body along the ground.
+
+     _"they began the crawl back to their own lines"_
+
+  6. noun: a swimming stroke involving alternate overarm movements and rapid kicks of the legs.
+
+     _"she could do the crawl and so many other strokes"_
+
+  7. noun: a strip or band running across the bottom of a computer or television screen, within which news headlines, public service announcements, and advertisements are continuously scrolled.
+
+- creek
+
+  1. noun(NORTH AMERICAN·AUSTRALIAN): a stream, brook, or minor tributary of a river.
+
+  2. phrase: be up the creek/be up shit creek - be in severe difficulty or trouble, especially with no means of extricating oneself from it.
+
+     _"if the police raided us I'd be up the creek"_
+
 - credit
 
   1. noun: the ability of a customer to obtain goods or services before payment, based on the trust that payment will be made in the future. 客户在付款前得到商品或服务的能力， 基于对未来付款的信任，即信用。
@@ -1965,6 +2395,44 @@ categories: English
 
   5. adjective(LITERARY): growing, increasing, or developing. （文学上）增长、增加或发展。
 
+- crest
+
+  1. noun: a comb or tuft of feathers, fur, or skin on the head of a bird or other animal.
+
+     _"a large game bird with a conspicuous erect red crest"_
+
+  2. noun: the top of a mountain or hill.
+
+     _"she reached the rest of the hill"_
+
+  3. noun: the curling foamy top of a wave.
+
+     _"a high wave formed by the meeting of two crests"_
+
+  4. noun(HERALDRY): a distinctive device borne above the shield of a coat of arms (originally as worn on a helmet), or separately reproduced, for example on writing paper or silverware, to represent a family or corporate body.
+
+  5. verb: reach the top of (something such as a hill or wave).
+
+     _"she crested a hill and saw the valley spread out before her"_
+
+  6. verb: (of a wave) form a curling foamy top.
+
+     _"the swell begins to curl and crest"_
+
+  7. verb: have attached or affixed at the top.
+
+     _"his helmet was crested with a fan of spikes"_
+
+- Cretaceous
+
+  1. adjective(GEOLOGY): relating to or denoting the last period of the Mesozoic era, between the Jurassic and Tertiary periods.
+
+     _"the lizard was believed to have lived during the Cretaceous period"_
+
+  2. noun: the last period of the Mesozoic era, between the Jurassic and Tertiary periods, or the system of rocks deposited during it.
+
+     _"less than a third of sharks and rays went extinct at the end of the Cretaceous"_
+
 - cricket
 
   1. noun: an insect related to the grasshoppers. The male produces a characteristic rhythmical chirping sound.
@@ -1998,6 +2466,16 @@ categories: English
   2. noun: the analysis and judgment of the merits and faults of a literary or artistic work.
 
      _"alternative methods of criticism supported by well-developed literary theories"_
+
+- crouch
+
+  1. verb: adopt a position where the knees are bent and the upper body is brought forward and down, sometimes to avoid detection or to defend oneself.
+
+     _"we crouched down in the trench"_
+
+  2. noun: a crouching stance or posture.
+
+     _"he dropped into a defensive crouch"_
 
 - crude
 
@@ -2603,6 +3081,20 @@ categories: English
 
   1. adjective: tending to cause disagreement or hostility between people. 容易导致人与人之间分歧或敌意的。
 
+- dizzy
+
+  1. adjective: having or involving a sensation of spinning around and losing one's balance.
+
+     _"Jonathan had begun to suffer dizzy spells"_
+
+  2. verb: make (someone) feel unsteady, confused, or amazed.
+
+     _"her nearness dizzied him"_
+
+  3. phrase: the dizzy heights - a position of great importance.
+
+     _"the dizzy heights of TV stardom"_
+
 - dominant
 
   1. adjective: most important, powerful, or influential.
@@ -2758,6 +3250,50 @@ categories: English
   3. phrase: reject conventional society to pursue an alternative lifestyle. 拒绝传统社会去追求另类的生活方式。
 
   4. phrase(RUGBY): restart play with a drop kick. （橄榄球）用抛落踢球来开始比赛。
+
+- duck
+
+  1. noun: a waterbird with a broad blunt bill, short legs, webbed feet, and a waddling gait.
+
+  2. noun: a pure white thin-shelled bivalve mollusk found off the Atlantic coasts of America.
+
+  3. noun: an amphibious transport vehicle.
+
+     _"visitors can board an amphibious duck to explore the city"_
+
+  4. phrase: get one's ducks in a row - make all the preparations needed to do something; get everything organized.
+
+     _"we have an event planned and possibly a dance, but we have to get all our ducks in a row first"_
+
+  5. phrase: have one's ducks in a row - be completely prepared to do something; have everything organized.
+
+     _"I want to have my ducks in a row before I go in there and confront them"_
+
+  6. phrase: like water off a duck's back - used to refer to a potentially hurtful remark or situation that has no apparent effect on the person involved.
+
+     _"it was like water off a duck's back to Nick, but I'm sure it upset Paul"_
+
+  7. phrase: take to something like a duck to water - take to something very readily.
+
+     _"he shows every sign of taking to University politics like a duck to water"_
+
+  8. verb: lower the head or the body quickly to avoid a blow or so as not to be seen.
+
+     _"spectators ducked for cover"_
+
+  9. verb: plunge one's head or body underwater briefly.
+
+     _"I had to keep ducking down to get my head cool"_
+
+  10. verb(BRIDGE): refrain from playing a winning card on a particular trick for tactical reasons.
+
+      _"declarer ducked the opening spade lead"_
+
+  11. noun: a quick lowering of the head.
+
+  12. noun(INFORMAL·BRITISH): dear; darling (used as an informal or affectionate form of address, especially among cockneys).
+
+      _"it's time you changed, my duck"_
 
 - due
 
@@ -2922,6 +3458,12 @@ categories: English
   1. verb: surround and have or hold within. 包围并拥有或持有，即包括。
 
   2. verb(ARCHAIC): cause (something) to take place. （古老）使（某事）发生。
+
+- engrave
+
+  1. verb: cut or carve (a text or design) on the surface of a hard object.
+
+     _"my name was engraved on the ring"_
 
 - enormous
 
@@ -3201,6 +3743,28 @@ categories: English
 
   1. noun: a person or thing that makes an action or process easy or easier. 使行动或流程变得更容易的人或事务。
 
+- faint
+
+  1. adjective: (of a sight, smell, or sound) barely perceptible.
+
+     _"the faint murmur of voices"_
+
+  2. adjective: weak and dizzy; close to losing consciousness.
+
+     _"the heat made him feel faint"_
+
+  3. verb: lose consciousness for a short time because of a temporarily insufficient supply of oxygen to the brain.
+
+     _"I fainted from loss of blood"_
+
+  4. noun: a sudden loss of consciousness.
+
+     _"she hit the floor in a dead faint"_
+
+  5. phrase: not have the faintest - have no idea.
+
+     _"I haven't the faintest what it means"_
+
 - fair
 
   1. adjective: in accordance with the rules or standards; legitimate. 根据规则或标准；合法的。
@@ -3338,6 +3902,10 @@ categories: English
      - failing to convince or impress. 无法信服或打动。
 
        _"a feeble excuse"_
+
+- fern
+
+  1. noun: a flowerless plant which has feathery or leafy fronds and repreduces by spores released from the undersides of the fronds. Ferns have a vascular system for the transport of water and nutrients.
 
 - fertile
 
@@ -3479,6 +4047,34 @@ categories: English
 
   7. verb: smooth or shape (something) with a file. 用锉刀打磨或塑造（某物）。
 
+- flap
+
+  1. verb: (of a bird) move (its wings) up and down when flying or preparing to fly.
+
+     _"a pheasant flapped its wings"_
+
+  2. verb(INFORMAL·BRITISH): be agitated or panicky.
+
+     _"it's all right, Mother, don't flap"_
+
+  3. noun: a thin, flat piece of cloth, paper, metal, etc. that is hinged or attached on one side only and covers an opening or hangs down from something.
+
+     _"the flap of the envelope"_
+
+  4. noun: an act of flapping something, typically a wing or arm, up and down or from side to side.
+
+     _"the surviving bird made a few final despairing flaps"_
+
+  5. noun(INFORMAL): a state of agitation; a panic.
+
+     _"your Gran was in a flap, worrying she'd put her foot in it"_
+
+  6. noun: a large broad mushroom.
+
+  7. noun(PHONETICS): a type of consonant produced by allowing the tip of the tongue to strike the palate very briefly.
+
+  8. phrase: someone's ears are flapping - someone is trying to a listen to a conversation between other people.
+
 - flaw
 
   1. noun: a mark, blemish, or other imperfection which mars a substance or object.
@@ -3496,6 +4092,52 @@ categories: English
 - flee
 
   1. verb: run away from a place or situation of danger. 逃离某地或危险的情况。
+
+- flip
+
+  1. verb: turn over with a sudden quick movement.
+
+     _"the plane flipped over and then exploded"_
+
+  2. verb: move, push, or throw (something) with a sudden sharp movement.
+
+     _"she flipped off her dark glasses"_
+
+  3. verb(INFORMAL): suddenly lose control or become very angry.
+
+     _"my mom will flip if I don't get my homework done tonight"_
+
+  4. verb: buy and sell (something, especially real estate or shares) quickly to make a profit.
+
+     _"within one week of starting I flipped a property for a quick $3,000 profit"_
+
+  5. verb(INFORMAL·US): become an informer.
+
+     _"when he was taken in by the investigators, he flipped immediately"_
+
+  6. noun: a sudden sharp movement.
+
+     _"she dismissed his qualms with a flip of her hand"_
+
+  7. noun(DATED·INFORMAL): a quick tour or pleasure trip.
+
+     _"I did a flip round the post-show party"_
+
+  8. adjective: glib or flippant.
+
+     _"he couldn't get away with flip, funny conversation"_
+
+  9. exclamation(INFORMAL): used to express mild annoyance.
+
+  10. phrase: flip one's lid/flip out - suddenly lose control or become very angry.
+
+      _"she would have flipped out if someone had done this to her"_
+
+  11. phrase: flip through - look quickly through a book, magazine, etc.
+
+      _"McLeish flipped through his notes"_
+
+  12. noun: another term for eggnog.
 
 - fluctuate
 
@@ -3625,6 +4267,30 @@ categories: English
 
   5. adjective: relating to a vision of the future. 与对未来的愿景有关。
 
+- fuzz
+
+  1. noun: a fluffy or frizzy mass of hair or fiber.
+
+     _"a fuzz of black hair"_
+
+     - a blurred image or area.
+
+       _"she saw Jess surrounded by a fuzz of sunlight"_
+
+     - a buzzing or distorted sound, especially one deliberately produced as an effect on an electric guitar.
+
+  2. verb: make or become blurred or indistinct.
+
+     _"snow fuzzes the outlines of the signs"_
+
+  3. verb: (of hair) become fluffy or frizzy.
+
+     _"her hair fuzzed out uncontrollably in the heat"_
+
+  4. noun(INFORMAL): the police.
+
+     _"Keep down! It's the fuzz!"_
+
 ## G
 
 - game
@@ -3675,9 +4341,25 @@ categories: English
 
   23. adjective(DATED): (of a person's leg) permanently injured or disabled. （过时的）（某人的腿）永久性损伤或残疾。
 
+- gasp
+
+  1. verb: inhale suddenly with the mouth open, out of pain or astonishment.
+
+     _"a woman gasped in horror at the sight of him"_
+
 - garment
 
   1. noun: an item of clothing. 一件衣服。
+
+- gaze
+
+  1. verb: look steadily and intently, especially in admiration, surprise, or thought.
+
+     _"he could only gaze at her in astonishment"_
+
+  2. noun: a steady intent look.
+
+     _"he turned, following her gaze"_
 
 - genre (注意发音)
 
@@ -3710,6 +4392,56 @@ categories: English
 - gizmo
 
   1. noun: a gadget, especially one whose name the speaker does not know or cannot recall. 一种小工具，尤其是说话者不知道或记不起它的名字的小工具。
+
+- gleam
+
+  1. verb: shine brightly, especially with reflected light.
+
+     _"light gleamed on the china cats"_
+
+  2. noun: a faint or brief light, especially one reflected from something.
+
+     _"the gleam of a silver tray"_
+
+- glide
+
+  1. verb: move with a smooth continuous motion, typically with little noise.
+
+     _"a few gondolas glided past"_
+
+  2. verb: make an unpowered flight, either in a glider or in an aircraft with engine failure.
+
+     _"students learning to glide"_
+
+     - (of a bird) fly through the air with very little movement of the wings.
+
+       _"gulls are gliding birds"_
+
+  3. noun: a smooth continuous movement.
+
+     _"the cuckoo makes its approach in a hawklike glide"_
+
+  4. noun(PHONETICS): a sound produced as the vocal organs move toward or away from articulation of a vowel or consonant, for example /j/ in mute /mjut/.
+
+- glitter
+
+  1. verb: shine with a bright, shimmering reflected light.
+
+     _"trees and grass glittered with dew"_
+
+  2. noun: a bright, shimmering reflected light.
+
+     _"the blue glitter of the sea"_
+
+  3. noun: tiny pieces of sparkling material used for decoration.
+
+     _"sneakers trimmed with sequins and glitter"_
+
+  4. noun: an attractive and exciting but superficial quality.
+
+     _"he avoids the glitter of show business"_
+
+  5. phrase: all that glitters is not gold - the attractive external appearance of something is not a reliable indication of its true nature.
 
 - gloom
 
@@ -3745,6 +4477,26 @@ categories: English
 
   4. noun: a device automatically regulating the supply of fuel, steam, or water to a machine, ensuring uniform motion or limiting speed. 一种自动调节机器供应的燃料，蒸汽，或水的装置，以确保匀速运动或限制速度。
 
+- grab
+
+  1. verb: grasp or seize suddenly and roughly.
+
+     _"she grabbed him by the shirt collar"_
+
+  2. verb(INFORMAL): attract the attention of; make an impression on.
+
+     _"how does that grab you?"_
+
+  3. noun: a quick sudden clutch or attempt to seize.
+
+     _"he made a grab at the pistol"_
+
+  4. noun: a mechanical device for clutching, lifting, and moving things, especially materials in bulk.
+
+  5. phrase: up for grabs - available; obtainable.
+
+     _"great prizes up for grabs"_
+
 - grant
 
   1. verb: agree to give or allow (something requested) to. 同意给予或允许（要求的东西）。
@@ -3758,6 +4510,18 @@ categories: English
      1. fail to properly appreciate (someone or something), especially as a result of overfamiliarity. 不能正确地赞赏（某人或某事），尤其是由于过度熟悉。
 
      2. assume that something is true without questioning it. 假定某事是真实的而不去质疑。
+
+- graze
+
+  1. verb: (of cattle, sheep, etc.) eat grass in a field.
+
+  2. verb: scrape and break the surface of the skin of (a part of the body).
+
+     _"she fell down and grazed her knees"_
+
+  3. noun: a slight injury where the skin is scraped.
+
+     _"cuts and grazes on the skin"_
 
 - grievance
 
@@ -3794,6 +4558,52 @@ categories: English
   11. phrase: lose one's grip - become unable to understand or control one's situation. 变得无法理解或控制自己的处境。
 
   12. phrase: get a grip on - take control of. 控制。
+
+- groan
+
+  1. verb: make a deep inarticulate sound in response to pain or despair.
+
+     _"Marty groaned and pulled the blanket over his head"_
+
+  2. verb: (of a thing) make a low creaking or moaning sound when pressure or weight is applied.
+
+     _"James slumped back into his chair, making it groan and bulge"_
+
+  3. noun: a deep inarticulate sound made in pain or despair.
+
+     _"she lay back with a groan"_
+
+  4. noun: a low creaking or moaning sound made by an object or device under pressure.
+
+     _"the protesting groan of timbers"_
+
+  5. phrase: groan inwardly - feel dismayed by something but remain silent.
+
+     _"everything has a tepid inevitability, and even as you smile you may be groaning inwardly."_
+
+- grunt
+
+  1. verb: (of an animal, especially a pig) make a low, short guttural sound.
+
+     _"an enormous pig grunted and shuffled in a sty outside"_
+
+     - (of a person) make a low inarticulate sound, typically to express effort or indicate assent.
+
+       _"‘What is it?’ he grunted irritably"_
+
+  2. noun: a low, short guttural sound made by an animal or a person.
+
+     _"with snorts and grunts the animals were coaxed down the ramp"_
+
+  3. noun(INFORMAL·NORTH AMERICAN) a low-ranking or unskilled soldier or other worker.
+
+     _"grunt work"_
+
+  4. noun: an edible shoaling fish of tropical inshore waters and coral reefs, able to make a loud noise by grinding its teeth and amplifying the sound in the swim bladder.
+
+  5. noun(US): a dessert made of fruit topped with dough.
+
+     _"blueberry grunt"_
 
 ## H
 
@@ -4525,6 +5335,8 @@ categories: English
 
   1. phrase: used for emphasis in questions, especially to express astonishment or disbelief. 用于强调问题，尤其是表达惊讶或不相信，常译为到底，究竟。
 
+     _"why in the world did you not reveal yourself sooner?"_
+
 - intimate
 
   1. adjective: closely acquainted; familiar, close. 熟识的；熟悉，接近的。
@@ -4661,6 +5473,12 @@ categories: English
 
   1. noun: blood relationship.
 
+- kneel (past tense/past participle: knelt/kneeled)
+
+  1. verb: be in or assume a position in which the body is supported by a knee or the knees, as when praying or showing submission.
+
+     _"they knelt down and prayed"_
+
 - knight
 
   1. noun: (in the Middle Ages) a man who served his sovereign or lord as a mounted soldier in armor.
@@ -4767,6 +5585,28 @@ categories: English
 
   8. noun: the lean part of meat. 肉的瘦肉部分。
 
+- leap
+
+  1. verb: jump or spring a long way, to a great height, or with great force.
+
+     _"I leaped across the threshold"_
+
+  2. noun: a forceful jump or quick movement.
+
+     _"she came downstairs in a series of flying leaps"_
+
+  3. phrase: a leap in the dark - a daring step or enterprise whose consequences are unpredictable.
+
+     _"I had taken quite a step—a leap in the dark, in fact"_
+
+  4. phrase: in leaps and bounds - with startlingly rapid progress.
+
+     _"productivity improved in leaps and bounds"_
+
+  5. phrase: leap to one's mind - be immediately apparent.
+
+     _"one dire question leaped to our minds"_
+
 - legitimate
 
   1. adjective: conforming to the law or to rules. 符合法律或规则的。
@@ -4865,6 +5705,16 @@ categories: English
 
   3. noun: a vage and often exaggerated first appearance of an object seen in darkness or fog, especially at sea. 在黑暗或雾中，尤其是在海上，物体模糊且常常被夸大的第一次出现。
 
+- lope
+
+  1. verb: run or move with a long bounding stride.
+
+     _"the dog was loping along by his side"_
+
+  2. noun: a long bounding stride.
+
+     _"they set off at a fast lope"_
+
 - lottery
 
   1. noun: a means of raising money by selling numbered tickets and giving prizes to the holders of numbers drawn at random. 一种通过售卖编号票据并随机抽取编号持有者给予奖励的筹集资金的手段，即彩票。
@@ -4926,6 +5776,10 @@ categories: English
   2. noun: something that tempts or is used to tempt a person or animal to do something. 引诱或被用来引诱人或动物做某事的东西。
 
 ## M
+
+- magnolia
+
+  1. noun: a tree or shrub with large, typically creamy-pink, waxy flowers. Magnolias are widely grown as ornamental trees.
 
 - maid
 
@@ -5008,6 +5862,10 @@ categories: English
   1. adverb: in the intervening period of time.
 
      _"Julie has meanwhile found herself another dancing partner"_
+
+- medallion
+
+  1. noun: a piece of jewelry in the shape of a medal, worn as a pendant.
 
 - mediocrity
 
@@ -5201,6 +6059,26 @@ categories: English
 
   2. noun: a company operating in several countries. 在多个国家经营的公司，即跨国公司。
 
+- mutant
+
+  1. adjective: resulting from or showing the effect of mutation.
+
+     _"a mutant gene"_
+
+  2. noun: a mutant form.
+
+     _"frequently only a small percentage of the offspring of mutants resemble their parents"_
+
+- mutter
+
+  1. verb: say something in a low or barely audible voice, especially in dissatisfaction or irritation.
+
+     _"he muttered something under his breath"_
+
+  2. noun: a barely audible utterance, especially one expressing dissatisfaction or irritation.
+
+     _"a little mutter of disgust"_
+
 - mutual fund
 
   1. noun: an investment programme funded by shareholders that trades in diversified holdings and is professionally managed. (共同基金)
@@ -5365,7 +6243,63 @@ categories: English
 
   2. noun: the process of caring for and encouraging the growth or development of someone or something. 关心和鼓励某人或某事的成长或发展的过程。
 
+- nut
+
+  1. noun: a fruit consisting of a hard or tough shell around an edible kernel.
+
+     _"he was cracking nuts with his teeth"_
+
+  2. noun: a small flat piece of metal or other material, typically square or hexagonal, with a threaded hole through it for screwing on to a bolt as a fastener.
+
+     _"fix the new pipe and tighten the nuts"_
+
+  3. noun(INFORMAL): a crazy or eccentric person.
+
+     _"she would have written me off as a time-wasting nut"_
+
+  4. noun(INFORMAL): a person's head.
+
+     _"he's aiming to break a record by balancing a car on his nut"_
+
+  5. noun(VULGAR SLANG): a man's testicles.
+
+  6. noun: the fixed ridge on the neck of a stringed instrument over which the strings pass.
+
+     _"the positioning allows the strings a straight path over the nut"_
+
+  7. verb(ARCHAIC): gather nuts.
+
+     _"in autumn children would go nutting"_
+
+  8. verb(INFORMAL·BRITISH): butt (someone) with one's head.
+
+     _"I thought he was going to nut me in the face"_
+
+  9. phrase: do one's nut - become extremely angry or agitated.
+
+  10. phrase: nuts and bolts - the basic practical details.
+
+      _the basic practical details. "the nuts and bolts of public policy"_
+
+  11. phrase: off one's nut - out of one's mind; crazy.
+
+  12. phrase: tough nut - someone who is difficult to deal with; a formidable person.
+
+  13. phrase: a tough nut to crack - a difficult problem or an opponent that is hard to beat.
+
+  14. phrase: use a sledgehammer to crack a nut - use disproportionately drastic meatures to deal with a simple problem.
+
+  15. phrase: nut out - plan or devise something mentally.
+
+      _"we really need to sit down and nut out a plan"_
+
 ## O
+
+- oak
+
+  1. noun: a tree that bears acorns as fruit, and typically has lobed deciduous leaves. Oaks are common in many north temperate forests and are an important source of hard and durable wood used chiefly in construction, furniture, and (formerly) shipbuilding.
+
+  2. phrase: mighty oaks from little acorns grow - something of small or modest dimensions may grow into something very large or impressive.
 
 - obscure
 
@@ -5503,6 +6437,36 @@ categories: English
 
   1. noun: a female reproductive organ in which ova or eggs are produced, present in humans and other vertebrates as a pair.
 
+- overhead
+
+  1. adverb: above the level of the head; in the sky.
+
+     _"a helicopter buzzed overhead"_
+
+  2. adjective: situated above the level of the head.
+
+     _"the sun was directly overhead"_
+
+  3. adjective: (of a driving mechanism) above the object driven.
+
+     _"an overhead cam four-cylinder engine"_ 顶置凸轮轴四缸机
+
+  4. adjective: (of a cost or expense) incurred in the upkeep or running of a plant, premises, or business and not attributable to individual products or items.
+
+     _"the company has very high overhead costs"_
+
+  5. noun: an overhead cost or expense.
+
+     _"overheads, such as lighting, equipment, and any little extras, are paid for out of a centralized fund"_
+
+  6. noun: a transparency designed for use with an overhead projector.
+
+     _"software for producing slides, charts, and overheads"_
+
+  7. an overhead compartment, especially on an aircraft.
+
+     _"passengers get up to fiddle with their luggage in the overheads"_
+
 - overlook
 
   1. verb: fail to notice (something). 没有注意到（某事）。
@@ -5570,6 +6534,26 @@ categories: English
   3. noun: a small group of people brought together to discuss, investigate, or decide on a particular matter, especially in the context of business or government. 一小组人聚集在一起来讨论，调查，或决定一个特别的事项，尤其是在商业或政府背景下。
 
   4. verb: cover (a wall or other surface) with panels. 用面板覆盖（墙壁或其他表面）。
+
+- pant
+
+  1. verb: breathe with short, quick breaths, typically from exertion or excitement.
+
+     _"he was panting when he reached the top"_
+
+  2. noun: a short, quick breath.
+
+- pants
+
+  1. noun(NORTH AMERICAN): trousers.
+
+     _"baggy corduroy pants"_
+
+  2. noun(BRITISH): underpants.
+
+  3. noun(INFORMAL·BRITISH): rubbish; nonsense.
+
+     _"he thought we were going to be absolute pants"_
 
 - paradox
 
@@ -6023,6 +7007,56 @@ categories: English
 
   7. phrase: plow through - to finish doing something that takes a longtime and is difficult or boring. 完成需要很长时间且困难或无聊的事情。
 
+- poke
+
+  1. verb: jab or prod (someone or something), especially with one's finger.
+
+     _"he poked Benny in the ribs and pointed"_
+
+  2. verb: thrust (something) in a particular direction.
+
+     _"I poked my head around the door to see what was going on"_
+
+  3. noun: an act of poking someone or something.
+
+     _"she gave the fire a poke"_
+
+  4. noun(INFORMAL): a look or search around a place.
+
+     _"his mother comes into his room sometimes and has a poke around"_
+
+  5. noun(INFORMAL·BRITISH): power or acceleration in a car.
+
+     _"I expect you'd prefer something with a bit more poke"_
+
+  6. noun: a woman's bonnet with a projecting brim or front, popular especially in the early 19th century.
+
+  7. phrase: be better than a poke in the eye with a sharp stick - be welcome or pleasing, even if other circumstances might be better.
+
+     _"I got a tax rebate—not a huge amount but better than a poke in the eye with a sharp stick"_
+
+  8. phrase: poke one's nose into - take an intrusive interesting in.
+
+     _"it's not like you to poke your nose into areas that don't concern you"_
+
+  9. phrase: take a poke at someone - hit or punch someone.
+
+  10. phrase: poke along - move slowly; dawdle.
+
+      _"I was poking along, my vision blocked by that curtain of sleet."_
+
+  11. phrase: poke around - look around a place, typically in search of something.
+
+      _"he poked around in his fridge before pulling out a container of ham"_
+
+  12. noun(SCOTTISH): a bag or small sack.
+
+      _"he fished out a poke of crisps from under the counter"_
+
+  13. noun: a Hawaiian dish of marinated raw fish or seafood, often served over rice.
+
+      _"a buffet full of Hawaiian favorites like fresh poke"_
+
 - polish
 
   1. verb: make the surface of (something) smooth and shiny by rubbing it. 通过摩擦使（某物）表面光滑有光泽。
@@ -6104,6 +7138,16 @@ categories: English
   1. noun: a person, especially a politician, who strives to appeal to ordinary poeple who feel that their concerns are disregarded by established elite groups. 一个人，尤其是政治家，努力吸引普通人，这些普通人感到他们所关心的事情被既有精英群体所忽视，即平民主义者。
 
   2. adjective: relating to or characteristic of a political approach that strives to appeal to ordinary people who feel that their concerns are disregarded by established elite groups. 与一种政治方法有关或具有政治方法的特征，即努力吸引普通人，这些普通人感到他们关心的事情被既有精英群体所忽视，即平民主义的。
+
+- porch
+
+  1. noun: a covered shelter projecting in front of the entrance of a building.
+
+     _"the north porch of Hereford Cathedral"_
+
+     - (NORTH AMERICAN) a veranda.
+
+       _"Daniel and Lydia sat out on the porch for many hours"_
 
 - pose
 
@@ -6637,6 +7681,10 @@ categories: English
 
      _"they need little care other than an annual prune"_
 
+- pteranodon
+
+  1. noun: a large tailless pterosaur of the Cretaceous period, with a long toothless beak, a long bony crest, and a wingspan of up to 7m.
+
 - publication
 
   1. noun: the preparation and issuing of a book, journal, piece of music, or other work for public sale. 准备和发行书籍，期刊，音乐，或其他作品以供公开销售。
@@ -6957,6 +8005,18 @@ categories: English
 
      _"bacteria normally divide and reproduce themselves every twenty minutes"_
 
+- reptile
+
+  1. noun: a vertebrate animal of a class that includes snakes, lizards, crocodiles, turtles, and tortoises. They are ddistinguished by having a dry scaly skin and typically laying soft-shelled eggs on land.
+
+  2. noun(DEROGATORY·INFORMAL): a person regarded with loathing and contempt.
+
+     _"are you contradicting me, you ignorant little reptile?"_
+
+  3. adjective: belonging to a reptile or to the class of reptiles.
+
+     _"reptile eggs"_
+
 - resent
 
   1. verb: feel bitterness or indignation at (a circumstance, action, or person). 对（情况，行为，或人）感到苦涩或愤慨。
@@ -7006,6 +8066,20 @@ categories: English
 - revive
 
   1. verb: restore to life or consciousness. 恢复生命或意识。
+
+- rex
+
+  1. noun: the reigning king (used following a name or in the titles of lawsuits, e.g. Rex v. Jones : the Crown versus Jones).
+
+     _"a helmet boldly inscribed with the initials GR (George Rex) for George III"_
+
+  2. noun: a cat, rabbit, or guinea pig of a breed with very fine short fur.
+
+     _"the Cornish Rex is considered a good breed for those with allergies"_
+
+- rhinoceros
+
+  1. noun: a large, heavily built plant-eating mammal with one or two horns on the nose and thick folded skin, native to Africa and southern Asia. All kinds have become endangered through hunting.
 
 - righteous
 
@@ -7217,6 +8291,24 @@ categories: English
 
   1. noun: a specialist in a particular branch of study, especially the humanities; a distinguished academic. 特定研究分支的专家，尤其是在人文学科；杰出的学者。
 
+- scoop
+
+  1. noun: a utensil resembling a spoon, with a long handle and a deep bowl, used for removing powdered, granulated, or semisolid substances (such as ice cream) from a container.
+
+     _"the powder is packed in tubs in which a measuring scoop is provided"_
+
+  2. noun(INFORMAL): a piece of news published by a newspaper or broadcast by a television or radio station in advance of its rivals.
+
+     _"reporters at the city's three tabloid papers usually compete for scoops"_
+
+  3. verb: pick up and move (something) with a scoop.
+
+     _"Philip began to scoop grain into his bag"_
+
+  4. verb(INFORMAL): publish a news story before (a rival reporter, newspaper, or radio or television station).
+
+     _"time and again we have scooped our rivals with the top stories and pictures"_
+
 - screw
 
   1. noun: a short, slender, sharp-pointed metal pin with a raised helical thread running round it and a slotted head,used to join things together by being rotated so that it pierces wood or other material and is held tightly in place. 一种短的，细的，尖头的金属针，被凸起螺旋线环绕并有着开槽的顶部。用于通过旋转将物品连接起来，旋转是为了穿透木头或其他材料，并紧紧地固定在适当的位置，即螺丝。
@@ -7421,6 +8513,42 @@ categories: English
 
   16. noun(DATED·INFORMAL): a bill or one's share of it, especially in a pub or bar. 账单或其中一部分，尤其是在酒馆或酒吧。
 
+- shove
+
+  1. verb: push (someone or something) roughly.
+
+     _"they started pushing and shoving people out of the way"_
+
+  2. noun: a strong push.
+
+     _"she gave him a hefty shove and he nearly fell"_
+
+  3. phrase: get the shove - be dismissed from a job.
+
+     _"we all knew that if he got the shove, the unions would be called in one minute later"_
+
+  4. phrase: give someone the shove - dismiss someone from a job.
+
+     _"if he cannot back up such madness, then they have to give him the shove"_
+
+  5. phrase: shove off - go away.
+
+     _"shove off—you're bothering the customers"_
+
+  6. phrase: shove up - move oneself to make room for someone.
+
+     _"“Shove up, then,” he said, nudging me"_
+
+- shriek
+
+  1. verb: utter a high-pitched piercing sound or words, especially as an expression of terror, pain, or excitement.
+
+     _"the audience shrieked with laughter"_
+
+  2. verb: a high-pitched piercing cry or sound; a scream.
+
+     _"shrieks of laughter"_
+
 - shrink
 
   1. verb: become or make smaller in size or amount. 在尺寸或数量上变得更小。
@@ -7428,6 +8556,16 @@ categories: English
   2. verb: move back or away, especially because of fear or disgust. 后退或离开，尤其是因为恐惧或厌恶。
 
   3. noun(INFORMAL): a psychiatrist. 精神科医生。
+
+- sigh
+
+  1. verb: emit a long, deep, audible breath expressing sadness, relief, tiredness, or a similar feeling.
+
+     _"Harry sank into a chair and sighed with relief"_
+
+  2. noun: a long, deep, audible exhalation expressing sadness, relief, tiredness, or a similar feeling.
+
+     _"she let out a long sigh of despair"_
 
 - slack
 
@@ -7461,63 +8599,173 @@ categories: English
 
   15. noun: coal dust or small pieces of coal. 煤粉或小煤块。
 
+- slam
+
+  1. verb: shut (a door, window, or lid) forcefully and loudly.
+
+     _"he slams the door behind him as he leaves"_
+
+  2. noun: a loud bang caused by the forceful shutting of something such as a door.
+
+     _"the back door closed with a slam"_
+
+  3. noun(INFORMAL·NORTH AMERICAN): prison.
+
+     _"if he challenged the judge, he was definitely going to the slam"_
+
+  4. noun(US): a poetry contest in which competitors recite their entries and are judged by members of the audience, the winner being elected after several elimination rounds.
+
+     _"a poetry slam"_
+
+  5. noun(BRIDGE): a grand slam (all thirteen tricks) or small slam (twelve tricks), for which bonus points are scored if bid and made.
+
+- slant
+
+  1. verb: slope or lean in a particular direction; diverge or cause to diverge from the vertical or horizontal.
+
+     _"a plowed field slanted up to the skyline"_
+
+  2. verb: present or view (information) from a particular angle, especially in a biased or unfair way.
+
+     _"everybody slants their research, whether they admit it or not"_
+
+  3. noun: a sloping position.
+
+     _"the hedge grew at a slant"_
+
+  4. noun: a particular point of view from which something is seen or presented.
+
+     _"a new slant on science"_
+
+  5. adjective: sloping.
+
+     _"slant pockets"_
+
+- sling(past tense/past participle: slung)
+
+  1. verb: suspend or arrange (something), especially with a strap or straps, so that it hangs loosely in a particular position.
+
+     _"a hammock was slung between two trees"_
+
+  2. verb(INFORMAL·BRITISH): casually throw or fling.
+
+     _"sling a few things into your knapsack"_
+
+  3. verb(INFORMAL·AUSTRALIAN): pay a bribe or gratuity.
+
+     _"they didn't forget to sling when the backhanders came in"_
+
 - slip
 
   1. verb: (of a person or animal) slide unintentionally. for a short distance, typically losing one's balance or footing. （人或动物）无意中滑了一小段距离，通常是失去平衡或失足。
 
+     _"I slipped on the ice"_
+
      - (of a thing) accidentally slide or move out of position or from someone's grasp. （某物）不小心滑出或移出位置或从某人的手中滑出。
+
+       _"the envelope slipped through Luke's fingers"_
 
      - fail to grip or make proper contact with a surface. 无法抓住或正确接触表面。
 
+       _"the front wheels began to slip"_
+
   2. verb: go or move quietly or quickly, without attracting notice. 安静或快速地走或移动，没有引起注意的。
+
+     _"we slipped out by a back door"_
 
      - put (something) in a particular place or position quietly, quickly, or stealthily. 安静，迅速，或偷偷地把（某物）放在一个特定的地方或位置。
 
+       _"she slipped the map into her pocket"_
+
      - put on (a garment) quickly and easily. 迅速并容易地穿上一件衣服。
+
+       _"Sarah slipped into a red jacket"_
 
      - take off (a garment) quickly and easily. 迅速并容易地脱掉一件衣服。
 
+       _"in the bathroom she quickly slipped out of her clothes"_
+
   3. verb: pass or change to lower, worse, or different condition, typically in a gradual or imperceptible way. 到达或改变到更低，更差，或不同的条件，通常以逐渐或难以察觉的方式。
+
+     _"many people feel standards have slipped"_
 
   4. verb: escape or get loose from (a means of restraint). 逃脱或摆脱（束缚的手段）。
 
+     _"the giant balloon slipped its moorings"_
+
   5. noun: an act of sliding unintentionally for a short distance. 无意识地滑动一小段距离的行为。
+
+     _"a single slip could send them plummeting down the mountainside"_
 
   6. noun: a fall to a lower level or standard. 下降到较低的水平或标准。
 
+     _"a continued slip in house prices"_
+
      - a minor or careless mistake. 一个小的或粗心的错误。
+
+       _"the judge made a slip in his summing up"_
 
   7. noun: a woman's loose-fitting, dress- or skirt- length undergarment, suspended by shoulder straps (full slip) or by an elasticized waistband (half slip). 一种女性的宽松，连衣裙或短裙长度的内衣，通过肩带（全衬）或弹性腰带（半衬）悬挂，即内衬。
 
+     _"a silk slip"_
+
   8. noun: a slope built leading into water, used for launching and landing boats and ships or for building and repairing them. 入水而建的斜坡，供船舶上下水或为建造和修理他们。
+
+     _"he brought his steamer to the yard for overhaul at his old employer's slip"_
 
   9. noun: a leash which enables a dog to be released quickly. 使狗很快能被放开的皮带。
 
+     _"Tommy bolted off like a greyhound released from the slips"_
+
   10. noun(KNITTING): short for slip stitch. （针织）跳针的缩写。
+
+      _"one color at a time should be knitted in striped slip"_
 
   11. phrase: give someone the slip - evade or escape from someone. 逃避或逃离某人。
 
+      _"we gave them the slip at the station"_
+
   12. phrase: let something slip - reveal something inadvertently in the course of a conversation. 在谈话过程中不经意地透露一些东西。
+
+      _"Alex had let slip he was married"_
 
   13. phrase: slip through one's fingers (slip from one's grasp) - (of something important or worthwhile) be lost, especially as a result of carelessness or lack of effort. （重要或有价值的东西）丢失，尤指由于粗心或不努力导致的。
 
+      _"the police let him slip through their fingers"_
+
   14. phrase: slip of the pen - aminor mistake in writing. 写作中的一个小错误。
+
+      _"the errors in question are rather more than slips of the pen"_
 
   15. phrase: slip of the tongue - a minor mistake in speech. 言语中的一个小错误。
 
+      _"it was a slip of the tongue of the kind that does happen during live broadcasts"_
+
   16. phrase: slip one over on someone - take advantage of someone by trickery. 以诡计占某人便宜。
+
+      _"they slipped one over on us"_
 
   17. proverb: there's many a slip 'twixt cup and lip - many things can go wrong between the start of a project and its completion; nothing is certain until it has happened. 在项目开始和完成之间可能会出现很多问题；在事情发生前，没什么是确定的。
 
   18. phrase: slip away - depart without saying goodbye; leave quietly or surreptitiously. 不辞而别；悄悄或偷偷离开。
 
+      _"I slipped away from the guided tour"_
+
   19. phrase: slip in - smoothly insert a remark into a conversation. 顺畅地在对话中插入评论。
+
+      _"she slipped in a question about the length of time he'd been working on the assignment"_
 
   20. phrase: slip out - (of a remark) be uttered inadertently. （评论）不经意间说出。
 
+      _"the question slipped out before I'd considered the wisdom of it"_
+
   21. phrase: slip up - make a careless error. 犯一个粗心的错误。
 
+      _"they often slipped up when it came to spelling"_
+
   22. noun: a small piece of paper, typically a form for writing on or one giving printed information. 一小张纸，通常是一种用于书写或提供打印信息的表格。
+
+      _"his monthly salary slip"_
 
   23. noun: a cutting taken from a plant for grafting or planting; a scion. 为嫁接或种植而从植物上截取的一段；一个幼芽，接班人。
 
@@ -7525,7 +8773,11 @@ categories: English
 
   25. phrase: a slip of a sb. - used to denote a small, slim person. 用于表示一个小而苗条的人。
 
-  26. phrase: a creamy mixture of clay, water, and typically a pigment, used especially for decorating earthenware. 粘土，水和通常是颜料的乳状混合物，尤其用于装饰陶器。
+      _"you are little more than a slip of a girl"_
+
+  26. noun: a creamy mixture of clay, water, and typically a pigment, used especially for decorating earthenware. 粘土，水和通常是颜料的乳状混合物，尤其用于装饰陶器。
+
+      _"details not carved into the clay were secured with slip"_
 
 - sliver lining
 
@@ -7739,6 +8991,40 @@ categories: English
 
   9. noun: a splinter of wood. 一片木头。
 
+- spoil
+
+  1. verb: diminish or destroy the value or quality of.
+
+     _"I wouldn't want to spoil your fun"_
+
+  2. verb: harm the character of (someone, especially a child) by being too lenient or indulgent.
+
+     _"the last thing I want to do is spoil Thomas"_
+
+  3. verb: be extremely or aggressively eager for.
+
+     _"Cooper was spoiling for a fight"_
+
+  4. verb(ARCHAIC): rob (a person or a place) of goods or possessions by force or violence.
+
+     _"the enemy entered into Hereford, spoiled and fired the city, and razed the walls to the ground"_
+
+  5. noun: goods stolen or taken forcibly from a person or place.
+
+     _"the looters carried their spoils away"_
+
+  6. noun: waste material brought up during the course of an excavation or a dredging or mining operation.
+
+- spoiler
+
+  1. noun: a description of an important plot development in a television show, movie, or book which if previously known may reduce surprise or suspense for a first-time viewer or reader.
+
+  2. noun: a person or thing that spoils something.
+
+  3. noun: a flap on the wing of an aircraft that can be projected in order to create drag and so reduce speed.
+
+  4. noun: an electronic device for preventing unauthorized copying of sound recordings by means of a disruptive signal inaudible on the original.
+
 - spontaneous
 
   1. adjective: performed or occurring as a result of a sudden inner impulse or inclination and without premeditation or external stimulus. 表现或发生，因为突然的内在冲动或倾向并没有预谋或外部刺激，即即兴的，自发的。
@@ -7750,6 +9036,60 @@ categories: English
   2. noun(INFORMAL·NORTH AMERICAN): a spy. 间谍。
 
   3. verb(INFORMAL): frighten; unnerve. 吓唬；不安。
+
+- spot
+
+  1. noun: a small round or roundish mark, differing in color or texture from the surface around it.
+
+     _"ladybugs have black spots on their red wing covers"_
+
+  2. noun: a particular place or point.
+
+     _"a nice secluded spot"_
+
+  3. noun(INFORMAL·BRITISH): a small amount of something.
+
+     _"a spot of rain"_
+
+  4. noun: denoting a system of trading in which commodities or currencies are delivered and paid for immediately after a sale.
+
+     _"trading in the spot markets"_
+
+  5. noun: short for spotlight.
+
+  6. noun(INFORMAL·NORTH AMERICAN): a banknote of a specified value.
+
+     _"a ten-spot"_
+
+  7. noun(SOUTH AFRICAN): a bar or other drinking establishment (usually in a private home in a township) that operates without an official permit.
+
+     _"her father was at the spot with his friends"_
+
+  8. verb: see, notice, or recognize (someone or something) that is difficult to detect or that one is searching for.
+
+     _"Andrew spotted the ad in the paper"_
+
+  9. verb: mark with spots.
+
+     _"the velvet was spotted with stains"_
+
+  10. verb: place (a billiard ball or football) on its designated starting point.
+
+  11. verb(INFORMAL·NORTH AMERICAN): give or lend (money) to (someone).
+
+      _"I'll spot you $300"_
+
+  12. phrase: hit the spot - be exactly what is required.
+
+      _"the cup of coffee hit the spot"_
+
+  13. phrase: in a spot - in a difficult situation.
+
+  14. phrase: on the spot - without any delay; immediately.
+
+      _"he offered me the job on the spot"_
+
+  15. phrase: put someone on the spot - force someone into a situation in which they must make a difficult decision or answer a difficult question.
 
 - spotlight
 
@@ -7907,6 +9247,16 @@ categories: English
 
   1. noun: the ability to sustain prolonged physical or mental effort. 维持长时间体力或脑力劳作的能力，即耐力，体力。
 
+- stampede
+
+  1. noun: a sudden panicked rush of a number of hourses, cattle, or other animals.
+
+     _"the herd was fleeing back to the high land in a wild stampede"_
+
+  2. verb: (of horses, cattle, or other animals) rush wildly in a sudden mass panic.
+
+     _"the nearby sheep stampeded as if they sensed impending danger"_
+
 - startle
 
   1. verb: cause (a person or animal) to feel sudden shock or alarm. 使（人或动物）感到突然的震惊或惊慌。
@@ -7960,6 +9310,54 @@ categories: English
   6. verb: (of an official) supervise arrangements or keep order at (a large public event). （官员）监督安排或维持秩序在（大型公共活动中）。
 
   7. verb: manage or look after (another's property). 管理或照看（他人的财产）。
+
+- still
+
+  1. adjective: not moving or making a sound.
+
+     _"the still body of the young man"_
+
+     - (of air or water) undisturbed by wind, sound, or current; calm and tranquil.
+
+       _"her voice carried on the still air"_
+
+  2. noun: deep silence and calm; stillness.
+
+     _"the still of the night"_
+
+  3. noun: an ordinary static photograph as opposed to a motion picture, especially a single shot from a movie.
+
+     _"film stills"_
+
+  4. adverb: up to and including the present or the time mentioned; even now (or then) as formerly.
+
+     _"he still lives with his mother"_
+
+     - referring to something that will or may happen in the future.
+
+       _"we could still win"_
+
+  5. adverb: nevertheless; all the same.
+
+     _"I'm afraid he's crazy. Still, he's harmless"_
+
+  6. adverb: even (used with comparatives for emphasis).
+
+     _"write, or better still, type, captions for the pictures"_
+
+  7. verb: make or become still; quieten.
+
+     _"she raised her hand, stilling Erica's protests"_
+
+  8. phrase: still and all - nevertheless; even so.
+
+  9. phrase: still small voice - the voice of one's conscience (with reference to 1 Kings 19:12).
+
+  10. phrase: still waters run deep - a quiet or placid manner may conceal a more passionate nature.
+
+  11. noun: an apparatus for distilling alcoholic drinks such as whiskey.
+
+      _"the fermented solution is moved into large copper stills for the distilling"_
 
 - stir
 
@@ -8219,11 +9617,37 @@ categories: English
 
   1. noun: matter, material, articles, or activities of a specified or indeterminate kink that are being referred to, indicated, or implied. 被提及、指明或暗示的特定或不确定的类型的物质、材料、文章或活动。
 
+     _"she's good at the technical stuff"_
+
   2. noun: the basic constituents or characteristics of something or someone. 某人或某物的基本成分或特征。
+
+     _"Healey was made of sterner stuff"_
 
   3. verb: fill (a receptacle or space) tightly with something. 用东西紧紧地填满（容器或空间）。
 
+     _"an old teapot stuffed full of cash"_
+
   4. verb(INFORMAL·BRITISH): used to express indifference toward or rejection of (something). 用于表达对某事的漠不关心和拒绝。
+
+     _"stuff the diet!"_
+
+  5. phrase: and stuff - said in vague reference to additional things of a similar nature to those specified.
+
+     _"all that running and swimming and stuff"_
+
+  6. phrase: get stuffed - said in anger to tell someone to go away or as an expression of contempt.
+
+     _"she wanted to join his mob but he told her to get stuffed"_
+
+  7. phrase: stuff it - said to express indifference, resignation, or rejection.
+
+     _"Stuff it, I'm 61, what do I care?"_
+
+  8. phrase: stuff one's face - eat greedily.
+
+     _"people are stuffing their faces with cake and champagne"_
+
+  9. phrase: that's the stuff - said in approval of what has just been done or said.
 
 - stumble
 
@@ -8477,6 +9901,20 @@ categories: English
 
   12. noun: (in musical theater) an understudy, typically one who covers multiple roles in the chorus of a particular production. （在音乐剧中）替补，通常是在特定作品的合唱中扮演多个角色的人。
 
+- swoop
+
+  1. verb: (especially of a bird) move rapidly downwards through the air.
+
+     _"the barn owl can swoop down on a mouse in total darkness"_
+
+  2. verb(INFORMAL): seize with a swooping motion.
+
+     _"she swooped up the hen in her arms"_
+
+  3. noun: a swooping or snatching movement or action.
+
+     _"four members were arrested following a swoop by detectives on their homes"_
+
 - sympathy
 
   1. noun: feelings of pity and sorrow for someone else's misfortune. 对别人的不幸感到遗憾和悲伤。
@@ -8524,6 +9962,40 @@ categories: English
   3. verb: (of a tailor) make (clothes) to fit individual customers.
 
      _"he was wearing a sports coat that had obviously been tailored in New York"_
+
+- tease
+
+  1. verb: make fun of or attempt or provoke (a person or animal) in a playful way.
+
+     _"she was just teasing"_
+
+     - tempt (someone) sexually with no intention of satisfying the ddesire aroused.
+
+       _"she had thrown herself at him and teased him"_
+
+  2. verb: gently pull or comb (tangled wool, hair, etc.) into separate strands.
+
+     _"she was teasing out the curls into her usual hairstyle"_
+
+  3. phrase: tease out - find something out from a mass of irrelevant information.
+
+     _"a historian who tries to tease out the truth"_
+
+- teeny
+
+  1. adjective(INFORMAL): tiny.
+
+     _"a teeny bit of criticism"_
+
+- teeter
+
+  1. verb: move or balance unsteadily; away back and forth.
+
+     _"she teetered after him in her high-heeled sandals"_
+
+  2. phrase: teeter on the edge - be very close to a difficult or dangerous situation.
+
+     _"they teeter on the edge of extinction, with no more than a handful left"_
 
 - teller
 
@@ -8677,6 +10149,18 @@ categories: English
 
   6. verb(BRITISH): mark (an item) with a tick or select (a box) on a form, questionnaire, etc., to indicate that something has been chosen, checked, approved, or dealt with. 在表格或问卷上用对钩标记（项目）或选中（方框），以表明某事已经被选择，检查，批准或处理。
 
+- tingle
+
+  1. verb: experience or cause to experience a slight prickling or stinging sensation.
+
+     _"she was tingling with excitement"_
+
+  2. noun: a slight prikling or stinging sensation.
+
+     _"a tingle of anticipation"_
+
+  3. noun: an S-shaped metal clip used to support heavy panes of glass or slates on a roof.
+
 - tissue
 
   1. noun: any of the distinct types of material of which animals or plants are made, consisting of specialized cells and their products.
@@ -8783,6 +10267,10 @@ categories: English
 
   2. noun: members of tribal communities, especially in South Asia. 部落社区的成员，尤其是在南亚。
 
+- triceratops
+
+  1. noun: a large quadrupedal herbivorous dinosaur living at the end of the Cretaceous period, having a massive head with two large horns, a smaller horn on the beaked snout, and a bony frill above the neck.
+
 - trivial
 
   1. adjective: of little value or importance.
@@ -8811,6 +10299,44 @@ categories: English
 
      _"he met them at the curb and placed the bags in the trunk"_
 
+- tuba
+
+  1. noun: a large brass wind instrument of bass pitch, with three to six valves and a broad bell typically facing upward.
+
+- tuck
+
+  1. verb: push, fold, or turn (the deges or ends of something, especially a garment or bedclothes) so as to hide them or hold them in place.
+
+     _"he tucked his shirt into his trousers"_
+
+  2. verb: make a flattened, stitched fold in (a garment or material), typically so as to shorten or tighten it, or for decoration.
+
+     _"the suit was pinned and tucked all over"_
+
+  3. noun: a flattened, stitched fold in a garment or material, typically one of serveral parallel folds put in a garment for shortening, tightening, or decoration.
+
+     _"a dress with tucks along the bodice"_
+
+  4. noun(DATED·INFORMAL): food, typically cakes and candy, eaten by children at school as a snack.
+
+     _"a tuck shop"_
+
+  5. noun: (in diving, gymnastics, downhill skiing, etc.) a position with the knees bent and held close to the chest, often with the hands clasped around the shins.
+
+     _"Lenzi nailed a reverse 3-1/2 somersault tuck on his final dive"_
+
+  6. phrase: tuck away - keep something in a secure place.
+
+     _"keep something in a secure place. "employees can tuck away a percentage of their pretax salary"_
+
+  7. phrase: tuck in/into - make someone, especially a child, comfortable in bed by pulling the covers up around them.
+
+     _"he carried her back to bed and tucked her in"_
+
+  8. phrase: tuck into - eat food heartily.
+
+     _I tucked into the bacon and eggs_
+
 - turbulent
 
   1. adjective: characterized by conflict, disorder, or confusion; not controlled or calm. 以冲突，无序，混乱为特征；不受控制或不冷静的。
@@ -8838,6 +10364,10 @@ categories: English
   5. noun: a fine adjustment to a mechanism or system.
 
      _"no tweaks were required"_
+
+- tyrannosaurus
+
+  1. noun: a very large bipedal carnivorous dinosaur of the late Cretaceous period, with powerful jaws and small clawlike front legs.
 
 ## U
 
@@ -9131,6 +10661,16 @@ categories: English
 
 ## W
 
+- waddle
+
+  1. verb: walk with short steps and a clumsy swaying motion.
+
+     _"three geese waddled across the road"_
+
+  2. noun: a waddling gait.
+
+     _"I walk with a waddle"_
+
 - way
 
   1. noun: a method, style, or manner of doing something. 做某事的方法、风格或方式。
@@ -9313,6 +10853,28 @@ categories: English
 
   4. verb: sell (goods) in large quantities at low prices to be retailed by others. 以低价大量出售（商品）以供他人零售。
 
+- whoop
+
+  1. noun: a loud cry of joy or excitement.
+
+     _"a moment's silence was followed by whoops of delight"_
+
+  2. noun: a long rasping indrawn breath, characteristic of whooping cough.
+
+  3. noun: (in motorcycling or cycling) a bump or dip on an off-road racetrack or rally course.
+
+  4. verb: give or make a whoop.
+
+     _"all at once they were whooping with laughter"_
+
+  5. phrase: not give a whoop - be totally indifferent.
+
+  6. phrase: whoop it up - enjoy oneself or celebrate in a noisy way.
+
+  7. verb: beat or assault (someone).
+
+     _"I'm still looking forward to whooping your ass, buddy"_
+
 - wieldy
 
   1. adjective: easily controlled or handled.
@@ -9432,6 +10994,16 @@ categories: English
   7. phrase: as God is my witness - an invocation of God as confirmation of the truth of a statement. 向上帝祈祷作为陈述真实性的确认。
 
   8. phrase: call someone or something to witness - appeal or refer to someone or something for confirmation or evidence of something. 要求或提及某人或某物用来确认或作为某事的证据。
+
+- wobbly
+
+  1. adjective: tending to move unsteadily from side to side.
+
+     _"the car had a wobbly wheel"_
+
+  2. noun: a fit of temper or panic.
+
+     _"my daughter threw a wobbly when I wouldn't let her play"_
 
 - wonder
 
