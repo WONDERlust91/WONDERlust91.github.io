@@ -149,18 +149,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">145</span>
+          <span class="site-state-item-count">146</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">255</span>
+        <span class="site-state-item-count">256</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,161 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2022/01/14/javascript%E5%B0%81%E8%A3%85%E5%8F%AF%E4%B8%AD%E6%AD%A2%E7%9A%84fetch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/01/14/javascript%E5%B0%81%E8%A3%85%E5%8F%AF%E4%B8%AD%E6%AD%A2%E7%9A%84fetch/" class="post-title-link" itemprop="url">javascript封装可中止的fetch</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-01-14 11:31:21" itemprop="dateCreated datePublished" datetime="2022-01-14T11:31:21+00:00">2022-01-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="封装-fetch"><a href="#封装-fetch" class="headerlink" title="封装 fetch"></a>封装 fetch</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 请求配置类型，后续可扩展</span>
+<span class="token keyword">interface</span> <span class="token class-name">RequestConfig</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 基础请求地址</span>
+  baseUrl<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token comment">// 超时时间</span>
+  timeout<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 请求返回值类型</span>
+<span class="token comment">// 在Promise基础上增加 abortController 属性，可用于手动终止请求</span>
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">RequestReturn</span> <span class="token keyword">extends</span> <span class="token class-name"><span class="token builtin">Promise</span><span class="token operator">&lt;</span>Response<span class="token operator">></span></span> <span class="token punctuation">&#123;</span>
+  abortController<span class="token operator">:</span> AbortController<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 重新声明请求类型，在 fetch 默认的 input、init 属性基础上增加了 config 属性，返回值在 Promise 基础上增加了 abortController 属性</span>
+<span class="token keyword">interface</span> <span class="token class-name">Request</span> <span class="token punctuation">&#123;</span>
+  <span class="token punctuation">(</span>
+    input<span class="token operator">:</span> RequestInfo<span class="token punctuation">,</span>
+    init<span class="token operator">?</span><span class="token operator">:</span> RequestInit<span class="token punctuation">,</span>
+    config<span class="token operator">?</span><span class="token operator">:</span> RequestConfig
+  <span class="token punctuation">)</span><span class="token operator">:</span> RequestReturn<span class="token punctuation">;</span>
+  create<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 直接调用，该形式类似直接使用 axios</span>
+<span class="token keyword">const</span> request<span class="token operator">:</span> <span class="token function-variable function">Request</span> <span class="token operator">=</span> <span class="token punctuation">(</span>input<span class="token punctuation">,</span> init<span class="token operator">?</span><span class="token punctuation">,</span> config<span class="token operator">?</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> controller <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AbortController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> signal <span class="token operator">=</span> controller<span class="token punctuation">.</span>signal<span class="token punctuation">;</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+      controller<span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 默认10秒超时</span>
+    config<span class="token operator">?.</span>timeout <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> config<span class="token operator">?.</span>timeout <span class="token operator">!==</span> <span class="token keyword">undefined</span>
+      <span class="token operator">?</span> config<span class="token operator">?.</span>timeout
+      <span class="token operator">:</span> <span class="token number">10000</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 由于js只能声明函数，而不能直接声明可调用对象，故使用 Object.assign 的方式将属性与函数整合在一起</span>
+  <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>config<span class="token operator">?.</span>baseUrl <span class="token operator">||</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token operator">+</span> input<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> signal<span class="token punctuation">,</span> <span class="token operator">...</span>init <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#123;</span> abortController<span class="token operator">:</span> controller <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 创建实例，该形式类似使用 axios.create 创建实例</span>
+request<span class="token punctuation">.</span><span class="token function-variable function">create</span> <span class="token operator">=</span> <span class="token punctuation">(</span>config<span class="token operator">:</span> RequestConfig<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> request<span class="token operator">:</span> <span class="token function-variable function">Request</span> <span class="token operator">=</span> <span class="token punctuation">(</span>input<span class="token punctuation">,</span> init<span class="token operator">?</span><span class="token punctuation">,</span> instanceConfig<span class="token operator">?</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> controller <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AbortController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> signal <span class="token operator">=</span> controller<span class="token punctuation">.</span>signal<span class="token punctuation">;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+      controller<span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> instanceConfig<span class="token operator">?.</span>timeout <span class="token operator">||</span> config<span class="token punctuation">.</span>timeout <span class="token operator">||</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>
+      <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>instanceConfig<span class="token operator">?.</span>baseUrl <span class="token operator">||</span> config<span class="token punctuation">.</span>baseUrl <span class="token operator">||</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token operator">+</span> input<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+        signal<span class="token punctuation">,</span>
+        <span class="token operator">...</span>init<span class="token punctuation">,</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#123;</span> abortController<span class="token operator">:</span> controller <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> request<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> request<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/14/javascript%E5%B0%81%E8%A3%85%E5%8F%AF%E4%B8%AD%E6%AD%A2%E7%9A%84fetch/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +377,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -314,7 +469,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -414,7 +569,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -508,7 +663,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -602,7 +757,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -698,7 +853,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -801,7 +956,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -910,7 +1065,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1005,7 +1160,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1040,98 +1195,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2021/09/01/css%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BB%BA%E8%AE%AEfont-size%E8%AE%BE%E7%BD%AE%E4%B8%BA12px%E4%BB%A5%E4%B8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/09/01/css%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BB%BA%E8%AE%AEfont-size%E8%AE%BE%E7%BD%AE%E4%B8%BA12px%E4%BB%A5%E4%B8%8B/" class="post-title-link" itemprop="url">css为什么不建议font-size设置为12px以下</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-09-01 09:48:05" itemprop="dateCreated datePublished" datetime="2021-09-01T09:48:05+00:00">2021-09-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>在业务中发现设置小于 12px 的字号不生效，最小只能设置为 12px 的问题。</p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>由于中文字体笔划较密，小于 12px 时，展示效果不佳，故 chrome 浏览器中文版默认最小字号为 12px，英文版则没有最小字号为 12px 的限制。为了有更为统一的用户体验，而无需用户自行修改浏览器默认配置，不使用小于 12px 的字号，是最佳实践。</p>
-<h2 id="修改最小字号"><a href="#修改最小字号" class="headerlink" title="修改最小字号"></a>修改最小字号</h2><p>如果一定要修改最小字号，地址栏输入<code>chorme://settings/fonts</code>，进入字体设置，调整最小字号为 0，即可使小于 12px 的字号生效了。</p>
-<blockquote>
-<p>参考资料</p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/22374961">「每日一题」为什么不建议将 font-size 设置为 12px 以下？</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/69695071">再谈 Chrome 的最小字体 12px 限制</a></p>
-</blockquote>
-
       
     </div>
 

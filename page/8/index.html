@@ -149,18 +149,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">145</span>
+          <span class="site-state-item-count">146</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">255</span>
+        <span class="site-state-item-count">256</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,141 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2020/06/13/css%E9%98%B4%E5%BD%B1%E4%B9%8BPhotoshop%E6%8A%95%E5%BD%B1%E4%B8%8Ebox-shadow%E8%BD%AC%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/06/13/css%E9%98%B4%E5%BD%B1%E4%B9%8BPhotoshop%E6%8A%95%E5%BD%B1%E4%B8%8Ebox-shadow%E8%BD%AC%E6%8D%A2/" class="post-title-link" itemprop="url">css阴影之Photoshop投影与box-shadow转换</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-06-13 13:59:06" itemprop="dateCreated datePublished" datetime="2020-06-13T13:59:06+00:00">2020-06-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="box-shadow"><a href="#box-shadow" class="headerlink" title="box-shadow"></a>box-shadow</h2><p>box-shadow属性用于在元素上添加阴影效果。同一个元素上可以设置多个阴影效果，使用逗号将它们分开即可。该属性可设置的值包括x轴偏移量（x-offset），y轴偏移量（y-offset），模糊半径（blur-radius），扩散半径（spread-radius），颜色（color）。</p>
+<p>若元素设置了border-radius属性，阴影同样会有圆角效果。多个阴影在z轴上的顺序和text-shadows规则相同，即第一个阴影在最上面。</p>
+<h3 id="box-shadow属性值设置规则"><a href="#box-shadow属性值设置规则" class="headerlink" title="box-shadow属性值设置规则"></a>box-shadow属性值设置规则</h3><ul>
+<li><p>二至四个值时</p>
+<ul>
+<li><p>二个值时，被视为offset-x与offset-y</p>
+</li>
+<li><p>三个值时，第三个值为blur-radius</p>
+</li>
+<li><p>四个值时，第四个值为spread-radius</p>
+</li>
+</ul>
+</li>
+<li><p>inset 可选值，表示阴影向内</p>
+</li>
+<li><p>color 可选值，指代阴影颜色</p>
+</li>
+</ul>
+<h3 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h3><p>inset 未指定inset时阴影默认向外扩散，使用inset关键字使阴影落在盒子内部，看起来像是内容被压低了，此时阴影在边框之内，背景之上，内容之下。</p>
+<p>offset 两个offset为length类型值。用来设置阴影偏移量。offset-x 设置阴影水平偏移，正值阴影位于元素右边，负值阴影位于元素左边。offset-y 设置阴影垂直偏移，正值阴影位于元素下方，负值阴影位于元素上方。</p>
+<p>blur-radius 必需为正值，设置阴影模糊面积，越大阴影颜色越淡。默认为0，阴影边缘锐利。</p>
+<p>spread-radius 默认为0，阴影与元素同样大小。取正值时，阴影扩大，取负值时，阴影收缩。需要考虑inset属性的影响。</p>
+<p>color 未指定时由浏览器决定，通常为color的值，safari中为透明。</p>
+<h2 id="Photoshop投影与css阴影的换算"><a href="#Photoshop投影与css阴影的换算" class="headerlink" title="Photoshop投影与css阴影的换算"></a>Photoshop投影与css阴影的换算</h2><p>结构：</p>
+<ul>
+<li><p>混合模式：Photoshop提供了各种混合模式，css仅支持正常模式</p>
+</li>
+<li><p>不透明度：相当于box-shadow中color的rgba中的a值</p>
+</li>
+<li><p>角度：投影的角度</p>
+</li>
+<li><p>距离：阴影的距离，根据角度和距离可以换算出css3中的offset-x与offset-y</p>
+<ul>
+<li><p>offset-x：距离 * cos(180度 - 角度)</p>
+</li>
+<li><p>offset-y：距离 * sin(180度 - 角度)</p>
+</li>
+</ul>
+</li>
+<li><p>扩散：阴影的扩散，根据扩散与大小可以计算出spread-radius与blur-radius</p>
+</li>
+<li><p>大小：阴影的大小</p>
+<ul>
+<li><p>spread-radius：扩散 * 大小</p>
+</li>
+<li><p>blur-radius: 大小 - 扩散 * 大小</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>text-shadow因为没有spread-radius所以不能完全实现Photoshop中的效果。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +357,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -317,7 +452,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -421,7 +556,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -530,7 +665,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -631,7 +766,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -724,7 +859,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -823,7 +958,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -930,7 +1065,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1017,7 +1152,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1053,119 +1188,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li><p>computed计算属性set的妙用。通常如果后端数据库中保存的值与前端表单中要双向绑定的值不同时，我们会在异步获取数据时将后端值转为前端值，在提交逻辑中再将前端值转为后端值。这种情况下，前后端值不一致的区间是从获取开始直到提交给后端结束，这样的代码逻辑在写业务时确实没有问题，但是在字段写活的情况下，获取数据与提交表单的逻辑中并不知道哪些字段前端所需要值与后端值不一致需要处理，而唯一知道当前字段是谁，是否需要做处理的地方只有表单双向绑定的地方，因此允许前后端值不一致的地方仅剩表单中双向绑定时的一个时间点了，而不是一个很大的区间。那么我们要使前后端值不一致一区间最小化，即只在表单中双向绑定的地方允许前后端值不一致，其他时候都是使用后端值。这就要用到computed计算属性了，双向绑定中不再绑定后端传过来的值，而是绑定一个后端值转为前端值的计算属性，这是计算属性的get，光有get只能实现双向绑定的回填，无法实现双向绑定的修改，那么重点就是计算属性的set，在计算属性的set中写一个函数，将双向绑定值再次转回为后端要求的格式，这样就实现了前后端值不一致区间的最小化，仅剩双向绑定时的一个点。</p>
 </li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2019/08/12/javascript%E4%BD%BF%E7%94%A8terser%E6%89%93%E5%8C%85%E6%97%B6%E8%87%AA%E5%8A%A8%E5%8E%BB%E9%99%A4console-log/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WONDERlust91">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WONDER's Notes">
-      <meta itemprop="description" content="又是一个艳阳天">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WONDER's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/08/12/javascript%E4%BD%BF%E7%94%A8terser%E6%89%93%E5%8C%85%E6%97%B6%E8%87%AA%E5%8A%A8%E5%8E%BB%E9%99%A4console-log/" class="post-title-link" itemprop="url">javascript使用terser打包时自动去除console.log</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-08-12 13:43:15" itemprop="dateCreated datePublished" datetime="2019-08-12T13:43:15+00:00">2019-08-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="terser"><a href="#terser" class="headerlink" title="terser"></a>terser</h2><p>由于老牌工具uglify不支持es6，且uglify-es不再更新，我们选择terser作为js代码压缩工具。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 全局安装terser命令行工具</span>
-<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> terser
-<span class="token comment"># 使用terser</span>
-terser ./foo.js <span class="token parameter variable">-c</span> <span class="token assign-left variable">pure_funcs</span><span class="token operator">=</span><span class="token punctuation">[</span>console.log<span class="token punctuation">]</span>,toplevel<span class="token operator">=</span>true <span class="token parameter variable">-m</span> <span class="token parameter variable">-o</span> bar.js
-<span class="token comment"># -c即compress表示普通的压缩代码</span>
-<span class="token comment"># pure_funcs表示删除代码中的console.log方法</span>
-<span class="token comment"># toplevel为true表示只在顶级作用域压缩清理变量</span>
-<span class="token comment"># -m即mangle会压缩变量名等等</span>
-<span class="token comment"># -o代表输出路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>其他配置可以参考terser官网</p>
-<h2 id="terser-webpack-plugin"><a href="#terser-webpack-plugin" class="headerlink" title="terser-webpack-plugin"></a>terser-webpack-plugin</h2><p>这是terser的webpack插件版。由于vue-cli工具中已经用到了terser-webpack-plugin，因此在vue-cli新建的项目中可以直接引入terser-webpack-plugin，无需安装。</p>
-<p>根据vue-cli3文档，所有对webpack的个性化配置都要写在vue.config.js中，示例如下：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// vue.config.js</span>
-<span class="token keyword">const</span> TerserPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"terser-webpack-plugin"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-  <span class="token literal-property property">configureWebpack</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-    <span class="token literal-property property">minimizer</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-        <span class="token literal-property property">terserOptions</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-          <span class="token literal-property property">compress</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-            <span class="token literal-property property">pure_funcs</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"console.log"</span><span class="token punctuation">]</span>
-          <span class="token punctuation">&#125;</span>
-        <span class="token punctuation">&#125;</span>
-      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-    <span class="token punctuation">]</span>
-  <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>

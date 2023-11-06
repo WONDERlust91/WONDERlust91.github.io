@@ -149,18 +149,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">145</span>
+          <span class="site-state-item-count">146</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">255</span>
+        <span class="site-state-item-count">256</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -177,6 +177,106 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://wonderlust91.github.io/2018/03/15/javascript%E5%85%B3%E9%94%AE%E5%AD%97this/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="WONDERlust91">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WONDER's Notes">
+      <meta itemprop="description" content="又是一个艳阳天">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WONDER's Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/03/15/javascript%E5%85%B3%E9%94%AE%E5%AD%97this/" class="post-title-link" itemprop="url">javascript关键字this</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-03-15 15:10:22" itemprop="dateCreated datePublished" datetime="2018-03-15T15:10:22+00:00">2018-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="this的四种绑定（动态作用域，动态绑定，绑定调用时的对象）"><a href="#this的四种绑定（动态作用域，动态绑定，绑定调用时的对象）" class="headerlink" title="this的四种绑定（动态作用域，动态绑定，绑定调用时的对象）"></a>this的四种绑定（动态作用域，动态绑定，绑定调用时的对象）</h1><h2 id="一、this的默认绑定"><a href="#一、this的默认绑定" class="headerlink" title="一、this的默认绑定"></a>一、this的默认绑定</h2><h3 id="全局上下文中（即在任何函数体外部）"><a href="#全局上下文中（即在任何函数体外部）" class="headerlink" title="全局上下文中（即在任何函数体外部）"></a>全局上下文中（即在任何函数体外部）</h3><p>无论是否为严格模式，this均绑定到全局对象（node中为global，浏览器中是window）。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token string">"use strict"</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> window<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="在函数上下文中"><a href="#在函数上下文中" class="headerlink" title="在函数上下文中"></a>在函数上下文中</h3><h4 id="1-严格模式下，this默认绑定为undefined"><a href="#1-严格模式下，this默认绑定为undefined" class="headerlink" title="(1)严格模式下，this默认绑定为undefined"></a>(1)严格模式下，this默认绑定为undefined</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token string">"use strict"</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2-非严格模式下，this默认绑定到全局（node中是global，浏览器中是window）有以下四种情况："><a href="#2-非严格模式下，this默认绑定到全局（node中是global，浏览器中是window）有以下四种情况：" class="headerlink" title="(2)非严格模式下，this默认绑定到全局（node中是global，浏览器中是window）有以下四种情况："></a>(2)非严格模式下，this默认绑定到全局（node中是global，浏览器中是window）有以下四种情况：</h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/03/15/javascript%E5%85%B3%E9%94%AE%E5%AD%97this/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -222,7 +322,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -318,7 +418,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -410,7 +510,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -505,7 +605,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -597,7 +697,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-02 17:56:15" itemprop="dateModified" datetime="2023-11-02T17:56:15+00:00">2023-11-02</time>
+      <time title="Modified: 2023-11-06 09:04:54" itemprop="dateModified" datetime="2023-11-06T09:04:54+00:00">2023-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
