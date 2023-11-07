@@ -7742,3 +7742,613 @@ To calculate the value of `prediction`, this code iterates through each of the 1
 Calculations in applications like audio decoders often prioritize performance most highly. There's no loop at all corresponding to the iteration over the values in `coefficients`: Rust knows that there are 12 iterations, so it "unrolls" the loop. Unrolling is an optimization that removes the overhead of the loop controlling code and instead generates repetitive code for each iteration of the loop.
 
 All of the coefficients get stored in registers, which means accessing the values is very fast. There are no bounds checks on the array access at runtime. All these optimizations that Rust is able to apply make the resulting code extremely efficient. Now that you know this, you can use iterators and closures without fear!
+
+## More About Cargo and Crates.io
+
+### Customizing Builds with Release Profiles
+
+Cargo has two main profiles: the `dev` profile Cargo uses when you run `cargo build` and the `release` profile Cargo uses when you run `cargo build --release`.
+
+Cargo has default settings for each of the profiles that apply when you haven't explicitly added any `[profile.*]` sections in the project's _Cargo.toml_ file. By adding `[profile.*]` sections for any profile you want to customize, you override any subset of the default settings. For example, here are the default values for the `opt-level` setting for the `dev` and `release` profiles:
+
+Filename: Cargo.toml
+
+```toml
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+```
+
+The `opt-level` setting controls the number of optimizations Rust will apply to your code, with a range of 0 to 3. Applying more optimizations extends compiling time, so if you're in development and compiling your code often, you'll want fewer optimizations to compile faster even if the resulting code runs slower. The default `opt-level` for dev is therefore `0`. When you're ready to release your code, it's best to spend more time compiling. You'll only compile in release mode once, but you'll run the compiled program many times, so release mode trades longer compile time for code that runs faster. That is why the default `opt-level` for the `release` profile is `3`.
+
+You can override a default setting by adding a different value for it in _Cargo.toml_.
+
+Filename: Cargo.toml
+
+```toml
+[profile.dev]
+opt-level = 1
+```
+
+Because we set `opt-level` to `1`, Cargo will apply more optimizations than the default, but not as many as in a release build.
+
+### Publishing a Crate to Crates.io
+
+#### Making Useful Documentation Comments
+
+In previous chapter, we discussed how to comment Rust code using two slashes, `//`. Rust also has a particular kind of comment for documentation, known conveniently as a _documentation comment_, that will generate HTML documentation.
+
+Documentation comments use three slashes, `///`, instead of two and support Markdown notation for formatting the text. Place documentation comments just before the item they're documenting. The following listing shows documentation comments for an `add_one` function in a crate named `my_crate`.
+
+Filename: src/lib.rs
+
+````rust
+/// Adds one to the number given.
+///
+/// # Examples
+///
+/// ```
+/// let arg = 5;
+/// let answer = my_crate::add_one(arg);
+///
+/// assert_eq!(6, answer);
+/// ```
+pub fn add_one(x: i32) -> i32 {
+    x + 1
+}
+````
+
+We can generate the HTML documentation from this documentation comment by running `cargo doc`. This command runs the `rustdoc` tool distributed with Rust and puts the generated HTML documentation in the _target/doc_ directory.
+
+For convenience, running `cargo doc --open` will build the HTML for your current crate's documentation (as well as the documentation for all of your crate's dependencies) and open the result in a web browser.
+
+##### Commonly Used Sections
+
+We used the `# Examples` Markdown heading to create a section in the HTML with the title "Examples." Here are some other sections that crate authors commonly use in their documentation:
+
+- **Panics**: The scenarios in which the function being documented could panic. Callers of the function who don't want their programs to panic should make sure they don't call the function in these situations.
+
+- **Errors**: If the function returns a `Result`, describing the kinds of errors that might occur and what conditions might cause those errors to be returned can be helpful to callers so they can write code to handle the different kinds of errors in different ways.
+
+- **Safety**: If the function is `unsafe` to call (we discuss unsafety in later chapter), there should be a section explaining why the function is unsafe and covering the invariants that the function expects callers to uphold.
+
+Most documentation comments don't need all of these sections, but this is a good checklist to remind you of the aspects of your code users will be interested in knowing about.
+
+##### Documentation Comments as Tests
+
+Adding example code blocks in your documentation comments can help demonstrate how to use your library, and doing so has an additional bonus: running `cargo test` will run the code examples in your documentation as tests! If we run `cargo test` with the documentation for the `add_one` function from the preceding listing, we will see a section in the test results like this:
+
+```text
+   Doc-tests my_crate
+
+running 1 test
+test src/lib.rs - add_one (line 5) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.27s
+```
+
+##### Commenting Contained Items
+
+The style of doc comment `//!` adds documentation to the item that contains the comments rather than to the items following the comments. We typically use these doc comments inside the crate root file (_src/lib.rs_ by convention) or inside a module to document the crate or the module as a whole.
+
+For example, to add documentation that describes the purpose of the `my_crate` crate that contains the `add_one` function, we add documentation comments that start with `//!` to the beginning of the _src/lib.rs_ file, as shown in the following listing:
+
+Filename: src/lib.rs
+
+```rust
+//! # My Crate
+//!
+//! `my_crate` is a collection of utilities to make performing certain
+//! calculations more convenient.
+
+/// Adds one to the number given.
+// --snip--
+```
+
+Notice there isn't any code after the last line that begins with `//!`. Because we started the comments with `//!` instead of `///`, we're documenting the item that contains this comment rather than an item that follows this comment. In this case, that item is the _src/lib.rs_ file, which is the crate root. These comments describe the entire crate.
+
+When we run `cargo doc --open`, these comments will display on the front page of the documentation for `my_crate` above the list of public items in the crate
+
+Documentation comments within items are useful for describing crates and modules especially. Use them to explain the overall purpose of the container to help your users understand the crate's organization.
+
+#### Exporting a Convenient Public API with pub use
+
+The structure of your public API is a major consideration when publishing a crate.
+
+However, the structure that makes sense to you while you're developing a crate might not be very convenient for your users. You might want to organize your structs in a hierarchy containing multiple levels, but then people who want to use a type you've defined deep in the hierarchy might have trouble finding out that type exists. They might also be annoyed at having to enter `use my_crate::some_module::another_module::UsefulType`; rather than `use my_crate::UsefulType`;.
+
+The good news is that if the structure isn't convenient for others to use from another library, you don't have to rearrange your internal organization: instead, you can re-export items to make a public structure that's different from your private structure by using `pub use`. Re-exporting takes a public item in one location and makes it public in another location, as if it were defined in the other location instead.
+
+For example, say we made a library named `art` for modeling artistic concepts. Within this library are two modules: a `kinds` module containing two enums named `PrimaryColor` and `SecondaryColor` and a `utils` module containing a function named `mix`, as shown in the following listing:
+
+Filename: src/lib.rs
+
+```rust
+//! # Art
+//!
+//! A library for modeling artistic concepts.
+
+pub mod kinds {
+    /// The primary colors according to the RYB color model.
+    pub enum PrimaryColor {
+        Red,
+        Yellow,
+        Blue,
+    }
+
+    /// The secondary colors according to the RYB color model.
+    pub enum SecondaryColor {
+        Orange,
+        Green,
+        Purple,
+    }
+}
+
+pub mod utils {
+    use crate::kinds::*;
+
+    /// Combines two primary colors in equal amounts to create
+    /// a secondary color.
+    pub fn mix(c1: PrimaryColor, c2: PrimaryColor) -> SecondaryColor {
+        // --snip--
+    }
+}
+```
+
+Note that the `PrimaryColor` and `SecondaryColor` types aren't listed on the front page by `cargo doc --open`, nor is the `mix` function. We have to click `kinds` and `utils` to see them.
+
+Another crate that depends on this library would need `use` statements that bring the items from `art` into scope, specifying the module structure that's currently defined:
+
+Filename: src/main.rs
+
+```rust
+use art::kinds::PrimaryColor;
+use art::utils::mix;
+
+fn main() {
+    let red = PrimaryColor::Red;
+    let yellow = PrimaryColor::Yellow;
+    mix(red, yellow);
+}
+```
+
+The module structure of the `art` crate is more relevant to developers working on the `art` crate than to those using it. To remove the internal organization from the public API, we can modify the `art` crate code to add `pub use` statements to re-export the items at the top level, as shown in the following listing:
+
+Filename: src/lib.rs
+
+```rust
+//! # Art
+//!
+//! A library for modeling artistic concepts.
+
+pub use self::kinds::PrimaryColor;
+pub use self::kinds::SecondaryColor;
+pub use self::utils::mix;
+
+pub mod kinds {
+    // --snip--
+}
+
+pub mod utils {
+    // --snip--
+}
+```
+
+The API documentation that `cargo doc` generates for this crate will now list and link re-exports on the front page, making the `PrimaryColor` and `SecondaryColor` types and the `mix` function easier to find.
+
+The `art` crate users can still see and use the internal structure, or they can use the more convenient structure:
+
+Filename: src/main.rs
+
+```rust
+use art::mix;
+use art::PrimaryColor;
+
+fn main() {
+    // --snip--
+}
+```
+
+In cases where there are many nested modules, re-exporting the types at the top level with `pub use` can make a significant difference in the experience of people who use the crate. Another common use of `pub use` is to re-export definitions of a dependency in the current crate to make that crate's definitions part of your crate's public API.
+
+#### Setting Up a Crates.io Account
+
+Before you can publish any crates, you need to create an account on [crates.io](https://crates.io/) and get an API token. To do so, visit the home page at [crates.io](https://crates.io/) and log in via a GitHub account. (The GitHub account is currently a requirement, but the site might support other ways of creating an account in the future.) Once you're logged in, visit your account settings at [https://crates.io/me/](https://crates.io/me/) and retrieve your API key. Then run the `cargo login` command with your API key, like this:
+
+```bash
+$ cargo login abcdefghijklmnopqrstuvwxyz012345
+```
+
+This command will inform Cargo of your API token and store it locally in _~/.cargo/credentials_. Note that this token is a _secret_: do not share it with anyone else. If you do share it with anyone for any reason, you should revoke it and generate a new token on [crates.io](https://crates.io/).
+
+#### Adding Metadata to a New Crate
+
+Before publishing, you'll need to add some metadata in the `[package]` section of the crate's _Cargo.toml_ file.
+
+Your crate will need a unique name. While you're working on a crate locally, you can name a crate whatever you'd like. However, crate names on [crates.io](https://crates.io/) are allocated on a first-come, first-served basis. Once a crate name is taken, no one else can publish a crate with that name. Before attempting to publish a crate, search for the name you want to use. If the name has been used, you will need to find another name and edit the `name` field in the _Cargo.toml_ file under the `[package]` section to use the new name for publishing, like so:
+
+Filename: Cargo.toml
+
+```toml
+[package]
+name = "guessing_game"
+```
+
+Even if you've chosen a unique name, when you run `cargo publish` to publish the crate at this point, you'll get a warning and then an error:
+
+```text
+$ cargo publish
+    Updating crates.io index
+warning: manifest has no description, license, license-file, documentation, homepage or repository.
+See https://doc.rust-lang.org/cargo/reference/manifest.html#package-metadata for more info.
+--snip--
+error: failed to publish to registry at https://crates.io
+
+Caused by:
+  the remote server responded with an error: missing or empty metadata fields: description, license. Please see https://doc.rust-lang.org/cargo/reference/manifest.html for how to upload metadata
+```
+
+This errors because you're missing some crucial information: a description and license are required so people will know what your crate does and under what terms they can use it. In _Cargo.toml_, add a description that's just a sentence or two, because it will appear with your crate in search results. For the `license` field, you need to give a _license identifier value_. The [Linux Foundation's Software Package Data Exchange (SPDX)](http://spdx.org/licenses/) lists the identifiers you can use for this value. For example, to specify that you've licensed your crate using the MIT License, add the `MIT` identifier:
+
+Filename: Cargo.toml
+
+```toml
+[package]
+name = "guessing_game"
+license = "MIT"
+```
+
+If you want to use a license that doesn't appear in the SPDX, you need to place the text of that license in a file, include the file in your project, and then use `license-file` to specify the name of that file instead of using the `license` key.
+
+Many people in the Rust community license their projects in the same way as Rust by using a dual license of `MIT OR Apache-2.0`. This practice demonstrates that you can also specify multiple license identifiers separated by `OR` to have multiple licenses for your project.
+
+With a unique name, the version, your description, and a license added, the _Cargo.toml_ file for a project that is ready to publish might look like this:
+
+Filename: Cargo.toml
+
+```toml
+[package]
+name = "guessing_game"
+version = "0.1.0"
+edition = "2021"
+description = "A fun game where you guess what number the computer has chosen."
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+```
+
+[Cargo's documentation](https://doc.rust-lang.org/cargo/) describes other metadata you can specify to ensure others can discover and use your crate more easily.
+
+#### Publishing to Crates.io
+
+Publishing a crate uploads a specific version to [crates.io](https://crates.io/) for others to use.
+
+Be careful, because a publish is _permanent_. The version can never be overwritten, and the code cannot be deleted. One major goal of [crates.io](https://crates.io/) is to act as a permanent archive of code so that builds of all projects that depend on crates from [crates.io](https://crates.io/) will continue to work. Allowing version deletions would make fulfilling that goal impossible. However, there is no limit to the number of crate versions you can publish.
+
+Run the `cargo publish` command again. It should succeed now:
+
+```text
+$ cargo publish
+    Updating crates.io index
+   Packaging guessing_game v0.1.0 (file:///projects/guessing_game)
+   Verifying guessing_game v0.1.0 (file:///projects/guessing_game)
+   Compiling guessing_game v0.1.0
+(file:///projects/guessing_game/target/package/guessing_game-0.1.0)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.19s
+   Uploading guessing_game v0.1.0 (file:///projects/guessing_game)
+```
+
+#### Publishing a New Version of an Existing Crate
+
+When you've made changes to your crate and are ready to release a new version, you change the `version` value specified in your Cargo.toml file and republish. Use the [Semantic Versioning rules](http://semver.org/) to decide what an appropriate next version number is based on the kinds of changes you've made. Then run `cargo publish` to upload the new version.
+
+#### Deprecating Versions from Crates.io with cargo yank
+
+Although you can't remove previous versions of a crate, you can prevent any future projects from adding them as a new dependency. This is useful when a crate version is broken for one reason or another. In such situations, Cargo supports _yanking_ a crate version.
+
+Yanking a version prevents new projects from depending on that version while allowing all existing projects that depend on it to continue. Essentially, a yank means that all projects with a Cargo.lock will not break, and any future Cargo.lock files generated will not use the yanked version.
+
+To yank a version of a crate, in the directory of the crate that you've previously published, run `cargo yank` and specify which version you want to yank. For example, if we've published a crate named `guessing_game` version 1.0.1 and we want to yank it, in the project directory for `guessing_game` we'd run:
+
+```text
+$ cargo yank --vers 1.0.1
+    Updating crates.io index
+        Yank guessing_game@1.0.1
+```
+
+By adding `--undo` to the command, you can also undo a yank and allow projects to start depending on a version again:
+
+```text
+$ cargo yank --vers 1.0.1 --undo
+    Updating crates.io index
+      Unyank guessing_game@1.0.1
+```
+
+A yank _does not_ delete any code. It cannot, for example, delete accidentally uploaded secrets. If that happens, you must reset those secrets immediately.
+
+### Cargo Workspaces
+
+As your project develops, you might find that the library crate continues to get bigger and you want to split your package further into multiple library crates. Cargo offers a feature called _workspaces_ that can help manage multiple related packages that are developed in tandem.
+
+#### Creating a Workspace
+
+A _workspace_ is a set of packages that share the same _Cargo.lock_ and output directory. We'll have a workspace containing a binary and two libraries. The binary, which will provide the main functionality, will depend on the two libraries. We'll start by creating a new directory for the workspace:
+
+```bash
+$ mkdir add
+$ cd add
+```
+
+Next, in the _add_ directory, we create the _Cargo.toml_ file that will configure the entire workspace. This file won't have a `[package]` section. Instead, it will start with a `[workspace]` section that will allow us to add members to the workspace by specifying the path to the package with our binary crate; in this case, that path is _adder_:
+
+Filename: Cargo.toml
+
+```toml
+[workspace]
+
+members = [
+    "adder",
+]
+```
+
+Next, we'll create the `adder` binary crate by running `cargo new` within the _add_ directory:
+
+```text
+$ cargo new adder
+     Created binary (application) `adder` package
+```
+
+At this point, we can build the workspace by running `cargo build`. The files in your _add_ directory should look like this:
+
+```text
+├── Cargo.lock
+├── Cargo.toml
+├── adder
+│   ├── Cargo.toml
+│   └── src
+│       └── main.rs
+└── target
+```
+
+The workspace has one _target_ directory at the top level that the compiled artifacts will be placed into; the `adder` package doesn't have its own _target_ directory. Even if we were to run `cargo build` from inside the _adder_ directory, the compiled artifacts would still end up in _add/target_ rather than _add/adder/target_. Cargo structures the _target_ directory in a workspace like this because the crates in a workspace are meant to depend on each other. If each crate had its own _target_ directory, each crate would have to recompile each of the other crates in the workspace to place the artifacts in its own _target_ directory. By sharing one _target_ directory, the crates can avoid unnecessary rebuilding.
+
+#### Creating the Second Package in the Workspace
+
+Next, let's create another member package in the workspace and call it `add_one`. Change the top-level _Cargo.toml_ to specify the _add_one_ path in the `members` list:
+
+Filename: Cargo.toml
+
+```toml
+[workspace]
+
+members = [
+    "adder",
+    "add_one",
+]
+```
+
+Then generate a new library crate named `add_one`:
+
+```text
+$ cargo new add_one --lib
+     Created library `add_one` package
+```
+
+Your _add_ directory should now have these directories and files:
+
+```text
+├── Cargo.lock
+├── Cargo.toml
+├── add_one
+│   ├── Cargo.toml
+│   └── src
+│       └── lib.rs
+├── adder
+│   ├── Cargo.toml
+│   └── src
+│       └── main.rs
+└── target
+```
+
+In the _add_one/src/lib.rs_ file, let's add an `add_one` function:
+
+Filename: add_one/src/lib.rs
+
+```rust
+pub fn add_one(x: i32) -> i32 {
+    x + 1
+}
+```
+
+Now we can have the `adder` package with our binary depend on the `add_one` package that has our library. First, we'll need to add a path dependency on `add_one` to _adder/Cargo.toml_.
+
+Filename: adder/Cargo.toml
+
+```toml
+[dependencies]
+add_one = { path = "../add_one" }
+```
+
+Cargo doesn't assume that crates in a workspace will depend on each other, so we need to be explicit about the dependency relationships.
+
+Next, let's use the `add_one` function (from the `add_one` crate) in the `adder` crate. Open the _adder/src/main.rs_ file and add a `use` line at the top to bring the new `add_one` library crate into scope. Then change the `main` function to call the `add_one` function.
+
+Filename: adder/src/main.rs
+
+```rust
+use add_one;
+
+fn main() {
+    let num = 10;
+    println!("Hello, world! {num} plus one is {}!", add_one::add_one(num));
+}
+```
+
+Let's build the workspace by running `cargo build` in the top-level add directory!
+
+```text
+$ cargo build
+   Compiling add_one v0.1.0 (file:///projects/add/add_one)
+   Compiling adder v0.1.0 (file:///projects/add/adder)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.68s
+```
+
+To run the binary crate from the _add_ directory, we can specify which package in the workspace we want to run by using the `-p` argument and the package name with `cargo run`:
+
+```text
+$ cargo run -p adder
+    Finished dev [unoptimized + debuginfo] target(s) in 0.0s
+     Running `target/debug/adder`
+Hello, world! 10 plus one is 11!
+```
+
+This runs the code in _adder/src/main.rs_, which depends on the `add_one` crate.
+
+##### Depending on an External Package in a Workspace
+
+Notice that the workspace has only one _Cargo.lock_ file at the top level, rather than having a _Cargo.lock_ in each crate's directory. This ensures that all crates are using the same version of all dependencies. If we add the `rand` package to the _adder/Cargo.toml_ and _add_one/Cargo.toml_ files, Cargo will resolve both of those to one version of `rand` and record that in the one _Cargo.lock_. Making all crates in the workspace use the same dependencies means the crates will always be compatible with each other. Let's add the `rand` crate to the `[dependencies]` section in the _add_one/Cargo.toml_ file so we can use the `rand` crate in the `add_one` crate:
+
+Filename: add_one/Cargo.toml
+
+```toml
+[dependencies]
+rand = "0.8.5"
+```
+
+We can now add `use rand`; to the _add_one/src/lib.rs_ file, and building the whole workspace by running `cargo build` in the _add_ directory will bring in and compile the `rand` crate. We will get one warning because we aren't referring to the `rand` we brought into scope:
+
+```text
+$ cargo build
+    Updating crates.io index
+  Downloaded rand v0.8.5
+   --snip--
+   Compiling rand v0.8.5
+   Compiling add_one v0.1.0 (file:///projects/add/add_one)
+warning: unused import: `rand`
+ --> add_one/src/lib.rs:1:5
+  |
+1 | use rand;
+  |     ^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: `add_one` (lib) generated 1 warning
+   Compiling adder v0.1.0 (file:///projects/add/adder)
+    Finished dev [unoptimized + debuginfo] target(s) in 10.18s
+```
+
+The top-level _Cargo.lock_ now contains information about the dependency of `add_one` on `rand`. However, even though `rand` is used somewhere in the workspace, we can't use it in other crates in the workspace unless we add `rand` to their _Cargo.toml_ files as well. For example, if we add `use rand`; to the _adder/src/main.rs_ file for the `adder` package, we'll get an error:
+
+```text
+$ cargo build
+  --snip--
+   Compiling adder v0.1.0 (file:///projects/add/adder)
+error[E0432]: unresolved import `rand`
+ --> adder/src/main.rs:2:5
+  |
+2 | use rand;
+  |     ^^^^ no external crate `rand`
+```
+
+To fix this, edit the _Cargo.toml_ file for the `adder` package and indicate that `rand` is a dependency for it as well. Building the `adder` package will add `rand` to the list of dependencies for `adder` in _Cargo.lock_, but no additional copies of `rand` will be downloaded. Cargo has ensured that every crate in every package in the workspace using the `rand` package will be using the same version, saving us space and ensuring that the crates in the workspace will be compatible with each other.
+
+##### Adding a Test to a Workspace
+
+For another enhancement, let's add a test of the `add_one::add_one` function within the `add_one` crate:
+
+Filename: add_one/src/lib.rs
+
+```rust
+pub fn add_one(x: i32) -> i32 {
+    x + 1
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn it_works() {
+        assert_eq!(3, add_one(2));
+    }
+}
+```
+
+Now run `cargo test` in the top-level _add_ directory. Running `cargo test` in a workspace structured like this one will run the tests for all the crates in the workspace:
+
+```text
+$ cargo test
+   Compiling add_one v0.1.0 (file:///projects/add/add_one)
+   Compiling adder v0.1.0 (file:///projects/add/adder)
+    Finished test [unoptimized + debuginfo] target(s) in 0.27s
+     Running unittests src/lib.rs (target/debug/deps/add_one-f0253159197f7841)
+
+running 1 test
+test tests::it_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/adder-49979ff40686fa8e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests add_one
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+We can also run tests for one particular crate in a workspace from the top-level directory by using the `-p` flag and specifying the name of the crate we want to test:
+
+```text
+$ cargo test -p add_one
+    Finished test [unoptimized + debuginfo] target(s) in 0.00s
+     Running unittests src/lib.rs (target/debug/deps/add_one-b3235fea9a156f74)
+
+running 1 test
+test tests::it_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests add_one
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+If you publish the crates in the workspace to [crates.io](https://crates.io/), each crate in the workspace will need to be published separately. Like `cargo test`, we can publish a particular crate in our workspace by using the `-p` flag and specifying the name of the crate we want to publish.
+
+As your project grows, consider using a workspace: it's easier to understand smaller, individual components than one big blob of code. Furthermore, keeping the crates in a workspace can make coordination between crates easier if they are often changed at the same time.
+
+### Installing Binaries with cargo install
+
+The `cargo install` command allows you to install and use binary crates locally. Note that you can only install packages that have binary targets. A _binary target_ is the runnable program that is created if the crate has a _src/main.rs_ file or another file specified as a binary, as opposed to a library target that isn't runnable on its own but is suitable for including within other programs. Usually, crates have information in the _README_ file about whether a crate is a library, has a binary target, or both.
+
+All binaries installed with `cargo install` are stored in the installation root's _bin_ folder. If you installed Rust using _rustup.rs_ and don't have any custom configurations, this directory will be _$HOME/.cargo/bin_. Ensure that directory is in your `$PATH` to be able to run programs you've installed with `cargo install`.
+
+For example, there's a Rust implementation of the `grep` tool called `ripgrep` for searching files. To install `ripgrep`, we can run the following:
+
+```text
+$ cargo install ripgrep
+    Updating crates.io index
+  Downloaded ripgrep v13.0.0
+  Downloaded 1 crate (243.3 KB) in 0.88s
+  Installing ripgrep v13.0.0
+--snip--
+   Compiling ripgrep v13.0.0
+    Finished release [optimized + debuginfo] target(s) in 3m 10s
+  Installing ~/.cargo/bin/rg
+   Installed package `ripgrep v13.0.0` (executable `rg`)
+```
+
+The second-to-last line of the output shows the location and the name of the installed binary, which in the case of `ripgrep` is `rg`. As long as the installation directory is in your `$PATH`, as mentioned previously, you can then run `rg --help` and start using a faster, rustier tool for searching files!
+
+### Extending Cargo with Custom Commands
+
+Cargo is designed so you can extend it with new subcommands without having to modify Cargo. If a binary in your `$PATH` is named `cargo-something`, you can run it as if it was a Cargo subcommand by running `cargo something`. Custom commands like this are also listed when you run `cargo --list`. Being able to use `cargo install` to install extensions and then run them just like the built-in Cargo tools is a super convenient benefit of Cargo's design!
