@@ -489,6 +489,10 @@ categories: English
 
   slip v. 滑动；移动；摆脱 n. 滑动；标准降低；内衬；斜坡；小张纸；陶泥
 
+- inherent adj. 固有的、内在的
+
+  inherit v. 继承
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别

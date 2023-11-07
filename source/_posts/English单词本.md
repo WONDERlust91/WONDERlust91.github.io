@@ -981,6 +981,24 @@ categories: English
 
   3. noun: a type of seating, typically in a restaurant or bar, consisting of two high-backed benches with a table between them. 一种座位，通常在餐厅或酒吧中，由两个高背长凳组成，它们之间有一张桌子。
 
+- bother
+
+  1. verb: take the trouble to do something.
+
+     _"scientists rarely bother with such niceties"_
+
+  2. verb: (of a circumstance or event) worry, disturb, or upset (someone).
+
+     _"is there an issue that bothers you so much you'd campaign against it?"_
+
+  3. noun: effort, trouble, or difficulty.
+
+     _"he saved me the bother of having to come up with a speech"_
+
+  4. exclamation: used to express mild irritation or impatience.
+
+     \_"‘Bother!’ she muttered"\_F
+
 - breed
 
   1. verb: (of animals) mate and then produce offspring. （动物）交配，然后生产后代。
@@ -1506,6 +1524,10 @@ categories: English
   13. noun(WEST AFRICAN): a small dish that can conveniently be eaten with the fingers, typically served as an appetizer.
 
       _"wedding guests have come to expect a good selection of mouthwatering small chops"_
+
+- chromosome
+
+  1. noun(BIOLOGY): a threadlike structure of nucleic acids and protein found in the nucleus of most living cells, carrying genetic information in the form of genes.
 
 - chronic
 
@@ -4581,6 +4603,12 @@ categories: English
 
      _"everything has a tepid inevitability, and even as you smile you may be groaning inwardly."_
 
+- groundless
+
+  1. adjective: not based on any good reason.
+
+     _"your fears are quite groundless"_
+
 - grunt
 
   1. verb: (of an animal, especially a pig) make a low, short guttural sound.
@@ -5039,9 +5067,19 @@ categories: English
 
   1. noun: the conclusion that can be drawn from something although it is not explicitly stated. 可以从某事中得出的结论，尽管没有明确说明。
 
+     _"the implication is that no one person at the bank is responsible"_
+
+     - a likely consequence of something.
+
+       _"many people are unaware of the implications of such reforms"_
+
   2. noun: the action or state of being involved in something. 参与某事的行动或状态。
 
+     _"our implication in the problems"_
+
   3. phrase: by implication - by what is implied or suggested rather than by formal expression. 通过暗示或建议而不是正式的表达。
+
+     _"he criticized her and, by implication, her country"_
 
 - impose
 
@@ -5221,9 +5259,13 @@ categories: English
 
 - inherent
 
-  1. adjective: existing in something as a permanent, essential, or characteristic attribute. _"any form of mountaineering has its inherent dangers"_
+  1. adjective: existing in something as a permanent, essential, or characteristic attribute.
 
-     - (LAW) vested in someone as a right or privilege. _"the president's inherent foreign affairs power"_
+     _"any form of mountaineering has its inherent dangers"_
+
+     - (LAW) vested in someone as a right or privilege.
+
+       _"the president's inherent foreign affairs power"_
 
      - (LINGUISTICS) (of an adjective) having the same meaning in both attributive and predicative uses.
 
@@ -5959,6 +6001,10 @@ categories: English
 
   3. phrase: put someone or something out of their misery - end the suffering of a person or animal in pain by killing them. 通过杀死他们来结束人或动物遭受的痛苦。
 
+- mitochondrion
+
+  1. noun: an organelle found in large numbers in most cells, in which the biochemical processes of respiration and energy production occur. It has a double membrane, the inner part being folded inwards to form layers (cristae).
+
 - mock
 
   1. verb: tease or laugh at in a scornful or contemptuous manner. 以轻蔑或侮辱的方式挑逗或嘲笑。
@@ -6618,6 +6664,16 @@ categories: English
   7. noun: the end of something. 某事的结束。
 
   8. phrase: in passing - briefly and casually. 简要且随意地。
+
+- passionate
+
+  1. adjective: having, showing, or caused by strong feelings or beliefs.
+
+     _"passionate pleas for help"_
+
+     - arising from intense feelings of sexual love.
+
+       _"a passionate kiss"_
 
 - pastime
 
@@ -8181,9 +8237,13 @@ categories: English
 
      _"a moose in rut"_
 
-  4. verb: (of a deer or other mammal) engage in the rut or annual period of sexual activity. _"researchers say the deer are rutting earlier"_
+  4. verb: (of a deer or other mammal) engage in the rut or annual period of sexual activity.
 
-     - (DEROGATORY) engage in promiscuous or indiscriminate sexual activity. _"if you want to smoke and cuss and rut and get completely drunk, then go for it"_
+     _"researchers say the deer are rutting earlier"_
+
+     - (DEROGATORY) engage in promiscuous or indiscriminate sexual activity.
+
+       _"if you want to smoke and cuss and rut and get completely drunk, then go for it"_
 
 ## S
 
@@ -9715,9 +9775,15 @@ categories: English
 
   1. adjective: of considerable importance, size, or worth. 具有相当的重要性，规模，或价值。
 
+     _"a substantial amount of cash"_
+
   2. adjective: concerning the essentials of something. 关于事物的本质。
 
+     _"there was substantial agreement on changing policies"_
+
   3. adjective: real and tangible rather than imaginary. 真实和有形的，而不是想象的。
+
+     _"spirits are shadowy, human beings substantial"_
 
 - subtle
 
@@ -9962,6 +10028,30 @@ categories: English
   3. verb: (of a tailor) make (clothes) to fit individual customers.
 
      _"he was wearing a sports coat that had obviously been tailored in New York"_
+
+- tandem
+
+  1. noun: a bicycle with seats and pedals for two riders, one behind the other.
+
+     - a carriage driven by two animals harnessed one in front of the other.
+
+     - a group of two people or machines working together.
+
+       _"the Giants had the greatest pitching tandem in baseball history"_
+
+  2. adverb: with two or more horses harnessed one behind another.
+
+     _"I rode tandem to Paris"_
+
+     - alongside each other; together.
+
+  3. adjective: having two things arranged one in front of the other.
+
+     _"a tandem trailer"_
+
+  4. phrase: in tandem - alongside each other.
+
+     _"a tight fiscal policy working in tandem with a tight foreign exchange policy"_
 
 - tease
 
