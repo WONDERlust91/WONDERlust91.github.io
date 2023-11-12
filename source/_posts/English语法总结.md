@@ -212,6 +212,16 @@ as ... as 写作易错点：
 
 正确：You play soccer as beautifully as he dose.
 
+yet 状语从句套 while 状语从句的情况（本质就是英语的完整句子可以无限套娃）
+
+句子 1, yet while 分句, 主句
+
+等价于
+
+句子 1, yet 句子 2（句子 2 = while 分句, 主句）
+
+句子 2 以主句为主，因此，“句子 1”与“主句”是转折关系，“分句”与“主句”亦是转折关系，但“句子 1”与“分句”无关系，因为两个转折可以从不同的方面进行。
+
 ### 定语从句
 
 本质就是形容词，用于修饰名词。
@@ -233,6 +243,12 @@ as ... as 写作易错点：
   I like to read these books, which are expensive.
 
   修饰 books 故用 are
+
+  一种好用的变形：
+
+  I like this book, the pages of which are red.
+
+  There is a school, the students in which are smart.
 
 - 介词 + 定语从句 + 完整句子，不能用 that，带介词的定语从句不会修饰前面整个句子，只修饰名词
 
@@ -419,6 +435,12 @@ This book is among many books. 倒装 Among many books is this book.
 - As be sb. 正如某人一样
 
   正常语序：As sb. be
+
+### 虚拟语气中的省略与倒装
+
+Had sth. happend, I would do this. = If sth. had happend, I would do this.
+
+Were I you, I would do this. = If I were you, I would do this.
 
 ### With/Without
 
@@ -763,3 +785,13 @@ have been doing 从过去到现在一直做某事
   People attach too much importance to economic forecasts.
 
 - behind the scenes 表示“在幕后”
+
+- 常见简单词组或词汇，但理解易错
+
+  come across 偶遇
+
+  all the same = nevertheless 即便如此
+
+  practically = virtually = pretty much = almost = nearly 几乎/实际上
+
+  given 在句首，词性为介词，译为考虑到

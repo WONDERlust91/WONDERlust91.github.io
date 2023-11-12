@@ -19,9 +19,13 @@ categories: English
 
   constitution n. 宪法，组成，身体状态
 
+  destitute adj. 极度贫困（不常用）
+
   institute n. 机构（常与科学、教育、社会有关）; v. 建立，任命
 
   prostitute n. 妓女; v. 卖淫
+
+  restitute v. 恢复先前状态；归还
 
   substitute n. 替代物；v. 替代
 
@@ -127,7 +131,13 @@ categories: English
 
   comprehension n. 理解力
 
+  comprehensive adj. 全面的；综合性的（学校） n. 综合学校
+
+  comprehend v. 理解；包括，涵盖
+
 - assemble v. 聚集；组合
+
+  ensemble n. 合奏；成套
 
   resemble v. 相似
 
@@ -277,6 +287,16 @@ categories: English
 
   ultimate adj. 最终的，最好的，基础的 n. 终极；基本原则；（美国）极限飞盘的简称
 
+- intimate adj. 熟识的，接近的，详尽的；私人的 n. 亲密的朋友 v. 暗示，隐射，陈述，公开
+
+  imitate v. 模仿
+
+  intimidate v. 威吓
+
+  immediate adj. 立即的；最接近的
+
+  intermediate adj. 中等的 n. 中等品；中级技能者；中间产物 v. 调解
+
 - convolve v. 卷或绕在一起，缠绕；（数学）卷积
 
   devolve v. 放权；移交；（国家，政权等）退化或分裂（正式）
@@ -286,6 +306,16 @@ categories: English
   involve v. 包括某事物（作为必要部分或结果），（人或组织）涉及某事，卷入（情感或个人关系）
 
   revolve v. 绕轴心转动；围绕（抽象意义上认为某事重要）；仔细考虑（多个角度）
+
+- convoke v. 召集（会议）
+
+  evoke v. 唤起（回忆）（常用于回忆、情感等无形的概念）
+
+  invoke v. 援引；祈祷；呼吁；唤起；调用（计算机）（常用于援引法律，请求帮助，呼吁事项等实际的行为）
+
+  provoke v. 激起或引起（负面情绪等）= 招惹
+
+  revoke v. 撤销（法令、决议等）
 
 - exacerbate v. 恶化
 
@@ -370,6 +400,14 @@ categories: English
   seduce v. 勾引，诱导，吸引
 
   seduction n. 诱惑
+
+- conduct v. 实施(conduct survey/experiment/research)；指导；导电 n. 行为(code of conduct 行为准则)
+
+  conductible adj. 可传导的
+
+  simi-conductor n. 半导体
+
+  conductor n. 指挥
 
 - allude v. 暗示；提及
 
@@ -493,6 +531,100 @@ categories: English
 
   inherit v. 继承
 
+- tailor n. 裁缝；蓝鱼 v. 裁剪；订制
+
+  trailer n. 拖挂车；预告片 v. 预告宣传；用拖车运输
+
+- repute n. 声名、名誉 v. 认为（具有...名声）
+
+  depute v. 委任；委托
+
+  deputy n. 副职
+
+  dispute n. 争议 v. 争论；竞争
+
+  disrepute n. 恶评
+
+  reputation n. 声誉、名誉
+
+- appoint v. 指派职位、角色（不同于 assign：指派任务、工作）；预约时间
+
+  appointment n. 预约；任命；家具
+
+  disappointment n. 失望
+
+- vigorous adj. 强健的
+
+  rigorous adj. 严苛的
+
+- part n. 部分；角色；中分发型 v. 分开 adv. 某种程度上
+
+  apart adv. 分开地；分别地；成为碎片的
+
+  depart v. 离开
+
+  impart v. 传授；赐予
+
+- vague adj. 不明确的；含糊的
+
+  vogue n. 时尚 adj. 流行的 v. 像模特一样随音乐舞动
+
+- avert v. 转开（视线或思想）；避免（不良事件）
+
+  advert n. 广告 v. 提及；意识到
+
+  covert adj. 秘密的 n. 游戏中的草丛（隐匿处）；覆盖飞羽的羽毛
+
+  convert v. 改变；改变信仰；得分 n. 被说服改变信仰者
+
+  convertible adj. 可变换的 n. 敞篷车；可转换证券
+
+  divert v. 转变（路线、方向）；转移注意；娱乐
+
+  evert v. （生物学）把（器官）从外向内或从内向外翻转
+
+  extrovert n. 外向的人 adj. 外向的
+
+  invert v. 颠倒 n. 倒拱；同性恋；印错的邮票
+
+  introvert n. 内向的人 adj. 内向的
+
+  overt adj. 公开的
+
+  pervert v. 妨害；扭曲；误导 n. 性反常者
+
+  revert v. 返回、返还；回复；回顾 n. 皈依伊斯兰教者
+
+  subvert v. 推翻（统制、权力）
+
+- seam n. 缝线；接缝；地层（矿石、煤炭） v. 缝合；做一个又长又窄的凹槽
+
+  seal n. 密封；蜡（铅）封；保证；（神父对忏悔的）保密；海豹；海豹突击队 v. 密封（信件）；密封（防水）；短暂油炸（以防止后续烹饪失水）；确保某事（防止损失）；
+
+- insight n. 洞察力
+
+  incite v. 煽动；怂恿
+
+- crush v. 挤压；粉碎（反叛者）；击垮（情绪上） n. 拥挤；迷恋；果汁
+
+  crash v. 撞车；冲向；发出巨响；崩溃（经济）；不请自来；睡着 n. 车祸；撞击；暴跌；崩溃（系统） adj. 紧急的要努力的 adv. 有巨大声音地
+
+- rupt 词根，表示“断裂” break
+
+  rupture v. （管道、血管、器官）突然破裂；破坏（和谐的气氛）n. 突然破坏的情况；和谐关系的破裂
+
+  abrupt adj. 突兀的；简短到唐突的；（语言、文章）不流畅，脱节的；陡峭的
+
+  bankrupt adj. 破产的；缺失的 n. 破产 v. 破产
+
+  corrupt adj. 腐败的；不可靠的（电脑程序） v. 使腐败；改变（非本意或因错误）
+
+  disrupt v. 扰乱；彻底毁坏或改变结构
+
+  erupt v. （火山）喷发；突然爆发；爆发出（笑声、感情等）；突然出现皮疹
+
+  interrupt v. 打断（进程或谈话）；阻断（线、平面、视线）连续性
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -607,19 +739,23 @@ categories: English
 
   prevent
 
-  Stop
+  stop
 
-  Bar
+  bar
 
-  Block
+  block
 
-  Restrain
+  restrain
 
   impede
 
   hamper
 
   handicap
+
+  hinder
+
+  obstruct
 
 - 表“处理”
 
@@ -995,6 +1131,136 @@ categories: English
 
   wreck n. 失事 v. 击毁
 
+- 除了
+
+  other than
+
+  except for
+
+- 表“占据思想”、“痴迷”、“被支配”
+
+  preoccupy v. 占据思想并排除其他想法
+
+  engross v. 吸引所有注意或兴趣
+
+  obsess v. 持续占据思想到了有问题的程度
+
+  prey on one's mind v. 捕获某人思想
+
+- 表“嘲笑”、“蔑视”、“愚弄”
+
+  comtempt n. 轻视
+
+  redicule v.n. 蔑视、贬低
+
+  disdain v.n. 贬低
+
+  mock v. 嘲笑、愚弄 adj. 模拟、仿造（无恶意）
+
+  deride v. 嘲弄、轻视
+
+  scorn v.n. 蔑视
+
+  tease v.n. 玩弄；诱惑 v. 梳理（毛发或信息）
+
+  dismiss v. 允许离开；贬低
+
+- 表“争论”、“争议”
+
+  dispute n. 争论 v. 争论；竞争
+
+  controversy n. 争议
+
+  debate n. v. 辩论
+
+  argument n. 争论；论据；函数的参数
+
+  dissension n. 异议
+
+  contention n. 激烈争端；断言
+
+- 表“不可阻挡”、“不可避免”
+
+  inexorable adj. 不可阻挡；无法说服
+
+  inevitable adj. 必然发生；完全可预测 n. 不可避免的情况
+
+- 表“妥协”、“让步”
+
+  concession n. 让步；优惠；特许权
+
+  compromise n. 妥协 v. 妥协；损害；削弱
+
+- 表“严重的”、“严峻的”、“严苛的”
+
+  serious adj. 严格的；严肃的；严重的；大量的
+
+  severe adj. 严重的；严格的；普通的
+
+  dreadful adj. 可怕的；极其严重的
+
+  acute adj. 严重的；急性的；尖锐的
+
+  harsh adj. 令人不快的；残酷或严重的
+
+  grim adj. 极其严重或阴沉；（某地）令人生畏或无吸引力
+
+  fierce adj. 凶猛的；猛烈的
+
+  rigorous adj. 严苛的
+
+- substitute n. 替代品；替代者；副职 v. 代替
+
+  deputy n. 副职
+
+- 表示“用”、“利用” v.
+
+  use
+
+  utilize
+
+  exploit
+
+  take advantage of
+
+  apply
+
+  employ
+
+  leverage
+
+- “注册与登录”相关
+
+  register n. v. 注册
+
+  sign up 注册
+
+  sign in 登录
+
+  log in 登录
+
+  log out 登出
+
+- 表示“几乎”、“实际上” adv.
+
+  practically
+
+  virtually
+
+  pretty much
+
+  almost
+
+  nearly
+
+- 地球地理相关
+
+  crust 地壳
+
+  mantle 地幔
+
+  core 地核
+
 ## 反义词
 
 - radical adj. 激进的，左倾的
@@ -1054,3 +1320,23 @@ categories: English
 - herbivorous adj. 草食性的
 
   carnivorous adj. 肉食性的
+
+- sober adj. 未醉的；清醒的 v. 使未醉（清醒）
+
+  drunk adj. 醉酒的
+
+- be superior to 优于
+
+  be inferior to 劣于/不如
+
+- departure n. 出港；出发
+
+  arrival n. 进港；到达
+
+- extrovert n. 外向的人 adj. 外向的
+
+  introvert n. 内向的人 adj. 内向的
+
+- covert adj. 秘密的
+
+  overt adj. 公开的
