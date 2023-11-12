@@ -3325,7 +3325,7 @@ v.push(5);
 v.push(6);
 ```
 
-As with any variable, if we want to be able to change its value, we need to make it mutable using the `mut` keyword. The numbers we place inside are all of type i32, and Rust infers this from the data, so we don't need the Vec<i32> annotation.
+As with any variable, if we want to be able to change its value, we need to make it mutable using the `mut` keyword. The numbers we place inside are all of type i32, and Rust infers this from the data, so we don't need the `Vec<i32>` annotation.
 
 #### Reading Elements of Vectors
 
@@ -5592,7 +5592,7 @@ error: test failed, to rerun pass `--lib`
 
 The failure message indicates that this test did indeed panic as we expected, but the panic message did not include the expected string `'Guess value must be less than or equal to 100'`. The panic message that we did get in this case was `Guess value must be greater than or equal to 1, got 200.`. Now we can start figuring out where our bug is!
 
-#### Using Result<T, E> in Tests
+#### Using `Result<T, E>` in Tests
 
 We can also write tests that use `Result<T, E>`!
 
@@ -8352,3 +8352,176 @@ The second-to-last line of the output shows the location and the name of the ins
 ### Extending Cargo with Custom Commands
 
 Cargo is designed so you can extend it with new subcommands without having to modify Cargo. If a binary in your `$PATH` is named `cargo-something`, you can run it as if it was a Cargo subcommand by running `cargo something`. Custom commands like this are also listed when you run `cargo --list`. Being able to use `cargo install` to install extensions and then run them just like the built-in Cargo tools is a super convenient benefit of Cargo's design!
+
+## Smart Pointers
+
+A pointer is a general concept for a variable that contains an address in memory. This address refers to, or "points at," some other data. The most common kind of pointer in Rust is a reference. References are indicated by the `&` symbol and borrow the value they point to. They don't have any special capabilities other than referring to data, and have no overhead.
+
+_Smart pointers_, on the other hand, are data structures that act like a pointer but also have additional metadata and capabilities. Rust has a variety of smart pointers defined in the standard library that provide functionality beyond that provided by references. To explore the general concept, we'll look at a couple of different examples of smart pointers, including a _reference counting_ smart pointer type. This pointer enables you to allow data to have multiple owners by keeping track of the number of owners and, when no owners remain, cleaning up the data.
+
+Rust, with its concept of ownership and borrowing, has an additional difference between references and smart pointers: while references only borrow data, in many cases, smart pointers own the data they point to.
+
+Though we didn't call them as such at the time, we've already encountered a few smart pointers in this book, including `String` and `Vec<T>`. Both these types count as smart pointers because they own some memory and allow you to manipulate it. They also have metadata and extra capabilities or guarantees. `String`, for example, stores its capacity as metadata and has the extra ability to ensure its data will always be valid UTF-8.
+
+Smart pointers are usually implemented using structs. Unlike an ordinary struct, smart pointers implement the `Deref` and `Drop` traits. The `Deref` trait allows an instance of the smart pointer struct to behave like a reference so you can write your code to work with either references or smart pointers. The `Drop` trait allows you to customize the code that's run when an instance of the smart pointer goes out of scope.
+
+We'll cover the most common smart pointers in the standard library:
+
+- `Box<T>` for allocating values on the heap
+
+- `Rc<T>`, a reference counting type that enables multiple ownership
+
+- `Ref<T>` and `RefMut<T>`, accessed through `RefCell<T>`, a type that enforces the borrowing rules at runtime instead of compile time
+
+In addition, we'll cover the interior mutability pattern where an immutable type exposes an API for mutating an interior value. We'll also discuss reference cycles: how they can leak memory and how to prevent them.
+
+### Using `Box<T>` to Point to Data on the Heap
+
+The most straightforward smart pointer is a _box_, whose type is written `Box<T>`. Boxes allow you to store data on the heap rather than the stack. What remains on the stack is the pointer to the heap data.
+
+Boxes don't have performance overhead, other than storing their data on the heap instead of on the stack. But they don't have many extra capabilities either. You'll use them most often in these situations:
+
+- When you have a type whose size can't be known at compile time and you want to use a value of that type in a context that requires an exact size
+
+- When you have a large amount of data and you want to transfer ownership but ensure the data won't be copied when you do so
+
+- When you want to own a value and you care only that it's a type that implements a particular trait rather than being of a specific type
+
+We'll demonstrate the first situation in the ["Enabling Recursive Types with Boxes"](#enabling-recursive-types-with-boxes) section. In the second case, transferring ownership of a large amount of data can take a long time because the data is copied around on the stack. To improve performance in this situation, we can store the large amount of data on the heap in a box. Then, only the small amount of pointer data is copied around on the stack, while the data it references stays in one place on the heap. The third case is known as a _trait object_, and the later chapter devotes an entire section, ["Using Trait Objects That Allow for Values of Different Types"](#using-trait-objects-that-allow-for-values-of-different-types), just to that topic. So what you learn here you'll apply again in the later Chapter!
+
+#### Using a `Box<T>` to Store Data on the Heap
+
+The following listing shows how to use a box to store an `i32` value on the heap:
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    let b = Box::new(5);
+    println!("b = {}", b);
+}
+```
+
+In this case, we can access the data in the box similar to how we would if this data were on the stack. Just like any owned value, when a box goes out of scope, as `b` does at the end of `main`, it will be deallocated. The deallocation happens both for the box (stored on the stack) and the data it points to (stored on the heap).
+
+#### Enabling Recursive Types with Boxes
+
+A value of _recursive type_ can have another value of the same type as part of itself. Recursive types pose an issue because at compile time Rust needs to know how much space a type takes up. However, the nesting of values of recursive types could theoretically continue infinitely, so Rust can't know how much space the value needs. Because boxes have a known size, we can enable recursive types by inserting a box in the recursive type definition.
+
+As an example of a recursive type, let's explore the _cons list_. This is a data type commonly found in functional programming languages. The cons list type we'll define is straightforward except for the recursion; therefore, the concepts in the example we'll work with will be useful any time you get into more complex situations involving recursive types.
+
+##### More Information About the Cons List
+
+A _cons list_ is a data structure that comes from the Lisp programming language and its dialects and is made up of nested pairs, and is the Lisp version of a linked list. Its name comes from the `cons` function (short for "construct function") in Lisp that constructs a new pair from its two arguments. By calling `cons` on a pair consisting of a value and another pair, we can construct cons lists made up of recursive pairs.
+
+For example, here's a pseudocode representation of a cons list containing the list 1, 2, 3 with each pair in parentheses:
+
+```lisp
+(1, (2, (3, Nil)))
+```
+
+Each item in a cons list contains two elements: the value of the current item and the next item. The last item in the list contains only a value called `Nil` without a next item. A cons list is produced by recursively calling the `cons` function. The canonical name to denote the base case of the recursion is `Nil`. Note that this is not the same as the "null" or "nil" concept in the previous chapter, which is an invalid or absent value.
+
+The cons list isn't a commonly used data structure in Rust. Most of the time when you have a list of items in Rust, `Vec<T>` is a better choice to use. Other, more complex recursive data types are useful in various situations, but by starting with the cons list in this chapter, we can explore how boxes let us define a recursive data type without much distraction.
+
+The following listing contains an enum definition for a cons list. Note that this code won't compile yet because the `List` type doesn't have a known size, which we'll demonstrate.
+
+Filename: src/main.rs
+
+```rust
+enum List {
+    Cons(i32, List),
+    Nil,
+}
+```
+
+Using the `List` type to store the list `1, 2, 3` would look like the code in the following listing:
+
+Filename: src/main.rs
+
+```rust
+use crate::List::{Cons, Nil};
+
+fn main() {
+    let list = Cons(1, Cons(2, Cons(3, Nil)));
+}
+```
+
+If we try to compile the code in the previous listing, we get the error shown in the following listing:
+
+```text
+$ cargo run
+   Compiling cons-list v0.1.0 (file:///projects/cons-list)
+error[E0072]: recursive type `List` has infinite size
+ --> src/main.rs:1:1
+  |
+1 | enum List {
+  | ^^^^^^^^^
+2 |     Cons(i32, List),
+  |               ---- recursive without indirection
+  |
+help: insert some indirection (e.g., a `Box`, `Rc`, or `&`) to break the cycle
+  |
+2 |     Cons(i32, Box<List>),
+  |               ++++    +
+
+For more information about this error, try `rustc --explain E0072`.
+error: could not compile `cons-list` due to previous error
+```
+
+The error shows this type "has infinite size." The reason is that we've defined `List` with a variant that is recursive: it holds another value of itself directly. As a result, Rust can't figure out how much space it needs to store a `List` value.
+
+##### Computing the Size of a Non-Recursive Type
+
+Recall the `Message` enum we defined in the previous listing when we discussed enum definitions in the previous chapter:
+
+```rust
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+```
+
+To determine how much space to allocate for a `Message` value, Rust goes through each of the variants to see which variant needs the most space. Rust sees that `Message::Quit` doesn't need any space, `Message::Move` needs enough space to store two `i32` values, and so forth. Because only one variant will be used, the most space a `Message` value will need is the space it would take to store the largest of its variants.
+
+Contrast this with what happens when Rust tries to determine how much space a recursive type like the `List` enum in the previous listing needs. The compiler starts by looking at the `Cons` variant, which holds a value of type `i32` and a value of type `List`. Therefore, `Cons` needs an amount of space equal to the size of an `i32` plus the size of a `List`. To figure out how much memory the `List` type needs, the compiler looks at the variants, starting with the `Cons` variant. The `Cons` variant holds a value of type `i32` and a value of type `List`, and this process continues infinitely.
+
+##### Using `Box<T>` to Get a Recursive Type with a Known Size
+
+Because Rust can't figure out how much space to allocate for recursively defined types, the compiler gives an error with this helpful suggestion:
+
+```text
+help: insert some indirection (e.g., a `Box`, `Rc`, or `&`) to make `List` representable
+  |
+2 |     Cons(i32, Box<List>),
+  |               ++++    +
+```
+
+In this suggestion, "indirection" means that instead of storing a value directly, we should change the data structure to store the value indirectly by storing a pointer to the value instead.
+
+Because a `Box<T>` is a pointer, Rust always knows how much space a `Box<T>` needs: a pointer's size doesn't change based on the amount of data it's pointing to. This means we can put a `Box<T>` inside the `Cons` variant instead of another `List` value directly. The `Box<T>` will point to the next `List` value that will be on the heap rather than inside the `Cons` variant. Conceptually, we still have a list, created with lists holding other lists, but this implementation is now more like placing the items next to one another rather than inside one another.
+
+We can change the definition of the `List` enum and the usage of the `List` in previous listings to the code in the following listing, which will compile:
+
+Filename: src/main.rs
+
+```rust
+enum List {
+    Cons(i32, Box<List>),
+    Nil,
+}
+
+use crate::List::{Cons, Nil};
+
+fn main() {
+    let list = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));
+}
+```
+
+The `Cons` variant needs the size of an `i32` plus the space to store the box's pointer data. The `Nil` variant stores no values, so it needs less space than the `Cons` variant. We now know that any `List` value will take up the size of an `i32` plus the size of a box's pointer data. By using a box, we've broken the infinite, recursive chain, so the compiler can figure out the size it needs to store a `List` value.
+
+Boxes provide only the indirection and heap allocation; they don't have any other special capabilities, like those we'll see with the other smart pointer types. They also don't have the performance overhead that these special capabilities incur, so they can be useful in cases like the cons list where the indirection is the only feature we need.
+
+The `Box<T>` type is a smart pointer because it implements the `Deref` trait, which allows `Box<T>` values to be treated like references. When a `Box<T>` value goes out of scope, the heap data that the box is pointing to is cleaned up as well because of the `Drop` trait implementation.
