@@ -625,6 +625,52 @@ categories: English
 
   interrupt v. 打断（进程或谈话）；阻断（线、平面、视线）连续性
 
+- soar v. 高飞；飞涨
+
+  roar n. 咆哮 v. 咆哮；呼啸而过（交通工具）
+
+- promise n. 承诺 v. 承诺
+
+  premise n. 前提 v. 以之为前提
+
+  precise adj. 精确
+
+- drastically adv. 强烈或深远影响地；极其地；非常地
+
+  dramatically adv. 戏剧性地；惊人地；极大地
+
+- concur v. 同意；同时发生
+
+  incur v. 招致；遭受的不好结果
+
+  occur v. 发生；存在；（想法）出现在脑海中
+
+  recur v. 再次发生；再次想起；回到
+
+- seethe v. 沸腾的；（人群）快速移动的
+
+  soothe v. 缓和；镇静（与 sooth 发音相同）
+
+  sooth n. 真相、真理（同 truth）
+
+- creation n. 创造；造物
+
+  procreation n. 生殖（= reproduction）
+
+  recreation n. 休闲活动；再创造
+
+- bulletin board n. 论坛网站；公告栏
+
+  billboard n. 户外大型广告牌
+
+- stereotype n. 刻板印象；雕板 v. 作为刻板印象
+
+  prototype n. 原型 v. 制作原型
+
+- argument n. 争论；论据；函数参数
+
+  augment v. 增强，增加 （增强现实 AR：Augment Reality）
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -1261,6 +1307,26 @@ categories: English
 
   core 地核
 
+- 体育场地
+
+  pitch 运动场地（草地，如足球场）
+
+  court 运动场地（硬地，胶地等，如篮球场）
+
+  stadium 体育馆（指体育馆建筑本身，里面的场地可以是前两者任意一个）
+
+- 表示“可疑的”、“怀疑的”
+
+  dubious adj. 犹豫的；怀疑的
+
+  suspicious adj. 可疑的
+
+- 表示“舒缓”、“缓和”
+
+  alleviate v. 使（痛苦、问题）不严重
+
+  soothe v. 使平静；缓解（痛苦）
+
 ## 反义词
 
 - radical adj. 激进的，左倾的
@@ -1296,6 +1362,10 @@ categories: English
 - concrete adj. 具体的 n. 水泥 v. 浇注水泥；硬化
 
   abstract adj. 抽象的 n. 抽象；摘要 v. 分离；提取；总结
+
+- objective adj. 客观的；宾语的 n. 目标；宾语
+
+  subjective adj. 主观的；主语的 n. 主语
 
 - dawn n. 黎明；开始 v. 开始；变得明显；被感知
 
@@ -1340,3 +1410,7 @@ categories: English
 - covert adj. 秘密的
 
   overt adj. 公开的
+
+- cool adj. 酷的
+
+  lame adj. 蹩脚的；瘸的

@@ -291,6 +291,30 @@ categories: English
 
   2. noun: a person or organization officially attached to a larger body. 正式附属于更大机构的个人或组织。
 
+- affirm
+
+  1. verb: state as a fact; assert strongly and publicly.
+
+     _"he affirmed the country's commitment to peace"_
+
+     - declare one's support for; uphold; defend.
+
+       _"the referendum affirmed the republic's right to secede"_
+
+     - (LAW)accept or confirm the validity of (a judgment or agreement); ratify.
+
+     - (LAW) make a formal declaration rather than taking an oath (e.g., to testify truthfully).
+
+     - (LAW) (of a court) uphold (a decision) on appeal.
+
+  2. verb: offer (someone) emotional support or encouragement.
+
+     _"there are five common ways parents fail to affirm their children"_
+
+     - give (life) a heightened sense of value, typically through the experience of something emotionally or spiritually uplifting.
+
+       _"it is a rich and challenging motion picture that both affirms life and emphasizes its fragility"_
+
 - agenda
 
   1. noun: a list of items to be discussed at a formal meeting. 将在正式会议上讨论的项目清单。
@@ -615,6 +639,12 @@ categories: English
 
   2. phrase: astrological signs = zodiac signs 星座。
 
+- astute
+
+  1. adjective: having or showing an ability to accurately assess situations or people and turn this to one's advantage.
+
+     _"an astute businessman"_
+
 - at a loss
 
   1. phrase: puzzled or uncertain what to think, say, or do. 困惑或不确定想什么，说什么，做什么。
@@ -647,6 +677,16 @@ categories: English
 
      - (of a person or animal) accompanying another as a companion or assistant. （人或动物）作为伴侣或助手陪伴另一个人。
 
+- augment
+
+  1. verb: make (something) greater by adding to it; increase.
+
+     _"he augmented his summer income by painting houses"_
+
+  2. noun(LINGUISTICS): a vowel prefixed to past tenses of verbs in Greek and other Indo-European languages.
+
+  3. phrase: augment reality - AR.
+
 - authentic
 
   1. adjective: of undisputed origin; genuine. 无可争议的来源；真的。
@@ -669,11 +709,33 @@ categories: English
 
   2. noun: recoil arising between parts of a mechanism. 机械部件间生产的后坐力。
 
+- backload
+
+  1. noun: a load transported on the return journey of a delivery truck.
+
+  2. verb: transport a load on a return journey.
+
+     _"I get paid for the round trip, even if I don't backload"_
+
+  3. verb: place more charges at the later stages of (a financial agreement) than at the earlier stages.
+
+     _"the agreement was backloaded"_
+
 - bait
 
   1. verb: deliberately annoy or taunt (someone). 故意惹恼或嘲笑（某人）。
 
   2. verb: prepare (a hook, trap, net, or fishing area) with bait to entice fish or animals as prey. 用诱饵准备（鱼钩，陷阱，网或钓鱼区）以诱惑鱼或动物作为猎物。
+
+- ballistic
+
+  1. adjective: relating to projectiles or their flight. 弹道相关的
+
+  2. adjective: moving under the force of gravity only.
+
+  3. phrase: go ballistic — fly into a rage.
+
+     _"he will go ballistic if bureaucrats attempt to meddle in his decisions"_
 
 - ballot
 
@@ -786,6 +848,12 @@ categories: English
   3. adverb: extending or directly underneath something. 延伸或直接在某物下方。
 
   4. adverb: at a lower level or layer. 在较低级别或层级。
+
+- beside the point
+
+  1. phrase: irrelevant; not relevant to the subject that you are discussing.
+
+     _"Brian didn't like it, but that was beside the point."_
 
 - better off
 
@@ -1305,6 +1373,12 @@ categories: English
 
   3. noun(INFORMAL·NORTH AMERICAN): a person's buttocks. （非正式·北美）一个人的臀部。
 
+- bureaucrat
+
+  1. noun: an official in a government department, in particular one perceived as being concerned with procedural correctness at the expense of people's needs.
+
+     _"the unemployed will be dealt with not by faceless bureaucrats but by individuals"_
+
 - burp
 
   1. verb(INFORMAL): noisily release air from the stomach through the mouth; belch.
@@ -1721,6 +1795,10 @@ categories: English
 
      _"I hope we can treat each other with civility and respect"_
 
+- civil servant (公务员)
+
+  1. noun: a member of the civil service.
+
 - chipmunk
 
   1. noun: a burrowing ground squirrel with cheek pouches and light and dark stripes running down the body, found in North America and northern Eurasia. 花栗鼠，在北美和欧亚大陆北部发现的一种地面穴居松鼠，脸部带有颊囊并且有沿着身体延伸的明暗条纹。
@@ -1811,6 +1889,36 @@ categories: English
 
   1. adjective: (of a record of events) starting with the earliest and following the order in which they occurred. （事件的记录）从最早的开始，按事件发生的顺序，即纪年的，时间顺序的。
 
+- clamp
+
+  1. noun: a brace, band, or clasp used for strengthening or holding things together.
+
+     - an electric circuit that serves to maintain the voltage limits of a signal at prescribed levels.
+
+  2. verb: fasten (something) in place with a clamp.
+
+     _"the sander is clamped onto the edge of a workbench"_
+
+     - fasten (two things) firmly together.
+
+       _"the two frames are clamped together"_
+
+     - hold (something) tightly against or in another thing.
+
+       _"Maggie had to clamp a hand over her mouth to stop herself from laughing"_
+
+     - maintain the voltage limits of (an electrical signal) at prescribed values.
+
+  3. phrase: clamp down — suppress or prevent something in an oppressive or harsh manner.
+
+     _"the authorities have also clamped down on public demonstrations"_
+
+  4. noun(BRITISH): a heap of potatoes or other root vegetables stored under straw or earth.
+
+  5. noun(BRITISH): a three-sided structure used to store silage.
+
+     _"a silage clamp"_
+
 - clash
 
   1. noun: a violent confrontation. 激烈的对抗。
@@ -1862,6 +1970,22 @@ categories: English
      - hide, cover, or disguise (something).
 
        _"the horror of war was cloaked in the trappings of chivalry"_
+
+- clog
+
+  1. noun: a shoe with a thick wooden sole. 木屐
+
+  2. noun: an encumbrance or impediment.
+
+     _"a clog in the system"_
+
+  3. verb: block or become blocked with an accumulation of thick, wet matter. （口语中常用 clog the toilet 指堵了马桶）
+
+     _"the gutters were clogged up with leaves"_
+
+     - fill up or crowd (something) so as to obstruct passage.
+
+       _"tourists clog the roads in summer"_
 
 - cloud
 
@@ -1954,6 +2078,26 @@ categories: English
   1. noun: the mental action or process of acquiring knowledge and understanding through thought, experience, and the senses. 通过思想、经验和感官获取知识和理解的心理活动或过程，即认知。
 
      - a perception, sensation, idea, or intuition resulting from the process of cognition. 由认知过程产生的知觉、感觉、想法或直觉。
+
+- collective
+
+  1. adjective: done by people acting as a group.
+
+     _"a collective protest"_
+
+     - belonging or relating to all the members of a group.
+
+       _"ministers who share collective responsibility"_
+
+     - taken as a whole; aggregate.
+
+       _"the collective power of the workforce"_
+
+  2. noun: a cooperative enterprise.
+
+     _"the exhibition showcases the work of art collectives from more than 20 countries"_
+
+     - a collective farm.
 
 - college
 
@@ -2355,6 +2499,30 @@ categories: English
 
   1. verb: meet (someone) face to face with hostile or argumentative intent. 以敌对或争论的意图与（某人）面对面。
 
+     _"he confronted the robbers as they were trying to leave"_
+
+     - (of a problem, difficulty, etc.) present itself to (someone) so that dealing with it cannot be avoided.
+
+       _"post-czarist Russia was confronted with a Ukrainian national movement"_
+
+     - face up to and deal with (a problem or difficult situation).
+
+       _"usually the best thing you can do in an embarrassing situation is to confront it head on"_
+
+     - compel (someone) to face or consider something, especially by way of accusation.
+
+       _"Tricia confronted him with her suspicions"_
+
+     - appear or be placed in front of (someone) so as to unsettle or threaten.
+
+       _"we were confronted with pictures of moving skeletons"_
+
+- confrontation
+
+  1. noun: a hostile or argumentative meeting or situation between opposing parties.
+
+     _"a confrontation with the legislature"_
+
 - confusion
 
   1. noun: lack of understanding; uncertainty. 缺乏理解、不确定。
@@ -2395,9 +2563,19 @@ categories: English
 
   4. phrase: in consequence - as a result. 因此。
 
+- consequent
+
+  1. adjective: following as a result or effect.
+
+     _"labor shortages would be created with a consequent increase in wages"_
+
+  2. noun: a thing that follows another.
+
 - consequently
 
   1. adverb: as a result. 因此。
+
+     _"flexible workers find themselves in great demand, and consequently earn high salaries"_
 
 - conservation
 
@@ -2540,6 +2718,26 @@ categories: English
   1. adjective: based on or in accordance with what is generally done or believed. 基于或根据通常所做的或相信的。
 
   2. adjective(BRIDGE): (of a bid) intended to convey a particular meaning according to an agreed convention. （桥）（投标）旨在根据商定的约定传达特定的含义。
+
+- convince
+
+  1. verb: cause (someone) to believe firmly in the truth of something.
+
+     _"Robert's expression had obviously convinced her of his innocence"_
+
+     - persuade (someone) to do something.
+
+       _"she convinced my father to branch out on his own"_
+
+- convincingly
+
+  1. adverb: in a way that causes someone to believe that something is true or real.
+
+     _"this chapter is not as convincingly argued"_
+
+     - in a way that leaves no margin of doubt as to who has won.
+
+       _"he convincingly defeated the current champion"_
 
 - cope (cope with sth.)
 
@@ -2712,6 +2910,12 @@ categories: English
   2. noun: the treatment of an issue by the media. 报道。
 
      _"the program won an award for its news coverage"_
+
+- covet
+
+  1. verb: yearn to possess or have (something).
+
+     _"he covets time for exercise and fishing"_
 
 - crab
 
@@ -2941,6 +3145,12 @@ categories: English
 
      _"less than a third of sharks and rays went extinct at the end of the Cretaceous"_
 
+- cretin
+
+  1. noun(DEROGATORY·INFORMAL): a stupid person (used as a general term of abuse).
+
+  2. noun(DATED·MEDICINE): a person whose mental and physical development has been impaired by a deficiency of thyroid hormone in fetal or early life.
+
 - cricket
 
   1. noun: an insect related to the grasshoppers. The male produces a characteristic rhythmical chirping sound.
@@ -2974,6 +3184,16 @@ categories: English
   2. noun: the analysis and judgment of the merits and faults of a literary or artistic work.
 
      _"alternative methods of criticism supported by well-developed literary theories"_
+
+- critique
+
+  1. noun: a detailed analysis and assessment of something, especially a literary, philosophical, or political theory.
+
+     _"a critique of Marxist historicism"_
+
+  2. verb: evaluate (a theory or practice) in a detailed and analytical way.
+
+     _"the authors critique the methods and practices used in the research"_
 
 - crouch
 
@@ -3269,6 +3489,28 @@ categories: English
 
   2. phrase: in deference to - out of respect for; in consideration of. 出于尊重；考虑到。
 
+- defy
+
+  1. verb: openly resist or refuse to obey.
+
+     _"a woman who defies convention"_
+
+     - (of a thing) make (an action or quality) almost impossible.
+
+       _"his actions defy belief"_
+
+     - appear to be challenging (someone) to do or prove something.
+
+       _"he glowered at her, defying her to mock him"_
+
+     - (ARCHAIC) challenge to combat.
+
+       _"go now, defy him to the combat"_
+
+  2. phrase: defy description - be so unusual or remarkable as to be impossible to describe.
+
+     _"the sheer scale of the Requiem defies description"_
+
 - deliberate
 
   1. adjective: done consciously and intentionally. 有意识并有目的地做的。
@@ -3340,6 +3582,24 @@ categories: English
   1. adjective: relating to the structure of populations. 关于人口结构的。
 
   2. noun: a particular sector of a population. 人口的特定部分，即人口统计的结果、情况。
+
+- demolish
+
+  1. verb: pull or knock down (a building).
+
+     _"the house was demolished to make way for the shopping center"_
+
+     - comprehensively refute (an argument or its proponent).
+
+       _"I looked forward keenly to demolishing my opponent"_
+
+     - (INFORMAL) overwhelmingly defeat (a player or team).
+
+       _"they demolished the Denver Broncos, 55-10"_
+
+     - (HUMOROUS·BRITISH) eat up (food) quickly.
+
+       _"we demolished the potato pancakes"_
 
 - denounce
 
@@ -3853,6 +4113,20 @@ categories: English
 
   4. noun: (in soccer, hockey, and basketball) an act or instance of taking the ball forward with repeated slight touches or bounces. （在足球、曲棍球和篮球中）反复轻微触球或弹跳将球向前推进的动作或实例。
 
+- drivel
+
+  1. noun: nonsense.
+
+     _"don't talk such drivel!"_
+
+  2. verb: talk nonsense.
+
+     _"he was driveling on about the glory days"_
+
+  3. verb(ARCHAIC): let saliva or mucus flow from the mouth or nose.
+
+     _"the nurse leaves you to drivel, and never wipes your nose"_
+
 - drop out
 
   1. phrase: stop participating or being involved in something. 停止参与或卷入某事。
@@ -3862,6 +4136,24 @@ categories: English
   3. phrase: reject conventional society to pursue an alternative lifestyle. 拒绝传统社会去追求另类的生活方式。
 
   4. phrase(RUGBY): restart play with a drop kick. （橄榄球）用抛落踢球来开始比赛。
+
+- dubious
+
+  1. adjective: hesitating or doubting.
+
+     _"Alex looked dubious, but complied"_
+
+  2. adjective: not to be relied upon; suspect.
+
+     _"extremely dubious assumptions"_
+
+     - morally suspect.
+
+       _"time-sharing has been brought into disrepute by dubious sales methods"_
+
+     - of questionable value.
+
+       _"she earned the dubious distinction of being the lowest-paid teacher in the nation"_
 
 - duck
 
@@ -4093,6 +4385,12 @@ categories: English
 
   1. verb: move out of or away from something and come into view. 移出或远离某物并出现在视野中。(常用于表示新兴，脱颖而出，摆脱困境，破壳而出) emerging countries 即新兴国家。
 
+- empathy
+
+  1. noun: the ability to understand and share the feelings of another. 共情力。
+
+     _"he has a total lack of empathy for anybody"_
+
 - encompass
 
   1. verb: surround and have or hold within. 包围并拥有或持有，即包括。
@@ -4163,6 +4461,56 @@ categories: English
 
   1. adjective: believing oneself to be inherently deserving of privileges or special treatment. 相信自己天生就应该享有特权或特殊待遇。
 
+- entry
+
+  1. noun: an act of going or coming in.
+
+     _"the door was locked, but he forced an entry"_
+
+     - a place of entrance, such as a door or lobby.
+
+     - (DIALECT) a passage between buildings.
+
+     - the right, means, or opportunity to enter a place or be a member of something.
+
+       _"undocumented workers seeking entry to the United States"_
+
+     - the action of undertaking something or becoming a member of something.
+
+       _"more young people are postponing their entry into full-time work"_
+
+     - (MUSIC) the point in a piece of music at which a particular performer in an ensemble starts or resumes playing or singing.
+
+       _"a fluffed entry"_
+
+     - (BRIDGE) a card providing an opportunity to transfer the lead to a particular hand.
+
+       _"the diamonds are still not established, so South must gamble on finding an extra entry to the dummy"_
+
+     - (LAW) the action of taking up the legal right to property.
+
+  2. noun: an item written or printed in a diary, list, ledger, or reference book.
+
+     _"the entries in the cash book"_
+
+     - the action of recording an entry.
+
+       _"sophisticated features to help ensure accurate data entry"_
+
+  3. noun: a person or thing competing in a race or competition.
+
+     _"from the hundreds of entries we received, twelve winners were finally chosen"_
+
+     - the number of competitors in a particular race or competition.
+
+       _"another large international entry is anticipated for this year's event"_
+
+     - the action of participating in a race or competition.
+
+       _"entry is open to people of all ages"_
+
+  4. noun: the forward part of a ship's hull below the waterline, considered in terms of breadth or narrowness.
+
 - envision
 
   1. verb: imagine as a future possibility; visualize.想象未来的可能性；可视化，想象。
@@ -4230,6 +4578,12 @@ categories: English
 - era
 
   1. noun: a long and distinct period of history with a particular feature or characteristic. 具有特定特征或特性的一段漫长而独特的历史时期，即时代，纪元。
+
+- eschew
+
+  1. verb: deliberately avoid using; abstain from.
+
+     _"he appealed to the crowd to eschew violence"_
 
 - espionage
 
@@ -4349,11 +4703,41 @@ categories: English
 
   1. noun: an amount of something that is more than necessary, permitted, or desirable. 某物的数量，这个数量超过了必要的，许可的，或可取的。
 
+     _"are you suffering from an excess of stress in your life?"_
+
+     - the amount by which one quantity or number exceeds another.
+
+       _"the excess of imports over exports rose $1.4 billion"_
+
+     - the action of exceeding a permitted limit.
+
+       _"there is no issue as to excess of jurisdiction"_
+
   2. noun: lack of moderation, especially in eating or drinking. 缺乏节制，特别是在吃上喝上。
+
+     _"bouts of alcoholic excess"_
+
+     - outrageous or immoderate behavior.
+
+       _"the worst excesses of the French Revolution"_
 
   3. adjective: exceeding a prescribed or desirable amount. 超过规定的或可取的数量。
 
-  4. adjective(BRITISH): required as extra payment. （英国）需要额外的付款。
+     _"trim any excess fat off the meat"_
+
+  4. phrase: to excess - exceeding the proper amount or degree.
+
+     _"she insisted that he did not drink to excess"_
+
+  5. phrase: in excess of - more than; exceeding.
+
+     _"a top speed in excess of 20 knots"_
+
+- excessive
+
+  1. adjective: more than is necessary, normal, or desirable; immoderate.
+
+     _"he was drinking excessive amounts of brandy"_
 
 - exclusive
 
@@ -5183,6 +5567,12 @@ categories: English
 
   2. phrase: deal successfully with a problem. 成功处理一个问题。
 
+- get rid of
+
+  1. phrase: take action so as to be free of (a troublesome or unwanted person or thing).
+
+     _"we have been campaigning to get rid of the car tax for 20 years"_
+
 - given
 
   1. verb: past participle of give. give 的过去分词。
@@ -5493,7 +5883,71 @@ categories: English
 
      _"blueberry grunt"_
 
+- gut
+
+  1. noun: the stomach or belly.
+
+     _"a painful stabbing feeling in his gut"_
+
+     - (MEDICINE·BIOLOGY) the lower alimentary canal or a part of this; the intestine.
+
+       _"microbes which naturally live in the human gut"_
+
+     - entrails that have been removed or exposed in violence or by a butcher.
+
+     - the internal parts or essence of something.
+
+       _"the guts of a modern computer"_
+
+  2. noun(INFORMAL): used in reference to a feeling or reaction based on an instinctive emotional response rather than considered thought.
+
+     _"our gut reaction turned out to be wrong"_
+
+  3. noun: personal courage and determination; toughness of character.
+
+     _"she had both more brains and more guts than her husband"_
+
+  4. noun: fiber made from the intestines of animals, used especially for violin or racket strings or for surgical use.
+
+     _"gut strings"_
+
+  5. noun: a narrow passage or strait.
+
+  6. verb: take out the intestines and other internal organs of (a fish or other animal) before cooking it.
+
+     - remove or destroy completely the internal parts of (a building or other structure).
+
+       _"the fire gutted most of the factory"_
+
+  7. verb(INFORMAL·BRITISH): cause (someone) to feel extremely upset or disappointed.
+
+     _"it guts me to think about what my mother and brother missed out on"_
+
+  8. phrase: bust a gut - make a strenuous effort.
+
+     _"a problem which nobody is going to bust a gut trying to solve"_
+
+  9. phrase: — one's guts out - used to indicate that the specified action is done or performed as hard as possible.
+
+     _"he ran his guts out and finished fourth"_
+
+  10. phrase: hate someone's guts - feel a strong hatred for someone.
+
 ## H
+
+- halo
+
+  1. noun: a disk or circle of light shown surrounding or above the head of a saint or holy person to represent their holiness.
+
+     - the glory associated with an idealized person or thing.
+
+       _"he has long since lost his halo for many ordinary citizens"_
+
+  2. noun: a circle of white or colored light around the sun, moon, or other luminous body caused by refraction through ice crystals in the atmosphere.
+
+  3. verb: surround with or as if with a halo.
+
+     _"gas lamps haloed in mist"_
 
 - hamper
 
@@ -5536,6 +5990,18 @@ categories: English
      _"elected by a handsome majority"_
 
   3. phrase: handsome is as handsome does - character and behavior are more important than appearance.
+
+- hard line
+
+  1. noun: an uncompromising adherence to a firm policy.
+
+     _"he is known to take a hard line on sentencing policy for murder"_
+
+- hard-line
+
+  1. adjective: uncompromising; strict.
+
+     _"a hard-line party activist"_
 
 - hardwire
 
@@ -6129,6 +6595,12 @@ categories: English
 
   1. noun: lack of interest, concern, or sympathy. 缺乏兴趣、关心或同情。
 
+     _"she shrugged, feigning indifference"_
+
+     - unimportance.
+
+       _"it cannot be regarded as a matter of indifference"_
+
 - indignation
 
   1. noun: anger or annoyance provoked by what is perceived as unfair treatment. 被认为是不公平的待遇所激起的愤怒或烦恼。
@@ -6339,6 +6811,16 @@ categories: English
 
   1. verb: demand something forcefully, not accepting refusal. 强求某事，不接受拒绝。
 
+- instill (instil)
+
+  1. verb: gradually but firmly establish (an idea or attitude, especially a desirable one) in a person's mind. 灌输。
+
+     _"how do we instill a sense of rightness in today's youth?"_
+
+  2. verb: put (a substance) into something in the form of liquid drops.
+
+     _"she was told how to instill eye drops"_
+
 - institution
 
   1. noun: a society or organization founded for a religious, educational, social, or similar purpose.
@@ -6493,6 +6975,18 @@ categories: English
 
   1. verb: continuously toss into the air and catch (a number of objects) so as to keep at least one in the air while handling the others, typically for the entertainment of others. 不断地抛向空中并抓住（一些）物体，以便处理其他物体时至少有一个保持在空中，通常是为了取悦他人。
 
+- justified
+
+  1. adjective: having, done for, or marked by a good or legitimate reason.
+
+     _"the doctors were justified in treating her"_
+
+  2. adjective(THEOLOGY): declared or made righteous in the sight of God.
+
+  3. adjective(PRINTING): having been adjusted so that the print fills a space evenly or forms a straight line at one or both margins.
+
+     _"the text is left-justified"_
+
 - justify
 
   1. verb: show or prove to be right or reasonable. 显示或证明是正确或合理的。
@@ -6524,6 +7018,116 @@ categories: English
 - ketchup
 
   1. noun: a smooth sauce made chiefly from tomatoes and vinegar, used as a condiment. 一种丝滑的酱汁，主要由西红柿和醋制成，用作调味品。
+
+- kick
+
+  1. verb: strike or propel forcibly with the foot.
+
+     _"I kicked the ball up into the air"_
+
+  2. verb(INFORMAL): succeed in giving up (a habit or addiction).
+
+     _"smokers may soon have new help to kick the habit"_
+
+  3. verb: (of a gun) recoil when fired.
+
+     _"their guns kick so hard that they have developed a bad case of flinching"_
+
+  4. noun: a blow or forceful thrust with the foot.
+
+     _"a kick in the head"_
+
+  5. noun: a sudden forceful jolt.
+
+     _"the shuttle accelerated with a kick"_
+
+  6. noun(INFORMAL): the sharp stimulant effect of something, especially alcohol.
+
+     _"strong stuff, this brew: he felt the kick"_
+
+  7. noun(INFORMAL·US): soft sports shoes; sneakers.
+
+     _"when your energy or motivation dips, a new pair of kicks can get you moving again"_
+
+  8. phrase: kick ass - act in a forceful or aggressive manner.
+
+  9. phrase: kick someone's ass - beat, dominate, or defeat someone.
+
+  10. phrase: kick the bucket - die.
+
+      _"when the old girl finally kicked the bucket there was no mention of yours truly in the will"_
+
+  11. phrase: kick the can down the road - put off confronting a difficult issue or making an important decision, typically on a continuing basis.
+
+      _"I appreciate that he doesn't want to raise taxes, but sooner or later you have to stop kicking the can down the road"_
+
+  12. phrase: a kick in the pants - an unwelcome surprise that prompts or forces fresh effort.
+
+      _"the competition will be healthy, but we needed a kick in the pants"_
+
+  13. phrase: a kick in the teeth - a grave setback or disappointment.
+
+      _"this broken promise is a kick in the teeth for football"_
+
+  14. phrase: kick someone in the teeth - cause someone a grave setback or disappointment.
+
+      _"there are times when life kicks you in the teeth"_
+
+  15. phrase: kick oneself - be annoyed with oneself for doing something foolish or missing an opportunity.
+
+      _"he was kicking himself for not biding his time"_
+
+  16. phrase: kick someone or something to the curb - reject someone or something.
+
+      _"things get complicated for Alfie when he's kicked to the curb by his girlfriend"_
+
+  17. phrase: kick up a fuss - object loudly or publicly to something.
+
+      _"local people are kicking up a fuss about the noise and smells from the farm"_
+
+  18. phrase: kick someone upstairs - remove someone from an influential position in a business by giving them an ostensible promotion.
+
+      _"he'll be kicked upstairs for a year or so before taking early retirement"_
+
+  19. phrase: kick someone when they are down - cause further misfortune to someone who is already in a difficult situation.
+
+      _"he did not believe in the doctrine that you did not kick a man when he was down"_
+
+  20. phrase: kick the tires - inform oneself about the quality of a product, service, etc. before buying.
+
+      _"borrowers should be sure to kick the tires on that offer before signing up"_
+
+  21. phrase: kick against - protest against or resist something.
+
+      _"young people are supposed to kick against the establishment"_
+
+  22. phrase: kick around - (of a thing) lie unwanted or unexploited.
+
+      _"the idea has been kicking around for more than a year now"_
+
+  23. phrase: kick back - relax or enjoy oneself.
+
+      _"he has not been able to kick back and enjoy his success"_
+
+  24. phrase: kick in - come into effect or operation.
+
+      _"the hospital's emergency generators kicked in"_
+
+  25. phrase: kick off - (of a football game, soccer game, etc.) be started or resumed after a score by a player kicking the ball from a designated spot.
+
+      _"there are five games kicking off at 3pm on Saturday afternoon"_
+
+  26. phrase: kick on - continue to play or perform well.
+
+      _"maybe she'll kick on in the sport"_
+
+  27. phrase: kick out - expel or dismiss someone.
+
+      _"my parents kicked me out when I was 18"_
+
+  28. phrase: kick up - (of the wind) become stronger.
+
+      _"we were warned that the winds might kick up by mid-morning"_
 
 - kinship
 
@@ -6591,6 +7195,30 @@ categories: English
 
   8. verb(ARCHAIC): arrest or send to prison. （古老）逮捕或送进监狱。
 
+- lame
+
+  1. adjective: (especially of an animal) unable to walk without difficulty as the result of an injury or illness affecting the leg or foot.
+
+     _"his horse went lame"_
+
+  2. adjective: (of something intended to be entertaining) uninspiring and dull. (cool 的反义词)
+
+     _"I found the program pretty lame and not very informative"_
+
+     - (of an explanation or excuse) unconvincingly feeble.
+
+       _"it was a lame statement and there was no excusing his behavior"_
+
+     - (INFORMAL·NORTH AMERICAN) (of a person) naive or socially inept.
+
+       _"anyone who doesn't know that is obviously lame"_
+
+  3. adjective: (of verse or metrical feet) halting; metrically defective.
+
+  4. verb: make (a person or animal) lame.
+
+     _"somebody lamed him with a stone"_
+
 - lamppost
 
   1. noun: a tall pole with a light at the top; a street light. 一个高杆，顶部带有灯光；路灯。
@@ -6634,6 +7262,14 @@ categories: English
   5. phrase: launch out - make a start on a new and challenging enterprise. 开创一个新的，具有挑战性的事业。
 
   6. noun: a large motorboat, used especially for short trips. 大型摩托艇，尤其用于短途旅行。
+
+- laureate
+
+  1. noun: a person who is honored with an award for outstanding creative or intellectual achievement.
+
+     _"a Nobel laureate"_
+
+  2. adjective(LITERARY): wreathed with laurel as a mark of honor.
 
 - lean
 
@@ -6827,6 +7463,70 @@ categories: English
 
      _"they set off at a fast lope"_
 
+- lot
+
+  1. pronoun: a large number or amount; a great deal.
+
+     _"there are a lot of actors in the cast"_
+
+     - (INFORMAL) the whole number or quantity that is involved or implied.
+
+       _"you might as well take the whole lot"_
+
+  2. adverb: a great deal; much.
+
+     _"he played tennis a lot last year"_
+
+  3. noun(INFORMAL): a particular group, collection, or set of people or things.
+
+     _"it's just one lot of rich people stealing from another"_
+
+     - (BRITISH) a group or a person of a particular kind (generally used in a derogatory or dismissive way).
+
+       _"an inefficient lot, our town council"_
+
+  4. noun: an article or set of articles for sale at an auction.
+
+     _"nineteen lots failed to sell"_
+
+  5. noun: the making of a decision by random selection, especially by a method involving the choice of one from a number of pieces of folded paper, one of which has a concealed mark.
+
+     _"officers were elected rather than selected by lot"_
+
+  6. noun: a person's luck or condition in life, particularly as determined by fate or destiny.
+
+     _"plans to improve the lot of the disadvantaged"_
+
+  7. noun(NORTH AMERICAN): a plot of land assigned for sale or for a particular use.
+
+     _"a vacant lot"_
+
+     - a parking lot.
+
+     - an area of land near a television or movie studio where outside filming may be done.
+
+     - the area at a car dealership where cars for sale are kept.
+
+  8. verb: divide (items) into lots for sale at an auction.
+
+     _"the contents have already been lotted up, and the auction takes place on Monday"_
+
+  9. phrase: all over the lot - in a state of confusion or disorganization.
+
+     _"the president has been all over the lot on this issue lately"_
+
+  10. phrase: draw lots - decide by lot.
+
+      _"we drew lots to decide the order"_
+
+  11. phrase: fall to someone's lot - become someone's task or responsibility.
+
+      _"they accepted the burden of domestic responsibilities that fell to their lot"_
+
+  12. phrase: throw in one's lot with - decide to ally oneself closely with and share the fate of (a person or group).
+
+      _"the bourgeoisie had thrown in its lot with the monarchy"_
+
 - lottery
 
   1. noun: a means of raising money by selling numbered tickets and giving prizes to the holders of numbers drawn at random. 一种通过售卖编号票据并随机抽取编号持有者给予奖励的筹集资金的手段，即彩票。
@@ -7019,7 +7719,31 @@ categories: English
 
   1. noun: the quality of being particularly good or worthy, especially so as to deserve praise or reward. 特别好或值得的品质，尤其是关于值得称赞或奖励的。
 
+     _"composers of outstanding merit"_
+
+     - a feature or fact that deserves praise or reward.
+
+       _"the relative merits of both approaches have to be considered"_
+
+     - a pass grade in an examination denoting above-average performance.
+
+       _"if you expect to pass, why not go for a merit or a distinction?"_
+
+     - (LAW) the intrinsic rights and wrongs of a case, outside of any other considerations.
+
+       _"a plaintiff who has a good arguable case on the merits"_
+
+     - (THEOLOGY) good deeds regarded as entitling someone to a future reward from God.
+
   2. verb: deserve or be owrthy of (reward, punishment, or attention). 值得（奖励，惩罚，或关注）。
+
+     _"the results have been encouraging enough to merit further investigation"_
+
+  3. phrase: judge something on its merits — assess something solely with regard to its intrinsic quality rather than other external factors.
+
+     _"a proposal should be judged on its merits when it comes forward for approval"_
+
+  4. phrase: merit pay (incentive pay) - the type of compensation a company uses to reward higher-performing employees with ongoing additional pay.
 
 - metaphor
 
@@ -7083,6 +7807,28 @@ categories: English
 
   1. adverb: with great attention to detail; meticulously. 非常注重细节；精心地。
 
+- mire
+
+  1. noun: a stretch of swampy or boggy ground.
+
+     _"acres of land had been reduced to a mire"_
+
+  2. noun: a situation or state of difficulty, distress, or embarrassment from which it is hard to extricate oneself.
+
+     _"he has been left to squirm in a mire of new allegations"_
+
+  3. verb: cause to become stuck in mud.
+
+     _"sometimes a heavy truck gets mired down"_
+
+     - cover or spatter with mud.
+
+       _"the horse waded through the red mud that mired it to its hocks"_
+
+     - involve someone or something in (a difficult situation).
+
+       _"the economy is mired in its longest recession since the war"_
+
 - miserable
 
   1. adjective: (of a person) wretchedly unhappy or uncomfortable.
@@ -7114,6 +7860,28 @@ categories: English
 - mitochondrion
 
   1. noun: an organelle found in large numbers in most cells, in which the biochemical processes of respiration and energy production occur. It has a double membrane, the inner part being folded inwards to form layers (cristae).
+
+- mobilize
+
+  1. verb: (of a country or its government) prepare and organize (troops) for active service. 动员
+
+     _"Russia is in no position to mobilize any time soon"_
+
+     - organize and encourage (people) to act in a concerted way in order to bring about a particular political objective.
+
+       _"he used the press to mobilize support for his party"_
+
+     - bring (resources) into use in order to achieve a particular goal.
+
+       _"at sea we will mobilize any amount of resources to undertake a rescue"_
+
+  2. verb: make (something) movable or capable of movement.
+
+     _"doing yoga stretches to mobilize compacted joints"_
+
+     - make (a substance) able to be transported by or as a liquid.
+
+       _"acid rain mobilizes the aluminum in forest soils"_
 
 - mock
 
@@ -7361,6 +8129,24 @@ categories: English
 
   4. adjective: relating to Nonconformists or their principles and practices. 关于非国教徒或其原则和做法，即异教徒的。
 
+- norm (normal 的名词)
+
+  1. noun: something that is usual, typical, or standard.
+
+     _"this system has been the norm in Germany for decades"_
+
+     - a standard or pattern, especially of social behavior, that is typical or expected of a group.
+
+       _"the norms of good behavior in the Civil Service"_
+
+     - a required standard; a level to be complied with or reached.
+
+       _"the 7% pay norm had been breached again"_
+
+  2. noun(MATHEMATICS): the product of a complex number and its conjugate, equal to the sum of the squares of its real and imaginary components, or the positive square root of this sum.
+
+  3. abbreviation: norm. = normal
+
 - nostalgia
 
   1. noun: a sentimental longing or wistful affection for the past, typically for a period or place with happy personal associations. 对过去的一种感伤的渴望之情，通常是有快乐的个人联想的时期或地方，即怀旧。
@@ -7412,6 +8198,8 @@ categories: English
 - notorious
 
   1. adjective: famous or well known, typically for some bad quality or deed. 著名或众所周知的，通常是因为一些不好的品质或契约行为。
+
+     _"Los Angeles is notorious for its smog"_
 
 - novel
 
@@ -7781,7 +8569,29 @@ categories: English
 
   5. phrase: owing to - because of or on account of. 因为或由于。
 
+- oxytocin
+
+  1. noun(BIOCHEMISTRY): a hormone released by the pituitary gland that causes increased contraction of the uterus during labor and stimulates the ejection of milk into the ducts of the breasts. 催产素。
+
 ## P
+
+- packet
+
+  1. noun: a paper or cardboard container, typically one in which goods are packed to be sold.
+
+     _"sow seeds 2 to 3 inches apart or as recommended on the seed packets"_
+
+  2. noun(COMPUTING): a block of data transmitted across a network.
+
+  3. noun(INFORMAL·BRITISH): a large sum of money.
+
+     _"a hectic social life could cost a packet"_
+
+  4. noun(DATED): a ship traveling at regular intervals between two ports, originally for the conveyance of mail.
+
+  5. verb: make up into or wrap up in a packet.
+
+     _"I grew my own sunflowers and packeted the seeds"_
 
 - painstaking
 
@@ -7901,6 +8711,20 @@ categories: English
 
   1. none: an activity that someone does regularly fooor enjoyment rather than work; a hobby. 某人为了享受而不是工作而定期进行的活动；一个爱好。
 
+- patchwork
+
+  1. noun: needlework in which small pieces of cloth in different designs, colors, or textures are sewn together.
+
+     _"a quilt of patchwork"_
+
+     - the craft of sewing in which small pieces of cloth in different designs, colors, or textures are sewn together.
+
+       _"specialists in quilting and patchwork"_
+
+     - a thing composed of many different elements so as to appear variegated.
+
+       _"a patchwork of stone walls and green fields"_
+
 - patent
 
   1. noun: a government authority or licence conferring a right or title for a set period, especially the sole right to exclude others from making, using, or selling an invention.
@@ -7946,6 +8770,20 @@ categories: English
   2. noun: paternal origin.
 
      _"his enemies made great play of the supposed dubiety of his paternity"_
+
+- patrol
+
+  1. noun: an expedition to keep watch over an area, especially by guards or police walking or driving around at regular intervals.
+
+     _"we were ordered to investigate on a night patrol"_
+
+  2. noun: a unit of six to eight Girl Scouts or Boy Scouts forming part of a troop.
+
+     _"break the Cubs into sixes and Scouts into patrols"_
+
+  3. verb: keep watch over (an area) by regularly walking or traveling around or through it.
+
+     _"the garrison had to patrol the streets to maintain order"_
 
 - pave the way for
 
@@ -8040,6 +8878,8 @@ categories: English
      - (HISTORICAL) a regular payment made to a royal favorite or to an artist or scholar to enable them to carry on work that is of public interest or value. （历史上）定期支付给皇室宠臣或艺术家或学者的款项，使他们能够开展具有公共利益或价值的工作。
 
   2. verb: dismiss someone from employment, typically because of age or ill health, and pay them a pension. 解雇某人，通常是因为年龄或健康状况不佳，并向他们支付补偿金。
+
+     _"he was pensioned off from the army at the end of the war"_
 
   3. noun: a boarding house in France and other European countries, providing full or partial board at a fixed rate. 法国和其他欧洲国家的寄宿公寓，以固定费率提供全食宿或部分食宿。
 
@@ -8215,6 +9055,126 @@ categories: English
 
   2. noun: a hinged and sharply pointed organ used by an arthropod for feeding or defence, as the mandibles of an insect, or each of the chelae of a crab, lobster, or scorpion.
 
+- pitch
+
+  1. noun: the quality of a sound governed by the rate of vibrations producing it; the degree of highness or lowness of a tone.
+
+     _"a car engine seems to change pitch downward as the vehicle passes you"_
+
+     - a standard degree of highness or lowness used in performance.
+
+       _"the guitars were strung and tuned to pitch"_
+
+  2. noun: the steepness of a slope, especially of a roof.
+
+     - (CLIMBING) a section of a climb, especially a steep one.
+
+     - the height to which a hawk soars before swooping on its prey.
+
+  3. noun: the level of intensity of something.
+
+     _"he brought the machine to a high pitch of development"_
+
+     - a very high degree of.
+
+       _"rousing herself to a pitch of indignation"_
+
+  4. noun: a playing field. (草地叫 pitch，硬化的场地叫 court)
+
+     - (CRICKET) the strip of ground between the two sets of stumps.
+
+       _"both batsmen were stranded in the middle of the pitch"_
+
+  5. noun(BASEBALL): a legal delivery of the ball by the pitcher.
+
+     - (GOLF) a high approach shot on to the green.
+
+     - (AMERICAN FOOTBALL) short for pitchout (sense 2).
+
+  6. noun: a form of words used when trying to persuade someone to buy or accept something.
+
+     _"a good sales pitch"_
+
+  7. noun: a swaying or oscillation of a ship, aircraft, or vehicle around a horizontal axis perpendicular to the direction of motion.
+
+     _"the pitch and roll of the ship"_
+
+  8. noun(TECHNICAL): the distance between successive corresponding points or lines, e.g., between the teeth of a cogwheel.
+
+     - a measure of the angle of the blades of a screw propeller, equal to the distance forward a blade would move in one revolution if it exerted no thrust on the medium.
+
+     - the density of typed or printed characters on a line, typically expressed as numbers of characters per inch.
+
+  9. verb(BASEBALL): throw (the ball) for the batter to try to hit.
+
+     - (BASEBALL) be a pitcher.
+
+     - (GOLF) hit (the ball) onto the green with a pitch shot.
+
+     - (GOLF) (of the ball) strike the ground in a particular spot.
+
+  10. verb: throw or fling roughly or casually.
+
+      _"he crumpled the page up and pitched it into the fireplace"_
+
+      - fall heavily, especially headlong.
+
+        _"she pitched forward into blackness"_
+
+  11. verb: set (one's voice or a piece of music) at a particular pitch.
+
+      _"you've pitched the melody very high"_
+
+      - express at a particular level of difficulty.
+
+        _"he should pitch his talk at a suitable level for the age group"_
+
+      - aim (a product) at a particular section of the market.
+
+        _"the machine is being pitched at banks"_
+
+  12. verb: make a bid to obtain a contract or other business.
+
+      _"they were pitching for an account"_
+
+  13. verb: set up and fix in a definite position.
+
+      _"we pitched camp for the night"_
+
+  14. verb: (of a moving ship, aircraft, or vehicle) rock or oscillate around a lateral axis, so that the front and back move up and down.
+
+      _"the little steamer pressed on, pitching gently"_
+
+      - (of a vehicle) move with a vigorous jogging motion.
+
+        _"a jeep came pitching down the hill"_
+
+  15. verb: cause (a roof) to slope downward from the ridge.
+
+      _"the roof was pitched at an angle of 75 degrees"_
+
+      - slope downward.
+
+        _"the ravine pitches down to the creek"_
+
+  16. phrase: make a pitch - make a bid to obtain a contract or other business.
+
+      _"the company is making a pitch at a $200 million market"_
+
+  17. phrase: pitch in - vigorously join in to help with a task or activity.
+
+      _"we must all pitch in and do our part"_
+
+  18. phrase: pitch into - vigorously tackle or begin to deal with something.
+
+      _"I pitched into the chores with a light heart"_
+
+  19. phrase: pitch up - turn up; arrive.
+
+      _"he eventually pitched up in Britain on a diplomatic passport"_
+
+  20. phrase: pitch out - throw a pitchout.
+
 - pitfall
 
   1. noun: a hidden or unsuspected danger or difficulty.
@@ -8278,6 +9238,68 @@ categories: English
   1. adjective: (of an argument or statement) seeming reasonable or probable.
 
      _"a plausible explanation"_
+
+- plead
+
+  1. verb: make an emotional appeal.
+
+     _"“Don't go,” she pleaded"_
+
+  2. verb: present and argue for (a position), especially in court or in another public context.
+
+     _"using cheap melodrama to plead the case for three prisoners"_
+
+- pledge
+
+  1. noun: a solemn promise or undertaking.
+
+     _"the conference ended with a joint pledge to limit pollution"_
+
+     - a promise of a donation to charity.
+
+       _"the company's pledge of 10% of profits to environmental concerns"_
+
+     - a solemn undertaking to abstain from alcohol.
+
+       _"she persuaded Arthur to take the pledge"_
+
+  2. noun(LAW): a thing that is given as security for the fulfillment of a contract or the payment of a debt and is liable to forfeiture in the event of failure.
+
+     _"he had given the object as a pledge to a creditor"_
+
+     - a thing given as a token of love, favor, or loyalty.
+
+       _"I have no intention of giving you anything that could be held against me as a pledge"_
+
+  3. noun(ARCHAIC): the drinking to a person's health; a toast.
+
+  4. noun(US): a person who has promised to join a fraternity or sorority.
+
+  5. verb: commit (a person or organization) by a solemn promise.
+
+     - formally declare or promise that something is or will be the case.
+
+       _"the president pledged that 20,000 government buildings would have solar roofs"_
+
+     - solemnly undertake to do something.
+
+       _"they pledged to continue the campaign for funding"_
+
+     - undertake formally to give.
+
+       _"Japan pledged $100 million in humanitarian aid"_
+
+  6. verb(LAW): give as security on a loan.
+
+     _"the creditor to whom the land is pledged"_
+
+  7. verb(ARCHAIC): drink to the health of.
+
+     _"in his hand a sculptured goblet, as he pledged the merchant kings"_
+
+  8. verb(US): promise to join (a fraternity or sorority).
+
+     _"Francie and I pledged the same sorority"_
 
 - plow (北美以外写作 plough)
 
@@ -8789,6 +9811,28 @@ categories: English
 
      _"the bombardment preluded an all-out final attack"_
 
+- premise
+
+  1. noun(LOGIC): a previous statement or proposition from which another is inferred or follows as a conclusion.
+
+     _"if the premise is true, then the conclusion must be true"_
+
+     - an assertion or proposition which forms the basis for a work or theory.
+
+       _"the fundamental premise of the report"_
+
+  2. verb: base an argument, theory, or undertaking on.
+
+     _"the reforms were premised on our findings"_
+
+     - state or presuppose (something) as a premise.
+
+       _"one school of thought premised that the cosmos is indestructible"_
+
+     - (ARCHAIC) state by way of introduction.
+
+       _"I will premise generally that I hate lecturing"_
+
 - preoccupy
 
   1. verb: (of a matter or subject) dominate or engross the mind of (someone) to the exclusion of other thoughts.
@@ -8897,17 +9941,17 @@ categories: English
 
 - prevail
 
-  1. verb: prove more powerful or superior.
+  1. verb: prove more powerful than opposing forces; be victorious.
 
      _"it is hard for logic to prevail over emotion"_
 
-     - be widespread or current in a particular area or at a particular time.
+     - be widespread or current in a particular area or at a particular time. (vi. 不及物动词，sth. prevail 无被动)
 
-       _"a friendly atmosphere prevailed among the crowds"_
+       _"an atmosphere of crisis prevails"_
 
-  2. verb: persuade (someone) to do something.
+     - persuade (someone) to do something.
 
-     _"she was prevailed upon to give an account of her work"_
+       _"she was prevailed upon to give an account of her work"_
 
 - prevailing
 
@@ -8932,6 +9976,66 @@ categories: English
      - cause constant trouble and distress to. 造成持续的麻烦和困扰。
 
   3. phrase: fall prey to - be hunted and killed by (an animal). 被（动物）猎杀。
+
+- prime
+
+  1. adjective: of first importance; main.
+
+     _"her prime concern is the well-being of the patient"_
+
+  2. adjective: of the best possible quality; excellent.
+
+     _"prime cuts of meat"_
+
+  3. adjective(MATHEMATICS): (of a number) evenly divisible only by itself and one (e.g., 2, 3, 5, 7, 11).
+
+  4. noun: a state or time of greatest strength, vigor, or success in a person's life.
+
+     _"you're in the prime of life"_
+
+  5. noun(CHRISTIAN CHURCH): a service forming part of the Divine Office, traditionally said (or chanted) at the first hour of the day (i.e., 6 a.m.), but now little used.
+
+  6. noun: a prime number.
+
+  7. noun(PRINTING): a symbol (ʹ) written after a letter or symbol as a distinguishing mark or after a figure as a symbol for minutes or feet.
+
+  8. noun(FENCING): the first of eight standard parrying positions.
+
+  9. noun: short for prime rate.
+
+  10. phrase: in one's prime - in the best, most successful, most productive stage.
+
+      _"She was in the prime of her working life when she retired, but she continued as a consultant."_
+
+  11. verb: make (something) ready for use or action.
+
+      - prepare (a firearm or explosive device) for firing or detonation.
+
+        _"he grabbed a gun from a nearby wall and primed it"_
+
+      - cover (a surface) with a preparatory coat of paint in order to prevent the absorption of subsequent layers of paint.
+
+        _"prime the new timber before painting the sill"_
+
+      - pour or spray liquid into (a pump) before starting in order to seal the moving parts and facilitate its operation.
+
+        _"ensure a sufficient head of water is available to prime the pump"_
+
+      - inject extra fuel into (the cylinder or carburetor of an internal combustion engine) in order to facilitate starting.
+
+      - (of a steam engine or its boiler) mix water with the steam being passed into the cylinder.
+
+      - (BIOCHEMISTRY) serve as a starting material for (a polymerization process).
+
+        _"the oligonucleotide might prime DNA polymerase activity at multiple sites"_
+
+  12. verb: prepare (someone) for a situation or task, typically by supplying them with relevant information.
+
+      _"the sentries had been primed to admit him without challenge"_
+
+  13. phrase: prime the pump — stimulate or support the growth or success of something by supplying it with money.
+
+      _"capital from overseas that helps prime the US economic pump"_
 
 - primacy
 
@@ -9221,6 +10325,8 @@ categories: English
 
   1. adjective: acting with or showing care and thought for the future. 谨慎地行动或表现的谨慎并且考虑到未来。
 
+     _"no prudent money manager would authorize a loan without first knowing its purpose"_
+
 - prune
 
   1. noun: a plum preserved by drying and having a black, wrinkled appearance.
@@ -9244,6 +10350,12 @@ categories: English
 - publication
 
   1. noun: the preparation and issuing of a book, journal, piece of music, or other work for public sale. 准备和发行书籍，期刊，音乐，或其他作品以供公开销售。
+
+- pundit
+
+  1. noun: an expert in a particular subject or field who is frequently called on to give opinions about it to the public.
+
+     _"a globe-trotting financial pundit"_
 
 - pupil
 
@@ -9395,6 +10507,16 @@ categories: English
 
      - without delay or difficulty; easily. 没有延迟或困难；容易地。
 
+- reaffirm
+
+  1. verb: state again as a fact; assert again strongly.
+
+     _"the prime minister reaffirmed his commitment to the agreement"_
+
+     - confirm the validity or correctness of (something previously established).
+
+       _"the election reaffirmed his position as leader"_
+
 - rear
 
   1. noun: the back part of something, especially a building or vehicle.
@@ -9441,7 +10563,11 @@ categories: English
 
   1. noun: a person or thing that receives or is awarded something. 接受或被授予某物的人或物。
 
+     _"the recipient of the Nobel Peace Prize"_
+
   2. adjective: receiving or capable of receiving something. 接收的或能够接收某物的。
+
+     _"a recipient country"_
 
 - recitation
 
@@ -9500,6 +10626,26 @@ categories: English
   2. noun: a person willing to testify in writing about the character or ability of someone, especially an applicant for a job. 愿意以书面形式证明某人的性格或能力的人，尤其是求职者，即推荐人。
 
   3. verb: act as the referee of. 担任裁判员。
+
+- refutation
+
+  1. noun: the action of proving a statement or theory to be wrong or false.
+
+     _"scientific theory is always tentative, open to refutation"_
+
+- refute
+
+  1. verb: prove (a statement or theory) to be wrong or false; disprove.
+
+     _"these claims have not been convincingly refuted"_
+
+     - prove that (someone) is wrong.
+
+       _"his voice challenging his audience to rise and refute him"_
+
+     - deny or contradict (a statement or accusation).
+
+       _"a spokesman totally refuted the allegation of bias"_
 
 - regarding (= about)
 
@@ -9588,6 +10734,18 @@ categories: English
      _"external walls will be rendered and tiled"_
 
   7. noun: a first coat of plaster applied to a brick or stone surface.
+
+- renege
+
+  1. verb: go back on a promise, undertaking, or contract. (固定搭配 on)
+
+     _"they have reneged on their promises to us"_
+
+     - another term for revoke (sense 2).
+
+     - (ARCHAIC) renounce or abandon (someone or something).
+
+       _"there's one of them, anyhow, that didn't renege him"_
 
 - repertoire
 
@@ -9685,6 +10843,20 @@ categories: English
 
      _"a revival in the fortunes of the party"_
 
+- revise
+
+  1. verb: re-examine and make alterations to (written or printed matter).
+
+     _"the book was published in 1960 and revised in 1968"_
+
+  2. verb: reread work done previously to improve one's knowledge of a subject, typically to prepare for an examination.
+
+     _"students frantically revising for exams"_
+
+  3. noun(PRINTING): a proof including corrections made in an earlier proof.
+
+     _"I handed in the revises this morning"_
+
 - revive
 
   1. verb: restore to life or consciousness. 恢复生命或意识。
@@ -9720,6 +10892,28 @@ categories: English
 - rigorous
 
   1. adjective: extremely thorough, exhaustive, or accurate. 极其彻底，详尽，或准确的，即严苛的。
+
+- ritual
+
+  1. noun: a religious or solemn ceremony consisting of a series of actions performed according to a prescribed order.
+
+     _"the role of ritual in religion"_
+
+     - the prescribed order of performing a ceremony, especially one characteristic of a particular religion or church.
+
+       _"she likes the High Church ritual"_
+
+     - a series of actions or type of behavior regularly and invariably followed by someone.
+
+       _"her visits to Joy became a ritual"_
+
+  2. adjective: relating to or done as a religious or solemn rite.
+
+     _"ritual burial"_
+
+     - (of an action) arising from convention or habit.
+
+       _"the players gathered for the ritual pregame huddle"_
 
 - rival
 
@@ -9918,6 +11112,20 @@ categories: English
   2. noun: (in the Bible) a goat sent into the wilderness after the Jewish chief priest had symbolically laid the sins of the people upon it(Lev. 16). （在圣经中）一只山羊被送去旷野，在犹太大祭司象征性地将人类的罪孽归咎于它后（利未记 16）。
 
   3. verb: make a scapegoat of. 做替罪羊。
+
+- scarlet
+
+  1. adjective: of a brilliant red color.
+
+     _"a mass of scarlet berries"_
+
+  2. noun: a brilliant red color.
+
+     _"papers lettered in scarlet and black"_
+
+     - scarlet clothes or material.
+
+       _"silk awnings of brilliant scarlet"_
 
 - scholar
 
@@ -10679,6 +11887,18 @@ categories: English
 
   9. noun: a splinter of wood. 一片木头。
 
+- split second
+
+  1. noun: a very brief moment of time.
+
+     _"for a split second, I hesitated"_
+
+- split-second
+
+  1. adjective: very rapid or accurate. （常见用法：split-second decision 瞬间的决定）
+
+     _"split-second timing is crucial"_
+
 - spoil
 
   1. verb: diminish or destroy the value or quality of.
@@ -10778,6 +11998,12 @@ categories: English
       _"he offered me the job on the spot"_
 
   15. phrase: put someone on the spot - force someone into a situation in which they must make a difficult decision or answer a difficult question.
+
+- spot-on
+
+  1. adjective: exactly correct or accurate.
+
+     _"Schools were told their exam information had to be spot-on and accurate."_
 
 - spotlight
 
@@ -10887,27 +12113,49 @@ categories: English
 
   4. verb: support (a plant) with a stake or stakes. 用一根或几根桩子支撑（植物）。
 
+     _"the gladioli were staked in gaudy ranks"_
+
   5. phrase: pull up stakes - move or go to live elsewhere. 搬家或去别的地方生活。
+
+     _"his father wrangled with a foreman and the family pulled up stakes"_
 
   6. phrase: stake a claim - assert one's right to something. 主张某人对某事的权利。
 
+     _"the batsman staked a claim for a place in the side"_
+
   7. phrase: stake out - mark an area with stakes so as to claim ownership of it. 用桩标记一个区域，以声称拥有它。
+
+     _"the boundary between the two ranches was properly staked out"_
 
   8. noun: a sum of money or something else of value gambled on the outcome of a risky game or venture. 一笔金钱或其他有价值的东西赌在有风险的比赛或冒险的结果上。
 
+     _"playing dice for high stakes"_
+
      - a share or interest in a business, situation, or system. 在商业，环境，或系统中的股份或权益。
+
+       _"GM acquired a 50 percent stake in Saab"_
 
      - prize money, especially in horse racing. 奖金，尤其是赛马。
 
      - a horse race. 赛马比赛。
 
+       _"the horse is to run in the Lexington Stakes"_
+
      - a situation involving competition in a specified area. 在特定领域竞争的情况。
+
+       _"we will keep you one step ahead in the fashion stakes"_
 
   9. verb: gamble (money or something else of value) on the outcome of a game or race. 对比赛或竞赛的结果进行赌博（金钱或其他有价值的东西）。
 
+     _"one gambler staked everything he'd got and lost"_
+
   10. verb(INFORMAL·NORTH AMERICAN): give financial or other support to. 给予财政或其他支持。
 
+      _"he staked him to an education at the École des Beaux-Arts"_
+
   11. phrase: at stake - to be won or lost; at risk. 可能赢或输；有风险。
+
+      _"people's lives could be at stake"_
 
 - stakeholder
 
@@ -10967,6 +12215,12 @@ categories: English
 
   1. noun: a skilled, experienced, and respected political leader or figure. 一个熟练，经验丰富，且受人尊敬的政治领袖或人物。
 
+- stay put
+
+  1. phrase: (of a person or object) remain somewhere without moving or being moved.
+
+     _"she told Clarissa to stay put"_
+
 - steep
 
   1. adjective: (of a slope, flight of stairs, angle, ascent, etc.) rising or falling sharply; nearly perpendicular.
@@ -10992,6 +12246,24 @@ categories: English
   5. verb: surround or fill with a quality or influence.
 
      _"a city steeped in history"_
+
+- steer
+
+  1. verb: (of a person) guide or control the movement of (a vehicle, vessel, or aircraft), for example by turning a wheel or operating a rudder.
+
+     _"he steered the boat slowly toward the busy quay"_
+
+  2. noun(INFORMAL): a piece of advice or information concerning the development of a situation.
+
+     _"the need for the school to be given a clear steer as to its future direction"_
+
+  3. phrase: steer clear of — take care to avoid or keep away from.
+
+     _"his program steers clear of prickly local issues"_
+
+  4. noun: a male domestic bovine animal that has been castrated and is raised for beef.
+
+     _"a prize-winning steer has been auctioned for a record-setting amount"_
 
 - stem
 
@@ -11040,6 +12312,18 @@ categories: English
   11. verb(SKIING): slide the tail of one ski or both skis outward in order to turn or slow down. 将一个或两个滑雪板的尾部向外滑动，以便转弯或减速。
 
       _"I side-slipped at first, grew tired of it, and stemmed for a while"_
+
+- stereotype
+
+  1. noun: a widely held but fixed and oversimplified image or idea of a particular type of person or thing.
+
+     _"the stereotype of the woman as the carer"_
+
+  2. noun: a relief printing plate cast in a mold made from composed type or an original plate.
+
+  3. verb: view or represent as a stereotype.
+
+     _"the city is too easily stereotyped as an industrial wasteland"_
 
 - steward
 
@@ -11573,6 +12857,22 @@ categories: English
 
   3. idiom: stumble across - to find or learn about (something) unexpectedly. 意外发现或了解（某事）。
 
+- stun
+
+  1. verb: knock unconscious or into a dazed or semiconscious state.
+
+     _"the man was stunned by a blow to the head"_
+
+  2. verb: astonish or shock (someone) so that they are temporarily unable to react.
+
+     _"the community was stunned by the tragedy"_
+
+- stunning
+
+  1. adjective: extremely impressive or attractive.
+
+     _"she looked stunning"_
+
 - stunt
 
   1. verb: prevent from growing or developing properly. 阻碍正常的生长或发展。
@@ -11785,6 +13085,24 @@ categories: English
 
   1. verb: forcibly put an end to. 强行终止。
 
+     _"the uprising was savagely suppressed"_
+
+     - prevent the development, action, or expression of (a feeling, impulse, idea, etc.); restrain.
+
+       _"she could not suppress a rising panic"_
+
+     - prevent the dissemination of (information).
+
+       _"the report had been suppressed"_
+
+     - prevent or inhibit (a process or reaction).
+
+       _"use of the drug suppressed the immune response"_
+
+     - partly or wholly eliminate (electrical interference).
+
+     - (PSYCHOANALYSIS) consciously inhibit (an unpleasant idea or memory) to avoid considering it.
+
 - surge
 
   1. noun: a sudden powerful forward or upward movement, especially by a crowd or by a natural force such as the waves or tide. 一个突然的有力的向上或向前的运动，尤其是由人群或自然力量，如波浪或潮汐引起的。
@@ -11883,6 +13201,24 @@ categories: English
 
   12. noun: (in musical theater) an understudy, typically one who covers multiple roles in the chorus of a particular production. （在音乐剧中）替补，通常是在特定作品的合唱中扮演多个角色的人。
 
+- swirl
+
+  1. verb: move in a twisting or spiraling pattern.
+
+     _"the smoke was swirling around him"_
+
+     - cause to move in a twisting or spiraling pattern.
+
+       _"swirl a little cream into the soup"_
+
+  2. noun: a quantity of something moving in a swirl.
+
+     _"swirls of dust swept across the floor"_
+
+     - a twisting or spiraling movement or pattern.
+
+       _"she emerged with a swirl of skirts"_
+
 - swoop
 
   1. verb: (especially of a bird) move rapidly downwards through the air.
@@ -11935,6 +13271,16 @@ categories: English
 
   5. verb: make determined efforts to deal with (a problem or difficult task). 下定决心去处理（问题或困难的任务）。
 
+- tactic
+
+  1. noun: an action or strategy carefully planned to achieve a specific end.
+
+     _"the minority attempted to control the Council by a delaying tactic"_
+
+     - the art of disposing armed forces in order of battle and of organizing operations, especially during contact with an enemy.
+
+       _"basic infantry tactics were taught by guest instructors"_
+
 - tailor
 
   1. noun: a person whose occupation is making fitted clothes such as suits, pants, and jackets to fit individual customers.
@@ -11968,6 +13314,14 @@ categories: English
   4. phrase: in tandem - alongside each other.
 
      _"a tight fiscal policy working in tandem with a tight foreign exchange policy"_
+
+- teamster
+
+  1. noun(NORTH AMERICAN): a truck driver.
+
+     - a member of the Teamsters Union, including truck drivers, chauffeurs, and warehouse workers.
+
+  2. noun: a driver of a team of animals.
 
 - tease
 
@@ -12367,6 +13721,52 @@ categories: English
 
   9. phrase: toss up - throw a coin into the air in order to make a decision between two alternatives, based on which side of the coin faces up when it lands. 将一枚硬币抛向空中，以便在两个选择中做出决定，决定基于硬币落地时哪一面向上。
 
+- trade
+
+  1. noun: the action of buying and selling goods and services.
+
+     _"a move to ban all trade in ivory"_
+
+  2. noun: a skilled job, typically one requiring manual skills and special training.
+
+     _"the fundamentals of the construction trade"_
+
+  3. noun: a trade wind.
+
+     _"the north-east trades"_
+
+  4. verb: buy and sell goods and services.
+
+     _"middlemen trading in luxury goods"_
+
+  5. verb: exchange (something) for something else, typically as a commercial transaction.
+
+     _"they trade mud-shark livers for fish oil"_
+
+  6. phrase: trade places - change places.
+
+     _"I would be glad to trade places with George and have his job"_
+
+  7. phrase: trade down - sell something in order to buy something similar but less expensive.
+
+     _"this house is ideal for someone thinking of trading down"_
+
+  8. phrase: trade in - exchange a used article in part payment for another.
+
+     _"she traded in her Ford for a BMW"_
+
+  9. phrase: trade off - exchange something of value, especially as part of a compromise.
+
+     _"the government traded off economic advantages for political gains"_
+
+  10. phrase: trade on - take advantage of something, especially in an unfair way.
+
+      _"the government is trading on fears of inflation"_
+
+  11. phrase: trade up - sell something in order to buy something similar but more expensive.
+
+      _"there are a lot of people who want to trade up"_
+
 - trade-off
 
   1. noun: a balance achieved between two desirable but incompatible features; a compromise.
@@ -12573,6 +13973,42 @@ categories: English
 
   1. adjective: not having or showing awareness or understanding of the facts. 没有或没表现出对事实的认识或理解。
 
+- union
+
+  1. noun: the action or fact of joining or being joined, especially in a political context.
+
+     _"he was opposed to closer political or economic union with Europe"_
+
+  2. noun: a club, society, or association formed by people with a common interest or purpose.
+
+     _"members of the Students' Union"_
+
+     - an organized association of workers formed to protect and further their rights and interests; a labor union.
+
+       _"the National Farmers' Union"_
+
+  3. noun: a political unit consisting of a number of states or provinces with the same central government.
+
+  4. noun(MATHEMATICS): the set that comprises all the elements (and no others) contained in any of two or more given sets.
+
+  5. noun: a pipe coupling.
+
+  6. noun: a part of a flag with an emblem symbolizing national union, typically occupying the upper corner next to the staff.
+
+  7. noun: a fabric made of two or more different yarns, typically cotton and linen or silk.
+
+  8. noun(US): a building at a college or university used by students for recreation and other nonacademic activities.
+
+- unionist
+
+  1. noun: a member of a labor union.
+
+     - an advocate or supporter of labor unions.
+
+  2. noun: a person in Northern Ireland, especially a member of a political party, supporting or advocating union with Great Britain.
+
+     - a person who opposed secession during the Civil War.
+
 - unison
 
   1. noun: simultaneous performance or utterance of action or speech. 动作或语言的同时表现或表达。
@@ -12672,6 +14108,22 @@ categories: English
   2. adjective(PHILOSOPHY): relating to or adhering to the doctrine of utilitarianism. 与功利主义有关或坚持功利主义。
 
   3. noun(PHILOSOPHY): an adherent of utilitarianism. 功利主义的拥护者。
+
+- utter
+
+  1. adjective: complete; absolute.
+
+     _"Charles stared at her in utter amazement"_
+
+  2. verb: make (a sound) with one's voice.
+
+     _"he uttered an exasperated snort"_
+
+     - say (something) aloud.
+
+       _"they are busily scribbling down every word she utters"_
+
+  3. verb(LAW): put (forged money) into circulation.
 
 ## V
 
@@ -12773,6 +14225,14 @@ categories: English
 
   5. phrase: nothing ventured, nothing gained - you can't expect to achieve anything if you never take any risks.
 
+- venue
+
+  1. noun: the place where something happens, especially an organized event such as a concert, conference, or sports event. (举办地)
+
+     _"the river could soon be the venue for a powerboat world championship event"_
+
+     - (LAW) the county or district within which a criminal or civil case must be heard.
+
 - Venus
 
   1. noun(PLANET): the planet second in order of distance from the Sun, after Mercury and before Earth. It is the closest planet to Earth.
@@ -12817,11 +14277,29 @@ categories: English
 
   3. adjective(ARCHAIC): (of language or a line of reasoning) imperfect; defective. （古老）（语言或推理上）不完美；有缺陷的。
 
+- vigor (伟哥是该词的音译)
+
+  1. noun: physical strength and good health.
+
+     _"I was 79, but still full of vigor and vitality"_
+
+     - effort, energy, and enthusiasm.
+
+       _"they set about the new task with vigor"_
+
+  2. phrase: in vigour — in force or operation.
+
+     _"he says there is no deal but since he has a contract in vigor he will continue as usual"_
+
 - vigorously
 
   1. adverb: in a way that involves physical strength, effort, or energy; strenuously. 以一种涉及体力，努力，或能量的方式；用力地。
 
-  2. adverb: forcefully. 强行地，极力地。
+     _"she shook her head vigorously"_
+
+     - forcefully. 强行地，极力地。
+
+       _"he vigorously denied the allegation"_
 
 - virtual
 
@@ -12838,6 +14316,14 @@ categories: English
   1. noun: great skill in music or another artistic pursuit.
 
      _"a performance of considerable virtuosity"_
+
+- virtuous
+
+  1. adjective: having or showing high moral standards.
+
+     _"she considered herself very virtuous because she neither drank nor smoked"_
+
+     - chaste (typically used of a woman).
 
 - vitality
 
@@ -12894,6 +14380,10 @@ categories: English
   2. noun: a waddling gait.
 
      _"I walk with a waddle"_
+
+- wall chart
+
+  1. noun: a chart or poster designed for display on a wall as a teaching aid or source of information. 例如体育比赛的晋级表。
 
 - way
 
@@ -13181,7 +14671,7 @@ categories: English
 
       3. (of a mechanism, especially one operated by clockwork) gradually lose power. （机械，尤其是通过发条运行的机械）逐渐失去动力。
 
-  25. phrase: wind up
+  25. phrase: wind up (= end up)
 
       1. make a clock or other device operate by turning a handle or key. 使钟表或其他设备通过转动把手或钥匙运行，即上发条。
 

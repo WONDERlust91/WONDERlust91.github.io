@@ -290,7 +290,7 @@ yet 状语从句套 while 状语从句的情况（本质就是英语的完整句
 
 ### 非谓语动词
 
-也是动词，但凡是动词你就要去想谁发出的动词
+1. 非谓语动词也是动词，但凡是动词你就要去想谁发出的动词
 
 - 没有逗号，动词发出者为前面的名词
 
@@ -307,6 +307,42 @@ yet 状语从句套 while 状语从句的情况（本质就是英语的完整句
   I like to do exercises, making me happy. 整句
 
   Looking from a broad perspective, we can see a trend. 整句
+
+2. 只有在这句话已经有了谓语的情况下，才会出现非谓语
+
+#### 句型
+
+1. 非谓语 + 宾语, 主语 + 谓语 + 宾语.
+
+Reading this book, my teacher is happy.
+
+2. 主语 + 谓语 + 宾语, 非谓语 + 宾语.
+
+There are many spectators watching the show, meaning/suggesting that Chinese cultures are becoming more and more popular.
+
+watching the show 非谓语 作 spectators 的定语
+
+meaning/suggesting that 非谓语 + 宾语从句
+
+3. 主语, 定语（非谓语）, 谓语 + 宾语.
+
+My teacher, almost overwhelmed by her projects, will have some time to do something.
+
+4. 非谓语动词不及物时，上面 3 个句型中紧跟着非谓语动词的宾语都不存在，可能是一个状语。
+
+Quickly happening (when you are at school), this situation is good.
+
+#### 常见错误
+
+1. Using this computer to type words, I am learning this computer.
+
+语法上没有错误，但表意上缺少逻辑。应该是先学电脑，再来使用。
+
+改正：Learning this computer, I am using this computer to type words.
+
+2. Learning this culture, there are more chances for us to be happy.
+
+非谓语也是动词，要找动词的主语，主句中没有主语能够发出 learning 这个动词。
 
 ### 动名词做主语
 
@@ -326,15 +362,39 @@ It is portable for me to use my laptop.
 
 这句话是错误的，portable 可以用于形容 laptop，但不能用于形容 use my laptop。
 
-It is convenient for me to use my laptop.
+应改为 It is convenient for me to use my laptop.
 
-- It is adj. that ...
+It is exciting for me to play soccer. = Playing soccer makes me excited.
+
+- It is adj. that + 完整句子.
 
 It is important that we should read books.
 
-感官动词 = 系动词 = be 动词，因此 It + 感官动词 也大概率是形式主语
+- 感官动词 = 系动词 = be 动词，因此 It + 感官动词 也大概率是形式主语
 
-It seems that you are right.
+It seems/sounds that you are right.
+
+It is likely that ....
+
+- 不是所有 it 开头的句子都是形式主语
+
+It can make me happy.
+
+### 形式宾语
+
+make/leave A(n.) B(v./adj./prep./n.)
+
+I can make you play soccer.
+
+I can make you important.
+
+I can make you in school.
+
+I can make you a player.
+
+I want to make playing soccer in our nation become more and more popular.
+
+I want to make it become more and more popular to play soccer in our nation.
 
 ### 同位语
 
@@ -369,6 +429,66 @@ There lies n.
 There happens to be 碰巧有
 
 There remains to be 依旧有
+
+#### 例句
+
+There is a book interesting.
+
+There is a book that is useful.
+
+There is a book making me happy.
+
+There is a book in my school.
+
+There is a book, a tool that is useful.
+
+There is an idea that I can play soccer.
+
+The book is important for me. There is much importance in this book for me.
+
+The trend is steady. There is steadiness in this trend.
+
+I think that I like you. There is an idea from me that I like you.
+
+### so that 与 such that
+
+翻译为如此...以至于... 表递进关系
+
+1. so that 作连词，翻译为以至于
+
+   句子 1, so that 句子 2
+
+   There are so many apples so that there is no other fruit.
+
+2. so adj./adv. that 完整句子
+
+   I am so smart that I know all of this.
+
+   I do sth so smart that 这是错误的，smart 不是形容 sth，而是用来修饰 do，所以应该使用副词
+
+   I do sth so smartly that ... 正确
+
+   I am so smart that I can do this.
+
+   I feel so well that I can do this.
+
+   There is an apple so delicious that I want to eat it.
+
+   That happened so quickly that I didn't realize.
+
+   I have a book, which is so useful that it taught me everything.
+
+   I have a book, which taught me so effectively that I know every thing.
+
+3. such n. that 完整句子
+
+   You are such a good boy that you can do this.
+
+   This is such a perfect book that I want to read it.
+
+   I am happy today because I earned such a great bag today that I am thrilled.
+
+   It is important to have such a great book that I can read it everyday.
 
 ### 强调句
 
@@ -600,24 +720,6 @@ have been doing 从过去到现在一直做某事
 
   这里要注意不能理解为 have sth to do，不是有某种能力再去做某事，而是 ability to do，有做某事的能力。
 
-- so that 与 such that
-
-  1. so that 作连词，表示递进关系
-
-     句子 1, so that 句子 2
-
-  2. so adj./adv. that 完整句子
-
-     I am so smart that I know all of this.
-
-     I do sth so smart that 这是错误的，smart 不是形容 sth，而是用来修饰 do，所以应该使用副词
-
-     I do sth so smartly that ... 正确
-
-  3. such n. that 完整句子
-
-     You are such a good boy that you can do this.
-
 - 时间加完整句子作状语：时间 + 主谓宾, 主谓宾.
 
   Every time
@@ -786,7 +888,47 @@ have been doing 从过去到现在一直做某事
 
 - behind the scenes 表示“在幕后”
 
+- the player of the year 年度最佳球员
+
+  the movie of the year 年度最佳电影
+
+  lists of players of the tournament 锦标赛最佳球员列表
+
+- 20-somethings 20 多岁的人
+
+- in charge 负责、管理（当领导）
+
+  Your friends in charge are good. 你那些当领导的朋友是好人。
+
+  Your friends are in charge. 你那些朋友是当领导的。
+
+  in charge of 管理某事（主动）
+
+  in the charge of 在某人的管理下（被管）
+
+- Just because ..., doesn't mean that ...
+
+  仅仅因为某事，并不意味着...
+
+  Just because you are a student, doesn't mean that you can have this for free.
+
+- Just as 句子 1, 句子 2.
+
+  就好像 句子 1 一样，句子 2 也怎样。
+
+- defend the title 卫冕
+
+- not 用于动词否定
+
+  no 用于名词否定
+
+- prior to 介词短语 = before 介词（before 也可当连词）
+
+- boil down to 归结为
+
 - 常见简单词组或词汇，但理解易错
+
+  happen to 碰巧
 
   come across 偶遇
 
@@ -795,3 +937,11 @@ have been doing 从过去到现在一直做某事
   practically = virtually = pretty much = almost = nearly 几乎/实际上
 
   given 在句首，词性为介词，译为考虑到
+
+  in charge 负责、管理（当领导）
+
+  bring about = lead to 导致
+
+  not least = in particular; notably. 尤其
+
+  set out 出发旅程；想要做某事；按特定顺序安排或罗列某事
