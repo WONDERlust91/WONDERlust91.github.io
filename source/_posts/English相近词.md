@@ -671,6 +671,44 @@ categories: English
 
   augment v. 增强，增加 （增强现实 AR：Augment Reality）
 
+- compel v. 强迫
+
+  expel v. 驱逐；开除
+
+  impel v. 促使；迫使
+
+  repel v. 斥退、抵抗；驳回；厌恶
+
+- clamp n. 夹具；一堆根类蔬菜；饲料棚 v. 夹紧；夹紧；保持电压在额定值
+
+  cramp n. 抽筋；G 型夹具 v. 限制或抑制发展；紧固；抽筋
+
+- expend v. 花费
+
+  expensive adj. 花费高的
+
+  expand v. 扩张
+
+  expansive adj. 广阔的（面积）；开放的（善于交流的）；扩张的（政治或经济）
+
+  extend v. 延伸；扩展；伸向；尽力
+
+  extensive adj. 大面积的；大量的；（农业）大规模低成本
+
+- crouch v. 蹲 n. 蹲的动作
+
+  crunch v. 嚼碎并发出咔嚓声、发出嘎吱声（尤其是走在碎石地或雪地中）、发出大声的击打；处理大量的数据或信息 n. 嚼碎或击打发出的沉闷摩擦声音；需要做出决定的关键时刻、信贷或资金的严重短缺；仰卧起坐
+
+- integer n. 整数；完整的事物
+
+  integral adj. 整体的、不可或缺的；整数的 n. 积分（数学）
+
+  integrate v. 结合成整体；团结（少数人群）；求积分
+
+  integration n. 整合的过程或行为；积分的解；神经系统的协调
+
+  integrity n. 诚实正直；完整性
+
 ## 近义词
 
 - 表“转折”，需要注意词性区别
@@ -1326,6 +1364,28 @@ categories: English
   alleviate v. 使（痛苦、问题）不严重
 
   soothe v. 使平静；缓解（痛苦）
+
+- 表示“狭小”、“拥挤”
+
+  cramped adj. 空间上的狭小、拥挤
+
+  cramp v. 限制或抑制发展；紧固；抽筋 n. 抽筋；G 型夹具
+
+  crowded adj. 人多造成的拥挤（不可用于形容空间）
+
+  crowd v. 大量人填满空间；离某人很近；挤占 n. 人群
+
+- 岩浆
+
+  lava n. 岩浆（火山喷发后，在地表的）
+
+  magma n. 岩浆（未喷发，在地表以下的）
+
+- 屋顶
+
+  roof n. 屋顶（房子外顶）
+
+  ceiling n. 屋顶（室内吊顶）
 
 ## 反义词
 

@@ -23,6 +23,8 @@ Before flashing a third-party ROM, you need to unlock your phone's bootloader.
 
 4. Power off you phone, then press 【power】 + 【volume -】 to enter fastboot mode. Connect your phone to your computer via USB cable. Click 【unlock】 in the miflash_unlock software. Keep in mind that this operation will erase your data, so make a backup if you needed.
 
+<!-- more -->
+
 ## Flashing the ROM
 
 1. Download an official ROM suitable for your phone from [xiaomirom.com](https://xiaomirom.com/) or a third-party ROM like EU from [xiaomi.eu](https://xiaomi.eu/community/). Unzip the downloaded file.

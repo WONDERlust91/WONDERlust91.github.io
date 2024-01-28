@@ -785,6 +785,10 @@ categories: English
 
   3. noun: a unit of area, 10^-28 square meters, used especially in particle physics. 面积单位，10 的 -28 次方平方米，特别是用于粒子物理。
 
+- basalt
+
+  1. noun: a dark, fine-grained volcanic rock that sometimes displays a columnar structure. It is typically composed largely of plagioclase with pyroxene and olivine. 玄武岩，一种深色、细粒的火山岩，有时呈现柱状结构。它通常主要由斜长石、辉石和橄榄石组成。
+
 - beak
 
   1. noun: a bird's norny projecting jaws; a bill.
@@ -1387,6 +1391,14 @@ categories: English
 
   2. noun: a noise made by air released from the stomach through the mouth; a belch.
 
+- burst
+
+  1. verb: (of a container) break suddenly and violently apart, spilling the contents, typically as a result of an impact or internal pressure.
+
+  _"we inflated dozens of balloons and only one burst"_
+
+  2. noun: an instance of breaking or splitting as a result of internal pressure or puncturing; an explosion.
+
 - buzz
 
   1. noun: a low, continuous humming or murmuring sound, made by or similar to that made by an insect.
@@ -1656,6 +1668,20 @@ categories: English
   8. phrase: make common cause - unite in order to achieve a shared aim. 团结起来，以实现共同的目标。
 
   9. phrase: a rebel without a cause - a person who is dissatisfied with society but does not have a specific aim to fight for. 对社会不满意但没有具体要奋斗的目标的人。
+
+- celestial
+
+  1. adjective: positioned in or relating to the sky, or outer space as observed in astronomy.
+
+     _"a celestial body"_
+
+     - belonging or relating to heaven.
+
+       _"the celestial city"_
+
+     - supremely good.
+
+       "the celestial beauty of music"
 
 - census
 
@@ -2208,6 +2234,8 @@ categories: English
 - compel
 
   1. verb: force or oblige (someone) to do something. 强迫或迫使某人做某事。
+
+     _"a sense of duty compelled Harry to answer her questions"_
 
 - compelling
 
@@ -2959,6 +2987,52 @@ categories: English
 
   4. verb: exercise skill in making (an object), typically by hand. 练习制作（物品）的技能，通常是手工制作。
 
+- cramp
+
+  1. noun: painful involuntary contraction of a muscle or muscles, typically caused by fatigue or strain.
+
+  _"he suffered severe cramps in his foot"_
+
+  - (NORTH AMERICAN) abdominal pain caused by menstruation.
+
+  2. noun: a tool, typically shaped like a capital G, for clamping two objects together for gluing or other work.
+
+     - a metal bar with bent ends for holding masonry together.
+
+       _"the facade is built of travertine blocks without mortar but held by metal cramps"_
+
+  3. verb: restrict or inhibit the development of.
+
+     _"tighter rules will cramp economic growth"_
+
+  4. verb: fasten with a cramp or cramps.
+
+     _"cramp the gates to the posts"_
+
+  5. verb: suffer from sudden and painful contractions of a muscle or muscles.
+
+     _"in the final game, Chang cramped severely"_
+
+  6. phrase: cramp someone's style — prevent a person from acting freely or naturally.
+
+     _"he's not putting any pressure on me that would cramp my style"_
+
+- cramped
+
+  1. adjective: feeling or causing someone to feel uncomfortably confined or hemmed in by lack of space.
+
+     _"the staff had to work in cramped conditions"_
+
+     - restricting or inhibiting the development of someone or something.
+
+       _"he felt cramped in a large organization"_
+
+     - (of handwriting) small and difficult to read.
+
+  2. suffering from a cramp.
+
+     _"cramped muscles"_
+
 - crash
 
   1. verb: (of a vehicle) collide violently with an obstacle or another vehicle.
@@ -3212,6 +3286,30 @@ categories: English
   2. adjective: constructed in a rudimentary or makeshift way. 以初级或临时的方式建造。
 
   3. noun: natural petroleum. 原油。
+
+- crunch
+
+  1. verb: crush (a hard or brittle foodstuff) with the teeth, making a loud but muffled grinding sound.
+
+     _"she paused to crunch a ginger snap"_
+
+  2. verb: process large amounts of information or perform operations of great complexity, especially by computer.
+
+     _"computers crunch data from real-world observations"_
+
+  3. noun: a loud muffled grinding sound made when crushing, moving over, or hitting something.
+
+     _"Marco's fist struck Brian's nose with a crunch"_
+
+  4. noun(INFORMAL): a crucial point or situation, typically one at which a decision with important consequences must be made.
+
+     _"when it comes to the crunch you chicken out"_
+
+     - a severe shortage of money or credit.
+
+       _"the Fed would do what it could to ease America's credit crunch"_
+
+  5. noun: a physical exercise designed to strengthen the abdominal muscles; a sit-up.
 
 - crush
 
@@ -3967,6 +4065,16 @@ categories: English
 
      _"the dizzy heights of TV stardom"_
 
+- dome
+
+  1. noun: a rounded vault forming the roof of a building or structure, typically with a circular base.
+
+     _"the dome of St. Paul's Cathedral"_
+
+  2. noun: a thing shaped like a dome.
+
+  3. noun(LITERARY): a stately building.
+
 - dominant
 
   1. adjective: most important, powerful, or influential.
@@ -4011,13 +4119,25 @@ categories: English
 
   1. verb: cause the water or other liquid in (something) to run out, leaving it empty, dry, or drier. 使（某物）中的水或其他液体耗尽，使之空、干燥。
 
+     _"we drained the swimming pool"_
+
   2. verb: deprive of strength or vitality. 失去力量或活力。
 
+     _"his limbs were drained of all energy"_
+
   3. verb(INFORMAL GOLF): (of a player) hole (a putt). （非正式，用于高尔夫）（球员）（推杆）入洞。
+
+     _"whenever he did hit a green, he drained the putt"_
 
   4. noun: a channel or pipe carrying off surplus liquid ,especially rainwater or liquid waste. 带走剩余液体的通道或管道，尤其是雨水或废水。
 
   5. noun: a thing that uses up a particular resource. 消耗特定资源的事物。
+
+     _"nuclear power is a serious drain on the public purse"_
+
+  6. phrase: go down the drain — be totally wasted.
+
+     _"the government must stop public money from going down the drain"_
 
 - draw
 
@@ -5593,7 +5713,7 @@ categories: English
 
 - gleam
 
-  1. verb: shine brightly, especially with reflected light.
+  1. verb: shine brightly, especially with reflected light. (vi. 不及物，只能 sth gleam，不能 gleam sth)
 
      _"light gleamed on the china cats"_
 
@@ -6843,6 +6963,52 @@ categories: English
 
   3. noun: teaching; education. 教学；教育。
 
+- integer
+
+  1. noun: a number that is not a fraction; a whole number.
+
+     _"M represents a positive integer greater than one"_
+
+  2. noun: a thing complete in itself.
+
+- integral
+
+  1. adjective: necessary to make a whole complete; essential or fundamental. 不可获缺的，整体的。
+
+     _"games are an integral part of the school's curriculum"_
+
+  2. adjective(MATHEMATICS): of or denoted by an integer. 关于整数。（仅形容词词性下）
+
+     - involving only integers, especially as coefficients of a function.
+
+  3. noun: a function of which a given function is the derivative, i.e. which yields that function when differentiated, and which may express the area under the curve of a graph of the function. 积分（仅名词词性下）
+
+     - a function satisfying a given differential equation.
+
+- integrate
+
+  1. verb: combine (one thing) with another so that they become a whole.
+
+     _"transportation planning should be integrated with energy policy"_
+
+  2. verb: bring (people or groups with particular characteristics or needs) into equal participation in or membership of a social group or institution.
+
+     _"integrating children with special needs into ordinary schools"_
+
+  3. verb(MATHEMATICS): find the integral of. 求积分。
+
+     _"the velocity profile can be obtained by integrating this equation"_
+
+- integrity
+
+  1. noun: the quality of being honest and having strong moral moral principles; moral uprightness.
+
+     _"he is known to be a man of integrity"_
+
+  2. noun: the state of being whole and undivided.
+
+     _"upholding territorial integrity and national sovereignty"_
+
 - intellectual
 
   1. adjective: relating to intellect. (intellectual property 知识产权)
@@ -7683,6 +7849,12 @@ categories: English
 
   1. noun: the quality or state of being mediocre. 平庸的质量或状态。
 
+- membrane
+
+  1. noun: a thin sheet of tissue or layer of cells acting as a boundary, lining, or partition in an organism.
+
+     _"the nucleus is a distinct region with a membrane around it"_
+
 - meme
 
   1. noun: an element of a culture or system of behavior that may be considered to be passed from one individual to another by nongenetic means, especially imitation. 一种关于行为的文化或系统的元素，被认为以非遗传方式从个人传播给其他个人，尤其是通过模仿。
@@ -7750,6 +7922,10 @@ categories: English
   1. noun: a figure of speech in which a word or phrase is applied to an object or action to which it is not literallly applicable. 一种修辞手法，词或词组被应用到一个对应或行为上，在字面上并不可用，即比喻。
 
      - a thing regarded as representative or symbolic of something else, especially something abstract. 被视为某事物的代表或象征的东西，尤其是抽象事物。
+
+- meteorite
+
+  1. noun: a meteor that survives its passage through the earth's atmosphere such that part of it strikes the ground. More than 90 percent of meteorites are of rock, while the remainder consist wholly or partly of iron and nickel.
 
 - meticulous
 
@@ -10747,6 +10923,28 @@ categories: English
 
        _"there's one of them, anyhow, that didn't renege him"_
 
+- repel
+
+  1. verb: drive or force (an attack or attacker) back or away.
+
+     _"they sought to repel the enemy with their machine guns"_
+
+     - (of a magnetic pole or electric field) force (something similarly magnetized or charged) away from itself.
+
+       _"electrically charged objects attract or repel one another"_
+
+     - (of a substance) resist mixing with or be impervious to (another substance).
+
+       _"boots with good-quality leather uppers to repel moisture"_
+
+  2. verb: be repulsive or distasteful to.
+
+     _"she was repelled by the permanent smell of drink on his breath"_
+
+  3. verb(FORMAL): refuse to accept (something, especially an argument or theory).
+
+     _"the alleged right of lien led by the bankrupt's attorney was repelled"_
+
 - repertoire
 
   1. noun: a stock of plays, dances, or items that a company or a performer knows or is prepared to perform.
@@ -10962,6 +11160,16 @@ categories: English
   3. verb(RARE): organize according to a routine.
 
      _"all had been routined with smoothness"_
+
+- rubble
+
+  1. noun: waste or rough fragments of stone, brick, concrete, etc., especially as the debris from the demolition of buildings.
+
+     _"two buildings collapsed, trapping scores of people in the rubble"_
+
+     - pieces of rough or undressed stone used in building walls, especially as filling for cavities.
+
+       _"the tower is built of stone rubble faced with ashlar"_
 
 - rule (ruling 裁决)
 
@@ -11431,6 +11639,16 @@ categories: English
 
      _"she let out a long sigh of despair"_
 
+- silver lining
+
+  1. noun: a consoling or hopeful prospect. 令人欣慰或充满希望的前景。
+
+- skeptical (sceptical) (固定搭配 be skeptical of)
+
+  1. adjective: not easily convinced; having doubts or reservations. 不能轻易确信；持有怀疑态度或有所保留。
+
+  2. adjective(PHILOSOPHY): relating to the theory that certain knowledge is impossible. （哲学）关于某些知识是不可能的理论。
+
 - slack
 
   1. adjective: not taut or held tightly in position; loose. 没有拉紧或没有紧紧固定在位置上；松动的。
@@ -11643,15 +11861,53 @@ categories: English
 
       _"details not carved into the clay were secured with slip"_
 
-- sliver lining
+- slug
 
-  noun: a consoling or hopeful prospect. 令人欣慰或充满希望的前景。
+  1. noun: a tough-skinned terrestrial mollusk which typically lacks a shell and secretes a film of mucus for protection. It can be a serious plant pest.
 
-- skeptical (sceptical) (固定搭配 be skeptical of)
+  2. noun: a slow, lazy person; a sluggard.
 
-  1. adjective: not easily convinced; having doubts or reservations. 不能轻易确信；持有怀疑态度或有所保留。
+  3. noun: an amount of an alcoholic drink, typically liquor, that is gulped or poured.
 
-  2. adjective(PHILOSOPHY): relating to the theory that certain knowledge is impossible. （哲学）关于某些知识是不可能的理论。
+     _"he took a slug of whiskey"_
+
+  4. noun: an elongated, typically rounded piece of metal.
+
+     _"the reactor uses embedded slugs of uranium"_
+
+  5. noun: a line of type in Linotype printing.
+
+  6. noun(COMPUTING): a part of a URL which identifies a particular page on a website in a form readable by users.
+
+     _"writers can edit the slug that will become an article or page URL"_
+
+  7. verb: drink (something, typically alcohol) in a large draft; swig.
+
+     _"she picked up her drink and slugged it straight back"_
+
+  8. verb(INFORMAL·NORTH AMERICAN): strike (someone) with a hard blow.
+
+     _"he was the one who'd get slugged"_
+
+     - settle a dispute or contest by fighting or competing fiercely.
+
+       _"they went outside to slug it out"_
+
+  9. noun: a hard blow.
+
+- sluggish
+
+  1. adjective: slow-moving or inactive.
+
+     _"a sluggish stream"_
+
+     - lacking energy or alertness.
+
+       _"Alex woke late feeling tired and sluggish"_
+
+     - slow to respond or make progress.
+
+       _"the car had been sluggish all morning"_
 
 - sly
 

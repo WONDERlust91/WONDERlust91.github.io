@@ -662,6 +662,20 @@ have been doing 从过去到现在一直做某事
 
   make A B
 
+- 表达“提供给某人某物”
+
+  offer A(sb.) B = provide A(sb.) with B
+
+  offer you an apple = provide you with an apple
+
+  当 A 不是 sb.而是 sth.时，或表达的意思不同时，要灵活使用介词，不要拘泥于固定搭配
+
+  offer an apple to you
+
+  provide an apple for you
+
+  provide an apple through your friend to your mom
+
 - to the extent that 词性为 adv. 到了（从句中描述的）程度。
 
   I can do this, to the extent that ... 我能做这个事情，能做到...的程度。
@@ -926,6 +940,18 @@ have been doing 从过去到现在一直做某事
 
 - boil down to 归结为
 
+- a home (away) from home 宾至如归的地方
+
+- 祈使句 + and + 主谓宾
+
+  Look at that school and you will be happy about their facilities.
+
+- 长介词短语 + 主谓宾
+
+  介词短语修饰主句中的主语
+
+  With no facilities like that school, my school is also good.
+
 - 常见简单词组或词汇，但理解易错
 
   happen to 碰巧
@@ -936,7 +962,11 @@ have been doing 从过去到现在一直做某事
 
   practically = virtually = pretty much = almost = nearly 几乎/实际上
 
-  given 在句首，词性为介词，译为考虑到
+  given 在句首，词性为介词（后面跟名词）或连词（后面跟一个句子），译为考虑到
+
+      Given you are a boy, you can do this.
+
+      Given your gender, you can do this.
 
   in charge 负责、管理（当领导）
 
