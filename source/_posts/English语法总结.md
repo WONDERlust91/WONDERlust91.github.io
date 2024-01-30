@@ -292,57 +292,57 @@ yet 状语从句套 while 状语从句的情况（本质就是英语的完整句
 
 1. 非谓语动词也是动词，但凡是动词你就要去想谁发出的动词
 
-- 没有逗号，动词发出者为前面的名词
+   - 没有逗号，动词发出者为前面的名词
 
-  I like this book making me happy
+   I like this book making me happy
 
-- 有逗号的，需要根据上下文判断谁发出的动词，可能是前一句的主语、宾语或整个句子。
+   - 有逗号的，需要根据上下文判断谁发出的动词，可能是前一句的主语、宾语或整个句子。
 
-  I like to use computers, bought by my dad. 宾语
+     I like to use computers, bought by my dad. 宾语
 
-  I like to read books, writing some notes. 主语
+     I like to read books, writing some notes. 主语
 
-  I like this book, making me happy. 宾语
+     I like this book, making me happy. 宾语
 
-  I like to do exercises, making me happy. 整句
+     I like to do exercises, making me happy. 整句
 
-  Looking from a broad perspective, we can see a trend. 整句
+     Looking from a broad perspective, we can see a trend. 整句
 
 2. 只有在这句话已经有了谓语的情况下，才会出现非谓语
 
-#### 句型
+#### 非谓语动词句型
 
 1. 非谓语 + 宾语, 主语 + 谓语 + 宾语.
 
-Reading this book, my teacher is happy.
+   Reading this book, my teacher is happy.
 
 2. 主语 + 谓语 + 宾语, 非谓语 + 宾语.
 
-There are many spectators watching the show, meaning/suggesting that Chinese cultures are becoming more and more popular.
+   There are many spectators watching the show, meaning/suggesting that Chinese cultures are becoming more and more popular.
 
-watching the show 非谓语 作 spectators 的定语
+   watching the show 非谓语 作 spectators 的定语
 
-meaning/suggesting that 非谓语 + 宾语从句
+   meaning/suggesting that 非谓语 + 宾语从句
 
 3. 主语, 定语（非谓语）, 谓语 + 宾语.
 
-My teacher, almost overwhelmed by her projects, will have some time to do something.
+   My teacher, almost overwhelmed by her projects, will have some time to do something.
 
 4. 非谓语动词不及物时，上面 3 个句型中紧跟着非谓语动词的宾语都不存在，可能是一个状语。
 
-Quickly happening (when you are at school), this situation is good.
+   Quickly happening (when you are at school), this situation is good.
 
 #### 常见错误
 
 1. Using this computer to type words, I am learning this computer.
 
-语法上没有错误，但表意上缺少逻辑。应该是先学电脑，再来使用。
+   语法上没有错误，但表意上缺少逻辑。应该是先学电脑，再来使用。
 
-改正：Learning this computer, I am using this computer to type words.
+   改正：Learning this computer, I am using this computer to type words.
 
 2. Learning this culture, there are more chances for us to be happy.
 
-非谓语也是动词，要找动词的主语，主句中没有主语能够发出 learning 这个动词。
+   非谓语也是动词，要找动词的主语，主句中没有主语能够发出 learning 这个动词。
 
 ### 动名词做主语
 
@@ -954,24 +954,24 @@ have been doing 从过去到现在一直做某事
 
 - 常见简单词组或词汇，但理解易错
 
-  happen to 碰巧
+  1. happen to 碰巧
 
-  come across 偶遇
+  2. come across 偶遇
 
-  all the same = nevertheless 即便如此
+  3. all the same = nevertheless 即便如此
 
-  practically = virtually = pretty much = almost = nearly 几乎/实际上
+  4. practically = virtually = pretty much = almost = nearly 几乎/实际上
 
-  given 在句首，词性为介词（后面跟名词）或连词（后面跟一个句子），译为考虑到
+  5. given 在句首，词性为介词（后面跟名词）或连词（后面跟一个句子），译为考虑到
 
-      Given you are a boy, you can do this.
+     - Given you are a boy, you can do this.
 
-      Given your gender, you can do this.
+     - Given your gender, you can do this.
 
-  in charge 负责、管理（当领导）
+  6. in charge 负责、管理（当领导）
 
-  bring about = lead to 导致
+  7. bring about = lead to 导致
 
-  not least = in particular; notably. 尤其
+  8. not least = in particular; notably. 尤其
 
-  set out 出发旅程；想要做某事；按特定顺序安排或罗列某事
+  9. set out 出发旅程；想要做某事；按特定顺序安排或罗列某事

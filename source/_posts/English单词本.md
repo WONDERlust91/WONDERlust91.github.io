@@ -1395,7 +1395,7 @@ categories: English
 
   1. verb: (of a container) break suddenly and violently apart, spilling the contents, typically as a result of an impact or internal pressure.
 
-  _"we inflated dozens of balloons and only one burst"_
+     _"we inflated dozens of balloons and only one burst"_
 
   2. noun: an instance of breaking or splitting as a result of internal pressure or puncturing; an explosion.
 
@@ -2991,9 +2991,9 @@ categories: English
 
   1. noun: painful involuntary contraction of a muscle or muscles, typically caused by fatigue or strain.
 
-  _"he suffered severe cramps in his foot"_
+     _"he suffered severe cramps in his foot"_
 
-  - (NORTH AMERICAN) abdominal pain caused by menstruation.
+     - (NORTH AMERICAN) abdominal pain caused by menstruation.
 
   2. noun: a tool, typically shaped like a capital G, for clamping two objects together for gluing or other work.
 
@@ -7081,7 +7081,7 @@ categories: English
 
 - invocation
 
-  1.  noun: the action of invoking something or someone for assistance or as an authority. 请求某人或某物作为帮助或权威的行为。
+  1. noun: the action of invoking something or someone for assistance or as an authority. 请求某人或某物作为帮助或权威的行为。
 
 - irrational
 
@@ -10077,7 +10077,7 @@ categories: English
 
   11. noun(SCOTTISH · IRISH): a large cupboard.
 
-  _"the necessary linen was kept in a large press, and in another was the silver plate and several sets of china"_
+      _"the necessary linen was kept in a large press, and in another was the silver plate and several sets of china"_
 
 - pressing
 
