@@ -32,12 +32,12 @@ VPS（Virtual Private Server）虚拟专用主机，传统虚拟主机是多人�
 
 准备一个域名。
 
-域名的购买可以通过国内各大云服务商，国内域名需要备案，国外可以通过 godaddy、nameSilo 等域名商购买。通常`.com`顶级域名更贵，但看起来更正规，有一些需要校验域名的服务，`.com`顶域的兼容性更好。因此推荐优先购买`.com`顶域。
+域名的购买可以通过国内各大云服务商，国内域名需要备案，国外可以通过 Godaddy、NameSilo、CloudFlare 等域名商购买。通常`.com`顶级域名更贵，但看起来更正规，有一些需要校验域名的服务，`.com`顶域的兼容性更好。因此推荐优先购买`.com`顶域。
 
-以 [nameSilo](https://www.namesilo.com/) 域名服务商为例，不热门且无人购买的`.com`二级域名，每年的费用为 10$。
+（2024 年更新：NameSilo 续费涨价太多且网站老旧响应慢，DNS 更新时间非常慢，几乎无法使用 DNS 自动更新 SSL 证书，因此推荐将域名转移至 CloudFlare 管理，不仅 DNS 更新很快，还有 CDN 可以使用）以 [CloudFlare](https://www.cloudflare.com) 域名服务商为例，不热门且无人购买的`.com`二级域名，每年的费用为 10$。
 
-> 域名说明
->
+域名说明
+
 > 以`www.your-domain.com`为例，`com`为顶级（一级）域名，`your-domain.com` 为二级域名，`www.your-domain.com` 为三级域名。
 >
 > 我们购买的是二级域名，二级以上的域名无需再购买，在二级域名的基础上配置即可。
@@ -48,8 +48,8 @@ VPS（Virtual Private Server）虚拟专用主机，传统虚拟主机是多人�
 2. 如果要让`www.your-domain.com`的三级域名也对应到 VPS 的 IP 地址，则再增加一个 CNAME 记录，配置`www`的主机名到`your-domain.com`的二级域名地址；
 3. 如果要让多个子域名都对应到 VPS 的 IP 地址（例如`demo.your-domain.com`和`blog.your-domain.com`），可以每个三级子域单独配置 CNAME 记录（同 2），也可以使用通配符`*`作为主机名，然后 CNAME 解析到`your-domain.com`的二级域名地址；
 
-> A 记录与 CNAME 记录
->
+A 记录与 CNAME 记录
+
 > A 记录直接指向 IP 地址，而 CNAME 记录指向域名；
 >
 > 推荐只在二级域名上使用 A 记录，二级以上的子域名都使用 CNAME 记录，这样在服务器 IP 改变时，只要维护 1 条 A 记录即可，CNAME 记录只要域名不变更，都不需要改变；
@@ -58,7 +58,7 @@ VPS（Virtual Private Server）虚拟专用主机，传统虚拟主机是多人�
 
 SSH 远程登录工具：
 
-- Windows: [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)（免费、轻量、极简）、[XShell](https://www.xshell.com/en/xshell/)（免费、强大）
+- Windows: VSCode Remote - SSH (VSCode 插件)、[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)（免费、轻量、极简）、[XShell](https://www.xshell.com/en/xshell/)（免费、强大）
 - macOS/Linux: Terminal
 
 远程文件拷贝工具：
@@ -68,7 +68,9 @@ SSH 远程登录工具：
 
 轻度使用，PuTTY + WinSCP 的组合完全够用，UI 界面可能不够美观；XSHELL 与 XFTP 为同一家公司出品，功能更强，也能协同使用，是很多程序猿的第一选择。
 
-Windows 平台下，个人推荐远程登录与远程文件拷贝结合的工具：[MobaXterm](https://mobaxterm.mobatek.net/)
+Windows 平台下，还可以使用远程登录与远程文件拷贝结合的工具：[MobaXterm](https://mobaxterm.mobatek.net/)
+
+最终推荐使用 VSCode Remote - SSH 插件，仅在文本编辑器的基础上安装一个插件即可实现远程登录与文件拷贝。
 
 文本编辑器：
 
@@ -76,11 +78,25 @@ Windows/macOs/Linux：[VSCode](https://code.visualstudio.com/)
 
 ## 远程登录
 
-虽然最新版本的 Windows 10 及 Windows 11 都支持使用 PowerShell 和 WSL 来进行 SSH 连接，但并非所有版本都支持。故这里还是推荐大家通过 MobaXterm 软件来进行 SSH 连接。
-
-在 MobaXterm 中，新建一个会话（session），填入 VPS 的 IP 地址和 SSH 端口号，用户名可填写，也可不填，若不填用户名，每次登录过程中会要求填写。
-
+（2024 更新：不再使用 MobaXterm）在 MobaXterm 中，新建一个会话（session），填入 VPS 的 IP 地址和 SSH 端口号，用户名可填写，也可不填，若不填用户名，每次登录过程中会要求填写。  
 新建成功后，双击会话远程连接 VPS，第一次需要输入用户密码，可选保存或不保存，不保存则每次登录都要输入密码。
+
+在 VSCode 中，点击左边栏【Extensions】 - 搜索【remote】 - 安装【Remote - SSH】、【Remote Explorer】、【Remote - SSH: Editing Configuration Files】
+
+reload 所有已安装的新插件，点击左边栏新出现的【Remote Explorer】 - 【REMOTES】 - 【SSH】旁的小齿轮【OpenSSH Config File】 - 选择`C:\Users\你的用户名\.ssh\config`
+
+编辑该文件：
+
+```txt
+Host XXX （SSH连接名称，随便起）
+  HostName xxx.xxx.xxx.xxx 或 你的域名.com （你的 VPS IP 地址或域名）
+  Port VPS 22 （SSH 服务的端口，通常默认22）
+  User root （VPS SSH 登录用户名，初始登录通常用 root）
+  PreferredAuthentications password （用密码登录，初始登录使用）或 publickey （用公钥登录，修改SSH为禁用密码登录后使用）
+  IdentityFile C:\\Users\\你的用户名\\.ssh\\密钥名称 （ssh-kengen生成的密钥路径，注意是不带后缀名的，初始登录不需要该配置，后续完成服务器安全修改后，再添加）
+```
+
+编辑完成后会在 REMOTES 下出现你添加的服务器，点击进行连接，按提示选择 Linux，然后输入密码即可。
 
 连接成功后，就进入了 VPS 的命令行界面（Command Line Interface）。通常 VPS 上的 Linux 系统因为受限于硬盘与内存资源，都不会安装可视化的界面，仅有命令行界面。
 
@@ -158,16 +174,16 @@ Linux 服务器的安全防护是一个纷繁复杂的巨大课题。无数的�
 
 有些 VPS 服务商，默认使用的端口已经是非 22 端口，那么你可以忽略这一步，当然也可以跟着本文改成你钟意的端口。
 
-> nano
->
+nano
+
 > nano 是 Linux 上的文本编辑器，和 vim 一样，都是 Linux 系统预装的。这里之所以选择 nano 而不选大名鼎鼎的 vim，则是因为 Linux 系统预装的 vim 是最小安装版，进入 insert 模式后，最小安装版方向键经常无法移动光标，而变成输入字符，需要安装完全版的 vim 才能解决；另一方面则是因为 vim 的操作对 windows 用户而言是有学习成本的，而 nano 将重要的快捷键都显示在屏幕下方了。
 
-> systemctl
->
+systemctl
+
 > systemctl 是 Linux 系统中服务的管理器，不仅仅是 Linux 的系统服务，很多我们安装的包也会在安装时将自己注册成一个可以被 systemctl 管理的服务，方便我们设置开机自启动或启动、重启、关闭服务。
->
-> systemctl 有一些常用的操作
->
+
+systemctl 有一些常用的操作
+
 > systemctl start 某服务（开启某服务）
 > systemctl stop 某服务（停止某服务）
 > systemctl restart 某服务（重启某服务，通常在修改配置文件后需要重启）
@@ -176,8 +192,8 @@ Linux 服务器的安全防护是一个纷繁复杂的巨大课题。无数的�
 > systemctl enable 某服务（开机自动启动某服务）
 > systemctl disable 某服务（禁用开机自启动某服务）
 
-> SSH 服务配置文件
->
+SSH 服务配置文件
+
 > SSH 是 Linux 系统中已集成的服务，它的配置文件在`/etc/ssh/sshd_config`
 
 有了上述的前置知识，我们远程登录到自己的 VPS，就可以开始修改 SSH 端口了。
@@ -205,16 +221,18 @@ Linux 服务器的安全防护是一个纷繁复杂的巨大课题。无数的�
   systemctl restart ssh
   ```
 
-现在新的端口已经生效，下次使用 MobaXterm 远程登录 VPS 时就要使用你新改的端口了，别忘了修改你的 MobaXterm 配置。
+现在新的端口已经生效，下次使用 VSCode Remote 远程登录 VPS 时就要使用你新改的端口了，别忘了修改你的 VSCode Remote 配置。
 
 ### 建立非 root 的新用户
 
 Linux 系统中的 root 用户，不仅仅是一个管理员账号那么简单。它是整个系统的【根基】、拥有整个系统中至高无上的权力。一旦 root 账号出现安全问题，整个系统都只能任人鱼肉。
 
-> adduser
->
+adduser
+
 > Linux 基础命令，给系统新增一个用户
+>
 > 使用该命令会：1. 添加用户名；2. 创建用户名相同的组名，并将该用户添加入该组；3. 在/home 目录创建与该用户同名目录，并拷贝/etc/skel 目录下的内容到该目录下；4. 提示输入密码及修改用户信息；
+>
 > 这个命令创建的账号，可以用于登录系统
 >
 > 注意，Linux 还有一个命令 useradd，useradd 仅添加用户名与同名用户组，不创建用户目录也不创建密码，也没有登录 shell，故未进行其他必要操作前，是无法用于登录系统的。
@@ -223,19 +241,19 @@ Linux 系统中的 root 用户，不仅仅是一个管理员账号那么简单�
 >
 > 同理可知，deluser 与 userdel 命令的区别
 
-> sudo
->
+sudo
+
 > sudo 是让普通用户临时获得 root 权限的功能，sudo 是一个包，需要通过 apt 包管理器安装。
 >
 > visudo 是打开 sudo 权限配置专用编辑器的命令。
 >
 > 配置格式为 `USER/GROUP HOST=(USER[:GROUP]) [NOPASSWD:] COMMANDS`
 >
-> USER/GROUP 表示需要被授权的用户或者组，如果是组，则需要以 % 开头；
-> HOST 表示允许从哪些主机登录的用户运行 sudo 命令，ALL 表示允许从任何终端、机器访问；
-> (USER[:GROUP]) 表示使用 sudo 可切换的用户或者组，组可以不指定，ALL 表示可以切换到系统的所有用户
-> NOPASSWD 如果指定，则该用户或组使用 sudo 时不必输入密码
-> COMMANDS 表示运行指定的命令，ALL 表示允许执行所有命令
+> - USER/GROUP 表示需要被授权的用户或者组，如果是组，则需要以 % 开头；
+> - HOST 表示允许从哪些主机登录的用户运行 sudo 命令，ALL 表示允许从任何终端、机器访问；
+> - (USER[:GROUP]) 表示使用 sudo 可切换的用户或者组，组可以不指定，ALL 表示可以切换到系统的所有用户
+> - NOPASSWD 如果指定，则该用户或组使用 sudo 时不必输入密码
+> - COMMANDS 表示运行指定的命令，ALL 表示允许执行所有命令
 
 - 我们要做的第一件事就是【新增一个用户并设定登录密码】：
 
@@ -287,7 +305,7 @@ nano /etc/ssh/sshd_config
 systemctl restart ssh
 ```
 
-下次登录时 root 用户就无法连接了，记得在 MobaXterm 中将登录用户改为刚刚新增的 admin 用户。
+下次登录时 root 用户就无法连接了，记得在 VSCode Remote 中将登录用户改为刚刚新增的 admin 用户。
 
 ### 使用密钥登录并禁用密码登录
 
@@ -299,8 +317,8 @@ systemctl restart ssh
 
 密钥验证，就是生成一对相关联的密钥文件（公钥和私钥），然后把公钥上传到 VPS。每次登录时，SSH 会将公钥和私钥进行匹配，若验证是正确的密钥对，则验证通过。这样你就无需记忆和输入复杂的密码，只要保护好私钥这个文件不外泄即可。
 
-> 密钥类型
->
+密钥类型
+
 > - RSA 密钥，在各种设备、SSH 客户端中有广泛悠久的支持历史，目前依然能够提供足够的安全性，它是大多数人的选择，但并非最优选择。
 >
 > - DSA 密钥，已经从数学层面被证明不安全，永远不要使用它。
@@ -311,16 +329,17 @@ systemctl restart ssh
 >
 > 如果你的设备软件都支持的话，建议优先使用 EdDSA 密钥，常见 EdDSA 密钥为 255 位的 Ed25519。
 
-> 生成 SSH 密钥的方式
->
+生成 SSH 密钥的方式
+
 > 1. 通常 SSH 客户端软件都带有密钥生成器，可以可视化地生成密钥。例如 MobaXterm 中在 Tools 菜单下，打开 MobaKeyGen 即可生成密钥。
 > 2. 通过命令行生成，Windows 10 1809 及以后的版本、Windows 11 都在系统中集成 OpenSSH 功能，默认开启 OpenSSH-Client 端，若未开启则可在 Windows 设置中开启，其他版本的系统可以通过安装 OpenSSH 获得密钥生成能力，如果你安装了 git，那么也会默认安装 OpenSSH。
 
-> [ssh-keygen](https://www.ssh.com/academy/ssh/keygen#command-and-option-summary)
->
+[ssh-keygen](https://www.ssh.com/academy/ssh/keygen#command-and-option-summary)
+
 > ssh 密钥生成命令，安装好 OpenSSH 后就能执行 ssh-keygen 命令。
->
-> ssh-keygen 命令常用参数
+
+ssh-keygen 命令常用参数
+
 > -b “Bits”用于指定密钥位数，例如 RSA 密钥可指定位数，默认为 2048 bits，可通过该参数设置为 3072 bits 或 4096bits 等
 > -t “Type”用于指定密钥算法类型，默认为 rsa，建议使用 ed25519
 > -f “File”用于指定密钥文件目录与名称，默认生成在用户目录的.ssh 目录下，如`C:\Users\用户目录\.ssh\密钥名称`
@@ -336,21 +355,21 @@ systemctl restart ssh
   ssh-keygen -t ed25519
   ```
 
-  > 注意
-  >
+  注意
+
   > 以默认 2048 位的 RSA 密钥为例，要想获得同 Ed25519 一样的安全性，需要使用 3072 位的 RSA 密钥，如：`ssh-keygen -t rsa -b 3072`
 
   按提示选择存储路径与文件名，再按提示输入密码短语。
 
-  > 注意
-  >
+  注意
+
   > 如果不想每次登录都输入密码短语，可以直接回车，不设置密码短语，这样虽然方便，但是也不符合安全建议，如果不是一个人使用这台电脑，强烈建议设置私钥密码短语，防止私钥丢失造成的损失。
 
   命令执行完成后会在用户目录下生成`id_ed25519`与`id_ed25519.pub`两个文件（如果你使用默认路径与名称，未修改的话），后缀为 pub 的即为公钥，复制一份`id_ed25519.pub`并重命名为`authorized_keys`。
 
 - 第二步，【上传密钥】
 
-  使用 admin 账户，通过 MobaXterm 远程登录服务器，登录成功后，左侧文件夹栏就可以可视化地上传下载文件（相当于 WinSCP 功能）。
+  使用 admin 账户，通过 VSCode Remote 远程登录服务器，登录成功后，左侧文件夹栏就可以可视化地上传下载文件（相当于 WinSCP 功能）。
 
   登录后，默认就在 admin 用户文件下，新建`.ssh`文件夹，将刚刚复制的`authorized_keys`文件上传至`.ssh`文件夹下。
 
@@ -380,9 +399,11 @@ systemctl restart ssh
 
 - 第四步，【SSH 客户端配置使用私钥登录】
 
-  前面我们已经做好了 VPS 端的公钥配置，只要在 MobaXTerm 客户端中配置好私钥，即可完成使用密钥登录了。
+  前面我们已经做好了 VPS 端的公钥配置，只要在 VSCode Remote 中配置好私钥，即可完成使用密钥登录了。
 
-  右键已保存的 VPS 会话，点击 edit session，选择 SSH 大类下的 Advanced SSH settings，钩选 Use Private key，并选择和公钥配对的私钥，然后保存即可。
+  打开 VSCode - 点击左边栏【Remote Explorer】 - 【REMOTES】 - 【SSH】旁的小齿轮【OpenSSH Config File】 - 选择`C:\Users\你的用户名\.ssh\config`
+
+  修改`PreferredAuthentications`字段为`publickey`（用公钥登录），增加`IdentityFile`字段为`C:\\Users\\你的用户名\\.ssh\\密钥名称`
 
   保存成功即可双击会话一键登录了，当然如果你给私钥设置了密码短语，登录时还要输入密码短语才能使用私钥。
 
@@ -412,10 +433,10 @@ systemctl restart ssh
   mkdir -p ~/www/webpage/ && nano ~/www/webpage/index.html
   ```
 
-  > mkdir
-  >
-  > 创建文件夹命令，-p 参数表示递归创建，若不加-p 参数，则需要手动一层一层创建
+  mkdir
 
+  > 创建文件夹命令，-p 参数表示递归创建，若不加-p 参数，则需要手动一层一层创建
+  >
   > 注意
   >
   > 务必理解命令中“~”的意义，它表示当前用户的用户目录，即：
@@ -463,8 +484,8 @@ systemctl restart ssh
 
 - 修改 Nginx 配置文件并重启 Nginx 服务，将 80 端口的 http 访问定位到我们新建的 html 页面文件上
 
-  > Nginx 配置文件
-  >
+  Nginx 配置文件
+
   > nginx.conf 是 Nginx 服务器的配置文件，路径为`/etc/nginx/nginx.conf`
 
   打开 nginx.conf
@@ -525,16 +546,16 @@ systemctl restart ssh
 
 那么接下来我们要做的，是为我们的域名申请一个真实的 TLS 证书，使网站具备标准 TLS 加密的能力及 HTTPS 访问的能力。
 
-> 注意
->
+注意
+
 > 请不要轻易使用自签证书。它并没有让操作简单太多，但增加了无谓的风险（如中间人攻击）。
 
 这里我们使用[acme.sh](https://github.com/acmesh-official/acme.sh)作为证书管理工具，它简单、轻量、高效，并且可以完成证书自动更新。
 
 你也可以使用最知名的开源 CA（Certificate Authority）服务商[Let's Encrypt](https://letsencrypt.org/)推荐的证书管理工具[Certbot](https://certbot.eff.org/)来管理你的证书，这个工具文档也很齐全，也是很好的选择。
 
-> 知名 CA 服务商对比表
->
+知名 CA 服务商对比表
+
 > | CA            | MaxLifetime | ECC | Domain Count | Wildcard | NotAfter |
 > | ------------- | ----------- | --- | ------------ | -------- | -------- |
 > | Let's Encrypt | 90          | Yes | 100          | Yes      | No       |
@@ -549,8 +570,8 @@ systemctl restart ssh
 
 ### 安装 acme.sh
 
-> wget
->
+wget
+
 > wget 是非交互式网络下载工具，与 curl 相似却有不同侧重。大部分 Linux 发行版都有预装。
 
 使用 wget 下载 acme.sh 安装脚本并导入 shell 进行安装
@@ -559,23 +580,23 @@ systemctl restart ssh
 wget -O - https://get.acme.sh | sh
 ```
 
-> 说明
->
+说明
+
 > wget 中 `-O` 参数表示将下载的文件写入参数指定的路径与文件，`-O`后的`-`稍有特殊，是`./-`的缩写，文件名用`-`表示下载的文件使用标准输出，并禁用链接转换。所以`-O -`参数意为以标准输出、禁用链接转换的方式下载到当前目录。
 >
 > 详细说明见[GNU_Wget_Download-Options](https://www.gnu.org/software/wget/manual/wget.html#Download-Options)
 
-运行`.bashrc`让 `acme.sh` 命令生效。实际安装结束后，`acme.sh`已经是全局命令了，此时只要重启一次 shell，就可以全局访问`acme.sh`。这一步的操作是为了省去重启 shell 的麻烦，直接将变量注入当前环境。
+（2024 更新：新版本的 acme.sh 已无需进行这一步，安装完成后即可直接全局使用命令）运行`.bashrc`让 `acme.sh` 命令生效。实际安装结束后，`acme.sh`已经是全局命令了，此时只要重启一次 shell，就可以全局访问`acme.sh`。这一步的操作是为了省去重启 shell 的麻烦，直接将变量注入当前环境。
 
 ```shell
 . .bashrc
 ```
 
-> 说明
->
+说明
+
 > source 命令，即点命令，可以使用英文`source`也可以使用`.`，意为在当前环境执行脚本，没有新建子 shell，脚本中新建或改变的变量都会保存在当前 shell 中。而直接执行文件`.bashrc`或使用 sh 命令执行文件`sh .bashrc`是一样的，都新建了子 shell，子 shell 新建或改变的变量，不会带回父 shell。
 
-开启 acme.sh 自动升级
+（2024 更新：新版本的 acme.sh 已无需进行这一步，默认设置即为自动升级）开启 acme.sh 自动升级
 
 ```shell
 acme.sh --upgrade --auto-upgrade
@@ -583,14 +604,14 @@ acme.sh --upgrade --auto-upgrade
 
 ### 申请测试证书
 
-在正式申请证书之前，我们先用测试命令（`--test`）来验证是否可以成功申请，这样可以避免配置有误时，反复申请证书失败，超过 Let's Encrypt 请求频率上限，导致后面的步骤无法进行。
+在正式申请证书之前，我们先用测试命令（`--staging`或`--test`）来验证是否可以成功申请，这样可以避免配置有误时，反复申请证书失败，超过 Let's Encrypt 请求频率上限（5 次错误，每个域名或 IP，每小时），导致后面的步骤无法进行。
 
-> 说明
->
+说明
+
 > ECC 证书的主要优势在于它的 key size 更小，意味着同等大小下安全性的提升和加密解密速度的加快。如 ECC-256Bits 的强度相当于 RSA-3072Bits，何乐而不为？如果网站确实需要兼容古老设备的，也还是按需选择 RSA 证书。
 
-> 单个域名证书、通配符（Wildcard）证书、SAN 证书
->
+单个域名证书、通配符（Wildcard）证书、SAN 证书
+
 > 对于 SSL 证书而言，通常是一个域名对应一个证书，例如`你的域名.com`和`www.你的域名.com`需要两个不同的证书。这对于有多个子域名的网站就很不方便，因此就有了通配符证书，即一个证书可以覆盖下一级的子域（`*.你的域名.com`都被一个证书覆盖）。而随着时代的发展，一个人可能不止一个域名，有多个不同的域名需要证书，这又催生出了 SAN（Subject Alternate Name）证书，一个证书对应多个一级域名或子域名，甚至是通配符的泛域名。
 >
 > 现在 SA 机构会对单个域名颁发单域名证书，对多域名和通配符的情况，直接颁发 SAN 证书。
@@ -603,8 +624,8 @@ acme.sh --upgrade --auto-upgrade
   acme.sh --issue --server letsencrypt --test -d 你的域名.com -w /home/admin/www/webpage --keylength ec-256
   ```
 
-  > 参数说明
-  >
+  参数说明
+
   > --issue 申请签发证书参数
   > --server CA 服务商，这里选择 Let's Encrypt
   > --test 测试模式
@@ -620,30 +641,64 @@ acme.sh --upgrade --auto-upgrade
 
 - 多个域名含有泛域名的测试证书申请
 
-  - 首先需要获得 DNS 服务商的 API Key，这里仍然以 NameSilo 为例
+  - 首先需要获得 DNS 服务商的 API Key，这里仍然以 CloudFlare 为例（CloudFlare 不推荐使用综合的 API Key，使用权限受 Zone 管理的 API Token 更安全，API Token 严格限制了使用权限 Zone 且不曝露 Email 等账户信息）
 
-    - 登录后，点击 【头像】 - 【My Account】
-    - 右侧点击 【API Manager】
-    - 钩选 【IP Address Restrictions】 并填入你 VPS 的 IP 后保存（确保只有你的 VPS 能使用 API）
-    - 最下方钩选 【Submitting this form constitutes your acceptance of our API terms of use】
-    - 点击 【generate】 生成 API Key （务必记录下来，因为网站不会再展示，后续重新生成，之前的 API Key 就无法使用了）
+    - 登录后，点击 【头像】 - 【My Profile】
+    - 左侧点击 【API Tokens】
+    - 右边页面点击【Create Tokens】 - Edit zone DNS 【Use template】
+    - 其他选项保持模板选择 - Zone Resources 第三栏 选择你的域名 - 【Continue to summary】
+    - 【Create Token】生成 User API Tokens，需要妥善保存，因为这个 Token 仅显示一次，若忘记则无法查看，只能重新 Roll 新的 Token
 
-  - 在 VPS 的 shell 中导入 API Key 作为环境变量
+  - 其次需要获得当前域名的权限 Zone ID
 
-    ```shell
-    export Namesilo_Key="ca311045a80f00c7dc74b4"
-    ```
+    - 在 CloudFlare Dashboard 选择自己的域名
+    - 选择左侧【Overview】菜单（默认选中）
+    - 主页面右则向下滚动至 API，可看到 Zone ID，【Click to copy】复制下来
+
+  - 在 VPS 的 shell 中导入 API Token 及 Zone ID 作为环境变量
+
+    - 在用户目录新建`cloudflare.env`文件并编辑
+
+      ```shell
+      nano ~/cloudflare.env
+      ```
+
+    - 给`cloudflare.env`添加内容
+
+      ```shell
+      export CF_Token="你的Token"
+      export CF_Zone_ID="你的Zone ID"
+      ```
+
+    - 将`cloudflare.env`添加到`.bashrc`
+
+      - 编辑 `.bashrc`，`nano ~/.bashrc`
+
+        ```shell
+        . ~/cloudflare.env
+        ```
+
+      - 应用 `.bashrc`
+
+        ```shell
+        source ~/.bashrc
+        ```
+
+    > 直接在命令行中使用`export`只能临时添加环境变量，在当前 shell 关闭后环境变量就失效了，因此可以在`/etc/environment`（全局）或`~/.bashrc`（当前用户）中永久添加环境变量。
+    >
+    > 这里我们没有直接添加环境变量，而是添加了环境变量文件，这样方便管理的解耦
 
   - 测试证书申请
 
     ```shell
-    acme.sh --issue --server letsencrypt --test -d 你的域名.com -d "*.你的域名.com" --dns dns_namesilo --dnssleep 900 -k ec-256
+    acme.sh --issue --server letsencrypt --staging -d 你的域名.com -d "*.你的域名.com" --dns dns_cf -k ec-256
     ```
 
-    > 参数说明
-    >
-    > --dns DNS 模式申请证书 后面跟随内嵌支持的服务商参数（可在[官网查询](https://github.com/acmesh-official/acme.sh/wiki/dnsapi)是否支持），NameSilo 参数为`dns_namesilo`，会自动调用刚刚的 API Key 去生成 TXT 解析
-    > --dnssleep 写入解析后的等待时间秒数，NameSilo 解析生效时间为 15 分钟，故需要等待 900 秒再去验证
+    参数说明
+
+    > --dns DNS 模式申请证书 后面跟随内嵌支持的服务商参数（可在[官网查询](https://github.com/acmesh-official/acme.sh/wiki/dnsapi)是否支持）。
+    > CloudFlare 参数为`dns_cf`，会自动调用刚刚的 API Token 和 Zone ID 去生成 TXT 解析，并在验证后自动删除 TXT 解析
+    > （2024 更新：`dns_cf` 无需设置`dnssleep`，解析生效速度很快）--dnssleep 写入解析后的等待时间秒数，NameSilo 解析生效时间为 15 分钟，故需要等待 900 秒再去验证
 
 如果成功就证明你的域名、配置全部正确。仔细观察，会发现颁发证书的域名是`https://acme-staging-v02.api.letsencrypt.org`，`staging`可以理解为【测试服】。
 
@@ -653,24 +708,50 @@ acme.sh --upgrade --auto-upgrade
 
 ### 正式证书申请
 
-申请正式证书命令与测试相似，只要删掉`--test`参数，再增加`--force`参数即可。由于证书申请后，还需要安装，且证书到期前自动更新后，安装并非自动执行的，因此我们需要在证书申请时使用`--renew-hook`参数，让证书成功更新后执行 shell，自动安装，并重启网站服务。
+申请正式证书命令与测试相似，只要删掉`--staging`或`--test`参数，再增加`--force`参数即可。
 
-- 首先我们来编写安装证书与重启 Web 服务的脚本，【在用户目录下新建证书目录 cert】并【新建脚本文件 cert-renew.sh】再【赋予脚本文件执行权限】：
+- 首先，我们【将默认证书商改为 Let's Encrypt】，这样就无需在申请时添加`--server`参数了：
 
   ```shell
-  cd ~ && mkdir cert && nano ~/cert/cert-renew.sh
+  acme.sh --set-default-ca --server letsencrypt
   ```
 
-  这里以通配域名为例，将下面的内容复制到文件中，按你的域名稍作修改，然后保存（`Ctrl+o`）退出（`Ctrl+x`）：
+- 其次【申请正式证书】：
+
+  ```shell
+  acme.sh --issue -d 你的域名.com -d "*.你的域名.com" --dns dns_cf -k ec-256 --force
+  ```
+
+  参数说明
+
+  > -f 即 --force 强制执行。在证书未到期前（测试证书不能使用，但未过期），程序会限制不允许更新证书，加上这个参数，就可以强制更新。
+  >
+  > （2024 更新：申请正式证书时不再使用`--renew-hook`）--renew-hook 证书成功更新后的钩子，renew hook 仅在后续更新（`-r`）成功后被调用，首次申请（`--issue`）并不会调用。这里用来执行重启 Web 服务器的 shell 脚本。
+
+  源码解读
+
+  > 仔细研读`acme.sh`源代码会发现，程序设定了一个 cron 在每晚 23 点 06 分检查是否到达下次更新日期（证书申请后 60 天，证书可使用 90 天），若到达更新日期则执行`--renew-all`，`--renew-all`又会循环对每个已添加的域名调用`--renew`，`--renew`中又调用了`--issue`，本质上是重新申请了证书。
+  >
+  > 值得注意的是`--issue`首次执行申请证书，并不会执行`--install-cert`，只有当手动执行过一次`--install-cert`后（会在配置文件中添加`--install-cert`相关参数），检测到`--install-cert`特有参数，才会在后续的`--issue`中自动执行`--install-cert`
+  >
+  > 因此正确的流程是：在首次申请证书与首次安装证书时做好配置，后续更新由 cron 完全接管。
+  >
+  > | 流程         | 该流程对应的命令参数                         | 执行状态                                       |
+  > | ------------ | -------------------------------------------- | ---------------------------------------------- |
+  > | 首次申请证书 | `--issue`                                    | 手动执行                                       |
+  > | 首次安装证书 | `--install-cert`                             | 手动执行并在执行时添加安装完成后的自动执行脚本 |
+  > | 自动更新证书 | `--renew-all` = `--issue` + `--install-cert` | 无需手动执行，完全由 cron 自动执行             |
+
+- 之后我们来编写重启 Web 服务的脚本，【在用户目录下新建证书目录 cert】并【新建脚本文件 cert_reload.sh】再【赋予脚本文件执行权限】：
+
+  ```shell
+  cd ~ && mkdir cert && nano ~/cert/cert_reload.sh
+  ```
+
+  这里以通配域名为例，将下面的内容复制到文件中，然后保存（`Ctrl+o`）退出（`Ctrl+x`）：
 
   ```shell
   #!/bin/bash
-
-  ~/.acme.sh/acme.sh --install-cert -d 你的域名.com -d "*.你的域名.com" --ecc --fullchain-file ~/cert/nginx.crt --key-file ~/cert/nginx.key
-  echo "Xray Certificates Renewed"
-
-  chmod +r ~/cert/nginx.key
-  echo "Read Permission Granted for Private Key"
 
   sudo systemctl restart nginx
   echo "Nginx Restarted"
@@ -679,26 +760,35 @@ acme.sh --upgrade --auto-upgrade
   给脚本文件增加可执行权限
 
   ```shell
-  chmod +x ~/cert/cert-renew.sh
+  chmod +x ~/cert/cert_reload.sh
   ```
 
-  脚本文件主要做了三件事：
+  脚本文件主要目的：重启 Nginx 服务，使安装后的证书生效
 
-  1. 将你域名对应的证书安装到你指定的目录；
-  2. 给所有用户增加证书私钥的读权限（防止 Nginx 默认使用 Nginx 用户，无法读取私钥文件）；
-  3. 重启 Nginx 服务，使证书生效；
-
-  > 参数说明
+  > 问题：脚本只有一行主要内容，为什么不直接写在`--reloadcmd`参数中呢？
   >
+  > 因为 acme.sh 配置文件中的各类脚本 hook 均以 base64 格式存储，不便于修改（尽管修改为非 base64 仍然可用），而使用固定的脚本文件，则无需修改配置，即可修改脚本。
+
+- 安装申请好的证书
+
+  ```shell
+  acme.sh --install-cert -d 你的域名.com -d "*.你的域名.com" --ecc --fullchain-file ~/cert/nginx.crt --key-file ~/cert/nginx.key --reloadcmd ~/cert/cert_reload.sh
+  ```
+
+  参数说明
+
   > -i 即 --install-cert 安装证书，实际上仅仅是将申请到的证书复制到指定目录，必需配合 -d 参数使用，指定域名
   > --ecc 表示使用 ECC 证书
   > --fullchain-file 表示全链证书的安装路径
   > --key-file 表示证书私钥的安装路径
-  >
+  > --reloadcmd （该参数仅可用于`--install-cert`）证书安装完成后要执行的命令，通常是重启服务器，使证书生效
+
+  为什么要安装证书？
+
   > 证书已经申请到了，为什么还要有一步安装（复制）的过程？直接去 acme.sh 生成的路径取用不可以吗？acme.sh 官方文档有云，申请证书的路径与命名方式仅供内部使用，未来伴随版本变化可能会更改。当你开启 acme.sh 自动更新，恰好某次更新更改了证书的命名与路径，就会造成你的 Web 服务器加密出现问题。因此安装证书的命令保证了你 Web 服务器使用证书的一致性。
 
-  > 证书说明
-  >
+  证书说明
+
   > | 文件名        | 内容                                           |
   > | ------------- | ---------------------------------------------- |
   > | 你的域名.cer  | 服务端证书                                     |
@@ -708,39 +798,12 @@ acme.sh --upgrade --auto-upgrade
   >
   > HTTPS 的认证原理是链式认证，从服务端证书-->中间证书-->根证书，都通过了才证明不是被中间人篡改过的网页，通常用户的浏览器都会装有知名的根证书及中间证书，只要你的服务端证书是客户浏览器已安装的中间证书商签发的，那么你只需要在 Web 服务器上部署服务端证书，但是如果客户的浏览器未安装给你签发证书的中间证书，或给中间证书签发的根证书，都会造成浏览器提示你的网站不安全，因此大多数人都会选择全链证书，虽然证书大了不少，但是兼容性最好。
 
-- 接下来，我们【将默认证书商改为 Let's Encrypt】：
+  `--reloadcmd`脚本说明
 
-  ```shell
-  acme.sh --set-default-ca --server letsencrypt
-  ```
+  > 可以参考官方关于各钩子执行时机的说明 [acme.sh-Using pre hook post hook renew hook reloadcmd](https://github.com/acmesh-official/acme.sh/wiki/Using-pre-hook-post-hook-renew-hook-reloadcmd)，使用其它钩子也能实现类似效果，但最佳实践还是使用`--reloadcmd`
 
-- 再【申请正式证书】：
+  你也可以像原文中那样使用 Linux 中非常有用的定时任务 crontab 来实现
 
-  ```shell
-  acme.sh --issue -d 你的域名.com -d "*.你的域名.com" --dns dns_namesilo --dnssleep 900 -k ec-256 --force --renew-hook "~/cert/cert-renew.sh"
-  ```
-
-  > 参数说明
-  >
-  > -f 即 --force 强制执行。在证书未到期前（测试证书不能使用，但未过期），程序会限制不允许更新证书，加上这个参数，就可以强制更新。
-  > --renew-hook 证书成功更新后的钩子，renew hook 仅在后续更新（`-r`）成功后被调用，首次申请（`--issue`）并不会调用。这里用来执行安装证书与重启 Web 服务器的 shell 脚本。
-
-- 由于`--renew-hook`仅在更新成功后执行，因此【首次申请证书后需要手动执行下 shell】
-
-  ```shell
-  ~/cert/cert-renew.sh
-  ```
-
-  > 说明
-  >
-  > 这里你也可以使用`--post-hook`在首次申请或后续更新证书后执行 shell（无论申请或更新证书成功或失败都会触发）。
-  >
-  > 不要使用`--reloadcmd`，因为它本义是让我们重启服务器的，触发时机是申请、更新、安装证书后，`--reloadcmd`参数也会被申请、更新、安装证书这三个操作重写，我们的脚本中的安装证书操作没有该参数，那么脚本执行一次后就会将`--reloadcmd`重置，导致下次更新脚本未执行。而如果我们在脚本中也加上`--reloadcmd`操作，就会造成安装证书时又触发脚本，会造成无限循环。
-  >
-  > 造成这个问题的本质原因是 acme.sh 官方将安装证书的命令排除在 60 天自动更新执行的命令之外，只能手动执行。可以参考官方关于各钩子执行时机的说明[acme.sh-Using pre hook post hook renew hook reloadcmd](https://github.com/acmesh-official/acme.sh/wiki/Using-pre-hook-post-hook-renew-hook-reloadcmd)。
-  >
-  > 你也可以像原文中那样使用 Linux 中非常有用的定时任务 crontab 来实现
-  >
   > - 创建定时任务
   >
   > ```shell
@@ -750,8 +813,8 @@ acme.sh --upgrade --auto-upgrade
   > - 将下面内容加在文件最后，保存退出即可
   >
   > ```shell
-  > # 1:00am, 1st day each month, run `cert-renew.sh`
-  > 0 1 1 * *   bash ~/cert/cert-renew.sh
+  > # 1:00am, 1st day each month, run `cert_reload.sh`
+  > 0 1 1 * *   bash ~/cert/cert_reload.sh
   > ```
 
 ### 修改 Nginx 配置
@@ -766,7 +829,7 @@ sudo nano /etc/nginx/nginx.conf
 
 修改配置如下，完成后保存并退出：
 
-```shell
+```txt
 server {
   listen 80;
   # 删除原网站配置，改为跳转https配置
@@ -810,7 +873,7 @@ sudo systemctl restart nginx
 
 再次访问你的网站，你会发现，你的网站已经有了小锁标志，成功实现了 HTTPS 访问。
 
-## 完结，撒花！
+## 完结，撒花
 
 到这里，你已经完整完成了服务器安全防护与网站建设的所有教程。这毫无疑问是一个巨大的胜利！
 
