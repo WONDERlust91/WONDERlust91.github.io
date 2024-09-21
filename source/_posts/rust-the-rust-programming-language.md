@@ -7,155 +7,62 @@ categories: rust
 
 ## Getting Start
 
-### Installation
+`rustup`: a command line tool for managing Rust versions and associated tools.
+`rustc`: a command line tool for compiling Rust code.
+`rustfmt`: a command line automatic formatter tool to format your code in a particular style.
+`rust-analyzer`: IDE support.
+`cargo`: Rust’s build system and package manager.
 
-We'll download Rust through `rustup`, a command line tool for managing Rust versions and associated tools.
-
-> **Command Line Notation**
->
-> Lines that you should enter in a terminal all start with `$`. You don't need to type the `$` character; it's the command line prompt shown to indicate the start of each command. Lines that don't start with `$` typically show the output of the previous command. Additionally, PowerShell-specific examples will use `>` rather than `$`.
-
-<!-- more -->
-
-#### Troubleshooting
-
-To check whether you have Rust installed correctly, open a shell and enter this line:
-
-```text
-$ rustc --version
+```shell
+# check compiler version
+rustc --version
+# compile a single rust file. After compiling successfully, Rust outputs a binary executable
+rustc [your_file_path].rs
 ```
 
-If you see this information, you have installed Rust successfully! If you don't see this information, check that Rust is in your `%PATH%` system variable as follows.
-
-In Windows CMD, use:
-
-```cmd
-> echo %PATH%
+```shell
+# update Rust to a newly released version
+rustup update
+# uninstall Rust and rustup
+rustup self uninstall
+# open local documentation in your browser
+rustup doc
 ```
 
-In PowerShell, use:
-
-```powershell
-> echo $env:Path
+```shell
+# check cargo version
+cargo --version
+# create a project
+cargo new [your_project_name]
+# compile the code and create an executable file with debug mode in target/debug/[your_project_name] (or target\debug\[your_project_name].exe on Windows)
+cargo build
+# compile the code with optimizations for release and create an executable in target/release (compile slower but run faster than debug mode)
+cargo build --release
+# compile the code and then run the resultant executable all in one command
+cargo run
+# quickly check your code to make sure it compiles but doesn't produce an executable (much faster than cargo build)
+cargo check
+# ignore the Cargo.lock file and bump to the latest MINOR SemVer
+cargo update
+# build documentation provided by all your dependencies locally and open it in your browser
+cargo doc --open
 ```
 
-In Linux and macOS, use:
+### Compiling and Running Are Separate Steps
 
-```powershell
-$ echo $PATH
-```
-
-#### Updating and Uninstalling
-
-Once Rust is installed via rustup, updating to a newly released version is easy. From your shell, run the following update script:
-
-```text
-$ rustup update
-```
-
-To uninstall Rust and rustup, run the following uninstall script from your shell:
-
-```text
-$ rustup self uninstall
-```
-
-#### Local Documentation
-
-The installation of Rust also includes a local copy of the documentation so that you can read it offline. Run `rustup doc` to open the local documentation in your browser.
-
-### Hello, World!
-
-It's traditional when learning a new language to write a little program that prints the text `Hello, world!` to the screen, so we'll do the same here!
-
-> Note: The Rust team has been focusing on enabling great IDE support via `rust-analyzer`.
-
-#### Creating a Project Directory
-
-Open a terminal and enter the following commands to make a _projects_ directory and a directory for the "Hello, world!" project within the _projects_ directory.
-
-For Linux, macOS, and PowerShell on Windows, enter this:
-
-```text
-$ mkdir ~/projects
-$ cd ~/projects
-$ mkdir hello_world
-$ cd hello_world
-```
-
-For Windows CMD, enter this:
-
-```cmd
-> mkdir "%USERPROFILE%\projects"
-> cd /d "%USERPROFILE%\projects"
-> mkdir hello_world
-> cd hello_world
-```
-
-#### Writing and Running a Rust Program
-
-Next, make a new source file and call it _main.rs_. Rust files always end with the _.rs_ extension. If you're using more than one word in your filename, the convention is to use an underscore to separate them. For example, use _hello_world.rs_ rather than _helloworld.rs_.
-
-Now open the main.rs file you just created and enter the code as following.
-
-Filename: main.rs
-
-```rust
-fn main() {
-    println!("Hello, world!");
-}
-```
-
-Save the file and go back to your terminal window in the _~/projects/hello_world_ directory. On Linux or macOS, enter the following commands to compile and run the file:
-
-```text
-$ rustc main.rs
-$ ./main
-Hello, world!
-```
-
-On Windows, enter the command `.\main.exe` instead of `./main`:
-
-```powershell
-> rustc main.rs
-> .\main.exe
-Hello, world!
-```
-
-#### Anatomy of a Rust Program
-
-```rust
-fn main() {
-
-}
-```
-
-These lines define a function named `main`. The `main` function is special: it is always the first code that runs in every executable Rust program.
-
-It's good style to place the opening curly bracket on the same line as the function declaration, adding one space in between.
-
-> Note: If you want to stick to a standard style across Rust projects, you can use an automatic formatter tool called `rustfmt` to format your code in a particular style. The Rust team has included this tool with the standard Rust distribution, as `rustc` is, so it should already be installed on your computer!
-
-First, Rust style is to indent with four spaces, not a tab.
-
-Second, `println!` calls a Rust macro. If it had called a function instead, it would be entered as `println` (without the `!`). For now, you just need to know that using a `!` means that you're calling a macro instead of a normal function and that macros don't always follow the same rules as functions.
-
-Third, you see the `"Hello, world!"` string. We pass this string as an argument to `println!`, and the string is printed to the screen.
-
-Fourth, we end the line with a semicolon (`;`), which indicates that this expression is over and the next one is ready to begin. Most lines of Rust code end with a semicolon.
-
-#### Compiling and Running Are Separate Steps
+Rust files always end with the _.rs_ extension. If you're using more than one word in your filename, the convention is to use an underscore to separate them. For example, use _hello_world.rs_ rather than _helloworld.rs_.
 
 Before running a Rust program, you must compile it using the Rust compiler by entering the `rustc` command and passing it the name of your source file, like this:
 
-```text
-$ rustc main.rs
+```shell
+rustc main.rs
 ```
 
 After compiling successfully, Rust outputs a binary executable.
 
 On Linux, macOS, and PowerShell on Windows, you can see the executable by entering the `ls` command in your shell:
 
-```text
+```shell
 $ ls
 main  main.rs
 ```
@@ -171,34 +78,20 @@ main.rs
 
 This shows the source code file with the _.rs_ extension, the executable file (_main.exe_ on Windows, but _main_ on all other platforms), and, when using Windows, a file containing debugging information with the _.pdb_ extension. From here, you run the _main_ or _main.exe_ file, like this:
 
-```text
-$ ./main # or .\main.exe on Windows
+```shell
+./main # or .\main.exe on Windows
 ```
 
-If you're more familiar with a dynamic language, such as Ruby, Python, or JavaScript, you might not be used to compiling and running a program as separate steps. Rust is an _ahead-of-time compiled_ language, meaning you can compile a program and give the executable to someone else, and they can run it even without having Rust installed. If you give someone a _.rb_, _.py_, or _.js_ file, they need to have a Ruby, Python, or JavaScript implementation installed (respectively). But in those languages, you only need one command to compile and run your program. Everything is a trade-off in language design.
+### Anatomy of a Cargo Project
 
-### Hello, Cargo!
-
-Cargo is Rust's build system and package manager. Cargo comes installed with Rust if you used the official installers.
-
-Cargo handles a lot of tasks for you, such as building your code, downloading the libraries your code depends on, and building those libraries. (We call the libraries that your code needs _dependencies_.)
-
-As you write more complex Rust programs, you'll add dependencies, and if you start a project using Cargo, adding dependencies will be much easier to do.
-
-Check whether Cargo is installed by entering the following in your terminal:
-
-```text
-$ cargo --version
-```
-
-#### Creating a Project with Cargo
-
-```text
-$ cargo new hello_cargo
-$ cd hello_cargo
+```shell
+cargo new hello_cargo
+cd hello_cargo
 ```
 
 Go into the _hello_cargo_ directory and list the files. You'll see that Cargo has generated two files and one directory for us: a _Cargo.toml_ file and a _src_ directory with a _main.rs_ file inside.
+
+Cargo expects your source files to live inside the _src_ directory. The top-level project directory is just for README files, license information, configuration files, and anything else not related to your code.
 
 It has also initialized a new Git repository along with a _.gitignore_ file. Git files won't be generated if you run `cargo new` within an existing Git repository; you can override this behavior by using `cargo new --vcs=git`.
 
@@ -235,77 +128,21 @@ fn main() {
 }
 ```
 
-Cargo expects your source files to live inside the _src_ directory. The top-level project directory is just for README files, license information, configuration files, and anything else not related to your code.
+1. The `main` function is special: it is always the first code that runs in every executable Rust program.
 
-#### Building and Running a Cargo Project
+2. Rust style is to indent with four spaces, not a tab.
 
-From your _hello_cargo_ directory, build your project by entering the following command:
+3. `println!` calls a Rust macro. If it had called a function instead, it would be entered as `println` (without the `!`). For now, you just need to know that using a `!` means that you're calling a macro instead of a normal function and that macros don't always follow the same rules as functions.
 
-```text
-$ cargo build
-```
+4. you see the `"Hello, world!"` string. We pass this string as an argument to `println!`, and the string is printed to the screen.
 
-This command creates an executable file in _target/debug/hello_cargo_ (or _target\debug\hello_cargo.exe_ on Windows) rather than in your current directory. Because the default build is a debug build, Cargo puts the binary in a directory named _debug_. You can run the executable with this command:
-
-```text
-$ ./target/debug/hello_cargo # or .\target\debug\hello_cargo.exe on Windows
-```
-
-Running `cargo build` for the first time also causes Cargo to create a new file at the top level: _Cargo.lock_. This file keeps track of the exact versions of dependencies in your project. This project doesn't have dependencies, so the file is a bit sparse. You won't ever need to change this file manually; Cargo manages its contents for you.
-
-We can also use `cargo run` to compile the code and then run the resultant executable all in one command:
-
-```text
-$ cargo run
-```
-
-Using `cargo run` is more convenient than having to remember to run `cargo build` and then use the whole path to the binary, so most developers use `cargo run`.
-
-Cargo figured out that the files hadn't changed, so it didn't rebuild but just ran the binary. If you had modified your source code, Cargo would have rebuilt the project before running it.
-
-Cargo also provides a command called `cargo check`. This command quickly checks your code to make sure it compiles but doesn't produce an executable:
-
-```text
-$ cargo check
-```
-
-Often, `cargo check` is much faster than `cargo build` because it skips the step of producing an executable. If you're continually checking your work while writing the code, using `cargo check` will speed up the process of letting you know if your project is still compiling! As such, many Rustaceans run `cargo check` periodically as they write their program to make sure it compiles. Then they run `cargo build` when they're ready to use the executable.
-
-#### Building for Release
-
-When your project is finally ready for release, you can use `cargo build --release` to compile it with optimizations. This command will create an executable in _target/release_ instead of _target/debug_. The optimizations make your Rust code run faster, but turning them on lengthens the time it takes for your program to compile. This is why there are two different profiles: one for development, when you want to rebuild quickly and often, and another for building the final program you'll give to a user that won't be rebuilt repeatedly and that will run as fast as possible. If you're benchmarking your code's running time, be sure to run `cargo build --release` and benchmark with the executable in _target/release_.
-
-#### Cargo as Convention
-
-In fact, to work on any existing projects, you can use the following commands to check out the code using Git, change to that project's directory, and build:
-
-```text
-$ git clone example.org/someproject
-$ cd someproject
-$ cargo build
-```
-
-#### Cargo Summary:
-
-- `cargo new [your_project_name]`: create a project.
-
-- `cargo build`: build a project.
-
-- `cargo build --release`: build a project with optimizations for release.
-
-- `cargo run`: build and run a project in one step.
-
-- `cargo check`: build a project without producing a binary to check for errors.
-
-- `cargo update` - ignore the _Cargo.lock_ file and bump to the latest MINOR SemVer.
-
-- `cargo doc --open` - build documentation provided by all your dependencies locally and open it in your browser.
+5. we end the line with a semicolon (`;`), which indicates that this expression is over and the next one is ready to begin. Most lines of Rust code end with a semicolon.
 
 ## Programming a Guessing Game
 
-```text
-$ cargo new guessing_game
-$ cd guessing_game
+```shell
+cargo new guessing_game
+cd guessing_game
 ```
 
 Filename: Cargo.toml
@@ -405,9 +242,11 @@ fn main() {
 
 #### Constants
 
-First, you aren't allowed to use `mut` with constants. You declare constants using the `const` keyword instead of the `let` keyword, and the type of the value _must_ be annotated.
+Differences between constants and variables:
 
-The last difference is that constants may be set only to a constant expression, not the result of a value that could only be computed at runtime.
+1. you aren't allowed to use `mut` with constants. You declare constants using the `const` keyword instead of the `let` keyword, and the type of the value _must_ be annotated.
+
+2. constants may be set only to a constant expression, not the result of a value that could only be computed at runtime.
 
 Here's an example of a constant declaration:
 
@@ -415,15 +254,13 @@ Here's an example of a constant declaration:
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 ```
 
-Rust's naming convention for constants is to use all uppercase with underscores between words.
+1. Rust's naming convention for constants is to use all uppercase with underscores between words.
 
-Constants are valid for the entire time a program runs, within the scope in which they were declared.
-
-Naming hardcoded values used throughout your program as constants is useful in conveying the meaning of that value to future maintainers of the code. It also helps to have only one place in your code you would need to change if the hardcoded value needed to be updated in the future.
+2. Constants are valid for the entire time a program runs, within the scope in which they were declared.
 
 #### Shadowing
 
-You can declare a new variable with the same name as a previous variable. In effect, the second variable overshadows the first, taking any uses of the variable name to itself until either it itself is shadowed or the scope ends. We can shadow a variable by using the same variable's name and repeating the use of the `let` keyword as follows:
+You can declare a new variable with the same name as a previous variable. In effect, the second variable overshadows the first, taking any uses of the variable name to itself until either it itself is shadowed **or** the scope ends. We can shadow a variable by using the same variable's name and repeating the use of the `let` keyword as follows:
 
 Filename: src/main.rs
 
@@ -444,16 +281,18 @@ fn main() {
 }
 ```
 
-Shadowing is different from marking a variable as `mut` because we'll get a compile-time error if we accidentally try to reassign to this variable without using the `let` keyword. By using `let`, we can perform a few transformations on a value but have the variable be immutable after those transformations have been completed.
+Differences between shadowing and making a variable:
 
-The other difference between mut and shadowing is that because we're effectively creating a new variable when we use the let keyword again, we can change the type of the value but reuse the same name.
+1. we'll get a compile-time error if we accidentally try to reassign to this variable without using the `let` keyword. By using `let`, we can perform a few transformations on a value but have the variable be immutable after those transformations have been completed.
+
+2. we're effectively creating a new variable when we use the `let` keyword again, we can change the type of the value but reuse the same name.
 
 ```rust
     let spaces = "   "; // string type
     let spaces = spaces.len(); // number type
 ```
 
-However, if we try to use mut for this, as shown here, we'll get a compile-time error:
+However, if we try to use `mut` for this, as shown here, we'll get a compile-time error:
 
 ```rust
     let mut spaces = "   ";
@@ -486,8 +325,6 @@ An _integer_ is a number without a fractional component.
 | 64-bit  | `i64`   | `u64`    |
 | 128-bit | `i128`  | `u128`   |
 | arch    | `isize` | `usize`  |
-
-Each variant can be either signed or unsigned and has an explicit size. _Signed_ and _unsigned_ refer to whether it's possible for the number to be negative—in other words, whether the number needs to have a sign with it (signed) or whether it will only ever be positive and can therefore be represented without a sign (unsigned).
 
 Each signed variant can store numbers from -2^(n - 1) to 2^(n - 1) - 1 inclusive, where _n_ is the number of bits that variant uses. So an `i8` can store numbers from -2^7 to 2^7 - 1, which equals -128 to 127.
 
@@ -607,9 +444,9 @@ fn main() {
 }
 ```
 
-Note that we specify `char` literals with single quotes, as opposed to string literals, which use double quotes.
+Note that we specify `char` literals with **single quotes**, as opposed to string literals, which use **double quotes**.
 
-Rust's `char` type is four bytes in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII. Accented letters; Chinese, Japanese, and Korean characters; emoji; and zero-width spaces are all valid `char` values in Rust. Unicode Scalar Values range from `U+0000` to `U+D7FF` and `U+E000` to `U+10FFFF` inclusive.
+Rust's `char` type is **four bytes** in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII. Accented letters; Chinese, Japanese, and Korean characters; emoji; and zero-width spaces are all valid `char` values in Rust. Unicode Scalar Values range from `U+0000` to `U+D7FF` and `U+E000` to `U+10FFFF` inclusive.
 
 However, a "character" isn't really a concept in Unicode, so your human intuition for what a "character" is may not match up with what a `char` is in Rust.
 
@@ -619,11 +456,11 @@ _Compound types_ can group multiple values into one type. Rust has two primitive
 
 ##### The Tuple Type
 
-A _tuple_ is a general way of grouping together a number of values with a variety of types into one compound type.
+Tuples have a **fixed length**: once declared, they cannot grow or shrink in size.
 
-Tuples have a fixed length: once declared, they cannot grow or shrink in size.
+Each position in the tuple has a type, and the types of the different values in the tuple don’t have to be the same.
 
-We create a tuple by writing a comma-separated list of values inside parentheses. Each position in the tuple has a type, and the types of the different values in the tuple don't have to be the same. We've added optional type annotations in this example:
+We've added optional type annotations in this example:
 
 Filename: src/main.rs
 
@@ -667,9 +504,7 @@ The tuple without any values has a special name, _unit_. This value and its corr
 
 ##### The Array Type
 
-Unlike a tuple, every element of an array must have the same type. Unlike arrays in some other languages, arrays in Rust have a fixed length.
-
-We write the values in an array as a comma-separated list inside square brackets:
+Unlike a tuple, every element of an array must have the **same type**. Unlike arrays in some other languages, arrays in Rust have a **fixed length**.
 
 Filename: src/main.rs
 
@@ -771,24 +606,6 @@ Rust doesn't care where you define your functions, only that they're defined som
 
 Technically, the concrete values are called _arguments_, but in casual conversation, people tend to use the words _parameter_ and _argument_ interchangeably for either the variables in a function's definition or the concrete values passed in when you call a function.
 
-In this version of another_function we add a parameter:
-
-Filename: src/main.rs
-
-```rust
-fn main() {
-    another_function(5);
-}
-
-fn another_function(x: i32) {
-    println!("The value of x is: {x}");
-}
-```
-
-In function signatures, you _must_ declare the type of each parameter. This is a deliberate decision in Rust's design: requiring type annotations in function definitions means the compiler almost never needs you to use them elsewhere in the code to figure out what type you mean. The compiler is also able to give more helpful error messages if it knows what types the function expects.
-
-When defining multiple parameters, separate the parameter declarations with commas, like this:
-
 Filename: src/main.rs
 
 ```rust
@@ -801,6 +618,8 @@ fn print_labeled_measurement(value: i32, unit_label: char) {
 }
 ```
 
+In function signatures, you _must_ declare the type of each parameter.
+
 #### Statements and Expressions
 
 Function bodies are made up of a series of statements optionally ending in an expression.
@@ -809,7 +628,7 @@ Function bodies are made up of a series of statements optionally ending in an ex
 
 - **Expressions** evaluate to a resultant value.
 
-Creating a variable and assigning a value to it with the let keyword is a statement. Function definitions are also statements.
+Creating a variable and assigning a value to it with the `let` keyword is a statement. Function definitions are also statements.
 
 Filename: src/main.rs
 
@@ -848,7 +667,7 @@ fn main() {
 }
 ```
 
-Expressions do not include ending semicolons. If you add a semicolon to the end of an expression, you turn it into a statement, and it will then not return a value.
+Expressions **do not** include ending semicolons. If you add a semicolon to the end of an expression, you turn it into a statement, and it will then not return a value.
 
 #### Functions with Return Values
 
@@ -910,7 +729,7 @@ fn main() {
 }
 ```
 
-Rust also has another kind of comment, documentation comments.
+Rust also has another kind of comment, [documentation comments](#Publishing-a-Crate-to-Crates-io).
 
 ### Control Flow
 
@@ -931,12 +750,6 @@ fn main() {
     }
 }
 ```
-
-All `if` expressions start with the keyword `if`, followed by a condition. Blocks of code associated with the conditions in if expressions are sometimes called _arms_, just like the arms in `match` expressions.
-
-Optionally, we can also include an `else` expression to give the program an alternative block of code to execute should the condition evaluate to `false`.
-
-If you don't provide an `else` expression and the condition is `false`, the program will just skip the `if` block and move on to the next bit of code.
 
 It's also worth noting that the condition must be a `bool`. If the condition isn't a `bool`, we'll get an error. For example, try running the following code:
 
@@ -979,11 +792,11 @@ fn main() {
 // number is divisible by 3
 ```
 
-When this program executes, it checks each `if` expression in turn and executes the first body for which the condition evaluates to `true`.
+When this program executes, it checks each `if` expression in turn and executes the **first** body for which the condition evaluates to `true`.
 
 Note that even though 6 is divisible by 2, we don't see the output `number is divisible by 2`, nor do we see the `number is not divisible by 4, 3, or 2` text from the `else` block. That's because Rust only executes the block for the first `true` condition, and once it finds one, it doesn't even check the rest.
 
-Using too many `else if` expressions can clutter your code, so if you have more than one, you might want to refactor your code by match.
+Using too many `else if` expressions can clutter your code, so if you have more than one, you might want to refactor your code by `match`.
 
 ##### Using if in a let Statement
 
@@ -999,8 +812,6 @@ fn main() {
     println!("The value of number is: {number}");
 }
 ```
-
-Remember that blocks of code evaluate to the last expression in them, and numbers by themselves are also expressions.
 
 The values that have the potential to be results from each arm of the `if` must be the same type. If the types are mismatched, as in the following example, we'll get an error:
 
@@ -1033,8 +844,6 @@ fn main() {
     }
 }
 ```
-
-When we run this program, we'll see `again!` printed over and over continuously until we stop the program manually. Most terminals support the keyboard shortcut ctrl-c to interrupt a program that is stuck in a continual loop.
 
 You can place the `break` keyword within the loop to tell the program when to stop executing the loop.
 
@@ -1165,13 +974,21 @@ Memory is managed through a system of ownership with a set of rules that the com
 
 > **The Stack and the Heap**
 >
-> The stack stores values in the order it gets them and removes the values in the opposite order. This is referred to as _last in, first out_. Adding data is called _pushing onto the stack_, and removing data is called _popping off the stack_. All data stored on the stack must have a known, fixed size. Data with an unknown size at compile time or a size that might change must be stored on the heap instead.
+> Stack
 >
-> The heap is less organized: when you put data on the heap, you request a certain amount of space. The memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and returns a _pointer_, which is the address of that location. This process is called _allocating on the heap_ and is sometimes abbreviated as just _allocating_ (pushing values onto the stack is not considered allocating). Because the pointer to the heap is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer.
+> 1. The stack stores values in the order it gets them and removes the values in the opposite order. This is referred to as _last in, first out_.
 >
-> Pushing to the stack is faster than allocating on the heap because the allocator never has to search for a place to store new data; that location is always at the top of the stack. Comparatively, allocating space on the heap requires more work because the allocator must first find a big enough space to hold the data and then perform bookkeeping to prepare for the next allocation.
+> 2. Adding data is called _pushing onto the stack_, and removing data is called _popping off the stack_.
 >
-> Accessing data in the heap is slower than accessing data on the stack because you have to follow a pointer to get there. Contemporary processors are faster if they jump around less in memory. A processor can do its job better if it works on data that's close to other data (as it is on the stack) rather than farther away (as it can be on the heap).
+> 3. All data stored on the stack must have a known, fixed size. Data with an unknown size at compile time or a size that might change must be stored on the heap instead.
+>
+> Heap
+>
+> 1. The heap is less organized: when you put data on the heap, you request a certain amount of space. The memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and returns a _pointer_, which is the address of that location. This process is called _allocating on the heap_ and is sometimes abbreviated as just _allocating_ (pushing values onto the stack is not considered allocating). Because the pointer to the heap is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer.
+>
+> 2. Pushing to the stack is faster than allocating on the heap because the allocator never has to search for a place to store new data; that location is always at the top of the stack. Comparatively, allocating space on the heap requires more work because the allocator must first find a big enough space to hold the data and then perform bookkeeping to prepare for the next allocation.
+>
+> 3. Accessing data in the heap is slower than accessing data on the stack because you have to follow a pointer to get there. Contemporary processors are faster if they jump around less in memory. A processor can do its job better if it works on data that's close to other data (as it is on the stack) rather than farther away (as it can be on the heap).
 >
 > When your code calls a function, the values passed into the function (including, potentially, pointers to data on the heap) and the function's local variables (just the pointers and references, not the data) get pushed onto the stack. When the function is over, those values get popped off the stack.
 
@@ -1185,7 +1002,7 @@ Memory is managed through a system of ownership with a set of rules that the com
 
 #### Variable Scope
 
-A scope is the range within a program for which an item is valid.
+A variable and the scope in which it is valid.
 
 ```rust
     {                      // s is not valid here, it's not yet declared
@@ -1196,8 +1013,6 @@ A scope is the range within a program for which an item is valid.
 ```
 
 #### The String Type
-
-String literals are convenient, but they aren't suitable for every situation in which we may want to use text. One reason is that they're immutable. Another is that not every string value can be known when we write our code: for example, what if we want to take user input and store it? For these situations, Rust has a second string type, `String`.
 
 String type manages data allocated on the heap and as such is able to store an amount of text that is unknown to us at compile time.
 
@@ -1227,11 +1042,7 @@ With the `String` type, in order to support a mutable, growable piece of text, w
 
 - We need a way of returning this memory to the allocator when we're done with our `String`.
 
-That first part is done by us: when we call `String::from`, its implementation requests the memory it needs. This is pretty much universal in programming languages.
-
-However, the second part is different. In languages with a _garbage collector (GC)_, the GC keeps track of and cleans up memory that isn't being used anymore, and we don't need to think about it. In most languages without a GC, it's our responsibility to identify when memory is no longer being used and to call code to explicitly free it, just as we did to request it. Doing this correctly has historically been a difficult programming problem. If we forget, we'll waste memory. If we do it too early, we'll have an invalid variable. If we do it twice, that's a bug too. We need to pair exactly one `allocate` with exactly one `free`.
-
-Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope. Here's a version of our scope example using a `String` instead of a string literal:
+The memory is automatically returned once the variable that owns it goes out of scope. Here's a version of our scope example using a `String` instead of a string literal:
 
 ```rust
     {
@@ -1263,11 +1074,11 @@ Now let's look at the `String` version:
 
 `s1` on the stack (not valid after assigning to `s2`)
 
-| name     | value          |
-| -------- | -------------- |
-| ptr      | s1 on the heap |
-| len      | 5              |
-| capacity | 5              |
+| name     | value            |
+| -------- | ---------------- |
+| ptr      | (s1 on the heap) |
+| len      | 5                |
+| capacity | 5                |
 
 `s1` on the heap
 
@@ -1281,35 +1092,27 @@ Now let's look at the `String` version:
 
 `s2` on the stack
 
-| name     | value          |
-| -------- | -------------- |
-| ptr      | s1 on the heap |
-| len      | 5              |
-| capacity | 5              |
+| name     | value            |
+| -------- | ---------------- |
+| ptr      | (s1 on the heap) |
+| len      | 5                |
+| capacity | 5                |
 
-A String is made up of three parts: a pointer to the memory that holds the contents of the string, a length, and a capacity. This group of data is stored on the stack. The memory on the heap that holds the contents.
+> The length is how much memory, in bytes, the contents of the `String` are currently using. The capacity is the total amount of memory, in bytes, that the `String` has received from the allocator. The difference between length and capacity matters, but not in this context, so for now, it's fine to ignore the capacity.
 
-The length is how much memory, in bytes, the contents of the `String` are currently using. The capacity is the total amount of memory, in bytes, that the `String` has received from the allocator. The difference between length and capacity matters, but not in this context, so for now, it's fine to ignore the capacity.
+If you've heard the terms _shallow copy_ and _deep copy_ while working with other languages, the concept of copying the pointer, length, and capacity without copying the data probably sounds like making a shallow copy. But because Rust also invalidates the first variable, instead of being called a shallow copy, it's known as a _move_.
 
-When we assign `s1` to `s2`, the `String` data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to.
+_Move_ helps us to solve the _double free error_: When a variable goes out of scope, Rust automatically calls the `drop` function and cleans up the heap memory for that variable. Freeing memory twice can lead to memory corruption. After the line `let s2 = s1`, Rust considers `s1` as no longer valid. Therefore, Rust doesn't need to free anything when `s1` goes out of scope.
 
-If Rust copied the data on the heap, the operation `s2 = s1` could be very expensive in terms of runtime performance if the data on the heap were large.
-
-Earlier, we said that when a variable goes out of scope, Rust automatically calls the `drop` function and cleans up the heap memory for that variable.
-
-But both data pointers pointing to the same location. This is a problem: when `s2` and `s1` go out of scope, they will both try to free the same memory. This is known as a _double free_ error and is one of the memory safety bugs we mentioned previously. Freeing memory twice can lead to memory corruption, which can potentially lead to security vulnerabilities.
-
-To ensure memory safety, after the line `let s2 = s1`, Rust considers `s1` as no longer valid. Therefore, Rust doesn't need to free anything when `s1` goes out of scope. Check out what happens when you try to use `s1` after `s2` is created; it won't work:
+Check out what happens when you try to use `s1` after `s2` is created; it won't work:
 
 ```rust
     let s1 = String::from("hello");
     let s2 = s1;
 
     println!("{}, world!", s1);
-    // You'll get an error because Rust prevents you from using the invalidated referenc
+    // You'll get an error because Rust prevents you from using the invalidated reference
 ```
-
-If you've heard the terms _shallow copy_ and _deep copy_ while working with other languages, the concept of copying the pointer, length, and capacity without copying the data probably sounds like making a shallow copy. But because Rust also invalidates the first variable, instead of being called a shallow copy, it's known as a _move_.
 
 Rust will never automatically create "deep" copies of your data. Therefore, any _automatic_ copying can be assumed to be inexpensive in terms of runtime performance.
 
@@ -1339,11 +1142,36 @@ This code using integers works and is valid:
 
 But this code seems to contradict what we just learned: we don't have a call to `clone`, but `x` is still valid and wasn't moved into `y`.
 
-The reason is that types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make. That means there's no reason we would want to prevent `x` from being valid after we create the variable `y`. In other words, there's no difference between deep and shallow copying here, so calling `clone` wouldn't do anything different from the usual shallow copying, and we can leave it out.
+The reason is that types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make. There's no difference between deep and shallow copying here.
 
 Rust has a special annotation called the `Copy` trait that we can place on types that are stored on the stack. If a type implements the `Copy` trait, variables that use it do not move, but rather are trivially copied, making them still valid after assignment to another variable.
 
-Rust won't let us annotate a type with `Copy` if the type, or any of its parts, has implemented the `Drop` trait.
+Rust won't let us annotate a type with `Copy` if the type, or any of its parts, has implemented the `Drop` trait. If the type needs something special to happen when the value goes out of scope and we add the `Copy` annotation to that type, we'll get a compile-time error.
+
+> `Drop` trait has no relationship with _move_ mechanism. `String` can move and has `Drop` trait. But a struct only contains scalar type can move and doesn't have `Drop` trait.
+>
+> ```rust
+> use std::mem::needs_drop;
+>
+> struct Point {
+>     x: i32,
+>     y: i32,
+> }
+>
+> fn main() {
+>     let p1 = Point { x: 1, y: 2 };
+>     let p2 = p1; // `p1` is moved to `p2`
+>     // `p1` can no longer be used, but `p2` can be used normally
+>     println!("p2: ({}, {})", p2.x, p2.y);
+>     println!("Point has Drop trait: {}", needs_drop::<Point>());
+>     println!("String has Drop trait: {}", needs_drop::<String>());
+>
+>     // Output
+>     // p2: (1, 2)
+>     // Point has Drop trait: false
+>     // String has Drop trait: true
+> }
+> ```
 
 As a general rule, any group of simple scalar values can implement `Copy`, and nothing that requires allocation or is some form of resource can implement `Copy`. Here are some of the types that implement `Copy`:
 
@@ -1356,6 +1184,16 @@ As a general rule, any group of simple scalar values can implement `Copy`, and n
 - The character type, `char`.
 
 - Tuples, if they only contain types that also implement `Copy`. For example, `(i32, i32)` implements `Copy`, but `(i32, String)` does not.
+
+> `Drop` trait and drop mechanism
+>
+> Why scalar types like `u32` doesn't implement `Drop` trait but still be dropped when out of scope?
+>
+> Because scalar types deallocate memory by the drop mechanism. The `Drop` trait just adds custom cleanup logic to the existing drop mechanism.
+>
+> `Drop` trait: Provides a way to define **extra custom** cleanup logic for a type. When a type implementing `Drop` trait goes out of scope, its drop method is called.
+>
+> Drop mechanism: The overarching system that ensures memory and resources are properly cleaned up when values go out of scope. Known as `drop` method (not the `drop` method on `Drop` trait).
 
 #### Ownership and Functions
 
@@ -1388,7 +1226,7 @@ fn makes_copy(some_integer: i32) { // some_integer comes into scope
 
 #### Return Values and Scope
 
-Returning values can also transfer ownership. The following listing shows an example of a function that returns some value, with similar annotations as those in the previous listing.
+Returning values can also transfer ownership. The following listing shows an example of a function that returns some value.
 
 Filename: src/main.rs
 
@@ -1417,30 +1255,6 @@ fn takes_and_gives_back(a_string: String) -> String { // a_string comes into sco
 
 The ownership of a variable follows the same pattern every time: assigning a value to another variable moves it. When a variable that includes data on the heap goes out of scope, the value will be cleaned up by `drop` unless ownership of the data has been moved to another variable.
 
-While this works, taking ownership and then returning ownership with every function is a bit tedious. What if we want to let a function use a value but not take ownership? It's quite annoying that anything we pass in also needs to be passed back if we want to use it again, in addition to any data resulting from the body of the function that we might want to return as well.
-
-Rust does let us return multiple values using a tuple, as shown in the following listing.
-
-Filename: src/main.rs
-
-```rust
-fn main() {
-    let s1 = String::from("hello");
-
-    let (s2, len) = calculate_length(s1);
-
-    println!("The length of '{}' is {}.", s2, len);
-}
-
-fn calculate_length(s: String) -> (String, usize) {
-    let length = s.len(); // len() returns the length of a String
-
-    (s, length)
-}
-```
-
-But this is too much ceremony and a lot of work for a concept that should be common. Luckily for us, Rust has a feature for using a value without transferring ownership, called _references_.
-
 ### References and Borrowing
 
 A _reference_ is like a pointer in that it's an address we can follow to access the data stored at that address; that data is owned by some other variable. Unlike a pointer, a reference is guaranteed to point to a valid value of a particular type for the life of that reference.
@@ -1467,17 +1281,17 @@ These ampersands(`&`) represent _references_, and they allow you to refer to som
 
 s on the stack
 
-| name | value  |
-| ---- | ------ |
-| ptr  | s1 ptr |
+| name | value    |
+| ---- | -------- |
+| ptr  | (s1 ptr) |
 
 s1 on the stack
 
-| name     | value          |
-| -------- | -------------- |
-| ptr      | s1 on the heap |
-| len      | 5              |
-| capacity | 5              |
+| name     | value            |
+| -------- | ---------------- |
+| ptr      | (s1 on the heap) |
+| len      | 5                |
+| capacity | 5                |
 
 s1 on the heap
 
@@ -1517,13 +1331,7 @@ We create a mutable reference with `&mut`.
 
 Mutable references have one big restriction: if you have a mutable reference to a value, you can have no other references to that value.
 
-The benefit of having this restriction is that Rust can prevent data races at compile time. A _data race_ is similar to a race condition and happens when these three behaviors occur:
-
-- Two or more pointers access the same data at the same time.
-
-- At least one of the pointers is being used to write to the data.
-
-- There's no mechanism being used to synchronize access to the data.
+The benefit of having this restriction is that Rust can prevent data races at compile time.
 
 Data races cause undefined behavior and can be difficult to diagnose and fix when you're trying to track them down at runtime; Rust prevents this problem by refusing to compile code with data races.
 
@@ -1553,7 +1361,7 @@ We also cannot have a mutable reference while we have an immutable one to the sa
 
 Users of an immutable reference don't expect the value to suddenly change out from under them! However, multiple immutable references are allowed because no one who is just reading the data has the ability to affect anyone else's reading of the data.
 
-Note that a reference's scope starts from where it is introduced and continues through the last time that reference is used. For instance, this code will compile because the last usage of the immutable references, the `println!`, occurs before the mutable reference is introduced:
+**Note that a reference's scope starts from where it is introduced and continues through the last time that reference is used.** For instance, this code will compile because the last usage of the immutable references, the `println!`, occurs before the mutable reference is introduced:
 
 ```rust
     let mut s = String::from("hello");
@@ -1602,44 +1410,6 @@ Because `s` is created inside `dangle`, when the code of `dangle` is finished, `
 
 _Slices_ let you reference a contiguous sequence of elements in a collection rather than the whole collection. A slice is a kind of reference, so it does not have ownership.
 
-Here's a small programming problem: write a function that takes a string of words separated by spaces and returns the first word it finds in that string. If the function doesn't find a space in the string, the whole string must be one word, so the entire string should be returned.
-
-Let's work through how we'd write the signature of this function without using slices, to understand the problem that slices will solve:
-
-Filename: src/main.rs
-
-```rust
-fn first_word(s: &String) -> usize {
-    let bytes = s.as_bytes();  // Because we need to go through the String element by element and check whether a value is a space, we'll convert our String to an array of bytes using the as_bytes method.
-
-    for (i, &item) in bytes.iter().enumerate() {  // iter is a method that returns each element in a collection and that enumerate wraps the result of iter and returns each element as part of a tuple instead. The first element of the tuple returned from enumerate is the index, and the second element is a reference to the element. This is a bit more convenient than calculating the index ourselves.
-        if item == b' ' {  // If we find a space, we return the position. Otherwise, we return the length of the string by using s.len().
-            return i;
-        }
-    }
-
-    s.len()
-}
-```
-
-We're returning a `usize` on its own, but it's only a meaningful number in the context of the `&String`. In other words, because it's a separate value from the `String`, there's no guarantee that it will still be valid in the future. Consider the program in the following listing that uses the `first_word` function from the previous listing.
-
-Filename: src/main.rs
-
-```rust
-fn main() {
-    let mut s = String::from("hello world");
-
-    let word = first_word(&s); // word will get the value 5
-
-    s.clear(); // this empties the String, making it equal to ""
-
-    // word still has the value 5 here, but there's no more string that we could meaningfully use the value 5 with. word is now totally invalid!
-}
-```
-
-Having to worry about the index in `word` getting out of sync with the data in `s` is tedious and error prone!
-
 #### String Slices
 
 A _string slice_ is a reference to part of a `String`.
@@ -1655,18 +1425,18 @@ We create slices using a range within brackets by specifying `[starting_index..e
 
 `s`
 
-| name     | value                    |
-| -------- | ------------------------ |
-| ptr      | s on the heap at index 0 |
-| len      | 11                       |
-| capacity | 11                       |
+| name     | value                        |
+| -------- | ---------------------------- |
+| ptr      | (`s` on the heap) at index 0 |
+| len      | 11                           |
+| capacity | 11                           |
 
 `world`
 
-| name | value                    |
-| ---- | ------------------------ |
-| ptr  | s on the heap at index 6 |
-| len  | 5                        |
+| name | value                        |
+| ---- | ---------------------------- |
+| ptr  | (`s` on the heap) at index 6 |
+| len  | 5                            |
 
 `s` on the heap
 
@@ -1751,7 +1521,7 @@ fn main() {
 }
 ```
 
-Recall from the borrowing rules that if we have an immutable reference to something, we cannot also take a mutable reference.
+Recall from the borrowing rules that if we have an immutable reference to something, we cannot also take a mutable reference. Because `clear` needs to truncate the `String`, it needs to get a mutable reference.
 
 ##### String Literals as Slices
 
@@ -1765,7 +1535,7 @@ The type of `s` here is `&str`: it's a slice pointing to that specific point of 
 
 ##### String Slices as Parameters
 
-Using `&str` instead of `&String` as parameters allows us to use the same function on both` &String` values and `&str` values. This flexibility takes advantage of deref coercions.
+Using `&str` instead of `&String` as parameters allows us to use the same function on both `&String` values and `&str` values. This flexibility takes advantage of deref coercions.
 
 ```rust
 fn first_word(s: &String) -> &str {
@@ -1844,7 +1614,7 @@ fn main() {
 }
 ```
 
-To get a specific value from a struct, we use dot notation. For example, to access this user's email address, we use `user1.email`. If the instance is mutable, we can change a value by using the dot notation and assigning into a particular field. The following listing shows how to change the value in the `email` field of a mutable `User` instance:
+To get a specific value from a struct, we use dot notation. If the instance is mutable, we can change a value by using the dot notation and assigning into a particular field.
 
 Filename: src/main.rs
 
@@ -1864,8 +1634,6 @@ fn main() {
 Note that the entire instance must be mutable; Rust doesn't allow us to mark only certain fields as mutable.
 
 As with any expression, we can construct a new instance of the struct as the last expression in the function body to implicitly return that new instance.
-
-The following listing shows a `build_user` function that returns a `User` instance with the given email and username:
 
 Filename: src/main.rs
 
@@ -1922,7 +1690,11 @@ If we had given `user2` new `String` values for both `email` and `username`, and
 
 #### Using Tuple Structs Without Named Fields to Create Different Types
 
-Rust also supports structs that look similar to tuples, called _tuple structs_. Tuple structs have the added meaning the struct name provides but don't have names associated with their fields; rather, they just have the types of the fields. For example, here we define and use two tuple structs named `Color` and `Point`:
+Rust also supports structs that look similar to tuples, called _tuple structs_. Tuple structs have the added meaning the struct name provides but don't have names associated with their fields; rather, they just have the types of the fields.
+
+Tuple structs are useful when you want to give the whole tuple a name and make the tuple a different type from other tuples, and when naming each field as in a regular struct would be verbose or redundant.
+
+For example, here we define and use two tuple structs named `Color` and `Point`:
 
 Filename: src/main.rs
 
@@ -1958,8 +1730,6 @@ fn main() {
 
 > **Ownership of Struct Data**
 >
-> In the `User` struct definition in previous listing, we used the owned `String` type rather than the `&str` string slice type. This is a deliberate choice because we want each instance of this struct to own all of its data and for that data to be valid for as long as the entire struct is valid.
->
 > It's also possible for structs to store references to data owned by something else, but to do so requires the use of _lifetimes_. Lifetimes ensure that the data referenced by a struct is valid for as long as the struct is. Let's say you try to store a reference in a struct without specifying lifetimes, like the following; this won't work:
 >
 > Filename: src/main.rs
@@ -1980,48 +1750,13 @@ fn main() {
 >         sign_in_count: 1,
 >     };
 > }
+>
+> // error[E0106]: missing lifetime specifier
 > ```
 
 ### An Example Program Using Structs
 
-To understand when we might want to use structs, let's write a program that calculates the area of a rectangle. We'll start by using single variables, and then refactor the program until we're using structs instead.
-
-Filename: src/main.rs
-
-```rust
-fn main() {
-    let width1 = 30;
-    let height1 = 50;
-
-    println!(
-        "The area of the rectangle is {} square pixels.",
-        area(width1, height1)
-    );
-}
-
-fn area(width: u32, height: u32) -> u32 {
-    width * height
-}
-```
-
-#### Refactoring with Tuples
-
-Filename: src/main.rs
-
-```rust
-fn main() {
-    let rect1 = (30, 50);
-
-    println!(
-        "The area of the rectangle is {} square pixels.",
-        area(rect1)
-    );
-}
-
-fn area(dimensions: (u32, u32)) -> u32 {
-    dimensions.0 * dimensions.1
-}
-```
+To understand when we might want to use structs, let's write a program that calculates the area of a rectangle.
 
 #### Refactoring with Structs: Adding More Meaning
 
@@ -2070,12 +1805,8 @@ fn main() {
 
     println!("rect1 is {}", rect1);
 }
-```
 
-When we compile this code, we get an error with this core message:
-
-```text
-error[E0277]: `Rectangle` doesn't implement `std::fmt::Display`
+// error[E0277]: `Rectangle` doesn't implement `std::fmt::Display`
 ```
 
 The `println!` macro can do many kinds of formatting, and by default, the curly brackets tell `println!` to use formatting known as `Display`: output intended for direct end user consumption.
@@ -2109,13 +1840,13 @@ When we have larger structs, it's useful to have output that's a bit easier to r
 
 Using the `{:?}` style will output the following:
 
-```text
+```shell
 rect1 is Rectangle { width: 30, height: 50 }
 ```
 
 Using the `{:#?}` style will output the following:
 
-```text
+```shell
 rect1 is Rectangle {
     width: 30,
     height: 50,
@@ -2148,7 +1879,7 @@ fn main() {
 
 We can put `dbg!` around the expression `30 * scale` and, because `dbg!` returns ownership of the expression's value, the `width` field will get the same value as if we didn't have the `dbg!` call there. We don't want `dbg!` to take ownership of `rect1`, so we use a reference to `rect1` in the next call. Here's what the output of this example looks like:
 
-```text
+```shell
 [src/main.rs:10] 30 * scale = 60
 [src/main.rs:14] &rect1 = Rectangle {
     width: 60,
@@ -2196,17 +1927,17 @@ The `&self` is actually short for `self: &Self`. Within an `impl` block, the typ
 
 Methods must have a parameter named `self` of type `Self` for their first parameter, so Rust lets you abbreviate this with only the name `self` in the first parameter spot.
 
-Note that we still need to use the `&` in front of the `self` shorthand to indicate that this method borrows the `Self` instance, just as we did in `rectangle: &Rectangle`.
+Note that we still need to use the `&` in front of the `self` shorthand to indicate that this method borrows the `Self` instance, just as we did in `rectangle: &Rectangle`: we don’t want to take ownership, and we just want to read the data in the struct, not write to it.
 
-Methods can take ownership of self, borrow self immutably, as we've done here, or borrow self mutably, just as they can any other parameter.
+Methods can take ownership of `self`, borrow `self` immutably, as we've done here, or borrow `self` mutably, just as they can any other parameter.
 
 If we wanted to change the instance that we've called the method on as part of what the method does, we'd use `&mut self` as the first parameter.
 
 Having a method that takes ownership of the instance by using just `self` as the first parameter is rare; this technique is usually used when the method transforms `self` into something else and you want to prevent the caller from using the original instance after the transformation.
 
-The main reason for using methods instead of functions, in addition to providing method syntax and not having to repeat the type of `self` in every method's signature, is for organization. We've put all the things we can do with an instance of a type in one `impl` block rather than making future users of our code search for capabilities of `Rectangle` in various places in the library we provide.
+The main reason for using methods instead of functions, in addition to providing method syntax and not having to repeat the type of `self` in every method's signature, is for organization.
 
-Note that we can choose to give a method the same name as one of the struct's fields. For example, we can define a method on Rectangle that is also named width:
+Note that we can choose to give a method the same name as one of the struct's fields. For example, we can define a method on `Rectangle` that is also named `width`:
 
 Filename: src/main.rs
 
@@ -2233,24 +1964,9 @@ In main, when we follow `rect1.width` with parentheses, Rust knows we mean the m
 
 Often, but not always, when we give a method the same name as a field we want it to only return the value in the field and do nothing else. Methods like this are called _getters_, and Rust does not implement them automatically for struct fields as some other languages do. Getters are useful because you can make the field private but the method public, and thus enable read-only access to that field as part of the type's public API.
 
-> **Where's the -> operator?**
->
-> In C and C++, two different operators are used for calling methods: you use `.` if you're calling a method on the object directly and `->` if you're calling the method on a pointer to the object and need to dereference the pointer first. In other words, if `object` is a pointer, `object->something()` is similar to `(*object).something()`.
->
-> Rust doesn't have an equivalent to the `->` operator; instead, Rust has a feature called _automatic referencing and dereferencing_.
->
-> Here's how it works: when you call a method with `object.something()`, Rust automatically adds in `&`, `&mut`, or `*` so `object` matches the signature of the method. In other words, the following are the same:
->
-> ```rust
-> p1.distance(&p2);
-> (&p1).distance(&p2).
-> ```
->
-> The first one looks much cleaner. This automatic referencing behavior works because methods have a clear receiver—the type of `self`. Given the receiver and name of a method, Rust can figure out definitively whether the method is reading (`&self`), mutating (`&mut self`), or consuming (`self`). The fact that Rust makes borrowing implicit for method receivers is a big part of making ownership ergonomic in practice.
-
 #### Methods with More Parameters
 
-Let's practice using methods by implementing a second method on the `Rectangle` struct. This time we want an instance of `Rectangle` to take another instance of `Rectangle` and return `true` if the second `Rectangle` can fit completely within `self` (the first `Rectangle`); otherwise, it should return `false`.
+Let's practice using methods by implementing a second method on the `Rectangle` struct.
 
 Filename: src/main.rs
 
@@ -2300,7 +2016,7 @@ We can define associated functions that don't have `self` as their first paramet
 
 Associated functions that aren't methods are often used for constructors that will return a new instance of the struct. These are often called `new`, but `new` isn't a special name and isn't built into the language.
 
-For example, we could choose to provide an associated function named square that would have one dimension parameter and use that as both width and height, thus making it easier to create a square Rectangle rather than having to specify the same value twice:
+For example, we could choose to provide an associated function named `square` that would have one dimension parameter and use that as both `width` and `height`, thus making it easier to create a square `Rectangle` rather than having to specify the same value twice:
 
 Filename: src/main.rs
 
@@ -2313,13 +2029,15 @@ impl Rectangle {
         }
     }
 }
+
+let sq = Rectangle::square(3);
 ```
 
 The `Self` keywords in the return type and in the body of the function are aliases for the type that appears after the `impl` keyword, which in this case is `Rectangle`.
 
-To call this associated function, we use the `::` syntax with the struct name; `let sq = Rectangle::square(3);` is an example. This function is namespaced by the struct: the `::` syntax is used for both associated functions and namespaces created by modules.
+To call this associated function, we use the `::` syntax with the struct name. Associated function is namespaced by the struct: the`::` syntax is used for both associated functions and namespaces created by modules.
 
-#### Multiple impl Blocks
+#### Multiple `impl` Blocks
 
 Each struct is allowed to have multiple `impl` blocks. For example, the following listing is equivalent to the code shown in the previous listing, which has each method in its own `impl` block.
 
@@ -2562,7 +2280,7 @@ fn value_in_cents(coin: Coin) -> u8 {
 }
 ```
 
-#### Matching with Option<T>
+#### Matching with Option\<T\>
 
 Let's say we want to write a function that takes an `Option<i32>` and, if there's a value inside, adds 1 to that value. If there isn't a value inside, the function should return the `None` value and not attempt to perform any operations.
 
@@ -2773,7 +2491,7 @@ Namely paths that allow you to name items; the `use` keyword that brings a path 
 
 Here we create a binary crate named `backyard` that illustrates these rules. The crate's directory, also named `backyard`, contains these files and directories:
 
-```text
+```shell
 backyard
 ├── Cargo.lock
 ├── Cargo.toml
@@ -2850,7 +2568,7 @@ Earlier, we mentioned that _src/main.rs_ and _src/lib.rs_ are called crate roots
 
 The following listing shows the module tree for the structure in preceding listing.
 
-```text
+```shell
 crate
  └── front_of_house
      ├── hosting
@@ -3284,7 +3002,7 @@ The mod keyword declares modules, and Rust looks in a file with the same name as
 
 ## Common Collections
 
-Most other data types represent one specific value, but collections can contain multiple values. Unlike the built-in array and tuple types, the data these collections p oint to is stored on the heap, which means the amount of data does not need to be known at compile time and can grow or shrink as the program runs.
+Most other data types represent one specific value, but collections can contain multiple values. Unlike the built-in array and tuple types, the data these collections point to is stored on the heap, which means the amount of data does not need to be known at compile time and can grow or shrink as the program runs.
 
 In this chapter, we'll discuss three collections that are used very often in Rust programs:
 
@@ -3296,7 +3014,7 @@ In this chapter, we'll discuss three collections that are used very often in Rus
 
 ### Storing Lists of Values with Vectors
 
-The first collection type we'll look at is `Vec<T>`, also known as a vector. Vectors allow you to store more than one value in a single data structure that puts all the values next to each other in memory. Vectors can only store values of the same type.
+The first collection type we'll look at is `Vec<T>`, also known as a vector. Vectors allow you to store more than one value in a single data structure that puts all the values next to each other in memory. Vectors can only store values of the **same** type.
 
 #### Creating a New Vector
 
@@ -3511,7 +3229,7 @@ A `String` can grow in size and its contents can change, just like the contents 
 
   In the standard library, you'll see add defined using generics and associated types. Here, we've substituted in concrete types, which is what happens when we call this method with String values. This signature gives us the clues we need to understand the tricky bits of the `+` operator.
 
-  First, `s2` has an `&`, meaning that we're adding a reference of the second string to the first string. This is because of the `s` parameter in the `add` function: we can only add a `&str` to a `String`; we can't add two `String` values together. But wait - the type of `&s2` is `&String`, not `&str`, as specified in the second parameter to add.
+  First, `s2` has an `&`, meaning that we're adding a reference of the second string to the first string. This is because of the `s` parameter in the `add` function: we can only add a `&str` to a `String`; we can't add two `String` values together. But wait —— the type of `&s2` is `&String`, not `&str`, as specified in the second parameter to add.
 
   The reason we're able to use `&s2` in the call to `add` is that the compiler can coerce the `&String` argument into a `&str`. When we call the `add` method, Rust uses a deref coercion, which here turns `&s2` into `&s2[..]`. Because `add` does not take ownership of the `s` parameter, `s2` will still be a valid `String` after this operation.
 
@@ -3575,19 +3293,19 @@ In many other programming languages, accessing individual characters in a string
 
   If we look at the Hindi word "नमस्ते" written in the Devanagari script, it is stored as a vector of u8 values that looks like this:
 
-  ```text
+  ```shell
   [224, 164, 168, 224, 164, 174, 224, 164, 184, 224, 165, 141, 224, 164, 164, 224, 165, 135]
   ```
 
   That's 18 bytes and is how computers ultimately store this data. If we look at them as Unicode scalar values, which are what Rust's char type is, those bytes look like this:
 
-  ```text
+  ```shell
   ['न', 'म', 'स', '्', 'त', 'े']
   ```
 
   There are six char values here, but the fourth and sixth are not letters: they're diacritics that don't make sense on their own. Finally, if we look at them as grapheme clusters, we'd get what a person would call the four letters that make up the Hindi word:
 
-  ```text
+  ```shell
   ["न", "म", "स्", "ते"]
   ```
 
@@ -3792,17 +3510,17 @@ Rust groups errors into two major categories: recoverable and unrecoverable erro
 
 - Unrecoverable errors are always symptoms of bugs, like trying to access a location beyond the end of an array, and so we want to immediately stop the program.
 
-### Unrecoverable Errors with panic!
+### Unrecoverable Errors with `panic!`
 
-Sometimes, bad things happen in your code, and there's nothing you can do about it. In these cases, Rust has the panic! macro.
+Sometimes, bad things happen in your code, and there's nothing you can do about it. In these cases, Rust has the `panic!` macro.
 
 There are two ways to cause a panic in practice: by taking an action that causes our code to panic (such as accessing an array past the end) or by explicitly calling the panic! macro. In both cases, we cause a panic in our program.
 
 By default, these panics will print a failure message, unwind, clean up the stack, and quit. Via an environment variable, you can also have Rust display the call stack when a panic occurs to make it easier to track down the source of the panic.
 
-The call to panic! causes the error message contained in the last two lines. The first line shows our panic message and the place in our source code where the panic occurred: src/main.rs:2:5 indicates that it's the second line, fifth character of our src/main.rs file.
+The call to `panic!` causes the error message contained in the last two lines. The first line shows our panic message and the place in our source code where the panic occurred: `src/main.rs:2:5` indicates that it's the second line, fifth character of our src/main.rs file.
 
-In other cases, the panic! call might be in code that our code calls, and the filename and line number reported by the error message will be someone else's code where the panic! macro is called, not the line of our code that eventually led to the panic! call. We can use the backtrace of the functions the panic! call came from to figure out the part of our code that is causing the problem.
+In other cases, the `panic!` call might be in code that our code calls, and the filename and line number reported by the error message will be someone else's code where the `panic!` macro is called, not the line of our code that eventually led to the `panic!` call. We can use the backtrace of the functions the `panic!` call came from to figure out the part of our code that is causing the problem.
 
 #### Unwinding the Stack or Aborting in Response to a Panic
 
@@ -3815,7 +3533,7 @@ Memory that the program was using will then need to be cleaned up by the operati
 panic = 'abort'
 ```
 
-#### Using a panic! Backtrace
+#### Using a `panic!` Backtrace
 
 In C, attempting to read beyond the end of a data structure is undefined behavior. You might get whatever is at the location in memory that would correspond to that element in the data structure, even though the memory doesn't belong to that structure. This is called a buffer overread and can lead to security vulnerabilities if an attacker is able to manipulate the index in such a way as to read data they shouldn't be allowed to that is stored after the data structure.
 
@@ -3827,7 +3545,7 @@ In order to get backtraces with this information, debug symbols must be enabled.
 
 ### Recoverable Errors with Result
 
-The Result enum is defined as having two variants, Ok and Err, as follows:
+The `Result` enum is defined as having two variants, `Ok` and `Err`, as follows:
 
 ```rust
 enum Result<T, E> {
@@ -3836,7 +3554,7 @@ enum Result<T, E> {
 }
 ```
 
-`T` represents the type of the value that will be returned in a success case within the `Ok` variant, and `E` represents the type of the error that will be returned in a failure case within the `Err` variant. Because Result has these generic type parameters, we can use the Result type and the functions defined on it in many different situations where the successful value and error value we want to return may differ.
+`T` represents the type of the value that will be returned in a success case within the `Ok` variant, and `E` represents the type of the error that will be returned in a failure case within the `Err` variant. Because `Result` has these generic type parameters, we can use the `Result` type and the functions defined on it in many different situations where the successful value and error value we want to return may differ.
 
 ```rust
 use std::fs::File;
@@ -3978,7 +3696,7 @@ The `read_to_string` method also returns a `Result` because it might fail, even 
 
 This pattern of propagating errors is so common in Rust that Rust provides the question mark operator `?` to make this easier.
 
-#### A Shortcut for Propagating Errors: the ? Operator
+#### A Shortcut for Propagating Errors: the `?` Operator
 
 ```rust
 use std::fs::File;
@@ -4028,7 +3746,7 @@ fn read_username_from_file() -> Result<String, io::Error> {
 
 Reading a file into a string is a fairly common operation, so the standard library provides the convenient `fs::read_to_string` function that opens the file, creates a new `String`, reads the contents of the file, puts the contents into that `String`, and returns it. Of course, using `fs::read_to_string` doesn't give us the opportunity to explain all the error handling, so we did it the longer way first.
 
-#### Where The ? Operator Can Be Used
+#### Where The `?` Operator Can Be Used
 
 The `?` operator can only be used in functions whose return type is compatible with the value the `?` is used on. This is because the `?` operator is defined to perform an early return of a value out of the function.
 
@@ -4083,11 +3801,11 @@ When a `main` function returns a `Result<(), E>`, the executable will exit with 
 
 The `main` function may return any types that implement the `std::process::Termination` trait, which contains a function `report` that returns an `ExitCode`.
 
-### To panic! or Not to panic!
+### To `panic!` or Not to `panic!`
 
-When you choose to return a Result value, you give the calling code options. The calling code could choose to attempt to recover in a way that's appropriate for its situation, or it could decide that an Err value in this case is unrecoverable, so it can call panic! and turn your recoverable error into an unrecoverable one. Therefore, returning Result is a good default choice when you're defining a function that might fail.
+When you choose to return a `Result` value, you give the calling code options. The calling code could choose to attempt to recover in a way that's appropriate for its situation, or it could decide that an `Err` value in this case is unrecoverable, so it can call panic! and turn your recoverable error into an unrecoverable one. Therefore, returning `Result` is a good default choice when you're defining a function that might fail.
 
-In situations such as examples, prototype code, and tests, it's more appropriate to write code that panics instead of returning a Result.
+In situations such as examples, prototype code, and tests, it's more appropriate to write code that panics instead of returning a `Result`.
 
 #### Examples, Prototype Code, and Tests
 
@@ -5041,7 +4759,7 @@ Whenever we make a new library project with Cargo, a test module with a test fun
 
 Let's create a new library project called `adder` that will add two numbers:
 
-```text
+```shell
 $ cargo new adder --lib
      Created library `adder` project
 $ cd adder
@@ -5066,7 +4784,7 @@ For now, let's ignore the top two lines and focus on the function. Note the `#[t
 
 The `cargo test` command runs all tests in our project, as shown in the following listing.
 
-```text
+```shell
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.57s
@@ -5113,7 +4831,7 @@ mod tests {
 
 Run the tests again using `cargo test`. The output should look like the following listing, which shows that our `exploration` test passed and `another` failed.
 
-```text
+```shell
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.72s
@@ -5199,7 +4917,7 @@ mod tests {
 
 Note that we've added a new line inside the tests module: use `super::*;`. The tests module is a regular module that follows the usual visibility rules. Because the `tests` module is an inner module, we need to bring the code under test in the outer module into the scope of the inner module. We use a glob here so anything we define in the outer module is available to this `tests` module.
 
-```text
+```shell
 $ cargo test
    Compiling rectangle v0.1.0 (file:///projects/rectangle)
     Finished test [unoptimized + debuginfo] target(s) in 0.66s
@@ -5231,7 +4949,7 @@ impl Rectangle {
 
 Running the tests now produces the following:
 
-```text
+```shell
 $ cargo test
    Compiling rectangle v0.1.0 (file:///projects/rectangle)
     Finished test [unoptimized + debuginfo] target(s) in 0.66s
@@ -5282,7 +5000,7 @@ mod tests {
 
 Run the tests:
 
-```text
+```shell
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.61s
@@ -5349,7 +5067,7 @@ pub fn greeting(name: &str) -> String {
 
 Running this test produces the following:
 
-```text
+```shell
 $ cargo test
    Compiling greeter v0.1.0 (file:///projects/greeter)
     Finished test [unoptimized + debuginfo] target(s) in 0.91s
@@ -5389,7 +5107,7 @@ This result just indicates that the assertion failed and which line the assertio
 
 Now when we run the test, we'll get a more informative error message:
 
-```text
+```shell
 $ cargo test
    Compiling greeter v0.1.0 (file:///projects/greeter)
     Finished test [unoptimized + debuginfo] target(s) in 0.93s
@@ -5448,7 +5166,7 @@ mod tests {
 
 We place the `#[should_panic]` attribute after the `#[test]` attribute and before the test function it applies to. Let's look at the result when this test passes:
 
-```text
+```shell
 $ cargo test
    Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
     Finished test [unoptimized + debuginfo] target(s) in 0.58s
@@ -5483,7 +5201,7 @@ impl Guess {
 
 When we run the test, it will fail:
 
-```text
+```shell
 $ cargo test
    Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
     Finished test [unoptimized + debuginfo] target(s) in 0.62s
@@ -5564,7 +5282,7 @@ To see what happens when a `should_panic` test with an `expected` message fails,
 
 This time when we run the `should_panic` test, it will fail:
 
-```text
+```shell
 $ cargo test
    Compiling guessing_game v0.1.0 (file:///projects/guessing_game)
     Finished test [unoptimized + debuginfo] target(s) in 0.66s
@@ -5628,8 +5346,8 @@ For example, say each of your tests runs some code that creates a file on disk n
 
 If you don't want to run the tests in parallel or if you want more fine-grained control over the number of threads used, you can send the `--test-threads` flag and the number of threads you want to use to the test binary. Take a look at the following example:
 
-```text
-$ cargo test -- --test-threads=1
+```shell
+cargo test -- --test-threads=1
 ```
 
 #### Showing Function Output
@@ -5664,7 +5382,7 @@ mod tests {
 
 When we run these tests with `cargo test`, we'll see the following output:
 
-```text
+```shell
 $ cargo test
    Compiling silly-function v0.1.0 (file:///projects/silly-function)
     Finished test [unoptimized + debuginfo] target(s) in 0.58s
@@ -5697,11 +5415,11 @@ Note that nowhere in this output do we see `I got the value 4`, which is what is
 
 If we want to see printed values for passing tests as well, we can tell Rust to also show the output of successful tests with `--show-output`.
 
-```text
-$ cargo test -- --show-output
+```shell
+cargo test -- --show-output
 ```
 
-```text
+```shell
 $ cargo test -- --show-output
    Compiling silly-function v0.1.0 (file:///projects/silly-function)
     Finished test [unoptimized + debuginfo] target(s) in 0.60s
@@ -5772,7 +5490,7 @@ mod tests {
 
 If we run the tests without passing any arguments, as we saw earlier, all the tests will run in parallel:
 
-```text
+```shell
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.62s
@@ -5796,7 +5514,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 We can pass the name of any test function to `cargo test` to run only that test:
 
-```text
+```shell
 $ cargo test one_hundred
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.69s
@@ -5816,7 +5534,7 @@ We can't specify the names of multiple tests in this way; only the first value g
 
 We can specify part of a test name, and any test whose name matches that value will be run. For example, because two of our tests' names contain `add`, we can run those two by running `cargo test add`:
 
-```text
+```shell
 $ cargo test add
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.61s
@@ -5852,7 +5570,7 @@ fn expensive_test() {
 
 After `#[test]` we add the `#[ignore]` line to the test we want to exclude. Now when we run our tests, `it_works` runs, but `expensive_test` doesn't:
 
-```text
+```shell
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.60s
@@ -5873,7 +5591,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 The `expensive_test` function is listed as `ignored`. If we want to run only the ignored tests, we can use `cargo test -- --ignored`:
 
-```text
+```shell
 $ cargo test -- --ignored
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.61s
@@ -5945,7 +5663,7 @@ We create a _tests_ directory at the top level of our project directory, next to
 
 Let's create an integration test. Your directory structure should look like this:
 
-```text
+```shell
 adder
 ├── Cargo.lock
 ├── Cargo.toml
@@ -5970,7 +5688,7 @@ Each file in the `tests` directory is a separate crate, so we need to bring our 
 
 We don't need to annotate any code in _tests/integration_test.rs_ with `#[cfg(test)]`. Cargo treats the `tests` directory specially and compiles files in this directory only when we run `cargo test`. Run `cargo test` now:
 
-```text
+```shell
 $ cargo test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 1.31s
@@ -6005,7 +5723,7 @@ Each integration test file has its own section, so if we add more files in the t
 
 We can still run a particular integration test function by specifying the test function's name as an argument to `cargo test`. To run all the tests in a particular integration test file, use the `--test` argument of `cargo test` followed by the name of the file:
 
-```text
+```shell
 $ cargo test --test integration_test
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.64s
@@ -6068,7 +5786,7 @@ Having `common` appear in the test results with `running 0 tests` displayed for 
 
 To avoid having `common` appear in the test output, instead of creating _tests/common.rs_, we'll create _tests/common/mod.rs_. The project directory now looks like this:
 
-```text
+```shell
 ├── Cargo.lock
 ├── Cargo.toml
 ├── src
@@ -6105,7 +5823,7 @@ If our project is a binary crate that only contains a _src/main.rs_ file and doe
 
 ### Accepting Command Line Arguments
 
-```text
+```shell
 $ cargo new minigrep
      Created binary (application) `minigrep` project
 $ cd minigrep
@@ -6113,8 +5831,8 @@ $ cd minigrep
 
 The first task is to make `minigrep` accept its two command line arguments: the file path and a string to search for. That is, we want to be able to run our program with `cargo run`, two hyphens to indicate the following arguments are for our program rather than for `cargo`, a string to search for, and a path to a file to search in, like so:
 
-```text
-$ cargo run -- searchstring example-filename.txt
+```shell
+cargo run -- searchstring example-filename.txt
 ```
 
 Right now, the program generated by `cargo new` cannot process arguments we give it. Some existing libraries on [crates.io](https://crates.io) can help with writing a program that accepts command line arguments, but because you're just learning this concept, let's implement this capability ourselves.
@@ -6142,7 +5860,7 @@ Although we very rarely need to annotate types in Rust, `collect` is one functio
 
 Let's try running the code first with no arguments and then with two arguments:
 
-```text
+```shell
 $ cargo run
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 0.61s
@@ -6152,7 +5870,7 @@ $ cargo run
 ]
 ```
 
-```text
+```shell
 $ cargo run -- needle haystack
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 1.57s
@@ -6188,7 +5906,7 @@ fn main() {
 
 We temporarily print the values of these variables to prove that the code is working as we intend. Let's run this program again with the arguments `test` and `sample.txt`:
 
-```text
+```shell
 $ cargo run -- test sample.txt
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 0.0s
@@ -6203,7 +5921,7 @@ Now we'll add functionality to read the file specified in the `file_path` argume
 
 Filename: poem.txt
 
-```text
+```shell
 I'm nobody! Who are you?
 Are you nobody, too?
 Then there's a pair of us - don't tell!
@@ -6236,7 +5954,7 @@ fn main() {
 
 Let's run this code with any string as the first command line argument (because we haven't implemented the searching part yet) and the _poem.txt_ file as the second argument:
 
-```text
+```shell
 $ cargo run -- the poem.txt
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 0.0s
@@ -6405,7 +6123,7 @@ Filename: src/main.rs
 
 A call to `panic!` is more appropriate for a programming problem than a usage problem.
 
-##### Returning a Result Instead of Calling panic!
+##### Returning a Result Instead of Calling `panic!`
 
 We can instead return a `Result` value that will contain a `Config` instance in the successful case and will describe the problem in the error case. We're also going to change the function name from `new` to `build` because many programmers expect `new` functions to never fail.
 
@@ -6452,7 +6170,7 @@ Using `unwrap_or_else` allows us to define some custom, non-`panic!` error handl
 
 The `process::exit` function will stop the program immediately and return the number that was passed as the exit status code. This is similar to the `panic!`-based handling we used, but we no longer get all the extra output. Let's try it:
 
-```text
+```shell
 $ cargo run
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 0.48s
@@ -6516,7 +6234,7 @@ This `Ok(())` syntax might look a bit strange at first, but using `()` like this
 
 When you run this code, it will compile but will display a warning:
 
-```text
+```shell
 $ cargo run the poem.txt
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
 warning: unused `Result` that must be used
@@ -6673,7 +6391,7 @@ In other words, we tell Rust that the data returned by the search function will 
 
 Now let's run the test:
 
-```text
+```shell
 $ cargo test
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished test [unoptimized + debuginfo] target(s) in 0.97s
@@ -6767,7 +6485,7 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 
 Now the `search` function should return only the lines that contain `query`, and our test should pass. Let's run the test:
 
-```text
+```shell
 $ cargo test
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished test [unoptimized + debuginfo] target(s) in 1.22s
@@ -6813,7 +6531,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 
 Now the entire program should work! Let's try it out:
 
-```text
+```shell
 $ cargo run -- frog poem.txt
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 0.38s
@@ -6821,7 +6539,7 @@ $ cargo run -- frog poem.txt
 How public, like a frog
 ```
 
-```text
+```shell
 $ cargo run -- body poem.txt
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 0.0s
@@ -6833,7 +6551,7 @@ How dreary to be somebody!
 
 And finally, let's make sure that we don't get any lines when we search for a word that isn't anywhere in the poem:
 
-```text
+```shell
 $ cargo run -- monomorphization poem.txt
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 0.0s
@@ -6978,7 +6696,7 @@ We don't care about the value of the environment variable, just whether it's set
 
 Let's give it a try! First, we'll run our program without the environment variable set and with the query `to`, which should match any line that contains the word "to" in all lowercase:
 
-```text
+```shell
 $ cargo run -- to poem.txt
    Compiling minigrep v0.1.0 (file:///projects/minigrep)
     Finished dev [unoptimized + debuginfo] target(s) in 0.0s
@@ -6989,25 +6707,25 @@ How dreary to be somebody!
 
 Now, let's run the program with `IGNORE_CASE` set to 1`but with the same query`to`.
 
-```text
-$ IGNORE_CASE=1 cargo run -- to poem.txt
+```shell
+IGNORE_CASE=1 cargo run -- to poem.txt
 ```
 
 If you're using PowerShell, you will need to set the environment variable and run the program as separate commands:
 
-```text
+```shell
 PS> $Env:IGNORE_CASE=1; cargo run -- to poem.txt
 ```
 
 This will make `IGNORE_CASE` persist for the remainder of your shell session. It can be unset with the `Remove`-Item cmdlet:
 
-```text
+```shell
 PS> Remove-Item Env:IGNORE_CASE
 ```
 
 We should get lines that contain "to" that might have uppercase letters:
 
-```text
+```shell
 Are you nobody, too?
 How dreary to be somebody!
 To tell your name the livelong day
@@ -7026,13 +6744,13 @@ Command line programs are expected to send error messages to the standard error 
 
 To demonstrate this behavior, we'll run the program with `>` and the file path, _output.txt_, that we want to redirect the standard output stream to. We won't pass any arguments, which should cause an error:
 
-```text
-$ cargo run > output.txt
+```shell
+cargo run > output.txt
 ```
 
 The `>` syntax tells the shell to write the contents of standard output to _output.txt_ instead of the screen. We didn't see the error message we were expecting printed to the screen, so that means it must have ended up in the file. This is what _output.txt_ contains:
 
-```text
+```shell
 Problem parsing arguments: not enough arguments
 ```
 
@@ -7060,7 +6778,7 @@ fn main() {
 
 Let's now run the program again in the same way, without any arguments and redirecting standard output with `>`:
 
-```text
+```shell
 $ cargo run > output.txt
 Problem parsing arguments: not enough arguments
 ```
@@ -7069,15 +6787,15 @@ Now we see the error onscreen and _output.txt_ contains nothing, which is the be
 
 Let's run the program again with arguments that don't cause an error but still redirect standard output to a file, like so:
 
-```text
-$ cargo run -- to poem.txt > output.txt
+```shell
+cargo run -- to poem.txt > output.txt
 ```
 
 We won't see any output to the terminal, and _output.txt_ will contain our results:
 
 Filename: output.txt
 
-```text
+```shell
 Are you nobody, too?
 How dreary to be somebody!
 ```
@@ -7820,7 +7538,7 @@ Most documentation comments don't need all of these sections, but this is a good
 
 Adding example code blocks in your documentation comments can help demonstrate how to use your library, and doing so has an additional bonus: running `cargo test` will run the code examples in your documentation as tests! If we run `cargo test` with the documentation for the `add_one` function from the preceding listing, we will see a section in the test results like this:
 
-```text
+```shell
    Doc-tests my_crate
 
 running 1 test
@@ -7957,8 +7675,8 @@ In cases where there are many nested modules, re-exporting the types at the top 
 
 Before you can publish any crates, you need to create an account on [crates.io](https://crates.io/) and get an API token. To do so, visit the home page at [crates.io](https://crates.io/) and log in via a GitHub account. (The GitHub account is currently a requirement, but the site might support other ways of creating an account in the future.) Once you're logged in, visit your account settings at [https://crates.io/me/](https://crates.io/me/) and retrieve your API key. Then run the `cargo login` command with your API key, like this:
 
-```bash
-$ cargo login abcdefghijklmnopqrstuvwxyz012345
+```shell
+cargo login abcdefghijklmnopqrstuvwxyz012345
 ```
 
 This command will inform Cargo of your API token and store it locally in _~/.cargo/credentials_. Note that this token is a _secret_: do not share it with anyone else. If you do share it with anyone for any reason, you should revoke it and generate a new token on [crates.io](https://crates.io/).
@@ -7978,7 +7696,7 @@ name = "guessing_game"
 
 Even if you've chosen a unique name, when you run `cargo publish` to publish the crate at this point, you'll get a warning and then an error:
 
-```text
+```shell
 $ cargo publish
     Updating crates.io index
 warning: manifest has no description, license, license-file, documentation, homepage or repository.
@@ -8029,7 +7747,7 @@ Be careful, because a publish is _permanent_. The version can never be overwritt
 
 Run the `cargo publish` command again. It should succeed now:
 
-```text
+```shell
 $ cargo publish
     Updating crates.io index
    Packaging guessing_game v0.1.0 (file:///projects/guessing_game)
@@ -8052,7 +7770,7 @@ Yanking a version prevents new projects from depending on that version while all
 
 To yank a version of a crate, in the directory of the crate that you've previously published, run `cargo yank` and specify which version you want to yank. For example, if we've published a crate named `guessing_game` version 1.0.1 and we want to yank it, in the project directory for `guessing_game` we'd run:
 
-```text
+```shell
 $ cargo yank --vers 1.0.1
     Updating crates.io index
         Yank guessing_game@1.0.1
@@ -8060,7 +7778,7 @@ $ cargo yank --vers 1.0.1
 
 By adding `--undo` to the command, you can also undo a yank and allow projects to start depending on a version again:
 
-```text
+```shell
 $ cargo yank --vers 1.0.1 --undo
     Updating crates.io index
       Unyank guessing_game@1.0.1
@@ -8076,9 +7794,9 @@ As your project develops, you might find that the library crate continues to get
 
 A _workspace_ is a set of packages that share the same _Cargo.lock_ and output directory. We'll have a workspace containing a binary and two libraries. The binary, which will provide the main functionality, will depend on the two libraries. We'll start by creating a new directory for the workspace:
 
-```bash
-$ mkdir add
-$ cd add
+```shell
+mkdir add
+cd add
 ```
 
 Next, in the _add_ directory, we create the _Cargo.toml_ file that will configure the entire workspace. This file won't have a `[package]` section. Instead, it will start with a `[workspace]` section that will allow us to add members to the workspace by specifying the path to the package with our binary crate; in this case, that path is _adder_:
@@ -8095,14 +7813,14 @@ members = [
 
 Next, we'll create the `adder` binary crate by running `cargo new` within the _add_ directory:
 
-```text
+```shell
 $ cargo new adder
      Created binary (application) `adder` package
 ```
 
 At this point, we can build the workspace by running `cargo build`. The files in your _add_ directory should look like this:
 
-```text
+```shell
 ├── Cargo.lock
 ├── Cargo.toml
 ├── adder
@@ -8131,14 +7849,14 @@ members = [
 
 Then generate a new library crate named `add_one`:
 
-```text
+```shell
 $ cargo new add_one --lib
      Created library `add_one` package
 ```
 
 Your _add_ directory should now have these directories and files:
 
-```text
+```shell
 ├── Cargo.lock
 ├── Cargo.toml
 ├── add_one
@@ -8188,7 +7906,7 @@ fn main() {
 
 Let's build the workspace by running `cargo build` in the top-level add directory!
 
-```text
+```shell
 $ cargo build
    Compiling add_one v0.1.0 (file:///projects/add/add_one)
    Compiling adder v0.1.0 (file:///projects/add/adder)
@@ -8197,7 +7915,7 @@ $ cargo build
 
 To run the binary crate from the _add_ directory, we can specify which package in the workspace we want to run by using the `-p` argument and the package name with `cargo run`:
 
-```text
+```shell
 $ cargo run -p adder
     Finished dev [unoptimized + debuginfo] target(s) in 0.0s
      Running `target/debug/adder`
@@ -8219,7 +7937,7 @@ rand = "0.8.5"
 
 We can now add `use rand`; to the _add_one/src/lib.rs_ file, and building the whole workspace by running `cargo build` in the _add_ directory will bring in and compile the `rand` crate. We will get one warning because we aren't referring to the `rand` we brought into scope:
 
-```text
+```shell
 $ cargo build
     Updating crates.io index
   Downloaded rand v0.8.5
@@ -8241,7 +7959,7 @@ warning: `add_one` (lib) generated 1 warning
 
 The top-level _Cargo.lock_ now contains information about the dependency of `add_one` on `rand`. However, even though `rand` is used somewhere in the workspace, we can't use it in other crates in the workspace unless we add `rand` to their _Cargo.toml_ files as well. For example, if we add `use rand`; to the _adder/src/main.rs_ file for the `adder` package, we'll get an error:
 
-```text
+```shell
 $ cargo build
   --snip--
    Compiling adder v0.1.0 (file:///projects/add/adder)
@@ -8278,7 +7996,7 @@ mod tests {
 
 Now run `cargo test` in the top-level _add_ directory. Running `cargo test` in a workspace structured like this one will run the tests for all the crates in the workspace:
 
-```text
+```shell
 $ cargo test
    Compiling add_one v0.1.0 (file:///projects/add/add_one)
    Compiling adder v0.1.0 (file:///projects/add/adder)
@@ -8305,7 +8023,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 We can also run tests for one particular crate in a workspace from the top-level directory by using the `-p` flag and specifying the name of the crate we want to test:
 
-```text
+```shell
 $ cargo test -p add_one
     Finished test [unoptimized + debuginfo] target(s) in 0.00s
      Running unittests src/lib.rs (target/debug/deps/add_one-b3235fea9a156f74)
@@ -8334,7 +8052,7 @@ All binaries installed with `cargo install` are stored in the installation root'
 
 For example, there's a Rust implementation of the `grep` tool called `ripgrep` for searching files. To install `ripgrep`, we can run the following:
 
-```text
+```shell
 $ cargo install ripgrep
     Updating crates.io index
   Downloaded ripgrep v13.0.0
@@ -8387,7 +8105,7 @@ Boxes don't have performance overhead, other than storing their data on the heap
 
 - When you want to own a value and you care only that it's a type that implements a particular trait rather than being of a specific type
 
-We'll demonstrate the first situation in the ["Enabling Recursive Types with Boxes"](#enabling-recursive-types-with-boxes) section. In the second case, transferring ownership of a large amount of data can take a long time because the data is copied around on the stack. To improve performance in this situation, we can store the large amount of data on the heap in a box. Then, only the small amount of pointer data is copied around on the stack, while the data it references stays in one place on the heap. The third case is known as a _trait object_, and the later chapter devotes an entire section, ["Using Trait Objects That Allow for Values of Different Types"](#using-trait-objects-that-allow-for-values-of-different-types), just to that topic. So what you learn here you'll apply again in the later Chapter!
+We'll demonstrate the first situation in the ["Enabling Recursive Types with Boxes"](#Enabling-Recursive-Types-with-Boxes) section. In the second case, transferring ownership of a large amount of data can take a long time because the data is copied around on the stack. To improve performance in this situation, we can store the large amount of data on the heap in a box. Then, only the small amount of pointer data is copied around on the stack, while the data it references stays in one place on the heap. The third case is known as a _trait object_, and the later chapter devotes an entire section, [Using Trait Objects That Allow for Values of Different Types](#using-trait-objects-that-allow-for-values-of-different-types), just to that topic. So what you learn here you'll apply again in the later Chapter!
 
 #### Using a `Box<T>` to Store Data on the Heap
 
@@ -8449,7 +8167,7 @@ fn main() {
 
 If we try to compile the code in the previous listing, we get the error shown in the following listing:
 
-```text
+```shell
 $ cargo run
    Compiling cons-list v0.1.0 (file:///projects/cons-list)
 error[E0072]: recursive type `List` has infinite size
@@ -8492,7 +8210,7 @@ Contrast this with what happens when Rust tries to determine how much space a re
 
 Because Rust can't figure out how much space to allocate for recursively defined types, the compiler gives an error with this helpful suggestion:
 
-```text
+```shell
 help: insert some indirection (e.g., a `Box`, `Rc`, or `&`) to make `List` representable
   |
 2 |     Cons(i32, Box<List>),
